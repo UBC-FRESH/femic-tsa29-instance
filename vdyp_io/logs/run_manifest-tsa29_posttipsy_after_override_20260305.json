@@ -1,0 +1,77 @@
+{
+  "artifacts": {
+    "bundle_tables": [
+      {
+        "exists": true,
+        "path": "data/model_input_bundle/au_table.csv"
+      },
+      {
+        "exists": true,
+        "path": "data/model_input_bundle/curve_table.csv"
+      },
+      {
+        "exists": true,
+        "path": "data/model_input_bundle/curve_points_table.csv"
+      }
+    ],
+    "tipsy_curves": [
+      {
+        "exists": true,
+        "path": "data/tipsy_curves_tsa29.csv"
+      }
+    ],
+    "tipsy_sppcomp": [
+      {
+        "exists": true,
+        "path": "data/tipsy_sppcomp_tsa29.csv"
+      }
+    ]
+  },
+  "duration_sec": 6.642,
+  "env_flags": {
+    "FEMIC_DISABLE_IPP": null,
+    "FEMIC_SAMPLING_SEED": null,
+    "FEMIC_USE_SWIFTER": null
+  },
+  "error_message": null,
+  "exit_code": 0,
+  "finished_at_utc": "2026-03-05T06:37:53.074120+00:00",
+  "log_dir": "/home/gep/projects/wbi_ria_yield/vdyp_io/logs",
+  "outputs": {
+    "au_rows": 30,
+    "au_table_path": "data/model_input_bundle/au_table.csv",
+    "curve_points_rows": 9814,
+    "curve_points_table_path": "data/model_input_bundle/curve_points_table.csv",
+    "curve_rows": 60,
+    "curve_table_path": "data/model_input_bundle/curve_table.csv"
+  },
+  "run_id": "tsa29_posttipsy_after_override_20260305",
+  "run_uuid": "0105f817-f877-4c2e-8e40-e6b403298b2c",
+  "runtime_parameters": {
+    "femic_log_dir": "/home/gep/projects/wbi_ria_yield/vdyp_io/logs",
+    "femic_run_id": "tsa29_posttipsy_after_override_20260305",
+    "femic_sampling_seed": null,
+    "femic_tsa_list": "29"
+  },
+  "runtime_versions": {
+    "femic": "0.1.0",
+    "packages": {
+      "geopandas": "1.1.2",
+      "numpy": "2.4.1",
+      "pandas": "2.3.3",
+      "rasterio": "1.5.0",
+      "rich": "14.2.0",
+      "scipy": "1.17.0",
+      "shapely": "2.1.2",
+      "typer": "0.21.1"
+    },
+    "platform": "Linux-6.17.0-14-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "started_at_utc": "2026-03-05T06:37:46.404014+00:00",
+  "status": "ok",
+  "tsa_list": [
+    "29"
+  ],
+  "workflow": "tsa_post_tipsy"
+}

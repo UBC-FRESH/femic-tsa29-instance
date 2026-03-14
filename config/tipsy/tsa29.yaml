@@ -1,0 +1,325 @@
+schema_version: 1
+tsa_code: "29"
+
+metadata:
+  source_tsr:
+    - title: "Williams Lake TSA TSR Data Package"
+      year: 2024
+      url: "reference/29ts_dpkg_2024-2.pdf"
+      notes: "Section 8.5 TIPSY inputs: planting density, tree improvement, planting delay."
+    - title: "Williams Lake TSA TSR Data Package"
+      year: 2013
+      url: "reference/williams_lake_tsa_data_package-2.pdf"
+      notes: "Section 6.3/Table 23 + Tables 24/25 regeneration and genetic gain assumptions."
+  author: "codex-provisional"
+  created_utc: "2026-03-03T00:00:00Z"
+  notes: "TSR-informed provisional rules; final calibration should be RESULTS/SPAR opening-level."
+
+species_code_overrides:
+  SX: SW
+  DR: FD
+
+siteprod_si_fallback_by_species:
+  DR: 14.0
+
+defaults:
+  e:
+    OAF2: 0.95
+    FIZ: "I"
+    Regen_Method: "P"
+    Proportion: 1
+    SPP_2: null
+    SPP_3: null
+    SPP_4: null
+    SPP_5: null
+    PCT_2: null
+    PCT_3: null
+    PCT_4: null
+    PCT_5: null
+    GW_1: null
+    GW_2: null
+    GW_3: null
+    GW_4: null
+    GW_5: null
+    GW_age_1: null
+    GW_age_2: null
+    GW_age_3: null
+    GW_age_4: null
+    GW_age_5: null
+  f:
+    SI_c1: 1.0
+    SI_c2: 2.0
+    OAF2: 0.95
+    FIZ: "I"
+    Regen_Method: "P"
+    Proportion: 1
+    SPP_2: null
+    SPP_3: null
+    SPP_4: null
+    SPP_5: null
+    PCT_2: null
+    PCT_3: null
+    PCT_4: null
+    PCT_5: null
+    GW_1: null
+    GW_2: null
+    GW_3: null
+    GW_4: null
+    GW_5: null
+    GW_age_1: null
+    GW_age_2: null
+    GW_age_3: null
+    GW_age_4: null
+    GW_age_5: null
+
+rules:
+  # TSR 2013 Table 23 proxy: PL poor sites (30% treated / 70% untreated).
+  - id: "tsa29_pine_poor_sbps"
+    when:
+      bec_in: ["SBPS"]
+      leading_species_in: ["P", "PA", "PJ", "PL", "PLC", "PLI", "PM"]
+    assign:
+      e:
+        Proportion: 0.70
+        Regen_Method: "N"
+        Regen_Delay: 4
+        Density: 1001
+        SPP_1: "PL"
+        PCT_1: 87
+        SPP_2: "AT"
+        PCT_2: 10
+        SPP_3: "FD"
+        PCT_3: 1
+        SPP_4: "SX"
+        PCT_4: 1
+        Util_DBH_cm: 12.5
+      f:
+        Proportion: 0.30
+        Regen_Method: "P"
+        Regen_Delay: 4
+        Density: 1001
+        SPP_1: "PL"
+        PCT_1: 87
+        SPP_2: "AT"
+        PCT_2: 10
+        SPP_3: "FD"
+        PCT_3: 1
+        SPP_4: "SX"
+        PCT_4: 1
+        GW_1: 3.0
+        GW_age_1: 12
+        Util_DBH_cm: 12.5
+
+  # TSR 2013 Table 23 proxy: PL medium/good sites (85% treated / 15% untreated).
+  - id: "tsa29_pine_ms_sbps_idf"
+    when:
+      bec_in: ["MS", "IDF"]
+      leading_species_in: ["P", "PA", "PJ", "PL", "PLC", "PLI", "PM"]
+    assign:
+      e:
+        Proportion: 0.15
+        Regen_Method: "N"
+        Regen_Delay: 2
+        Density: 1133
+        SPP_1: "PL"
+        PCT_1: 62
+        SPP_2: "AT"
+        PCT_2: 17
+        SPP_3: "SX"
+        PCT_3: 10
+        SPP_4: "FD"
+        PCT_4: 8
+        SPP_5: "BL"
+        PCT_5: 3
+        Util_DBH_cm: 12.5
+      f:
+        Proportion: 0.85
+        Regen_Method: "P"
+        Regen_Delay: 2
+        Density: 1133
+        SPP_1: "PL"
+        PCT_1: 62
+        SPP_2: "AT"
+        PCT_2: 17
+        SPP_3: "SX"
+        PCT_3: 10
+        SPP_4: "FD"
+        PCT_4: 8
+        SPP_5: "BL"
+        PCT_5: 3
+        GW_1: 3.0
+        GW_age_1: 12
+        Util_DBH_cm: 12.5
+
+  # TSR 2013 Table 23 proxy: FD medium/good sites (90% treated / 10% untreated).
+  - id: "tsa29_fir_idf"
+    when:
+      bec_in: ["IDF"]
+      leading_species_in: ["F", "FD", "FDC", "FDI"]
+    assign:
+      e:
+        Proportion: 0.10
+        Regen_Method: "N"
+        Regen_Delay: 3
+        Density: 1139
+        SPP_1: "PL"
+        PCT_1: 42
+        SPP_2: "FD"
+        PCT_2: 24
+        SPP_3: "AT"
+        PCT_3: 17
+        SPP_4: "SX"
+        PCT_4: 15
+        SPP_5: "BL"
+        PCT_5: 3
+        Util_DBH_cm: 17.5
+      f:
+        Proportion: 0.90
+        Regen_Method: "P"
+        Regen_Delay: 2
+        Density: 1139
+        SPP_1: "FD"
+        PCT_1: 24
+        SPP_2: "PLI"
+        PCT_2: 42
+        SPP_3: "AT"
+        PCT_3: 17
+        SPP_4: "SX"
+        PCT_4: 15
+        SPP_5: "BL"
+        PCT_5: 3
+        GW_1: 9.0
+        GW_age_1: 12
+        Util_DBH_cm: 17.5
+
+  # TSR 2013 Table 23 proxy: SX medium/good sites (treated distribution, full treated).
+  - id: "tsa29_spruce_essf"
+    when:
+      bec_in: ["ESSF"]
+      leading_species_in: ["S", "SB", "SE", "SN", "SS", "SW", "SX", "SXE", "SXL", "SXW"]
+    assign:
+      e:
+        Proportion: 0.00
+        Regen_Method: "N"
+        Regen_Delay: 2
+        Density: 1255
+        SPP_1: "SX"
+        PCT_1: 49
+        SPP_2: "PL"
+        PCT_2: 28
+        SPP_3: "AT"
+        PCT_3: 9
+        SPP_4: "BL"
+        PCT_4: 8
+        SPP_5: "FD"
+        PCT_5: 6
+        Util_DBH_cm: 17.5
+      f:
+        Proportion: 1.00
+        Regen_Method: "P"
+        Regen_Delay: 2
+        Density: 1255
+        SPP_1: "SE"
+        PCT_1: 49
+        SPP_2: "PL"
+        PCT_2: 28
+        SPP_3: "AT"
+        PCT_3: 9
+        SPP_4: "BL"
+        PCT_4: 8
+        SPP_5: "FD"
+        PCT_5: 6
+        GW_1: 12.8
+        GW_age_1: 12
+        Util_DBH_cm: 17.5
+
+  # Supplemental ESSF balsam proxy when leading species is balsam.
+  - id: "tsa29_balsam_essf"
+    when:
+      bec_in: ["ESSF"]
+      leading_species_in: ["B", "BA", "BB", "BG", "BL", "BM", "BP"]
+    assign:
+      e:
+        Proportion: 0.00
+        Regen_Method: "N"
+        Regen_Delay: 2
+        Density: 1173
+        SPP_1: "BL"
+        PCT_1: 53
+        SPP_2: "SE"
+        PCT_2: 32
+        SPP_3: "SX"
+        PCT_3: 9
+        SPP_4: "AT"
+        PCT_4: 4
+        SPP_5: "FD"
+        PCT_5: 1
+        Util_DBH_cm: 17.5
+      f:
+        Proportion: 1.00
+        Regen_Method: "P"
+        Regen_Delay: 2
+        Density: 1173
+        SPP_1: "BL"
+        PCT_1: 53
+        SPP_2: "SE"
+        PCT_2: 32
+        SPP_3: "SX"
+        PCT_3: 9
+        SPP_4: "AT"
+        PCT_4: 4
+        SPP_5: "FD"
+        PCT_5: 1
+        GW_1: 6.6
+        GW_age_1: 12
+        Util_DBH_cm: 17.5
+
+  - id: "tsa29_all_aus_catchall"
+    when: {}
+    assign:
+      e:
+        Regen_Delay: 2
+        Density: 1400
+        SPP_1: "$leading_species_tipsy"
+        PCT_1: 100
+        Util_DBH_cm: 17.5
+      f:
+        Regen_Delay: 1
+        Density: 1400
+        SPP_1: "$leading_species_tipsy"
+        PCT_1: 100
+        Util_DBH_cm: 17.5
+
+required_fields:
+  - AU
+  - TBLno
+  - BEC
+  - Proportion
+  - Regen_Delay
+  - SI
+  - OAF1
+  - OAF2
+  - FIZ
+  - Regen_Method
+  - Density
+  - SPP_1
+  - PCT_1
+  - SPP_2
+  - PCT_2
+  - SPP_3
+  - PCT_3
+  - SPP_4
+  - PCT_4
+  - SPP_5
+  - PCT_5
+  - GW_1
+  - GW_2
+  - GW_3
+  - GW_4
+  - GW_5
+  - GW_age_1
+  - GW_age_2
+  - GW_age_3
+  - GW_age_4
+  - GW_age_5
+  - Util_DBH_cm

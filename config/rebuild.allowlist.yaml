@@ -1,0 +1,4 @@
+schema_version: "1.0"
+notes:
+  - "Allowlist starts empty; add intentional baseline diffs only after review."
+allowlist: []

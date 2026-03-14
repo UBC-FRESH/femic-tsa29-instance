@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Local envs
+.venv/
+.env
+
+# Build/docs artifacts
+_build/
+dist/
+*.egg-info/
+
+# Runtime logs and temp (keep curated evidence manifests tracked)
+vdyp_io/logs/*.log
+vdyp_io/logs/*stdout*.log
+vdyp_io/logs/*stderr*.log
+*.tmp
+
+# Editor/OS
+.DS_Store
+.vscode/
+.idea/

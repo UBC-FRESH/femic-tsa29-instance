@@ -1,0 +1,47 @@
+{
+  "artifacts": {
+    "bundle_tables": [],
+    "tipsy_curves": [],
+    "tipsy_sppcomp": []
+  },
+  "duration_sec": 3.507,
+  "env_flags": {
+    "FEMIC_DISABLE_IPP": null,
+    "FEMIC_SAMPLING_SEED": null,
+    "FEMIC_USE_SWIFTER": null
+  },
+  "error_message": "[Errno 2] No such file or directory: 'data/tipsy_params_tsa29.xlsx'",
+  "exit_code": 1,
+  "finished_at_utc": "2026-03-08T08:27:13.117842+00:00",
+  "log_dir": "/home/gep/projects/wbi_ria_yield/vdyp_io/logs",
+  "outputs": {},
+  "run_id": "tsa29_posttipsy_export_20260308",
+  "run_uuid": "4e77ed84-b616-4b41-b9e2-6c74b5e2ca4f",
+  "runtime_parameters": {
+    "femic_log_dir": "/home/gep/projects/wbi_ria_yield/vdyp_io/logs",
+    "femic_run_id": "tsa29_posttipsy_export_20260308",
+    "femic_sampling_seed": null,
+    "femic_tsa_list": "29"
+  },
+  "runtime_versions": {
+    "femic": "0.1.0",
+    "packages": {
+      "geopandas": "1.1.2",
+      "numpy": "2.4.1",
+      "pandas": "2.3.3",
+      "rasterio": "1.5.0",
+      "rich": "14.2.0",
+      "scipy": "1.17.0",
+      "shapely": "2.1.2",
+      "typer": "0.21.1"
+    },
+    "platform": "Linux-6.17.0-14-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "started_at_utc": "2026-03-08T08:27:09.596334+00:00",
+  "status": "failed",
+  "tsa_list": [
+    "29"
+  ],
+  "workflow": "tsa_post_tipsy"
+}

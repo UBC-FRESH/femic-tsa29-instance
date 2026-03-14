@@ -1,0 +1,17 @@
+schema_version: "1.0"
+case_id: "tsa29"
+snapshot_date_utc: "2026-03-14"
+source_femic_repo: "https://github.com/UBC-FRESH/femic"
+source_femic_commit: "5caa72c"
+source_artifacts:
+  - path: "output/patchworks_tsa29_validated"
+    source_path: "femic/output/patchworks_tsa29_validated"
+    qa_status: "validated"
+  - path: "output/patchworks_tsa29_validation"
+    source_path: "femic/output/patchworks_tsa29_validation"
+    qa_status: "validation bundle"
+  - path: "data/model_input_bundle"
+    source_path: "femic/output/patchworks_tsa29_validation/bundle"
+    qa_status: "compiled bundle"
+known_issues:
+  - "Current Linux workspace run-profile compile can fail in 01a with TSA index KeyError for tsa='29'."

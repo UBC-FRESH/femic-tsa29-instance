@@ -1,0 +1,15 @@
+{
+  "status": "warning",
+  "regression_gate": "warning",
+  "summary": {
+    "case_id": "tsa29",
+    "run_mode": "snapshot_baseline",
+    "note": "Portable snapshot is validated for student use; full Linux rebuild currently blocked by TSA index mismatch in 01a.",
+    "known_issue": "KeyError: None of [Index(['29'], dtype='object', name='tsa_code')] are in the [index]"
+  },
+  "source": {
+    "reference_manifest": "vdyp_io/logs/run_manifest-tsa29_rebuild_export_20260308.json",
+    "reference_validation_bundle": "output/patchworks_tsa29_validation"
+  },
+  "timestamp_utc": "2026-03-14T00:00:00Z"
+}

@@ -1,0 +1,131 @@
+{
+  "artifacts": {
+    "vdyp_curve_events": [
+      {
+        "exists": false,
+        "path": "/home/gep/projects/wbi_ria_yield/vdyp_io/logs/vdyp_curve_events-tsa29-tsa29_rebuild_export_20260308.jsonl"
+      }
+    ],
+    "vdyp_runs": [
+      {
+        "exists": false,
+        "path": "/home/gep/projects/wbi_ria_yield/vdyp_io/logs/vdyp_runs-tsa29-tsa29_rebuild_export_20260308.jsonl"
+      }
+    ],
+    "vdyp_stderr": [
+      {
+        "exists": false,
+        "path": "/home/gep/projects/wbi_ria_yield/vdyp_io/logs/vdyp_stderr-tsa29-tsa29_rebuild_export_20260308.log"
+      }
+    ],
+    "vdyp_stdout": [
+      {
+        "exists": false,
+        "path": "/home/gep/projects/wbi_ria_yield/vdyp_io/logs/vdyp_stdout-tsa29-tsa29_rebuild_export_20260308.log"
+      }
+    ]
+  },
+  "checkpoints": {
+    "pre_vdyp": [
+      {
+        "exists": true,
+        "path": "data/vdyp_prep-tsa29.pkl"
+      }
+    ]
+  },
+  "command": [
+    "/home/gep/projects/wbi_ria_yield/.venv/bin/python",
+    "/home/gep/projects/wbi_ria_yield/00_data-prep.py"
+  ],
+  "config_provenance": {
+    "run_config_path": "config/run_profile.tsa29.yaml",
+    "run_config_sha256": "ec5021425015e8b3f5fb76dd63033517ac951f7a3292752d174942a50f081a2d"
+  },
+  "cwd": "/home/gep/projects/wbi_ria_yield",
+  "duration_sec": 3.306,
+  "env_flags": {
+    "FEMIC_BOUNDARY_CODE": null,
+    "FEMIC_BOUNDARY_LAYER": null,
+    "FEMIC_BOUNDARY_PATH": null,
+    "FEMIC_DISABLE_IPP": null,
+    "FEMIC_EXTERNAL_DATA_ROOT": null,
+    "FEMIC_SAMPLING_SEED": null,
+    "FEMIC_SKIP_STANDS_SHP": null,
+    "FEMIC_USE_SWIFTER": null,
+    "FEMIC_VDYP_SAMPLING_MODE": null,
+    "FEMIC_VDYP_TWO_PASS_REBIN": null
+  },
+  "exit_code": 1,
+  "finished_at_utc": "2026-03-08T08:27:05.202184+00:00",
+  "log_dir": "/home/gep/projects/wbi_ria_yield/vdyp_io/logs",
+  "log_paths": {
+    "vdyp_curve_events": [
+      "/home/gep/projects/wbi_ria_yield/vdyp_io/logs/vdyp_curve_events-tsa29-tsa29_rebuild_export_20260308.jsonl"
+    ],
+    "vdyp_runs": [
+      "/home/gep/projects/wbi_ria_yield/vdyp_io/logs/vdyp_runs-tsa29-tsa29_rebuild_export_20260308.jsonl"
+    ],
+    "vdyp_stderr": [
+      "/home/gep/projects/wbi_ria_yield/vdyp_io/logs/vdyp_stderr-tsa29-tsa29_rebuild_export_20260308.log"
+    ],
+    "vdyp_stdout": [
+      "/home/gep/projects/wbi_ria_yield/vdyp_io/logs/vdyp_stdout-tsa29-tsa29_rebuild_export_20260308.log"
+    ]
+  },
+  "options": {
+    "debug_rows": null,
+    "output_root": "outputs",
+    "resume": true
+  },
+  "outputs": {
+    "output_root": "/home/gep/projects/wbi_ria_yield/outputs",
+    "version_tag": "tsa29_rebuild_export_20260308",
+    "versioned_output_dir": "/home/gep/projects/wbi_ria_yield/outputs/tsa29_rebuild_export_20260308"
+  },
+  "paths": {
+    "data_dir": "/home/gep/projects/wbi_ria_yield/data",
+    "output_dir": "/home/gep/projects/wbi_ria_yield/outputs",
+    "repo_root": "/home/gep/projects/wbi_ria_yield",
+    "vdyp_cfg_dir": "/home/gep/projects/wbi_ria_yield/vdyp_io/VDYP_CFG",
+    "vdyp_executable": "/home/gep/projects/wbi_ria_yield/VDYP7/VDYP7/VDYP7Console.exe"
+  },
+  "run_id": "tsa29_rebuild_export_20260308",
+  "run_uuid": "b9495d16-2210-4023-9cc3-7465463dffed",
+  "runtime_parameters": {
+    "femic_boundary_code": null,
+    "femic_boundary_layer": null,
+    "femic_boundary_path": null,
+    "femic_debug_rows": null,
+    "femic_log_dir": "/home/gep/projects/wbi_ria_yield/vdyp_io/logs",
+    "femic_output_root": "outputs",
+    "femic_resume": "1",
+    "femic_run_config_path": "config/run_profile.tsa29.yaml",
+    "femic_run_config_sha256": "ec5021425015e8b3f5fb76dd63033517ac951f7a3292752d174942a50f081a2d",
+    "femic_run_id": "tsa29_rebuild_export_20260308",
+    "femic_sampling_seed": null,
+    "femic_tsa_list": "29",
+    "femic_vdyp_sampling_mode": null,
+    "femic_vdyp_two_pass_rebin": null
+  },
+  "runtime_versions": {
+    "femic": "0.1.0",
+    "packages": {
+      "geopandas": "1.1.2",
+      "numpy": "2.4.1",
+      "pandas": "2.3.3",
+      "rasterio": "1.5.0",
+      "rich": "14.2.0",
+      "scipy": "1.17.0",
+      "shapely": "2.1.2",
+      "typer": "0.21.1"
+    },
+    "platform": "Linux-6.17.0-14-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "script_path": "/home/gep/projects/wbi_ria_yield/00_data-prep.py",
+  "started_at_utc": "2026-03-08T08:27:01.895983+00:00",
+  "status": "failed",
+  "tsa_list": [
+    "29"
+  ]
+}
