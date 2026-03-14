@@ -1,0 +1,33 @@
+ACTIONS
+*ACTION cc Y
+*OPERABLE cc
+29 managed 2901000 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2901001 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2901002 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2901003 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2901004 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2901005 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2901006 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2901007 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2901008 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2901009 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2902000 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2902001 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2902002 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2902003 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2902004 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2902005 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2902006 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2902007 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2902008 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2902009 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2903000 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2903001 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2903002 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2903003 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2903004 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2903005 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2903006 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2903007 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2903008 ? ? _AGE >= 0 AND _AGE <= 1000
+29 managed 2903009 ? ? _AGE >= 0 AND _AGE <= 1000
