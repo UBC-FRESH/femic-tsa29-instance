@@ -1,15 +1,17 @@
 {
-  "status": "warning",
-  "regression_gate": "warning",
+  "status": "pass",
+  "regression_gate": "pass",
   "summary": {
     "case_id": "tsa29",
-    "run_mode": "snapshot_baseline",
-    "note": "Portable snapshot is validated for student use; full Linux rebuild currently blocked by TSA index mismatch in 01a.",
-    "known_issue": "KeyError: None of [Index(['29'], dtype='object', name='tsa_code')] are in the [index]"
+    "run_mode": "deterministic_rebuild",
+    "run_id": "tsa29_phase19_green_20260318",
+    "checks_passed": true,
+    "managed_area_ha": 2951604.057603803,
+    "passive_area_ha": 0.0
   },
   "source": {
-    "reference_manifest": "vdyp_io/logs/run_manifest-tsa29_rebuild_export_20260308.json",
-    "reference_validation_bundle": "output/patchworks_tsa29_validation"
+    "report": "vdyp_io\\logs\\tsa29_rebuild_report-tsa29_phase19_green_20260318.json",
+    "matrix_manifest": "vdyp_io/logs/patchworks_matrixbuilder_manifest-tsa29_phase19_green_20260318.json"
   },
-  "timestamp_utc": "2026-03-14T00:00:00Z"
+  "timestamp_utc": "2026-03-19T05:04:39Z"
 }

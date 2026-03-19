@@ -46,3 +46,4 @@ models/tsa29_patchworks_model/blocks/topology_blocks_200r.csv
 
 vdyp_io/logs/patchworks_matrixbuilder_manifest-tsa29_rebuild_notopology_*.json
 vdyp_io/logs/tsa29_rebuild_report-*.json
+models/tsa29_patchworks_model/tracks/accounts_backup_*.csv

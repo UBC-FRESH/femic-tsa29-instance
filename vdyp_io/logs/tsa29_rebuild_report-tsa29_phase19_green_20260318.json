@@ -1,0 +1,47 @@
+{
+  "run_id": "tsa29_phase19_green_20260318",
+  "instance_root": "C:\\Users\\gep\\projects\\femic\\external\\femic-tsa29-instance",
+  "matrix_returncode": 0,
+  "managed_area_ha": 2951604.057603803,
+  "passive_area_ha": 0.0,
+  "seral_account_count": 305,
+  "block_join_intersection": 198817,
+  "block_join_csv_only": 0,
+  "block_join_shp_only": 0,
+  "tracks_row_counts": {
+    "blocks.csv": 198817,
+    "curves.csv": 4779,
+    "treatments.csv": 30,
+    "features.csv": 546,
+    "products.csv": 519,
+    "tracknames.csv": 30,
+    "strata.csv": 30,
+    "accounts.csv": 360,
+    "protoaccounts.csv": 360
+  },
+  "account_count": 360,
+  "key_accounts_present": {
+    "product.Yield.managed.Total": true,
+    "product.HarvestedVolume.managed.Total.CC": true,
+    "feature.Seral.regenerating": true,
+    "feature.Seral.young": true,
+    "feature.Seral.immature": true,
+    "feature.Seral.mature": true,
+    "feature.Seral.overmature": true
+  },
+  "artifact_timestamps_utc": {
+    "yield_forestmodel_xml": "2026-03-19T05:04:18Z",
+    "blocks_shp": "2026-03-17T06:00:26Z",
+    "topology_csv": "2026-03-17T07:55:56Z",
+    "tracks_accounts_csv": "2026-03-19T05:04:33Z",
+    "tracks_products_csv": "2026-03-19T05:04:33Z",
+    "matrix_manifest_json": "2026-03-19T05:04:38Z",
+    "matrix_stderr_log": "2026-03-19T05:04:38Z",
+    "matrix_stdout_log": "2026-03-19T05:04:38Z"
+  },
+  "baseline_path": "C:\\Users\\gep\\projects\\femic\\scripts\\tsa29\\tsa29_tracks_baseline.json",
+  "baseline_match": true,
+  "baseline_differences": [],
+  "checks_passed": true,
+  "failures": []
+}
