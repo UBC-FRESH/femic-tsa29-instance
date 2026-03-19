@@ -1,0 +1,102 @@
+/*************************************************************
+ *
+ * Prepare blocks/tracks for FEMIC TSA29 Patchworks model.
+ *
+ * 1:1 stand:block mode:
+ * - BLOCK in fragments.* must already be stand-level.
+ * - dissolve/join steps are intentionally disabled.
+ *
+ * Matrix build runs in non-interactive mode and waits for completion.
+ *
+ *************************************************************/
+
+// Location of this script
+f = new File(getSourceFileInfo()).getParentFile();
+
+// Model root (models/tsa29_patchworks_model)
+basename = f.getAbsoluteFile().getParentFile().getParentFile().getPath();
+
+// Instance root (.../external/femic-tsa29-instance)
+instanceRoot = new File(basename).getParentFile().getParentFile().getPath();
+
+// Key folders
+bbasename = basename + "/blocks";
+fbasename = instanceRoot + "/output/patchworks_tsa29_validated/fragments";
+ybasename = basename + "/yield";
+tbasename = basename + "/tracks";
+
+// 1:1 stand:block guardrails
+ENABLE_BLOCK_DISSOLVE = false;
+ENABLE_BLOCK_ATTRIBUTE_JOIN = false;
+
+mkdirs(String folder) {
+   dir = new File(folder);
+   if (!dir.exists()) {
+      print("Create folder for " + folder);
+      if (!dir.mkdirs()) {
+         throw new IllegalStateException("Problem creating folder " + folder);
+      }
+   }
+}
+
+fragmentsShp = new File(fbasename + "/fragments.shp");
+fragmentsDbf = new File(fbasename + "/fragments.dbf");
+blocksShp = new File(bbasename + "/blocks.shp");
+tracksBlocksCsv = new File(tbasename + "/blocks.csv");
+forestModel = new File(ybasename + "/forestmodel.xml");
+
+if (!fragmentsShp.exists()) {
+   print("Error: fragment shapefile does not exist: " + fragmentsShp.getPath());
+   return;
+}
+if (!fragmentsDbf.exists()) {
+   print("Error: fragment DBF does not exist: " + fragmentsDbf.getPath());
+   return;
+}
+if (!forestModel.exists()) {
+   print("Error: ForestModel XML does not exist under " + ybasename);
+   return;
+}
+
+if (ENABLE_BLOCK_DISSOLVE || ENABLE_BLOCK_ATTRIBUTE_JOIN) {
+   throw new IllegalStateException(
+      "1:1 stand:block mode requires dissolve/join toggles to remain false"
+   );
+}
+
+print("1:1 stand:block mode active (expect BLOCK = stand id in fragments.*)");
+if (blocksShp.exists()) {
+   print("Note: existing blocks shapefile retained at " + blocksShp.getPath());
+}
+
+/*************************************************************
+ * Build tracks using Matrix Builder (non-interactive)
+ *************************************************************/
+
+needBuild = !tracksBlocksCsv.exists() ||
+            fragmentsDbf.lastModified() >= tracksBlocksCsv.lastModified() ||
+            forestModel.lastModified() >= tracksBlocksCsv.lastModified();
+
+if (needBuild) {
+   print("Build tracks");
+   mkdirs(tbasename);
+
+   proc = new ca.spatial.tracks.builder.Process(
+      fragmentsDbf.getPath(),
+      tbasename,
+      forestModel.getPath()
+   );
+   proc.execute(false);
+
+   synchronized(proc) {
+      proc.wait();
+   }
+
+   print("Tracks build finished");
+} else {
+   print("Tracks are up to date; skipping matrix build");
+}
+
+print("Next steps:");
+print(" - verify base.pin launch");
+print(" - validate targets and seral accounts");

@@ -22,3 +22,27 @@ vdyp_io/logs/*stderr*.log
 .DS_Store
 .vscode/
 .idea/
+
+# Patchworks generated scratch
+models/*/patchworksLog.csv
+models/*/blocks/patchworksLog.csv
+models/*/yield/forestmodel_backup_*.xml
+output/patchworks_tsa29_validated/forestmodel_backup_*.xml
+
+# Externalized validation artifacts
+output/patchworks_tsa29_validated/fragments/fragments.shp
+output/patchworks_tsa29_validated/fragments/fragments.dbf
+output/patchworks_tsa29_validated/fragments/fragments.shx
+output/patchworks_tsa29_validated/fragments/fragments.prj
+output/patchworks_tsa29_validated/fragments/fragments.cpg
+output/patchworks_tsa29_validation/checkpoint7-tsa29.feather
+
+models/tsa29_patchworks_model/blocks/blocks.shp
+models/tsa29_patchworks_model/blocks/blocks.dbf
+models/tsa29_patchworks_model/blocks/blocks.shx
+models/tsa29_patchworks_model/blocks/blocks.prj
+models/tsa29_patchworks_model/blocks/blocks.cpg
+models/tsa29_patchworks_model/blocks/topology_blocks_200r.csv
+
+vdyp_io/logs/patchworks_matrixbuilder_manifest-tsa29_rebuild_notopology_*.json
+vdyp_io/logs/tsa29_rebuild_report-*.json
