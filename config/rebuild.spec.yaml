@@ -40,23 +40,27 @@ steps:
       - "vdyp_io/logs/*"
     expected_outputs:
       - "run_manifest-<run_id>.json"
+      - "data/03_input-tsa29.csv (canonical BTC boundary handoff; femic run is expected to stop here)"
+      - "data/tipsy_params_tsa29.xlsx"
 
-  - step_id: "post_tipsy_bundle"
+  - step_id: "btc_post_tipsy_bundle"
     kind: "femic_command"
-    command: "femic tsa post-tipsy --run-config config/run_profile.tsa29.yaml --tsa 29"
+    command: "femic tsa btc-post-tipsy --run-config config/run_profile.tsa29.yaml --tsa 29 --run-id <run_id>"
     required: true
     depends_on: ["compile_upstream"]
     mutable_artifacts:
       - "data/model_input_bundle/*"
       - "vdyp_io/logs/*"
     expected_outputs:
-      - "post-tipsy manifest and bundle tables"
+      - "data/04_output-tsa29.csv"
+      - "data/04_error-tsa29.csv"
+      - "post-tipsy manifest and bundle tables (supported continuation seam after the BTC boundary)"
 
   - step_id: "patchworks_preflight"
     kind: "femic_command"
     command: "femic patchworks preflight --config config/patchworks.runtime.windows.yaml"
     required: true
-    depends_on: ["post_tipsy_bundle"]
+    depends_on: ["btc_post_tipsy_bundle"]
     mutable_artifacts: []
     expected_outputs:
       - "patchworks preflight success"

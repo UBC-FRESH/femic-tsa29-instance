@@ -4,26 +4,28 @@ Getting Started
 Purpose
 -------
 
-This repository provides an immediate TSA29 baseline for research use while
-retaining a reproducible rebuild pathway.
+This repository provides an immediate TSA29 baseline for research and teaching
+while also carrying the current BTC-first rebuild contract for issue ``#10``.
 
 Use this page first when you need to decide whether you are:
 
 - consuming the published snapshot as-is,
-- validating that the snapshot contract is still wired correctly, or
-- attempting a full rebuild on a host that has the required external runtime
-  surfaces.
+- validating that the instance contract still resolves cleanly, or
+- preparing for a fresh BTC-first rebuild on a host with the required external
+  runtimes.
 
 Prerequisites
 -------------
 
 - Python environment with ``femic`` installed.
-- Access to shared base datasets (see external data notes in README).
-- If you want a full rebuild rather than a dry-run/snapshot check, a host that
-  can satisfy the Patchworks runtime requirements.
+- Access to the shared public-data mirror used by the parent FEMIC workflow.
+- If you want a full rebuild, a Windows host with BatchTIPSY/BTC and
+  Patchworks available.
 
 Quickstart
 ----------
+
+Run the portable contract checks first:
 
 .. code-block:: bash
 
@@ -31,12 +33,12 @@ Quickstart
    femic instance validate-spec --spec config/rebuild.spec.yaml
    femic instance rebuild --spec config/rebuild.spec.yaml --dry-run --run-id tsa29_dryrun
 
-This quickstart is intentionally the portable baseline. It tells you:
+This sequence confirms:
 
 1. the instance config still parses and points at the expected files,
 2. the rebuild spec is structurally valid, and
-3. the rebuild runner can resolve the declared steps without mutating the
-   published baseline.
+3. the rebuild runner resolves the declared BTC-first step order without
+   mutating the instance.
 
 Snapshot-First Versus Rebuild-Capable Use
 -----------------------------------------
@@ -45,25 +47,40 @@ Two valid usage modes exist for this repository:
 
 - **Snapshot-first use**
   Treat the checked-in outputs under ``output/patchworks_tsa29_validated/`` as
-  the immediate student/reviewer baseline.
+  the immediate baseline for teaching/review use.
 - **Rebuild-capable use**
   Use the rebuild spec, runtime configs, and evidence workflow to confirm that
-  a suitably provisioned host can reproduce the baseline or explain drift.
+  a suitably provisioned host can reproduce the baseline through the BTC-first
+  seam.
 
-For most readers, snapshot-first use is the right starting point. Full rebuilds
-are primarily for maintainers and reviewers working on reproducibility or
-pipeline changes.
+For most readers, snapshot-first use is still the right starting point. Full
+rebuilds are primarily for maintainers and reviewers working on reproducibility
+or pipeline changes.
 
-Recommended First Inspection Targets
-------------------------------------
+Current BTC-First Rebuild Seam
+------------------------------
 
-After the quickstart checks pass, inspect these files first:
+The active supported rebuild contract is now:
 
-- ``output/patchworks_tsa29_validated/forestmodel.xml``
-- ``output/patchworks_tsa29_validated/fragments/``
-- ``evidence/reference_rebuild_report.latest.json``
-- ``evidence/ws3_smoke_report.latest.json``
-- ``metadata/lineage_registry.yaml``
+.. code-block:: bash
+
+   femic prep validate-case --run-config config/run_profile.tsa29.yaml --tipsy-config-dir config/tipsy
+   femic prep geospatial-preflight
+   femic run --run-config config/run_profile.tsa29.yaml --run-id tsa29_stage01a
+   femic tsa btc-post-tipsy --run-config config/run_profile.tsa29.yaml --tsa 29 --run-id tsa29_stage01a
+
+Expected boundary files:
+
+- after ``femic run``:
+  - ``data/03_input-tsa29.csv``
+  - ``data/tipsy_params_tsa29.xlsx``
+  - optional legacy mirror: ``data/02_input-tsa29_si_plus2.dat``
+- after ``femic tsa btc-post-tipsy``:
+  - ``data/04_output-tsa29.csv``
+  - ``data/04_error-tsa29.csv``
+
+``femic run`` is expected to stop at the BTC boundary. The supported
+continuation seam is ``femic tsa btc-post-tipsy ...``.
 
 Authoritative Paths
 -------------------

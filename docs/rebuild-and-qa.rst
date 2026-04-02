@@ -5,8 +5,8 @@ Purpose
 -------
 
 This page explains how to validate, rebuild, and interpret the TSA29 instance
-without confusing the published snapshot baseline with the current status of a
-live rebuild on your host.
+without confusing the published snapshot baseline with the current BTC-first
+rebuild path.
 
 Portable Validation Path
 ------------------------
@@ -23,25 +23,54 @@ This sequence validates:
 
 - instance config wiring,
 - rebuild-spec structure, and
-- rebuild-runner step resolution without mutating the published snapshot.
+- rebuild-runner step resolution without mutating the published baseline.
 
-Deterministic Rebuild
----------------------
+Deterministic Rebuild Script
+----------------------------
 
-.. code-block:: bash
+Primary source of truth for TSA29 rebuild sequence and invariants:
 
-   femic instance validate-spec --spec config/rebuild.spec.yaml
-   femic instance rebuild --spec config/rebuild.spec.yaml --run-id tsa29_full
+- ``config/rebuild.spec.yaml``
 
-Use a full rebuild only on a host that has the necessary external runtime
-surfaces available for the configured steps.
-
-Evidence Promotion
-------------------
+Use instance-local FEMIC rebuild orchestration for reproducible TSA29 checks:
 
 .. code-block:: bash
 
-   femic instance promote-evidence --output evidence/reference_rebuild_report.latest.json
+   femic instance rebuild \
+     --spec config/rebuild.spec.yaml \
+     --run-config config/run_profile.tsa29.yaml \
+     --tipsy-config-dir config/tipsy \
+     --patchworks-config config/patchworks.runtime.windows.yaml \
+     --with-patchworks \
+     --run-id tsa29_rebuild_check
+
+Manual equivalent command sequence (mirrors the active contract):
+
+.. code-block:: bash
+
+   femic prep validate-case --run-config config/run_profile.tsa29.yaml --tipsy-config-dir config/tipsy
+   femic prep geospatial-preflight
+   femic run --run-config config/run_profile.tsa29.yaml --run-id tsa29_rebuild_check
+   femic tsa btc-post-tipsy --run-config config/run_profile.tsa29.yaml --tsa 29 --run-id tsa29_rebuild_check
+   femic patchworks preflight --config config/patchworks.runtime.windows.yaml
+   femic patchworks build-blocks --config config/patchworks.runtime.windows.yaml --with-topology
+   femic patchworks matrix-build --config config/patchworks.runtime.windows.yaml --run-id tsa29_rebuild_check
+
+Interpret the seam this way:
+
+- ``femic run`` is expected to stop at the BTC boundary.
+- ``data/03_input-tsa29.csv`` is the canonical Stage 01a handoff artifact.
+- ``femic tsa btc-post-tipsy`` is the supported continuation seam.
+- ``data/04_output-tsa29.csv`` and ``data/04_error-tsa29.csv`` are the
+  canonical returned BTC artifacts.
+
+Outputs
+-------
+
+- Rebuild report:
+  ``vdyp_io/logs/instance_rebuild_report-<run_id>.json``
+- Matrix logs:
+  ``vdyp_io/logs/patchworks_matrixbuilder_{stdout,stderr,manifest}-<run_id>.log``
 
 Primary Evidence Files
 ----------------------
@@ -54,44 +83,6 @@ Read these files first after a rebuild or validation pass:
 - ``evidence/curve_selection_summary-tsa29-20260315T184955Z.csv``
 - ``vdyp_io/logs/`` manifests/logs referenced by the rebuild report
 
-Current Published Status
-------------------------
-
-The current checked-in rebuild evidence records:
-
-- ``status: warning`` / ``regression_gate: warning`` for the latest reference
-  rebuild report
-- a known Linux workspace issue in Stage 01a TSA index selection
-- a still-valid snapshot baseline for immediate student/reviewer use
-
-That means the repository should currently be interpreted as:
-
-- **validated snapshot baseline** for teaching/review use
-- **rebuild-capable contract** with one explicitly documented host/runtime
-  limitation rather than a silently broken rebuild story
-
-Known Regression (Current Workspace)
-------------------------------------
-
-Current Linux workspace runs can fail in 01a with TSA index mismatch for
-``tsa='29'``. This is tracked in runbooks and does not invalidate the snapshot
-baseline included in this repository.
-
-
-Curve Stability Evidence (P19.15)
----------------------------------
-
-The latest TSA29 curve-QA rerun evidence is recorded in:
-
-- ``evidence/curve_stability_report.20260315.md``
-- ``evidence/curve_selection_summary-tsa29-20260315T184955Z.csv``
-
-This evidence captures:
-
-- regenerated stratum and AU-level curve diagnostics,
-- selected-path outcomes across all TSA29 AU/SI rows, and
-- acceptance/sign-off notes for the current curve-stability baseline.
-
 Acceptance Checklist
 --------------------
 
@@ -100,7 +91,17 @@ Treat the QA pass as acceptable when:
 - ``femic prep validate-case`` passes,
 - ``femic instance validate-spec`` passes,
 - dry-run rebuild resolves cleanly,
+- a real ``femic run`` stops at the expected BTC boundary and emits
+  ``data/03_input-tsa29.csv``,
+- ``femic tsa btc-post-tipsy`` consumes the matching run and emits
+  ``data/04_output-tsa29.csv`` plus ``data/04_error-tsa29.csv``,
+- downstream Patchworks steps complete on the same run/evidence chain,
 - the rebuild/evidence report is interpretable and any warning state is
-  explicitly understood,
-- the curve-stability evidence still matches the intended published baseline.
+  explicitly understood.
 
+Legacy Note
+-----------
+
+The older ``02_input-tsa29*.dat`` / ``04_output-tsa29.out`` seam remains
+historical snapshot evidence only. Do not treat it as the current default
+operator workflow.
