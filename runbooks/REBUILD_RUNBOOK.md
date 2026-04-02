@@ -13,6 +13,9 @@
    - fragments under `output/patchworks_tsa29_validated/fragments/`
    - ForestModel XML under `models/tsa29_patchworks_model/yield/`
    - tracks under `models/tsa29_patchworks_model/tracks/`
+   - if the thin checkout only contains `output/patchworks_tsa29_validated/fragments/README.md`,
+     regenerate the validated fragments bundle before Patchworks preflight:
+     `femic export patchworks --tsa 29 --bundle-dir data/model_input_bundle --checkpoint data/ria_vri_vclr1p_checkpoint7.feather --output-dir output/patchworks_tsa29_validated`
 2. Ensure `FEMIC_EXTERNAL_DATA_ROOT` points at the materialized public-data
    mirror before running rebuild commands.
 3. If you need deterministic bootstrap sampling during investigation, set
@@ -30,8 +33,11 @@
    - `data/04_error-tsa29.csv`
 8. Continue Patchworks validation:
    - `femic patchworks preflight --config config/patchworks.runtime.windows.yaml`
-   - `femic patchworks build-blocks --config config/patchworks.runtime.windows.yaml --with-topology`
+   - `femic patchworks build-blocks --config config/patchworks.runtime.windows.yaml --with-topology --topology-backend patchworks-raster`
    - `femic patchworks matrix-build --config config/patchworks.runtime.windows.yaml --run-id tsa29_full`
+   - Matrix Builder also requires a currently available Patchworks license seat;
+     if stderr reports `No license available`, stop there and rerun once the
+     license server can grant a seat.
 9. Promote latest report if needed:
    `femic instance promote-evidence --output evidence/reference_rebuild_report.latest.json`
 

@@ -67,7 +67,7 @@ steps:
 
   - step_id: "patchworks_build_blocks"
     kind: "femic_command"
-    command: "femic patchworks build-blocks --config config/patchworks.runtime.windows.yaml --with-topology"
+    command: "femic patchworks build-blocks --config config/patchworks.runtime.windows.yaml --with-topology --topology-backend patchworks-raster"
     required: true
     depends_on: ["patchworks_preflight"]
     mutable_artifacts:

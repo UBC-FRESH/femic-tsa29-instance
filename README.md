@@ -69,6 +69,14 @@ date alone.
    - `output/patchworks_tsa29_validated/forestmodel.xml`
    - `output/patchworks_tsa29_validated/fragments/`
 
+   Thin-checkout note: the validated fragments shapefile set is externalized in
+   published snapshots. If that directory only contains `README.md`, regenerate
+   it locally before Patchworks preflight:
+
+   ```bash
+   femic export patchworks --tsa 29 --bundle-dir data/model_input_bundle --checkpoint data/ria_vri_vclr1p_checkpoint7.feather --output-dir output/patchworks_tsa29_validated
+   ```
+
 3. Validate the rebuild contract without mutating the instance:
 
    ```bash
@@ -99,6 +107,12 @@ The approved current contract for issue `#10` is:
 6. confirm returned BTC artifacts:
    - `data/04_output-tsa29.csv`
    - `data/04_error-tsa29.csv`
-7. continue Patchworks validation/evidence steps.
+7. continue Patchworks validation/evidence steps:
+   - regenerate `output/patchworks_tsa29_validated/fragments/` if the thin
+     checkout does not already carry the shapefile set
+   - use `--topology-backend patchworks-raster` for
+     `femic patchworks build-blocks` on the full TSA29 validated surface
+   - expect `femic patchworks matrix-build` to require an available Patchworks
+     license seat on the current host
 
 See full docs in `docs/`.
