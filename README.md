@@ -69,6 +69,11 @@ date alone.
    - `output/patchworks_tsa29_validated/forestmodel.xml`
    - `output/patchworks_tsa29_validated/fragments/`
 
+   For the known-good Windows Patchworks path, use a workstation with
+   Patchworks already installed and licensed. FEMIC should normally inherit the
+   real system-level `SPS_LICENSE_SERVER` value on that host rather than
+   overriding it in runtime config.
+
    Thin-checkout note: the validated fragments shapefile set is externalized in
    published snapshots. If that directory only contains `README.md`, regenerate
    it locally before Patchworks preflight:
@@ -110,6 +115,8 @@ The approved current contract for issue `#10` is:
 7. continue Patchworks validation/evidence steps:
    - regenerate `output/patchworks_tsa29_validated/fragments/` if the thin
      checkout does not already carry the shapefile set
+   - use `output/patchworks_tsa29_validated/forestmodel.xml` together with the
+     matching validated fragments set as the canonical Matrix Builder input pair
    - use `--topology-backend patchworks-raster` for
      `femic patchworks build-blocks` on the full TSA29 validated surface
    - expect `femic patchworks matrix-build` to require an available Patchworks

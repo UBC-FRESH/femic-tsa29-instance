@@ -11,8 +11,11 @@
 1. Ensure `config/patchworks.runtime.windows.yaml` points at your local
    Patchworks install. The runtime expects:
    - fragments under `output/patchworks_tsa29_validated/fragments/`
-   - ForestModel XML under `models/tsa29_patchworks_model/yield/`
+   - ForestModel XML under `output/patchworks_tsa29_validated/`
    - tracks under `models/tsa29_patchworks_model/tracks/`
+   - on known-good Windows workstations, inherit the real system-level
+     `SPS_LICENSE_SERVER` value instead of injecting a replacement runtime
+     license value through FEMIC config
    - if the thin checkout only contains `output/patchworks_tsa29_validated/fragments/README.md`,
      regenerate the validated fragments bundle before Patchworks preflight:
      `femic export patchworks --tsa 29 --bundle-dir data/model_input_bundle --checkpoint data/ria_vri_vclr1p_checkpoint7.feather --output-dir output/patchworks_tsa29_validated`

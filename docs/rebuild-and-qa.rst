@@ -56,6 +56,15 @@ Manual equivalent command sequence (mirrors the active contract):
    femic patchworks build-blocks --config config/patchworks.runtime.windows.yaml --with-topology
    femic patchworks matrix-build --config config/patchworks.runtime.windows.yaml --run-id tsa29_rebuild_check
 
+Patchworks runtime assumptions for the supported Windows path:
+
+- use a Windows workstation with a valid local Patchworks installation;
+- prefer the real system-level ``SPS_LICENSE_SERVER`` setting already present
+  on that workstation instead of injecting a replacement runtime value;
+- treat ``output/patchworks_tsa29_validated/forestmodel.xml`` plus
+  ``output/patchworks_tsa29_validated/fragments/`` as the canonical Matrix
+  Builder input pair.
+
 Interpret the seam this way:
 
 - ``femic run`` is expected to stop at the BTC boundary.
@@ -100,7 +109,7 @@ Treat the QA pass as acceptable when:
   explicitly understood.
 
 Legacy Note
------------
+----------- 
 
 The older ``02_input-tsa29*.dat`` / ``04_output-tsa29.out`` seam remains
 historical snapshot evidence only. Do not treat it as the current default

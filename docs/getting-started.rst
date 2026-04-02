@@ -20,7 +20,11 @@ Prerequisites
 - Python environment with ``femic`` installed.
 - Access to the shared public-data mirror used by the parent FEMIC workflow.
 - If you want a full rebuild, a Windows host with BatchTIPSY/BTC and
-  Patchworks available.
+  Patchworks already installed and licensed.
+- Known-good Patchworks runs on UBC institutional Windows workstations inherit
+  the real ``SPS_LICENSE_SERVER`` value from system-level environment
+  configuration. Do not override that working host configuration with a
+  placeholder runtime value.
 
 Quickstart
 ----------
@@ -92,6 +96,9 @@ Authoritative Paths
 - Patchworks runtime config: ``config/patchworks.runtime.windows.yaml``
 - Baseline output: ``output/patchworks_tsa29_validated/``
 - Validation bundle: ``output/patchworks_tsa29_validation/``
+- Canonical Matrix Builder XML + fragments pair:
+  ``output/patchworks_tsa29_validated/forestmodel.xml`` plus
+  ``output/patchworks_tsa29_validated/fragments/``
 
 Next Pages
 ----------
