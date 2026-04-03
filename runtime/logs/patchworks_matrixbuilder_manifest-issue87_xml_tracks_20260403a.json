@@ -1,0 +1,77 @@
+{
+  "run_id": "issue87_xml_tracks_20260403a",
+  "timestamp_utc": "2026-04-03T20:17:18.667365+00:00",
+  "interactive": false,
+  "command": [
+    "C:\\Program Files\\Eclipse Adoptium\\jdk-8.0.472.8-hotspot\\bin\\java.EXE",
+    "-Djava.library.path=C:\\Program Files\\Spatial Planning Systems\\Patchworks\\lib",
+    "-jar",
+    "patchworks.jar",
+    "ca.spatial.tracks.builder.Process",
+    "F:\\projects\\femic\\external\\femic-tsa29-instance\\output\\patchworks_tsa29_validated\\fragments\\fragments.dbf",
+    "F:\\projects\\femic\\external\\femic-tsa29-instance\\models\\tsa29_patchworks_model\\tracks",
+    "F:\\projects\\femic\\external\\femic-tsa29-instance\\output\\patchworks_tsa29_validated\\forestmodel.xml"
+  ],
+  "command_string": "'C:\\Program Files\\Eclipse Adoptium\\jdk-8.0.472.8-hotspot\\bin\\java.EXE' '-Djava.library.path=C:\\Program Files\\Spatial Planning Systems\\Patchworks\\lib' -jar patchworks.jar ca.spatial.tracks.builder.Process 'F:\\projects\\femic\\external\\femic-tsa29-instance\\output\\patchworks_tsa29_validated\\fragments\\fragments.dbf' 'F:\\projects\\femic\\external\\femic-tsa29-instance\\models\\tsa29_patchworks_model\\tracks' 'F:\\projects\\femic\\external\\femic-tsa29-instance\\output\\patchworks_tsa29_validated\\forestmodel.xml'",
+  "raw_returncode": 1,
+  "returncode": 0,
+  "runtime": {
+    "launcher_executable": "C:\\Program Files\\Eclipse Adoptium\\jdk-8.0.472.8-hotspot\\bin\\java.EXE",
+    "host_mode": "windows",
+    "jar_path": "C:\\Program Files\\Spatial Planning Systems\\Patchworks\\patchworks.jar",
+    "license_env": "SPS_LICENSE_SERVER",
+    "license_value": "frst424@auth.spatial.ca",
+    "spshome": "C:\\Program Files\\Spatial Planning Systems\\Patchworks",
+    "use_xvfb": false,
+    "wine_prefix": null,
+    "auto_close_window_on_success": true,
+    "auto_close_settle_seconds": 2.0,
+    "auto_close_timeout_seconds": 10.0
+  },
+  "inputs": {
+    "fragments_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\output\\patchworks_tsa29_validated\\fragments\\fragments.dbf",
+    "matrix_output_dir": "F:\\projects\\femic\\external\\femic-tsa29-instance\\models\\tsa29_patchworks_model\\tracks",
+    "forestmodel_xml_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\output\\patchworks_tsa29_validated\\forestmodel.xml"
+  },
+  "accounts_sync": {
+    "status": "synced",
+    "protoaccounts_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\models\\tsa29_patchworks_model\\tracks\\protoaccounts.csv",
+    "accounts_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\models\\tsa29_patchworks_model\\tracks\\accounts.csv",
+    "backup_path": null,
+    "excluded_patterns": [],
+    "excluded_row_count": 0,
+    "harvested_volume_utilization_by_treatment": {}
+  },
+  "logs": {
+    "stdout": "F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs\\patchworks_matrixbuilder_stdout-issue87_xml_tracks_20260403a.log",
+    "stderr": "F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs\\patchworks_matrixbuilder_stderr-issue87_xml_tracks_20260403a.log"
+  },
+  "windows_automation": {
+    "auto_close_window_on_success": true,
+    "baseline_output_state": {
+      "ready": false,
+      "file_count": 0,
+      "latest_mtime": 0.0
+    },
+    "baseline_process_ids": [],
+    "baseline_shell_process_ids": [],
+    "launched_pid": 1620,
+    "final_output_state": {
+      "ready": true,
+      "file_count": 10,
+      "latest_mtime": 1775247405.010288
+    },
+    "close_attempted": true,
+    "close_method": "force_stop",
+    "closed_window_count": 1,
+    "force_stopped_pids": [
+      1620
+    ],
+    "shell_close_method": null,
+    "closed_shell_window_count": 0,
+    "force_stopped_shell_pids": [],
+    "remaining_process_ids": [],
+    "remaining_shell_process_ids": []
+  },
+  "failures": []
+}

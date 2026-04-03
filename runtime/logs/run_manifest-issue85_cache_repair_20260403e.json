@@ -1,0 +1,77 @@
+{
+  "artifacts": {
+    "bundle_tables": [
+      {
+        "exists": true,
+        "path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\model_input_bundle\\au_table.csv"
+      },
+      {
+        "exists": true,
+        "path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\model_input_bundle\\curve_table.csv"
+      },
+      {
+        "exists": true,
+        "path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\model_input_bundle\\curve_points_table.csv"
+      }
+    ],
+    "tipsy_curves": [
+      {
+        "exists": true,
+        "path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\tipsy_curves_tsa29.csv"
+      }
+    ],
+    "tipsy_sppcomp": [
+      {
+        "exists": true,
+        "path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\tipsy_sppcomp_tsa29.csv"
+      }
+    ]
+  },
+  "duration_sec": 22.422,
+  "env_flags": {
+    "FEMIC_DISABLE_IPP": null,
+    "FEMIC_SAMPLING_SEED": null,
+    "FEMIC_USE_SWIFTER": null
+  },
+  "error_message": null,
+  "exit_code": 0,
+  "finished_at_utc": "2026-04-03T20:03:01.070810+00:00",
+  "log_dir": "F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs",
+  "outputs": {
+    "au_rows": 54,
+    "au_table_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\model_input_bundle\\au_table.csv",
+    "curve_points_rows": 21506,
+    "curve_points_table_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\model_input_bundle\\curve_points_table.csv",
+    "curve_rows": 3780,
+    "curve_table_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\model_input_bundle\\curve_table.csv"
+  },
+  "run_id": "issue85_cache_repair_20260403e",
+  "run_uuid": "0146acb9-27fa-48d2-94d5-04dbdd168cc6",
+  "runtime_parameters": {
+    "femic_log_dir": "F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs",
+    "femic_run_id": "issue85_cache_repair_20260403e",
+    "femic_sampling_seed": null,
+    "femic_tsa_list": "29"
+  },
+  "runtime_versions": {
+    "femic": "0.1.1a1",
+    "packages": {
+      "geopandas": "1.1.3",
+      "numpy": "2.4.3",
+      "pandas": "3.0.1",
+      "rasterio": "1.5.0",
+      "rich": "14.3.3",
+      "scipy": "1.17.1",
+      "shapely": "2.1.2",
+      "typer": "0.24.1"
+    },
+    "platform": "Windows-10-10.0.19045-SP0",
+    "python": "3.12.10"
+  },
+  "started_at_utc": "2026-04-03T20:02:38.621329+00:00",
+  "status": "ok",
+  "tsa_list": [
+    "29"
+  ],
+  "workflow": "tsa_post_tipsy"
+}

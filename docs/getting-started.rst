@@ -87,6 +87,10 @@ For most readers, snapshot-first use is still the right starting point. Full
 rebuilds are primarily for maintainers and reviewers working on reproducibility
 or pipeline changes.
 
+If a thin clone is missing annex-backed fragments, blocks, tracks, or other
+published runtime payloads, materialize them with ``datalad get`` before
+treating the checkout as incomplete or trying to regenerate those artifacts.
+
 Current BTC-First Rebuild Seam
 ------------------------------
 

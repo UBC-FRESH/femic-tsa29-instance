@@ -77,17 +77,20 @@ Use these files as the source of truth for lineage and integrity:
 Current Published Provenance State
 ----------------------------------
 
-At the time of the published snapshot:
+At the time of the current published snapshot:
 
-- source FEMIC commit was recorded as ``5caa72c``
-- snapshot date was recorded as ``2026-03-14``
+- source FEMIC commit was recorded as ``b072025``
+- snapshot date was recorded as ``2026-04-03``
 - the published baseline was treated as validated for snapshot-first use
 
-Current maintainer interpretation should add one more distinction:
+Current maintainer interpretation should add two more distinctions:
 
 - the snapshot preserves the older DAT/out seam as historical evidence,
 - the active rebuild contract is now BTC-first and should be evaluated through
-  ``03_input-tsa29.csv`` plus ``femic tsa btc-post-tipsy``.
+  ``03_input-tsa29.csv`` plus ``femic tsa btc-post-tipsy``; and
+- launch-critical runtime payloads such as ``blocks/`` and ``tracks/`` plus the
+  editable ``forestmodel.xml``/``fragments/`` pair may be annex-backed in thin
+  clones and should be materialized with ``datalad get`` before use.
 
 Evidence Files Worth Reading First
 ----------------------------------

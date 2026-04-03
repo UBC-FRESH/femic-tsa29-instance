@@ -1,0 +1,74 @@
+{
+  "artifacts": {
+    "error_csv": {
+      "exists": true,
+      "path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\04_error-tsa29.csv"
+    },
+    "output_csv": {
+      "exists": true,
+      "path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\04_output-tsa29.csv"
+    },
+    "stderr_log": {
+      "exists": true,
+      "path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs\\btc_stderr-issue85_cache_repair_20260403e_tsa29.log"
+    },
+    "stdout_log": {
+      "exists": true,
+      "path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs\\btc_stdout-issue85_cache_repair_20260403e_tsa29.log"
+    }
+  },
+  "command": [
+    "F:\\projects\\femic\\tipsy_io\\scratch\\btc-issue85_cache_repair_20260403e_tsa29\\btc_install\\TIPSYbtc.exe",
+    "/TSR",
+    "03_input-tsa29.csv",
+    "04_output-tsa29.csv",
+    "04_error-tsa29.csv"
+  ],
+  "copied_install": true,
+  "discovery_source": "default",
+  "duration_sec": 8.25,
+  "error_csv": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\04_error-tsa29.csv",
+  "error_message": null,
+  "executable_path": "F:\\projects\\femic\\tipsy_io\\scratch\\btc-issue85_cache_repair_20260403e_tsa29\\btc_install\\TIPSYbtc.exe",
+  "exit_code": 0,
+  "finished_at_utc": "2026-04-03T20:02:38.557109+00:00",
+  "indicator_bank_names": [],
+  "input_csv": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\03_input-tsa29.csv",
+  "install_root": "F:\\projects\\femic\\tipsy_io\\scratch\\btc-issue85_cache_repair_20260403e_tsa29\\btc_install",
+  "log_dir": "F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs",
+  "mode": "TSR",
+  "output_csv": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\04_output-tsa29.csv",
+  "report_template_path": "C:\\Users\\gep\\OneDrive - UBC\\Documents\\BatchTIPSY Composer\\TimberSupply.rpt",
+  "run_id": "issue85_cache_repair_20260403e_tsa29",
+  "runtime_versions": {
+    "femic": "0.1.1a1",
+    "packages": {
+      "geopandas": "1.1.3",
+      "numpy": "2.4.3",
+      "pandas": "3.0.1",
+      "rasterio": "1.5.0",
+      "rich": "14.3.3",
+      "scipy": "1.17.1",
+      "shapely": "2.1.2",
+      "typer": "0.24.1"
+    },
+    "platform": "Windows-10-10.0.19045-SP0",
+    "python": "3.12.10"
+  },
+  "staged_error_csv": "F:\\projects\\femic\\tipsy_io\\scratch\\btc-issue85_cache_repair_20260403e_tsa29\\work\\04_error-tsa29.csv",
+  "staged_input_csv": "F:\\projects\\femic\\tipsy_io\\scratch\\btc-issue85_cache_repair_20260403e_tsa29\\work\\03_input-tsa29.csv",
+  "staged_output_csv": "F:\\projects\\femic\\tipsy_io\\scratch\\btc-issue85_cache_repair_20260403e_tsa29\\work\\04_output-tsa29.csv",
+  "started_at_utc": "2026-04-03T20:02:30.304377+00:00",
+  "status": "ok",
+  "stderr_log_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs\\btc_stderr-issue85_cache_repair_20260403e_tsa29.log",
+  "stdout_log_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs\\btc_stdout-issue85_cache_repair_20260403e_tsa29.log",
+  "uses_live_overlay": true,
+  "windows_dialog_cleanup": {
+    "close_attempted": false,
+    "closed_window_count": 0,
+    "force_stopped_pids": [],
+    "matched_dialog_pids": [],
+    "remaining_process_ids": [],
+    "timed_out": false
+  }
+}

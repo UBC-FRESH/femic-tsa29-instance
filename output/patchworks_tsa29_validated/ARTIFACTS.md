@@ -1,22 +1,28 @@
 # TSA29 validated output artifact manifest
 
-This repository uses a thin-instance strategy suitable for standard GitHub git
-storage. Large artifacts are not committed here.
+This repository now publishes the validated TSA29 output package through a
+DataLad/git-annex-managed large-artifact workflow.
 
-## Included in-repo
+## Published validated rebuild surfaces
 
 - `forestmodel.xml`
-
-## Externalized artifacts
-
-The following artifacts were validated in the source FEMIC workspace but are
-not committed in this repository due to size:
-
 - `fragments/fragments.shp`
 - `fragments/fragments.dbf`
 - `fragments/fragments.shx`
 - `fragments/fragments.prj`
 - `fragments/fragments.cpg`
 
-See `metadata/large_artifacts.sha256` for content hashes captured at snapshot
-publication time.
+These files may be annex-backed in thin clones. Materialize them with
+`datalad get output/patchworks_tsa29_validated` before assuming the validated
+package is incomplete.
+
+## Related standalone runtime surfaces
+
+The full runnable standalone Patchworks package also depends on:
+
+- `models/tsa29_patchworks_model/blocks/`
+- `models/tsa29_patchworks_model/tracks/`
+- `models/tsa29_patchworks_model/analysis/`
+
+See `metadata/large_artifacts.sha256` for hashes of the larger published
+runtime and rebuild payloads.

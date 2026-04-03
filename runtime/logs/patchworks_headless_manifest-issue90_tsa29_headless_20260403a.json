@@ -1,0 +1,56 @@
+{
+  "run_id": "issue90_tsa29_headless_20260403a",
+  "timestamp_utc": "2026-04-03T20:26:55.125113+00:00",
+  "interactive": false,
+  "mode": "headless_pin",
+  "command": [
+    "C:\\Program Files\\Eclipse Adoptium\\jdk-8.0.472.8-hotspot\\bin\\java.EXE",
+    "-Djava.library.path=C:\\Program Files\\Spatial Planning Systems\\Patchworks\\lib",
+    "-jar",
+    "patchworks.jar",
+    "ca.spatial.util.IProperties",
+    "BeanShell",
+    "F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs\\patchworks_headless_si_yrxqs\\patchworks_headless_launcher_issue90_tsa29_headless_20260403a.bsh"
+  ],
+  "command_string": "'C:\\Program Files\\Eclipse Adoptium\\jdk-8.0.472.8-hotspot\\bin\\java.EXE' '-Djava.library.path=C:\\Program Files\\Spatial Planning Systems\\Patchworks\\lib' -jar patchworks.jar ca.spatial.util.IProperties BeanShell 'F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs\\patchworks_headless_si_yrxqs\\patchworks_headless_launcher_issue90_tsa29_headless_20260403a.bsh'",
+  "raw_returncode": 0,
+  "returncode": 0,
+  "runtime": {
+    "launcher_executable": "C:\\Program Files\\Eclipse Adoptium\\jdk-8.0.472.8-hotspot\\bin\\java.EXE",
+    "host_mode": "windows",
+    "jar_path": "C:\\Program Files\\Spatial Planning Systems\\Patchworks\\patchworks.jar",
+    "license_env": "SPS_LICENSE_SERVER",
+    "license_value": "frst424@auth.spatial.ca",
+    "spshome": "C:\\Program Files\\Spatial Planning Systems\\Patchworks",
+    "use_xvfb": false,
+    "wine_prefix": null
+  },
+  "inputs": {
+    "pin_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\models\\tsa29_patchworks_model\\analysis\\base.pin",
+    "stage_label": "F:/projects/femic/external/femic-tsa29-instance/runtime/logs/headless_stage/issue90_tsa29_headless_20260403a",
+    "iterations": 100000,
+    "improvement": 0.0,
+    "scenario_mode": "max-even-flow-smoke",
+    "scenario_target": "product.Yield.managed.Total",
+    "scenario_min_annual": null,
+    "launcher_script_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs\\patchworks_headless_si_yrxqs\\patchworks_headless_launcher_issue90_tsa29_headless_20260403a.bsh",
+    "trace_log_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs\\patchworks_headless_trace-issue90_tsa29_headless_20260403a.log"
+  },
+  "logs": {
+    "stdout": "F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs\\patchworks_headless_stdout-issue90_tsa29_headless_20260403a.log",
+    "stderr": "F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs\\patchworks_headless_stderr-issue90_tsa29_headless_20260403a.log",
+    "trace": "F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs\\patchworks_headless_trace-issue90_tsa29_headless_20260403a.log"
+  },
+  "headless_automation": {
+    "launched_pid": 20300,
+    "terminal_state": "success",
+    "detected_marker": "[FEMIC headless] saveStage completed",
+    "monitor_killed_process_tree": true,
+    "trace_log_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs\\patchworks_headless_trace-issue90_tsa29_headless_20260403a.log"
+  },
+  "failures": [],
+  "outputs": {
+    "stage_dir": "F:\\projects\\femic\\external\\femic-tsa29-instance\\runtime\\logs\\headless_stage\\issue90_tsa29_headless_20260403a",
+    "saved_file_count": 1047
+  }
+}

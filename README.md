@@ -27,13 +27,12 @@ no longer the primary operator contract.
 ## Source Provenance
 
 - FEMIC source repo: `https://github.com/UBC-FRESH/femic`
-- Published snapshot source commit: `5caa72c`
-- Published snapshot date (UTC): `2026-03-14`
+- Published snapshot source commit: `b072025`
+- Published snapshot date (UTC): `2026-04-03`
 
-Those provenance fields describe the original snapshot payload preserved in this
-instance. Current local migration work should be interpreted through the docs,
-runbook, and rebuild spec in this repo rather than by the original snapshot
-date alone.
+Those provenance fields describe the current published TSA29 PoC package in
+this repo. Use the docs, runbook, and rebuild spec here as the source of truth
+for what this published snapshot includes and how it should be materialized.
 
 ## DataLad Dataset Policy
 
@@ -125,13 +124,10 @@ variants if they choose.
    real system-level `SPS_LICENSE_SERVER` value on that host rather than
    overriding it in runtime config.
 
-   Thin-checkout note: the validated fragments shapefile set is externalized in
-   published snapshots. If that directory only contains `README.md`, regenerate
-   it locally before Patchworks preflight:
-
-   ```bash
-   femic export patchworks --tsa 29 --bundle-dir data/model_input_bundle --checkpoint data/ria_vri_vclr1p_checkpoint7.feather --output-dir output/patchworks_tsa29_validated
-   ```
+   Thin-checkout note: if any annex-backed validated fragments or runtime model
+   files are absent locally, materialize them with `datalad get` before
+   Patchworks preflight rather than treating the published instance as
+   incomplete.
 
 3. Validate the rebuild contract without mutating the instance:
 

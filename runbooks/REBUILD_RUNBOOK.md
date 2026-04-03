@@ -16,9 +16,9 @@
    - on known-good Windows workstations, inherit the real system-level
      `SPS_LICENSE_SERVER` value instead of injecting a replacement runtime
      license value through FEMIC config
-   - if the thin checkout only contains `output/patchworks_tsa29_validated/fragments/README.md`,
-     regenerate the validated fragments bundle before Patchworks preflight:
-     `femic export patchworks --tsa 29 --bundle-dir data/model_input_bundle --checkpoint data/ria_vri_vclr1p_checkpoint7.feather --output-dir output/patchworks_tsa29_validated`
+   - if a thin checkout is missing annex-backed validated fragments or other
+     shipped runtime payloads, materialize them with `datalad get` before
+     Patchworks preflight rather than regenerating them blindly
 2. Ensure `FEMIC_EXTERNAL_DATA_ROOT` points at the materialized public-data
    mirror before running rebuild commands.
 3. If you need deterministic bootstrap sampling during investigation, set

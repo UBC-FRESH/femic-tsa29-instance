@@ -88,10 +88,9 @@ Standalone launch-ready published minimum:
 - the shipped analysis/PIN launch surfaces under
   ``models/tsa29_patchworks_model/analysis/``
 
-Do not treat a thin checkout that only contains
-``output/patchworks_tsa29_validated/fragments/README.md`` as Patchworks-ready.
-Restore or regenerate the validated fragments sidecar set before Patchworks
-preflight or Matrix Builder work.
+Do not treat a thin checkout with missing annex-backed validated fragments as
+Patchworks-ready. Materialize the published fragments sidecar set with
+``datalad get`` before Patchworks preflight or Matrix Builder work.
 
 Do not treat a checkout with XML/fragments/tracks but no shipped
 ``blocks/blocks.shp`` payload as a runnable standalone Patchworks model.
