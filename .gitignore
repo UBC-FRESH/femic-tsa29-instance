@@ -16,6 +16,10 @@ dist/
 vdyp_io/logs/*.log
 vdyp_io/logs/*stdout*.log
 vdyp_io/logs/*stderr*.log
+vdyp_io/vdyp_err_*.err
+vdyp_io/vdyp_lyr_*.csv
+vdyp_io/vdyp_out_*.out
+vdyp_io/vdyp_ply_*.csv
 *.tmp
 
 # Editor/OS
