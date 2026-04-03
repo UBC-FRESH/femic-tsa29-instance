@@ -6,7 +6,7 @@ This note records the Phase 19.15 curve-QA rerun after plotting/fitting updates.
 
 - Curve event log: `../vdyp_io/logs/vdyp_curve_events-tsa29-20260315T184955Z.jsonl`
 - Run event log: `../vdyp_io/logs/vdyp_runs-tsa29-tsa29_warm_cov80b_20260315T073353Z.jsonl`
-- Post-TIPSY manifest: `../vdyp_io/logs/run_manifest-post_tipsy_20260315T190051Z.json`
+- Post-TIPSY manifest: `../runtime/logs/run_manifest-post_tipsy_20260315T190051Z.json`
 - Selection summary CSV: `curve_selection_summary-tsa29-20260315T184955Z.csv`
 
 ## QA summary

@@ -77,9 +77,9 @@ Outputs
 -------
 
 - Rebuild report:
-  ``vdyp_io/logs/instance_rebuild_report-<run_id>.json``
+  ``runtime/logs/instance_rebuild_report-<run_id>.json``
 - Matrix logs:
-  ``vdyp_io/logs/patchworks_matrixbuilder_{stdout,stderr,manifest}-<run_id>.log``
+  ``runtime/logs/patchworks_matrixbuilder_{stdout,stderr,manifest}-<run_id>.log``
 
 Primary Evidence Files
 ----------------------
@@ -90,7 +90,7 @@ Read these files first after a rebuild or validation pass:
 - ``evidence/ws3_smoke_report.latest.json``
 - ``evidence/curve_stability_report.20260315.md``
 - ``evidence/curve_selection_summary-tsa29-20260315T184955Z.csv``
-- ``vdyp_io/logs/`` manifests/logs referenced by the rebuild report
+- ``runtime/logs/`` manifests/logs referenced by the rebuild report
 
 Acceptance Checklist
 --------------------
