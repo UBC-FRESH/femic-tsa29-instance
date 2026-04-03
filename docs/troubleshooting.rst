@@ -81,7 +81,7 @@ Evidence Looks Worse Than Expected
 Rebuild Diffs Unexpectedly
 --------------------------
 
-- Inspect the latest report in ``vdyp_io/logs/``.
+- Inspect the latest report in ``runtime/logs/``.
 - Compare against ``config/rebuild.allowlist.yaml`` and only allowlist
   intentional structural changes.
 - For repeatable bootstrap sampling during investigation, prefer setting
