@@ -65,6 +65,47 @@ Patchworks runtime assumptions for the supported Windows path:
   ``output/patchworks_tsa29_validated/fragments/`` as the canonical Matrix
   Builder input pair.
 
+Minimal functional Patchworks surface for TSA29:
+
+Matrix-Builder-ready / rebuild minimum:
+
+- ``config/patchworks.runtime.windows.yaml``
+- ``output/patchworks_tsa29_validated/forestmodel.xml``
+- the full validated fragments sidecar set under
+  ``output/patchworks_tsa29_validated/fragments/``:
+  ``fragments.shp``, ``fragments.dbf``, ``fragments.shx``,
+  ``fragments.prj``, and ``fragments.cpg``
+
+Standalone launch-ready published minimum:
+
+- everything in the Matrix-Builder-ready tier
+- after Matrix Builder, compiled tracks under
+  ``models/tsa29_patchworks_model/tracks/`` including at least
+  ``curves.csv``, ``features.csv``, ``products.csv``, ``treatments.csv``,
+  ``protoaccounts.csv``, and ``accounts.csv``
+- ``models/tsa29_patchworks_model/blocks/blocks.shp`` plus sidecars
+- the topology CSV used by the shipped analysis surface
+- the shipped analysis/PIN launch surfaces under
+  ``models/tsa29_patchworks_model/analysis/``
+
+Do not treat a thin checkout that only contains
+``output/patchworks_tsa29_validated/fragments/README.md`` as Patchworks-ready.
+Restore or regenerate the validated fragments sidecar set before Patchworks
+preflight or Matrix Builder work.
+
+Do not treat a checkout with XML/fragments/tracks but no shipped
+``blocks/blocks.shp`` payload as a runnable standalone Patchworks model.
+
+Current development-mode runtime note:
+
+- for interactive prototype work, use
+  ``models/tsa29_patchworks_model/analysis/base_gui.pin`` as the explicit
+  GUI-facing launch wrapper;
+- the shared TSA29 baseline analysis wiring currently loads
+  ``../blocks/topology_blocks_0r.csv`` with topology distance ``0 m`` so the
+  runtime adjacency graph stays smaller while the model is still under active
+  development.
+
 Interpret the seam this way:
 
 - ``femic run`` is expected to stop at the BTC boundary.
