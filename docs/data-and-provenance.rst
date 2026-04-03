@@ -22,9 +22,30 @@ The checked-in snapshot currently includes:
 - ``data/vdyp_curves_smooth-tsa29.feather``
 - ``data/vdyp_lyr-tsa29.feather``
 - ``data/vdyp_ply-tsa29.feather``
+- launch-critical compiled model surfaces:
+  - ``models/tsa29_patchworks_model/blocks/``
+  - ``models/tsa29_patchworks_model/tracks/``
+  - ``models/tsa29_patchworks_model/analysis/``
+- editable anti-lock-in rebuild surfaces:
+  - ``output/patchworks_tsa29_validated/forestmodel.xml``
+  - ``output/patchworks_tsa29_validated/fragments/``
 
 These artifacts support both immediate inspection and later rebuild/evidence
 comparison. They are not just disposable intermediates.
+
+DataLad / Annex Interpretation
+------------------------------
+
+This instance now uses a large-only DataLad/git-annex policy:
+
+- small canonical text artifacts stay in Git;
+- bulky instance payloads can be annex-backed and materialized on demand; and
+- ``metadata/large_artifacts.sha256`` is the ledger for large payloads that
+  matter to the published standalone instance contract.
+
+If a collaborator clone is missing launch-critical payloads locally, the right
+first response is to materialize them with ``datalad get`` rather than assume
+the instance is broken.
 
 Current BTC-First Rebuild Artifacts
 -----------------------------------

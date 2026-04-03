@@ -21,6 +21,17 @@ vdyp_io/vdyp_lyr_*.csv
 vdyp_io/vdyp_out_*.out
 vdyp_io/vdyp_ply_*.csv
 *.tmp
+runtime/logs/headless_stage/
+runtime/logs/patchworks_headless_si_*/
+runtime/logs/patchworks_headless_stdout-*.log
+runtime/logs/patchworks_headless_stderr-*.log
+runtime/logs/patchworks_headless_trace-*.log
+runtime/logs/patchworks_matrixbuilder_stdout-*.log
+runtime/logs/patchworks_matrixbuilder_stderr-*.log
+runtime/logs/btc_stdout-*.log
+runtime/logs/btc_stderr-*.log
+models/tsa29_patchworks_model/patchworksLog.csv
+models/tsa29_patchworks_model/blocks/patchworksLog.csv
 
 # Editor/OS
 .DS_Store

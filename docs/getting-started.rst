@@ -18,6 +18,8 @@ Prerequisites
 -------------
 
 - Python environment with ``femic`` installed.
+- ``git-annex`` plus DataLad if you need to materialize annex-backed TSA29
+  payloads from a thin clone.
 - Access to the shared public-data mirror used by the parent FEMIC workflow.
 - If you want a full rebuild, a Windows host with BatchTIPSY/BTC and
   Patchworks already installed and licensed.
@@ -28,6 +30,30 @@ Prerequisites
 
 Quickstart
 ----------
+
+If this checkout was cloned as a DataLad dataset and large payloads are not yet
+materialized locally, start here:
+
+.. code-block:: bash
+
+   git annex version
+   datalad --version
+   git annex info --fast
+   datalad get models/tsa29_patchworks_model/blocks
+   datalad get models/tsa29_patchworks_model/tracks
+   datalad get output/patchworks_tsa29_validated
+
+If the published snapshot names a specific special remote, enable that remote
+before the ``datalad get`` calls above.
+
+On Windows inside a parent FEMIC checkout, prefer the active virtual
+environment explicitly:
+
+.. code-block:: powershell
+
+   .\.venv\Scripts\python.exe -m datalad get models/tsa29_patchworks_model/blocks
+   .\.venv\Scripts\python.exe -m datalad get models/tsa29_patchworks_model/tracks
+   .\.venv\Scripts\python.exe -m datalad get output/patchworks_tsa29_validated
 
 Run the portable contract checks first:
 
@@ -99,6 +125,10 @@ Authoritative Paths
 - Canonical Matrix Builder XML + fragments pair:
   ``output/patchworks_tsa29_validated/forestmodel.xml`` plus
   ``output/patchworks_tsa29_validated/fragments/``
+- Canonical standalone runtime payloads:
+  ``models/tsa29_patchworks_model/blocks/``,
+  ``models/tsa29_patchworks_model/tracks/``, and
+  ``models/tsa29_patchworks_model/analysis/``
 
 Next Pages
 ----------

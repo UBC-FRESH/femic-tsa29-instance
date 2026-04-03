@@ -35,6 +35,31 @@ instance. Current local migration work should be interpreted through the docs,
 runbook, and rebuild spec in this repo rather than by the original snapshot
 date alone.
 
+## DataLad Dataset Policy
+
+This repository is now a **DataLad/git-annex-managed standalone instance**.
+
+Publication policy:
+
+- keep docs, config, small canonical text artifacts, and launch wrappers in Git
+- annex bulky instance payloads and oversized rebuild/runtime artifacts
+- do **not** publish transient local runtime spill such as saved-stage dumps,
+  scratch logs, or temporary launcher traces
+
+The published standalone Patchworks package is intentionally split into two
+complementary surfaces:
+
+- **launch-critical runtime assets**
+  `models/tsa29_patchworks_model/blocks/`, `models/tsa29_patchworks_model/tracks/`,
+  and the analysis/PIN launch surfaces
+- **editable anti-lock-in rebuild assets**
+  `output/patchworks_tsa29_validated/forestmodel.xml` plus
+  `output/patchworks_tsa29_validated/fragments/`
+
+That split is deliberate: users should be able to open the model directly in
+Patchworks *and* still fly outside FEMIC for manual overlays / local rebuild
+variants if they choose.
+
 ## Included Snapshot Assets
 
 - Runtime configs: `config/run_profile.tsa29.yaml`, `config/tipsy/tsa29.yaml`
@@ -58,6 +83,30 @@ date alone.
 
 ## Quickstart
 
+0. Materialize required payloads if this checkout was cloned as a DataLad
+   dataset with annexed content unavailable locally:
+
+   ```bash
+   git annex version
+   datalad --version
+   git annex info --fast
+   datalad get models/tsa29_patchworks_model/blocks
+   datalad get models/tsa29_patchworks_model/tracks
+   datalad get output/patchworks_tsa29_validated
+   ```
+
+   If the published snapshot names a specific special remote, enable that
+   remote before the `datalad get` calls above.
+
+   On Windows inside a parent FEMIC checkout, prefer the active virtual
+   environment explicitly:
+
+   ```powershell
+   .\.venv\Scripts\python.exe -m datalad get models/tsa29_patchworks_model/blocks
+   .\.venv\Scripts\python.exe -m datalad get models/tsa29_patchworks_model/tracks
+   .\.venv\Scripts\python.exe -m datalad get output/patchworks_tsa29_validated
+   ```
+
 1. Validate the case wiring:
 
    ```bash
@@ -68,6 +117,8 @@ date alone.
 
    - `output/patchworks_tsa29_validated/forestmodel.xml`
    - `output/patchworks_tsa29_validated/fragments/`
+   - `models/tsa29_patchworks_model/blocks/`
+   - `models/tsa29_patchworks_model/tracks/`
 
    For the known-good Windows Patchworks path, use a workstation with
    Patchworks already installed and licensed. FEMIC should normally inherit the
