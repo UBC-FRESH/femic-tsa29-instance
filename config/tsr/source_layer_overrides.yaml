@@ -1,0 +1,179 @@
+schema_version: 1
+tsa:
+  tsa_id: tsa_29
+  tsa_code: '29'
+  tsa_name: Williams Lake
+source_overlay_path: config/tsr/overlay.yaml
+entries:
+- query: REG_LAND_AND_NATURAL_RESOURCE.L_MULE_DEER
+  current_public_status: no_catalog_match
+  matched_by: ''
+  top_match_title: ''
+  dataset_page_url: ''
+  suggested_fetch_strategy: ''
+  current_public_notes:
+  - No catalogue matches found for the supplied query.
+  replacement_family_candidates:
+  - title: Mule Deer Winter Range Topographic Buffers - Cariboo Region
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/mule-deer-winter-range-topographic-buffers-cariboo-region
+    object_names:
+    - REG_LAND_AND_NATURAL_RESOURCE.WLD_MULE_DEER_RNG_TOPO_CAR_SP
+    matched_query: MULE_DEER
+    rationale: Broad mule-deer search surfaced a small public wildlife family that
+      may replace a stale TSR token.
+  - title: Mule Deer Winter Range Shelter Vernon Forest District
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/mule-deer-winter-range-shelter-vernon-forest-district
+    object_names:
+    - REG_LAND_AND_NATURAL_RESOURCE.MULE_DEER_WR_SHELTER_DVE_POLY
+    matched_query: MULE_DEER
+    rationale: Broad mule-deer search surfaced a small public wildlife family that
+      may replace a stale TSR token.
+  - title: Mule Deer Winter Range Shelter Penticton Forest District
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/mule-deer-winter-range-shelter-penticton-forest-district
+    object_names:
+    - REG_LAND_AND_NATURAL_RESOURCE.MULE_DEER_WR_SHELTER_DPE_POLY
+    matched_query: MULE_DEER
+    rationale: Broad mule-deer search surfaced a small public wildlife family that
+      may replace a stale TSR token.
+  override_kind: ''
+  override_value: ''
+  notes: ''
+- query: WHSE_HUMAN_CULTURAL_ECONOMIC.FNIRS
+  current_public_status: no_catalog_match
+  matched_by: ''
+  top_match_title: ''
+  dataset_page_url: ''
+  suggested_fetch_strategy: ''
+  current_public_notes:
+  - No catalogue matches found for the supplied query.
+  replacement_family_candidates: []
+  override_kind: ''
+  override_value: ''
+  notes: ''
+- query: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY
+  current_public_status: failed
+  matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY
+  top_match_title: Legal Planning Objectives - All - Polygon
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/legal-planning-objectives-all-polygon
+  suggested_fetch_strategy: ''
+  current_public_notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  replacement_family_candidates: []
+  override_kind: ''
+  override_value: ''
+  notes: ''
+- query: VEG_BURN_SEVERITY
+  current_public_status: failed
+  matched_by: object_name_stem:WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SAME_YR_SP
+  top_match_title: Fire Burn Severity - Same Year
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-same-year
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  current_public_notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  replacement_family_candidates:
+  - title: Fire Burn Severity - Same Year
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-same-year
+    object_names:
+    - WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SAME_YR_SP
+    matched_query: BURN_SEVERITY
+    rationale: Broad burn-severity search surfaced current public burn-severity dataset
+      candidates.
+  - title: Fire Burn Severity - Historical
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-historical
+    object_names:
+    - WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SP
+    matched_query: BURN_SEVERITY
+    rationale: Broad burn-severity search surfaced current public burn-severity dataset
+      candidates.
+  override_kind: ''
+  override_value: ''
+  notes: ''
+- query: WHSE_ADMIN_BOUNDARIES.PIP_CONSULTATION
+  current_public_status: no_catalog_match
+  matched_by: ''
+  top_match_title: ''
+  dataset_page_url: ''
+  suggested_fetch_strategy: ''
+  current_public_notes:
+  - No catalogue matches found for the supplied query.
+  replacement_family_candidates:
+  - title: 'Profiles of Indigenous Peoples (PIP): Consultation Areas - Public Map
+      Service'
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/profiles-of-indigenous-peoples-pip-consultation-areas-public-map-service
+    object_names: []
+    matched_query: PIP_CONSULTATION
+    rationale: Broad PIP consultation search surfaced a likely public consultation-area
+      lead.
+  override_kind: ''
+  override_value: ''
+  notes: ''
+- query: WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY
+  current_public_status: failed
+  matched_by: object_name_stem:WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SAME_YR_SP
+  top_match_title: Fire Burn Severity - Same Year
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-same-year
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  current_public_notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  replacement_family_candidates:
+  - title: Fire Burn Severity - Same Year
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-same-year
+    object_names:
+    - WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SAME_YR_SP
+    matched_query: BURN_SEVERITY
+    rationale: Broad burn-severity search surfaced current public burn-severity dataset
+      candidates.
+  - title: Fire Burn Severity - Historical
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-historical
+    object_names:
+    - WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SP
+    matched_query: BURN_SEVERITY
+    rationale: Broad burn-severity search surfaced current public burn-severity dataset
+      candidates.
+  override_kind: ''
+  override_value: ''
+  notes: ''
+- query: WHSE_HUMAN_CULTURAL_ECONOMIC.FNIRS_AGREEMENT
+  current_public_status: no_catalog_match
+  matched_by: ''
+  top_match_title: ''
+  dataset_page_url: ''
+  suggested_fetch_strategy: ''
+  current_public_notes:
+  - No catalogue matches found for the supplied query.
+  replacement_family_candidates: []
+  override_kind: ''
+  override_value: ''
+  notes: ''
+- query: BCMPB.V9.CUMKILL.PROJECTED
+  current_public_status: no_catalog_match
+  matched_by: ''
+  top_match_title: ''
+  dataset_page_url: ''
+  suggested_fetch_strategy: ''
+  current_public_notes:
+  - No catalogue matches found for the supplied query.
+  replacement_family_candidates: []
+  override_kind: ''
+  override_value: ''
+  notes: ''
+- query: FTEN_ROAD_LINES
+  current_public_status: failed
+  matched_by: object_name_suffix:WHSE_FOREST_TENURE.FTEN_ROAD_LINES
+  top_match_title: Forest Tenure Road Lines
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-road-lines
+  suggested_fetch_strategy: ''
+  current_public_notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  replacement_family_candidates: []
+  override_kind: ''
+  override_value: ''
+  notes: ''

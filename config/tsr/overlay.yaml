@@ -1,0 +1,2257 @@
+schema_version: 1
+tsa:
+  tsa_id: tsa_29
+  tsa_code: '29'
+  tsa_name: Williams Lake
+canonical_summary:
+  candidate_fact_count: 822
+  document_count: 19
+  fact_family_counts:
+    au_definition_candidate: 127
+    source_layer_candidate: 104
+    thlb_reference: 420
+    tipsy_input_candidate: 171
+  candidate_facts_path: metadata/tsr/tsa_candidate_facts.json
+  documents_path: metadata/tsr/tsa_documents.json
+  registry_path: metadata/tsr/tsa_registry.json
+adopted:
+  source_layers: []
+  au_definitions: []
+  thlb_references: []
+  tipsy_inputs: []
+  notes: []
+bcdc_acquisition_review:
+  run_utc: '2026-04-04T21:42:02Z'
+  interpretation: The TSA29 full-chain TSR -> BCDC -> acquisition smoke now appears
+    to have reached the current deterministic public-alias wall. WFS fetch is operationally
+    useful across a broad set of reviewed layers, direct download works for SITE_PROD_BC,
+    and duplicate exact/alias rows can be safely reused without re-querying the same
+    public dataset. The remaining no-hit wall is now mostly explained by upstream
+    TSR token truncation, stale/internal layer naming, or data that likely needs human-supplied
+    override mappings or externally obtained copies.
+  bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  query_file: runtime/logs/tsa29_tsr_source_layers_batch_queries.txt
+  review_csv: runtime/logs/tsa29_tsr_source_layers_review.csv
+  resolve_summary_csv: runtime/logs/tsa29_tsr_source_layers_batch_summary.csv
+  resolve_manifest: runtime/logs/tsa29_tsr_source_layers_batch_manifest.json
+  acquisition_results_json: runtime/logs/tsa29_bcdc_acquisition_smoke_results.json
+  acquisition_results_csv: runtime/logs/tsa29_bcdc_acquisition_smoke_results.csv
+  download_root: external/femic-tsa29-instance/data/downloads/bcdc
+  follow_on_issues:
+    resolver_alias_recovery: 114
+    good_citizen_guardrails: 113
+    direct_download_bug_fixed: 115
+    wfs_hint_mismatch_bug: 116
+    tsr_pdf_wrap_bug: 117
+    replacement_family_suggestions: 118
+    user_override_mappings: 119
+  summary:
+    query_count: 87
+    outcome_counts:
+      fetched: 34
+      no_catalog_match: 5
+      downloaded: 1
+      reused_prior_confident_result: 38
+      skipped_dwds_not_exercised_in_smoke: 5
+      failed: 4
+    strategy_counts:
+      wfs_fetch: 74
+      none: 10
+      direct_download: 1
+      dwds_order: 2
+  attempts:
+  - query: CONSOLIDATED_CUTBLOCKS_2020
+    resolve_status: alias_hit
+    top_match_title: Harvested Areas of BC (Consolidated Cutblocks)
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/harvested-areas-of-bc-consolidated-cutblocks-
+    matched_by: none
+    used_alias: CONSOLIDATED_CUTBLOCKS
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 1
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: true
+    notes: Used alias/query variant `CONSOLIDATED_CUTBLOCKS` to surface the current
+      top match. | Top match includes BCGW indirect/custom-download resources; use
+      the dataset page for manual access if a direct data URL is unavailable. | Top
+      match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly. | Supporting documents are
+      available for manual review but are not auto-downloaded in v1.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\CONSOLIDATED_CUTBLOCKS_2020\CONSOLIDATED_CUTBLOCKS_2020.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: FADM_BCTS_AREA
+    resolve_status: alias_hit
+    top_match_title: FADM - BC Timber Sales Area
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fadm-bc-timber-sales-area
+    matched_by: object_name_suffix:WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP
+    used_alias: FADM_BCTS_AREA_SP
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `FADM_BCTS_AREA_SP` after the original query did
+      not produce a strong exact match. | Top match includes BCGW indirect/custom-download
+      resources; use the dataset page for manual access if a direct data URL is unavailable.
+      | Top match currently exposes service resources but no direct-access data file
+      for v1 automation. | Top match includes WFS-queryable OpenMaps service resources;
+      a later AOI-scoped fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\FADM_BCTS_AREA\FADM_BCTS_AREA.gpkg
+    feature_count: 8
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: FTEN_MANAGED_LIC
+    resolve_status: alias_hit
+    top_match_title: Forest Tenure Managed Licence
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-managed-licence
+    matched_by: object_name_suffix:WHSE_FOREST_TENURE.FTEN_MANAGED_LICENCE_POLY_SVW
+    used_alias: FTEN_MANAGED_LICENCE_POLY_SVW
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `FTEN_MANAGED_LICENCE_POLY_SVW` after the original
+      query did not produce a strong exact match. | Top match includes BCGW indirect/custom-download
+      resources; use the dataset page for manual access if a direct data URL is unavailable.
+      | Top match currently exposes service resources but no direct-access data file
+      for v1 automation. | Top match includes WFS-queryable OpenMaps service resources;
+      a later AOI-scoped fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\FTEN_MANAGED_LIC\FTEN_MANAGED_LIC.gpkg
+    feature_count: 707
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: REG_LAND_AND_NATURAL_RESOURCE.L_MULE_DEER
+    resolve_status: no_hit
+    top_match_title: ''
+    dataset_page_url: ''
+    matched_by: ''
+    used_alias: ''
+    suggested_fetch_strategy: ''
+    direct_download_candidates: 0
+    has_service: false
+    has_wfs_queryable_service: false
+    has_indirect_custom_download: false
+    has_supporting_document: false
+    notes: No catalogue matches found for the supplied query.
+    acquisition_strategy: none
+    acquisition_outcome: no_catalog_match
+    saved_path: ''
+    feature_count: ''
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: REG_LAND_AND_NATURAL_RESOURCE.STE_TER
+    resolve_status: alias_hit
+    top_match_title: Terrain Stability Mapping (TSM) Detailed Polygons with Short
+      Attribute Table Spatial View
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/terrain-stability-mapping-tsm-detailed-polygons-with-short-attribute-table-spatial-view
+    matched_by: object_name:WHSE_TERRESTRIAL_ECOLOGY.STE_TER_STABILITY_POLYS_SVW
+    used_alias: WHSE_TERRESTRIAL_ECOLOGY.STE_TER_STABILITY_POLYS_SVW
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 1
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: true
+    notes: Used alias/query variant `WHSE_TERRESTRIAL_ECOLOGY.STE_TER_STABILITY_POLYS_SVW`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match includes WFS-queryable OpenMaps
+      service resources; a later AOI-scoped fetch path can use these service hints
+      directly. | Supporting documents are available for manual review but are not
+      auto-downloaded in v1.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\REG_LAND_AND_NATURAL_RESOURCE_STE_TER\REG_LAND_AND_NATURAL_RESOURCE_STE_TER.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES
+    resolve_status: alias_hit
+    top_match_title: Landscape Units of British Columbia - Current
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/landscape-units-of-british-columbia-current
+    matched_by: object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW
+    used_alias: RMP_LANDSCAPE_UNIT_SVW
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `RMP_LANDSCAPE_UNIT_SVW` after the original query
+      did not produce a strong exact match. | Top match includes BCGW indirect/custom-download
+      resources; use the dataset page for manual access if a direct data URL is unavailable.
+      | Top match currently exposes service resources but no direct-access data file
+      for v1 automation. | Top match includes WFS-queryable OpenMaps service resources;
+      a later AOI-scoped fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES\RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES.gpkg
+    feature_count: 196
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: SITE_PROD_BC
+    resolve_status: alias_hit
+    top_match_title: Provincial Site Productivity Layer
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/provincial-site-productivity-layer
+    matched_by: exact_text:Provincial Site Productivity Layer
+    used_alias: Provincial Site Productivity Layer
+    suggested_fetch_strategy: ''
+    direct_download_candidates: 2
+    has_service: false
+    has_wfs_queryable_service: false
+    has_indirect_custom_download: false
+    has_supporting_document: false
+    notes: Used alias/query variant `Provincial Site Productivity Layer` to surface
+      the current top match.
+    acquisition_strategy: direct_download
+    acquisition_outcome: downloaded
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\SITE_PROD_BC\Site_Prod_BC.zip
+    feature_count: ''
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: TA_CROWN_TENURES_SVW
+    resolve_status: exact_hit
+    top_match_title: TANTALIS - Crown Tenures
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/tantalis-crown-tenures
+    matched_by: object_name_suffix:WHSE_TANTALIS.TA_CROWN_TENURES_SVW
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\TA_CROWN_TENURES_SVW\TA_CROWN_TENURES_SVW.gpkg
+    feature_count: 3853
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: TA_PARK_ECORES_PA_SVW
+    resolve_status: exact_hit
+    top_match_title: BC Parks, Ecological Reserves, and Protected Areas
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/bc-parks-ecological-reserves-and-protected-areas
+    matched_by: object_name_suffix:WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\TA_PARK_ECORES_PA_SVW\TA_PARK_ECORES_PA_SVW.gpkg
+    feature_count: 90
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: TA_WILDLIFE_MGMT_AREAS
+    resolve_status: alias_hit
+    top_match_title: TANTALIS - Wildlife Management Areas
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/tantalis-wildlife-management-areas
+    matched_by: object_name_suffix:WHSE_TANTALIS.TA_WILDLIFE_MGMT_AREAS_SVW
+    used_alias: TA_WILDLIFE_MGMT_AREAS_SVW
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `TA_WILDLIFE_MGMT_AREAS_SVW` after the original
+      query did not produce a strong exact match. | Top match includes BCGW indirect/custom-download
+      resources; use the dataset page for manual access if a direct data URL is unavailable.
+      | Top match currently exposes service resources but no direct-access data file
+      for v1 automation. | Top match includes WFS-queryable OpenMaps service resources;
+      a later AOI-scoped fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\TA_WILDLIFE_MGMT_AREAS\TA_WILDLIFE_MGMT_AREAS.gpkg
+    feature_count: 3
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: VEG_COMP_LYR_R1_POLY
+    resolve_status: exact_hit
+    top_match_title: VRI - 2024 - Forest Vegetation Composite Rank 1 Layer (R1)
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/vri-2024-forest-vegetation-composite-rank-1-layer-r1-
+    matched_by: object_name_suffix:WHSE_FOREST_VEGETATION.VEG_COMP_LYR_R1_POLY
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 1
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match includes
+      WFS-queryable OpenMaps service resources; a later AOI-scoped fetch path can
+      use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\VEG_COMP_LYR_R1_POLY\VEG_COMP_LYR_R1_POLY.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN
+    resolve_status: alias_hit
+    top_match_title: Indian Reserves - Administrative Boundaries
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/indian-reserves-administrative-boundaries
+    matched_by: object_name:WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES
+    used_alias: WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES` after
+      the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation. | Top match includes WFS-queryable
+      OpenMaps service resources; a later AOI-scoped fetch path can use these service
+      hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN\WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN.gpkg
+    feature_count: 212
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA
+    resolve_status: alias_hit
+    top_match_title: FADM - BC Timber Sales Area
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fadm-bc-timber-sales-area
+    matched_by: object_name:WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP
+    used_alias: WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP` after
+      the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation. | Top match includes WFS-queryable
+      OpenMaps service resources; a later AOI-scoped fetch path can use these service
+      hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\FADM_BCTS_AREA\FADM_BCTS_AREA.gpkg
+    feature_count: 8
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_ADMIN_BOUNDARIES.FADM_TFL
+    resolve_status: exact_hit
+    top_match_title: FADM - Tree Farm License Agreement Boundary (TFL)
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fadm-tree-farm-license-agreement-boundary-tfl-
+    matched_by: object_name:WHSE_ADMIN_BOUNDARIES.FADM_TFL
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_ADMIN_BOUNDARIES_FADM_TFL\WHSE_ADMIN_BOUNDARIES_FADM_TFL.gpkg
+    feature_count: 12
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_ADMIN_BOUNDARIES.FADM_TSA
+    resolve_status: exact_hit
+    top_match_title: FADM - Timber Supply Area (TSA)
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fadm-timber-supply-area-tsa
+    matched_by: object_name:WHSE_ADMIN_BOUNDARIES.FADM_TSA
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_ADMIN_BOUNDARIES_FADM_TSA\WHSE_ADMIN_BOUNDARIES_FADM_TSA.gpkg
+    feature_count: 66
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_CADASTRE.CBM_CADASTRAL_FABRIC
+    resolve_status: alias_hit
+    top_match_title: ParcelMap BC Parcel Fabric
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/parcelmap-bc-parcel-fabric
+    matched_by: object_name:WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW
+    used_alias: WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 2
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW` after
+      the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match includes WFS-queryable OpenMaps
+      service resources; a later AOI-scoped fetch path can use these service hints
+      directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_CADASTRE_CBM_CADASTRAL_FABRIC\WHSE_CADASTRE_CBM_CADASTRAL_FABRIC.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_FOREST_TENURE.FTEN_MANAGED_LIC
+    resolve_status: alias_hit
+    top_match_title: Forest Tenure Managed Licence
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-managed-licence
+    matched_by: object_name:WHSE_FOREST_TENURE.FTEN_MANAGED_LICENCE_POLY_SVW
+    used_alias: WHSE_FOREST_TENURE.FTEN_MANAGED_LICENCE_POLY_SVW
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WHSE_FOREST_TENURE.FTEN_MANAGED_LICENCE_POLY_SVW`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation. | Top match includes WFS-queryable
+      OpenMaps service resources; a later AOI-scoped fetch path can use these service
+      hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\FTEN_MANAGED_LIC\FTEN_MANAGED_LIC.gpkg
+    feature_count: 707
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_FOREST_TENURE.FTEN_RECREATION
+    resolve_status: exact_hit
+    top_match_title: Recreation Polygons
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/recreation-polygons
+    matched_by: object_name_stem:WHSE_FOREST_TENURE.FTEN_RECREATION_POLY_SVW
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_FOREST_TENURE_FTEN_RECREATION\WHSE_FOREST_TENURE_FTEN_RECREATION.gpkg
+    feature_count: 788
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_FOREST_VEGETATION.BEC
+    resolve_status: alias_hit
+    top_match_title: BEC Map
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/bec-map
+    matched_by: object_name:WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
+    used_alias: WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation. | Top match includes WFS-queryable
+      OpenMaps service resources; a later AOI-scoped fetch path can use these service
+      hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_FOREST_VEGETATION_BEC\WHSE_FOREST_VEGETATION_BEC.gpkg
+    feature_count: 876
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_FOREST_VEGETATION.F_OWN
+    resolve_status: exact_hit
+    top_match_title: Generalized Forest Cover Ownership
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/generalized-forest-cover-ownership
+    matched_by: object_name:WHSE_FOREST_VEGETATION.F_OWN
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: true
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly. | Supporting documents are
+      available for manual review but are not auto-downloaded in v1.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_FOREST_VEGETATION_F_OWN\WHSE_FOREST_VEGETATION_F_OWN.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_FOREST_VEGETATION.GRY_PSP_STATUS
+    resolve_status: exact_hit
+    top_match_title: Growth and Yield  Samples - All Status
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/growth-and-yield-samples-all-status
+    matched_by: object_name_stem:WHSE_FOREST_VEGETATION.GRY_PSP_STATUS_ACTIVE
+    used_alias: ''
+    suggested_fetch_strategy: ''
+    direct_download_candidates: 0
+    has_service: false
+    has_wfs_queryable_service: false
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable.
+    acquisition_strategy: none
+    acquisition_outcome: skipped_dwds_not_exercised_in_smoke
+    saved_path: ''
+    feature_count: ''
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_FOREST_VEGETATION.RSLT_FOREST
+    resolve_status: exact_hit
+    top_match_title: RESULTS - Forest Cover Species (Attribute Only)
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/results-forest-cover-species-attribute-only
+    matched_by: object_name_stem:WHSE_FOREST_VEGETATION.RSLT_FOREST_COVER_SPECIES_VW
+    used_alias: ''
+    suggested_fetch_strategy: ''
+    direct_download_candidates: 0
+    has_service: false
+    has_wfs_queryable_service: false
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable.
+    acquisition_strategy: none
+    acquisition_outcome: skipped_dwds_not_exercised_in_smoke
+    saved_path: ''
+    feature_count: ''
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_HUMAN_CULTURAL_ECONOMIC.FNIRS
+    resolve_status: no_hit
+    top_match_title: ''
+    dataset_page_url: ''
+    matched_by: ''
+    used_alias: ''
+    suggested_fetch_strategy: ''
+    direct_download_candidates: 0
+    has_service: false
+    has_wfs_queryable_service: false
+    has_indirect_custom_download: false
+    has_supporting_document: false
+    notes: No catalogue matches found for the supplied query.
+    acquisition_strategy: none
+    acquisition_outcome: no_catalog_match
+    saved_path: ''
+    feature_count: ''
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY
+    resolve_status: exact_hit
+    top_match_title: Legal Planning Objectives - All - Polygon
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/legal-planning-objectives-all-polygon
+    matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY
+    used_alias: ''
+    suggested_fetch_strategy: ''
+    direct_download_candidates: 0
+    has_service: false
+    has_wfs_queryable_service: false
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable.
+    acquisition_strategy: dwds_order
+    acquisition_outcome: failed
+    saved_path: ''
+    feature_count: ''
+    order_id: ''
+    submission_status: ''
+    failure_message: DWDS does not report public download permission for `WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY`.
+    warnings: ''
+  - query: WHSE_TANTALIS.TA_CROWN_TENURES_SVW
+    resolve_status: exact_hit
+    top_match_title: TANTALIS - Crown Tenures
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/tantalis-crown-tenures
+    matched_by: object_name:WHSE_TANTALIS.TA_CROWN_TENURES_SVW
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\TA_CROWN_TENURES_SVW\TA_CROWN_TENURES_SVW.gpkg
+    feature_count: 3853
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW
+    resolve_status: exact_hit
+    top_match_title: BC Parks, Ecological Reserves, and Protected Areas
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/bc-parks-ecological-reserves-and-protected-areas
+    matched_by: object_name:WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\TA_PARK_ECORES_PA_SVW\TA_PARK_ECORES_PA_SVW.gpkg
+    feature_count: 90
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE
+    resolve_status: alias_hit
+    top_match_title: Ungulate Winter Range - Approved
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/ungulate-winter-range-approved
+    matched_by: object_name:WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP
+    used_alias: WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation. | Top match includes WFS-queryable
+      OpenMaps service resources; a later AOI-scoped fetch path can use these service
+      hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE\WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE.gpkg
+    feature_count: 209
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: REG_LAND_AND_NATURAL_RESOURCE.WLD
+    resolve_status: exact_hit
+    top_match_title: Stand Structure Habitat Classes in Mule Deer Winter Range - Cariboo
+      Region
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/stand-structure-habitat-classes-in-mule-deer-winter-range-cariboo-region
+    matched_by: object_name_stem:REG_LAND_AND_NATURAL_RESOURCE.WLD_MULE_DEER_STND_STRC_CAR_SP
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\REG_LAND_AND_NATURAL_RESOURCE_WLD\REG_LAND_AND_NATURAL_RESOURCE_WLD.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: RMP_OGMA_LEGAL
+    resolve_status: alias_hit
+    top_match_title: Old Growth Management Areas - Legal - Current
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/old-growth-management-areas-legal-current
+    matched_by: object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW
+    used_alias: RMP_OGMA_LEGAL_CURRENT_SVW
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: true
+    notes: Used alias/query variant `RMP_OGMA_LEGAL_CURRENT_SVW` after the original
+      query did not produce a strong exact match. | Top match includes BCGW indirect/custom-download
+      resources; use the dataset page for manual access if a direct data URL is unavailable.
+      | Top match currently exposes service resources but no direct-access data file
+      for v1 automation. | Top match includes WFS-queryable OpenMaps service resources;
+      a later AOI-scoped fetch path can use these service hints directly. | Supporting
+      documents are available for manual review but are not auto-downloaded in v1.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\RMP_OGMA_LEGAL\RMP_OGMA_LEGAL.gpkg
+    feature_count: 7825
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: RMP_PLAN_LEGAL
+    resolve_status: alias_hit
+    top_match_title: Legal Planning Objectives - Current - Polygon
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/legal-planning-objectives-current-polygon
+    matched_by: object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW
+    used_alias: RMP_PLAN_LEGAL_POLY_SVW
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `RMP_PLAN_LEGAL_POLY_SVW` after the original query
+      did not produce a strong exact match. | Top match includes BCGW indirect/custom-download
+      resources; use the dataset page for manual access if a direct data URL is unavailable.
+      | Top match currently exposes service resources but no direct-access data file
+      for v1 automation. | Top match includes WFS-queryable OpenMaps service resources;
+      a later AOI-scoped fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\RMP_PLAN_LEGAL\RMP_PLAN_LEGAL.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: TRIM_CONTOUR_POINTS
+    resolve_status: exact_hit
+    top_match_title: TRIM Contours Points
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/trim-contours-points
+    matched_by: object_name_suffix:WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\TRIM_CONTOUR_POINTS\TRIM_CONTOUR_POINTS.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: VEG_BURN_SEVERITY
+    resolve_status: exact_hit
+    top_match_title: Fire Burn Severity - Same Year
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-same-year
+    matched_by: object_name_stem:WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SAME_YR_SP
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: false
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match includes
+      WFS-queryable OpenMaps service resources; a later AOI-scoped fetch path can
+      use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: failed
+    saved_path: ''
+    feature_count: ''
+    order_id: ''
+    submission_status: ''
+    failure_message: Top match for `VEG_BURN_SEVERITY` does not expose a WFS-queryable
+      service resource yet. Use `femic data bcdc-resolve` to inspect the package manually.
+    warnings: ''
+  - query: VEG_COMP_LYR_R1
+    resolve_status: exact_hit
+    top_match_title: VRI - 2024 - Forest Vegetation Composite Rank 1 Layer (R1)
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/vri-2024-forest-vegetation-composite-rank-1-layer-r1-
+    matched_by: object_name_stem:WHSE_FOREST_VEGETATION.VEG_COMP_LYR_R1_POLY
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 1
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match includes
+      WFS-queryable OpenMaps service resources; a later AOI-scoped fetch path can
+      use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\VEG_COMP_LYR_R1_POLY\VEG_COMP_LYR_R1_POLY.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_ADMIN_BOUNDARIES.PIP_CONSULTATION
+    resolve_status: no_hit
+    top_match_title: ''
+    dataset_page_url: ''
+    matched_by: ''
+    used_alias: ''
+    suggested_fetch_strategy: ''
+    direct_download_candidates: 0
+    has_service: false
+    has_wfs_queryable_service: false
+    has_indirect_custom_download: false
+    has_supporting_document: false
+    notes: No catalogue matches found for the supplied query.
+    acquisition_strategy: none
+    acquisition_outcome: no_catalog_match
+    saved_path: ''
+    feature_count: ''
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR
+    resolve_status: exact_hit
+    top_match_title: Digital Road Atlas (DRA) - Master Partially-Attributed Roads
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/digital-road-atlas-dra-master-partially-attributed-roads
+    matched_by: object_name_stem:WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: true
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly. | Supporting documents are
+      available for manual review but are not auto-downloaded in v1.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR\WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_BASEMAPPING.FWA_LAKES_POLY
+    resolve_status: exact_hit
+    top_match_title: Freshwater Atlas Lakes
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/freshwater-atlas-lakes
+    matched_by: object_name:WHSE_BASEMAPPING.FWA_LAKES_POLY
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: true
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly. | Supporting documents are
+      available for manual review but are not auto-downloaded in v1.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_BASEMAPPING_FWA_LAKES_POLY\WHSE_BASEMAPPING_FWA_LAKES_POLY.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS
+    resolve_status: exact_hit
+    top_match_title: TRIM Contours Points
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/trim-contours-points
+    matched_by: object_name:WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\TRIM_CONTOUR_POINTS\TRIM_CONTOUR_POINTS.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES
+    resolve_status: alias_hit
+    top_match_title: Forest Tenure Road Section Lines
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-road-section-lines
+    matched_by: object_name:WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW
+    used_alias: WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation. | Top match includes WFS-queryable
+      OpenMaps service resources; a later AOI-scoped fetch path can use these service
+      hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES\WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY
+    resolve_status: exact_hit
+    top_match_title: Fire Burn Severity - Same Year
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-same-year
+    matched_by: object_name_stem:WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SAME_YR_SP
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: false
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match includes
+      WFS-queryable OpenMaps service resources; a later AOI-scoped fetch path can
+      use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: failed
+    saved_path: ''
+    feature_count: ''
+    order_id: ''
+    submission_status: ''
+    failure_message: Top match for `WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY` does
+      not expose a WFS-queryable service resource yet. Use `femic data bcdc-resolve`
+      to inspect the package manually.
+    warnings: ''
+  - query: WHSE_LAND_USE_PLANNING.FADM_DESIGNATED
+    resolve_status: alias_hit
+    top_match_title: FADM - Designated Areas
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fadm-designated-areas
+    matched_by: object_name:WHSE_ADMIN_BOUNDARIES.FADM_DESIGNATED_AREAS
+    used_alias: WHSE_ADMIN_BOUNDARIES.FADM_DESIGNATED_AREAS
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WHSE_ADMIN_BOUNDARIES.FADM_DESIGNATED_AREAS`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation. | Top match includes WFS-queryable
+      OpenMaps service resources; a later AOI-scoped fetch path can use these service
+      hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_LAND_USE_PLANNING_FADM_DESIGNATED\WHSE_LAND_USE_PLANNING_FADM_DESIGNATED.gpkg
+    feature_count: 26
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL
+    resolve_status: alias_hit
+    top_match_title: Old Growth Management Areas - Legal - Current
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/old-growth-management-areas-legal-current
+    matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW
+    used_alias: WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: true
+    notes: Used alias/query variant `WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation. | Top match includes WFS-queryable
+      OpenMaps service resources; a later AOI-scoped fetch path can use these service
+      hints directly. | Supporting documents are available for manual review but are
+      not auto-downloaded in v1.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\RMP_OGMA_LEGAL\RMP_OGMA_LEGAL.gpkg
+    feature_count: 7825
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL
+    resolve_status: alias_hit
+    top_match_title: Legal Planning Objectives - Current - Polygon
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/legal-planning-objectives-current-polygon
+    matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW
+    used_alias: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation. | Top match includes WFS-queryable
+      OpenMaps service resources; a later AOI-scoped fetch path can use these service
+      hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\RMP_PLAN_LEGAL\RMP_PLAN_LEGAL.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND
+    resolve_status: alias_hit
+    top_match_title: Strategic Land and Resource Plans - Current
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/strategic-land-and-resource-plans-current
+    matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN_SVW
+    used_alias: WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN_SVW
+    suggested_fetch_strategy: ''
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: false
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN_SVW`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation.
+    acquisition_strategy: none
+    acquisition_outcome: skipped_dwds_not_exercised_in_smoke
+    saved_path: ''
+    feature_count: ''
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE
+    resolve_status: exact_hit
+    top_match_title: Wildlife Habitat Areas - Approved
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/wildlife-habitat-areas-approved
+    matched_by: object_name_stem:WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA_POLY
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE\WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE.gpkg
+    feature_count: 169
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: FTEN_ROAD_SECTION_LINES_SVW
+    resolve_status: exact_hit
+    top_match_title: Forest Tenure Road Section Lines
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-road-section-lines
+    matched_by: object_name_suffix:WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES\WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: VEG_CONSOLIDATED_CUT_BLOCKS_SP
+    resolve_status: exact_hit
+    top_match_title: Harvested Areas of BC (Consolidated Cutblocks)
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/harvested-areas-of-bc-consolidated-cutblocks-
+    matched_by: object_name_suffix:WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 1
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: true
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match includes
+      WFS-queryable OpenMaps service resources; a later AOI-scoped fetch path can
+      use these service hints directly. | Supporting documents are available for manual
+      review but are not auto-downloaded in v1.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\CONSOLIDATED_CUTBLOCKS_2020\CONSOLIDATED_CUTBLOCKS_2020.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP
+    resolve_status: exact_hit
+    top_match_title: Digital Road Atlas (DRA) - Master Partially-Attributed Roads
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/digital-road-atlas-dra-master-partially-attributed-roads
+    matched_by: object_name:WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: true
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly. | Supporting documents are
+      available for manual review but are not auto-downloaded in v1.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR\WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW
+    resolve_status: exact_hit
+    top_match_title: Forest Tenure Road Section Lines
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-road-section-lines
+    matched_by: object_name:WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES\WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP
+    resolve_status: exact_hit
+    top_match_title: Harvested Areas of BC (Consolidated Cutblocks)
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/harvested-areas-of-bc-consolidated-cutblocks-
+    matched_by: object_name:WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 1
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: true
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match includes
+      WFS-queryable OpenMaps service resources; a later AOI-scoped fetch path can
+      use these service hints directly. | Supporting documents are available for manual
+      review but are not auto-downloaded in v1.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\CONSOLIDATED_CUTBLOCKS_2020\CONSOLIDATED_CUTBLOCKS_2020.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_IMAGERY_AND_BASE_MAPS.MOT_HIGHWAY_PROFILES_SP
+    resolve_status: exact_hit
+    top_match_title: Ministry of Transportation (MOT) Highway Profile
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/ministry-of-transportation-mot-highway-profile
+    matched_by: object_name:WHSE_IMAGERY_AND_BASE_MAPS.MOT_HIGHWAY_PROFILES_SP
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_IMAGERY_AND_BASE_MAPS_MOT_HIGHWAY_PROFILES_SP\WHSE_IMAGERY_AND_BASE_MAPS_MOT_HIGHWAY_PROFILES_SP.gpkg
+    feature_count: 4153
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: VEG_BURN_SEVERITY_SP
+    resolve_status: exact_hit
+    top_match_title: Fire Burn Severity - Historical
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-historical
+    matched_by: object_name_suffix:WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SP
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 1
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match includes
+      WFS-queryable OpenMaps service resources; a later AOI-scoped fetch path can
+      use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\VEG_BURN_SEVERITY_SP\VEG_BURN_SEVERITY_SP.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SP
+    resolve_status: exact_hit
+    top_match_title: Fire Burn Severity - Historical
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-historical
+    matched_by: object_name:WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SP
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 1
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match includes
+      WFS-queryable OpenMaps service resources; a later AOI-scoped fetch path can
+      use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\VEG_BURN_SEVERITY_SP\VEG_BURN_SEVERITY_SP.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: BEC_BIOGEOCLIMATIC_POLY
+    resolve_status: exact_hit
+    top_match_title: BEC Map
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/bec-map
+    matched_by: object_name_suffix:WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_FOREST_VEGETATION_BEC\WHSE_FOREST_VEGETATION_BEC.gpkg
+    feature_count: 876
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: CLAB_INDIAN_RESERVES
+    resolve_status: exact_hit
+    top_match_title: Indian Reserves - Administrative Boundaries
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/indian-reserves-administrative-boundaries
+    matched_by: object_name_suffix:WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN\WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN.gpkg
+    feature_count: 212
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: CONSOLIDATED_CUTBLOCKS_2011
+    resolve_status: alias_hit
+    top_match_title: Harvested Areas of BC (Consolidated Cutblocks)
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/harvested-areas-of-bc-consolidated-cutblocks-
+    matched_by: none
+    used_alias: CONSOLIDATED_CUTBLOCKS
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 1
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: true
+    notes: Used alias/query variant `CONSOLIDATED_CUTBLOCKS` to surface the current
+      top match. | Top match includes BCGW indirect/custom-download resources; use
+      the dataset page for manual access if a direct data URL is unavailable. | Top
+      match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly. | Supporting documents are
+      available for manual review but are not auto-downloaded in v1.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\CONSOLIDATED_CUTBLOCKS_2020\CONSOLIDATED_CUTBLOCKS_2020.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: FADM_BCTS_AREA_SP
+    resolve_status: exact_hit
+    top_match_title: FADM - BC Timber Sales Area
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fadm-bc-timber-sales-area
+    matched_by: object_name_suffix:WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\FADM_BCTS_AREA\FADM_BCTS_AREA.gpkg
+    feature_count: 8
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: FTEN_MANAGED_LIC_POLY_SVW
+    resolve_status: alias_hit
+    top_match_title: Forest Tenure Managed Licence
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-managed-licence
+    matched_by: object_name_suffix:WHSE_FOREST_TENURE.FTEN_MANAGED_LICENCE_POLY_SVW
+    used_alias: FTEN_MANAGED_LICENCE_POLY_SVW
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `FTEN_MANAGED_LICENCE_POLY_SVW` after the original
+      query did not produce a strong exact match. | Top match includes BCGW indirect/custom-download
+      resources; use the dataset page for manual access if a direct data URL is unavailable.
+      | Top match currently exposes service resources but no direct-access data file
+      for v1 automation. | Top match includes WFS-queryable OpenMaps service resources;
+      a later AOI-scoped fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\FTEN_MANAGED_LIC\FTEN_MANAGED_LIC.gpkg
+    feature_count: 707
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: REG_LAND_AND_NATURAL_RESOURCE.TERRAIN_STABILITY
+    resolve_status: alias_hit
+    top_match_title: Terrain Stability Mapping (TSM) Detailed Polygons with Short
+      Attribute Table Spatial View
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/terrain-stability-mapping-tsm-detailed-polygons-with-short-attribute-table-spatial-view
+    matched_by: object_name:WHSE_TERRESTRIAL_ECOLOGY.STE_TER_STABILITY_POLYS_SVW
+    used_alias: WHSE_TERRESTRIAL_ECOLOGY.STE_TER_STABILITY_POLYS_SVW
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 1
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: true
+    notes: Used alias/query variant `WHSE_TERRESTRIAL_ECOLOGY.STE_TER_STABILITY_POLYS_SVW`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match includes WFS-queryable OpenMaps
+      service resources; a later AOI-scoped fetch path can use these service hints
+      directly. | Supporting documents are available for manual review but are not
+      auto-downloaded in v1.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\REG_LAND_AND_NATURAL_RESOURCE_STE_TER\REG_LAND_AND_NATURAL_RESOURCE_STE_TER.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: RMP_LANDSCAPE_UNIT_SVW
+    resolve_status: exact_hit
+    top_match_title: Landscape Units of British Columbia - Current
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/landscape-units-of-british-columbia-current
+    matched_by: object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES\RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES.gpkg
+    feature_count: 196
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: RMP_PLAN_NON_LEGAL_POLY_SVW
+    resolve_status: exact_hit
+    top_match_title: Non Legal Planning Features - Current - Polygon
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/non-legal-planning-features-current-polygon
+    matched_by: object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_PLAN_NON_LEGAL_POLY_SVW
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\RMP_PLAN_NON_LEGAL_POLY_SVW\RMP_PLAN_NON_LEGAL_POLY_SVW.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: TA_WILDLIFE_MGMT_AREAS_SVW
+    resolve_status: exact_hit
+    top_match_title: TANTALIS - Wildlife Management Areas
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/tantalis-wildlife-management-areas
+    matched_by: object_name_suffix:WHSE_TANTALIS.TA_WILDLIFE_MGMT_AREAS_SVW
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\TA_WILDLIFE_MGMT_AREAS\TA_WILDLIFE_MGMT_AREAS.gpkg
+    feature_count: 3
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WCP_UNGULATE_WINTER_RANGE
+    resolve_status: alias_hit
+    top_match_title: Ungulate Winter Range - Approved
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/ungulate-winter-range-approved
+    matched_by: object_name_suffix:WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP
+    used_alias: WCP_UNGULATE_WINTER_RANGE_SP
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WCP_UNGULATE_WINTER_RANGE_SP` after the original
+      query did not produce a strong exact match. | Top match includes BCGW indirect/custom-download
+      resources; use the dataset page for manual access if a direct data URL is unavailable.
+      | Top match currently exposes service resources but no direct-access data file
+      for v1 automation. | Top match includes WFS-queryable OpenMaps service resources;
+      a later AOI-scoped fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE\WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE.gpkg
+    feature_count: 209
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES
+    resolve_status: exact_hit
+    top_match_title: Indian Reserves - Administrative Boundaries
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/indian-reserves-administrative-boundaries
+    matched_by: object_name:WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN\WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN.gpkg
+    feature_count: 212
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP
+    resolve_status: exact_hit
+    top_match_title: FADM - BC Timber Sales Area
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fadm-bc-timber-sales-area
+    matched_by: object_name:WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\FADM_BCTS_AREA\FADM_BCTS_AREA.gpkg
+    feature_count: 8
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_FOREST_TENURE.FTEN_MANAGED_LIC_POLY_SVW
+    resolve_status: alias_hit
+    top_match_title: Forest Tenure Managed Licence
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-managed-licence
+    matched_by: object_name:WHSE_FOREST_TENURE.FTEN_MANAGED_LICENCE_POLY_SVW
+    used_alias: WHSE_FOREST_TENURE.FTEN_MANAGED_LICENCE_POLY_SVW
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WHSE_FOREST_TENURE.FTEN_MANAGED_LICENCE_POLY_SVW`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation. | Top match includes WFS-queryable
+      OpenMaps service resources; a later AOI-scoped fetch path can use these service
+      hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\FTEN_MANAGED_LIC\FTEN_MANAGED_LIC.gpkg
+    feature_count: 707
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
+    resolve_status: exact_hit
+    top_match_title: BEC Map
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/bec-map
+    matched_by: object_name:WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_FOREST_VEGETATION_BEC\WHSE_FOREST_VEGETATION_BEC.gpkg
+    feature_count: 876
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_FOREST_VEGETATION.REC_VISUAL_LANDSCAPE
+    resolve_status: alias_hit
+    top_match_title: Visual Landscape Inventory
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/visual-landscape-inventory
+    matched_by: object_name:WHSE_FOREST_VEGETATION.REC_VISUAL_LANDSCAPE_INVENTORY
+    used_alias: WHSE_FOREST_VEGETATION.REC_VISUAL_LANDSCAPE_INVENTORY
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WHSE_FOREST_VEGETATION.REC_VISUAL_LANDSCAPE_INVENTORY`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation. | Top match includes WFS-queryable
+      OpenMaps service resources; a later AOI-scoped fetch path can use these service
+      hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_FOREST_VEGETATION_REC_VISUAL_LANDSCAPE\WHSE_FOREST_VEGETATION_REC_VISUAL_LANDSCAPE.gpkg
+    feature_count: 9416
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_FOREST_VEGETATION.VEG_COMP_LYR_R1_POLY
+    resolve_status: exact_hit
+    top_match_title: VRI - 2024 - Forest Vegetation Composite Rank 1 Layer (R1)
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/vri-2024-forest-vegetation-composite-rank-1-layer-r1-
+    matched_by: object_name:WHSE_FOREST_VEGETATION.VEG_COMP_LYR_R1_POLY
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 1
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match includes
+      WFS-queryable OpenMaps service resources; a later AOI-scoped fetch path can
+      use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\VEG_COMP_LYR_R1_POLY\VEG_COMP_LYR_R1_POLY.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_HUMAN_CULTURAL_ECONOMIC.FNIRS_AGREEMENT
+    resolve_status: no_hit
+    top_match_title: ''
+    dataset_page_url: ''
+    matched_by: ''
+    used_alias: ''
+    suggested_fetch_strategy: ''
+    direct_download_candidates: 0
+    has_service: false
+    has_wfs_queryable_service: false
+    has_indirect_custom_download: false
+    has_supporting_document: false
+    notes: No catalogue matches found for the supplied query.
+    acquisition_strategy: none
+    acquisition_outcome: no_catalog_match
+    saved_path: ''
+    feature_count: ''
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW
+    resolve_status: exact_hit
+    top_match_title: Landscape Units of British Columbia - Current
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/landscape-units-of-british-columbia-current
+    matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES\RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES.gpkg
+    feature_count: 196
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_LAND_USE_PLANNING.RMP_PLAN_NON_LEGAL_POLY_SVW
+    resolve_status: exact_hit
+    top_match_title: Non Legal Planning Features - Current - Polygon
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/non-legal-planning-features-current-polygon
+    matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_PLAN_NON_LEGAL_POLY_SVW
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\RMP_PLAN_NON_LEGAL_POLY_SVW\RMP_PLAN_NON_LEGAL_POLY_SVW.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_TANTALIS.TA_WILDLIFE_MGMT_AREAS_SVW
+    resolve_status: exact_hit
+    top_match_title: TANTALIS - Wildlife Management Areas
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/tantalis-wildlife-management-areas
+    matched_by: object_name:WHSE_TANTALIS.TA_WILDLIFE_MGMT_AREAS_SVW
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\TA_WILDLIFE_MGMT_AREAS\TA_WILDLIFE_MGMT_AREAS.gpkg
+    feature_count: 3
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_WATER_MANAGEMENT.BC_COMMUNITY_WATERSHEDS
+    resolve_status: alias_hit
+    top_match_title: Community Watersheds - Current
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/community-watersheds-current
+    matched_by: object_name:WHSE_WATER_MANAGEMENT.WLS_COMMUNITY_WS_PUB_SVW
+    used_alias: WHSE_WATER_MANAGEMENT.WLS_COMMUNITY_WS_PUB_SVW
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WHSE_WATER_MANAGEMENT.WLS_COMMUNITY_WS_PUB_SVW`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation. | Top match includes WFS-queryable
+      OpenMaps service resources; a later AOI-scoped fetch path can use these service
+      hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_WATER_MANAGEMENT_BC_COMMUNITY_WATERSHEDS\WHSE_WATER_MANAGEMENT_BC_COMMUNITY_WATERSHEDS.gpkg
+    feature_count: 9
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE
+    resolve_status: alias_hit
+    top_match_title: Ungulate Winter Range - Approved
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/ungulate-winter-range-approved
+    matched_by: object_name:WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP
+    used_alias: WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation. | Top match includes WFS-queryable
+      OpenMaps service resources; a later AOI-scoped fetch path can use these service
+      hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE\WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE.gpkg
+    feature_count: 209
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA
+    resolve_status: alias_hit
+    top_match_title: Wildlife Habitat Areas - Approved
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/wildlife-habitat-areas-approved
+    matched_by: object_name:WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA_POLY
+    used_alias: WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA_POLY
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA_POLY`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation. | Top match includes WFS-queryable
+      OpenMaps service resources; a later AOI-scoped fetch path can use these service
+      hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE\WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE.gpkg
+    feature_count: 169
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: BCMPB.V9.CUMKILL.PROJECTED
+    resolve_status: no_hit
+    top_match_title: ''
+    dataset_page_url: ''
+    matched_by: ''
+    used_alias: ''
+    suggested_fetch_strategy: ''
+    direct_download_candidates: 0
+    has_service: false
+    has_wfs_queryable_service: false
+    has_indirect_custom_download: false
+    has_supporting_document: false
+    notes: No catalogue matches found for the supplied query.
+    acquisition_strategy: none
+    acquisition_outcome: no_catalog_match
+    saved_path: ''
+    feature_count: ''
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: REG_LAND_AND_NATURAL_RESOURCE.WLD_WHA_PROPOSED_SP
+    resolve_status: alias_hit
+    top_match_title: Wildlife Habitat Areas - Proposed
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/wildlife-habitat-areas-proposed
+    matched_by: object_name:WHSE_WILDLIFE_MANAGEMENT.WCP_WHA_PROPOSED_SP
+    used_alias: WHSE_WILDLIFE_MANAGEMENT.WCP_WHA_PROPOSED_SP
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WHSE_WILDLIFE_MANAGEMENT.WCP_WHA_PROPOSED_SP`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation. | Top match includes WFS-queryable
+      OpenMaps service resources; a later AOI-scoped fetch path can use these service
+      hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\REG_LAND_AND_NATURAL_RESOURCE_WLD_WHA_PROPOSED_SP\REG_LAND_AND_NATURAL_RESOURCE_WLD_WHA_PROPOSED_SP.gpkg
+    feature_count: 10
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: RMP_OGMA_LEGAL_CURRENT_SVW
+    resolve_status: exact_hit
+    top_match_title: Old Growth Management Areas - Legal - Current
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/old-growth-management-areas-legal-current
+    matched_by: object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: true
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly. | Supporting documents are
+      available for manual review but are not auto-downloaded in v1.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\RMP_OGMA_LEGAL\RMP_OGMA_LEGAL.gpkg
+    feature_count: 7825
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: RMP_PLAN_LEGAL_POLY_SVW
+    resolve_status: exact_hit
+    top_match_title: Legal Planning Objectives - Current - Polygon
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/legal-planning-objectives-current-polygon
+    matched_by: object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\RMP_PLAN_LEGAL\RMP_PLAN_LEGAL.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE
+    resolve_status: exact_hit
+    top_match_title: BC Wildfire Fire Perimeters - Current
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/bc-wildfire-fire-perimeters-current
+    matched_by: object_name_stem:WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_POLYS_SP
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 1
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match includes
+      WFS-queryable OpenMaps service resources; a later AOI-scoped fetch path can
+      use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_LAND_AND_NATURAL_RESOURCE_PROT_CURRENT_FIRE\WHSE_LAND_AND_NATURAL_RESOURCE_PROT_CURRENT_FIRE.gpkg
+    feature_count: 1
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW
+    resolve_status: exact_hit
+    top_match_title: Old Growth Management Areas - Legal - Current
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/old-growth-management-areas-legal-current
+    matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: true
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly. | Supporting documents are
+      available for manual review but are not auto-downloaded in v1.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\RMP_OGMA_LEGAL\RMP_OGMA_LEGAL.gpkg
+    feature_count: 7825
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW
+    resolve_status: exact_hit
+    top_match_title: Legal Planning Objectives - Current - Polygon
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/legal-planning-objectives-current-polygon
+    matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\RMP_PLAN_LEGAL\RMP_PLAN_LEGAL.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN
+    resolve_status: alias_hit
+    top_match_title: Strategic Land and Resource Plans - Current
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/strategic-land-and-resource-plans-current
+    matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN_SVW
+    used_alias: WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN_SVW
+    suggested_fetch_strategy: ''
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: false
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Used alias/query variant `WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN_SVW`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation.
+    acquisition_strategy: none
+    acquisition_outcome: skipped_dwds_not_exercised_in_smoke
+    saved_path: ''
+    feature_count: ''
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: FTEN_ROAD_LINES
+    resolve_status: exact_hit
+    top_match_title: Forest Tenure Road Lines
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-road-lines
+    matched_by: object_name_suffix:WHSE_FOREST_TENURE.FTEN_ROAD_LINES
+    used_alias: ''
+    suggested_fetch_strategy: ''
+    direct_download_candidates: 0
+    has_service: false
+    has_wfs_queryable_service: false
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable.
+    acquisition_strategy: dwds_order
+    acquisition_outcome: failed
+    saved_path: ''
+    feature_count: ''
+    order_id: ''
+    submission_status: ''
+    failure_message: DWDS does not report public download permission for `WHSE_FOREST_TENURE.FTEN_ROAD_LINES`.
+    warnings: ''
+  - query: WHSE_BASEMAPPING.DRA_DIGITAL_ROAD_ATLAS_LINE_SP
+    resolve_status: alias_hit
+    top_match_title: Digital Road Atlas (DRA) - Master Partially-Attributed Roads
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/digital-road-atlas-dra-master-partially-attributed-roads
+    matched_by: object_name:WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP
+    used_alias: WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: true
+    notes: Used alias/query variant `WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP`
+      after the original query did not produce a strong exact match. | Top match includes
+      BCGW indirect/custom-download resources; use the dataset page for manual access
+      if a direct data URL is unavailable. | Top match currently exposes service resources
+      but no direct-access data file for v1 automation. | Top match includes WFS-queryable
+      OpenMaps service resources; a later AOI-scoped fetch path can use these service
+      hints directly. | Supporting documents are available for manual review but are
+      not auto-downloaded in v1.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: reused_prior_confident_result
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR\WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR.gpkg
+    feature_count: 10000
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_FOREST_TENURE.FTEN_ROAD_LINES
+    resolve_status: exact_hit
+    top_match_title: Forest Tenure Road Lines
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-road-lines
+    matched_by: object_name:WHSE_FOREST_TENURE.FTEN_ROAD_LINES
+    used_alias: ''
+    suggested_fetch_strategy: ''
+    direct_download_candidates: 0
+    has_service: false
+    has_wfs_queryable_service: false
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable.
+    acquisition_strategy: none
+    acquisition_outcome: skipped_dwds_not_exercised_in_smoke
+    saved_path: ''
+    feature_count: ''
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
+  - query: WHSE_IMAGERY_AND_BASE_MAPS.MOT_ROAD_FEATURES_INVNTRY_SP
+    resolve_status: exact_hit
+    top_match_title: Ministry of Transportation (MOT) Road Features Inventory (RFI)
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/ministry-of-transportation-mot-road-features-inventory-rfi
+    matched_by: object_name:WHSE_IMAGERY_AND_BASE_MAPS.MOT_ROAD_FEATURES_INVNTRY_SP
+    used_alias: ''
+    suggested_fetch_strategy: wfs_getfeature_bbox
+    direct_download_candidates: 0
+    has_service: true
+    has_wfs_queryable_service: true
+    has_indirect_custom_download: true
+    has_supporting_document: false
+    notes: Top match includes BCGW indirect/custom-download resources; use the dataset
+      page for manual access if a direct data URL is unavailable. | Top match currently
+      exposes service resources but no direct-access data file for v1 automation.
+      | Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+      fetch path can use these service hints directly.
+    acquisition_strategy: wfs_fetch
+    acquisition_outcome: fetched
+    saved_path: external\femic-tsa29-instance\data\downloads\bcdc\WHSE_IMAGERY_AND_BASE_MAPS_MOT_ROAD_FEATURES_INVNTRY_SP\WHSE_IMAGERY_AND_BASE_MAPS_MOT_ROAD_FEATURES_INVNTRY_SP.gpkg
+    feature_count: 2001
+    order_id: ''
+    submission_status: ''
+    failure_message: ''
+    warnings: ''
