@@ -1,0 +1,3383 @@
+schema_version: 1
+recipe_kind: source_layers
+tsa:
+  tsa_id: tsa_29
+  tsa_code: '29'
+  tsa_name: Williams Lake
+canonical_inputs:
+  registry_path: metadata/tsr/tsa_registry.json
+  documents_path: metadata/tsr/tsa_documents.json
+  candidate_facts_path: metadata/tsr/tsa_candidate_facts.json
+instance_inputs:
+  overlay_path: config/tsr/overlay.yaml
+  source_layer_overrides_path: config/tsr/source_layer_overrides.yaml
+  download_root: data/downloads/bcdc
+recipe_contract:
+  status: run
+  last_built_utc: '2026-04-05T04:42:51.881265+00:00'
+  last_run_utc: '2026-04-05T05:00:26.080358+00:00'
+  notes:
+  - Review and refresh this file with `femic tsr source-layers-build`.
+  - Use `source_layer_overrides.yaml` only for unresolved public-acquisition wall
+    cases.
+entries:
+- entry_id: bcmpb_v9_cumkill_projected
+  label: BCMPB.V9.CUMKILL.PROJECTED
+  recommended_query: BCMPB.V9.CUMKILL.PROJECTED
+  extracted_value: BCMPB.V9.CUMKILL.PROJECTED
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: FAIB BCMPB.V9.CUMKILL.PROJECTED 2012
+  page_number: 11
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=11
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: no_hit
+  matched_by: ''
+  used_alias: ''
+  top_match_title: ''
+  dataset_page_url: ''
+  suggested_fetch_strategy: ''
+  direct_download_candidates: 0
+  has_service: false
+  has_wfs_queryable_service: false
+  has_indirect_custom_download: false
+  has_supporting_document: false
+  acquisition_strategy: override_required
+  run_status: override_required
+  artifact_path: ''
+  override_kind: null
+  override_value: null
+  replacement_family_candidates: []
+  notes:
+  - No catalogue matches found for the supplied query.
+- entry_id: bec_biogeoclimatic_poly
+  label: BEC_BIOGEOCLIMATIC_POLY
+  recommended_query: BEC_BIOGEOCLIMATIC_POLY
+  extracted_value: BEC_BIOGEOCLIMATIC_POLY
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: BCGW WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY 2011
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_suffix:WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
+  used_alias: ''
+  top_match_title: BEC Map
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/bec-map
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/BEC_BIOGEOCLIMATIC_POLY/BEC_BIOGEOCLIMATIC_POLY.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 876
+- entry_id: clab_indian_reserves
+  label: CLAB_INDIAN_RESERVES
+  recommended_query: CLAB_INDIAN_RESERVES
+  extracted_value: CLAB_INDIAN_RESERVES
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: Indian Reserves BCGW WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES 2011
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_suffix:WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES
+  used_alias: ''
+  top_match_title: Indian Reserves - Administrative Boundaries
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/indian-reserves-administrative-boundaries
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/CLAB_INDIAN_RESERVES/CLAB_INDIAN_RESERVES.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 212
+- entry_id: consolidated_cutblocks_2011
+  label: CONSOLIDATED_CUTBLOCKS_2011
+  recommended_query: CONSOLIDATED_CUTBLOCKS_2011
+  extracted_value: CONSOLIDATED_CUTBLOCKS_2011
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: Forest Depletions FAIB CONSOLIDATED_CUTBLOCKS_2011 2011
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: alias_hit
+  matched_by: none
+  used_alias: CONSOLIDATED_CUTBLOCKS
+  top_match_title: Harvested Areas of BC (Consolidated Cutblocks)
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/harvested-areas-of-bc-consolidated-cutblocks-
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 1
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: true
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/CONSOLIDATED_CUTBLOCKS_2011/CONSOLIDATED_CUTBLOCKS_2011.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `CONSOLIDATED_CUTBLOCKS` to surface the current top match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  - Supporting documents are available for manual review but are not auto-downloaded
+    in v1.
+  feature_count: 10000
+- entry_id: consolidated_cutblocks_2020
+  label: CONSOLIDATED_CUTBLOCKS_2020
+  recommended_query: CONSOLIDATED_CUTBLOCKS_2020
+  extracted_value: CONSOLIDATED_CUTBLOCKS_2020
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: Forest depletions FAIB CONSOLIDATED_CUTBLOCKS_2020 2023
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17 | TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=42
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: none
+  used_alias: CONSOLIDATED_CUTBLOCKS
+  top_match_title: Harvested Areas of BC (Consolidated Cutblocks)
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/harvested-areas-of-bc-consolidated-cutblocks-
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 1
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: true
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/CONSOLIDATED_CUTBLOCKS_2020/CONSOLIDATED_CUTBLOCKS_2020.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `CONSOLIDATED_CUTBLOCKS` to surface the current top match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  - Supporting documents are available for manual review but are not auto-downloaded
+    in v1.
+  feature_count: 10000
+- entry_id: fadm_bcts_area
+  label: FADM_BCTS_AREA
+  recommended_query: FADM_BCTS_AREA
+  extracted_value: FADM_BCTS_AREA
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: BCTS operating area BCGW WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name_suffix:WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP
+  used_alias: FADM_BCTS_AREA_SP
+  top_match_title: FADM - BC Timber Sales Area
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fadm-bc-timber-sales-area
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/FADM_BCTS_AREA/FADM_BCTS_AREA.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `FADM_BCTS_AREA_SP` after the original query did not
+    produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 8
+- entry_id: fadm_bcts_area_sp
+  label: FADM_BCTS_AREA_SP
+  recommended_query: FADM_BCTS_AREA_SP
+  extracted_value: FADM_BCTS_AREA_SP
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: BCTS Operating Area BCGW WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP 2011
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_suffix:WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP
+  used_alias: ''
+  top_match_title: FADM - BC Timber Sales Area
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fadm-bc-timber-sales-area
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/FADM_BCTS_AREA_SP/FADM_BCTS_AREA_SP.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 8
+- entry_id: ften_managed_lic
+  label: FTEN_MANAGED_LIC
+  recommended_query: FTEN_MANAGED_LIC
+  extracted_value: FTEN_MANAGED_LIC
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: Managed licences BCGW WHSE_FOREST_TENURE.FTEN_MANAGED_LIC
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name_suffix:WHSE_FOREST_TENURE.FTEN_MANAGED_LICENCE_POLY_SVW
+  used_alias: FTEN_MANAGED_LICENCE_POLY_SVW
+  top_match_title: Forest Tenure Managed Licence
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-managed-licence
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/FTEN_MANAGED_LIC/FTEN_MANAGED_LIC.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `FTEN_MANAGED_LICENCE_POLY_SVW` after the original query
+    did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 707
+- entry_id: ften_managed_lic_poly_svw
+  label: FTEN_MANAGED_LIC_POLY_SVW
+  recommended_query: FTEN_MANAGED_LIC_POLY_SVW
+  extracted_value: FTEN_MANAGED_LIC_POLY_SVW
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: Managed Licences BCGW WHSE_FOREST_TENURE.FTEN_MANAGED_LIC_POLY_SVW 2011
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: alias_hit
+  matched_by: object_name_suffix:WHSE_FOREST_TENURE.FTEN_MANAGED_LICENCE_POLY_SVW
+  used_alias: FTEN_MANAGED_LICENCE_POLY_SVW
+  top_match_title: Forest Tenure Managed Licence
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-managed-licence
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/FTEN_MANAGED_LIC_POLY_SVW/FTEN_MANAGED_LIC_POLY_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `FTEN_MANAGED_LICENCE_POLY_SVW` after the original query
+    did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 707
+- entry_id: ften_road_lines
+  label: FTEN_ROAD_LINES
+  recommended_query: FTEN_ROAD_LINES
+  extracted_value: FTEN_ROAD_LINES
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: "\uF0B7 Forest Service Roads and Road Permits: WHSE_FOREST_TENURE.FTEN_ROAD_LINES;"
+  page_number: 20
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=20
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_suffix:WHSE_FOREST_TENURE.FTEN_ROAD_LINES
+  used_alias: ''
+  top_match_title: Forest Tenure Road Lines
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-road-lines
+  suggested_fetch_strategy: ''
+  direct_download_candidates: 0
+  has_service: false
+  has_wfs_queryable_service: false
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: dwds_order
+  run_status: dwds_order_skipped
+  artifact_path: ''
+  override_kind: null
+  override_value: null
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+- entry_id: ften_road_section_lines_svw
+  label: FTEN_ROAD_SECTION_LINES_SVW
+  recommended_query: FTEN_ROAD_SECTION_LINES_SVW
+  extracted_value: FTEN_ROAD_SECTION_LINES_SVW
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: FSR 25 m WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW (Active)
+  page_number: 28
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=28
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_suffix:WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW
+  used_alias: ''
+  top_match_title: Forest Tenure Road Section Lines
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-road-section-lines
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/FTEN_ROAD_SECTION_LINES_SVW/FTEN_ROAD_SECTION_LINES_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: reg_land_and_natural_resource_l_mule_deer
+  label: REG_LAND_AND_NATURAL_RESOURCE.L_MULE_DEER
+  recommended_query: REG_LAND_AND_NATURAL_RESOURCE.L_MULE_DEER
+  extracted_value: REG_LAND_AND_NATURAL_RESOURCE.L_MULE_DEER_
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Mule Deer winter range BCGW REG_LAND_AND_NATURAL_RESOURCE.L_MULE_DEER_
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: no_hit
+  matched_by: ''
+  used_alias: ''
+  top_match_title: ''
+  dataset_page_url: ''
+  suggested_fetch_strategy: ''
+  direct_download_candidates: 0
+  has_service: false
+  has_wfs_queryable_service: false
+  has_indirect_custom_download: false
+  has_supporting_document: false
+  acquisition_strategy: override_required
+  run_status: override_required
+  artifact_path: ''
+  override_kind: null
+  override_value: null
+  replacement_family_candidates:
+  - title: Mule Deer Winter Range Topographic Buffers - Cariboo Region
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/mule-deer-winter-range-topographic-buffers-cariboo-region
+    object_names:
+    - REG_LAND_AND_NATURAL_RESOURCE.WLD_MULE_DEER_RNG_TOPO_CAR_SP
+    matched_query: MULE_DEER
+    rationale: Broad mule-deer search surfaced a small public wildlife family that
+      may replace a stale TSR token.
+  - title: Mule Deer Winter Range Shelter Vernon Forest District
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/mule-deer-winter-range-shelter-vernon-forest-district
+    object_names:
+    - REG_LAND_AND_NATURAL_RESOURCE.MULE_DEER_WR_SHELTER_DVE_POLY
+    matched_query: MULE_DEER
+    rationale: Broad mule-deer search surfaced a small public wildlife family that
+      may replace a stale TSR token.
+  - title: Mule Deer Winter Range Shelter Penticton Forest District
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/mule-deer-winter-range-shelter-penticton-forest-district
+    object_names:
+    - REG_LAND_AND_NATURAL_RESOURCE.MULE_DEER_WR_SHELTER_DPE_POLY
+    matched_query: MULE_DEER
+    rationale: Broad mule-deer search surfaced a small public wildlife family that
+      may replace a stale TSR token.
+  notes:
+  - No catalogue matches found for the supplied query.
+- entry_id: reg_land_and_natural_resource_ste_ter
+  label: REG_LAND_AND_NATURAL_RESOURCE.STE_TER
+  recommended_query: REG_LAND_AND_NATURAL_RESOURCE.STE_TER
+  extracted_value: REG_LAND_AND_NATURAL_RESOURCE.STE_TER_
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Terrain stability mapping BCGW REG_LAND_AND_NATURAL_RESOURCE.STE_TER_
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_TERRESTRIAL_ECOLOGY.STE_TER_STABILITY_POLYS_SVW
+  used_alias: WHSE_TERRESTRIAL_ECOLOGY.STE_TER_STABILITY_POLYS_SVW
+  top_match_title: Terrain Stability Mapping (TSM) Detailed Polygons with Short Attribute
+    Table Spatial View
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/terrain-stability-mapping-tsm-detailed-polygons-with-short-attribute-table-spatial-view
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 1
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: true
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/REG_LAND_AND_NATURAL_RESOURCE_STE_TER/REG_LAND_AND_NATURAL_RESOURCE_STE_TER.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_TERRESTRIAL_ECOLOGY.STE_TER_STABILITY_POLYS_SVW`
+    after the original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  - Supporting documents are available for manual review but are not auto-downloaded
+    in v1.
+  feature_count: 10000
+- entry_id: reg_land_and_natural_resource_terrain_stability
+  label: REG_LAND_AND_NATURAL_RESOURCE.TERRAIN_STABILITY
+  recommended_query: REG_LAND_AND_NATURAL_RESOURCE.TERRAIN_STABILITY
+  extracted_value: REG_LAND_AND_NATURAL_RESOURCE.TERRAIN_STABILITY_
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Terrain Stability Mapping BCGW REG_LAND_AND_NATURAL_RESOURCE.TERRAIN_STABILITY_
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_TERRESTRIAL_ECOLOGY.STE_TER_STABILITY_POLYS_SVW
+  used_alias: WHSE_TERRESTRIAL_ECOLOGY.STE_TER_STABILITY_POLYS_SVW
+  top_match_title: Terrain Stability Mapping (TSM) Detailed Polygons with Short Attribute
+    Table Spatial View
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/terrain-stability-mapping-tsm-detailed-polygons-with-short-attribute-table-spatial-view
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 1
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: true
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/REG_LAND_AND_NATURAL_RESOURCE_TERRAIN_STABILITY/REG_LAND_AND_NATURAL_RESOURCE_TERRAIN_STABILITY.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_TERRESTRIAL_ECOLOGY.STE_TER_STABILITY_POLYS_SVW`
+    after the original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  - Supporting documents are available for manual review but are not auto-downloaded
+    in v1.
+  feature_count: 10000
+- entry_id: reg_land_and_natural_resource_wld
+  label: REG_LAND_AND_NATURAL_RESOURCE.WLD
+  recommended_query: REG_LAND_AND_NATURAL_RESOURCE.WLD
+  extracted_value: REG_LAND_AND_NATURAL_RESOURCE.WLD
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Proposed WHAs BCGW REG_LAND_AND_NATURAL_RESOURCE.WLD
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_stem:REG_LAND_AND_NATURAL_RESOURCE.WLD_MULE_DEER_STND_STRC_CAR_SP
+  used_alias: ''
+  top_match_title: Stand Structure Habitat Classes in Mule Deer Winter Range - Cariboo
+    Region
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/stand-structure-habitat-classes-in-mule-deer-winter-range-cariboo-region
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/REG_LAND_AND_NATURAL_RESOURCE_WLD/REG_LAND_AND_NATURAL_RESOURCE_WLD.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: reg_land_and_natural_resource_wld_wha_proposed_sp
+  label: REG_LAND_AND_NATURAL_RESOURCE.WLD_WHA_PROPOSED_SP
+  recommended_query: REG_LAND_AND_NATURAL_RESOURCE.WLD_WHA_PROPOSED_SP
+  extracted_value: REG_LAND_AND_NATURAL_RESOURCE.WLD_WHA_PROPOSED_SP
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: BCGW REG_LAND_AND_NATURAL_RESOURCE.WLD_WHA_PROPOSED_SP 2011
+  page_number: 11
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=11
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_WILDLIFE_MANAGEMENT.WCP_WHA_PROPOSED_SP
+  used_alias: WHSE_WILDLIFE_MANAGEMENT.WCP_WHA_PROPOSED_SP
+  top_match_title: Wildlife Habitat Areas - Proposed
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/wildlife-habitat-areas-proposed
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/REG_LAND_AND_NATURAL_RESOURCE_WLD_WHA_PROPOSED_SP/REG_LAND_AND_NATURAL_RESOURCE_WLD_WHA_PROPOSED_SP.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_WILDLIFE_MANAGEMENT.WCP_WHA_PROPOSED_SP` after
+    the original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10
+- entry_id: rmp_landscape_unit_svw
+  label: RMP_LANDSCAPE_UNIT_SVW
+  recommended_query: RMP_LANDSCAPE_UNIT_SVW
+  extracted_value: RMP_LANDSCAPE_UNIT_SVW
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: Landscape Units BCGW WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW 2011
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW
+  used_alias: ''
+  top_match_title: Landscape Units of British Columbia - Current
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/landscape-units-of-british-columbia-current
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/RMP_LANDSCAPE_UNIT_SVW/RMP_LANDSCAPE_UNIT_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 196
+- entry_id: rmp_landscape_unit_svw_no_multiples
+  label: RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES
+  recommended_query: RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES
+  extracted_value: RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW
+  used_alias: RMP_LANDSCAPE_UNIT_SVW
+  top_match_title: Landscape Units of British Columbia - Current
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/landscape-units-of-british-columbia-current
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES/RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `RMP_LANDSCAPE_UNIT_SVW` after the original query did
+    not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 196
+- entry_id: rmp_ogma_legal
+  label: RMP_OGMA_LEGAL
+  recommended_query: RMP_OGMA_LEGAL
+  extracted_value: RMP_OGMA_LEGAL
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: OGMAs BCGW WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW
+  used_alias: RMP_OGMA_LEGAL_CURRENT_SVW
+  top_match_title: Old Growth Management Areas - Legal - Current
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/old-growth-management-areas-legal-current
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: true
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/RMP_OGMA_LEGAL/RMP_OGMA_LEGAL.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `RMP_OGMA_LEGAL_CURRENT_SVW` after the original query
+    did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  - Supporting documents are available for manual review but are not auto-downloaded
+    in v1.
+  feature_count: 7825
+- entry_id: rmp_ogma_legal_current_svw
+  label: RMP_OGMA_LEGAL_CURRENT_SVW
+  recommended_query: RMP_OGMA_LEGAL_CURRENT_SVW
+  extracted_value: RMP_OGMA_LEGAL_CURRENT_SVW
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: BCGW WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW 2011
+  page_number: 11
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=11
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW
+  used_alias: ''
+  top_match_title: Old Growth Management Areas - Legal - Current
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/old-growth-management-areas-legal-current
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: true
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/RMP_OGMA_LEGAL_CURRENT_SVW/RMP_OGMA_LEGAL_CURRENT_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  - Supporting documents are available for manual review but are not auto-downloaded
+    in v1.
+  feature_count: 7825
+- entry_id: rmp_plan_legal
+  label: RMP_PLAN_LEGAL
+  recommended_query: RMP_PLAN_LEGAL
+  extracted_value: RMP_PLAN_LEGAL
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: BCGW WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW
+  used_alias: RMP_PLAN_LEGAL_POLY_SVW
+  top_match_title: Legal Planning Objectives - Current - Polygon
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/legal-planning-objectives-current-polygon
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/RMP_PLAN_LEGAL/RMP_PLAN_LEGAL.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `RMP_PLAN_LEGAL_POLY_SVW` after the original query did
+    not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: rmp_plan_legal_poly_svw
+  label: RMP_PLAN_LEGAL_POLY_SVW
+  recommended_query: RMP_PLAN_LEGAL_POLY_SVW
+  extracted_value: RMP_PLAN_LEGAL_POLY_SVW
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: CCLUP Birch Areas BCGW WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW 2011
+  page_number: 11
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=11
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW
+  used_alias: ''
+  top_match_title: Legal Planning Objectives - Current - Polygon
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/legal-planning-objectives-current-polygon
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/RMP_PLAN_LEGAL_POLY_SVW/RMP_PLAN_LEGAL_POLY_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: rmp_plan_non_legal_poly_svw
+  label: RMP_PLAN_NON_LEGAL_POLY_SVW
+  recommended_query: RMP_PLAN_NON_LEGAL_POLY_SVW
+  extracted_value: RMP_PLAN_NON_LEGAL_POLY_SVW
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: 'Protected Areas: Goal 2 BCGW WHSE_LAND_USE_PLANNING.RMP_PLAN_NON_LEGAL_POLY_SVW
+    2011'
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_PLAN_NON_LEGAL_POLY_SVW
+  used_alias: ''
+  top_match_title: Non Legal Planning Features - Current - Polygon
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/non-legal-planning-features-current-polygon
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/RMP_PLAN_NON_LEGAL_POLY_SVW/RMP_PLAN_NON_LEGAL_POLY_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: site_prod_bc
+  label: SITE_PROD_BC
+  recommended_query: SITE_PROD_BC
+  extracted_value: SITE_PROD_BC
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: FAIB SITE_PROD_BC 2023
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17 | TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=20
+    | TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: exact_text:Provincial Site Productivity Layer
+  used_alias: Provincial Site Productivity Layer
+  top_match_title: Provincial Site Productivity Layer
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/provincial-site-productivity-layer
+  suggested_fetch_strategy: ''
+  direct_download_candidates: 2
+  has_service: false
+  has_wfs_queryable_service: false
+  has_indirect_custom_download: false
+  has_supporting_document: false
+  acquisition_strategy: direct_download
+  run_status: downloaded
+  artifact_path: data/downloads/bcdc/SITE_PROD_BC/Site_Prod_BC.zip
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `Provincial Site Productivity Layer` to surface the current
+    top match.
+- entry_id: ta_crown_tenures_svw
+  label: TA_CROWN_TENURES_SVW
+  recommended_query: TA_CROWN_TENURES_SVW
+  extracted_value: TA_CROWN_TENURES_SVW
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: Ownership BCGW WHSE_TANTALIS.TA_CROWN_TENURES_SVW 2023
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_suffix:WHSE_TANTALIS.TA_CROWN_TENURES_SVW
+  used_alias: ''
+  top_match_title: TANTALIS - Crown Tenures
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/tantalis-crown-tenures
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/TA_CROWN_TENURES_SVW/TA_CROWN_TENURES_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 3853
+- entry_id: ta_park_ecores_pa_svw
+  label: TA_PARK_ECORES_PA_SVW
+  recommended_query: TA_PARK_ECORES_PA_SVW
+  extracted_value: TA_PARK_ECORES_PA_SVW
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: BCGW WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW 2023
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17 | TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_suffix:WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW
+  used_alias: ''
+  top_match_title: BC Parks, Ecological Reserves, and Protected Areas
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/bc-parks-ecological-reserves-and-protected-areas
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/TA_PARK_ECORES_PA_SVW/TA_PARK_ECORES_PA_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 90
+- entry_id: ta_wildlife_mgmt_areas
+  label: TA_WILDLIFE_MGMT_AREAS
+  recommended_query: TA_WILDLIFE_MGMT_AREAS
+  extracted_value: TA_WILDLIFE_MGMT_AREAS
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: Wildlife BCGW WHSE_TANTALIS. TA_WILDLIFE_MGMT_AREAS
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name_suffix:WHSE_TANTALIS.TA_WILDLIFE_MGMT_AREAS_SVW
+  used_alias: TA_WILDLIFE_MGMT_AREAS_SVW
+  top_match_title: TANTALIS - Wildlife Management Areas
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/tantalis-wildlife-management-areas
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/TA_WILDLIFE_MGMT_AREAS/TA_WILDLIFE_MGMT_AREAS.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `TA_WILDLIFE_MGMT_AREAS_SVW` after the original query
+    did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 3
+- entry_id: ta_wildlife_mgmt_areas_svw
+  label: TA_WILDLIFE_MGMT_AREAS_SVW
+  recommended_query: TA_WILDLIFE_MGMT_AREAS_SVW
+  extracted_value: TA_WILDLIFE_MGMT_AREAS_SVW
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: BCGW WHSE_TANTALIS.TA_WILDLIFE_MGMT_AREAS_SVW 2011
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_suffix:WHSE_TANTALIS.TA_WILDLIFE_MGMT_AREAS_SVW
+  used_alias: ''
+  top_match_title: TANTALIS - Wildlife Management Areas
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/tantalis-wildlife-management-areas
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/TA_WILDLIFE_MGMT_AREAS_SVW/TA_WILDLIFE_MGMT_AREAS_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 3
+- entry_id: trim_contour_points
+  label: TRIM_CONTOUR_POINTS
+  recommended_query: TRIM_CONTOUR_POINTS
+  extracted_value: TRIM_CONTOUR_POINTS
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: Digital elevation model BCGW WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS 2011
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18 | TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=11
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_suffix:WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS
+  used_alias: ''
+  top_match_title: TRIM Contours Points
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/trim-contours-points
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/TRIM_CONTOUR_POINTS/TRIM_CONTOUR_POINTS.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: veg_burn_severity
+  label: VEG_BURN_SEVERITY
+  recommended_query: VEG_BURN_SEVERITY
+  extracted_value: VEG_BURN_SEVERITY
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: Wildfire BCGW WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_stem:WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SAME_YR_SP
+  used_alias: ''
+  top_match_title: Fire Burn Severity - Same Year
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-same-year
+  suggested_fetch_strategy: ''
+  direct_download_candidates: 0
+  has_service: false
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: dwds_order
+  run_status: dwds_order_skipped
+  artifact_path: ''
+  override_kind: null
+  override_value: null
+  replacement_family_candidates:
+  - title: Fire Burn Severity - Same Year
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-same-year
+    object_names:
+    - WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SAME_YR_SP
+    matched_query: BURN_SEVERITY
+    rationale: Broad burn-severity search surfaced current public burn-severity dataset
+      candidates.
+  - title: Fire Burn Severity - Historical
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-historical
+    object_names:
+    - WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SP
+    matched_query: BURN_SEVERITY
+    rationale: Broad burn-severity search surfaced current public burn-severity dataset
+      candidates.
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+- entry_id: veg_burn_severity_sp
+  label: VEG_BURN_SEVERITY_SP
+  recommended_query: VEG_BURN_SEVERITY_SP
+  extracted_value: VEG_BURN_SEVERITY_SP
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SP
+  page_number: 59
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=59
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_suffix:WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SP
+  used_alias: ''
+  top_match_title: Fire Burn Severity - Historical
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-historical
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 1
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/VEG_BURN_SEVERITY_SP/VEG_BURN_SEVERITY_SP.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: veg_comp_lyr_r1
+  label: VEG_COMP_LYR_R1
+  recommended_query: VEG_COMP_LYR_R1
+  extracted_value: VEG_COMP_LYR_R1
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: BCGW WHSE_FOREST_VEGETATION. VEG_COMP_LYR_R1
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_stem:WHSE_FOREST_VEGETATION.VEG_COMP_LYR_R1_POLY
+  used_alias: ''
+  top_match_title: VRI - 2024 - Forest Vegetation Composite Rank 1 Layer (R1)
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/vri-2024-forest-vegetation-composite-rank-1-layer-r1-
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 1
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/VEG_COMP_LYR_R1/VEG_COMP_LYR_R1.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: veg_comp_lyr_r1_poly
+  label: VEG_COMP_LYR_R1_POLY
+  recommended_query: VEG_COMP_LYR_R1_POLY
+  extracted_value: VEG_COMP_LYR_R1_POLY
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: VEG_COMP_LYR_R1_POLY
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17 | TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=19
+    | TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_suffix:WHSE_FOREST_VEGETATION.VEG_COMP_LYR_R1_POLY
+  used_alias: ''
+  top_match_title: VRI - 2024 - Forest Vegetation Composite Rank 1 Layer (R1)
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/vri-2024-forest-vegetation-composite-rank-1-layer-r1-
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 1
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/VEG_COMP_LYR_R1_POLY/VEG_COMP_LYR_R1_POLY.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: veg_consolidated_cut_blocks_sp
+  label: VEG_CONSOLIDATED_CUT_BLOCKS_SP
+  recommended_query: VEG_CONSOLIDATED_CUT_BLOCKS_SP
+  extracted_value: VEG_CONSOLIDATED_CUT_BLOCKS_SP
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP)
+  page_number: 28
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=28
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_suffix:WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP
+  used_alias: ''
+  top_match_title: Harvested Areas of BC (Consolidated Cutblocks)
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/harvested-areas-of-bc-consolidated-cutblocks-
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 1
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: true
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/VEG_CONSOLIDATED_CUT_BLOCKS_SP/VEG_CONSOLIDATED_CUT_BLOCKS_SP.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  - Supporting documents are available for manual review but are not auto-downloaded
+    in v1.
+  feature_count: 10000
+- entry_id: wcp_ungulate_winter_range
+  label: WCP_UNGULATE_WINTER_RANGE
+  recommended_query: WCP_UNGULATE_WINTER_RANGE
+  extracted_value: WCP_UNGULATE_WINTER_RANGE
+  quality: likely_useful
+  quality_reason: recognized forestry shorthand/prefix
+  snippet: Ungulate Winter Ranges BCGW WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: alias_hit
+  matched_by: object_name_suffix:WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP
+  used_alias: WCP_UNGULATE_WINTER_RANGE_SP
+  top_match_title: Ungulate Winter Range - Approved
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/ungulate-winter-range-approved
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WCP_UNGULATE_WINTER_RANGE/WCP_UNGULATE_WINTER_RANGE.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WCP_UNGULATE_WINTER_RANGE_SP` after the original query
+    did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 209
+- entry_id: whse_admin_boundaries_clab_indian
+  label: WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN
+  recommended_query: WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN
+  extracted_value: WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Indian reserves BCGW WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES
+  used_alias: WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES
+  top_match_title: Indian Reserves - Administrative Boundaries
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/indian-reserves-administrative-boundaries
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN/WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES` after the
+    original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 212
+- entry_id: whse_admin_boundaries_clab_indian_reserves
+  label: WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES
+  recommended_query: WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES
+  extracted_value: WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Indian Reserves BCGW WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES 2011
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES
+  used_alias: ''
+  top_match_title: Indian Reserves - Administrative Boundaries
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/indian-reserves-administrative-boundaries
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN_RESERVES/WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN_RESERVES.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 212
+- entry_id: whse_admin_boundaries_fadm_bcts_area
+  label: WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA
+  recommended_query: WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA
+  extracted_value: WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: BCTS operating area BCGW WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP
+  used_alias: WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP
+  top_match_title: FADM - BC Timber Sales Area
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fadm-bc-timber-sales-area
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA/WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP` after the original
+    query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 8
+- entry_id: whse_admin_boundaries_fadm_bcts_area_sp
+  label: WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP
+  recommended_query: WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP
+  extracted_value: WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: BCTS Operating Area BCGW WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP 2011
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP
+  used_alias: ''
+  top_match_title: FADM - BC Timber Sales Area
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fadm-bc-timber-sales-area
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA_SP/WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA_SP.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 8
+- entry_id: whse_admin_boundaries_fadm_tfl
+  label: WHSE_ADMIN_BOUNDARIES.FADM_TFL
+  recommended_query: WHSE_ADMIN_BOUNDARIES.FADM_TFL
+  extracted_value: WHSE_ADMIN_BOUNDARIES.FADM_TFL
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Tree farm licence BCGW WHSE_ADMIN_BOUNDARIES.FADM_TFL 2023
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_ADMIN_BOUNDARIES.FADM_TFL
+  used_alias: ''
+  top_match_title: FADM - Tree Farm License Agreement Boundary (TFL)
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fadm-tree-farm-license-agreement-boundary-tfl-
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_ADMIN_BOUNDARIES_FADM_TFL/WHSE_ADMIN_BOUNDARIES_FADM_TFL.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 12
+- entry_id: whse_admin_boundaries_fadm_tsa
+  label: WHSE_ADMIN_BOUNDARIES.FADM_TSA
+  recommended_query: WHSE_ADMIN_BOUNDARIES.FADM_TSA
+  extracted_value: WHSE_ADMIN_BOUNDARIES.FADM_TSA
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: TSAs BCGW WHSE_ADMIN_BOUNDARIES.FADM_TSA 2023
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17 | TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_ADMIN_BOUNDARIES.FADM_TSA
+  used_alias: ''
+  top_match_title: FADM - Timber Supply Area (TSA)
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fadm-timber-supply-area-tsa
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_ADMIN_BOUNDARIES_FADM_TSA/WHSE_ADMIN_BOUNDARIES_FADM_TSA.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 66
+- entry_id: whse_admin_boundaries_pip_consultation
+  label: WHSE_ADMIN_BOUNDARIES.PIP_CONSULTATION
+  recommended_query: WHSE_ADMIN_BOUNDARIES.PIP_CONSULTATION
+  extracted_value: WHSE_ADMIN_BOUNDARIES.PIP_CONSULTATION
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: "Tsilhqot\u2019in Nation BCGW WHSE_ADMIN_BOUNDARIES.PIP_CONSULTATION"
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: no_hit
+  matched_by: ''
+  used_alias: ''
+  top_match_title: ''
+  dataset_page_url: ''
+  suggested_fetch_strategy: ''
+  direct_download_candidates: 0
+  has_service: false
+  has_wfs_queryable_service: false
+  has_indirect_custom_download: false
+  has_supporting_document: false
+  acquisition_strategy: override_required
+  run_status: override_required
+  artifact_path: ''
+  override_kind: null
+  override_value: null
+  replacement_family_candidates:
+  - title: 'Profiles of Indigenous Peoples (PIP): Consultation Areas - Public Map
+      Service'
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/profiles-of-indigenous-peoples-pip-consultation-areas-public-map-service
+    object_names: []
+    matched_query: PIP_CONSULTATION
+    rationale: Broad PIP consultation search surfaced a likely public consultation-area
+      lead.
+  notes:
+  - No catalogue matches found for the supplied query.
+- entry_id: whse_basemapping_dra_dgtl_road_atlas_mpar
+  label: WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR
+  recommended_query: WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR
+  extracted_value: WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Other roads (non-status) BCGW WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_stem:WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP
+  used_alias: ''
+  top_match_title: Digital Road Atlas (DRA) - Master Partially-Attributed Roads
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/digital-road-atlas-dra-master-partially-attributed-roads
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: true
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR/WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  - Supporting documents are available for manual review but are not auto-downloaded
+    in v1.
+  feature_count: 10000
+- entry_id: whse_basemapping_dra_dgtl_road_atlas_mpar_sp
+  label: WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP
+  recommended_query: WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP
+  extracted_value: WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Non-status 5 m WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP (Outside of
+    cutblocks)
+  page_number: 28
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=28
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP
+  used_alias: ''
+  top_match_title: Digital Road Atlas (DRA) - Master Partially-Attributed Roads
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/digital-road-atlas-dra-master-partially-attributed-roads
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: true
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR_SP/WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR_SP.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  - Supporting documents are available for manual review but are not auto-downloaded
+    in v1.
+  feature_count: 10000
+- entry_id: whse_basemapping_dra_digital_road_atlas_line_sp
+  label: WHSE_BASEMAPPING.DRA_DIGITAL_ROAD_ATLAS_LINE_SP
+  recommended_query: WHSE_BASEMAPPING.DRA_DIGITAL_ROAD_ATLAS_LINE_SP
+  extracted_value: WHSE_BASEMAPPING.DRA_DIGITAL_ROAD_ATLAS_LINE_SP
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: "\uF0B7 Road Atlas: WHSE_BASEMAPPING.DRA_DIGITAL_ROAD_ATLAS_LINE_SP;"
+  page_number: 20
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=20
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP
+  used_alias: WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP
+  top_match_title: Digital Road Atlas (DRA) - Master Partially-Attributed Roads
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/digital-road-atlas-dra-master-partially-attributed-roads
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: true
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_BASEMAPPING_DRA_DIGITAL_ROAD_ATLAS_LINE_SP/WHSE_BASEMAPPING_DRA_DIGITAL_ROAD_ATLAS_LINE_SP.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP` after
+    the original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  - Supporting documents are available for manual review but are not auto-downloaded
+    in v1.
+  feature_count: 10000
+- entry_id: whse_basemapping_fwa_lakes_poly
+  label: WHSE_BASEMAPPING.FWA_LAKES_POLY
+  recommended_query: WHSE_BASEMAPPING.FWA_LAKES_POLY
+  extracted_value: WHSE_BASEMAPPING.FWA_LAKES_POLY
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Lake classification BCGW WHSE_BASEMAPPING.FWA_LAKES_POLY 2023
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_BASEMAPPING.FWA_LAKES_POLY
+  used_alias: ''
+  top_match_title: Freshwater Atlas Lakes
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/freshwater-atlas-lakes
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: true
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_BASEMAPPING_FWA_LAKES_POLY/WHSE_BASEMAPPING_FWA_LAKES_POLY.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  - Supporting documents are available for manual review but are not auto-downloaded
+    in v1.
+  feature_count: 10000
+- entry_id: whse_basemapping_trim_contour_points
+  label: WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS
+  recommended_query: WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS
+  extracted_value: WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Digital elevation model BCGW WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS 2011
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18 | TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=11
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS
+  used_alias: ''
+  top_match_title: TRIM Contours Points
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/trim-contours-points
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_BASEMAPPING_TRIM_CONTOUR_POINTS/WHSE_BASEMAPPING_TRIM_CONTOUR_POINTS.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: whse_cadastre_cbm_cadastral_fabric
+  label: WHSE_CADASTRE.CBM_CADASTRAL_FABRIC
+  recommended_query: WHSE_CADASTRE.CBM_CADASTRAL_FABRIC
+  extracted_value: WHSE_CADASTRE.CBM_CADASTRAL_FABRIC
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Private land BCGW WHSE_CADASTRE.CBM_CADASTRAL_FABRIC
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW
+  used_alias: WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW
+  top_match_title: ParcelMap BC Parcel Fabric
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/parcelmap-bc-parcel-fabric
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 2
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_CADASTRE_CBM_CADASTRAL_FABRIC/WHSE_CADASTRE_CBM_CADASTRAL_FABRIC.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW` after the
+    original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: whse_forest_tenure_ften_managed_lic
+  label: WHSE_FOREST_TENURE.FTEN_MANAGED_LIC
+  recommended_query: WHSE_FOREST_TENURE.FTEN_MANAGED_LIC
+  extracted_value: WHSE_FOREST_TENURE.FTEN_MANAGED_LIC
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Managed licences BCGW WHSE_FOREST_TENURE.FTEN_MANAGED_LIC
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_FOREST_TENURE.FTEN_MANAGED_LICENCE_POLY_SVW
+  used_alias: WHSE_FOREST_TENURE.FTEN_MANAGED_LICENCE_POLY_SVW
+  top_match_title: Forest Tenure Managed Licence
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-managed-licence
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_FOREST_TENURE_FTEN_MANAGED_LIC/WHSE_FOREST_TENURE_FTEN_MANAGED_LIC.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_FOREST_TENURE.FTEN_MANAGED_LICENCE_POLY_SVW` after
+    the original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 707
+- entry_id: whse_forest_tenure_ften_managed_lic_poly_svw
+  label: WHSE_FOREST_TENURE.FTEN_MANAGED_LIC_POLY_SVW
+  recommended_query: WHSE_FOREST_TENURE.FTEN_MANAGED_LIC_POLY_SVW
+  extracted_value: WHSE_FOREST_TENURE.FTEN_MANAGED_LIC_POLY_SVW
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Managed Licences BCGW WHSE_FOREST_TENURE.FTEN_MANAGED_LIC_POLY_SVW 2011
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_FOREST_TENURE.FTEN_MANAGED_LICENCE_POLY_SVW
+  used_alias: WHSE_FOREST_TENURE.FTEN_MANAGED_LICENCE_POLY_SVW
+  top_match_title: Forest Tenure Managed Licence
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-managed-licence
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_FOREST_TENURE_FTEN_MANAGED_LIC_POLY_SVW/WHSE_FOREST_TENURE_FTEN_MANAGED_LIC_POLY_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_FOREST_TENURE.FTEN_MANAGED_LICENCE_POLY_SVW` after
+    the original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 707
+- entry_id: whse_forest_tenure_ften_recreation
+  label: WHSE_FOREST_TENURE.FTEN_RECREATION
+  recommended_query: WHSE_FOREST_TENURE.FTEN_RECREATION
+  extracted_value: WHSE_FOREST_TENURE.FTEN_RECREATION
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Recreation sites BCGW WHSE_FOREST_TENURE.FTEN_RECREATION
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_stem:WHSE_FOREST_TENURE.FTEN_RECREATION_POLY_SVW
+  used_alias: ''
+  top_match_title: Recreation Polygons
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/recreation-polygons
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_FOREST_TENURE_FTEN_RECREATION/WHSE_FOREST_TENURE_FTEN_RECREATION.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 788
+- entry_id: whse_forest_tenure_ften_road_lines
+  label: WHSE_FOREST_TENURE.FTEN_ROAD_LINES
+  recommended_query: WHSE_FOREST_TENURE.FTEN_ROAD_LINES
+  extracted_value: WHSE_FOREST_TENURE.FTEN_ROAD_LINES
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: "\uF0B7 Forest Service Roads and Road Permits: WHSE_FOREST_TENURE.FTEN_ROAD_LINES;"
+  page_number: 20
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=20
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_FOREST_TENURE.FTEN_ROAD_LINES
+  used_alias: ''
+  top_match_title: Forest Tenure Road Lines
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-road-lines
+  suggested_fetch_strategy: ''
+  direct_download_candidates: 0
+  has_service: false
+  has_wfs_queryable_service: false
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: dwds_order
+  run_status: dwds_order_skipped
+  artifact_path: ''
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+- entry_id: whse_forest_tenure_ften_road_section_lines
+  label: WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES
+  recommended_query: WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES
+  extracted_value: WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Forest Service road BCGW WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW
+  used_alias: WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW
+  top_match_title: Forest Tenure Road Section Lines
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-road-section-lines
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES/WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW` after
+    the original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: whse_forest_tenure_ften_road_section_lines_svw
+  label: WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW
+  recommended_query: WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW
+  extracted_value: WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: FSR 25 m WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW (Active)
+  page_number: 28
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=28
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW
+  used_alias: ''
+  top_match_title: Forest Tenure Road Section Lines
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/forest-tenure-road-section-lines
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES_SVW/WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: whse_forest_vegetation_bec
+  label: WHSE_FOREST_VEGETATION.BEC
+  recommended_query: WHSE_FOREST_VEGETATION.BEC
+  extracted_value: WHSE_FOREST_VEGETATION.BEC_
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: BCGW WHSE_FOREST_VEGETATION.BEC_
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
+  used_alias: WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
+  top_match_title: BEC Map
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/bec-map
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_BEC/WHSE_FOREST_VEGETATION_BEC.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY` after
+    the original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 876
+- entry_id: whse_forest_vegetation_bec_biogeoclimatic_poly
+  label: WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
+  recommended_query: WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
+  extracted_value: WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: BCGW WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY 2011
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
+  used_alias: ''
+  top_match_title: BEC Map
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/bec-map
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_BEC_BIOGEOCLIMATIC_POLY/WHSE_FOREST_VEGETATION_BEC_BIOGEOCLIMATIC_POLY.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 876
+- entry_id: whse_forest_vegetation_f_own
+  label: WHSE_FOREST_VEGETATION.F_OWN
+  recommended_query: WHSE_FOREST_VEGETATION.F_OWN
+  extracted_value: WHSE_FOREST_VEGETATION.F_OWN
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Ownership BCGW WHSE_FOREST_VEGETATION.F_OWN 2023
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17 | TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=26
+    | TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_FOREST_VEGETATION.F_OWN
+  used_alias: ''
+  top_match_title: Generalized Forest Cover Ownership
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/generalized-forest-cover-ownership
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: true
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_F_OWN/WHSE_FOREST_VEGETATION_F_OWN.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  - Supporting documents are available for manual review but are not auto-downloaded
+    in v1.
+  feature_count: 10000
+- entry_id: whse_forest_vegetation_gry_psp_status
+  label: WHSE_FOREST_VEGETATION.GRY_PSP_STATUS
+  recommended_query: WHSE_FOREST_VEGETATION.GRY_PSP_STATUS
+  extracted_value: WHSE_FOREST_VEGETATION.GRY_PSP_STATUS_
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Research plots BCGW WHSE_FOREST_VEGETATION.GRY_PSP_STATUS_
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_stem:WHSE_FOREST_VEGETATION.GRY_PSP_STATUS_ACTIVE
+  used_alias: ''
+  top_match_title: Growth and Yield  Samples - All Status
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/growth-and-yield-samples-all-status
+  suggested_fetch_strategy: ''
+  direct_download_candidates: 0
+  has_service: false
+  has_wfs_queryable_service: false
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: dwds_order
+  run_status: dwds_order_skipped
+  artifact_path: ''
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+- entry_id: whse_forest_vegetation_rec_visual_landscape
+  label: WHSE_FOREST_VEGETATION.REC_VISUAL_LANDSCAPE
+  recommended_query: WHSE_FOREST_VEGETATION.REC_VISUAL_LANDSCAPE
+  extracted_value: WHSE_FOREST_VEGETATION.REC_VISUAL_LANDSCAPE_
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: BCGW WHSE_FOREST_VEGETATION.REC_VISUAL_LANDSCAPE_
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_FOREST_VEGETATION.REC_VISUAL_LANDSCAPE_INVENTORY
+  used_alias: WHSE_FOREST_VEGETATION.REC_VISUAL_LANDSCAPE_INVENTORY
+  top_match_title: Visual Landscape Inventory
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/visual-landscape-inventory
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_REC_VISUAL_LANDSCAPE/WHSE_FOREST_VEGETATION_REC_VISUAL_LANDSCAPE.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_FOREST_VEGETATION.REC_VISUAL_LANDSCAPE_INVENTORY`
+    after the original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 9416
+- entry_id: whse_forest_vegetation_rslt_forest
+  label: WHSE_FOREST_VEGETATION.RSLT_FOREST
+  recommended_query: WHSE_FOREST_VEGETATION.RSLT_FOREST
+  extracted_value: WHSE_FOREST_VEGETATION.RSLT_FOREST_
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: RESULTS reserves BCGW WHSE_FOREST_VEGETATION.RSLT_FOREST_
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_stem:WHSE_FOREST_VEGETATION.RSLT_FOREST_COVER_SPECIES_VW
+  used_alias: ''
+  top_match_title: RESULTS - Forest Cover Species (Attribute Only)
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/results-forest-cover-species-attribute-only
+  suggested_fetch_strategy: ''
+  direct_download_candidates: 0
+  has_service: false
+  has_wfs_queryable_service: false
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: dwds_order
+  run_status: dwds_order_skipped
+  artifact_path: ''
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+- entry_id: whse_forest_vegetation_veg_burn_severity
+  label: WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY
+  recommended_query: WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY
+  extracted_value: WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Wildfire BCGW WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_stem:WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SAME_YR_SP
+  used_alias: ''
+  top_match_title: Fire Burn Severity - Same Year
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-same-year
+  suggested_fetch_strategy: ''
+  direct_download_candidates: 0
+  has_service: false
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: dwds_order
+  run_status: dwds_order_skipped
+  artifact_path: ''
+  override_kind: null
+  override_value: null
+  replacement_family_candidates:
+  - title: Fire Burn Severity - Same Year
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-same-year
+    object_names:
+    - WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SAME_YR_SP
+    matched_query: BURN_SEVERITY
+    rationale: Broad burn-severity search surfaced current public burn-severity dataset
+      candidates.
+  - title: Fire Burn Severity - Historical
+    dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-historical
+    object_names:
+    - WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SP
+    matched_query: BURN_SEVERITY
+    rationale: Broad burn-severity search surfaced current public burn-severity dataset
+      candidates.
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+- entry_id: whse_forest_vegetation_veg_burn_severity_sp
+  label: WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SP
+  recommended_query: WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SP
+  extracted_value: WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SP
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SP
+  page_number: 59
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=59
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SP
+  used_alias: ''
+  top_match_title: Fire Burn Severity - Historical
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fire-burn-severity-historical
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 1
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_VEG_BURN_SEVERITY_SP/WHSE_FOREST_VEGETATION_VEG_BURN_SEVERITY_SP.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: whse_forest_vegetation_veg_comp_lyr_r1_poly
+  label: WHSE_FOREST_VEGETATION.VEG_COMP_LYR_R1_POLY
+  recommended_query: WHSE_FOREST_VEGETATION.VEG_COMP_LYR_R1_POLY
+  extracted_value: WHSE_FOREST_VEGETATION.VEG_COMP_LYR_R1_POLY
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: BCGW WHSE_FOREST_VEGETATION.VEG_COMP_LYR_R1_POLY 2010
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_FOREST_VEGETATION.VEG_COMP_LYR_R1_POLY
+  used_alias: ''
+  top_match_title: VRI - 2024 - Forest Vegetation Composite Rank 1 Layer (R1)
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/vri-2024-forest-vegetation-composite-rank-1-layer-r1-
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 1
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_VEG_COMP_LYR_R1_POLY/WHSE_FOREST_VEGETATION_VEG_COMP_LYR_R1_POLY.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: whse_forest_vegetation_veg_consolidated_cut_blocks_sp
+  label: WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP
+  recommended_query: WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP
+  extracted_value: WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP)
+  page_number: 28
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=28
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP
+  used_alias: ''
+  top_match_title: Harvested Areas of BC (Consolidated Cutblocks)
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/harvested-areas-of-bc-consolidated-cutblocks-
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 1
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: true
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_VEG_CONSOLIDATED_CUT_BLOCKS_SP/WHSE_FOREST_VEGETATION_VEG_CONSOLIDATED_CUT_BLOCKS_SP.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  - Supporting documents are available for manual review but are not auto-downloaded
+    in v1.
+  feature_count: 10000
+- entry_id: whse_human_cultural_economic_fnirs
+  label: WHSE_HUMAN_CULTURAL_ECONOMIC.FNIRS
+  recommended_query: WHSE_HUMAN_CULTURAL_ECONOMIC.FNIRS
+  extracted_value: WHSE_HUMAN_CULTURAL_ECONOMIC.FNIRS_
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: BCGW WHSE_HUMAN_CULTURAL_ECONOMIC.FNIRS_
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: no_hit
+  matched_by: ''
+  used_alias: ''
+  top_match_title: ''
+  dataset_page_url: ''
+  suggested_fetch_strategy: ''
+  direct_download_candidates: 0
+  has_service: false
+  has_wfs_queryable_service: false
+  has_indirect_custom_download: false
+  has_supporting_document: false
+  acquisition_strategy: override_required
+  run_status: override_required
+  artifact_path: ''
+  override_kind: null
+  override_value: null
+  replacement_family_candidates: []
+  notes:
+  - No catalogue matches found for the supplied query.
+- entry_id: whse_human_cultural_economic_fnirs_agreement
+  label: WHSE_HUMAN_CULTURAL_ECONOMIC.FNIRS_AGREEMENT
+  recommended_query: WHSE_HUMAN_CULTURAL_ECONOMIC.FNIRS_AGREEMENT
+  extracted_value: WHSE_HUMAN_CULTURAL_ECONOMIC.FNIRS_AGREEMENT
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: BCGW WHSE_HUMAN_CULTURAL_ECONOMIC.FNIRS_AGREEMENT
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: no_hit
+  matched_by: ''
+  used_alias: ''
+  top_match_title: ''
+  dataset_page_url: ''
+  suggested_fetch_strategy: ''
+  direct_download_candidates: 0
+  has_service: false
+  has_wfs_queryable_service: false
+  has_indirect_custom_download: false
+  has_supporting_document: false
+  acquisition_strategy: override_required
+  run_status: override_required
+  artifact_path: ''
+  override_kind: null
+  override_value: null
+  replacement_family_candidates: []
+  notes:
+  - No catalogue matches found for the supplied query.
+- entry_id: whse_imagery_and_base_maps_mot_highway_profiles_sp
+  label: WHSE_IMAGERY_AND_BASE_MAPS.MOT_HIGHWAY_PROFILES_SP
+  recommended_query: WHSE_IMAGERY_AND_BASE_MAPS.MOT_HIGHWAY_PROFILES_SP
+  extracted_value: WHSE_IMAGERY_AND_BASE_MAPS.MOT_HIGHWAY_PROFILES_SP
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Public 25 m WHSE_IMAGERY_AND_BASE_MAPS.MOT_HIGHWAY_PROFILES_SP
+  page_number: 28
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=28
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_IMAGERY_AND_BASE_MAPS.MOT_HIGHWAY_PROFILES_SP
+  used_alias: ''
+  top_match_title: Ministry of Transportation (MOT) Highway Profile
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/ministry-of-transportation-mot-highway-profile
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_IMAGERY_AND_BASE_MAPS_MOT_HIGHWAY_PROFILES_SP/WHSE_IMAGERY_AND_BASE_MAPS_MOT_HIGHWAY_PROFILES_SP.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 4153
+- entry_id: whse_imagery_and_base_maps_mot_road_features_invntry_sp
+  label: WHSE_IMAGERY_AND_BASE_MAPS.MOT_ROAD_FEATURES_INVNTRY_SP
+  recommended_query: WHSE_IMAGERY_AND_BASE_MAPS.MOT_ROAD_FEATURES_INVNTRY_SP
+  extracted_value: WHSE_IMAGERY_AND_BASE_MAPS.MOT_ROAD_FEATURES_INVNTRY_SP
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: "\uF0B7 Public Roads: WHSE_IMAGERY_AND_BASE_MAPS.MOT_ROAD_FEATURES_INVNTRY_SP;"
+  page_number: 20
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=20
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_IMAGERY_AND_BASE_MAPS.MOT_ROAD_FEATURES_INVNTRY_SP
+  used_alias: ''
+  top_match_title: Ministry of Transportation (MOT) Road Features Inventory (RFI)
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/ministry-of-transportation-mot-road-features-inventory-rfi
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_IMAGERY_AND_BASE_MAPS_MOT_ROAD_FEATURES_INVNTRY_SP/WHSE_IMAGERY_AND_BASE_MAPS_MOT_ROAD_FEATURES_INVNTRY_SP.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 2001
+- entry_id: whse_land_and_natural_resource_prot_current_fire
+  label: WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE
+  recommended_query: WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE
+  extracted_value: WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Fire Perimeters BCGW WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_
+  page_number: 11
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=11
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_stem:WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_POLYS_SP
+  used_alias: ''
+  top_match_title: BC Wildfire Fire Perimeters - Current
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/bc-wildfire-fire-perimeters-current
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 1
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_LAND_AND_NATURAL_RESOURCE_PROT_CURRENT_FIRE/WHSE_LAND_AND_NATURAL_RESOURCE_PROT_CURRENT_FIRE.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 1
+- entry_id: whse_land_use_planning_fadm_designated
+  label: WHSE_LAND_USE_PLANNING.FADM_DESIGNATED
+  recommended_query: WHSE_LAND_USE_PLANNING.FADM_DESIGNATED
+  extracted_value: WHSE_LAND_USE_PLANNING.FADM_DESIGNATED_
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Designated area BCGW WHSE_LAND_USE_PLANNING.FADM_DESIGNATED_
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_ADMIN_BOUNDARIES.FADM_DESIGNATED_AREAS
+  used_alias: WHSE_ADMIN_BOUNDARIES.FADM_DESIGNATED_AREAS
+  top_match_title: FADM - Designated Areas
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/fadm-designated-areas
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_LAND_USE_PLANNING_FADM_DESIGNATED/WHSE_LAND_USE_PLANNING_FADM_DESIGNATED.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_ADMIN_BOUNDARIES.FADM_DESIGNATED_AREAS` after the
+    original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 26
+- entry_id: whse_land_use_planning_rmp_landscape_unit_svw
+  label: WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW
+  recommended_query: WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW
+  extracted_value: WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Landscape Units BCGW WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW 2011
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW
+  used_alias: ''
+  top_match_title: Landscape Units of British Columbia - Current
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/landscape-units-of-british-columbia-current
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_LAND_USE_PLANNING_RMP_LANDSCAPE_UNIT_SVW/WHSE_LAND_USE_PLANNING_RMP_LANDSCAPE_UNIT_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 196
+- entry_id: whse_land_use_planning_rmp_ogma_legal
+  label: WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL
+  recommended_query: WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL
+  extracted_value: WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: OGMAs BCGW WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW
+  used_alias: WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW
+  top_match_title: Old Growth Management Areas - Legal - Current
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/old-growth-management-areas-legal-current
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: true
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL/WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW` after
+    the original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  - Supporting documents are available for manual review but are not auto-downloaded
+    in v1.
+  feature_count: 7825
+- entry_id: whse_land_use_planning_rmp_ogma_legal_current_svw
+  label: WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW
+  recommended_query: WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW
+  extracted_value: WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: BCGW WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW 2011
+  page_number: 11
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=11
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW
+  used_alias: ''
+  top_match_title: Old Growth Management Areas - Legal - Current
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/old-growth-management-areas-legal-current
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: true
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL_CURRENT_SVW/WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL_CURRENT_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  - Supporting documents are available for manual review but are not auto-downloaded
+    in v1.
+  feature_count: 7825
+- entry_id: whse_land_use_planning_rmp_plan_legal
+  label: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL
+  recommended_query: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL
+  extracted_value: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: BCGW WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW
+  used_alias: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW
+  top_match_title: Legal Planning Objectives - Current - Polygon
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/legal-planning-objectives-current-polygon
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL/WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW` after
+    the original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: whse_land_use_planning_rmp_plan_legal_poly
+  label: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY
+  recommended_query: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY
+  extracted_value: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Visual landscape inventory BCGW WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17 | TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY
+  used_alias: ''
+  top_match_title: Legal Planning Objectives - All - Polygon
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/legal-planning-objectives-all-polygon
+  suggested_fetch_strategy: ''
+  direct_download_candidates: 0
+  has_service: false
+  has_wfs_queryable_service: false
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: dwds_order
+  run_status: dwds_order_skipped
+  artifact_path: ''
+  override_kind: null
+  override_value: null
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+- entry_id: whse_land_use_planning_rmp_plan_legal_poly_svw
+  label: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW
+  recommended_query: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW
+  extracted_value: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: CCLUP Birch Areas BCGW WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW 2011
+  page_number: 11
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=11
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW
+  used_alias: ''
+  top_match_title: Legal Planning Objectives - Current - Polygon
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/legal-planning-objectives-current-polygon
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL_POLY_SVW/WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL_POLY_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: whse_land_use_planning_rmp_plan_non_legal_poly_svw
+  label: WHSE_LAND_USE_PLANNING.RMP_PLAN_NON_LEGAL_POLY_SVW
+  recommended_query: WHSE_LAND_USE_PLANNING.RMP_PLAN_NON_LEGAL_POLY_SVW
+  extracted_value: WHSE_LAND_USE_PLANNING.RMP_PLAN_NON_LEGAL_POLY_SVW
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: 'Protected Areas: Goal 2 BCGW WHSE_LAND_USE_PLANNING.RMP_PLAN_NON_LEGAL_POLY_SVW
+    2011'
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_PLAN_NON_LEGAL_POLY_SVW
+  used_alias: ''
+  top_match_title: Non Legal Planning Features - Current - Polygon
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/non-legal-planning-features-current-polygon
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_LAND_USE_PLANNING_RMP_PLAN_NON_LEGAL_POLY_SVW/WHSE_LAND_USE_PLANNING_RMP_PLAN_NON_LEGAL_POLY_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 10000
+- entry_id: whse_land_use_planning_rmp_strgc_land
+  label: WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND
+  recommended_query: WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND
+  extracted_value: WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: CCLUP legal order boundary BCGW WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN_SVW
+  used_alias: WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN_SVW
+  top_match_title: Strategic Land and Resource Plans - Current
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/strategic-land-and-resource-plans-current
+  suggested_fetch_strategy: ''
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: false
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: dwds_order
+  run_status: dwds_order_skipped
+  artifact_path: ''
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN_SVW`
+    after the original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+- entry_id: whse_land_use_planning_rmp_strgc_land_rsrce_plan
+  label: WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN
+  recommended_query: WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN
+  extracted_value: WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN_
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: BCGW WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN_
+  page_number: 11
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=11
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN_SVW
+  used_alias: WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN_SVW
+  top_match_title: Strategic Land and Resource Plans - Current
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/strategic-land-and-resource-plans-current
+  suggested_fetch_strategy: ''
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: false
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: dwds_order
+  run_status: dwds_order_skipped
+  artifact_path: ''
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN_SVW`
+    after the original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+- entry_id: whse_tantalis_ta_crown_tenures_svw
+  label: WHSE_TANTALIS.TA_CROWN_TENURES_SVW
+  recommended_query: WHSE_TANTALIS.TA_CROWN_TENURES_SVW
+  extracted_value: WHSE_TANTALIS.TA_CROWN_TENURES_SVW
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Ownership BCGW WHSE_TANTALIS.TA_CROWN_TENURES_SVW 2023
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_TANTALIS.TA_CROWN_TENURES_SVW
+  used_alias: ''
+  top_match_title: TANTALIS - Crown Tenures
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/tantalis-crown-tenures
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_TANTALIS_TA_CROWN_TENURES_SVW/WHSE_TANTALIS_TA_CROWN_TENURES_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 3853
+- entry_id: whse_tantalis_ta_park_ecores_pa_svw
+  label: WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW
+  recommended_query: WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW
+  extracted_value: WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: BCGW WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW 2023
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17 | TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW
+  used_alias: ''
+  top_match_title: BC Parks, Ecological Reserves, and Protected Areas
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/bc-parks-ecological-reserves-and-protected-areas
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_TANTALIS_TA_PARK_ECORES_PA_SVW/WHSE_TANTALIS_TA_PARK_ECORES_PA_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 90
+- entry_id: whse_tantalis_ta_wildlife_mgmt_areas_svw
+  label: WHSE_TANTALIS.TA_WILDLIFE_MGMT_AREAS_SVW
+  recommended_query: WHSE_TANTALIS.TA_WILDLIFE_MGMT_AREAS_SVW
+  extracted_value: WHSE_TANTALIS.TA_WILDLIFE_MGMT_AREAS_SVW
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: BCGW WHSE_TANTALIS.TA_WILDLIFE_MGMT_AREAS_SVW 2011
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_TANTALIS.TA_WILDLIFE_MGMT_AREAS_SVW
+  used_alias: ''
+  top_match_title: TANTALIS - Wildlife Management Areas
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/tantalis-wildlife-management-areas
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_TANTALIS_TA_WILDLIFE_MGMT_AREAS_SVW/WHSE_TANTALIS_TA_WILDLIFE_MGMT_AREAS_SVW.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 3
+- entry_id: whse_water_management_bc_community_watersheds
+  label: WHSE_WATER_MANAGEMENT.BC_COMMUNITY_WATERSHEDS
+  recommended_query: WHSE_WATER_MANAGEMENT.BC_COMMUNITY_WATERSHEDS
+  extracted_value: WHSE_WATER_MANAGEMENT.BC_COMMUNITY_WATERSHEDS
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Community Watersheds BCGW WHSE_WATER_MANAGEMENT.BC_COMMUNITY_WATERSHEDS
+    2011
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_WATER_MANAGEMENT.WLS_COMMUNITY_WS_PUB_SVW
+  used_alias: WHSE_WATER_MANAGEMENT.WLS_COMMUNITY_WS_PUB_SVW
+  top_match_title: Community Watersheds - Current
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/community-watersheds-current
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_WATER_MANAGEMENT_BC_COMMUNITY_WATERSHEDS/WHSE_WATER_MANAGEMENT_BC_COMMUNITY_WATERSHEDS.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_WATER_MANAGEMENT.WLS_COMMUNITY_WS_PUB_SVW` after
+    the original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 9
+- entry_id: whse_wildlife_management_wcp_ungulate
+  label: WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE
+  recommended_query: WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE
+  extracted_value: WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Mule Deer winter range BCGW WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_
+  page_number: 17
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=17
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP
+  used_alias: WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP
+  top_match_title: Ungulate Winter Range - Approved
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/ungulate-winter-range-approved
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE/WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP`
+    after the original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 209
+- entry_id: whse_wildlife_management_wcp_ungulate_winter_range
+  label: WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE
+  recommended_query: WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE
+  extracted_value: WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Ungulate Winter Ranges BCGW WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP
+  used_alias: WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP
+  top_match_title: Ungulate Winter Range - Approved
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/ungulate-winter-range-approved
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE_WINTER_RANGE/WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE_WINTER_RANGE.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP`
+    after the original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 209
+- entry_id: whse_wildlife_management_wcp_wildlife
+  label: WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE
+  recommended_query: WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE
+  extracted_value: WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: WHAs BCGW WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name_stem:WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA_POLY
+  used_alias: ''
+  top_match_title: Wildlife Habitat Areas - Approved
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/wildlife-habitat-areas-approved
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE/WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 169
+- entry_id: whse_wildlife_management_wcp_wildlife_habitat_area
+  label: WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA
+  recommended_query: WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA
+  extracted_value: WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA_
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Wildlife Habitat Areas BCGW WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA_
+  page_number: 10
+  document_title: 29ts13dp final
+  cycle_label: TSR_2013
+  cycle_year: 2013
+  provenance_id: TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=10 | TSR_2013/2013_Data_Package/29ts13dp_final.pdf#page=11
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2013/2013_Data_Package/29ts13dp_final.pdf
+  current_public_status: alias_hit
+  matched_by: object_name:WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA_POLY
+  used_alias: WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA_POLY
+  top_match_title: Wildlife Habitat Areas - Approved
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/wildlife-habitat-areas-approved
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE_HABITAT_AREA/WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE_HABITAT_AREA.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Used alias/query variant `WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA_POLY`
+    after the original query did not produce a strong exact match.
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  feature_count: 169
