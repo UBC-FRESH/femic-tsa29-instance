@@ -13,7 +13,7 @@ instance_inputs:
   source_layer_recipe_path: config/tsr/source_layers.recipe.yaml
   source_layer_overrides_path: config/tsr/source_layer_overrides.yaml
 recipe_contract:
-  status: built
+  status: run
   last_built_utc: '2026-04-05T05:56:36.312489+00:00'
   notes:
   - Review and refresh this file with `femic tsr thlb-netdown-build`.
@@ -21,6 +21,10 @@ recipe_contract:
     them in place.
   selected_document_paths:
   - TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  last_run_utc: '2026-04-05T06:21:47.117293+00:00'
+  selected_checkpoint_path: data/ria_vri_vclr1p_checkpoint8.feather
+  output_checkpoint_path: data/tsr/thlb_netdown_checkpoint.feather
+  audit_path: config/tsr/thlb_netdown.audit.json
 steps:
 - step_kind: context
   label: 6. Timber Harvesting Land Base Definition ......................................
@@ -43,6 +47,9 @@ steps:
   notes: []
   step_id: thlb_step_001_6_timber_harvesting_land_base_definition
   order_index: 1
+  run_status: needs_review
+  run_notes:
+  - Context-only THLB row; no execution attempted.
 - step_kind: context
   label: 6.4. Identification of the Timber Harvesting Land Base .........................
   raw_value: '6.4'
@@ -64,6 +71,9 @@ steps:
   notes: []
   step_id: thlb_step_002_6_4_identification_of_the_timber_harvesting_land_base
   order_index: 2
+  run_status: needs_review
+  run_notes:
+  - Context-only THLB row; no execution attempted.
 - step_kind: context
   label: 7.4.4 Disturbance outside of the timber harvesting land base ...................
   raw_value: '7.4'
@@ -86,6 +96,9 @@ steps:
   notes: []
   step_id: thlb_step_003_7_4_4_disturbance_outside_of_the_timber_harvesting_land_base
   order_index: 3
+  run_status: needs_review
+  run_notes:
+  - Context-only THLB row; no execution attempted.
 - step_kind: context
   label: 6. Timber Harvesting Land Base Definition
   raw_value: '6'
@@ -106,6 +119,9 @@ steps:
   notes: []
   step_id: thlb_step_005_6_timber_harvesting_land_base_definition
   order_index: 5
+  run_status: needs_review
+  run_notes:
+  - Context-only THLB row; no execution attempted.
 - step_kind: context
   label: THLB definition
   raw_value: The THLB is the portion of the AFLB where timber harvesting is projected
@@ -129,6 +145,9 @@ steps:
   notes: []
   step_id: thlb_step_007_thlb_definition
   order_index: 7
+  run_status: needs_review
+  run_notes:
+  - Context-only THLB row; no execution attempted.
 - step_kind: context
   label: THLB decrease conditions
   raw_value: 'The THLB may also decrease in size where:'
@@ -149,6 +168,9 @@ steps:
   notes: []
   step_id: thlb_step_012_thlb_decrease_conditions
   order_index: 12
+  run_status: needs_review
+  run_notes:
+  - Context-only THLB row; no execution attempted.
 - step_kind: context
   label: THLB increase conditions
   raw_value: 'The THLB may increase in size over time in the following situations:'
@@ -169,6 +191,9 @@ steps:
   notes: []
   step_id: thlb_step_013_thlb_increase_conditions
   order_index: 13
+  run_status: needs_review
+  run_notes:
+  - Context-only THLB row; no execution attempted.
 - step_kind: netdown_rule
   label: lands that are
   raw_value: lands that are excluded from the AFLB are also excluded from the THLB.
@@ -192,6 +217,9 @@ steps:
   - No source-layer recipe entry linked automatically; review or add an override.
   step_id: thlb_step_016_lands_that_are
   order_index: 16
+  run_status: blocked_missing_source
+  run_notes:
+  - No fetched polygon artifact was available for the linked source entries.
 - step_kind: netdown_rule
   label: roads that are temporary in nature
   raw_value: roads that are temporary in nature will have no deduction from the THLB.
@@ -213,6 +241,9 @@ steps:
   notes: []
   step_id: thlb_step_017_roads_that_are_temporary_in_nature
   order_index: 17
+  run_status: applied_noop
+  run_notes:
+  - No spatial deduction applied for this rule.
 - step_kind: context
   label: 6.4. Identification of the Timber Harvesting Land Base
   raw_value: '6.4'
@@ -233,6 +264,9 @@ steps:
   notes: []
   step_id: thlb_step_019_6_4_identification_of_the_timber_harvesting_land_base
   order_index: 19
+  run_status: needs_review
+  run_notes:
+  - Context-only THLB row; no execution attempted.
 - step_kind: context
   label: THLB definition
   raw_value: The THLB is the portion of the LHLB where timber harvesting is expected
@@ -255,6 +289,9 @@ steps:
   notes: []
   step_id: thlb_step_020_thlb_definition
   order_index: 20
+  run_status: needs_review
+  run_notes:
+  - Context-only THLB row; no execution attempted.
 - step_kind: netdown_rule
   label: stands
   raw_value: stands are removed from the THLB.
@@ -276,6 +313,9 @@ steps:
   - No source-layer recipe entry linked automatically; review or add an override.
   step_id: thlb_step_024_stands
   order_index: 24
+  run_status: blocked_missing_source
+  run_notes:
+  - No fetched polygon artifact was available for the linked source entries.
 - step_kind: netdown_rule
   label: required for WTRA
   raw_value: required for WTRA will be modelled as an aspatial THLB reduction factor.
@@ -297,6 +337,9 @@ steps:
   - No source-layer recipe entry linked automatically; review or add an override.
   step_id: thlb_step_030_required_for_wtra
   order_index: 30
+  run_status: unsupported
+  run_notes:
+  - Aspatial reduction steps are preserved for review but not executed in v1.
 - step_kind: netdown_rule
   label: OGMAs
   raw_value: OGMAs are removed from the THLB as no harvest areas. A limited amount
@@ -321,6 +364,12 @@ steps:
   notes: []
   step_id: thlb_step_034_ogmas
   order_index: 34
+  run_status: applied
+  affected_stand_count: 42205
+  affected_area_ha: 401540.7220689327
+  run_notes:
+  - Applied stand-level exclusion using overlap fractions in EPSG:3005.
+  - Sequential stand-level subtraction may approximate overlapping exclusion masks.
 - step_kind: context
   label: 7.4.4 Disturbance outside of the timber harvesting land base
   raw_value: '7.4'
@@ -342,6 +391,9 @@ steps:
   notes: []
   step_id: thlb_step_042_7_4_4_disturbance_outside_of_the_timber_harvesting_land_base
   order_index: 42
+  run_status: needs_review
+  run_notes:
+  - Context-only THLB row; no execution attempted.
 - step_kind: netdown_rule
   label: Dasiqox
   raw_value: Dasiqox excluded Exclude from the THLB
@@ -363,6 +415,9 @@ steps:
   - No source-layer recipe entry linked automatically; review or add an override.
   step_id: thlb_step_049_dasiqox
   order_index: 49
+  run_status: blocked_missing_source
+  run_notes:
+  - No fetched polygon artifact was available for the linked source entries.
 - step_kind: netdown_rule
   label: Mule Deer winter range
   raw_value: Mule Deer winter range Remove moderate to shallow MDWRs from the THLB
@@ -386,6 +441,14 @@ steps:
   notes: []
   step_id: thlb_step_050_mule_deer_winter_range
   order_index: 50
+  run_status: applied
+  affected_stand_count: 29641
+  affected_area_ha: 339743.4755581934
+  run_notes:
+  - Applied stand-level exclusion using overlap fractions in EPSG:3005.
+  - Sequential stand-level subtraction may approximate overlapping exclusion masks.
+  missing_source_entry_ids:
+  - reg_land_and_natural_resource_l_mule_deer
 - step_kind: netdown_rule
   label: Timber harvesting land base
   raw_value: Timber harvesting land base Use LHLB
@@ -407,3 +470,6 @@ steps:
   - No source-layer recipe entry linked automatically; review or add an override.
   step_id: thlb_step_051_timber_harvesting_land_base
   order_index: 51
+  run_status: applied_noop
+  run_notes:
+  - No spatial deduction applied for this rule.
