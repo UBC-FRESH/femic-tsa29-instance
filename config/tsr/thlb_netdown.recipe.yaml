@@ -21,14 +21,15 @@ recipe_contract:
     them in place.
   selected_document_paths:
   - TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
-  last_run_utc: '2026-04-05T18:04:44.513515+00:00'
-  selected_checkpoint_path: data/ria_vri_vclr1p_checkpoint1.feather
+  last_run_utc: '2026-04-05T18:52:12.446258+00:00'
+  selected_checkpoint_path: data/ria_vri_vclr1p_checkpoint8.feather
   output_checkpoint_path: data/tsr/thlb_netdown_checkpoint.feather
   audit_path: config/tsr/thlb_netdown.audit.json
   reconstructed_output_checkpoint_path: data/tsr/thlb_reconstructed_checkpoint.feather
   reconstructed_audit_path: config/tsr/thlb_reconstructed.audit.json
-  selected_map_ids:
-  - 092O071
+  selected_map_ids: []
+  status_report_path: config/tsr/thlb_netdown.status.md
+  runtime_status_report_path: runtime/logs/tsr/thlb_netdown_status_report-20260405T185217Z.md
 steps:
 - step_kind: context
   label: 6. Timber Harvesting Land Base Definition ......................................
@@ -370,9 +371,10 @@ steps:
   order_index: 34
   run_status: applied
   affected_stand_count: 42205
-  affected_area_ha: 533.5853689522304
+  affected_area_ha: 401540.7220689327
   run_notes:
-  - Applied fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - Applied stand-level exclusion using overlap fractions in EPSG:3005.
+  - Sequential stand-level subtraction may approximate overlapping exclusion masks.
   affected_fragment_count: 1
   spatial_application_mode: fragment_overlay
   candidate_row_count: 1
@@ -449,9 +451,10 @@ steps:
   order_index: 50
   run_status: applied
   affected_stand_count: 29641
-  affected_area_ha: 125.92167498992306
+  affected_area_ha: 339743.4755581934
   run_notes:
-  - Applied fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - Applied stand-level exclusion using overlap fractions in EPSG:3005.
+  - Sequential stand-level subtraction may approximate overlapping exclusion masks.
   missing_source_entry_ids:
   - reg_land_and_natural_resource_l_mule_deer
   affected_fragment_count: 1

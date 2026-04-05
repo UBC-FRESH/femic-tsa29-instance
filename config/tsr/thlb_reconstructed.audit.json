@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-04-05T18:04:44.619248+00:00",
+  "generated_utc": "2026-04-05T18:52:02.296300+00:00",
   "tsa": {
     "tsa_id": "tsa_29",
     "tsa_code": "29",
@@ -13,9 +13,11 @@
   "output_path": "data/tsr/thlb_reconstructed_checkpoint.feather",
   "execution_mode": "reconstructed",
   "baseline_signal": "checkpoint1_aflb_initialization",
+  "input_area_ha": 27072.528721595554,
   "baseline_managed_area_ha": 26350.17468657845,
   "final_managed_area_ha": 25690.667642636257,
   "legacy_reference_managed_area_ha": 1513233.574185071,
+  "tsr_reported_aflb_area_ha": 3098168.0,
   "tsr_reported_thlb_area_ha": 1660053.0,
   "step_count": 18,
   "outcome_counts": {

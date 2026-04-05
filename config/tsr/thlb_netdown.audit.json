@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-04-05T06:21:53.899066+00:00",
+  "generated_utc": "2026-04-05T18:52:17.093876+00:00",
   "tsa": {
     "tsa_id": "tsa_29",
     "tsa_code": "29",
@@ -7,10 +7,16 @@
   },
   "recipe_path": "config/tsr/thlb_netdown.recipe.yaml",
   "checkpoint_path": "data/ria_vri_vclr1p_checkpoint8.feather",
+  "selected_map_ids": [],
   "output_path": "data/tsr/thlb_netdown_checkpoint.feather",
+  "execution_mode": "hybrid",
   "baseline_signal": "thlb_raw",
+  "input_area_ha": 2977503.740043905,
   "baseline_managed_area_ha": 1513233.574185071,
   "final_managed_area_ha": 1290690.2244690468,
+  "legacy_reference_managed_area_ha": null,
+  "tsr_reported_aflb_area_ha": 3098168.0,
+  "tsr_reported_thlb_area_ha": 1660053.0,
   "step_count": 18,
   "outcome_counts": {
     "applied": 2,
@@ -400,7 +406,10 @@
       "run_notes": [
         "Applied stand-level exclusion using overlap fractions in EPSG:3005.",
         "Sequential stand-level subtraction may approximate overlapping exclusion masks."
-      ]
+      ],
+      "affected_fragment_count": 1,
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 1
     },
     {
       "step_kind": "context",
@@ -492,7 +501,10 @@
       ],
       "missing_source_entry_ids": [
         "reg_land_and_natural_resource_l_mule_deer"
-      ]
+      ],
+      "affected_fragment_count": 1,
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 2
     },
     {
       "step_kind": "netdown_rule",

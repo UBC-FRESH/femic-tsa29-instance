@@ -31,6 +31,7 @@ runtime/logs/btc_manifest-issue85_*.json
 runtime/logs/run_manifest-issue85_*.json
 runtime/logs/run_manifest-tsa29_*.json
 runtime/logs/vdyp_curve_events-tsa29-issue85_*.jsonl
+runtime/logs/tsr/*.md
 models/tsa29_patchworks_model/patchworksLog.csv
 models/tsa29_patchworks_model/blocks/patchworksLog.csv
 models/tsa29_patchworks_model/blocks/topology_blocks_*r.csv
