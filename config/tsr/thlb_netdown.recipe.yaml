@@ -21,12 +21,14 @@ recipe_contract:
     them in place.
   selected_document_paths:
   - TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
-  last_run_utc: '2026-04-05T09:04:04.597568+00:00'
+  last_run_utc: '2026-04-05T18:04:44.513515+00:00'
   selected_checkpoint_path: data/ria_vri_vclr1p_checkpoint1.feather
   output_checkpoint_path: data/tsr/thlb_netdown_checkpoint.feather
   audit_path: config/tsr/thlb_netdown.audit.json
   reconstructed_output_checkpoint_path: data/tsr/thlb_reconstructed_checkpoint.feather
   reconstructed_audit_path: config/tsr/thlb_reconstructed.audit.json
+  selected_map_ids:
+  - 092O071
 steps:
 - step_kind: context
   label: 6. Timber Harvesting Land Base Definition ......................................
@@ -367,15 +369,13 @@ steps:
   step_id: thlb_step_034_ogmas
   order_index: 34
   run_status: applied
-  affected_stand_count: 28376
-  affected_area_ha: 367409.7883851844
+  affected_stand_count: 42205
+  affected_area_ha: 533.5853689522304
   run_notes:
-  - Applied reconstructed stand-binary exclusion because the intersecting coarse-polygon
-    workload exceeded the fragment overlay threshold.
-  - Representative-point containment was used as the coarse-polygon stand-binary approximation.
-  spatial_application_mode: stand_binary_majority
-  candidate_row_count: 59489
-  overlap_area_ha: 367409.7883851844
+  - Applied fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  affected_fragment_count: 1
+  spatial_application_mode: fragment_overlay
+  candidate_row_count: 1
 - step_kind: context
   label: 7.4.4 Disturbance outside of the timber harvesting land base
   raw_value: '7.4'
@@ -448,17 +448,15 @@ steps:
   step_id: thlb_step_050_mule_deer_winter_range
   order_index: 50
   run_status: applied
-  affected_stand_count: 29128
-  affected_area_ha: 349115.79160533723
+  affected_stand_count: 29641
+  affected_area_ha: 125.92167498992306
   run_notes:
-  - Applied reconstructed stand-binary exclusion because the intersecting coarse-polygon
-    workload exceeded the fragment overlay threshold.
-  - Representative-point containment was used as the coarse-polygon stand-binary approximation.
+  - Applied fragment/resultant exclusion with binary THLB output in EPSG:3005.
   missing_source_entry_ids:
   - reg_land_and_natural_resource_l_mule_deer
-  spatial_application_mode: stand_binary_majority
-  candidate_row_count: 41826
-  overlap_area_ha: 349115.79160533723
+  affected_fragment_count: 1
+  spatial_application_mode: fragment_overlay
+  candidate_row_count: 2
 - step_kind: netdown_rule
   label: Timber harvesting land base
   raw_value: Timber harvesting land base Use LHLB
