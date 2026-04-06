@@ -1821,6 +1821,154 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 10000
+- entry_id: whse_basemapping_fwa_rivers_poly
+  label: WHSE_BASEMAPPING.FWA_RIVERS_POLY
+  recommended_query: WHSE_BASEMAPPING.FWA_RIVERS_POLY
+  extracted_value: WHSE_BASEMAPPING.FWA_RIVERS_POLY
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: River classification BCGW WHSE_BASEMAPPING.FWA_RIVERS_POLY 2023
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_BASEMAPPING.FWA_RIVERS_POLY
+  used_alias: ''
+  top_match_title: Freshwater Atlas Rivers
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/freshwater-atlas-rivers
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: true
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_BASEMAPPING_FWA_RIVERS_POLY/WHSE_BASEMAPPING_FWA_RIVERS_POLY.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  - Supporting documents are available for manual review but are not auto-downloaded
+    in v1.
+  feature_count: 2190
+- entry_id: whse_basemapping_fwa_wetlands_poly
+  label: WHSE_BASEMAPPING.FWA_WETLANDS_POLY
+  recommended_query: WHSE_BASEMAPPING.FWA_WETLANDS_POLY
+  extracted_value: WHSE_BASEMAPPING.FWA_WETLANDS_POLY
+  quality: likely_useful
+  quality_reason: BCGW object-name style token
+  snippet: Wetland classification BCGW WHSE_BASEMAPPING.FWA_WETLANDS_POLY 2023
+  page_number: 18
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=18
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: object_name:WHSE_BASEMAPPING.FWA_WETLANDS_POLY
+  used_alias: ''
+  top_match_title: Freshwater Atlas Wetlands
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/freshwater-atlas-wetlands
+  suggested_fetch_strategy: wfs_getfeature_bbox
+  direct_download_candidates: 0
+  has_service: true
+  has_wfs_queryable_service: true
+  has_indirect_custom_download: true
+  has_supporting_document: true
+  acquisition_strategy: wfs_fetch
+  run_status: fetched
+  artifact_path: data/downloads/bcdc/WHSE_BASEMAPPING_FWA_WETLANDS_POLY/WHSE_BASEMAPPING_FWA_WETLANDS_POLY.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Top match includes BCGW indirect/custom-download resources; use the dataset page
+    for manual access if a direct data URL is unavailable.
+  - Top match currently exposes service resources but no direct-access data file for
+    v1 automation.
+  - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
+    fetch path can use these service hints directly.
+  - Supporting documents are available for manual review but are not auto-downloaded
+    in v1.
+  feature_count: 10000
+- entry_id: reg_land_and_natural_resource_stream_classification_car_line
+  label: REG_LAND_AND_NATURAL_RESOURCE.STREAM_CLASSIFICATION_CAR_LINE
+  recommended_query: Stream Classification for the Cariboo Region
+  extracted_value: REG_LAND_AND_NATURAL_RESOURCE.STREAM_CLASSIFICATION_CAR_LINE
+  quality: likely_useful
+  quality_reason: Curated riparian step 18 class-bearing source
+  snippet: Stream Classification for the Cariboo Region
+  page_number: 31
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: exact_text:Stream Classification for the Cariboo Region
+  used_alias: ''
+  top_match_title: Stream Classification for the Cariboo Region
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/stream-classification-for-the-cariboo-region
+  suggested_fetch_strategy: dwds_order
+  direct_download_candidates: 0
+  has_service: false
+  has_wfs_queryable_service: false
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: dwds_order
+  run_status: downloaded
+  artifact_path: data/downloads/bcdc/REG_LAND_AND_NATURAL_RESOURCE_STREAM_CLASSIFICATION_CAR_LINE/STREAM_CLASSIFICATION_CAR_LINE.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Materialized from a DWDS custom-download order using the pickup-by-GUID follow-up flow.
+  - Step 18 uses STREAM_CLASS values 1-6 from this line layer to apply Table 15 effective riparian widths.
+  feature_count: 0
+- entry_id: reg_land_and_natural_resource_wetland_class_car_poly
+  label: REG_LAND_AND_NATURAL_RESOURCE.WETLAND_CLASS_CAR_POLY
+  recommended_query: Wetland Riparian Classes for the Cariboo Region
+  extracted_value: REG_LAND_AND_NATURAL_RESOURCE.WETLAND_CLASS_CAR_POLY
+  quality: likely_useful
+  quality_reason: Curated riparian step 18 class-bearing source
+  snippet: Wetland Riparian Classes for the Cariboo Region
+  page_number: 31
+  document_title: 29ts dpkg 2024
+  cycle_label: TSR_2024
+  cycle_year: 2024
+  provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
+  source_url: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/Timber_Supply_Review/TSA/Williams_Lake_29/TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf
+  current_public_status: exact_hit
+  matched_by: exact_text:Wetland Riparian Classes for the Cariboo Region
+  used_alias: ''
+  top_match_title: Wetland Riparian Classes for the Cariboo Region
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/wetland-riparian-classes-for-the-cariboo-region
+  suggested_fetch_strategy: dwds_order
+  direct_download_candidates: 0
+  has_service: false
+  has_wfs_queryable_service: false
+  has_indirect_custom_download: true
+  has_supporting_document: false
+  acquisition_strategy: dwds_order
+  run_status: downloaded
+  artifact_path: data/downloads/bcdc/REG_LAND_AND_NATURAL_RESOURCE_WETLAND_CLASS_CAR_POLY/WETLAND_CLASS_CAR_POLY.gpkg
+  override_kind: ''
+  override_value: ''
+  replacement_family_candidates: []
+  notes:
+  - Materialized from a DWDS custom-download order using the pickup-by-GUID follow-up flow.
+  - Step 18 uses SWAMP_CLASS values w1-w5 from this polygon layer to apply Table 15 effective riparian widths.
+  feature_count: 0
 - entry_id: whse_basemapping_trim_contour_points
   label: WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS
   recommended_query: WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS
@@ -2040,14 +2188,16 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: dwds_order
-  run_status: dwds_order_skipped
-  artifact_path: ''
+  run_status: downloaded
+  artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_GRY_PSP_STATUS_ACTIVE/GRY_PSP_STATUS_ACTIVE.gpkg
   override_kind: ''
   override_value: ''
   replacement_family_candidates: []
   notes:
   - Top match includes BCGW indirect/custom-download resources; use the dataset page
     for manual access if a direct data URL is unavailable.
+  - DWDS follow-up materialized the emailed pickup-by-GUID package and extracted
+    the active-status GeoPackage into the instance-local BCDC download cache.
 - entry_id: whse_forest_tenure_ften_road_section_lines
   label: WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES
   recommended_query: WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES
@@ -2270,14 +2420,16 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: dwds_order
-  run_status: dwds_order_skipped
-  artifact_path: ''
+  run_status: downloaded
+  artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_GRY_PSP_STATUS_ACTIVE/GRY_PSP_STATUS_ACTIVE.gpkg
   override_kind: ''
   override_value: ''
   replacement_family_candidates: []
   notes:
   - Top match includes BCGW indirect/custom-download resources; use the dataset page
     for manual access if a direct data URL is unavailable.
+  - DWDS follow-up materialized the emailed pickup-by-GUID package and extracted
+    the active-status GeoPackage into the instance-local BCDC download cache.
 - entry_id: whse_forest_vegetation_rec_visual_landscape
   label: WHSE_FOREST_VEGETATION.REC_VISUAL_LANDSCAPE
   recommended_query: WHSE_FOREST_VEGETATION.REC_VISUAL_LANDSCAPE

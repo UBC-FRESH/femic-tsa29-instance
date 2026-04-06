@@ -1,0 +1,180 @@
+[
+	{
+		"title" : "Growth and Yield  Samples - Active Status",
+		"name" : "growth-and-yield-samples-active-status",
+		"bcdc_data_resource_url" : "https://catalogue.data.gov.bc.ca/dataset/0ca49478-5d0f-44e8-b6af-3fd6e387803c",
+		"description" : "**NOTE** This layer is being replaced with the new authoritative source for PSP location: [Growth and Yield Plots - Active Status](https://catalogue.data.gov.bc.ca/dataset/5da8d02e-cdd8-40f8-b77e-d359f0e67dcd)\n\nGrowth and Yield dataset is a provincial data set that comprised of Permanent Sample Plots (PSP).  The Ministries and resource developers will want the active sample locations to determine where there are recognized feature conflicts with any resource development",
+		"purpose" : "The Ministries and resource developers will want the active sample locations to determine where there are recognized feature conflicts with any resource development.  PSPs data was created to provide information on rates of growth of existing forest, mortality, and changes in stand structure from stand establishment to maturity or cutting age.  PSP data is also required to develop yield tables and to provide the basic information necessary for the development and calibration of growth and yield models.",
+		"bcdc_type" : "Geographic",
+		"last_modified" : "2023-02-15T10:36:54",
+		"resource_storage_location" : "Bc Geographic Warehouse",
+		"object_name" : "WHSE_FOREST_VEGETATION.GRY_PSP_STATUS_ACTIVE",
+		"object_short_name" : "GRY_PSP_AC",
+		"projection_name" : "epsg3005",
+		"license_title" : "Open Government Licence - British Columbia",
+		"license_url" : "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61",
+		"details" : [
+			{
+				"column_name" : "SAMPLE_REFERENCE_NUMBER",
+				"data_precision" : "15",
+				"data_type" : "VARCHAR2",
+				"short_name" : "SMPLRFRNCN"
+			},
+			{
+				"column_name" : "REGION",
+				"data_precision" : "2",
+				"data_type" : "NUMBER",
+				"short_name" : "REGION"
+			},
+			{
+				"column_name" : "COMPARTMENT",
+				"data_precision" : "3",
+				"data_type" : "NUMBER",
+				"short_name" : "COMPARTMNT"
+			},
+			{
+				"column_name" : "COMPARTMENT_LETTER",
+				"data_precision" : "1",
+				"data_type" : "VARCHAR2",
+				"short_name" : "CMPT_LTR"
+			},
+			{
+				"column_name" : "SAMPLE_NUMBER",
+				"data_precision" : "3",
+				"data_type" : "NUMBER",
+				"short_name" : "SMPLNMBR"
+			},
+			{
+				"column_name" : "SAMPLE_TYPE_CODE",
+				"data_precision" : "10",
+				"data_type" : "VARCHAR2",
+				"short_name" : "SAM_TYP_CD"
+			},
+			{
+				"column_name" : "ESTABLISHMENT_YEAR",
+				"data_precision" : "4",
+				"data_type" : "NUMBER",
+				"short_name" : "STBLSHMNTR"
+			},
+			{
+				"column_name" : "PLOTS_IN_SAMPLE_COUNT",
+				"data_precision" : "2",
+				"data_type" : "NUMBER",
+				"short_name" : "PIS_COUNT"
+			},
+			{
+				"column_name" : "SAMPLE_STATUS_CODE",
+				"data_precision" : "10",
+				"data_type" : "VARCHAR2",
+				"short_name" : "SAM_STA_CD"
+			},
+			{
+				"column_name" : "ACTIVE_INDICATOR",
+				"data_precision" : "1",
+				"data_type" : "VARCHAR2",
+				"short_name" : "CTVNDCTR"
+			},
+			{
+				"column_name" : "DATA_OWNER_CODE",
+				"data_precision" : "10",
+				"data_type" : "VARCHAR2",
+				"short_name" : "DAT_OWN_CD"
+			},
+			{
+				"column_name" : "UTM_ZONE",
+				"data_precision" : "2",
+				"data_type" : "NUMBER",
+				"short_name" : "UTM_ZONE"
+			},
+			{
+				"column_name" : "UTM_EASTING",
+				"data_precision" : "6",
+				"data_type" : "NUMBER",
+				"short_name" : "UTM_EAST"
+			},
+			{
+				"column_name" : "UTM_NORTHING",
+				"data_precision" : "7",
+				"data_type" : "NUMBER",
+				"short_name" : "UTM_NORTH"
+			},
+			{
+				"column_name" : "ECOSYSTEM_ZONE_CODE",
+				"data_precision" : "10",
+				"data_type" : "VARCHAR2",
+				"short_name" : "ECO_ZN_CD"
+			},
+			{
+				"column_name" : "FIZ_CODE",
+				"data_precision" : "1",
+				"data_type" : "VARCHAR2",
+				"short_name" : "FIZ_CODE"
+			},
+			{
+				"column_name" : "COAST_INTERIOR_CODE",
+				"data_precision" : "1",
+				"data_type" : "VARCHAR2",
+				"short_name" : "CST_INT_CD"
+			},
+			{
+				"column_name" : "POSITION_METHOD_CODE",
+				"data_precision" : "10",
+				"data_type" : "VARCHAR2",
+				"short_name" : "PSTNMTHDCD"
+			},
+			{
+				"column_name" : "BUFFER_RADIUS",
+				"data_precision" : "4",
+				"data_type" : "NUMBER",
+				"short_name" : "BFFRRDS"
+			},
+			{
+				"column_name" : "CONTACT_NAME",
+				"data_precision" : "100",
+				"data_type" : "VARCHAR2",
+				"short_name" : "CNTCTNM"
+			},
+			{
+				"column_name" : "CONTACT_PHONE_NUMBER",
+				"data_precision" : "20",
+				"data_type" : "VARCHAR2",
+				"short_name" : "CNTCTPHNNM"
+			},
+			{
+				"column_name" : "CONTACT_EMAIL",
+				"data_precision" : "128",
+				"data_type" : "VARCHAR2",
+				"short_name" : "CNTCTML"
+			},
+			{
+				"column_name" : "FEATURE_AREA_SQM",
+				"data_precision" : "19",
+				"data_type" : "NUMBER",
+				"short_name" : "AREA_SQM"
+			},
+			{
+				"column_name" : "FEATURE_LENGTH_M",
+				"data_precision" : "19",
+				"data_type" : "NUMBER",
+				"short_name" : "FEAT_LEN"
+			},
+			{
+				"column_name" : "GEOMETRY",
+				"data_precision" : "64",
+				"data_type" : "SDO_GEOMETRY",
+				"short_name" : "GEOMETRY"
+			},
+			{
+				"column_name" : "OBJECTID",
+				"data_precision" : "38",
+				"data_type" : "NUMBER",
+				"short_name" : "OBJECTID"
+			},
+			{
+				"column_name" : "SE_ANNO_CAD_DATA",
+				"data_precision" : "4000",
+				"data_type" : "BLOB"
+			}
+		]
+	}
+]

@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+   <head>
+      <title>Metadata</title>
+      <meta charset="UTF-8">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12" style="padding:10px;border: 1px solid black" >
+                     <img class="img-fluid d-block mx-auto" src="https://catalogue.data.gov.bc.ca/img/bc_mark.699f8f93.png" alt="B.C. Government Logo" style="height:65px;background-color:#003366">
+                     <H2 style="color:rgb(2,47,248)" class="text-center">Stream Classification for the Cariboo Region</H2>
+                     <table class="table table-condensed">
+                        <thead>
+                           <tr>
+                              <th>Title</th>
+                              <th>Purpose</th>
+                              <th>Description</th>
+                              <th>Last Modified Date</th>
+                              <th>BCDC URL</th>
+                              <th>BCDC Type</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Stream Classification for the Cariboo Region</td>
+                              <td>To support MSRM provincial contact centres in the province of British Columbia.</td>
+                              <td>Six stream riparian classes ([STREAM_CLASS] = 1-6) based on presence of fish, occurrence in a community watershed and average channel width.  [STREAM_CLASS] = 7 refers to unclassified streams.
+               
+               Stream classification is based on the 1995 Forest Practices Code Riparian Management Area Guidebook: http://www.llbc.leg.bc.ca/public/PubDocs/bcdocs/237312/Rip-toc.htm or https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/silviculture/silvicultural-systems/silviculture-guidebooks/riparian-management-area-guidebook</td>
+                              <td>None</td>
+                              <td><a href="https://catalogue.data.gov.bc.ca/dataset/1a7a8fde-9f0b-489d-bf9b-d3bbccabe3d9">https://catalogue.data.gov.bc.ca/dataset/1a7a8fde-9f0b-489d-bf9b-d3bbccabe3d9</a></td>
+                              <td>Geographic</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table class="table table-condensed">
+                        <thead>
+                           <tr>
+                              <th>Resource Location</th>
+                              <th>Object Name</th>
+                              <th>Short Name</th>
+                              <th>Object Comments</th>
+                              <th>Projection</th>
+                              <th>License Title</th>
+                              <th>License URL</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Bc Geographic Warehouse</td>
+                              <td>REG_LAND_AND_NATURAL_RESOURCE. STREAM_CLASSIFICATION_CAR_LINE</td>
+                              <td>STRMCLSSFC</td>
+                              <td>None</td>
+                              <td>epsg3005</td>
+                              <td>Open Government Licence - British Columbia</td>
+                              <td><a href="https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61">License Url</a></td>
+                           </tr>
+                        </tbody>
+                     </table>
+               <hr style="border-width:4px ">
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12" style="padding:10px;border: 1px solid black" >
+                     <H5 style="color:rgb(2,47,248)" class="text-left">Column Details</H5>
+                     <table class="table table-striped">
+                        <thead>
+                           <tr>
+                              <th>Column Name</th>
+                              <th>Short Name</th>
+                              <th>Data Type</th>
+                              <th>Data Precision</th>
+                              <th>Column Comments</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>STREAM_CLASS</td>
+                              <td>STRMCLSS</td>
+                              <td>NUMBER</td>
+                              <td>10</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>STREAM_SOURCE</td>
+                              <td>STRMSRC</td>
+                              <td>VARCHAR2</td>
+                              <td>10</td>
+                              <td>None</td>
+                           </tr>
+                           <tr>
+                              <td>GEOMETRY</td>
+                              <td>GEOMETRY</td>
+                              <td>SDO_GEOMETRY</td>
+                              <td>1</td>
+                              <td>GEOMETRY is the column used to reference the spatial coordinates defining the feature. </td>
+                           </tr>
+                           <tr>
+                              <td>OBJECTID</td>
+                              <td>OBJECTID</td>
+                              <td>NUMBER</td>
+                              <td>38</td>
+                              <td>OBJECTID is a required attribute of feature classes and object classes in a geodatabase. </td>
+                           </tr>
+                           <tr>
+                              <td>SE_ANNO_CAD_DATA</td>
+                              <td>None</td>
+                              <td>BLOB</td>
+                              <td>4000</td>
+                              <td>SE_ANNO_CAD_DATA is a binary column used by spatial tools to store annotation, curve features and CAD data when using the SDO_GEOMETRY storage data type. </td>
+                           </tr>
+                           <tr>
+                              <td>FEATURE_LENGTH_M</td>
+                              <td>FEAT_LEN</td>
+                              <td>NUMBER</td>
+                              <td>19</td>
+                              <td>FEATURE_LENGTH_M is the system calculated length or perimeter of a geometry in meters</td>
+                           </tr>
+                        </tbody>
+                     </table>
+               <hr style="border-width:5px ">
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
+

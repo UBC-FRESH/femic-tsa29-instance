@@ -1,0 +1,14 @@
+﻿------------------
+Order Details
+-----------------
+Order ID: 2551252
+Date: 20260406
+
+----------------------
+Feature Types
+-----------------------
+ - Stream Classification for the Cariboo Region in subdirectory STREAM_CLASSIFICATION_CAR_LINE
+
+----------------------------
+Packaged Products
+----------------------------

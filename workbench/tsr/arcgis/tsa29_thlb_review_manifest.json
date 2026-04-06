@@ -1,0 +1,510 @@
+{
+  "project_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\tsa29_thlb_review.aprx",
+  "layer_count": 63,
+  "layers": [
+    {
+      "name": "stands",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\shp\\tsa29.shp\\stands.shp",
+      "geometry_family": "polygon",
+      "transparency": 75,
+      "draw_order": 0,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\stands.lyrx"
+    },
+    {
+      "name": "fragments",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\output\\patchworks_tsa29_validated\\fragments\\fragments.shp",
+      "geometry_family": "polygon",
+      "transparency": 82,
+      "draw_order": 5,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\fragments.lyrx"
+    },
+    {
+      "name": "WHSE_BASEMAPPING_FWA_LAKES_POLY",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_BASEMAPPING_FWA_LAKES_POLY\\WHSE_BASEMAPPING_FWA_LAKES_POLY.gpkg\\WHSE_BASEMAPPING_FWA_LAKES_POLY",
+      "geometry_family": "polygon",
+      "transparency": 35,
+      "draw_order": 120,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_BASEMAPPING_FWA_LAKES_POLY.lyrx"
+    },
+    {
+      "name": "VEG_COMP_LYR_R1_POLY",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\VEG_COMP_LYR_R1_POLY\\VEG_COMP_LYR_R1_POLY.gpkg\\VEG_COMP_LYR_R1_POLY",
+      "geometry_family": "polygon",
+      "transparency": 70,
+      "draw_order": 200,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\VEG_COMP_LYR_R1_POLY.lyrx"
+    },
+    {
+      "name": "WHSE_FOREST_VEGETATION_BEC",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_FOREST_VEGETATION_BEC\\WHSE_FOREST_VEGETATION_BEC.gpkg\\WHSE_FOREST_VEGETATION_BEC",
+      "geometry_family": "polygon",
+      "transparency": 70,
+      "draw_order": 200,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_FOREST_VEGETATION_BEC.lyrx"
+    },
+    {
+      "name": "WHSE_FOREST_VEGETATION_BEC_BIOGEOCLIMATIC_POLY",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_FOREST_VEGETATION_BEC_BIOGEOCLIMATIC_POLY\\WHSE_FOREST_VEGETATION_BEC_BIOGEOCLIMATIC_POLY.gpkg\\WHSE_FOREST_VEGETATION_BEC_BIOGEOCLIMATIC_POLY",
+      "geometry_family": "polygon",
+      "transparency": 70,
+      "draw_order": 200,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_FOREST_VEGETATION_BEC_BIOGEOCLIMATIC_POLY.lyrx"
+    },
+    {
+      "name": "WHSE_FOREST_VEGETATION_VEG_COMP_LYR_R1_POLY",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_FOREST_VEGETATION_VEG_COMP_LYR_R1_POLY\\WHSE_FOREST_VEGETATION_VEG_COMP_LYR_R1_POLY.gpkg\\WHSE_FOREST_VEGETATION_VEG_COMP_LYR_R1_POLY",
+      "geometry_family": "polygon",
+      "transparency": 70,
+      "draw_order": 200,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_FOREST_VEGETATION_VEG_COMP_LYR_R1_POLY.lyrx"
+    },
+    {
+      "name": "CONSOLIDATED_CUTBLOCKS_2020",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\CONSOLIDATED_CUTBLOCKS_2020\\CONSOLIDATED_CUTBLOCKS_2020.gpkg\\CONSOLIDATED_CUTBLOCKS_2020",
+      "geometry_family": "polygon",
+      "transparency": 60,
+      "draw_order": 500,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\CONSOLIDATED_CUTBLOCKS_2020.lyrx"
+    },
+    {
+      "name": "REG_LAND_AND_NATURAL_RESOURCE_STE_TER",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\REG_LAND_AND_NATURAL_RESOURCE_STE_TER\\REG_LAND_AND_NATURAL_RESOURCE_STE_TER.gpkg\\REG_LAND_AND_NATURAL_RESOURCE_STE_TER",
+      "geometry_family": "polygon",
+      "transparency": 60,
+      "draw_order": 500,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\REG_LAND_AND_NATURAL_RESOURCE_STE_TER.lyrx"
+    },
+    {
+      "name": "REG_LAND_AND_NATURAL_RESOURCE_WLD",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\REG_LAND_AND_NATURAL_RESOURCE_WLD\\REG_LAND_AND_NATURAL_RESOURCE_WLD.gpkg\\REG_LAND_AND_NATURAL_RESOURCE_WLD",
+      "geometry_family": "polygon",
+      "transparency": 60,
+      "draw_order": 500,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\REG_LAND_AND_NATURAL_RESOURCE_WLD.lyrx"
+    },
+    {
+      "name": "RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES\\RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES.gpkg\\RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES",
+      "geometry_family": "polygon",
+      "transparency": 60,
+      "draw_order": 500,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES.lyrx"
+    },
+    {
+      "name": "RMP_PLAN_LEGAL",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\RMP_PLAN_LEGAL\\RMP_PLAN_LEGAL.gpkg\\RMP_PLAN_LEGAL",
+      "geometry_family": "polygon",
+      "transparency": 60,
+      "draw_order": 500,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\RMP_PLAN_LEGAL.lyrx"
+    },
+    {
+      "name": "RMP_PLAN_NON_LEGAL_POLY_SVW",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\RMP_PLAN_NON_LEGAL_POLY_SVW\\RMP_PLAN_NON_LEGAL_POLY_SVW.gpkg\\RMP_PLAN_NON_LEGAL_POLY_SVW",
+      "geometry_family": "polygon",
+      "transparency": 60,
+      "draw_order": 500,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\RMP_PLAN_NON_LEGAL_POLY_SVW.lyrx"
+    },
+    {
+      "name": "WHSE_CADASTRE_CBM_CADASTRAL_FABRIC",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_CADASTRE_CBM_CADASTRAL_FABRIC\\WHSE_CADASTRE_CBM_CADASTRAL_FABRIC.gpkg\\WHSE_CADASTRE_CBM_CADASTRAL_FABRIC",
+      "geometry_family": "polygon",
+      "transparency": 60,
+      "draw_order": 500,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_CADASTRE_CBM_CADASTRAL_FABRIC.lyrx"
+    },
+    {
+      "name": "WHSE_FOREST_VEGETATION_F_OWN",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_FOREST_VEGETATION_F_OWN\\WHSE_FOREST_VEGETATION_F_OWN.gpkg\\WHSE_FOREST_VEGETATION_F_OWN",
+      "geometry_family": "polygon",
+      "transparency": 60,
+      "draw_order": 500,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_FOREST_VEGETATION_F_OWN.lyrx"
+    },
+    {
+      "name": "WHSE_LAND_AND_NATURAL_RESOURCE_PROT_CURRENT_FIRE",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_LAND_AND_NATURAL_RESOURCE_PROT_CURRENT_FIRE\\WHSE_LAND_AND_NATURAL_RESOURCE_PROT_CURRENT_FIRE.gpkg\\WHSE_LAND_AND_NATURAL_RESOURCE_PROT_CURRENT_FIRE",
+      "geometry_family": "polygon",
+      "transparency": 60,
+      "draw_order": 500,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_LAND_AND_NATURAL_RESOURCE_PROT_CURRENT_FIRE.lyrx"
+    },
+    {
+      "name": "WHSE_LAND_USE_PLANNING_FADM_DESIGNATED",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_LAND_USE_PLANNING_FADM_DESIGNATED\\WHSE_LAND_USE_PLANNING_FADM_DESIGNATED.gpkg\\WHSE_LAND_USE_PLANNING_FADM_DESIGNATED",
+      "geometry_family": "polygon",
+      "transparency": 60,
+      "draw_order": 500,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_LAND_USE_PLANNING_FADM_DESIGNATED.lyrx"
+    },
+    {
+      "name": "WHSE_LAND_USE_PLANNING_RMP_LANDSCAPE_UNIT_SVW",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_LAND_USE_PLANNING_RMP_LANDSCAPE_UNIT_SVW\\WHSE_LAND_USE_PLANNING_RMP_LANDSCAPE_UNIT_SVW.gpkg\\WHSE_LAND_USE_PLANNING_RMP_LANDSCAPE_UNIT_SVW",
+      "geometry_family": "polygon",
+      "transparency": 60,
+      "draw_order": 500,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_LAND_USE_PLANNING_RMP_LANDSCAPE_UNIT_SVW.lyrx"
+    },
+    {
+      "name": "WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL\\WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL.gpkg\\WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL",
+      "geometry_family": "polygon",
+      "transparency": 60,
+      "draw_order": 500,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL.lyrx"
+    },
+    {
+      "name": "WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL_POLY_SVW",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL_POLY_SVW\\WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL_POLY_SVW.gpkg\\WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL_POLY_SVW",
+      "geometry_family": "polygon",
+      "transparency": 60,
+      "draw_order": 500,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL_POLY_SVW.lyrx"
+    },
+    {
+      "name": "WHSE_LAND_USE_PLANNING_RMP_PLAN_NON_LEGAL_POLY_SVW",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_LAND_USE_PLANNING_RMP_PLAN_NON_LEGAL_POLY_SVW\\WHSE_LAND_USE_PLANNING_RMP_PLAN_NON_LEGAL_POLY_SVW.gpkg\\WHSE_LAND_USE_PLANNING_RMP_PLAN_NON_LEGAL_POLY_SVW",
+      "geometry_family": "polygon",
+      "transparency": 60,
+      "draw_order": 500,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_LAND_USE_PLANNING_RMP_PLAN_NON_LEGAL_POLY_SVW.lyrx"
+    },
+    {
+      "name": "WHSE_WATER_MANAGEMENT_BC_COMMUNITY_WATERSHEDS",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_WATER_MANAGEMENT_BC_COMMUNITY_WATERSHEDS\\WHSE_WATER_MANAGEMENT_BC_COMMUNITY_WATERSHEDS.gpkg\\WHSE_WATER_MANAGEMENT_BC_COMMUNITY_WATERSHEDS",
+      "geometry_family": "polygon",
+      "transparency": 60,
+      "draw_order": 500,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_WATER_MANAGEMENT_BC_COMMUNITY_WATERSHEDS.lyrx"
+    },
+    {
+      "name": "VEG_CONSOLIDATED_CUT_BLOCKS_SP",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\VEG_CONSOLIDATED_CUT_BLOCKS_SP\\VEG_CONSOLIDATED_CUT_BLOCKS_SP.gpkg\\VEG_CONSOLIDATED_CUT_BLOCKS_SP",
+      "geometry_family": "polygon",
+      "transparency": 55,
+      "draw_order": 700,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\VEG_CONSOLIDATED_CUT_BLOCKS_SP.lyrx"
+    },
+    {
+      "name": "WHSE_FOREST_VEGETATION_VEG_CONSOLIDATED_CUT_BLOCKS_SP",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_FOREST_VEGETATION_VEG_CONSOLIDATED_CUT_BLOCKS_SP\\WHSE_FOREST_VEGETATION_VEG_CONSOLIDATED_CUT_BLOCKS_SP.gpkg\\WHSE_FOREST_VEGETATION_VEG_CONSOLIDATED_CUT_BLOCKS_SP",
+      "geometry_family": "polygon",
+      "transparency": 55,
+      "draw_order": 700,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_FOREST_VEGETATION_VEG_CONSOLIDATED_CUT_BLOCKS_SP.lyrx"
+    },
+    {
+      "name": "FTEN_MANAGED_LIC",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\FTEN_MANAGED_LIC\\FTEN_MANAGED_LIC.gpkg\\FTEN_MANAGED_LIC",
+      "geometry_family": "polygon",
+      "transparency": 45,
+      "draw_order": 730,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\FTEN_MANAGED_LIC.lyrx"
+    },
+    {
+      "name": "TA_CROWN_TENURES_SVW",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\TA_CROWN_TENURES_SVW\\TA_CROWN_TENURES_SVW.gpkg\\TA_CROWN_TENURES_SVW",
+      "geometry_family": "polygon",
+      "transparency": 45,
+      "draw_order": 730,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\TA_CROWN_TENURES_SVW.lyrx"
+    },
+    {
+      "name": "WHSE_FOREST_TENURE_FTEN_MANAGED_LIC",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_FOREST_TENURE_FTEN_MANAGED_LIC\\WHSE_FOREST_TENURE_FTEN_MANAGED_LIC.gpkg\\WHSE_FOREST_TENURE_FTEN_MANAGED_LIC",
+      "geometry_family": "polygon",
+      "transparency": 45,
+      "draw_order": 730,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_FOREST_TENURE_FTEN_MANAGED_LIC.lyrx"
+    },
+    {
+      "name": "WHSE_FOREST_TENURE_FTEN_MANAGED_LIC_POLY_SVW",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_FOREST_TENURE_FTEN_MANAGED_LIC_POLY_SVW\\WHSE_FOREST_TENURE_FTEN_MANAGED_LIC_POLY_SVW.gpkg\\WHSE_FOREST_TENURE_FTEN_MANAGED_LIC_POLY_SVW",
+      "geometry_family": "polygon",
+      "transparency": 45,
+      "draw_order": 730,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_FOREST_TENURE_FTEN_MANAGED_LIC_POLY_SVW.lyrx"
+    },
+    {
+      "name": "WHSE_FOREST_TENURE_FTEN_RECREATION",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_FOREST_TENURE_FTEN_RECREATION\\WHSE_FOREST_TENURE_FTEN_RECREATION.gpkg\\WHSE_FOREST_TENURE_FTEN_RECREATION",
+      "geometry_family": "polygon",
+      "transparency": 45,
+      "draw_order": 730,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_FOREST_TENURE_FTEN_RECREATION.lyrx"
+    },
+    {
+      "name": "WHSE_TANTALIS_TA_CROWN_TENURES_SVW",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_TANTALIS_TA_CROWN_TENURES_SVW\\WHSE_TANTALIS_TA_CROWN_TENURES_SVW.gpkg\\WHSE_TANTALIS_TA_CROWN_TENURES_SVW",
+      "geometry_family": "polygon",
+      "transparency": 45,
+      "draw_order": 730,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_TANTALIS_TA_CROWN_TENURES_SVW.lyrx"
+    },
+    {
+      "name": "REG_LAND_AND_NATURAL_RESOURCE_TERRAIN_STABILITY",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\REG_LAND_AND_NATURAL_RESOURCE_TERRAIN_STABILITY\\REG_LAND_AND_NATURAL_RESOURCE_TERRAIN_STABILITY.gpkg\\REG_LAND_AND_NATURAL_RESOURCE_TERRAIN_STABILITY",
+      "geometry_family": "polygon",
+      "transparency": 55,
+      "draw_order": 740,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\REG_LAND_AND_NATURAL_RESOURCE_TERRAIN_STABILITY.lyrx"
+    },
+    {
+      "name": "VEG_BURN_SEVERITY_SP",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\VEG_BURN_SEVERITY_SP\\VEG_BURN_SEVERITY_SP.gpkg\\VEG_BURN_SEVERITY_SP",
+      "geometry_family": "polygon",
+      "transparency": 55,
+      "draw_order": 740,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\VEG_BURN_SEVERITY_SP.lyrx"
+    },
+    {
+      "name": "WHSE_FOREST_VEGETATION_REC_VISUAL_LANDSCAPE",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_FOREST_VEGETATION_REC_VISUAL_LANDSCAPE\\WHSE_FOREST_VEGETATION_REC_VISUAL_LANDSCAPE.gpkg\\WHSE_FOREST_VEGETATION_REC_VISUAL_LANDSCAPE",
+      "geometry_family": "polygon",
+      "transparency": 55,
+      "draw_order": 740,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_FOREST_VEGETATION_REC_VISUAL_LANDSCAPE.lyrx"
+    },
+    {
+      "name": "WHSE_FOREST_VEGETATION_VEG_BURN_SEVERITY_SP",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_FOREST_VEGETATION_VEG_BURN_SEVERITY_SP\\WHSE_FOREST_VEGETATION_VEG_BURN_SEVERITY_SP.gpkg\\WHSE_FOREST_VEGETATION_VEG_BURN_SEVERITY_SP",
+      "geometry_family": "polygon",
+      "transparency": 55,
+      "draw_order": 740,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_FOREST_VEGETATION_VEG_BURN_SEVERITY_SP.lyrx"
+    },
+    {
+      "name": "RMP_OGMA_LEGAL",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\RMP_OGMA_LEGAL\\RMP_OGMA_LEGAL.gpkg\\RMP_OGMA_LEGAL",
+      "geometry_family": "polygon",
+      "transparency": 45,
+      "draw_order": 760,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\RMP_OGMA_LEGAL.lyrx"
+    },
+    {
+      "name": "WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL\\WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL.gpkg\\WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL",
+      "geometry_family": "polygon",
+      "transparency": 45,
+      "draw_order": 760,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL.lyrx"
+    },
+    {
+      "name": "WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL_CURRENT_SVW",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL_CURRENT_SVW\\WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL_CURRENT_SVW.gpkg\\WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL_CURRENT_SVW",
+      "geometry_family": "polygon",
+      "transparency": 45,
+      "draw_order": 760,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL_CURRENT_SVW.lyrx"
+    },
+    {
+      "name": "REG_LAND_AND_NATURAL_RESOURCE_WLD_WHA_PROPOSED_SP",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\REG_LAND_AND_NATURAL_RESOURCE_WLD_WHA_PROPOSED_SP\\REG_LAND_AND_NATURAL_RESOURCE_WLD_WHA_PROPOSED_SP.gpkg\\REG_LAND_AND_NATURAL_RESOURCE_WLD_WHA_PROPOSED_SP",
+      "geometry_family": "polygon",
+      "transparency": 50,
+      "draw_order": 770,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\REG_LAND_AND_NATURAL_RESOURCE_WLD_WHA_PROPOSED_SP.lyrx"
+    },
+    {
+      "name": "TA_WILDLIFE_MGMT_AREAS",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\TA_WILDLIFE_MGMT_AREAS\\TA_WILDLIFE_MGMT_AREAS.gpkg\\TA_WILDLIFE_MGMT_AREAS",
+      "geometry_family": "polygon",
+      "transparency": 50,
+      "draw_order": 770,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\TA_WILDLIFE_MGMT_AREAS.lyrx"
+    },
+    {
+      "name": "WCP_UNGULATE_WINTER_RANGE",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WCP_UNGULATE_WINTER_RANGE\\WCP_UNGULATE_WINTER_RANGE.gpkg\\WCP_UNGULATE_WINTER_RANGE",
+      "geometry_family": "polygon",
+      "transparency": 50,
+      "draw_order": 770,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WCP_UNGULATE_WINTER_RANGE.lyrx"
+    },
+    {
+      "name": "WHSE_TANTALIS_TA_WILDLIFE_MGMT_AREAS_SVW",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_TANTALIS_TA_WILDLIFE_MGMT_AREAS_SVW\\WHSE_TANTALIS_TA_WILDLIFE_MGMT_AREAS_SVW.gpkg\\WHSE_TANTALIS_TA_WILDLIFE_MGMT_AREAS_SVW",
+      "geometry_family": "polygon",
+      "transparency": 50,
+      "draw_order": 770,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_TANTALIS_TA_WILDLIFE_MGMT_AREAS_SVW.lyrx"
+    },
+    {
+      "name": "WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE\\WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE.gpkg\\WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE",
+      "geometry_family": "polygon",
+      "transparency": 50,
+      "draw_order": 770,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE.lyrx"
+    },
+    {
+      "name": "WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE_WINTER_RANGE",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE_WINTER_RANGE\\WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE_WINTER_RANGE.gpkg\\WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE_WINTER_RANGE",
+      "geometry_family": "polygon",
+      "transparency": 50,
+      "draw_order": 770,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE_WINTER_RANGE.lyrx"
+    },
+    {
+      "name": "WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE\\WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE.gpkg\\WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE",
+      "geometry_family": "polygon",
+      "transparency": 50,
+      "draw_order": 770,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE.lyrx"
+    },
+    {
+      "name": "WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE_HABITAT_AREA",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE_HABITAT_AREA\\WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE_HABITAT_AREA.gpkg\\WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE_HABITAT_AREA",
+      "geometry_family": "polygon",
+      "transparency": 50,
+      "draw_order": 770,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE_HABITAT_AREA.lyrx"
+    },
+    {
+      "name": "TA_PARK_ECORES_PA_SVW",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\TA_PARK_ECORES_PA_SVW\\TA_PARK_ECORES_PA_SVW.gpkg\\TA_PARK_ECORES_PA_SVW",
+      "geometry_family": "polygon",
+      "transparency": 40,
+      "draw_order": 780,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\TA_PARK_ECORES_PA_SVW.lyrx"
+    },
+    {
+      "name": "WHSE_TANTALIS_TA_PARK_ECORES_PA_SVW",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_TANTALIS_TA_PARK_ECORES_PA_SVW\\WHSE_TANTALIS_TA_PARK_ECORES_PA_SVW.gpkg\\WHSE_TANTALIS_TA_PARK_ECORES_PA_SVW",
+      "geometry_family": "polygon",
+      "transparency": 40,
+      "draw_order": 780,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_TANTALIS_TA_PARK_ECORES_PA_SVW.lyrx"
+    },
+    {
+      "name": "FADM_BCTS_AREA",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\FADM_BCTS_AREA\\FADM_BCTS_AREA.gpkg\\FADM_BCTS_AREA",
+      "geometry_family": "polygon",
+      "transparency": 25,
+      "draw_order": 850,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\FADM_BCTS_AREA.lyrx"
+    },
+    {
+      "name": "WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN\\WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN.gpkg\\WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN",
+      "geometry_family": "polygon",
+      "transparency": 25,
+      "draw_order": 850,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN.lyrx"
+    },
+    {
+      "name": "WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN_RESERVES",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN_RESERVES\\WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN_RESERVES.gpkg\\WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN_RESERVES",
+      "geometry_family": "polygon",
+      "transparency": 25,
+      "draw_order": 850,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN_RESERVES.lyrx"
+    },
+    {
+      "name": "WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA\\WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA.gpkg\\WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA",
+      "geometry_family": "polygon",
+      "transparency": 25,
+      "draw_order": 850,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA.lyrx"
+    },
+    {
+      "name": "WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA_SP",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA_SP\\WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA_SP.gpkg\\WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA_SP",
+      "geometry_family": "polygon",
+      "transparency": 25,
+      "draw_order": 850,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA_SP.lyrx"
+    },
+    {
+      "name": "WHSE_ADMIN_BOUNDARIES_FADM_TFL",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_ADMIN_BOUNDARIES_FADM_TFL\\WHSE_ADMIN_BOUNDARIES_FADM_TFL.gpkg\\WHSE_ADMIN_BOUNDARIES_FADM_TFL",
+      "geometry_family": "polygon",
+      "transparency": 25,
+      "draw_order": 850,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_ADMIN_BOUNDARIES_FADM_TFL.lyrx"
+    },
+    {
+      "name": "WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR\\WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR.gpkg\\WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR",
+      "geometry_family": "line",
+      "transparency": 0,
+      "draw_order": 900,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR.lyrx"
+    },
+    {
+      "name": "WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR_SP\\WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR_SP.gpkg\\WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "geometry_family": "line",
+      "transparency": 0,
+      "draw_order": 900,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR_SP.lyrx"
+    },
+    {
+      "name": "WHSE_BASEMAPPING_DRA_DIGITAL_ROAD_ATLAS_LINE_SP",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_BASEMAPPING_DRA_DIGITAL_ROAD_ATLAS_LINE_SP\\WHSE_BASEMAPPING_DRA_DIGITAL_ROAD_ATLAS_LINE_SP.gpkg\\WHSE_BASEMAPPING_DRA_DIGITAL_ROAD_ATLAS_LINE_SP",
+      "geometry_family": "line",
+      "transparency": 0,
+      "draw_order": 900,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_BASEMAPPING_DRA_DIGITAL_ROAD_ATLAS_LINE_SP.lyrx"
+    },
+    {
+      "name": "WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES\\WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES.gpkg\\WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES",
+      "geometry_family": "line",
+      "transparency": 0,
+      "draw_order": 900,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES.lyrx"
+    },
+    {
+      "name": "WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES_SVW",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES_SVW\\WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES_SVW.gpkg\\WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES_SVW",
+      "geometry_family": "line",
+      "transparency": 0,
+      "draw_order": 900,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES_SVW.lyrx"
+    },
+    {
+      "name": "WHSE_IMAGERY_AND_BASE_MAPS_MOT_HIGHWAY_PROFILES_SP",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_IMAGERY_AND_BASE_MAPS_MOT_HIGHWAY_PROFILES_SP\\WHSE_IMAGERY_AND_BASE_MAPS_MOT_HIGHWAY_PROFILES_SP.gpkg\\WHSE_IMAGERY_AND_BASE_MAPS_MOT_HIGHWAY_PROFILES_SP",
+      "geometry_family": "line",
+      "transparency": 0,
+      "draw_order": 900,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_IMAGERY_AND_BASE_MAPS_MOT_HIGHWAY_PROFILES_SP.lyrx"
+    },
+    {
+      "name": "WHSE_IMAGERY_AND_BASE_MAPS_MOT_ROAD_FEATURES_INVNTRY_SP",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_IMAGERY_AND_BASE_MAPS_MOT_ROAD_FEATURES_INVNTRY_SP\\WHSE_IMAGERY_AND_BASE_MAPS_MOT_ROAD_FEATURES_INVNTRY_SP.gpkg\\WHSE_IMAGERY_AND_BASE_MAPS_MOT_ROAD_FEATURES_INVNTRY_SP",
+      "geometry_family": "line",
+      "transparency": 0,
+      "draw_order": 900,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_IMAGERY_AND_BASE_MAPS_MOT_ROAD_FEATURES_INVNTRY_SP.lyrx"
+    },
+    {
+      "name": "TRIM_CONTOUR_POINTS",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\TRIM_CONTOUR_POINTS\\TRIM_CONTOUR_POINTS.gpkg\\TRIM_CONTOUR_POINTS",
+      "geometry_family": "point",
+      "transparency": 0,
+      "draw_order": 950,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\TRIM_CONTOUR_POINTS.lyrx"
+    },
+    {
+      "name": "WHSE_BASEMAPPING_TRIM_CONTOUR_POINTS",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_BASEMAPPING_TRIM_CONTOUR_POINTS\\WHSE_BASEMAPPING_TRIM_CONTOUR_POINTS.gpkg\\WHSE_BASEMAPPING_TRIM_CONTOUR_POINTS",
+      "geometry_family": "point",
+      "transparency": 0,
+      "draw_order": 950,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_BASEMAPPING_TRIM_CONTOUR_POINTS.lyrx"
+    },
+    {
+      "name": "WHSE_ADMIN_BOUNDARIES_FADM_TSA",
+      "source_path": "F:\\projects\\femic\\external\\femic-tsa29-instance\\data\\downloads\\bcdc\\WHSE_ADMIN_BOUNDARIES_FADM_TSA\\WHSE_ADMIN_BOUNDARIES_FADM_TSA.gpkg\\WHSE_ADMIN_BOUNDARIES_FADM_TSA",
+      "geometry_family": "polygon",
+      "transparency": 0,
+      "draw_order": 1000,
+      "layer_file": "F:\\projects\\femic\\external\\femic-tsa29-instance\\workbench\\tsr\\arcgis\\layers\\WHSE_ADMIN_BOUNDARIES_FADM_TSA.lyrx"
+    }
+  ]
+}

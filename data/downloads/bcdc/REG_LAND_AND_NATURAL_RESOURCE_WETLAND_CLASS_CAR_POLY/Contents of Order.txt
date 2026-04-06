@@ -1,0 +1,14 @@
+﻿------------------
+Order Details
+-----------------
+Order ID: 2551235
+Date: 20260406
+
+----------------------
+Feature Types
+-----------------------
+ - Wetland Riparian Classes for the Cariboo Region in subdirectory WETLAND_CLASS_CAR_POLY
+
+----------------------------
+Packaged Products
+----------------------------

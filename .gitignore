@@ -32,6 +32,7 @@ runtime/logs/run_manifest-issue85_*.json
 runtime/logs/run_manifest-tsa29_*.json
 runtime/logs/vdyp_curve_events-tsa29-issue85_*.jsonl
 runtime/logs/tsr/*.md
+runtime/logs/tsr/notebook_runs/
 models/tsa29_patchworks_model/patchworksLog.csv
 models/tsa29_patchworks_model/blocks/patchworksLog.csv
 models/tsa29_patchworks_model/blocks/topology_blocks_*r.csv
@@ -42,6 +43,8 @@ vdyp_io/logs/*.jsonl
 vdyp_io/VDYP_CFG/VDYP7_BACK.ctl
 vdyp_io/VDYP_CFG/VDYP7_VDYP.ctl
 vdyp_io/VDYP_CFG/vdyp7.log
+workbench/tsr/arcgis/.backups/
+workbench/tsr/arcgis/layers/
 
 # Editor/OS
 .DS_Store

@@ -1,0 +1,57 @@
+[
+	{
+		"title" : "Stream Classification for the Cariboo Region",
+		"name" : "stream-classification-for-the-cariboo-region",
+		"bcdc_data_resource_url" : "https://catalogue.data.gov.bc.ca/dataset/1a7a8fde-9f0b-489d-bf9b-d3bbccabe3d9",
+		"description" : "Six stream riparian classes ([STREAM_CLASS] = 1-6) based on presence of fish, occurrence in a community watershed and average channel width.  [STREAM_CLASS] = 7 refers to unclassified streams.\r\n\r\nStream classification is based on the 1995 Forest Practices Code Riparian Management Area Guidebook: http://www.llbc.leg.bc.ca/public/PubDocs/bcdocs/237312/Rip-toc.htm or https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/silviculture/silvicultural-systems/silviculture-guidebooks/riparian-management-area-guidebook",
+		"purpose" : "To support MSRM provincial contact centres in the province of British Columbia.",
+		"bcdc_type" : "Geographic",
+		"resource_storage_location" : "Bc Geographic Warehouse",
+		"object_name" : "REG_LAND_AND_NATURAL_RESOURCE.STREAM_CLASSIFICATION_CAR_LINE",
+		"object_short_name" : "STRMCLSSFC",
+		"projection_name" : "epsg3005",
+		"license_title" : "Open Government Licence - British Columbia",
+		"license_url" : "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61",
+		"details" : [
+			{
+				"column_name" : "STREAM_CLASS",
+				"data_precision" : "10",
+				"data_type" : "NUMBER",
+				"short_name" : "STRMCLSS"
+			},
+			{
+				"column_name" : "STREAM_SOURCE",
+				"data_precision" : "10",
+				"data_type" : "VARCHAR2",
+				"short_name" : "STRMSRC"
+			},
+			{
+				"column_comments" : "GEOMETRY is the column used to reference the spatial coordinates defining the feature. ",
+				"column_name" : "GEOMETRY",
+				"data_precision" : "1",
+				"data_type" : "SDO_GEOMETRY",
+				"short_name" : "GEOMETRY"
+			},
+			{
+				"column_comments" : "OBJECTID is a required attribute of feature classes and object classes in a geodatabase. ",
+				"column_name" : "OBJECTID",
+				"data_precision" : "38",
+				"data_type" : "NUMBER",
+				"short_name" : "OBJECTID"
+			},
+			{
+				"column_comments" : "SE_ANNO_CAD_DATA is a binary column used by spatial tools to store annotation, curve features and CAD data when using the SDO_GEOMETRY storage data type. ",
+				"column_name" : "SE_ANNO_CAD_DATA",
+				"data_precision" : "4000",
+				"data_type" : "BLOB"
+			},
+			{
+				"column_comments" : "FEATURE_LENGTH_M is the system calculated length or perimeter of a geometry in meters",
+				"column_name" : "FEATURE_LENGTH_M",
+				"data_precision" : "19",
+				"data_type" : "NUMBER",
+				"short_name" : "FEAT_LEN"
+			}
+		]
+	}
+]

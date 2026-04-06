@@ -1,0 +1,14 @@
+﻿------------------
+Order Details
+-----------------
+Order ID: 2551234
+Date: 20260406
+
+----------------------
+Feature Types
+-----------------------
+ - Growth and Yield Samples - Active Status in subdirectory GRY_PSP_STATUS_ACTIVE
+
+----------------------------
+Packaged Products
+----------------------------

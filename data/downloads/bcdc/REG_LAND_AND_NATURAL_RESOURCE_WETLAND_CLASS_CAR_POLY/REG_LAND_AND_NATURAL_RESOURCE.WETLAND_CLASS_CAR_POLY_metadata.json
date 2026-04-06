@@ -1,0 +1,65 @@
+[
+	{
+		"title" : "Wetland Riparian Classes for the Cariboo Region",
+		"name" : "wetland-riparian-classes-for-the-cariboo-region",
+		"bcdc_data_resource_url" : "https://catalogue.data.gov.bc.ca/dataset/c6b75d6c-a37c-4672-9c51-355961d390e8",
+		"description" : "Five riparian classes of wetlands (W1 to W5) based on whether the wetland is a simple wetland or wetland complex, wetland size, and biogeoclimatic unit in which the wetland occurs. Wetland classification is based on the 1995 Forest Practices Code Riparian Management Area Guidebook: http://www.llbc.leg.bc.ca/public/PubDocs/bcdocs/237312/Rip-toc.htm",
+		"purpose" : "To support MSRM provincial contact centres in the province of British Columbia.",
+		"bcdc_type" : "Geographic",
+		"last_modified" : "2013-05-25T04:52:27",
+		"resource_storage_location" : "Bc Geographic Warehouse",
+		"object_name" : "REG_LAND_AND_NATURAL_RESOURCE.WETLAND_CLASS_CAR_POLY",
+		"object_short_name" : "WTLNDCLSSC",
+		"projection_name" : "epsg3005",
+		"license_title" : "Open Government Licence - British Columbia",
+		"license_url" : "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61",
+		"details" : [
+			{
+				"column_name" : "X_NPCD",
+				"data_precision" : "10",
+				"data_type" : "NUMBER",
+				"short_name" : "X_NPCD"
+			},
+			{
+				"column_name" : "SWAMP_CLASS",
+				"data_precision" : "2",
+				"data_type" : "VARCHAR2",
+				"short_name" : "SWMPCLSS"
+			},
+			{
+				"column_comments" : "GEOMETRY is the column used to reference the spatial coordinates defining the feature. ",
+				"column_name" : "GEOMETRY",
+				"data_precision" : "1",
+				"data_type" : "SDO_GEOMETRY",
+				"short_name" : "GEOMETRY"
+			},
+			{
+				"column_comments" : "OBJECTID is a required attribute of feature classes and object classes in a geodatabase. ",
+				"column_name" : "OBJECTID",
+				"data_precision" : "38",
+				"data_type" : "NUMBER",
+				"short_name" : "OBJECTID"
+			},
+			{
+				"column_comments" : "SE_ANNO_CAD_DATA is a binary column used by spatial tools to store annotation, curve features and CAD data when using the SDO_GEOMETRY storage data type. ",
+				"column_name" : "SE_ANNO_CAD_DATA",
+				"data_precision" : "4000",
+				"data_type" : "BLOB"
+			},
+			{
+				"column_comments" : "FEATURE_AREA_SQM is the system calculated area of a two-dimensional polygon in square meters",
+				"column_name" : "FEATURE_AREA_SQM",
+				"data_precision" : "19",
+				"data_type" : "NUMBER",
+				"short_name" : "AREA_SQM"
+			},
+			{
+				"column_comments" : "FEATURE_LENGTH_M is the system calculated length or perimeter of a geometry in meters",
+				"column_name" : "FEATURE_LENGTH_M",
+				"data_precision" : "19",
+				"data_type" : "NUMBER",
+				"short_name" : "FEAT_LEN"
+			}
+		]
+	}
+]
