@@ -14,7 +14,7 @@ instance_inputs:
   source_layer_overrides_path: config/tsr/source_layer_overrides.yaml
 recipe_contract:
   status: built
-  last_built_utc: '2026-04-08T07:08:28.589347+00:00'
+  last_built_utc: '2026-04-08T07:22:29.619607+00:00'
   notes:
   - Review and refresh this file with `femic tsr thlb-netdown-build`.
   - Keep unsupported or low-confidence steps explicit instead of silently patching
@@ -32,7 +32,7 @@ recipe_contract:
   status_report_path: config/tsr/thlb_reconstructed.status.md
   runtime_status_report_path: runtime/logs/tsr/thlb_reconstructed_status_report-20260405T214635Z.md
   recipe_build_status_report_path: config/tsr/thlb_netdown.status.md
-  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260408T070829Z.md
+  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260408T072230Z.md
   workbench_notebook_path: workbench/tsr/thlb_netdown.workbench.ipynb
   workbench_last_built_utc: '2026-04-08T06:41:45.201413+00:00'
   lock_state:
@@ -52,7 +52,7 @@ recipe_contract:
       frozen_status_report_path: None
       frozen_audit_path: None
       note: None
-  last_parent_step_run_utc: '2026-04-08T06:50:15.649129+00:00'
+  last_parent_step_run_utc: '2026-04-08T07:20:43.535569+00:00'
 parent_steps:
 - parent_step_id: thlb_parent_001_total_tsa_area
   parent_label: Total TSA area
@@ -3190,33 +3190,22 @@ parent_steps:
   - TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   draft_subrules:
   - subrule_id: thlb_parent_011_community_areas_of_special_concern_draft_01
-    human_summary: Community areas of special concern are spatially delineated areas
-      that have been designated as no-harvest areas in the LUO to address a mix of
-      CCLUP objectives.
-    rationale: Community areas of special concern are spatially delineated areas that
-      have been designated as no-harvest areas in the LUO to address a mix of CCLUP
-      objectives.
+    human_summary: Exclude the legal LUO / CCLUP Map 5 community areas of special
+      concern polygons from the harvestable land base.
+    rationale: TSA29 section 6.3.7 says CASC areas are no-harvest polygons designated
+      in the LUO to address CCLUP objectives.
     candidate_layers:
-    - whse_land_use_planning_fadm_designated
-    - rmp_plan_legal_poly_svw
     - whse_land_use_planning_rmp_plan_legal_poly_svw
-    candidate_fields: []
-    candidate_values: []
+    candidate_fields:
+    - STRGC_LAND_RSRCE_PLAN_NAME
+    - LEGAL_FEAT_OBJECTIVE
+    candidate_values:
+    - Cariboo Chilcotin Land Use Plan
+    - Community Areas of Special Concern
     candidate_operation_type: exclude
-    field_mapping_notes: []
-    confidence: needs_review
-    review_status: draft
-    prose_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
-    hint_provenance_ids: []
-  - subrule_id: thlb_parent_011_community_areas_of_special_concern_draft_02
-    human_summary: Community areas of special concern are excluded from the THLB.
-    rationale: Community areas of special concern are excluded from the THLB.
-    candidate_layers:
-    - consolidated_cutblocks_2020
-    candidate_fields: []
-    candidate_values: []
-    candidate_operation_type: exclude
-    field_mapping_notes: []
+    field_mapping_notes:
+    - Use the legal planning polygons for the CCLUP / LUO Map 5 boundaries.
+    - Do not substitute broad designated-area overlays or unrelated disturbance layers.
     confidence: needs_review
     review_status: draft
     prose_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
@@ -3255,8 +3244,7 @@ parent_steps:
     source_url: ''
     notes: &id047
     - TSA29 section 6.3.7 points to LUO / CCLUP Map 5 boundaries, so notebook execution
-      uses the CCLUP legal-planning objective polygons instead of broad designated-area
-      overlays.
+      uses the legal CCLUP planning polygons instead of broad designated-area overlays.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 62460.0
     benchmark_cumulative_area_ha: 2352758.0
@@ -3266,7 +3254,6 @@ parent_steps:
     normalized_predicate: exclude only LUO/CARC CCLUP legal-planning polygons where
       LEGAL_FEAT_OBJECTIVE = Community Areas of Special Concern
     linked_source_entry_ids: &id048
-    - rmp_plan_legal_poly_svw
     - whse_land_use_planning_rmp_plan_legal_poly_svw
     source_attribute_filters: &id049
     - field: STRGC_LAND_RSRCE_PLAN_NAME
@@ -3275,38 +3262,150 @@ parent_steps:
     - field: LEGAL_FEAT_OBJECTIVE
       operator: eq
       value: Community Areas of Special Concern
-  ratchet_state: benchmarked
-  ratchet_note: Runnable on the Williams Lake landscape-unit smoke subset and now
-    uses the narrowed CCLUP legal-objective polygons. Current result is a no-signal
-    noop on this subset, so hold for later validation on a more informative subset
-    or during full-TSA validation.
+  approved: true
+  approval_scope: full_tsa_validation
+  approval_note: Full-TSA cached 8-bundle run removed 69,545.637 ha against the TSR
+    benchmark 62,460 ha. Residual overcut is small enough to accept as good enough
+    for forward progress.
+  approved_utc: '2026-04-08T07:25:00+00:00'
+  approved_by: user_directed_review
+  ratchet_state: approved
+  ratchet_note: Green-lit on the full-TSA basis after narrowing the executable logic
+    to the legal CCLUP / LUO polygons for Community Areas of Special Concern. The
+    full-TSA run removed 69,545.637 ha against the 62,460 ha TSR benchmark, which
+    is close enough to accept and move on.
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_011_community_areas_of_special_concern.20260406T062621Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_011_community_areas_of_special_concern.20260406T062621Z.feather
-  last_selected_map_ids:
-  - 092P081
-  - 092P091
-  - 092P092
-  - 092P093
-  - 093A001
-  - 093A002
-  - 093A003
-  - 093A011
-  - 093A012
-  - 093A021
-  - 093B009
-  - 093B010
-  - 093B019
-  - 093B020
-  - 093B029
-  - 093B030
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_011_community_areas_of_special_concern.20260408T072034Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_011_community_areas_of_special_concern.20260408T072034Z.feather
+  last_selected_map_ids: []
   last_selected_landscape_units:
+  - French Bar
+  - Yalakom
+  - Spruce Lake
+  - Entiako
+  - Murphy Lake
+  - McLinchy
+  - Chilanko
+  - Alplands
+  - Pyper
+  - Riske
+  - Chimney
+  - Siwash
+  - Clearwater
+  - Tatla/Little Eagle
+  - Helena Lake
+  - Haines
+  - Big Stick
+  - Bidwell/Lava
+  - Brittany
+  - Nuntzi Elkin
+  - Minton
+  - Alkali
+  - Klinaklini
+  - Farwell
+  - Westbranch
+  - Big Creek
+  - Upper Tatlayoko
+  - Colwell
+  - Tete Angela
+  - Dog Creek
+  - Middle Lake
+  - Bambrick
+  - Cunningham
+  - Swift
+  - Victoria
+  - Dragon
+  - Gerimi
+  - Pan
+  - Eliguk
+  - Little River
+  - Cariboo Lake
+  - Toil
+  - Westside
+  - Downton
+  - Wentworth
+  - Lower Cariboo
+  - Clisbako
+  - Christenson Creek
+  - Beaver Valley
+  - Polley
+  - Big Lake
+  - Punky Moore
+  - Clusko
+  - Gaspard
+  - Nemiah
+  - Cheshi Stikelan
+  - Crazy Creek
+  - Ottarasko
+  - Meadow Lake
+  - Churn
+  - Koster/Lone Cabin
+  - Nude Creek
+  - Hickson
+  - Nostetuko
+  - Tiedemann
+  - Beece Creek
+  - Doran Creek
+  - Dash
+  - Gunn Valley
+  - Upper Churn
+  - Taseko
+  - East Arm
+  - Eastside
+  - Wasko/Lynx
+  - McKay
+  - Black Creek
+  - McKusky
+  - Nimpo
+  - McKinley
+  - Moffat
+  - Anaham
+  - Meldrum
+  - Deception Mountain
+  - Puntzi
   - Williams Lake
-  last_input_area_ha: 103215.48684773514
-  last_removed_area_ha: 0.0
-  last_remaining_area_ha: 43187.514108273754
-  last_benchmark_marginal_delta_ha: -62460.0
-  last_benchmark_cumulative_delta_ha: -2309570.4858917263
+  - Hendrix Lake
+  - Upper Klinaklini
+  - Homathko
+  - Ramsey
+  - Likely
+  - Corkscrew
+  - Horsefly
+  - Nazko
+  - Twan
+  - Tautri
+  - Hawks Creek
+  - Holtry
+  - Mackin
+  - Palmer/Jorgenson
+  - Sisters
+  - Alexis
+  - Hotnarko
+  - Telegraph
+  - Atnarko
+  - Upper Dean
+  - Beeftrail
+  - Tusulko
+  - Penfold
+  - Matthew
+  - Mitchell Lake
+  - Niagara
+  - Chilko
+  - Rainbow
+  - Franklyn
+  - Tchaikazan
+  - Lord River
+  - Edmond
+  - Nadila
+  - Upper Big Creek
+  - Young
+  - Atnarko
+  - Wells Gray Park
+  last_input_area_ha: 2977503.74004337
+  last_removed_area_ha: 69545.63717609203
+  last_remaining_area_ha: 2254514.8609246337
+  last_benchmark_marginal_delta_ha: 7085.63717609203
+  last_benchmark_cumulative_delta_ha: -98243.13907536631
 - parent_step_id: thlb_parent_012_proven_aboriginal_rights_areas
   parent_label: Proven Aboriginal Rights areas
   parent_kind: transformation

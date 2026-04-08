@@ -1,10 +1,10 @@
 # THLB Recipe Build Report: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-08T07:08:29.600935+00:00`
+- Generated UTC: `2026-04-08T07:22:30.558208+00:00`
 - Report mode: `recipe_build`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Source-layer recipe path: `config/tsr/source_layers.recipe.yaml`
-- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T070829Z.md`
+- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T072230Z.md`
 
 ## Scope
 
@@ -704,24 +704,32 @@
 - Parent step id: `thlb_parent_011_community_areas_of_special_concern`
 - Stage: `AFLB -> LHLB`
 - Execution class: `legal_harvest_exclusion`
-- Ratchet state: `benchmarked`
+- Ratchet state: `approved`
 - Table provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24`
 - Benchmark marginal deduction: `62460.000 ha`
 - Benchmark cumulative remaining area: `2352758.000 ha`
-- Ratchet note: Runnable on the Williams Lake landscape-unit smoke subset and now uses the narrowed CCLUP legal-objective polygons. Current result is a no-signal noop on this subset, so hold for later validation on a more informative subset or during full-TSA validation.
+- Approval: `soft-approved`
+- Approval scope: `full_tsa_validation`
+- Approval note: Full-TSA cached 8-bundle run removed 69,545.637 ha against the TSR benchmark 62,460 ha. Residual overcut is small enough to accept as good enough for forward progress.
+- Approved UTC: `2026-04-08T07:25:00+00:00`
+- Approved by: `user_directed_review`
+- Ratchet note: Green-lit on the full-TSA basis after narrowing the executable logic to the legal CCLUP / LUO polygons for Community Areas of Special Concern. The full-TSA run removed 69,545.637 ha against the 62,460 ha TSR benchmark, which is close enough to accept and move on.
 - Supporting prose section: `6.3.7 Community areas of special concern (CASC)`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31`
 - Draft subrules:
-  - `thlb_parent_011_community_areas_of_special_concern_draft_01` | summary=`Community areas of special concern are spatially delineated areas that have been designated as no-harvest areas in the LUO to address a mix of CCLUP objectives.` | operation=`exclude` | review=`draft`
-    - candidate layers: `whse_land_use_planning_fadm_designated`, `rmp_plan_legal_poly_svw`, `whse_land_use_planning_rmp_plan_legal_poly_svw`
-  - `thlb_parent_011_community_areas_of_special_concern_draft_02` | summary=`Community areas of special concern are excluded from the THLB.` | operation=`exclude` | review=`draft`
-    - candidate layers: `consolidated_cutblocks_2020`
+  - `thlb_parent_011_community_areas_of_special_concern_draft_01` | summary=`Exclude the legal LUO / CCLUP Map 5 community areas of special concern polygons from the harvestable land base.` | operation=`exclude` | review=`draft`
+    - candidate layers: `whse_land_use_planning_rmp_plan_legal_poly_svw`
+    - candidate fields: `STRGC_LAND_RSRCE_PLAN_NAME`, `LEGAL_FEAT_OBJECTIVE`
+    - candidate values: `Cariboo Chilcotin Land Use Plan`, `Community Areas of Special Concern`
+    - field/value mapping notes:
+      - Use the legal planning polygons for the CCLUP / LUO Map 5 boundaries.
+      - Do not substitute broad designated-area overlays or unrelated disturbance layers.
 - Current compiled status summary: `ready`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `0.000 ha`
-- Last notebook remaining area: `43187.514 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_011_community_areas_of_special_concern.20260406T062621Z.json`
+- Last notebook removed area: `69545.637 ha`
+- Last notebook remaining area: `2254514.861 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_011_community_areas_of_special_concern.20260408T072034Z.json`
 - Compiled logic:
 
 #### 11.1. Community areas of special concern
@@ -736,10 +744,6 @@
 - TSR text: `Community areas of special concern are spatially delineated areas that have been designated as no-harvest areas in the LUO to address a mix of CCLUP objectives. Community areas of special concern are excluded from the THLB. Table 13. Community areas of special concern Designation Total (ha) Forested (ha) Excluded (ha) Community areas of special concern 436,210 69,346 62,460 Data source and comments: The community areas of special concern boundaries are from the Land Use Order Objectives for the Cariboo-Chilcotin Land Use Plan, May 19, 2010, Map 5. No changes were made to the mapped boundaries for CASC in the 2011 amendment. 6.4. Identification of the Timber Harvesting Land Base The THLB is the portion of the LHLB where timber harvesting is expected to occur in the context of the timber supply analysis supporting this AAC determination.`
 - FEMIC proposed logic: Exclude the linked polygons from THLB where they intersect the working land base; the exact execution mode depends on available data and current implementation support.
 - Linked source layers:
-  - `rmp_plan_legal_poly_svw` | query=`RMP_PLAN_LEGAL_POLY_SVW` | status=`exact_hit` | strategy=`wfs_fetch`
-    - artifact: `data/downloads/bcdc/RMP_PLAN_LEGAL_POLY_SVW/RMP_PLAN_LEGAL_POLY_SVW.gpkg`
-    - matched by: `object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW`
-    - top match: `Legal Planning Objectives - Current - Polygon`
   - `whse_land_use_planning_rmp_plan_legal_poly_svw` | query=`WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW` | status=`exact_hit` | strategy=`wfs_fetch`
     - artifact: `data/downloads/bcdc/WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL_POLY_SVW/WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL_POLY_SVW.gpkg`
     - matched by: `object_name:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW`
