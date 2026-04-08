@@ -1,10 +1,10 @@
 # THLB Recipe Build Report: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-08T15:37:47.798554+00:00`
+- Generated UTC: `2026-04-08T17:13:34.246799+00:00`
 - Report mode: `recipe_build`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Source-layer recipe path: `config/tsr/source_layers.recipe.yaml`
-- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T153747Z.md`
+- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T171334Z.md`
 
 ## Scope
 
@@ -812,7 +812,7 @@
 - Table provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24`
 - Benchmark marginal deduction: `33533.000 ha`
 - Benchmark cumulative remaining area: `2250824.000 ha`
-- Ratchet note: Full-TSA cached 8-bundle validation of the current auto-runnable terrain-stability subset removed only 16.620 ha against the step benchmark of 33,533 ha. Step 13 is therefore not approvable on the current public-data bridge; the Highway 97 east/west steep-slope thresholds still carry most of the missing benchmark signal and remain manual review pending a reviewed slope-angle source and partition.
+- Ratchet note: Attribute-first full-TSA cached 8-bundle validation now executes the Highway 97 steep-slope branch from precompiled DEM/highway checkpoint attributes, but the v1 result overcuts materially. Step 13 removed 43,628.139 ha against the TSR benchmark of 33,533 ha; terrain contributed 16.620 ha while the steep-slope attribute branch contributed 43,611.519 ha. Keep step 13 benchmarked / not approved until the steep-slope attribute path is reconciled to the TSR benchmark.
 - Supporting prose section: `6.4.3 Areas considered inoperable`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=32`
@@ -823,11 +823,11 @@
     - candidate layers: `terrain_stability`
   - `thlb_parent_013_areas_considered_inoperable_draft_03` | summary=`Inoperable areas will be identified as follows: • Slopes that exceed 70% east of Highway 97.` | operation=`exclude` | review=`draft`
     - candidate layers: `terrain_stability`
-- Current compiled status summary: `manual_review_required`=1, `ready`=1
+- Current compiled status summary: `ready`=2
 - Last notebook run status: `applied`
-- Last notebook removed area: `16.620 ha`
-- Last notebook remaining area: `2254498.241 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_013_areas_considered_inoperable.20260408T153400Z.json`
+- Last notebook removed area: `43628.139 ha`
+- Last notebook remaining area: `2210886.722 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_013_areas_considered_inoperable.20260408T171029Z.json`
 - Compiled logic:
 
 #### 13.1. Unstable terrain and terrain class 5
@@ -854,11 +854,11 @@
 - Kind: `netdown_rule`
 - Stage: `LHLB -> THLB`
 - Execution class: `projected_harvest_exclusion`
-- Run status: `manual_review_required`
+- Run status: `ready`
 - TSR provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=32`
 - TSR page: `32`
 - TSR text: `Areas that are inoperable within the TSA are generally associated with steep slopes. Steep slopes are unlikely to be harvested because of unstable terrain and sensitive soils. Also, steep slopes require the use of different harvest systems such as cable logging which may be uneconomic depending on volume per hectare. Inoperable areas will be identified as follows: • Slopes that exceed 70% east of Highway 97. Harvesting on slopes between 40% and 70%, and cable harvesting has been employed as a past practice east of Highway 97. • Slopes that exceed 40% west of Highway 97. These slopes typically have lower volume per hectare which generally makes these types unsuitable for harvesting. • Slopes classified as Unstable (U) or Terrain Class 5. Table 16. Areas considered inoperable Designations Total (ha) Forested (ha) Excluded (ha) Steep slopes 491,492 92,748 31,974 Unstable terrain 15,051 3,923 1,559 Data source and comments: Slope angle is derived from the provincial digital elevation model.`
-- FEMIC proposed logic: Steep slope thresholds east and west of Highway 97 review slope > 70% east of Highway 97 and slope > 40% west of Highway 97 with a reviewed slope-angle source and Highway 97 split
+- FEMIC proposed logic: Exclude the linked polygons from THLB where they intersect the working land base; the exact execution mode depends on available data and current implementation support.
 - Linked source layers:
   - `reg_land_and_natural_resource_terrain_stability` | query=`REG_LAND_AND_NATURAL_RESOURCE.TERRAIN_STABILITY` | status=`alias_hit` | strategy=`wfs_fetch`
     - artifact: `data/downloads/bcdc/REG_LAND_AND_NATURAL_RESOURCE_TERRAIN_STABILITY/REG_LAND_AND_NATURAL_RESOURCE_TERRAIN_STABILITY.gpkg`

@@ -14,7 +14,7 @@ instance_inputs:
   source_layer_overrides_path: config/tsr/source_layer_overrides.yaml
 recipe_contract:
   status: built
-  last_built_utc: '2026-04-08T15:37:47.294441+00:00'
+  last_built_utc: '2026-04-08T17:13:33.293646+00:00'
   notes:
   - Review and refresh this file with `femic tsr thlb-netdown-build`.
   - Keep unsupported or low-confidence steps explicit instead of silently patching
@@ -32,9 +32,9 @@ recipe_contract:
   status_report_path: config/tsr/thlb_reconstructed.status.md
   runtime_status_report_path: runtime/logs/tsr/thlb_reconstructed_status_report-20260405T214635Z.md
   recipe_build_status_report_path: config/tsr/thlb_netdown.status.md
-  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260408T153747Z.md
+  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260408T171334Z.md
   workbench_notebook_path: workbench/tsr/thlb_netdown.workbench.ipynb
-  workbench_last_built_utc: '2026-04-08T07:40:18.550302+00:00'
+  workbench_last_built_utc: '2026-04-08T17:14:08.058056+00:00'
   lock_state:
     aflb:
       locked: false
@@ -52,7 +52,7 @@ recipe_contract:
       frozen_status_report_path: None
       frozen_audit_path: None
       note: None
-  last_parent_step_run_utc: '2026-04-08T15:34:05.780887+00:00'
+  last_parent_step_run_utc: '2026-04-08T17:10:36.811213+00:00'
 parent_steps:
 - parent_step_id: thlb_parent_001_total_tsa_area
   parent_label: Total TSA area
@@ -3623,10 +3623,10 @@ parent_steps:
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=32
     source_url: ''
     notes: &id052
-    - Notebook execution currently auto-runs only the terrain-stability portion of
-      TSR 6.4.3.
+    - The terrain-stability branch remains the current public-data executable proxy
+      for the TSR's Unstable (U) / Terrain Class 5 clause.
     - The v1 terrain filter uses terrain-stability classes U (Unstable) and V (Terrain
-      Class 5 proxy) as the auto-runnable subset.
+      Class 5 proxy) as the current executable subset.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 33533.0
     benchmark_cumulative_area_ha: 2250824.0
@@ -3667,9 +3667,9 @@ parent_steps:
     land_base_stage: lhlb_to_thlb
     stage_label: LHLB -> THLB
     execution_class: projected_harvest_exclusion
-    compiled_operation_type: manual_review_required
-    step_status: manual_review_required
-    required: false
+    compiled_operation_type: select_attribute
+    step_status: ready
+    required: true
     page_number: 32
     document_title: ''
     document_type: data_package
@@ -3679,28 +3679,34 @@ parent_steps:
     source_url: ''
     notes: &id055
     - TSA29 section 6.4.3 splits steep-slope exclusions east and west of Highway 97.
-    - The notebook bridge does not yet auto-derive a reviewed slope-angle surface
-      plus Highway 97 partition, so this portion remains manual review.
+    - Checkpoint execution expects `femic_slope_pct_median`, `femic_hwy97_side`, and
+      `femic_step13_steep_slope_flag` to be precompiled onto the curve-ready checkpoint.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 33533.0
     benchmark_cumulative_area_ha: 2250824.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-    normalized_action: review
+    normalized_action: exclude
     normalized_subject: Steep slope thresholds east and west of Highway 97
-    normalized_predicate: review slope > 70% east of Highway 97 and slope > 40% west
-      of Highway 97 with a reviewed slope-angle source and Highway 97 split
-    linked_source_entry_ids: &id056
+    normalized_predicate: set THLB to 0 where checkpoint-derived stand attributes
+      identify slope > 70% east of Highway 97 or slope > 40% west of Highway 97
+    checkpoint_attribute_mode: any
+    checkpoint_attribute_filters: &id056
+    - field: femic_step13_steep_slope_flag
+      operator: eq
+      value: true
+    linked_source_entry_ids: &id057
     - reg_land_and_natural_resource_terrain_stability
     - whse_imagery_and_base_maps_mot_highway_profiles_sp
   ratchet_state: benchmarked
-  ratchet_note: Full-TSA cached 8-bundle validation of the current auto-runnable terrain-stability
-    subset removed only 16.620 ha against the step benchmark of 33,533 ha. Step 13
-    is therefore not approvable on the current public-data bridge; the Highway 97
-    east/west steep-slope thresholds still carry most of the missing benchmark signal
-    and remain manual review pending a reviewed slope-angle source and partition.
+  ratchet_note: Attribute-first full-TSA cached 8-bundle validation now executes the
+    Highway 97 steep-slope branch from precompiled DEM/highway checkpoint attributes,
+    but the v1 result overcuts materially. Step 13 removed 43,628.139 ha against the
+    TSR benchmark of 33,533 ha; terrain contributed 16.620 ha while the steep-slope
+    attribute branch contributed 43,611.519 ha. Keep step 13 benchmarked / not approved
+    until the steep-slope attribute path is reconciled to the TSR benchmark.
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_013_areas_considered_inoperable.20260408T153400Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_013_areas_considered_inoperable.20260408T153400Z.feather
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_013_areas_considered_inoperable.20260408T171029Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_013_areas_considered_inoperable.20260408T171029Z.feather
   last_selected_map_ids: []
   last_selected_landscape_units:
   - French Bar
@@ -3826,10 +3832,10 @@ parent_steps:
   - Atnarko
   - Wells Gray Park
   last_input_area_ha: 2977503.74004337
-  last_removed_area_ha: 16.620143351911516
-  last_remaining_area_ha: 2254498.240781282
-  last_benchmark_marginal_delta_ha: -33516.37985664809
-  last_benchmark_cumulative_delta_ha: 3674.2407812820747
+  last_removed_area_ha: 43628.13887544864
+  last_remaining_area_ha: 2210886.72204918
+  last_benchmark_marginal_delta_ha: 10095.13887544864
+  last_benchmark_cumulative_delta_ha: -39937.27795082005
 - parent_step_id: thlb_parent_014_sites_with_low_growing_timber_potential
   parent_label: Sites with low growing timber potential
   parent_kind: transformation
@@ -3996,7 +4002,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=33
     source_url: ''
-    notes: &id057
+    notes: &id058
     - Step 14 runs late in the pipeline on the curve-ready checkpoint rather than
       on checkpoint1.
     - 'Notebook execution uses the current assigned bundle curves: treated curves
@@ -4012,7 +4018,7 @@ parent_steps:
     normalized_predicate: set THLB to 0 where assigned curve volume falls below 80
       m3/ha; treated curves use volume at CMAI and untreated curves use culmination
       volume
-    linked_source_entry_ids: &id058 []
+    linked_source_entry_ids: &id059 []
     curve_id_column: curve1
     minimum_volume_m3_per_ha: 80.0
   - step_id: thlb_parent_014_sites_with_low_growing_timber_potential_compiled_02
@@ -4087,7 +4093,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=33
     source_url: ''
-    notes: &id059
+    notes: &id060
     - TSA29 section 6.4.4 raises the threshold to 250 m3/ha on steep slopes.
     - The notebook bridge does not yet have a reviewed steep-slope mask beyond the
       earlier inoperable exclusions, so this branch remains manual review for now.
@@ -4100,7 +4106,7 @@ parent_steps:
     normalized_predicate: apply the 250 m3/ha threshold only after a reviewed steep-slope
       mask is available; current notebook bridge does not auto-derive a defensible
       stand-level steep class from VRI alone
-    linked_source_entry_ids: &id060
+    linked_source_entry_ids: &id061
     - reg_land_and_natural_resource_terrain_stability
     - whse_imagery_and_base_maps_mot_highway_profiles_sp
   ratchet_state: benchmarked
@@ -4237,7 +4243,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=35
     source_url: ''
-    notes: &id061
+    notes: &id062
     - TSA29 section 6.4.5 excludes broadleaf-leading stands from THLB.
     - Notebook execution uses the leading VRI species code on the late-stage curve-ready
       checkpoint surface.
@@ -4252,9 +4258,9 @@ parent_steps:
     normalized_predicate: set THLB to 0 where the leading species code is broadleaf;
       defer broadleaf components in conifer-leading stands to the later broadleaf
       volume-exclusion assumption
-    linked_source_entry_ids: &id062 []
+    linked_source_entry_ids: &id063 []
     checkpoint_attribute_mode: any
-    checkpoint_attribute_filters: &id063
+    checkpoint_attribute_filters: &id064
     - field: SPECIES_CD_1
       operator: in
       value:
@@ -4470,7 +4476,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=36
     source_url: ''
-    notes: &id064
+    notes: &id065
     - TSA29 section 6.4.6 excludes identified recreation areas and features from THLB.
     - Notebook execution currently auto-runs the active FTEN recreation polygon subset
       only.
@@ -4484,9 +4490,9 @@ parent_steps:
     normalized_subject: Active recreation polygons
     normalized_predicate: set THLB to 0 where active legally established recreation
       site and reserve polygons intersect the working land base
-    linked_source_entry_ids: &id065
+    linked_source_entry_ids: &id066
     - whse_forest_tenure_ften_recreation
-    source_attribute_filters: &id066
+    source_attribute_filters: &id067
     - field: LIFE_CYCLE_STATUS_CODE
       operator: eq
       value: ACTIVE
@@ -4627,7 +4633,7 @@ parent_steps:
     normalized_action: exclude
     normalized_subject: ''
     normalized_predicate: ''
-    linked_source_entry_ids: &id067
+    linked_source_entry_ids: &id068
     - whse_forest_vegetation_gry_psp_status
     step_status: ready
     required: true
@@ -4638,7 +4644,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=36
     source_url: ''
-    notes: &id068 []
+    notes: &id069 []
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 3577.0
     benchmark_cumulative_area_ha: 1867553.0
@@ -4845,7 +4851,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id069
+    notes: &id070
     - Step 3 already removed the direct non-forest waterbody area; this later THLB
       step models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -4858,9 +4864,9 @@ parent_steps:
     normalized_subject: Stream class S1 riparian area
     normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table
       15 effective riparian width for S1 streams
-    linked_source_entry_ids: &id070
+    linked_source_entry_ids: &id071
     - reg_land_and_natural_resource_stream_classification_car_line
-    source_attribute_filters: &id071
+    source_attribute_filters: &id072
     - field: STREAM_CLASS
       operator: eq
       value: '1'
@@ -4920,7 +4926,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id072
+    notes: &id073
     - Step 3 already removed the direct non-forest waterbody area; this later THLB
       step models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -4933,9 +4939,9 @@ parent_steps:
     normalized_subject: Stream class S2 riparian area
     normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table
       15 effective riparian width for S2 streams
-    linked_source_entry_ids: &id073
+    linked_source_entry_ids: &id074
     - reg_land_and_natural_resource_stream_classification_car_line
-    source_attribute_filters: &id074
+    source_attribute_filters: &id075
     - field: STREAM_CLASS
       operator: eq
       value: '2'
@@ -4995,7 +5001,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id075
+    notes: &id076
     - Step 3 already removed the direct non-forest waterbody area; this later THLB
       step models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -5008,9 +5014,9 @@ parent_steps:
     normalized_subject: Stream class S3 riparian area
     normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table
       15 effective riparian width for S3 streams
-    linked_source_entry_ids: &id076
+    linked_source_entry_ids: &id077
     - reg_land_and_natural_resource_stream_classification_car_line
-    source_attribute_filters: &id077
+    source_attribute_filters: &id078
     - field: STREAM_CLASS
       operator: eq
       value: '3'
@@ -5070,7 +5076,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id078
+    notes: &id079
     - Step 3 already removed the direct non-forest waterbody area; this later THLB
       step models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -5083,9 +5089,9 @@ parent_steps:
     normalized_subject: Stream class S4 riparian area
     normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table
       15 effective riparian width for S4 streams
-    linked_source_entry_ids: &id079
+    linked_source_entry_ids: &id080
     - reg_land_and_natural_resource_stream_classification_car_line
-    source_attribute_filters: &id080
+    source_attribute_filters: &id081
     - field: STREAM_CLASS
       operator: eq
       value: '4'
@@ -5145,7 +5151,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id081
+    notes: &id082
     - Step 3 already removed the direct non-forest waterbody area; this later THLB
       step models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -5158,9 +5164,9 @@ parent_steps:
     normalized_subject: Stream class S5 riparian area
     normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table
       15 effective riparian width for S5 streams
-    linked_source_entry_ids: &id082
+    linked_source_entry_ids: &id083
     - reg_land_and_natural_resource_stream_classification_car_line
-    source_attribute_filters: &id083
+    source_attribute_filters: &id084
     - field: STREAM_CLASS
       operator: eq
       value: '5'
@@ -5220,7 +5226,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id084
+    notes: &id085
     - Step 3 already removed the direct non-forest waterbody area; this later THLB
       step models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -5233,9 +5239,9 @@ parent_steps:
     normalized_subject: Stream class S6 riparian area
     normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table
       15 effective riparian width for S6 streams
-    linked_source_entry_ids: &id085
+    linked_source_entry_ids: &id086
     - reg_land_and_natural_resource_stream_classification_car_line
-    source_attribute_filters: &id086
+    source_attribute_filters: &id087
     - field: STREAM_CLASS
       operator: eq
       value: '6'
@@ -5295,7 +5301,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id087
+    notes: &id088
     - Step 3 already removed the direct wetland polygon area; this later THLB step
       models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -5308,9 +5314,9 @@ parent_steps:
     normalized_subject: Wetland class W1 riparian area
     normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
       15 effective riparian width for W1 wetlands
-    linked_source_entry_ids: &id088
+    linked_source_entry_ids: &id089
     - reg_land_and_natural_resource_wetland_class_car_poly
-    source_attribute_filters: &id089
+    source_attribute_filters: &id090
     - field: SWAMP_CLASS
       operator: eq
       value: w1
@@ -5370,7 +5376,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id090
+    notes: &id091
     - Step 3 already removed the direct wetland polygon area; this later THLB step
       models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -5383,9 +5389,9 @@ parent_steps:
     normalized_subject: Wetland class W2 riparian area
     normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
       15 effective riparian width for W2 wetlands
-    linked_source_entry_ids: &id091
+    linked_source_entry_ids: &id092
     - reg_land_and_natural_resource_wetland_class_car_poly
-    source_attribute_filters: &id092
+    source_attribute_filters: &id093
     - field: SWAMP_CLASS
       operator: eq
       value: w2
@@ -5445,7 +5451,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id093
+    notes: &id094
     - Step 3 already removed the direct wetland polygon area; this later THLB step
       models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -5458,9 +5464,9 @@ parent_steps:
     normalized_subject: Wetland class W3 riparian area
     normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
       15 effective riparian width for W3 wetlands
-    linked_source_entry_ids: &id094
+    linked_source_entry_ids: &id095
     - reg_land_and_natural_resource_wetland_class_car_poly
-    source_attribute_filters: &id095
+    source_attribute_filters: &id096
     - field: SWAMP_CLASS
       operator: eq
       value: w3
@@ -5520,7 +5526,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id096
+    notes: &id097
     - Step 3 already removed the direct wetland polygon area; this later THLB step
       models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -5533,9 +5539,9 @@ parent_steps:
     normalized_subject: Wetland class W4 riparian area
     normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
       15 effective riparian width for W4 wetlands
-    linked_source_entry_ids: &id097
+    linked_source_entry_ids: &id098
     - reg_land_and_natural_resource_wetland_class_car_poly
-    source_attribute_filters: &id098
+    source_attribute_filters: &id099
     - field: SWAMP_CLASS
       operator: eq
       value: w4
@@ -5595,7 +5601,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id099
+    notes: &id100
     - Step 3 already removed the direct wetland polygon area; this later THLB step
       models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -5608,9 +5614,9 @@ parent_steps:
     normalized_subject: Wetland class W5 riparian area
     normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
       15 effective riparian width for W5 wetlands
-    linked_source_entry_ids: &id100
+    linked_source_entry_ids: &id101
     - reg_land_and_natural_resource_wetland_class_car_poly
-    source_attribute_filters: &id101
+    source_attribute_filters: &id102
     - field: SWAMP_CLASS
       operator: eq
       value: w5
@@ -5670,7 +5676,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id102
+    notes: &id103
     - Table 15 includes lake classes L1-B, L2, and L3/L4, but the current TSA29 instance
       does not yet have a trustworthy lake-class artifact wired into the notebook
       bridge.
@@ -5682,7 +5688,7 @@ parent_steps:
     normalized_subject: Lake riparian classes
     normalized_predicate: requires a reviewed Cariboo lake-class surface before automated
       L1/L2/L3/L4 riparian buffering can run
-    linked_source_entry_ids: &id103
+    linked_source_entry_ids: &id104
     - whse_basemapping_fwa_lakes_poly
   - step_id: thlb_parent_018_riparian_areas_compiled_s4_special_review
     parent_step_id: thlb_parent_018_riparian_areas
@@ -5739,7 +5745,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id104
+    notes: &id105
     - TSA29 section 6.4.2 increases the S4 riparian area width in the Niut SRDZ and
       South Chilcotin SRDZ to protect dolly varden trout habitat. This first runnable
       pass leaves that special-case refinement as reviewed/manual logic.
@@ -5751,7 +5757,7 @@ parent_steps:
     normalized_subject: Niut and South Chilcotin S4 special width
     normalized_predicate: requires a reviewed LU/SRDZ overlay to increase S4 riparian
       width to 30 metres in the Niut and South Chilcotin areas
-    linked_source_entry_ids: &id105
+    linked_source_entry_ids: &id106
     - reg_land_and_natural_resource_stream_classification_car_line
     - rmp_landscape_unit_svw
     - whse_land_use_planning_rmp_plan_legal_poly_svw
@@ -5879,7 +5885,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=30
     source_url: ''
-    notes: &id106
+    notes: &id107
     - TSA29 section 6.3.6 says at least 85% of the area within the 100-metre trail
       corridor will not be available for harvest.
     - Notebook execution models that rule by shrinking the legal 100-metre buffered-trail
@@ -5893,9 +5899,9 @@ parent_steps:
     normalized_subject: Buffered trail areas
     normalized_predicate: shrink the legal 100-metre buffered-trail polygons by 7.5
       metres and set THLB to 0 on the resulting 85-metre equivalent corridor
-    linked_source_entry_ids: &id107
+    linked_source_entry_ids: &id108
     - whse_land_use_planning_rmp_plan_legal_poly_svw
-    source_attribute_filters: &id108
+    source_attribute_filters: &id109
     - field: LEGAL_FEAT_OBJECTIVE
       operator: eq
       value: Buffered Trail Areas
@@ -6089,7 +6095,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=37
     source_url: ''
-    notes: &id109
+    notes: &id110
     - TSA29 section 6.4.8 says existing mapped WTRA remain in THLB and are deferred
       from harvest for 80 years.
     - Notebook execution models only the future WTRA requirement here as an aspatial
@@ -6104,7 +6110,7 @@ parent_steps:
     normalized_subject: Future wildlife tree retention area reduction
     normalized_predicate: apply the TSR-cited future WTRA exclusion as an aspatial
       THLB reduction factor after the spatially executable steps
-    linked_source_entry_ids: &id110 []
+    linked_source_entry_ids: &id111 []
   approved: true
   approval_scope: single_lu_smoke_subset_williams_lake
   approval_note: Soft-approved after Williams Lake LU smoke validation. Step 20 now
@@ -6244,7 +6250,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=37
     source_url: ''
-    notes: &id111
+    notes: &id112
     - TSA29 section 6.4.9 models this as an aspatial THLB reduction rather than a
       single public spatial layer.
     - 'The deduction is anchored to the TSR benchmark area and informed by TNG plus
@@ -6259,7 +6265,7 @@ parent_steps:
     normalized_subject: Cultural heritage and archaeological resources reduction
     normalized_predicate: apply the TSR-cited cultural-heritage THLB reduction as
       an aspatial factor anchored to current licensee and Tsilhqot'in practice
-    linked_source_entry_ids: &id112 []
+    linked_source_entry_ids: &id113 []
   ratchet_state: compiled
   last_notebook_run_status: applied
   last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260406T093017Z.json
@@ -6319,7 +6325,7 @@ parent_steps:
     normalized_action: reference_target
     normalized_subject: ''
     normalized_predicate: ''
-    linked_source_entry_ids: &id113 []
+    linked_source_entry_ids: &id114 []
     step_status: ready
     required: true
     page_number: null
@@ -6329,7 +6335,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
     source_url: ''
-    notes: &id114 []
+    notes: &id115 []
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: null
     benchmark_cumulative_area_ha: 1682843.0
@@ -6458,7 +6464,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=27
     source_url: ''
-    notes: &id115
+    notes: &id116
     - TSA29 section 6.2.3 says future roads are estimated from current performance
       and RESULTS data rather than a mapped future-road layer.
     - Notebook execution treats this as an early-stage AFLB area reduction and scales
@@ -6475,7 +6481,7 @@ parent_steps:
     normalized_subject: Future roads, trails, and landings area reduction
     normalized_predicate: apply the TSR-cited future RTL deduction as an aspatial
       stand-area reduction across the AFLB working land base
-    linked_source_entry_ids: &id116 []
+    linked_source_entry_ids: &id117 []
   ratchet_state: compiled
   last_notebook_run_status: applied
   last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260406T212227Z.json
@@ -6518,7 +6524,7 @@ parent_steps:
     normalized_action: reference_target
     normalized_subject: long-term thlb
     normalized_predicate: Long-term THLB
-    linked_source_entry_ids: &id117 []
+    linked_source_entry_ids: &id118 []
     step_status: ready
     required: true
     page_number: null
@@ -6528,7 +6534,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
     source_url: ''
-    notes: &id118 []
+    notes: &id119 []
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: null
     benchmark_cumulative_area_ha: 1660053.0
@@ -7691,9 +7697,9 @@ steps:
   land_base_stage: lhlb_to_thlb
   stage_label: LHLB -> THLB
   execution_class: projected_harvest_exclusion
-  compiled_operation_type: manual_review_required
-  step_status: manual_review_required
-  required: false
+  compiled_operation_type: select_attribute
+  step_status: ready
+  required: true
   page_number: 32
   document_title: ''
   document_type: data_package
@@ -7706,11 +7712,13 @@ steps:
   benchmark_marginal_area_ha: 33533.0
   benchmark_cumulative_area_ha: 2250824.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-  normalized_action: review
+  normalized_action: exclude
   normalized_subject: Steep slope thresholds east and west of Highway 97
-  normalized_predicate: review slope > 70% east of Highway 97 and slope > 40% west
-    of Highway 97 with a reviewed slope-angle source and Highway 97 split
-  linked_source_entry_ids: *id056
+  normalized_predicate: set THLB to 0 where checkpoint-derived stand attributes identify
+    slope > 70% east of Highway 97 or slope > 40% west of Highway 97
+  checkpoint_attribute_mode: any
+  checkpoint_attribute_filters: *id056
+  linked_source_entry_ids: *id057
 - step_id: thlb_parent_014_sites_with_low_growing_timber_potential_compiled_01
   parent_step_id: thlb_parent_014_sites_with_low_growing_timber_potential
   parent_label: Sites with low growing timber potential
@@ -7782,7 +7790,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=33
   source_url: ''
-  notes: *id057
+  notes: *id058
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 321044.0
   benchmark_cumulative_area_ha: 1929780.0
@@ -7791,7 +7799,7 @@ steps:
   normalized_subject: Curve-driven low productivity threshold
   normalized_predicate: set THLB to 0 where assigned curve volume falls below 80 m3/ha;
     treated curves use volume at CMAI and untreated curves use culmination volume
-  linked_source_entry_ids: *id058
+  linked_source_entry_ids: *id059
   curve_id_column: curve1
   minimum_volume_m3_per_ha: 80.0
 - step_id: thlb_parent_014_sites_with_low_growing_timber_potential_compiled_02
@@ -7865,7 +7873,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=33
   source_url: ''
-  notes: *id059
+  notes: *id060
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 321044.0
   benchmark_cumulative_area_ha: 1929780.0
@@ -7875,7 +7883,7 @@ steps:
   normalized_predicate: apply the 250 m3/ha threshold only after a reviewed steep-slope
     mask is available; current notebook bridge does not auto-derive a defensible stand-level
     steep class from VRI alone
-  linked_source_entry_ids: *id060
+  linked_source_entry_ids: *id061
 - step_id: thlb_parent_015_non_merchantable_timber_profiles_compiled_01
   parent_step_id: thlb_parent_015_non_merchantable_timber_profiles
   parent_label: Non-merchantable timber profiles
@@ -7907,7 +7915,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=35
   source_url: ''
-  notes: *id061
+  notes: *id062
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 49052.0
   benchmark_cumulative_area_ha: 1880728.0
@@ -7917,9 +7925,9 @@ steps:
   normalized_predicate: set THLB to 0 where the leading species code is broadleaf;
     defer broadleaf components in conifer-leading stands to the later broadleaf volume-exclusion
     assumption
-  linked_source_entry_ids: *id062
+  linked_source_entry_ids: *id063
   checkpoint_attribute_mode: any
-  checkpoint_attribute_filters: *id063
+  checkpoint_attribute_filters: *id064
 - step_id: thlb_parent_016_recreation_features_compiled_01
   parent_step_id: thlb_parent_016_recreation_features
   parent_label: Recreation features
@@ -7954,7 +7962,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=36
   source_url: ''
-  notes: *id064
+  notes: *id065
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 9598.0
   benchmark_cumulative_area_ha: 1871130.0
@@ -7963,8 +7971,8 @@ steps:
   normalized_subject: Active recreation polygons
   normalized_predicate: set THLB to 0 where active legally established recreation
     site and reserve polygons intersect the working land base
-  linked_source_entry_ids: *id065
-  source_attribute_filters: *id066
+  linked_source_entry_ids: *id066
+  source_attribute_filters: *id067
 - step_id: thlb_parent_017_growth_and_yield_permanent_sample_plots_compiled_01
   parent_step_id: thlb_parent_017_growth_and_yield_permanent_sample_plots
   parent_label: Growth and yield permanent sample plots
@@ -7985,7 +7993,7 @@ steps:
   normalized_action: exclude
   normalized_subject: ''
   normalized_predicate: ''
-  linked_source_entry_ids: *id067
+  linked_source_entry_ids: *id068
   step_status: ready
   required: true
   page_number: 36
@@ -7995,7 +8003,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=36
   source_url: ''
-  notes: *id068
+  notes: *id069
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 3577.0
   benchmark_cumulative_area_ha: 1867553.0
@@ -8054,7 +8062,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id069
+  notes: *id070
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -8063,8 +8071,8 @@ steps:
   normalized_subject: Stream class S1 riparian area
   normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table 15
     effective riparian width for S1 streams
-  linked_source_entry_ids: *id070
-  source_attribute_filters: *id071
+  linked_source_entry_ids: *id071
+  source_attribute_filters: *id072
   buffer_distance_m: 60.0
 - step_id: thlb_parent_018_riparian_areas_compiled_stream_s2
   parent_step_id: thlb_parent_018_riparian_areas
@@ -8120,7 +8128,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id072
+  notes: *id073
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -8129,8 +8137,8 @@ steps:
   normalized_subject: Stream class S2 riparian area
   normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table 15
     effective riparian width for S2 streams
-  linked_source_entry_ids: *id073
-  source_attribute_filters: *id074
+  linked_source_entry_ids: *id074
+  source_attribute_filters: *id075
   buffer_distance_m: 34.0
 - step_id: thlb_parent_018_riparian_areas_compiled_stream_s3
   parent_step_id: thlb_parent_018_riparian_areas
@@ -8186,7 +8194,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id075
+  notes: *id076
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -8195,8 +8203,8 @@ steps:
   normalized_subject: Stream class S3 riparian area
   normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table 15
     effective riparian width for S3 streams
-  linked_source_entry_ids: *id076
-  source_attribute_filters: *id077
+  linked_source_entry_ids: *id077
+  source_attribute_filters: *id078
   buffer_distance_m: 24.0
 - step_id: thlb_parent_018_riparian_areas_compiled_stream_s4
   parent_step_id: thlb_parent_018_riparian_areas
@@ -8252,7 +8260,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id078
+  notes: *id079
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -8261,8 +8269,8 @@ steps:
   normalized_subject: Stream class S4 riparian area
   normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table 15
     effective riparian width for S4 streams
-  linked_source_entry_ids: *id079
-  source_attribute_filters: *id080
+  linked_source_entry_ids: *id080
+  source_attribute_filters: *id081
   buffer_distance_m: 10.0
 - step_id: thlb_parent_018_riparian_areas_compiled_stream_s5
   parent_step_id: thlb_parent_018_riparian_areas
@@ -8318,7 +8326,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id081
+  notes: *id082
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -8327,8 +8335,8 @@ steps:
   normalized_subject: Stream class S5 riparian area
   normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table 15
     effective riparian width for S5 streams
-  linked_source_entry_ids: *id082
-  source_attribute_filters: *id083
+  linked_source_entry_ids: *id083
+  source_attribute_filters: *id084
   buffer_distance_m: 10.0
 - step_id: thlb_parent_018_riparian_areas_compiled_stream_s6
   parent_step_id: thlb_parent_018_riparian_areas
@@ -8384,7 +8392,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id084
+  notes: *id085
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -8393,8 +8401,8 @@ steps:
   normalized_subject: Stream class S6 riparian area
   normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table 15
     effective riparian width for S6 streams
-  linked_source_entry_ids: *id085
-  source_attribute_filters: *id086
+  linked_source_entry_ids: *id086
+  source_attribute_filters: *id087
   buffer_distance_m: 6.0
 - step_id: thlb_parent_018_riparian_areas_compiled_wetland_w1
   parent_step_id: thlb_parent_018_riparian_areas
@@ -8450,7 +8458,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id087
+  notes: *id088
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -8459,8 +8467,8 @@ steps:
   normalized_subject: Wetland class W1 riparian area
   normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
     15 effective riparian width for W1 wetlands
-  linked_source_entry_ids: *id088
-  source_attribute_filters: *id089
+  linked_source_entry_ids: *id089
+  source_attribute_filters: *id090
   buffer_distance_m: 18.0
 - step_id: thlb_parent_018_riparian_areas_compiled_wetland_w2
   parent_step_id: thlb_parent_018_riparian_areas
@@ -8516,7 +8524,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id090
+  notes: *id091
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -8525,8 +8533,8 @@ steps:
   normalized_subject: Wetland class W2 riparian area
   normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
     15 effective riparian width for W2 wetlands
-  linked_source_entry_ids: *id091
-  source_attribute_filters: *id092
+  linked_source_entry_ids: *id092
+  source_attribute_filters: *id093
   buffer_distance_m: 14.0
 - step_id: thlb_parent_018_riparian_areas_compiled_wetland_w3
   parent_step_id: thlb_parent_018_riparian_areas
@@ -8582,7 +8590,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id093
+  notes: *id094
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -8591,8 +8599,8 @@ steps:
   normalized_subject: Wetland class W3 riparian area
   normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
     15 effective riparian width for W3 wetlands
-  linked_source_entry_ids: *id094
-  source_attribute_filters: *id095
+  linked_source_entry_ids: *id095
+  source_attribute_filters: *id096
   buffer_distance_m: 6.0
 - step_id: thlb_parent_018_riparian_areas_compiled_wetland_w4
   parent_step_id: thlb_parent_018_riparian_areas
@@ -8648,7 +8656,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id096
+  notes: *id097
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -8657,8 +8665,8 @@ steps:
   normalized_subject: Wetland class W4 riparian area
   normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
     15 effective riparian width for W4 wetlands
-  linked_source_entry_ids: *id097
-  source_attribute_filters: *id098
+  linked_source_entry_ids: *id098
+  source_attribute_filters: *id099
   buffer_distance_m: 6.0
 - step_id: thlb_parent_018_riparian_areas_compiled_wetland_w5
   parent_step_id: thlb_parent_018_riparian_areas
@@ -8714,7 +8722,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id099
+  notes: *id100
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -8723,8 +8731,8 @@ steps:
   normalized_subject: Wetland class W5 riparian area
   normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
     15 effective riparian width for W5 wetlands
-  linked_source_entry_ids: *id100
-  source_attribute_filters: *id101
+  linked_source_entry_ids: *id101
+  source_attribute_filters: *id102
   buffer_distance_m: 18.0
 - step_id: thlb_parent_018_riparian_areas_compiled_lakes_review
   parent_step_id: thlb_parent_018_riparian_areas
@@ -8780,7 +8788,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id102
+  notes: *id103
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -8789,7 +8797,7 @@ steps:
   normalized_subject: Lake riparian classes
   normalized_predicate: requires a reviewed Cariboo lake-class surface before automated
     L1/L2/L3/L4 riparian buffering can run
-  linked_source_entry_ids: *id103
+  linked_source_entry_ids: *id104
 - step_id: thlb_parent_018_riparian_areas_compiled_s4_special_review
   parent_step_id: thlb_parent_018_riparian_areas
   parent_label: Riparian areas
@@ -8844,7 +8852,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id104
+  notes: *id105
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -8853,7 +8861,7 @@ steps:
   normalized_subject: Niut and South Chilcotin S4 special width
   normalized_predicate: requires a reviewed LU/SRDZ overlay to increase S4 riparian
     width to 30 metres in the Niut and South Chilcotin areas
-  linked_source_entry_ids: *id105
+  linked_source_entry_ids: *id106
 - step_id: thlb_parent_019_buffered_trails_compiled_01
   parent_step_id: thlb_parent_019_buffered_trails
   parent_label: Buffered trails
@@ -8883,7 +8891,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=30
   source_url: ''
-  notes: *id106
+  notes: *id107
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 8039.0
   benchmark_cumulative_area_ha: 1804681.0
@@ -8892,8 +8900,8 @@ steps:
   normalized_subject: Buffered trail areas
   normalized_predicate: shrink the legal 100-metre buffered-trail polygons by 7.5
     metres and set THLB to 0 on the resulting 85-metre equivalent corridor
-  linked_source_entry_ids: *id107
-  source_attribute_filters: *id108
+  linked_source_entry_ids: *id108
+  source_attribute_filters: *id109
   buffer_distance_m: -7.5
 - step_id: thlb_parent_020_wildlife_tree_retention_areas_compiled_01
   parent_step_id: thlb_parent_020_wildlife_tree_retention_areas
@@ -8927,7 +8935,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=37
   source_url: ''
-  notes: *id109
+  notes: *id110
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 94417.0
   benchmark_cumulative_area_ha: 1710264.0
@@ -8936,7 +8944,7 @@ steps:
   normalized_subject: Future wildlife tree retention area reduction
   normalized_predicate: apply the TSR-cited future WTRA exclusion as an aspatial THLB
     reduction factor after the spatially executable steps
-  linked_source_entry_ids: *id110
+  linked_source_entry_ids: *id111
 - step_id: thlb_parent_021_cultural_heritage_and_archaeological_resources_compiled_01
   parent_step_id: thlb_parent_021_cultural_heritage_and_archaeological_resources
   parent_label: Cultural heritage and archaeological resources
@@ -8981,7 +8989,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=37
   source_url: ''
-  notes: *id111
+  notes: *id112
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 34205.0
   benchmark_cumulative_area_ha: 1676059.0
@@ -8990,7 +8998,7 @@ steps:
   normalized_subject: Cultural heritage and archaeological resources reduction
   normalized_predicate: apply the TSR-cited cultural-heritage THLB reduction as an
     aspatial factor anchored to current licensee and Tsilhqot'in practice
-  linked_source_entry_ids: *id112
+  linked_source_entry_ids: *id113
 - step_id: thlb_parent_022_timber_harvesting_land_base_compiled_01
   parent_step_id: thlb_parent_022_timber_harvesting_land_base
   parent_label: Timber harvesting land base
@@ -9005,7 +9013,7 @@ steps:
   normalized_action: reference_target
   normalized_subject: ''
   normalized_predicate: ''
-  linked_source_entry_ids: *id113
+  linked_source_entry_ids: *id114
   step_status: ready
   required: true
   page_number: null
@@ -9015,7 +9023,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
   source_url: ''
-  notes: *id114
+  notes: *id115
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: null
   benchmark_cumulative_area_ha: 1682843.0
@@ -9103,7 +9111,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=27
   source_url: ''
-  notes: *id115
+  notes: *id116
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 22754.0
   benchmark_cumulative_area_ha: null
@@ -9112,7 +9120,7 @@ steps:
   normalized_subject: Future roads, trails, and landings area reduction
   normalized_predicate: apply the TSR-cited future RTL deduction as an aspatial stand-area
     reduction across the AFLB working land base
-  linked_source_entry_ids: *id116
+  linked_source_entry_ids: *id117
 - step_id: thlb_parent_024_long_term_thlb_compiled_01
   parent_step_id: thlb_parent_024_long_term_thlb
   parent_label: Long-term THLB
@@ -9127,7 +9135,7 @@ steps:
   normalized_action: reference_target
   normalized_subject: long-term thlb
   normalized_predicate: Long-term THLB
-  linked_source_entry_ids: *id117
+  linked_source_entry_ids: *id118
   step_status: ready
   required: true
   page_number: null
@@ -9137,7 +9145,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
   source_url: ''
-  notes: *id118
+  notes: *id119
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: null
   benchmark_cumulative_area_ha: 1660053.0
