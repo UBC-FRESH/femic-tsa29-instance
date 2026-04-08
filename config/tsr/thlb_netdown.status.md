@@ -1,6 +1,6 @@
 # THLB Recipe Build Report: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-08T19:44:56.331329+00:00`
+- Generated UTC: `2026-04-08T19:54:31.589480+00:00`
 - Report mode: `recipe_build`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Source-layer recipe path: `config/tsr/source_layers.recipe.yaml`
@@ -808,11 +808,16 @@
 - Parent step id: `thlb_parent_013_areas_considered_inoperable`
 - Stage: `LHLB -> THLB`
 - Execution class: `projected_harvest_exclusion`
-- Ratchet state: `benchmarked`
+- Ratchet state: `approved`
 - Table provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24`
 - Benchmark marginal deduction: `33533.000 ha`
 - Benchmark cumulative remaining area: `2250824.000 ha`
-- Ratchet note: Attribute-first full-TSA cached 8-bundle validation now executes the Highway 97 steep-slope branch from precompiled DEM/highway checkpoint attributes, but the v1 result overcuts materially. Step 13 removed 43,628.139 ha against the TSR benchmark of 33,533 ha; terrain contributed 16.620 ha while the steep-slope attribute branch contributed 43,611.519 ha. Keep step 13 benchmarked / not approved until the steep-slope attribute path is reconciled to the TSR benchmark.
+- Approval: `soft-approved`
+- Approval scope: `full_tsa_user_directed_acceptance`
+- Approval note: User directed acceptance on the attribute-first 40% west-side run so the TSA29 validation lane can proceed to step 14. The accepted run removed 43,628.139 ha against the TSR benchmark of 33,533 ha, with 16.620 ha from the terrain branch and 43,611.519 ha from the steep-slope branch; keep that overcut caveat explicit for any future refinement.
+- Approved UTC: `2026-04-08T20:08:00Z`
+- Approved by: `user_directive`
+- Ratchet note: Approved by user direction on the attribute-first full-TSA 40% west-side run so the validation pass can move forward. The accepted run still overcuts materially versus the TSR benchmark, so treat the result as an accepted bridge for onward TSA29 work rather than as a reconciled final model of TSR step 13.
 - Supporting prose section: `6.4.3 Areas considered inoperable`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=32`
@@ -826,9 +831,9 @@
     - candidate layers: `terrain_stability`
 - Current compiled status summary: `ready`=2
 - Last notebook run status: `applied`
-- Last notebook removed area: `61846.235 ha`
-- Last notebook remaining area: `2192668.625 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_013_areas_considered_inoperable.20260408T194416Z.json`
+- Last notebook removed area: `43628.139 ha`
+- Last notebook remaining area: `2210886.722 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_013_areas_considered_inoperable.20260408T171029Z.json`
 - Compiled logic:
 
 #### 13.1. Unstable terrain and terrain class 5
@@ -880,7 +885,7 @@
 - Table provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24`
 - Benchmark marginal deduction: `321044.000 ha`
 - Benchmark cumulative remaining area: `1929780.000 ha`
-- Ratchet note: Runnable on the Williams Lake landscape-unit smoke subset using the late-stage curve-ready checkpoint and the 80 m3/ha threshold. Current signal is mechanically correct but still far below the scaled benchmark, so hold for broader/full-TSA validation before approval.
+- Ratchet note: Full-TSA cached 8-bundle validation of the currently executable 80 m3/ha curve-threshold branch removed only 4,527.316 ha against the TSR benchmark of 321,044 ha. Step 14 is therefore still far from approvable in its current partial state; the missing signal sits overwhelmingly in the still-manual steep-slope 250 m3/ha branch and/or in how the TSR operationalizes low-productivity screening beyond the current curve-only executable subset.
 - Supporting prose section: `6.4.4 Sites with low timber growing potential`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=33`
@@ -897,9 +902,9 @@
     - candidate layers: `vri`
 - Current compiled status summary: `manual_review_required`=1, `ready`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `53.336 ha`
-- Last notebook remaining area: `62289.039 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260406T071838Z.json`
+- Last notebook removed area: `4527.316 ha`
+- Last notebook remaining area: `2206359.406 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260408T195424Z.json`
 - Compiled logic:
 
 #### 14.1. Curve-driven low productivity threshold
