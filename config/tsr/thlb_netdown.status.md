@@ -1,10 +1,10 @@
 # THLB Recipe Build Report: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-08T17:13:34.246799+00:00`
+- Generated UTC: `2026-04-08T19:44:56.331329+00:00`
 - Report mode: `recipe_build`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Source-layer recipe path: `config/tsr/source_layers.recipe.yaml`
-- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T171334Z.md`
+- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T194456Z.md`
 
 ## Scope
 
@@ -816,6 +816,7 @@
 - Supporting prose section: `6.4.3 Areas considered inoperable`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=32`
+  - `reference/res_xSteepSlopeLogging.pdf#page=1`
 - Draft subrules:
   - `thlb_parent_013_areas_considered_inoperable_draft_01` | summary=`Areas that are inoperable within the TSA are generally associated with steep slopes.` | operation=`exclude` | review=`draft`
     - candidate layers: `terrain_stability`
@@ -825,9 +826,9 @@
     - candidate layers: `terrain_stability`
 - Current compiled status summary: `ready`=2
 - Last notebook run status: `applied`
-- Last notebook removed area: `43628.139 ha`
-- Last notebook remaining area: `2210886.722 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_013_areas_considered_inoperable.20260408T171029Z.json`
+- Last notebook removed area: `61846.235 ha`
+- Last notebook remaining area: `2192668.625 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_013_areas_considered_inoperable.20260408T194416Z.json`
 - Compiled logic:
 
 #### 13.1. Unstable terrain and terrain class 5

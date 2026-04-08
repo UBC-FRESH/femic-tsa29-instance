@@ -14,7 +14,7 @@ instance_inputs:
   source_layer_overrides_path: config/tsr/source_layer_overrides.yaml
 recipe_contract:
   status: built
-  last_built_utc: '2026-04-08T17:13:33.293646+00:00'
+  last_built_utc: '2026-04-08T19:44:55.768844+00:00'
   notes:
   - Review and refresh this file with `femic tsr thlb-netdown-build`.
   - Keep unsupported or low-confidence steps explicit instead of silently patching
@@ -32,7 +32,7 @@ recipe_contract:
   status_report_path: config/tsr/thlb_reconstructed.status.md
   runtime_status_report_path: runtime/logs/tsr/thlb_reconstructed_status_report-20260405T214635Z.md
   recipe_build_status_report_path: config/tsr/thlb_netdown.status.md
-  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260408T171334Z.md
+  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260408T194456Z.md
   workbench_notebook_path: workbench/tsr/thlb_netdown.workbench.ipynb
   workbench_last_built_utc: '2026-04-08T17:14:08.058056+00:00'
   lock_state:
@@ -52,7 +52,7 @@ recipe_contract:
       frozen_status_report_path: None
       frozen_audit_path: None
       note: None
-  last_parent_step_run_utc: '2026-04-08T17:10:36.811213+00:00'
+  last_parent_step_run_utc: '2026-04-08T19:44:22.242745+00:00'
 parent_steps:
 - parent_step_id: thlb_parent_001_total_tsa_area
   parent_label: Total TSA area
@@ -3541,6 +3541,7 @@ parent_steps:
   subsection_number: 6.4.3
   supporting_provenance_ids:
   - TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=32
+  - reference/res_xSteepSlopeLogging.pdf#page=1
   draft_subrules:
   - subrule_id: thlb_parent_013_areas_considered_inoperable_draft_01
     human_summary: Areas that are inoperable within the TSA are generally associated
@@ -3705,8 +3706,8 @@ parent_steps:
     attribute branch contributed 43,611.519 ha. Keep step 13 benchmarked / not approved
     until the steep-slope attribute path is reconciled to the TSR benchmark.
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_013_areas_considered_inoperable.20260408T171029Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_013_areas_considered_inoperable.20260408T171029Z.feather
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_013_areas_considered_inoperable.20260408T194416Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_013_areas_considered_inoperable.20260408T194416Z.feather
   last_selected_map_ids: []
   last_selected_landscape_units:
   - French Bar
@@ -3832,10 +3833,10 @@ parent_steps:
   - Atnarko
   - Wells Gray Park
   last_input_area_ha: 2977503.74004337
-  last_removed_area_ha: 43628.13887544864
-  last_remaining_area_ha: 2210886.72204918
-  last_benchmark_marginal_delta_ha: 10095.13887544864
-  last_benchmark_cumulative_delta_ha: -39937.27795082005
+  last_removed_area_ha: 61846.235427269945
+  last_remaining_area_ha: 2192668.625497357
+  last_benchmark_marginal_delta_ha: 28313.235427269945
+  last_benchmark_cumulative_delta_ha: -58155.37450264301
 - parent_step_id: thlb_parent_014_sites_with_low_growing_timber_potential
   parent_label: Sites with low growing timber potential
   parent_kind: transformation
