@@ -14,7 +14,7 @@ instance_inputs:
   source_layer_overrides_path: config/tsr/source_layer_overrides.yaml
 recipe_contract:
   status: built
-  last_built_utc: '2026-04-08T07:37:12.387825+00:00'
+  last_built_utc: '2026-04-08T07:54:17.261530+00:00'
   notes:
   - Review and refresh this file with `femic tsr thlb-netdown-build`.
   - Keep unsupported or low-confidence steps explicit instead of silently patching
@@ -32,7 +32,7 @@ recipe_contract:
   status_report_path: config/tsr/thlb_reconstructed.status.md
   runtime_status_report_path: runtime/logs/tsr/thlb_reconstructed_status_report-20260405T214635Z.md
   recipe_build_status_report_path: config/tsr/thlb_netdown.status.md
-  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260408T073713Z.md
+  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260408T075418Z.md
   workbench_notebook_path: workbench/tsr/thlb_netdown.workbench.ipynb
   workbench_last_built_utc: '2026-04-08T07:40:18.550302+00:00'
   lock_state:
@@ -3516,7 +3516,15 @@ parent_steps:
     linked_source_entry_ids: &id051
     - whse_admin_boundaries_pip_consultation
     - whse_land_use_planning_fadm_designated
-  ratchet_state: compiled
+  approved: true
+  approval_scope: full_tsa_public_data_unavailable_skip
+  approval_note: User-directed skip for public-data-only research/teaching use. The
+    TSR logic is documented, but the cited/public PRA boundary path is not publicly
+    downloadable/queryable enough to support a trustworthy automated exclusion surface.
+  ratchet_state: approved
+  ratchet_note: Backing PRA boundary data is not publicly available enough for defensible
+    automation. Skip detailed validation for the public-data-only FEMIC lane and revisit
+    only if a vetted public/reviewed PRA boundary source is later adopted.
 - parent_step_id: thlb_parent_013_areas_considered_inoperable
   parent_label: Areas considered inoperable
   parent_kind: transformation

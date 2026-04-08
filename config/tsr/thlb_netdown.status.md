@@ -1,10 +1,10 @@
 # THLB Recipe Build Report: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-08T07:37:13.588626+00:00`
+- Generated UTC: `2026-04-08T07:54:18.491259+00:00`
 - Report mode: `recipe_build`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Source-layer recipe path: `config/tsr/source_layers.recipe.yaml`
-- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T073713Z.md`
+- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T075418Z.md`
 
 ## Scope
 
@@ -755,10 +755,14 @@
 - Parent step id: `thlb_parent_012_proven_aboriginal_rights_areas`
 - Stage: `AFLB -> LHLB`
 - Execution class: `legal_harvest_exclusion`
-- Ratchet state: `compiled`
+- Ratchet state: `approved`
 - Table provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24`
 - Benchmark marginal deduction: `68401.000 ha`
 - Benchmark cumulative remaining area: `2284357.000 ha`
+- Approval: `soft-approved`
+- Approval scope: `full_tsa_public_data_unavailable_skip`
+- Approval note: User-directed skip for public-data-only research/teaching use. The TSR logic is documented, but the cited/public PRA boundary path is not publicly downloadable/queryable enough to support a trustworthy automated exclusion surface.
+- Ratchet note: Backing PRA boundary data is not publicly available enough for defensible automation. Skip detailed validation for the public-data-only FEMIC lane and revisit only if a vetted public/reviewed PRA boundary source is later adopted.
 - Supporting prose section: `6.4.1 Proven Aboriginal Rights area`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31`
