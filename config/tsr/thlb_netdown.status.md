@@ -1,10 +1,10 @@
 # THLB Recipe Build Report: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-08T07:54:18.491259+00:00`
+- Generated UTC: `2026-04-08T15:37:47.798554+00:00`
 - Report mode: `recipe_build`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Source-layer recipe path: `config/tsr/source_layers.recipe.yaml`
-- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T075418Z.md`
+- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T153747Z.md`
 
 ## Scope
 
@@ -812,7 +812,7 @@
 - Table provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24`
 - Benchmark marginal deduction: `33533.000 ha`
 - Benchmark cumulative remaining area: `2250824.000 ha`
-- Ratchet note: Runnable on the Williams Lake landscape-unit smoke subset using the terrain-stability portion of TSR 6.4.3. Current result is a no-signal noop on this subset, while the Highway 97 steep-slope branch remains manual review pending a reviewed slope-angle source and partition. Hold for later validation on a more informative subset or during full-TSA validation.
+- Ratchet note: Full-TSA cached 8-bundle validation of the current auto-runnable terrain-stability subset removed only 16.620 ha against the step benchmark of 33,533 ha. Step 13 is therefore not approvable on the current public-data bridge; the Highway 97 east/west steep-slope thresholds still carry most of the missing benchmark signal and remain manual review pending a reviewed slope-angle source and partition.
 - Supporting prose section: `6.4.3 Areas considered inoperable`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=32`
@@ -825,9 +825,9 @@
     - candidate layers: `terrain_stability`
 - Current compiled status summary: `manual_review_required`=1, `ready`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `0.000 ha`
-- Last notebook remaining area: `43187.514 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_013_areas_considered_inoperable.20260406T064416Z.json`
+- Last notebook removed area: `16.620 ha`
+- Last notebook remaining area: `2254498.241 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_013_areas_considered_inoperable.20260408T153400Z.json`
 - Compiled logic:
 
 #### 13.1. Unstable terrain and terrain class 5
