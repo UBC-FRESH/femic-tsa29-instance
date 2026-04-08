@@ -1,10 +1,10 @@
 # THLB Recipe Build Report: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-08T05:47:03.382967+00:00`
+- Generated UTC: `2026-04-08T06:40:44.296259+00:00`
 - Report mode: `recipe_build`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Source-layer recipe path: `config/tsr/source_layers.recipe.yaml`
-- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T054703Z.md`
+- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T064044Z.md`
 
 ## Scope
 
@@ -598,29 +598,35 @@
 - Parent step id: `thlb_parent_009_critical_habitat_for_fish`
 - Stage: `AFLB -> LHLB`
 - Execution class: `legal_harvest_exclusion`
-- Ratchet state: `benchmarked`
+- Ratchet state: `approved`
 - Table provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24`
 - Benchmark marginal deduction: `11521.000 ha`
 - Benchmark cumulative remaining area: `2415545.000 ha`
-- Ratchet note: Full-TSA validation shows the current critical-fish-habitat executable logic is far too aggressive. Hold this step unapproved until the LAO/critical-habitat source and filter logic are tightened.
+- Ratchet note: Full-TSA validation brought step 9 into the right benchmark regime. Residual overcut versus the TSR benchmark was judged acceptable and the step is green-lit so the TSA29 ladder can keep moving.
 - Supporting prose section: `6.3.4 Critical habitat for fish`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=30`
 - Draft subrules:
-  - `thlb_parent_009_critical_habitat_for_fish_draft_01` | summary=`Areas of critical habitat for fish that require protection and site-specific management actions were identified as part of the LAO.` | operation=`exclude` | review=`draft`
-    - candidate layers: `whse_wildlife_management_wcp_wildlife`, `whse_wildlife_management_wcp_wildlife_habitat_area`
-  - `thlb_parent_009_critical_habitat_for_fish_draft_02` | summary=`The LAO specifies that the areas are to be maintained as no-harvest areas.` | operation=`exclude` | review=`draft`
-    - candidate layers: `whse_wildlife_management_wcp_wildlife`, `whse_wildlife_management_wcp_wildlife_habitat_area`
-  - `thlb_parent_009_critical_habitat_for_fish_draft_03` | summary=`Critical fish habitat will be excluded from the LHLB.` | operation=`exclude` | review=`draft`
-    - candidate layers: `reg_land_and_natural_resource_wld`
+  - `thlb_parent_009_critical_habitat_for_fish_draft_01` | summary=`Use the legal CCLUP critical-fish-habitat polygons from the Section 93.4 LAO / Map 4 source, not wildlife proxy layers.` | operation=`exclude` | review=`draft`
+    - candidate layers: `whse_land_use_planning_rmp_plan_legal_poly_svw`
+    - candidate fields: `STRGC_LAND_RSRCE_PLAN_NAME`, `LEGAL_FEAT_OBJECTIVE`, `LEGAL_FEAT_ATRB_1_VALUE`
+    - candidate values: `Cariboo Chilcotin Land Use Plan`, `Critical Habitat for Fish`, `CRITFISH`
+    - field/value mapping notes:
+      - Keep the executable query inside the legal-planning fish-objective layer.
+      - Do not revert to wildlife-habitat proxy layers for this parent step.
+  - `thlb_parent_009_critical_habitat_for_fish_draft_02` | summary=`Treat the mapped critical-fish-habitat polygons as no-harvest areas within the LHLB.` | operation=`exclude` | review=`draft`
+    - candidate layers: `whse_land_use_planning_rmp_plan_legal_poly_svw`
+    - candidate values: `no harvest`, `Section 93.4 LAO`
+    - field/value mapping notes:
+      - If later refinement is needed, narrow the legal fish-objective attributes rather than swapping data sources.
 - Current compiled status summary: `ready`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `141591.014 ha`
-- Last notebook remaining area: `2199952.308 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_009_critical_habitat_for_fish.20260408T005707Z.json`
+- Last notebook removed area: `17482.824 ha`
+- Last notebook remaining area: `2324060.498 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_009_critical_habitat_for_fish.20260408T063444Z.json`
 - Compiled logic:
 
-#### 9.1. Critical habitat for fish
+#### 9.1. Critical fish habitat
 
 - Step id: `thlb_parent_009_critical_habitat_for_fish_compiled_01`
 - Kind: `netdown_rule`
@@ -629,17 +635,13 @@
 - Run status: `ready`
 - TSR provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=30`
 - TSR page: `30`
-- TSR text: `Areas of critical habitat for fish that require protection and site-specific management actions were identified as part of the LAO. The LAO specifies that the areas are to be maintained as no-harvest areas. Critical fish habitat will be excluded from the LHLB.`
+- TSR text: `Areas of critical habitat for fish that require protection and site-specific management actions were identified as part of the LAO. The LAO specifies that the areas are to be maintained as no-harvest areas. Critical fish habitat will be excluded from the LHLB. Table 10. Critical habitat for fish Designations Total (ha) Forested (ha) Excluded (ha) Critical habitat for fish 51,553 20,501 11,521 Data source and comments: Critical fish habitat area boundaries are from the Section 93.4 LAO establishing objectives for the CCLUP, May 19, 2010, amended April 18, 2011, and consolidated to September 6, 2018. Map 4.`
 - FEMIC proposed logic: Exclude the linked polygons from THLB where they intersect the working land base; the exact execution mode depends on available data and current implementation support.
 - Linked source layers:
-  - `whse_wildlife_management_wcp_wildlife` | query=`WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE` | status=`exact_hit` | strategy=`wfs_fetch`
-    - artifact: `data/downloads/bcdc/WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE/WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE.gpkg`
-    - matched by: `object_name_stem:WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA_POLY`
-    - top match: `Wildlife Habitat Areas - Approved`
-  - `whse_wildlife_management_wcp_wildlife_habitat_area` | query=`WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA` | status=`alias_hit` | strategy=`wfs_fetch`
-    - artifact: `data/downloads/bcdc/WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE_HABITAT_AREA/WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE_HABITAT_AREA.gpkg`
-    - matched by: `object_name:WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA_POLY`
-    - top match: `Wildlife Habitat Areas - Approved`
+  - `whse_land_use_planning_rmp_plan_legal_poly_svw` | query=`WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW` | status=`exact_hit` | strategy=`wfs_fetch`
+    - artifact: `data/downloads/bcdc/WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL_POLY_SVW/WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL_POLY_SVW.gpkg`
+    - matched by: `object_name:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW`
+    - top match: `Legal Planning Objectives - Current - Polygon`
 - Logic mode: `femic_core`
 
 ### 10. Lakeshore management
