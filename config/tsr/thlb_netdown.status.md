@@ -1,10 +1,10 @@
 # THLB Recipe Build Report: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-06T09:55:39.245946+00:00`
+- Generated UTC: `2026-04-08T05:47:03.382967+00:00`
 - Report mode: `recipe_build`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Source-layer recipe path: `config/tsr/source_layers.recipe.yaml`
-- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260406T094746Z.md`
+- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T054703Z.md`
 
 ## Scope
 
@@ -96,9 +96,9 @@
     - candidate values: `lease`
 - Current compiled status summary: `manual_review_required`=1, `ready`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `31847.282 ha`
-- Last notebook remaining area: `71368.205 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_002_land_not_administered_by_the_province.20260406T035313Z.json`
+- Last notebook removed area: `221602.052 ha`
+- Last notebook remaining area: `4937338.492 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_002_land_not_administered_by_the_province.20260406T190950Z.json`
 - Compiled logic:
 
 #### 2.1. Ownership classes not administered for TSA timber supply
@@ -182,9 +182,9 @@
     - candidate layers: `freshwater_atlas`
 - Current compiled status summary: `ready`=2
 - Last notebook run status: `applied`
-- Last notebook removed area: `21756.313 ha`
-- Last notebook remaining area: `49611.893 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_003_non_forest.20260406T041454Z.json`
+- Last notebook removed area: `2015120.946 ha`
+- Last notebook remaining area: `2922217.545 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_003_non_forest.20260406T194836Z.json`
 - Compiled logic:
 
 #### 3.1. Non-forest
@@ -262,9 +262,9 @@
     - candidate layers: `road_network`
 - Current compiled status summary: `manual_review_required`=1, `ready`=2
 - Last notebook run status: `applied`
-- Last notebook removed area: `1470.416 ha`
-- Last notebook remaining area: `48141.476 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_004_roads_and_landings.20260406T042102Z.json`
+- Last notebook removed area: `1557.111 ha`
+- Last notebook remaining area: `75982.254 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_004_roads_and_landings.20260406T223553Z.json`
 - Compiled logic:
 
 #### 4.1. Existing public and resource roads
@@ -326,13 +326,7 @@
 - Parent step id: `thlb_parent_023_future_roads`
 - Stage: `GLB -> AFLB`
 - Execution class: `drop_from_universe`
-- Ratchet state: `approved`
-- Approval: `soft-approved`
-- Approval scope: `single_lu_smoke_subset_williams_lake`
-- Approval notes:
-  - Soft-approved after moving future roads into the early AFLB area-reduction lane.
-  - Step now writes deterministic effective-area state through `FEMIC_EFFECTIVE_AREA_SQM` instead of shrinking canonical stand-area fields or THLB retention.
-  - Pending later full-TSA validation with the complete TSA29 netdown ladder.
+- Ratchet state: `compiled`
 - Table provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24`
 - Benchmark marginal deduction: `22754.000 ha`
 - Supporting prose section: `6.2.3 Roads and landings`
@@ -346,9 +340,9 @@
       - Do not model this step through THLB retention; reduce the stand-area fields that flow downstream into fragments instead.
 - Current compiled status summary: `ready`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `222.029 ha`
-- Last notebook remaining area: `47919.447 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260406T095537Z.json`
+- Last notebook removed area: `13461.641 ha`
+- Last notebook remaining area: `2905358.090 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260406T212227Z.json`
 - Compiled logic:
 
 #### 23.1. Future roads, trails, and landings area reduction
@@ -392,11 +386,11 @@
     - candidate layers: `whse_forest_vegetation_f_own`
     - candidate fields: `OWNERSHIP_CLASS`
     - candidate values: `woodlot`
-- Current compiled status summary: `manual_review_required`=1, `ready`=1
+- Current compiled status summary: `ready`=2
 - Last notebook run status: `applied`
-- Last notebook removed area: `0.000 ha`
-- Last notebook remaining area: `48141.476 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_006_parks_protected_areas_area_base_tenures.20260406T051757Z.json`
+- Last notebook removed area: `275618.199 ha`
+- Last notebook remaining area: `2701885.541 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_006_parks_protected_areas_area_base_tenures.20260407T223257Z.json`
 - Compiled logic:
 
 #### 6.1. Parks and protected areas
@@ -423,11 +417,11 @@
 - Kind: `netdown_rule`
 - Stage: `AFLB -> LHLB`
 - Execution class: `legal_harvest_exclusion`
-- Run status: `manual_review_required`
+- Run status: `ready`
 - TSR provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=28`
 - TSR page: `28`
 - TSR text: `The parks, protected areas, and woodlots that were included in the AFLB to contribute to forest management objectives in the context of TSA timber supply, will be removed at this stage. A further check will be performed using current boundary mapping for woodlots, parks, and protected areas to ensure all areas were appropriately excluded. Woodlots that are no longer active will be included in the LHLB. Table 7. Parks, protected areas, and small area-based tenures Designations Total (ha) Forested (ha) Excluded (ha) Conservancy areas 596,471 260,215 260,028 Wildlife management areas 521 221 221 Heritage sites 106 81 78 Miscellaneous reserves 271,808 184,769 11,586 Woodlots 35,789 34,133 33,217 Crown and miscellaneous leases 31,049 24,842 1,197`
-- FEMIC proposed logic: Area-based tenures and woodlots requires explicit tenure overlays or reviewed ownership logic before automation
+- FEMIC proposed logic: Exclude the linked polygons from THLB where they intersect the working land base; the exact execution mode depends on available data and current implementation support.
 - Linked source layers:
   - `whse_forest_vegetation_f_own` | query=`WHSE_FOREST_VEGETATION.F_OWN` | status=`exact_hit` | strategy=`wfs_fetch`
     - artifact: `data/downloads/bcdc/WHSE_FOREST_VEGETATION_F_OWN/WHSE_FOREST_VEGETATION_F_OWN.gpkg`
@@ -445,10 +439,11 @@
 - Benchmark marginal deduction: `210719.000 ha`
 - Benchmark cumulative remaining area: `2581122.000 ha`
 - Approval: `soft-approved`
-- Approval scope: `single_lu_smoke_subset_williams_lake`
-- Approval note: Soft-approved on the Williams Lake landscape-unit smoke subset; pending definitive full-TSA validation after the remaining parent steps are soft-validated.
+- Approval scope: `full_tsa_validation`
+- Approval note: Soft-approved after full-TSA validation. Step 7 now follows TSA29 section 6.3.2 more faithfully by excluding only PERM and ROT legal OGMAs in the executable base-case mask while keeping transition OGMAs as contextual/temporal follow-up logic.
 - Approved UTC: `2026-04-06T04:45:00+00:00`
 - Approved by: `user_directed_review`
+- Ratchet note: Soft-approved after full-TSA validation using the narrowed PERM/ROT-only legal OGMA mask. Keep transition OGMA timing/restoration and harvest-exception logic out of the base executable exclusion surface for now.
 - Supporting prose section: `6.3.2 Old growth management areas`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=29`
@@ -469,9 +464,9 @@
     - candidate layers: `rmp_ogma_legal`, `whse_land_use_planning_rmp_ogma_legal`
 - Current compiled status summary: `ready`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `4882.091 ha`
-- Last notebook remaining area: `43259.385 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_007_old_growth_management_areas.20260406T052250Z.json`
+- Last notebook removed area: `227336.336 ha`
+- Last notebook remaining area: `2474549.205 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_007_old_growth_management_areas.20260408T004016Z.json`
 - Compiled logic:
 
 #### 7.1. Old growth management areas
@@ -490,10 +485,6 @@
     - artifact: `data/downloads/bcdc/RMP_OGMA_LEGAL/RMP_OGMA_LEGAL.gpkg`
     - matched by: `object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW`
     - top match: `Old Growth Management Areas - Legal - Current`
-  - `whse_land_use_planning_rmp_ogma_legal` | query=`WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL` | status=`alias_hit` | strategy=`wfs_fetch`
-    - artifact: `data/downloads/bcdc/WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL/WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL.gpkg`
-    - matched by: `object_name:WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW`
-    - top match: `Old Growth Management Areas - Legal - Current`
 - Logic mode: `femic_core`
 
 ### 8. Wildlife habitat areas
@@ -501,11 +492,16 @@
 - Parent step id: `thlb_parent_008_wildlife_habitat_areas`
 - Stage: `AFLB -> LHLB`
 - Execution class: `legal_harvest_exclusion`
-- Ratchet state: `benchmarked`
+- Ratchet state: `approved`
 - Table provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24`
 - Benchmark marginal deduction: `154056.000 ha`
 - Benchmark cumulative remaining area: `2427066.000 ha`
-- Ratchet note: Conceptual wildlife harvest-zone logic now matches TSA29 section 6.3.3 (exclude only NO HARVEST ZONE here; defer CONDITIONAL HARVEST ZONE), but this Williams Lake LU smoke run is not benchmark-close enough for soft approval. Keep this step unapproved pending broader/full-TSA validation.
+- Approval: `soft-approved`
+- Approval scope: `full_tsa_validation`
+- Approval note: Soft-approved after full-TSA validation. Step 8 keeps the TSA29 section 6.3.3 contract intact by excluding only no-harvest wildlife zones while deferring conditional harvest zones to later assumptions logic, and the full-TSA result is reasonably close to the Table 3 benchmark.
+- Approved UTC: `2026-04-08T01:05:00+00:00`
+- Approved by: `user_directed_review`
+- Ratchet note: Soft-approved after full-TSA validation using the no-harvest-only wildlife exclusion mask. Keep conditional harvest zones deferred to later assumptions and silviculture logic.
 - Supporting prose section: `6.3.3 Wildlife habitat areas`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=29`
@@ -526,9 +522,9 @@
     - candidate values: `CONDITIONAL HARVEST ZONE`
 - Current compiled status summary: `manual_review_required`=1, `ready`=2
 - Last notebook run status: `applied`
-- Last notebook removed area: `13.619 ha`
-- Last notebook remaining area: `43245.766 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_008_wildlife_habitat_areas.20260406T052607Z.json`
+- Last notebook removed area: `133005.883 ha`
+- Last notebook remaining area: `2341543.322 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_008_wildlife_habitat_areas.20260408T005044Z.json`
 - Compiled logic:
 
 #### 8.1. Ungulate winter range no-harvest polygons
@@ -602,15 +598,11 @@
 - Parent step id: `thlb_parent_009_critical_habitat_for_fish`
 - Stage: `AFLB -> LHLB`
 - Execution class: `legal_harvest_exclusion`
-- Ratchet state: `approved`
+- Ratchet state: `benchmarked`
 - Table provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24`
 - Benchmark marginal deduction: `11521.000 ha`
 - Benchmark cumulative remaining area: `2415545.000 ha`
-- Approval: `soft-approved`
-- Approval scope: `single_lu_smoke_subset_williams_lake`
-- Approval note: Soft-approved on the Williams Lake landscape-unit smoke subset; pending definitive full-TSA validation after the remaining parent steps are soft-validated.
-- Approved UTC: `2026-04-06T06:00:00+00:00`
-- Approved by: `user_directed_review`
+- Ratchet note: Full-TSA validation shows the current critical-fish-habitat executable logic is far too aggressive. Hold this step unapproved until the LAO/critical-habitat source and filter logic are tightened.
 - Supporting prose section: `6.3.4 Critical habitat for fish`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=30`
@@ -623,9 +615,9 @@
     - candidate layers: `reg_land_and_natural_resource_wld`
 - Current compiled status summary: `ready`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `58.252 ha`
-- Last notebook remaining area: `43187.514 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_009_critical_habitat_for_fish.20260406T054241Z.json`
+- Last notebook removed area: `141591.014 ha`
+- Last notebook remaining area: `2199952.308 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_009_critical_habitat_for_fish.20260408T005707Z.json`
 - Compiled logic:
 
 #### 9.1. Critical habitat for fish

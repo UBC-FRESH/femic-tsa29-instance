@@ -14,7 +14,7 @@ instance_inputs:
   source_layer_overrides_path: config/tsr/source_layer_overrides.yaml
 recipe_contract:
   status: built
-  last_built_utc: '2026-04-06T09:47:45.697033+00:00'
+  last_built_utc: '2026-04-08T05:47:02.497411+00:00'
   notes:
   - Review and refresh this file with `femic tsr thlb-netdown-build`.
   - Keep unsupported or low-confidence steps explicit instead of silently patching
@@ -32,9 +32,9 @@ recipe_contract:
   status_report_path: config/tsr/thlb_reconstructed.status.md
   runtime_status_report_path: runtime/logs/tsr/thlb_reconstructed_status_report-20260405T214635Z.md
   recipe_build_status_report_path: config/tsr/thlb_netdown.status.md
-  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260406T094746Z.md
+  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260408T054703Z.md
   workbench_notebook_path: workbench/tsr/thlb_netdown.workbench.ipynb
-  workbench_last_built_utc: '2026-04-06T09:56:42.173103+00:00'
+  workbench_last_built_utc: '2026-04-07T07:33:06.760255+00:00'
   lock_state:
     aflb:
       locked: false
@@ -52,7 +52,7 @@ recipe_contract:
       frozen_status_report_path: None
       frozen_audit_path: None
       note: None
-  last_parent_step_run_utc: '2026-04-06T09:55:37.588937+00:00'
+  last_parent_step_run_utc: '2026-04-07T23:08:59.590888+00:00'
 parent_steps:
 - parent_step_id: thlb_parent_001_total_tsa_area
   parent_label: Total TSA area
@@ -562,32 +562,15 @@ parent_steps:
   approved_by: user_directed_review
   ratchet_state: approved
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_002_land_not_administered_by_the_province.20260406T035313Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_002_land_not_administered_by_the_province.20260406T035313Z.feather
-  last_selected_map_ids:
-  - 092P081
-  - 092P091
-  - 092P092
-  - 092P093
-  - 093A001
-  - 093A002
-  - 093A003
-  - 093A011
-  - 093A012
-  - 093A021
-  - 093B009
-  - 093B010
-  - 093B019
-  - 093B020
-  - 093B029
-  - 093B030
-  last_selected_landscape_units:
-  - Williams Lake
-  last_input_area_ha: 103215.48684773514
-  last_removed_area_ha: 31847.281519648743
-  last_remaining_area_ha: 71368.20532808642
-  last_benchmark_marginal_delta_ha: -665185.7184803513
-  last_benchmark_cumulative_delta_ha: -4165233.7946719136
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_002_land_not_administered_by_the_province.20260406T190950Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_002_land_not_administered_by_the_province.20260406T190950Z.feather
+  last_selected_map_ids: []
+  last_selected_landscape_units: []
+  last_input_area_ha: 5158940.54411499
+  last_removed_area_ha: 221602.05236356534
+  last_remaining_area_ha: 4937338.491750855
+  last_benchmark_marginal_delta_ha: -475430.9476364347
+  last_benchmark_cumulative_delta_ha: 700736.491750855
 - parent_step_id: thlb_parent_003_non_forest
   parent_label: Non-forest
   parent_kind: transformation
@@ -877,32 +860,15 @@ parent_steps:
   approved_by: user_directed_review
   ratchet_state: approved
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_003_non_forest.20260406T041454Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_003_non_forest.20260406T041454Z.feather
-  last_selected_map_ids:
-  - 092P081
-  - 092P091
-  - 092P092
-  - 092P093
-  - 093A001
-  - 093A002
-  - 093A003
-  - 093A011
-  - 093A012
-  - 093A021
-  - 093B009
-  - 093B010
-  - 093B019
-  - 093B020
-  - 093B029
-  - 093B030
-  last_selected_landscape_units:
-  - Williams Lake
-  last_input_area_ha: 103215.48684773514
-  last_removed_area_ha: 21756.312579206533
-  last_remaining_area_ha: 49611.89274887989
-  last_benchmark_marginal_delta_ha: -1084151.6874207936
-  last_benchmark_cumulative_delta_ha: -3081082.1072511203
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_003_non_forest.20260406T194836Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_003_non_forest.20260406T194836Z.feather
+  last_selected_map_ids: []
+  last_selected_landscape_units: []
+  last_input_area_ha: 5158940.54411499
+  last_removed_area_ha: 2015120.946476626
+  last_remaining_area_ha: 2922217.5452742293
+  last_benchmark_marginal_delta_ha: 909212.946476626
+  last_benchmark_cumulative_delta_ha: -208476.45472577075
 - parent_step_id: thlb_parent_004_roads_and_landings
   parent_label: Roads and landings
   parent_kind: transformation
@@ -1360,9 +1326,20 @@ parent_steps:
   approved_by: user_directed_review
   ratchet_state: approved
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_004_roads_and_landings.20260406T042102Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_004_roads_and_landings.20260406T042102Z.feather
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_004_roads_and_landings.20260406T223553Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_004_roads_and_landings.20260406T223553Z.feather
   last_selected_map_ids:
+  - 092O070
+  - 092O078
+  - 092O079
+  - 092O080
+  - 092O088
+  - 092O089
+  - 092O090
+  - 092O099
+  - 092O100
+  - 092P061
+  - 092P071
   - 092P081
   - 092P091
   - 092P092
@@ -1380,12 +1357,15 @@ parent_steps:
   - 093B029
   - 093B030
   last_selected_landscape_units:
+  - Chimney
+  - Helena Lake
+  - Alkali
   - Williams Lake
-  last_input_area_ha: 103215.48684773514
-  last_removed_area_ha: 1470.416329922987
-  last_remaining_area_ha: 48141.47641895688
-  last_benchmark_marginal_delta_ha: -48963.583670077016
-  last_benchmark_cumulative_delta_ha: -3032118.523581043
+  last_input_area_ha: 232356.01043971998
+  last_removed_area_ha: 1557.1107730105766
+  last_remaining_area_ha: 75982.25404231455
+  last_benchmark_marginal_delta_ha: -48876.88922698942
+  last_benchmark_cumulative_delta_ha: -3004277.7459576856
 - parent_step_id: thlb_parent_005_analysis_forest_land_base
   parent_label: Analysis forest land base
   parent_kind: milestone
@@ -1865,9 +1845,9 @@ parent_steps:
     land_base_stage: aflb_to_lhlb
     stage_label: AFLB -> LHLB
     execution_class: legal_harvest_exclusion
-    compiled_operation_type: manual_review_required
-    step_status: manual_review_required
-    required: false
+    compiled_operation_type: select_spatial_intersect
+    step_status: ready
+    required: true
     page_number: 28
     document_title: ''
     document_type: data_package
@@ -1876,50 +1856,170 @@ parent_steps:
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=28
     source_url: ''
     notes: &id027
-    - Notebook bridge currently auto-runs the parks/protected-areas portion only;
-      small area-based tenures remain review-driven.
+    - TSA29 section 6.2.1 keeps woodlots in AFLB but removes them when defining the
+      LHLB, so woodlot schedules A/B are included here.
+    - This first runnable pass uses the explicit F_OWN ownership descriptions for
+      woodlots and the small miscellaneous crown-lease class cited in TSA29 Table
+      7.
+    - Community forest agreements and first nations woodland licences were already
+      netted out upstream in TSA29 step 2 and are therefore intentionally excluded
+      from this step-6 executable filter.
+    - FTEN managed-licence and TANTALIS crown-tenure layers remain supporting metadata/reference
+      surfaces, but F_OWN is the executable ownership overlay in the TSA29 bridge.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 306327.0
     benchmark_cumulative_area_ha: 2791841.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-    normalized_action: review
+    normalized_action: exclude
     normalized_subject: Area-based tenures and woodlots
-    normalized_predicate: requires explicit tenure overlays or reviewed ownership
-      logic before automation
+    normalized_predicate: exclude mapped area-based tenure and woodlot polygons from
+      the working harvestable land base
     linked_source_entry_ids: &id028
     - whse_forest_vegetation_f_own
+    source_attribute_filters: &id029
+    - field: OWNERSHIP_DESCRIPTION
+      operator: in
+      value:
+      - Crown Lease - Misc. lease
+      - Crown Tenure - Woodlot Licence, Schedule A
+      - Crown Tenure - Woodlot Licence, Schedule B
   ratchet_state: benchmarked
   ratchet_note: Runnable on the Williams Lake landscape-unit smoke subset, but the
     current auto-runnable parks/protected-areas portion produced a no-signal result
     and the area-based tenure / woodlot sublogic remains review-driven. Hold for later
     validation on a more informative subset or after deeper automation.
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_006_parks_protected_areas_area_base_tenures.20260406T051757Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_006_parks_protected_areas_area_base_tenures.20260406T051757Z.feather
-  last_selected_map_ids:
-  - 092P081
-  - 092P091
-  - 092P092
-  - 092P093
-  - 093A001
-  - 093A002
-  - 093A003
-  - 093A011
-  - 093A012
-  - 093A021
-  - 093B009
-  - 093B010
-  - 093B019
-  - 093B020
-  - 093B029
-  - 093B030
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_006_parks_protected_areas_area_base_tenures.20260407T223257Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_006_parks_protected_areas_area_base_tenures.20260407T223257Z.feather
+  last_selected_map_ids: []
   last_selected_landscape_units:
+  - French Bar
+  - Yalakom
+  - Spruce Lake
+  - Entiako
+  - Murphy Lake
+  - McLinchy
+  - Chilanko
+  - Alplands
+  - Pyper
+  - Riske
+  - Chimney
+  - Siwash
+  - Clearwater
+  - Tatla/Little Eagle
+  - Helena Lake
+  - Haines
+  - Big Stick
+  - Bidwell/Lava
+  - Brittany
+  - Nuntzi Elkin
+  - Minton
+  - Alkali
+  - Klinaklini
+  - Farwell
+  - Westbranch
+  - Big Creek
+  - Upper Tatlayoko
+  - Colwell
+  - Tete Angela
+  - Dog Creek
+  - Middle Lake
+  - Bambrick
+  - Cunningham
+  - Swift
+  - Victoria
+  - Dragon
+  - Gerimi
+  - Pan
+  - Eliguk
+  - Little River
+  - Cariboo Lake
+  - Toil
+  - Westside
+  - Downton
+  - Wentworth
+  - Lower Cariboo
+  - Clisbako
+  - Christenson Creek
+  - Beaver Valley
+  - Polley
+  - Big Lake
+  - Punky Moore
+  - Clusko
+  - Gaspard
+  - Nemiah
+  - Cheshi Stikelan
+  - Crazy Creek
+  - Ottarasko
+  - Meadow Lake
+  - Churn
+  - Koster/Lone Cabin
+  - Nude Creek
+  - Hickson
+  - Nostetuko
+  - Tiedemann
+  - Beece Creek
+  - Doran Creek
+  - Dash
+  - Gunn Valley
+  - Upper Churn
+  - Taseko
+  - East Arm
+  - Eastside
+  - Wasko/Lynx
+  - McKay
+  - Black Creek
+  - McKusky
+  - Nimpo
+  - McKinley
+  - Moffat
+  - Anaham
+  - Meldrum
+  - Deception Mountain
+  - Puntzi
   - Williams Lake
-  last_input_area_ha: 103215.48684773514
-  last_removed_area_ha: 0.0
-  last_remaining_area_ha: 48141.47641895688
-  last_benchmark_marginal_delta_ha: -306327.0
-  last_benchmark_cumulative_delta_ha: -2743699.523581043
+  - Hendrix Lake
+  - Upper Klinaklini
+  - Homathko
+  - Ramsey
+  - Likely
+  - Corkscrew
+  - Horsefly
+  - Nazko
+  - Twan
+  - Tautri
+  - Hawks Creek
+  - Holtry
+  - Mackin
+  - Palmer/Jorgenson
+  - Sisters
+  - Alexis
+  - Hotnarko
+  - Telegraph
+  - Atnarko
+  - Upper Dean
+  - Beeftrail
+  - Tusulko
+  - Penfold
+  - Matthew
+  - Mitchell Lake
+  - Niagara
+  - Chilko
+  - Rainbow
+  - Franklyn
+  - Tchaikazan
+  - Lord River
+  - Edmond
+  - Nadila
+  - Upper Big Creek
+  - Young
+  - Atnarko
+  - Wells Gray Park
+  last_input_area_ha: 2977503.74004337
+  last_removed_area_ha: 275618.1991097061
+  last_remaining_area_ha: 2701885.540934199
+  last_benchmark_marginal_delta_ha: -30708.800890293904
+  last_benchmark_cumulative_delta_ha: -89955.459065801
 - parent_step_id: thlb_parent_007_old_growth_management_areas
   parent_label: Old growth management areas
   parent_kind: transformation
@@ -2085,56 +2185,173 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=29
     source_url: ''
-    notes: &id029
-    - Current notebook execution treats the legal OGMA layer as the direct no-harvest
-      exclusion surface.
-    - Transition OGMA restoration timing and exception logic remain later review/calibration
-      work.
+    notes: &id030
+    - Current notebook execution treats only permanent and rotating legal OGMAs as
+      the direct no-harvest exclusion surface.
+    - Transition OGMAs remain contextual/temporal logic and are not hard-excluded
+      in this base-case executable mask.
+    - Harvest exceptions, overlap replacement, and transition restoration timing remain
+      later review/calibration work.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 210719.0
     benchmark_cumulative_area_ha: 2581122.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
     normalized_action: exclude
     normalized_subject: Old growth management areas
-    normalized_predicate: exclude legal OGMA polygons from the working harvestable
-      land base
-    linked_source_entry_ids: &id030
+    normalized_predicate: exclude only permanent and rotating legal OGMA polygons
+      from the working harvestable land base
+    linked_source_entry_ids: &id031
     - rmp_ogma_legal
-    - whse_land_use_planning_rmp_ogma_legal
+    source_attribute_filters: &id032
+    - field: OGMA_TYPE
+      operator: in
+      value:
+      - PERM
+      - ROT
   approved: true
-  approval_scope: single_lu_smoke_subset_williams_lake
-  approval_note: Soft-approved on the Williams Lake landscape-unit smoke subset; pending
-    definitive full-TSA validation after the remaining parent steps are soft-validated.
+  approval_scope: full_tsa_validation
+  approval_note: Soft-approved after full-TSA validation. Step 7 now follows TSA29
+    section 6.3.2 more faithfully by excluding only PERM and ROT legal OGMAs in the
+    executable base-case mask while keeping transition OGMAs as contextual/temporal
+    follow-up logic.
   approved_utc: '2026-04-06T04:45:00+00:00'
   approved_by: user_directed_review
   ratchet_state: approved
+  ratchet_note: Soft-approved after full-TSA validation using the narrowed PERM/ROT-only
+    legal OGMA mask. Keep transition OGMA timing/restoration and harvest-exception
+    logic out of the base executable exclusion surface for now.
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_007_old_growth_management_areas.20260406T052250Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_007_old_growth_management_areas.20260406T052250Z.feather
-  last_selected_map_ids:
-  - 092P081
-  - 092P091
-  - 092P092
-  - 092P093
-  - 093A001
-  - 093A002
-  - 093A003
-  - 093A011
-  - 093A012
-  - 093A021
-  - 093B009
-  - 093B010
-  - 093B019
-  - 093B020
-  - 093B029
-  - 093B030
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_007_old_growth_management_areas.20260408T004016Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_007_old_growth_management_areas.20260408T004016Z.feather
+  last_selected_map_ids: []
   last_selected_landscape_units:
+  - French Bar
+  - Yalakom
+  - Spruce Lake
+  - Entiako
+  - Murphy Lake
+  - McLinchy
+  - Chilanko
+  - Alplands
+  - Pyper
+  - Riske
+  - Chimney
+  - Siwash
+  - Clearwater
+  - Tatla/Little Eagle
+  - Helena Lake
+  - Haines
+  - Big Stick
+  - Bidwell/Lava
+  - Brittany
+  - Nuntzi Elkin
+  - Minton
+  - Alkali
+  - Klinaklini
+  - Farwell
+  - Westbranch
+  - Big Creek
+  - Upper Tatlayoko
+  - Colwell
+  - Tete Angela
+  - Dog Creek
+  - Middle Lake
+  - Bambrick
+  - Cunningham
+  - Swift
+  - Victoria
+  - Dragon
+  - Gerimi
+  - Pan
+  - Eliguk
+  - Little River
+  - Cariboo Lake
+  - Toil
+  - Westside
+  - Downton
+  - Wentworth
+  - Lower Cariboo
+  - Clisbako
+  - Christenson Creek
+  - Beaver Valley
+  - Polley
+  - Big Lake
+  - Punky Moore
+  - Clusko
+  - Gaspard
+  - Nemiah
+  - Cheshi Stikelan
+  - Crazy Creek
+  - Ottarasko
+  - Meadow Lake
+  - Churn
+  - Koster/Lone Cabin
+  - Nude Creek
+  - Hickson
+  - Nostetuko
+  - Tiedemann
+  - Beece Creek
+  - Doran Creek
+  - Dash
+  - Gunn Valley
+  - Upper Churn
+  - Taseko
+  - East Arm
+  - Eastside
+  - Wasko/Lynx
+  - McKay
+  - Black Creek
+  - McKusky
+  - Nimpo
+  - McKinley
+  - Moffat
+  - Anaham
+  - Meldrum
+  - Deception Mountain
+  - Puntzi
   - Williams Lake
-  last_input_area_ha: 103215.48684773514
-  last_removed_area_ha: 4882.0914359183525
-  last_remaining_area_ha: 43259.38498303853
-  last_benchmark_marginal_delta_ha: -205836.90856408165
-  last_benchmark_cumulative_delta_ha: -2537862.6150169615
+  - Hendrix Lake
+  - Upper Klinaklini
+  - Homathko
+  - Ramsey
+  - Likely
+  - Corkscrew
+  - Horsefly
+  - Nazko
+  - Twan
+  - Tautri
+  - Hawks Creek
+  - Holtry
+  - Mackin
+  - Palmer/Jorgenson
+  - Sisters
+  - Alexis
+  - Hotnarko
+  - Telegraph
+  - Atnarko
+  - Upper Dean
+  - Beeftrail
+  - Tusulko
+  - Penfold
+  - Matthew
+  - Mitchell Lake
+  - Niagara
+  - Chilko
+  - Rainbow
+  - Franklyn
+  - Tchaikazan
+  - Lord River
+  - Edmond
+  - Nadila
+  - Upper Big Creek
+  - Young
+  - Atnarko
+  - Wells Gray Park
+  last_input_area_ha: 2977503.74004337
+  last_removed_area_ha: 227336.33591216375
+  last_remaining_area_ha: 2474549.205022035
+  last_benchmark_marginal_delta_ha: 16617.335912163748
+  last_benchmark_cumulative_delta_ha: -106572.79497796483
 - parent_step_id: thlb_parent_008_wildlife_habitat_areas
   parent_label: Wildlife habitat areas
   parent_kind: transformation
@@ -2291,7 +2508,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=29
     source_url: ''
-    notes: &id031
+    notes: &id033
     - TSA29 section 6.3.3 states that only no-harvest wildlife areas are excluded
       at this stage.
     - Conditional harvest zones are deferred to later forest-management assumptions
@@ -2304,10 +2521,10 @@ parent_steps:
     normalized_subject: Ungulate winter range no-harvest polygons
     normalized_predicate: exclude only wildlife polygons where TIMBER_HARVEST_CODE
       = NO HARVEST ZONE
-    linked_source_entry_ids: &id032
+    linked_source_entry_ids: &id034
     - whse_wildlife_management_wcp_ungulate
     - wcp_ungulate_winter_range
-    source_attribute_filters: &id033
+    source_attribute_filters: &id035
     - field: TIMBER_HARVEST_CODE
       operator: eq
       value: NO HARVEST ZONE
@@ -2351,7 +2568,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=29
     source_url: ''
-    notes: &id034
+    notes: &id036
     - General Wildlife Measures with no-harvest direction are excluded here; modified/conditional
       zones are not.
     row_source_kind: table_summary_row
@@ -2362,9 +2579,9 @@ parent_steps:
     normalized_subject: Wildlife habitat area no-harvest polygons
     normalized_predicate: exclude only wildlife polygons where TIMBER_HARVEST_CODE
       = NO HARVEST ZONE
-    linked_source_entry_ids: &id035
+    linked_source_entry_ids: &id037
     - whse_wildlife_management_wcp_wildlife
-    source_attribute_filters: &id036
+    source_attribute_filters: &id038
     - field: TIMBER_HARVEST_CODE
       operator: eq
       value: NO HARVEST ZONE
@@ -2408,7 +2625,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=29
     source_url: ''
-    notes: &id037
+    notes: &id039
     - Section 6.3.3 / later Section 7 wording defers conditional harvest zones instead
       of excluding them at this stage.
     row_source_kind: table_summary_row
@@ -2419,46 +2636,158 @@ parent_steps:
     normalized_subject: Conditional harvest wildlife zones
     normalized_predicate: defer conditional harvest zone treatment to later silviculture
       and assumptions logic
-    linked_source_entry_ids: &id038
+    linked_source_entry_ids: &id040
     - whse_wildlife_management_wcp_ungulate
     - whse_wildlife_management_wcp_wildlife
     - wcp_ungulate_winter_range
-    source_attribute_filters: &id039
+    source_attribute_filters: &id041
     - field: TIMBER_HARVEST_CODE
       operator: eq
       value: CONDITIONAL HARVEST ZONE
-  ratchet_state: benchmarked
-  ratchet_note: Conceptual wildlife harvest-zone logic now matches TSA29 section 6.3.3
-    (exclude only NO HARVEST ZONE here; defer CONDITIONAL HARVEST ZONE), but this
-    Williams Lake LU smoke run is not benchmark-close enough for soft approval. Keep
-    this step unapproved pending broader/full-TSA validation.
+  approved: true
+  approval_scope: full_tsa_validation
+  approval_note: Soft-approved after full-TSA validation. Step 8 keeps the TSA29 section
+    6.3.3 contract intact by excluding only no-harvest wildlife zones while deferring
+    conditional harvest zones to later assumptions logic, and the full-TSA result
+    is reasonably close to the Table 3 benchmark.
+  approved_utc: '2026-04-08T01:05:00+00:00'
+  approved_by: user_directed_review
+  ratchet_state: approved
+  ratchet_note: Soft-approved after full-TSA validation using the no-harvest-only
+    wildlife exclusion mask. Keep conditional harvest zones deferred to later assumptions
+    and silviculture logic.
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_008_wildlife_habitat_areas.20260406T052607Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_008_wildlife_habitat_areas.20260406T052607Z.feather
-  last_selected_map_ids:
-  - 092P081
-  - 092P091
-  - 092P092
-  - 092P093
-  - 093A001
-  - 093A002
-  - 093A003
-  - 093A011
-  - 093A012
-  - 093A021
-  - 093B009
-  - 093B010
-  - 093B019
-  - 093B020
-  - 093B029
-  - 093B030
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_008_wildlife_habitat_areas.20260408T005044Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_008_wildlife_habitat_areas.20260408T005044Z.feather
+  last_selected_map_ids: []
   last_selected_landscape_units:
+  - French Bar
+  - Yalakom
+  - Spruce Lake
+  - Entiako
+  - Murphy Lake
+  - McLinchy
+  - Chilanko
+  - Alplands
+  - Pyper
+  - Riske
+  - Chimney
+  - Siwash
+  - Clearwater
+  - Tatla/Little Eagle
+  - Helena Lake
+  - Haines
+  - Big Stick
+  - Bidwell/Lava
+  - Brittany
+  - Nuntzi Elkin
+  - Minton
+  - Alkali
+  - Klinaklini
+  - Farwell
+  - Westbranch
+  - Big Creek
+  - Upper Tatlayoko
+  - Colwell
+  - Tete Angela
+  - Dog Creek
+  - Middle Lake
+  - Bambrick
+  - Cunningham
+  - Swift
+  - Victoria
+  - Dragon
+  - Gerimi
+  - Pan
+  - Eliguk
+  - Little River
+  - Cariboo Lake
+  - Toil
+  - Westside
+  - Downton
+  - Wentworth
+  - Lower Cariboo
+  - Clisbako
+  - Christenson Creek
+  - Beaver Valley
+  - Polley
+  - Big Lake
+  - Punky Moore
+  - Clusko
+  - Gaspard
+  - Nemiah
+  - Cheshi Stikelan
+  - Crazy Creek
+  - Ottarasko
+  - Meadow Lake
+  - Churn
+  - Koster/Lone Cabin
+  - Nude Creek
+  - Hickson
+  - Nostetuko
+  - Tiedemann
+  - Beece Creek
+  - Doran Creek
+  - Dash
+  - Gunn Valley
+  - Upper Churn
+  - Taseko
+  - East Arm
+  - Eastside
+  - Wasko/Lynx
+  - McKay
+  - Black Creek
+  - McKusky
+  - Nimpo
+  - McKinley
+  - Moffat
+  - Anaham
+  - Meldrum
+  - Deception Mountain
+  - Puntzi
   - Williams Lake
-  last_input_area_ha: 103215.48684773514
-  last_removed_area_ha: 13.618705237947273
-  last_remaining_area_ha: 43245.76627780058
-  last_benchmark_marginal_delta_ha: -154042.38129476205
-  last_benchmark_cumulative_delta_ha: -2383820.233722199
+  - Hendrix Lake
+  - Upper Klinaklini
+  - Homathko
+  - Ramsey
+  - Likely
+  - Corkscrew
+  - Horsefly
+  - Nazko
+  - Twan
+  - Tautri
+  - Hawks Creek
+  - Holtry
+  - Mackin
+  - Palmer/Jorgenson
+  - Sisters
+  - Alexis
+  - Hotnarko
+  - Telegraph
+  - Atnarko
+  - Upper Dean
+  - Beeftrail
+  - Tusulko
+  - Penfold
+  - Matthew
+  - Mitchell Lake
+  - Niagara
+  - Chilko
+  - Rainbow
+  - Franklyn
+  - Tchaikazan
+  - Lord River
+  - Edmond
+  - Nadila
+  - Upper Big Creek
+  - Young
+  - Atnarko
+  - Wells Gray Park
+  last_input_area_ha: 2977503.74004337
+  last_removed_area_ha: 133005.88310422
+  last_remaining_area_ha: 2341543.3219178156
+  last_benchmark_marginal_delta_ha: -21050.116895779996
+  last_benchmark_cumulative_delta_ha: -85522.6780821844
 - parent_step_id: thlb_parent_009_critical_habitat_for_fish
   parent_label: Critical habitat for fish
   parent_kind: transformation
@@ -2539,7 +2868,7 @@ parent_steps:
     normalized_action: exclude
     normalized_subject: ''
     normalized_predicate: ''
-    linked_source_entry_ids: &id040
+    linked_source_entry_ids: &id042
     - whse_wildlife_management_wcp_wildlife
     - whse_wildlife_management_wcp_wildlife_habitat_area
     step_status: ready
@@ -2551,45 +2880,25 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=30
     source_url: ''
-    notes: &id041 []
+    notes: &id043 []
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 11521.0
     benchmark_cumulative_area_ha: 2415545.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-  approved: true
-  approval_scope: single_lu_smoke_subset_williams_lake
-  approval_note: Soft-approved on the Williams Lake landscape-unit smoke subset; pending
-    definitive full-TSA validation after the remaining parent steps are soft-validated.
-  approved_utc: '2026-04-06T06:00:00+00:00'
-  approved_by: user_directed_review
-  ratchet_state: approved
+  ratchet_state: benchmarked
+  ratchet_note: Full-TSA validation shows the current critical-fish-habitat executable
+    logic is far too aggressive. Hold this step unapproved until the LAO/critical-habitat
+    source and filter logic are tightened.
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_009_critical_habitat_for_fish.20260406T054241Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_009_critical_habitat_for_fish.20260406T054241Z.feather
-  last_selected_map_ids:
-  - 092P081
-  - 092P091
-  - 092P092
-  - 092P093
-  - 093A001
-  - 093A002
-  - 093A003
-  - 093A011
-  - 093A012
-  - 093A021
-  - 093B009
-  - 093B010
-  - 093B019
-  - 093B020
-  - 093B029
-  - 093B030
-  last_selected_landscape_units:
-  - Williams Lake
-  last_input_area_ha: 103215.48684773514
-  last_removed_area_ha: 58.25216952678033
-  last_remaining_area_ha: 43187.514108273805
-  last_benchmark_marginal_delta_ha: -11462.74783047322
-  last_benchmark_cumulative_delta_ha: -2372357.4858917263
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_009_critical_habitat_for_fish.20260408T005707Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_009_critical_habitat_for_fish.20260408T005707Z.feather
+  last_selected_map_ids: []
+  last_selected_landscape_units: []
+  last_input_area_ha: 2977503.74004337
+  last_removed_area_ha: 141591.01374719557
+  last_remaining_area_ha: 2199952.30817062
+  last_benchmark_marginal_delta_ha: 130070.01374719557
+  last_benchmark_cumulative_delta_ha: -215592.6918293801
 - parent_step_id: thlb_parent_010_lakeshore_management
   parent_label: Lakeshore management
   parent_kind: transformation
@@ -2676,7 +2985,7 @@ parent_steps:
     normalized_action: exclude
     normalized_subject: ''
     normalized_predicate: ''
-    linked_source_entry_ids: &id042
+    linked_source_entry_ids: &id044
     - rmp_ogma_legal
     - whse_land_use_planning_fadm_designated
     - whse_land_use_planning_rmp_ogma_legal
@@ -2689,7 +2998,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=30
     source_url: ''
-    notes: &id043 []
+    notes: &id045 []
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 327.0
     benchmark_cumulative_area_ha: 2415218.0
@@ -2810,7 +3119,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id044
+    notes: &id046
     - TSA29 section 6.3.7 points to LUO / CCLUP Map 5 boundaries, so notebook execution
       uses the CCLUP legal-planning objective polygons instead of broad designated-area
       overlays.
@@ -2822,10 +3131,10 @@ parent_steps:
     normalized_subject: Community areas of special concern
     normalized_predicate: exclude only LUO/CARC CCLUP legal-planning polygons where
       LEGAL_FEAT_OBJECTIVE = Community Areas of Special Concern
-    linked_source_entry_ids: &id045
+    linked_source_entry_ids: &id047
     - rmp_plan_legal_poly_svw
     - whse_land_use_planning_rmp_plan_legal_poly_svw
-    source_attribute_filters: &id046
+    source_attribute_filters: &id048
     - field: STRGC_LAND_RSRCE_PLAN_NAME
       operator: eq
       value: Cariboo Chilcotin Land Use Plan
@@ -2994,7 +3303,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id047
+    notes: &id049
     - TSA29 section 6.4.1 defines the Proven Aboriginal Rights area conceptually but
       does not cite a clean public vector source in the data-package text.
     - Current public lead is the PIP Consultation Areas public map service; treat
@@ -3008,7 +3317,7 @@ parent_steps:
     normalized_subject: Proven Aboriginal Rights area boundary
     normalized_predicate: requires a reviewed PRA boundary overlay before automation;
       do not auto-exclude with broad TSA or designated-area polygons
-    linked_source_entry_ids: &id048
+    linked_source_entry_ids: &id050
     - whse_admin_boundaries_pip_consultation
     - whse_land_use_planning_fadm_designated
   ratchet_state: compiled
@@ -3109,7 +3418,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=32
     source_url: ''
-    notes: &id049
+    notes: &id051
     - Notebook execution currently auto-runs only the terrain-stability portion of
       TSR 6.4.3.
     - The v1 terrain filter uses terrain-stability classes U (Unstable) and V (Terrain
@@ -3122,9 +3431,9 @@ parent_steps:
     normalized_subject: Unstable terrain and terrain class 5
     normalized_predicate: set THLB to 0 where terrain-stability mapping identifies
       unstable terrain or terrain class 5 polygons
-    linked_source_entry_ids: &id050
+    linked_source_entry_ids: &id052
     - reg_land_and_natural_resource_terrain_stability
-    source_attribute_filters: &id051
+    source_attribute_filters: &id053
     - field: SLOPE_STABILITY_CLASS_W_ROADS
       operator: in
       value:
@@ -3164,7 +3473,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=32
     source_url: ''
-    notes: &id052
+    notes: &id054
     - TSA29 section 6.4.3 splits steep-slope exclusions east and west of Highway 97.
     - The notebook bridge does not yet auto-derive a reviewed slope-angle surface
       plus Highway 97 partition, so this portion remains manual review.
@@ -3176,7 +3485,7 @@ parent_steps:
     normalized_subject: Steep slope thresholds east and west of Highway 97
     normalized_predicate: review slope > 70% east of Highway 97 and slope > 40% west
       of Highway 97 with a reviewed slope-angle source and Highway 97 split
-    linked_source_entry_ids: &id053
+    linked_source_entry_ids: &id055
     - reg_land_and_natural_resource_terrain_stability
     - whse_imagery_and_base_maps_mot_highway_profiles_sp
   ratchet_state: benchmarked
@@ -3378,7 +3687,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=33
     source_url: ''
-    notes: &id054
+    notes: &id056
     - Step 14 runs late in the pipeline on the curve-ready checkpoint rather than
       on checkpoint1.
     - 'Notebook execution uses the current assigned bundle curves: treated curves
@@ -3394,7 +3703,7 @@ parent_steps:
     normalized_predicate: set THLB to 0 where assigned curve volume falls below 80
       m3/ha; treated curves use volume at CMAI and untreated curves use culmination
       volume
-    linked_source_entry_ids: &id055 []
+    linked_source_entry_ids: &id057 []
     curve_id_column: curve1
     minimum_volume_m3_per_ha: 80.0
   - step_id: thlb_parent_014_sites_with_low_growing_timber_potential_compiled_02
@@ -3469,7 +3778,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=33
     source_url: ''
-    notes: &id056
+    notes: &id058
     - TSA29 section 6.4.4 raises the threshold to 250 m3/ha on steep slopes.
     - The notebook bridge does not yet have a reviewed steep-slope mask beyond the
       earlier inoperable exclusions, so this branch remains manual review for now.
@@ -3482,7 +3791,7 @@ parent_steps:
     normalized_predicate: apply the 250 m3/ha threshold only after a reviewed steep-slope
       mask is available; current notebook bridge does not auto-derive a defensible
       stand-level steep class from VRI alone
-    linked_source_entry_ids: &id057
+    linked_source_entry_ids: &id059
     - reg_land_and_natural_resource_terrain_stability
     - whse_imagery_and_base_maps_mot_highway_profiles_sp
   ratchet_state: benchmarked
@@ -3619,7 +3928,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=35
     source_url: ''
-    notes: &id058
+    notes: &id060
     - TSA29 section 6.4.5 excludes broadleaf-leading stands from THLB.
     - Notebook execution uses the leading VRI species code on the late-stage curve-ready
       checkpoint surface.
@@ -3634,9 +3943,9 @@ parent_steps:
     normalized_predicate: set THLB to 0 where the leading species code is broadleaf;
       defer broadleaf components in conifer-leading stands to the later broadleaf
       volume-exclusion assumption
-    linked_source_entry_ids: &id059 []
+    linked_source_entry_ids: &id061 []
     checkpoint_attribute_mode: any
-    checkpoint_attribute_filters: &id060
+    checkpoint_attribute_filters: &id062
     - field: SPECIES_CD_1
       operator: in
       value:
@@ -3852,7 +4161,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=36
     source_url: ''
-    notes: &id061
+    notes: &id063
     - TSA29 section 6.4.6 excludes identified recreation areas and features from THLB.
     - Notebook execution currently auto-runs the active FTEN recreation polygon subset
       only.
@@ -3866,9 +4175,9 @@ parent_steps:
     normalized_subject: Active recreation polygons
     normalized_predicate: set THLB to 0 where active legally established recreation
       site and reserve polygons intersect the working land base
-    linked_source_entry_ids: &id062
+    linked_source_entry_ids: &id064
     - whse_forest_tenure_ften_recreation
-    source_attribute_filters: &id063
+    source_attribute_filters: &id065
     - field: LIFE_CYCLE_STATUS_CODE
       operator: eq
       value: ACTIVE
@@ -4009,7 +4318,7 @@ parent_steps:
     normalized_action: exclude
     normalized_subject: ''
     normalized_predicate: ''
-    linked_source_entry_ids: &id064
+    linked_source_entry_ids: &id066
     - whse_forest_vegetation_gry_psp_status
     step_status: ready
     required: true
@@ -4020,7 +4329,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=36
     source_url: ''
-    notes: &id065 []
+    notes: &id067 []
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 3577.0
     benchmark_cumulative_area_ha: 1867553.0
@@ -4227,7 +4536,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id066
+    notes: &id068
     - Step 3 already removed the direct non-forest waterbody area; this later THLB
       step models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -4240,9 +4549,9 @@ parent_steps:
     normalized_subject: Stream class S1 riparian area
     normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table
       15 effective riparian width for S1 streams
-    linked_source_entry_ids: &id067
+    linked_source_entry_ids: &id069
     - reg_land_and_natural_resource_stream_classification_car_line
-    source_attribute_filters: &id068
+    source_attribute_filters: &id070
     - field: STREAM_CLASS
       operator: eq
       value: '1'
@@ -4302,7 +4611,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id069
+    notes: &id071
     - Step 3 already removed the direct non-forest waterbody area; this later THLB
       step models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -4315,9 +4624,9 @@ parent_steps:
     normalized_subject: Stream class S2 riparian area
     normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table
       15 effective riparian width for S2 streams
-    linked_source_entry_ids: &id070
+    linked_source_entry_ids: &id072
     - reg_land_and_natural_resource_stream_classification_car_line
-    source_attribute_filters: &id071
+    source_attribute_filters: &id073
     - field: STREAM_CLASS
       operator: eq
       value: '2'
@@ -4377,7 +4686,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id072
+    notes: &id074
     - Step 3 already removed the direct non-forest waterbody area; this later THLB
       step models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -4390,9 +4699,9 @@ parent_steps:
     normalized_subject: Stream class S3 riparian area
     normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table
       15 effective riparian width for S3 streams
-    linked_source_entry_ids: &id073
+    linked_source_entry_ids: &id075
     - reg_land_and_natural_resource_stream_classification_car_line
-    source_attribute_filters: &id074
+    source_attribute_filters: &id076
     - field: STREAM_CLASS
       operator: eq
       value: '3'
@@ -4452,7 +4761,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id075
+    notes: &id077
     - Step 3 already removed the direct non-forest waterbody area; this later THLB
       step models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -4465,9 +4774,9 @@ parent_steps:
     normalized_subject: Stream class S4 riparian area
     normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table
       15 effective riparian width for S4 streams
-    linked_source_entry_ids: &id076
+    linked_source_entry_ids: &id078
     - reg_land_and_natural_resource_stream_classification_car_line
-    source_attribute_filters: &id077
+    source_attribute_filters: &id079
     - field: STREAM_CLASS
       operator: eq
       value: '4'
@@ -4527,7 +4836,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id078
+    notes: &id080
     - Step 3 already removed the direct non-forest waterbody area; this later THLB
       step models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -4540,9 +4849,9 @@ parent_steps:
     normalized_subject: Stream class S5 riparian area
     normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table
       15 effective riparian width for S5 streams
-    linked_source_entry_ids: &id079
+    linked_source_entry_ids: &id081
     - reg_land_and_natural_resource_stream_classification_car_line
-    source_attribute_filters: &id080
+    source_attribute_filters: &id082
     - field: STREAM_CLASS
       operator: eq
       value: '5'
@@ -4602,7 +4911,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id081
+    notes: &id083
     - Step 3 already removed the direct non-forest waterbody area; this later THLB
       step models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -4615,9 +4924,9 @@ parent_steps:
     normalized_subject: Stream class S6 riparian area
     normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table
       15 effective riparian width for S6 streams
-    linked_source_entry_ids: &id082
+    linked_source_entry_ids: &id084
     - reg_land_and_natural_resource_stream_classification_car_line
-    source_attribute_filters: &id083
+    source_attribute_filters: &id085
     - field: STREAM_CLASS
       operator: eq
       value: '6'
@@ -4677,7 +4986,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id084
+    notes: &id086
     - Step 3 already removed the direct wetland polygon area; this later THLB step
       models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -4690,9 +4999,9 @@ parent_steps:
     normalized_subject: Wetland class W1 riparian area
     normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
       15 effective riparian width for W1 wetlands
-    linked_source_entry_ids: &id085
+    linked_source_entry_ids: &id087
     - reg_land_and_natural_resource_wetland_class_car_poly
-    source_attribute_filters: &id086
+    source_attribute_filters: &id088
     - field: SWAMP_CLASS
       operator: eq
       value: w1
@@ -4752,7 +5061,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id087
+    notes: &id089
     - Step 3 already removed the direct wetland polygon area; this later THLB step
       models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -4765,9 +5074,9 @@ parent_steps:
     normalized_subject: Wetland class W2 riparian area
     normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
       15 effective riparian width for W2 wetlands
-    linked_source_entry_ids: &id088
+    linked_source_entry_ids: &id090
     - reg_land_and_natural_resource_wetland_class_car_poly
-    source_attribute_filters: &id089
+    source_attribute_filters: &id091
     - field: SWAMP_CLASS
       operator: eq
       value: w2
@@ -4827,7 +5136,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id090
+    notes: &id092
     - Step 3 already removed the direct wetland polygon area; this later THLB step
       models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -4840,9 +5149,9 @@ parent_steps:
     normalized_subject: Wetland class W3 riparian area
     normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
       15 effective riparian width for W3 wetlands
-    linked_source_entry_ids: &id091
+    linked_source_entry_ids: &id093
     - reg_land_and_natural_resource_wetland_class_car_poly
-    source_attribute_filters: &id092
+    source_attribute_filters: &id094
     - field: SWAMP_CLASS
       operator: eq
       value: w3
@@ -4902,7 +5211,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id093
+    notes: &id095
     - Step 3 already removed the direct wetland polygon area; this later THLB step
       models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -4915,9 +5224,9 @@ parent_steps:
     normalized_subject: Wetland class W4 riparian area
     normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
       15 effective riparian width for W4 wetlands
-    linked_source_entry_ids: &id094
+    linked_source_entry_ids: &id096
     - reg_land_and_natural_resource_wetland_class_car_poly
-    source_attribute_filters: &id095
+    source_attribute_filters: &id097
     - field: SWAMP_CLASS
       operator: eq
       value: w4
@@ -4977,7 +5286,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id096
+    notes: &id098
     - Step 3 already removed the direct wetland polygon area; this later THLB step
       models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
@@ -4990,9 +5299,9 @@ parent_steps:
     normalized_subject: Wetland class W5 riparian area
     normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
       15 effective riparian width for W5 wetlands
-    linked_source_entry_ids: &id097
+    linked_source_entry_ids: &id099
     - reg_land_and_natural_resource_wetland_class_car_poly
-    source_attribute_filters: &id098
+    source_attribute_filters: &id100
     - field: SWAMP_CLASS
       operator: eq
       value: w5
@@ -5052,7 +5361,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id099
+    notes: &id101
     - Table 15 includes lake classes L1-B, L2, and L3/L4, but the current TSA29 instance
       does not yet have a trustworthy lake-class artifact wired into the notebook
       bridge.
@@ -5064,7 +5373,7 @@ parent_steps:
     normalized_subject: Lake riparian classes
     normalized_predicate: requires a reviewed Cariboo lake-class surface before automated
       L1/L2/L3/L4 riparian buffering can run
-    linked_source_entry_ids: &id100
+    linked_source_entry_ids: &id102
     - whse_basemapping_fwa_lakes_poly
   - step_id: thlb_parent_018_riparian_areas_compiled_s4_special_review
     parent_step_id: thlb_parent_018_riparian_areas
@@ -5121,7 +5430,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     source_url: ''
-    notes: &id101
+    notes: &id103
     - TSA29 section 6.4.2 increases the S4 riparian area width in the Niut SRDZ and
       South Chilcotin SRDZ to protect dolly varden trout habitat. This first runnable
       pass leaves that special-case refinement as reviewed/manual logic.
@@ -5133,7 +5442,7 @@ parent_steps:
     normalized_subject: Niut and South Chilcotin S4 special width
     normalized_predicate: requires a reviewed LU/SRDZ overlay to increase S4 riparian
       width to 30 metres in the Niut and South Chilcotin areas
-    linked_source_entry_ids: &id102
+    linked_source_entry_ids: &id104
     - reg_land_and_natural_resource_stream_classification_car_line
     - rmp_landscape_unit_svw
     - whse_land_use_planning_rmp_plan_legal_poly_svw
@@ -5261,7 +5570,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=30
     source_url: ''
-    notes: &id103
+    notes: &id105
     - TSA29 section 6.3.6 says at least 85% of the area within the 100-metre trail
       corridor will not be available for harvest.
     - Notebook execution models that rule by shrinking the legal 100-metre buffered-trail
@@ -5275,9 +5584,9 @@ parent_steps:
     normalized_subject: Buffered trail areas
     normalized_predicate: shrink the legal 100-metre buffered-trail polygons by 7.5
       metres and set THLB to 0 on the resulting 85-metre equivalent corridor
-    linked_source_entry_ids: &id104
+    linked_source_entry_ids: &id106
     - whse_land_use_planning_rmp_plan_legal_poly_svw
-    source_attribute_filters: &id105
+    source_attribute_filters: &id107
     - field: LEGAL_FEAT_OBJECTIVE
       operator: eq
       value: Buffered Trail Areas
@@ -5471,7 +5780,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=37
     source_url: ''
-    notes: &id106
+    notes: &id108
     - TSA29 section 6.4.8 says existing mapped WTRA remain in THLB and are deferred
       from harvest for 80 years.
     - Notebook execution models only the future WTRA requirement here as an aspatial
@@ -5486,7 +5795,7 @@ parent_steps:
     normalized_subject: Future wildlife tree retention area reduction
     normalized_predicate: apply the TSR-cited future WTRA exclusion as an aspatial
       THLB reduction factor after the spatially executable steps
-    linked_source_entry_ids: &id107 []
+    linked_source_entry_ids: &id109 []
   approved: true
   approval_scope: single_lu_smoke_subset_williams_lake
   approval_note: Soft-approved after Williams Lake LU smoke validation. Step 20 now
@@ -5626,7 +5935,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=37
     source_url: ''
-    notes: &id108
+    notes: &id110
     - TSA29 section 6.4.9 models this as an aspatial THLB reduction rather than a
       single public spatial layer.
     - 'The deduction is anchored to the TSR benchmark area and informed by TNG plus
@@ -5641,7 +5950,7 @@ parent_steps:
     normalized_subject: Cultural heritage and archaeological resources reduction
     normalized_predicate: apply the TSR-cited cultural-heritage THLB reduction as
       an aspatial factor anchored to current licensee and Tsilhqot'in practice
-    linked_source_entry_ids: &id109 []
+    linked_source_entry_ids: &id111 []
   ratchet_state: compiled
   last_notebook_run_status: applied
   last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260406T093017Z.json
@@ -5701,7 +6010,7 @@ parent_steps:
     normalized_action: reference_target
     normalized_subject: ''
     normalized_predicate: ''
-    linked_source_entry_ids: &id110 []
+    linked_source_entry_ids: &id112 []
     step_status: ready
     required: true
     page_number: null
@@ -5711,7 +6020,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
     source_url: ''
-    notes: &id111 []
+    notes: &id113 []
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: null
     benchmark_cumulative_area_ha: 1682843.0
@@ -5840,7 +6149,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=27
     source_url: ''
-    notes: &id112
+    notes: &id114
     - TSA29 section 6.2.3 says future roads are estimated from current performance
       and RESULTS data rather than a mapped future-road layer.
     - Notebook execution treats this as an early-stage AFLB area reduction and scales
@@ -5857,34 +6166,17 @@ parent_steps:
     normalized_subject: Future roads, trails, and landings area reduction
     normalized_predicate: apply the TSR-cited future RTL deduction as an aspatial
       stand-area reduction across the AFLB working land base
-    linked_source_entry_ids: &id113 []
+    linked_source_entry_ids: &id115 []
   ratchet_state: compiled
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260406T095537Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260406T095537Z.feather
-  last_selected_map_ids:
-  - 092P081
-  - 092P091
-  - 092P092
-  - 092P093
-  - 093A001
-  - 093A002
-  - 093A003
-  - 093A011
-  - 093A012
-  - 093A021
-  - 093B009
-  - 093B010
-  - 093B019
-  - 093B020
-  - 093B029
-  - 093B030
-  last_selected_landscape_units:
-  - Williams Lake
-  last_input_area_ha: 103215.48684748
-  last_removed_area_ha: 222.0292247880001
-  last_remaining_area_ha: 47919.44719416889
-  last_benchmark_marginal_delta_ha: -22531.970775212
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260406T212227Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260406T212227Z.feather
+  last_selected_map_ids: []
+  last_selected_landscape_units: []
+  last_input_area_ha: 5158940.54411499
+  last_removed_area_ha: 13461.641198635163
+  last_remaining_area_ha: 2905358.090498139
+  last_benchmark_marginal_delta_ha: -9292.358801364837
   last_benchmark_cumulative_delta_ha: null
 - parent_step_id: thlb_parent_024_long_term_thlb
   parent_label: Long-term THLB
@@ -5917,7 +6209,7 @@ parent_steps:
     normalized_action: reference_target
     normalized_subject: long-term thlb
     normalized_predicate: Long-term THLB
-    linked_source_entry_ids: &id114 []
+    linked_source_entry_ids: &id116 []
     step_status: ready
     required: true
     page_number: null
@@ -5927,7 +6219,7 @@ parent_steps:
     cycle_year: 0
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
     source_url: ''
-    notes: &id115 []
+    notes: &id117 []
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: null
     benchmark_cumulative_area_ha: 1660053.0
@@ -6639,9 +6931,9 @@ steps:
   land_base_stage: aflb_to_lhlb
   stage_label: AFLB -> LHLB
   execution_class: legal_harvest_exclusion
-  compiled_operation_type: manual_review_required
-  step_status: manual_review_required
-  required: false
+  compiled_operation_type: select_spatial_intersect
+  step_status: ready
+  required: true
   page_number: 28
   document_title: ''
   document_type: data_package
@@ -6654,11 +6946,12 @@ steps:
   benchmark_marginal_area_ha: 306327.0
   benchmark_cumulative_area_ha: 2791841.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-  normalized_action: review
+  normalized_action: exclude
   normalized_subject: Area-based tenures and woodlots
-  normalized_predicate: requires explicit tenure overlays or reviewed ownership logic
-    before automation
+  normalized_predicate: exclude mapped area-based tenure and woodlot polygons from
+    the working harvestable land base
   linked_source_entry_ids: *id028
+  source_attribute_filters: *id029
 - step_id: thlb_parent_007_old_growth_management_areas_compiled_01
   parent_step_id: thlb_parent_007_old_growth_management_areas
   parent_label: Old growth management areas
@@ -6692,16 +6985,17 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=29
   source_url: ''
-  notes: *id029
+  notes: *id030
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 210719.0
   benchmark_cumulative_area_ha: 2581122.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
   normalized_action: exclude
   normalized_subject: Old growth management areas
-  normalized_predicate: exclude legal OGMA polygons from the working harvestable land
-    base
-  linked_source_entry_ids: *id030
+  normalized_predicate: exclude only permanent and rotating legal OGMA polygons from
+    the working harvestable land base
+  linked_source_entry_ids: *id031
+  source_attribute_filters: *id032
 - step_id: thlb_parent_008_wildlife_habitat_areas_compiled_01
   parent_step_id: thlb_parent_008_wildlife_habitat_areas
   parent_label: Wildlife habitat areas
@@ -6742,7 +7036,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=29
   source_url: ''
-  notes: *id031
+  notes: *id033
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 154056.0
   benchmark_cumulative_area_ha: 2427066.0
@@ -6751,8 +7045,8 @@ steps:
   normalized_subject: Ungulate winter range no-harvest polygons
   normalized_predicate: exclude only wildlife polygons where TIMBER_HARVEST_CODE =
     NO HARVEST ZONE
-  linked_source_entry_ids: *id032
-  source_attribute_filters: *id033
+  linked_source_entry_ids: *id034
+  source_attribute_filters: *id035
 - step_id: thlb_parent_008_wildlife_habitat_areas_compiled_02
   parent_step_id: thlb_parent_008_wildlife_habitat_areas
   parent_label: Wildlife habitat areas
@@ -6793,7 +7087,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=29
   source_url: ''
-  notes: *id034
+  notes: *id036
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 154056.0
   benchmark_cumulative_area_ha: 2427066.0
@@ -6802,8 +7096,8 @@ steps:
   normalized_subject: Wildlife habitat area no-harvest polygons
   normalized_predicate: exclude only wildlife polygons where TIMBER_HARVEST_CODE =
     NO HARVEST ZONE
-  linked_source_entry_ids: *id035
-  source_attribute_filters: *id036
+  linked_source_entry_ids: *id037
+  source_attribute_filters: *id038
 - step_id: thlb_parent_008_wildlife_habitat_areas_compiled_03
   parent_step_id: thlb_parent_008_wildlife_habitat_areas
   parent_label: Wildlife habitat areas
@@ -6844,7 +7138,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=29
   source_url: ''
-  notes: *id037
+  notes: *id039
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 154056.0
   benchmark_cumulative_area_ha: 2427066.0
@@ -6853,8 +7147,8 @@ steps:
   normalized_subject: Conditional harvest wildlife zones
   normalized_predicate: defer conditional harvest zone treatment to later silviculture
     and assumptions logic
-  linked_source_entry_ids: *id038
-  source_attribute_filters: *id039
+  linked_source_entry_ids: *id040
+  source_attribute_filters: *id041
 - step_id: thlb_parent_009_critical_habitat_for_fish_compiled_01
   parent_step_id: thlb_parent_009_critical_habitat_for_fish
   parent_label: Critical habitat for fish
@@ -6872,7 +7166,7 @@ steps:
   normalized_action: exclude
   normalized_subject: ''
   normalized_predicate: ''
-  linked_source_entry_ids: *id040
+  linked_source_entry_ids: *id042
   step_status: ready
   required: true
   page_number: 30
@@ -6882,7 +7176,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=30
   source_url: ''
-  notes: *id041
+  notes: *id043
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 11521.0
   benchmark_cumulative_area_ha: 2415545.0
@@ -6907,7 +7201,7 @@ steps:
   normalized_action: exclude
   normalized_subject: ''
   normalized_predicate: ''
-  linked_source_entry_ids: *id042
+  linked_source_entry_ids: *id044
   step_status: ready
   required: true
   page_number: 30
@@ -6917,7 +7211,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=30
   source_url: ''
-  notes: *id043
+  notes: *id045
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 327.0
   benchmark_cumulative_area_ha: 2415218.0
@@ -6953,7 +7247,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id044
+  notes: *id046
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 62460.0
   benchmark_cumulative_area_ha: 2352758.0
@@ -6962,8 +7256,8 @@ steps:
   normalized_subject: Community areas of special concern
   normalized_predicate: exclude only LUO/CARC CCLUP legal-planning polygons where
     LEGAL_FEAT_OBJECTIVE = Community Areas of Special Concern
-  linked_source_entry_ids: *id045
-  source_attribute_filters: *id046
+  linked_source_entry_ids: *id047
+  source_attribute_filters: *id048
 - step_id: thlb_parent_012_proven_aboriginal_rights_areas_compiled_01
   parent_step_id: thlb_parent_012_proven_aboriginal_rights_areas
   parent_label: Proven Aboriginal Rights areas
@@ -6996,7 +7290,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id047
+  notes: *id049
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 68401.0
   benchmark_cumulative_area_ha: 2284357.0
@@ -7005,7 +7299,7 @@ steps:
   normalized_subject: Proven Aboriginal Rights area boundary
   normalized_predicate: requires a reviewed PRA boundary overlay before automation;
     do not auto-exclude with broad TSA or designated-area polygons
-  linked_source_entry_ids: *id048
+  linked_source_entry_ids: *id050
 - step_id: thlb_parent_013_areas_considered_inoperable_compiled_01
   parent_step_id: thlb_parent_013_areas_considered_inoperable
   parent_label: Areas considered inoperable
@@ -7039,7 +7333,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=32
   source_url: ''
-  notes: *id049
+  notes: *id051
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 33533.0
   benchmark_cumulative_area_ha: 2250824.0
@@ -7048,8 +7342,8 @@ steps:
   normalized_subject: Unstable terrain and terrain class 5
   normalized_predicate: set THLB to 0 where terrain-stability mapping identifies unstable
     terrain or terrain class 5 polygons
-  linked_source_entry_ids: *id050
-  source_attribute_filters: *id051
+  linked_source_entry_ids: *id052
+  source_attribute_filters: *id053
 - step_id: thlb_parent_013_areas_considered_inoperable_compiled_02
   parent_step_id: thlb_parent_013_areas_considered_inoperable
   parent_label: Areas considered inoperable
@@ -7083,7 +7377,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=32
   source_url: ''
-  notes: *id052
+  notes: *id054
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 33533.0
   benchmark_cumulative_area_ha: 2250824.0
@@ -7092,7 +7386,7 @@ steps:
   normalized_subject: Steep slope thresholds east and west of Highway 97
   normalized_predicate: review slope > 70% east of Highway 97 and slope > 40% west
     of Highway 97 with a reviewed slope-angle source and Highway 97 split
-  linked_source_entry_ids: *id053
+  linked_source_entry_ids: *id055
 - step_id: thlb_parent_014_sites_with_low_growing_timber_potential_compiled_01
   parent_step_id: thlb_parent_014_sites_with_low_growing_timber_potential
   parent_label: Sites with low growing timber potential
@@ -7164,7 +7458,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=33
   source_url: ''
-  notes: *id054
+  notes: *id056
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 321044.0
   benchmark_cumulative_area_ha: 1929780.0
@@ -7173,7 +7467,7 @@ steps:
   normalized_subject: Curve-driven low productivity threshold
   normalized_predicate: set THLB to 0 where assigned curve volume falls below 80 m3/ha;
     treated curves use volume at CMAI and untreated curves use culmination volume
-  linked_source_entry_ids: *id055
+  linked_source_entry_ids: *id057
   curve_id_column: curve1
   minimum_volume_m3_per_ha: 80.0
 - step_id: thlb_parent_014_sites_with_low_growing_timber_potential_compiled_02
@@ -7247,7 +7541,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=33
   source_url: ''
-  notes: *id056
+  notes: *id058
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 321044.0
   benchmark_cumulative_area_ha: 1929780.0
@@ -7257,7 +7551,7 @@ steps:
   normalized_predicate: apply the 250 m3/ha threshold only after a reviewed steep-slope
     mask is available; current notebook bridge does not auto-derive a defensible stand-level
     steep class from VRI alone
-  linked_source_entry_ids: *id057
+  linked_source_entry_ids: *id059
 - step_id: thlb_parent_015_non_merchantable_timber_profiles_compiled_01
   parent_step_id: thlb_parent_015_non_merchantable_timber_profiles
   parent_label: Non-merchantable timber profiles
@@ -7289,7 +7583,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=35
   source_url: ''
-  notes: *id058
+  notes: *id060
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 49052.0
   benchmark_cumulative_area_ha: 1880728.0
@@ -7299,9 +7593,9 @@ steps:
   normalized_predicate: set THLB to 0 where the leading species code is broadleaf;
     defer broadleaf components in conifer-leading stands to the later broadleaf volume-exclusion
     assumption
-  linked_source_entry_ids: *id059
+  linked_source_entry_ids: *id061
   checkpoint_attribute_mode: any
-  checkpoint_attribute_filters: *id060
+  checkpoint_attribute_filters: *id062
 - step_id: thlb_parent_016_recreation_features_compiled_01
   parent_step_id: thlb_parent_016_recreation_features
   parent_label: Recreation features
@@ -7336,7 +7630,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=36
   source_url: ''
-  notes: *id061
+  notes: *id063
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 9598.0
   benchmark_cumulative_area_ha: 1871130.0
@@ -7345,8 +7639,8 @@ steps:
   normalized_subject: Active recreation polygons
   normalized_predicate: set THLB to 0 where active legally established recreation
     site and reserve polygons intersect the working land base
-  linked_source_entry_ids: *id062
-  source_attribute_filters: *id063
+  linked_source_entry_ids: *id064
+  source_attribute_filters: *id065
 - step_id: thlb_parent_017_growth_and_yield_permanent_sample_plots_compiled_01
   parent_step_id: thlb_parent_017_growth_and_yield_permanent_sample_plots
   parent_label: Growth and yield permanent sample plots
@@ -7367,7 +7661,7 @@ steps:
   normalized_action: exclude
   normalized_subject: ''
   normalized_predicate: ''
-  linked_source_entry_ids: *id064
+  linked_source_entry_ids: *id066
   step_status: ready
   required: true
   page_number: 36
@@ -7377,7 +7671,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=36
   source_url: ''
-  notes: *id065
+  notes: *id067
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 3577.0
   benchmark_cumulative_area_ha: 1867553.0
@@ -7436,7 +7730,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id066
+  notes: *id068
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -7445,8 +7739,8 @@ steps:
   normalized_subject: Stream class S1 riparian area
   normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table 15
     effective riparian width for S1 streams
-  linked_source_entry_ids: *id067
-  source_attribute_filters: *id068
+  linked_source_entry_ids: *id069
+  source_attribute_filters: *id070
   buffer_distance_m: 60.0
 - step_id: thlb_parent_018_riparian_areas_compiled_stream_s2
   parent_step_id: thlb_parent_018_riparian_areas
@@ -7502,7 +7796,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id069
+  notes: *id071
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -7511,8 +7805,8 @@ steps:
   normalized_subject: Stream class S2 riparian area
   normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table 15
     effective riparian width for S2 streams
-  linked_source_entry_ids: *id070
-  source_attribute_filters: *id071
+  linked_source_entry_ids: *id072
+  source_attribute_filters: *id073
   buffer_distance_m: 34.0
 - step_id: thlb_parent_018_riparian_areas_compiled_stream_s3
   parent_step_id: thlb_parent_018_riparian_areas
@@ -7568,7 +7862,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id072
+  notes: *id074
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -7577,8 +7871,8 @@ steps:
   normalized_subject: Stream class S3 riparian area
   normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table 15
     effective riparian width for S3 streams
-  linked_source_entry_ids: *id073
-  source_attribute_filters: *id074
+  linked_source_entry_ids: *id075
+  source_attribute_filters: *id076
   buffer_distance_m: 24.0
 - step_id: thlb_parent_018_riparian_areas_compiled_stream_s4
   parent_step_id: thlb_parent_018_riparian_areas
@@ -7634,7 +7928,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id075
+  notes: *id077
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -7643,8 +7937,8 @@ steps:
   normalized_subject: Stream class S4 riparian area
   normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table 15
     effective riparian width for S4 streams
-  linked_source_entry_ids: *id076
-  source_attribute_filters: *id077
+  linked_source_entry_ids: *id078
+  source_attribute_filters: *id079
   buffer_distance_m: 10.0
 - step_id: thlb_parent_018_riparian_areas_compiled_stream_s5
   parent_step_id: thlb_parent_018_riparian_areas
@@ -7700,7 +7994,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id078
+  notes: *id080
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -7709,8 +8003,8 @@ steps:
   normalized_subject: Stream class S5 riparian area
   normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table 15
     effective riparian width for S5 streams
-  linked_source_entry_ids: *id079
-  source_attribute_filters: *id080
+  linked_source_entry_ids: *id081
+  source_attribute_filters: *id082
   buffer_distance_m: 10.0
 - step_id: thlb_parent_018_riparian_areas_compiled_stream_s6
   parent_step_id: thlb_parent_018_riparian_areas
@@ -7766,7 +8060,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id081
+  notes: *id083
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -7775,8 +8069,8 @@ steps:
   normalized_subject: Stream class S6 riparian area
   normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table 15
     effective riparian width for S6 streams
-  linked_source_entry_ids: *id082
-  source_attribute_filters: *id083
+  linked_source_entry_ids: *id084
+  source_attribute_filters: *id085
   buffer_distance_m: 6.0
 - step_id: thlb_parent_018_riparian_areas_compiled_wetland_w1
   parent_step_id: thlb_parent_018_riparian_areas
@@ -7832,7 +8126,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id084
+  notes: *id086
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -7841,8 +8135,8 @@ steps:
   normalized_subject: Wetland class W1 riparian area
   normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
     15 effective riparian width for W1 wetlands
-  linked_source_entry_ids: *id085
-  source_attribute_filters: *id086
+  linked_source_entry_ids: *id087
+  source_attribute_filters: *id088
   buffer_distance_m: 18.0
 - step_id: thlb_parent_018_riparian_areas_compiled_wetland_w2
   parent_step_id: thlb_parent_018_riparian_areas
@@ -7898,7 +8192,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id087
+  notes: *id089
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -7907,8 +8201,8 @@ steps:
   normalized_subject: Wetland class W2 riparian area
   normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
     15 effective riparian width for W2 wetlands
-  linked_source_entry_ids: *id088
-  source_attribute_filters: *id089
+  linked_source_entry_ids: *id090
+  source_attribute_filters: *id091
   buffer_distance_m: 14.0
 - step_id: thlb_parent_018_riparian_areas_compiled_wetland_w3
   parent_step_id: thlb_parent_018_riparian_areas
@@ -7964,7 +8258,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id090
+  notes: *id092
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -7973,8 +8267,8 @@ steps:
   normalized_subject: Wetland class W3 riparian area
   normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
     15 effective riparian width for W3 wetlands
-  linked_source_entry_ids: *id091
-  source_attribute_filters: *id092
+  linked_source_entry_ids: *id093
+  source_attribute_filters: *id094
   buffer_distance_m: 6.0
 - step_id: thlb_parent_018_riparian_areas_compiled_wetland_w4
   parent_step_id: thlb_parent_018_riparian_areas
@@ -8030,7 +8324,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id093
+  notes: *id095
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -8039,8 +8333,8 @@ steps:
   normalized_subject: Wetland class W4 riparian area
   normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
     15 effective riparian width for W4 wetlands
-  linked_source_entry_ids: *id094
-  source_attribute_filters: *id095
+  linked_source_entry_ids: *id096
+  source_attribute_filters: *id097
   buffer_distance_m: 6.0
 - step_id: thlb_parent_018_riparian_areas_compiled_wetland_w5
   parent_step_id: thlb_parent_018_riparian_areas
@@ -8096,7 +8390,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id096
+  notes: *id098
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -8105,8 +8399,8 @@ steps:
   normalized_subject: Wetland class W5 riparian area
   normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
     15 effective riparian width for W5 wetlands
-  linked_source_entry_ids: *id097
-  source_attribute_filters: *id098
+  linked_source_entry_ids: *id099
+  source_attribute_filters: *id100
   buffer_distance_m: 18.0
 - step_id: thlb_parent_018_riparian_areas_compiled_lakes_review
   parent_step_id: thlb_parent_018_riparian_areas
@@ -8162,7 +8456,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id099
+  notes: *id101
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -8171,7 +8465,7 @@ steps:
   normalized_subject: Lake riparian classes
   normalized_predicate: requires a reviewed Cariboo lake-class surface before automated
     L1/L2/L3/L4 riparian buffering can run
-  linked_source_entry_ids: *id100
+  linked_source_entry_ids: *id102
 - step_id: thlb_parent_018_riparian_areas_compiled_s4_special_review
   parent_step_id: thlb_parent_018_riparian_areas
   parent_label: Riparian areas
@@ -8226,7 +8520,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   source_url: ''
-  notes: *id101
+  notes: *id103
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
@@ -8235,7 +8529,7 @@ steps:
   normalized_subject: Niut and South Chilcotin S4 special width
   normalized_predicate: requires a reviewed LU/SRDZ overlay to increase S4 riparian
     width to 30 metres in the Niut and South Chilcotin areas
-  linked_source_entry_ids: *id102
+  linked_source_entry_ids: *id104
 - step_id: thlb_parent_019_buffered_trails_compiled_01
   parent_step_id: thlb_parent_019_buffered_trails
   parent_label: Buffered trails
@@ -8265,7 +8559,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=30
   source_url: ''
-  notes: *id103
+  notes: *id105
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 8039.0
   benchmark_cumulative_area_ha: 1804681.0
@@ -8274,8 +8568,8 @@ steps:
   normalized_subject: Buffered trail areas
   normalized_predicate: shrink the legal 100-metre buffered-trail polygons by 7.5
     metres and set THLB to 0 on the resulting 85-metre equivalent corridor
-  linked_source_entry_ids: *id104
-  source_attribute_filters: *id105
+  linked_source_entry_ids: *id106
+  source_attribute_filters: *id107
   buffer_distance_m: -7.5
 - step_id: thlb_parent_020_wildlife_tree_retention_areas_compiled_01
   parent_step_id: thlb_parent_020_wildlife_tree_retention_areas
@@ -8309,7 +8603,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=37
   source_url: ''
-  notes: *id106
+  notes: *id108
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 94417.0
   benchmark_cumulative_area_ha: 1710264.0
@@ -8318,7 +8612,7 @@ steps:
   normalized_subject: Future wildlife tree retention area reduction
   normalized_predicate: apply the TSR-cited future WTRA exclusion as an aspatial THLB
     reduction factor after the spatially executable steps
-  linked_source_entry_ids: *id107
+  linked_source_entry_ids: *id109
 - step_id: thlb_parent_021_cultural_heritage_and_archaeological_resources_compiled_01
   parent_step_id: thlb_parent_021_cultural_heritage_and_archaeological_resources
   parent_label: Cultural heritage and archaeological resources
@@ -8363,7 +8657,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=37
   source_url: ''
-  notes: *id108
+  notes: *id110
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 34205.0
   benchmark_cumulative_area_ha: 1676059.0
@@ -8372,7 +8666,7 @@ steps:
   normalized_subject: Cultural heritage and archaeological resources reduction
   normalized_predicate: apply the TSR-cited cultural-heritage THLB reduction as an
     aspatial factor anchored to current licensee and Tsilhqot'in practice
-  linked_source_entry_ids: *id109
+  linked_source_entry_ids: *id111
 - step_id: thlb_parent_022_timber_harvesting_land_base_compiled_01
   parent_step_id: thlb_parent_022_timber_harvesting_land_base
   parent_label: Timber harvesting land base
@@ -8387,7 +8681,7 @@ steps:
   normalized_action: reference_target
   normalized_subject: ''
   normalized_predicate: ''
-  linked_source_entry_ids: *id110
+  linked_source_entry_ids: *id112
   step_status: ready
   required: true
   page_number: null
@@ -8397,7 +8691,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
   source_url: ''
-  notes: *id111
+  notes: *id113
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: null
   benchmark_cumulative_area_ha: 1682843.0
@@ -8485,7 +8779,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=27
   source_url: ''
-  notes: *id112
+  notes: *id114
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 22754.0
   benchmark_cumulative_area_ha: null
@@ -8494,7 +8788,7 @@ steps:
   normalized_subject: Future roads, trails, and landings area reduction
   normalized_predicate: apply the TSR-cited future RTL deduction as an aspatial stand-area
     reduction across the AFLB working land base
-  linked_source_entry_ids: *id113
+  linked_source_entry_ids: *id115
 - step_id: thlb_parent_024_long_term_thlb_compiled_01
   parent_step_id: thlb_parent_024_long_term_thlb
   parent_label: Long-term THLB
@@ -8509,7 +8803,7 @@ steps:
   normalized_action: reference_target
   normalized_subject: long-term thlb
   normalized_predicate: Long-term THLB
-  linked_source_entry_ids: *id114
+  linked_source_entry_ids: *id116
   step_status: ready
   required: true
   page_number: null
@@ -8519,7 +8813,7 @@ steps:
   cycle_year: 0
   provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
   source_url: ''
-  notes: *id115
+  notes: *id117
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: null
   benchmark_cumulative_area_ha: 1660053.0
