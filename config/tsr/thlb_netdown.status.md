@@ -1,10 +1,10 @@
 # THLB Recipe Build Report: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-08T06:40:44.296259+00:00`
+- Generated UTC: `2026-04-08T07:08:29.600935+00:00`
 - Report mode: `recipe_build`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Source-layer recipe path: `config/tsr/source_layers.recipe.yaml`
-- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T064044Z.md`
+- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T070829Z.md`
 
 ## Scope
 
@@ -654,50 +654,49 @@
 - Benchmark marginal deduction: `327.000 ha`
 - Benchmark cumulative remaining area: `2415218.000 ha`
 - Approval: `soft-approved`
-- Approval scope: `single_lu_smoke_subset_williams_lake`
-- Approval note: Soft-approved after Williams Lake LU smoke validation. Step 21 now uses the cleaned TSA29 section 6.4.9 aspatial cultural-heritage reduction logic with no fake spatial layer linkage. Full-TSA validation still pending.
-- Ratchet note: Soft-approved on the Williams Lake landscape-unit smoke subset using the cleaned TSA29 cultural-heritage aspatial reduction interpretation.
+- Approval scope: `full_tsa_trivial_benchmark_skip`
+- Approval note: User-directed skip after source review. TSA29 step 10 is only a 327 ha benchmark on a 5 million ha landscape and the currently adopted public layers do not yet expose a trusted Class A lake discriminator, so detailed validation is deferred.
+- Approved UTC: `2026-04-08T07:35:00+00:00`
+- Approved by: `user_directed_review`
+- Ratchet note: Trivial TSR benchmark area; detailed TSA29 validation skipped by user direction. Keep this step out of the active blocker set and revisit only if a trustworthy Class A lake source is later adopted.
 - Supporting prose section: `6.3.5 Lakeshore management`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=30`
 - Draft subrules:
-  - `thlb_parent_010_lakeshore_management_draft_01` | summary=`The LAO designates a selection of lakes as Class A lakes which includes a legal spatial data set that defines buffers around these lakes and are classified are considered to be no ` | operation=`exclude` | review=`draft`
-    - candidate layers: `freshwater_atlas`
-  - `thlb_parent_010_lakeshore_management_draft_02` | summary=`These areas of overlap will be excluded from the LHLB.` | operation=`exclude` | review=`draft`
-    - candidate layers: `consolidated_cutblocks_2020`
-  - `thlb_parent_010_lakeshore_management_draft_03` | summary=`The management of Class B to E lakes through limits on allowed disturbance area will be discussed in Section 7.2.6 – ‘Lakeshore management’.` | operation=`exclude` | review=`draft`
-    - candidate layers: `freshwater_atlas`
-- Current compiled status summary: `ready`=1
-- Last notebook run status: `applied`
-- Last notebook removed area: `0.000 ha`
-- Last notebook remaining area: `43187.514 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_010_lakeshore_management.20260406T055350Z.json`
+  - `thlb_parent_010_lakeshore_management_draft_01` | summary=`Only the no-harvest overlap between Class A lake management areas and VQO preservation should be excluded here.` | operation=`review` | review=`draft`
+    - candidate layers: `whse_land_use_planning_rmp_plan_legal_poly_svw`, `whse_forest_vegetation_rec_visual_landscape`
+    - candidate fields: `LEGAL_FEAT_OBJECTIVE`, `LEGAL_FEAT_ATRB_2_VALUE`, `REC_EVQO_CODE`
+    - candidate values: `Scenic Areas / Scenic Corridors`, `PR`, `Class A lake subset still required`
+    - field/value mapping notes:
+      - The currently adopted public layers do not yet expose a trusted Class A lake discriminator for TSA29.
+      - Do not use the whole scenic-PR legal surface as a surrogate; it overcuts badly.
+  - `thlb_parent_010_lakeshore_management_draft_02` | summary=`Class B-E lakes are not excluded here; they are handled later through Section 7.2.6 disturbance assumptions.` | operation=`reference_only` | review=`draft`
+    - candidate values: `Section 7.2.6 later assumptions`
+    - field/value mapping notes:
+      - This step is tiny in the TSR benchmark and is being skipped for detailed TSA29 validation.
+- Current compiled status summary: `manual_review_required`=1
 - Compiled logic:
 
-#### 10.1. Lakeshore management
+#### 10.1. Class A lakes with preservation VQO overlap
 
 - Step id: `thlb_parent_010_lakeshore_management_compiled_01`
 - Kind: `netdown_rule`
 - Stage: `AFLB -> LHLB`
 - Execution class: `legal_harvest_exclusion`
-- Run status: `ready`
+- Run status: `manual_review_required`
 - TSR provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=30`
 - TSR page: `30`
-- TSR text: `The LAO designates a selection of lakes as Class A lakes which includes a legal spatial data set that defines buffers around these lakes and are classified are considered to be no harvest areas when they overlap with visual quality objective class ‘preservation’. These areas of overlap will be excluded from the LHLB. The management of Class B to E lakes through limits on allowed disturbance area will be discussed in Section 7.2.6 – ‘Lakeshore management’.`
-- FEMIC proposed logic: Exclude the linked polygons from THLB where they intersect the working land base; the exact execution mode depends on available data and current implementation support.
+- TSR text: `The LAO designates a selection of lakes as Class A lakes which includes a legal spatial data set that defines buffers around these lakes and are classified are considered to be no harvest areas when they overlap with visual quality objective class ‘preservation’. These areas of overlap will be excluded from the LHLB. The management of Class B to E lakes through limits on allowed disturbance area will be discussed in Section 7.2.6 – ‘Lakeshore management’. Table 11. Class A lakes Designations Total (ha) Forested (ha) Excluded (ha) Class A Lakes 18,988 13,060 327 Data source and comments: The Class A lakes are identified in the Section 93.4 LAO establishing objectives for the CCLUP, May 19, 2010, amended April 18, 2011, and consolidated to September 6, 2018. Map 6. Lake management zone boundaries are provided by the lake buffer mapping that also provides riparian management and reserve zones for lakes used in Section 5.4.1.`
+- FEMIC proposed logic: Class A lakes with preservation VQO overlap exclude only the Class A lake legal buffer areas that overlap VQO preservation once a trusted Class A lake source is adopted
 - Linked source layers:
-  - `rmp_ogma_legal` | query=`RMP_OGMA_LEGAL` | status=`alias_hit` | strategy=`wfs_fetch`
-    - artifact: `data/downloads/bcdc/RMP_OGMA_LEGAL/RMP_OGMA_LEGAL.gpkg`
-    - matched by: `object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW`
-    - top match: `Old Growth Management Areas - Legal - Current`
-  - `whse_land_use_planning_fadm_designated` | query=`WHSE_LAND_USE_PLANNING.FADM_DESIGNATED` | status=`alias_hit` | strategy=`wfs_fetch`
-    - artifact: `data/downloads/bcdc/WHSE_LAND_USE_PLANNING_FADM_DESIGNATED/WHSE_LAND_USE_PLANNING_FADM_DESIGNATED.gpkg`
-    - matched by: `object_name:WHSE_ADMIN_BOUNDARIES.FADM_DESIGNATED_AREAS`
-    - top match: `FADM - Designated Areas`
-  - `whse_land_use_planning_rmp_ogma_legal` | query=`WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL` | status=`alias_hit` | strategy=`wfs_fetch`
-    - artifact: `data/downloads/bcdc/WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL/WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL.gpkg`
-    - matched by: `object_name:WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW`
-    - top match: `Old Growth Management Areas - Legal - Current`
+  - `whse_land_use_planning_rmp_plan_legal_poly_svw` | query=`WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW` | status=`exact_hit` | strategy=`wfs_fetch`
+    - artifact: `data/downloads/bcdc/WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL_POLY_SVW/WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL_POLY_SVW.gpkg`
+    - matched by: `object_name:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW`
+    - top match: `Legal Planning Objectives - Current - Polygon`
+  - `whse_forest_vegetation_rec_visual_landscape` | query=`WHSE_FOREST_VEGETATION.REC_VISUAL_LANDSCAPE` | status=`alias_hit` | strategy=`wfs_fetch`
+    - artifact: `data/downloads/bcdc/WHSE_FOREST_VEGETATION_REC_VISUAL_LANDSCAPE/WHSE_FOREST_VEGETATION_REC_VISUAL_LANDSCAPE.gpkg`
+    - matched by: `object_name:WHSE_FOREST_VEGETATION.REC_VISUAL_LANDSCAPE_INVENTORY`
+    - top match: `Visual Landscape Inventory`
 - Logic mode: `femic_core`
 
 ### 11. Community areas of special concern
