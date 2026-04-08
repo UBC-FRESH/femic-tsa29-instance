@@ -14,7 +14,7 @@ instance_inputs:
   source_layer_overrides_path: config/tsr/source_layer_overrides.yaml
 recipe_contract:
   status: built
-  last_built_utc: '2026-04-08T07:22:29.619607+00:00'
+  last_built_utc: '2026-04-08T07:37:12.387825+00:00'
   notes:
   - Review and refresh this file with `femic tsr thlb-netdown-build`.
   - Keep unsupported or low-confidence steps explicit instead of silently patching
@@ -32,9 +32,9 @@ recipe_contract:
   status_report_path: config/tsr/thlb_reconstructed.status.md
   runtime_status_report_path: runtime/logs/tsr/thlb_reconstructed_status_report-20260405T214635Z.md
   recipe_build_status_report_path: config/tsr/thlb_netdown.status.md
-  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260408T072230Z.md
+  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260408T073713Z.md
   workbench_notebook_path: workbench/tsr/thlb_netdown.workbench.ipynb
-  workbench_last_built_utc: '2026-04-08T06:41:45.201413+00:00'
+  workbench_last_built_utc: '2026-04-08T07:40:18.550302+00:00'
   lock_state:
     aflb:
       locked: false
@@ -3424,80 +3424,43 @@ parent_steps:
   - TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
   draft_subrules:
   - subrule_id: thlb_parent_012_proven_aboriginal_rights_areas_draft_01
-    human_summary: "The Tsilhqot\u2019in 2012 BC Supreme Court decision confirmed\
-      \ a proven Aboriginal rights area (PRA) where Tsilhqot\u2019in people hold rights\
-      \ to hunt and trap birds and animals."
-    rationale: "The Tsilhqot\u2019in 2012 BC Supreme Court decision confirmed a proven\
-      \ Aboriginal rights area (PRA) where Tsilhqot\u2019in people hold rights to\
-      \ hunt and trap birds and animals."
+    human_summary: Exclude the Proven Aboriginal Rights area from the THLB to reflect
+      the current lack of commercial forestry activity and the unique consultation
+      / authorization regime.
+    rationale: TSA29 section 6.4.1 says the PRA will be excluded from the THLB because
+      deep consultation is required and very few provincial authorizations have been
+      made there since 2014.
     candidate_layers:
-    - whse_forest_vegetation_f_own
-    candidate_fields: []
-    candidate_values: []
-    candidate_operation_type: exclude
-    field_mapping_notes: []
+    - whse_admin_boundaries_pip_consultation
+    candidate_fields:
+    - boundary source still required
+    candidate_values:
+    - Proven Aboriginal Rights area boundary
+    candidate_operation_type: review
+    field_mapping_notes:
+    - The PRA is not the same thing as the proven Aboriginal title area and extends
+      beyond the court case area.
+    - Do not substitute the title area, caretaker area, TSA boundary, or broad ownership
+      layers for the PRA boundary.
     confidence: needs_review
     review_status: draft
     prose_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
     hint_provenance_ids: []
   - subrule_id: thlb_parent_012_proven_aboriginal_rights_areas_draft_02
-    human_summary: "This area overlaps the Tsilhqot\u2019in proven and declared Aboriginal\
-      \ title area and extends beyond encompassing the entire court case area."
-    rationale: "This area overlaps the Tsilhqot\u2019in proven and declared Aboriginal\
-      \ title area and extends beyond encompassing the entire court case area."
+    human_summary: Keep the logic manual until a reviewed PRA boundary source is adopted
+      into the instance.
+    rationale: The 2024 data package explains why the PRA is excluded but does not
+      cite a clean downloadable vector source for the boundary.
     candidate_layers:
-    - whse_forest_vegetation_f_own
+    - whse_admin_boundaries_pip_consultation
     candidate_fields: []
-    candidate_values: []
-    candidate_operation_type: exclude
-    field_mapping_notes: []
-    confidence: needs_review
-    review_status: draft
-    prose_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
-    hint_provenance_ids: []
-  - subrule_id: thlb_parent_012_proven_aboriginal_rights_areas_draft_03
-    human_summary: This area, outside the title area, is still administered by the
-      Province and contributes to timber supply within the Williams Lake TSA.
-    rationale: This area, outside the title area, is still administered by the Province
-      and contributes to timber supply within the Williams Lake TSA.
-    candidate_layers:
-    - whse_admin_boundaries_fadm_tsa
-    candidate_fields: []
-    candidate_values: []
-    candidate_operation_type: exclude
-    field_mapping_notes: []
-    confidence: needs_review
-    review_status: draft
-    prose_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
-    hint_provenance_ids: []
-  - subrule_id: thlb_parent_012_proven_aboriginal_rights_areas_draft_04
-    human_summary: Deep consultation is required when considering proposed authorizations
-      in this area and since 2014, very few provincial authorizations have been made
-      in this area because managemen
-    rationale: Deep consultation is required when considering proposed authorizations
-      in this area and since 2014, very few provincial authorizations have been made
-      in this area because management expectations are unique.
-    candidate_layers:
-    - fadm_bcts_area
-    candidate_fields: []
-    candidate_values: []
-    candidate_operation_type: exclude
-    field_mapping_notes: []
-    confidence: needs_review
-    review_status: draft
-    prose_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31
-    hint_provenance_ids: []
-  - subrule_id: thlb_parent_012_proven_aboriginal_rights_areas_draft_05
-    human_summary: The PRA will be excluded from the THLB to reflect the lack of commercial
-      forestry activity in the last nine years.
-    rationale: The PRA will be excluded from the THLB to reflect the lack of commercial
-      forestry activity in the last nine years.
-    candidate_layers:
-    - fadm_bcts_area
-    candidate_fields: []
-    candidate_values: []
-    candidate_operation_type: exclude
-    field_mapping_notes: []
+    candidate_values:
+    - reviewed PRA boundary override required
+    candidate_operation_type: manual_review_required
+    field_mapping_notes:
+    - Older-cycle TSR material clarifies the distinction between title, caretaker-area,
+      and PRA concepts, but still does not provide a stable public PRA vector source
+      for automation.
     confidence: needs_review
     review_status: draft
     prose_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31

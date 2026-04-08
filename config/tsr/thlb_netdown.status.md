@@ -1,10 +1,10 @@
 # THLB Recipe Build Report: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-08T07:22:30.558208+00:00`
+- Generated UTC: `2026-04-08T07:37:13.588626+00:00`
 - Report mode: `recipe_build`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Source-layer recipe path: `config/tsr/source_layers.recipe.yaml`
-- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T072230Z.md`
+- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T073713Z.md`
 
 ## Scope
 
@@ -763,16 +763,18 @@
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31`
 - Draft subrules:
-  - `thlb_parent_012_proven_aboriginal_rights_areas_draft_01` | summary=`The Tsilhqot’in 2012 BC Supreme Court decision confirmed a proven Aboriginal rights area (PRA) where Tsilhqot’in people hold rights to hunt and trap birds and animals.` | operation=`exclude` | review=`draft`
-    - candidate layers: `whse_forest_vegetation_f_own`
-  - `thlb_parent_012_proven_aboriginal_rights_areas_draft_02` | summary=`This area overlaps the Tsilhqot’in proven and declared Aboriginal title area and extends beyond encompassing the entire court case area.` | operation=`exclude` | review=`draft`
-    - candidate layers: `whse_forest_vegetation_f_own`
-  - `thlb_parent_012_proven_aboriginal_rights_areas_draft_03` | summary=`This area, outside the title area, is still administered by the Province and contributes to timber supply within the Williams Lake TSA.` | operation=`exclude` | review=`draft`
-    - candidate layers: `whse_admin_boundaries_fadm_tsa`
-  - `thlb_parent_012_proven_aboriginal_rights_areas_draft_04` | summary=`Deep consultation is required when considering proposed authorizations in this area and since 2014, very few provincial authorizations have been made in this area because managemen` | operation=`exclude` | review=`draft`
-    - candidate layers: `fadm_bcts_area`
-  - `thlb_parent_012_proven_aboriginal_rights_areas_draft_05` | summary=`The PRA will be excluded from the THLB to reflect the lack of commercial forestry activity in the last nine years.` | operation=`exclude` | review=`draft`
-    - candidate layers: `fadm_bcts_area`
+  - `thlb_parent_012_proven_aboriginal_rights_areas_draft_01` | summary=`Exclude the Proven Aboriginal Rights area from the THLB to reflect the current lack of commercial forestry activity and the unique consultation / authorization regime.` | operation=`review` | review=`draft`
+    - candidate layers: `whse_admin_boundaries_pip_consultation`
+    - candidate fields: `boundary source still required`
+    - candidate values: `Proven Aboriginal Rights area boundary`
+    - field/value mapping notes:
+      - The PRA is not the same thing as the proven Aboriginal title area and extends beyond the court case area.
+      - Do not substitute the title area, caretaker area, TSA boundary, or broad ownership layers for the PRA boundary.
+  - `thlb_parent_012_proven_aboriginal_rights_areas_draft_02` | summary=`Keep the logic manual until a reviewed PRA boundary source is adopted into the instance.` | operation=`manual_review_required` | review=`draft`
+    - candidate layers: `whse_admin_boundaries_pip_consultation`
+    - candidate values: `reviewed PRA boundary override required`
+    - field/value mapping notes:
+      - Older-cycle TSR material clarifies the distinction between title, caretaker-area, and PRA concepts, but still does not provide a stable public PRA vector source for automation.
 - Current compiled status summary: `manual_review_required`=1
 - Compiled logic:
 
