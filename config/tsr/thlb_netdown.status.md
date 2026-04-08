@@ -1,10 +1,10 @@
 # THLB Recipe Build Report: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-08T19:54:31.589480+00:00`
+- Generated UTC: `2026-04-08T20:20:46.500339+00:00`
 - Report mode: `recipe_build`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Source-layer recipe path: `config/tsr/source_layers.recipe.yaml`
-- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T194456Z.md`
+- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T201350Z.md`
 
 ## Scope
 
@@ -885,7 +885,7 @@
 - Table provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24`
 - Benchmark marginal deduction: `321044.000 ha`
 - Benchmark cumulative remaining area: `1929780.000 ha`
-- Ratchet note: Full-TSA cached 8-bundle validation of the currently executable 80 m3/ha curve-threshold branch removed only 4,527.316 ha against the TSR benchmark of 321,044 ha. Step 14 is therefore still far from approvable in its current partial state; the missing signal sits overwhelmingly in the still-manual steep-slope 250 m3/ha branch and/or in how the TSR operationalizes low-productivity screening beyond the current curve-only executable subset.
+- Ratchet note: Full-TSA cached 8-bundle validation of the executable step-14 80/250 m3/ha split still removed only 4,527.316 ha against the TSR benchmark of 321,044 ha. The non-steep 80 m3/ha branch removed 4,527.316 ha, while the steep 250 m3/ha branch found 11,672 scoped rows but 0 active stands because the accepted step-13 pass had already zeroed the steep-slope subset. Step 14 therefore remains far from approvable; the next seam is no longer branch executability but whether TSR step ordering and/or broader low-productivity semantics differ from the current FEMIC late-stage partition.
 - Supporting prose section: `6.4.4 Sites with low timber growing potential`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=33`
@@ -900,14 +900,14 @@
     - candidate layers: `reg_land_and_natural_resource_wld`
   - `thlb_parent_014_sites_with_low_growing_timber_potential_draft_05` | summary=`Site index was not adjusted and remains a reliable identifier of low productivity stands and will be used in this analysis.` | operation=`exclude` | review=`draft`
     - candidate layers: `vri`
-- Current compiled status summary: `manual_review_required`=1, `ready`=1
+- Current compiled status summary: `ready`=2
 - Last notebook run status: `applied`
 - Last notebook removed area: `4527.316 ha`
 - Last notebook remaining area: `2206359.406 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260408T195424Z.json`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260408T202038Z.json`
 - Compiled logic:
 
-#### 14.1. Curve-driven low productivity threshold
+#### 14.1. Non-steep 80 m3/ha threshold
 
 - Step id: `thlb_parent_014_sites_with_low_growing_timber_potential_compiled_01`
 - Kind: `netdown_rule`
@@ -926,20 +926,11 @@
 - Kind: `netdown_rule`
 - Stage: `LHLB -> THLB`
 - Execution class: `projected_harvest_exclusion`
-- Run status: `manual_review_required`
+- Run status: `ready`
 - TSR provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=33`
 - TSR page: `33`
 - TSR text: `Sites may have low productivity because of inherent site factors such as nutrient availability, exposure or excessive moisture. Stands on these sites may contribute to non-timber objectives even though they are unlikely to grow a merchantable crop of trees in a reasonable amount of time. As such, low productivity stands are removed from the THLB. Low productivity stands were identified as stands that are not capable of achieving the minimum harvestable volume applied in this analysis by 160 years. As discussed in Section 7.1.6 – ‘Minimum harvestable criteria’, the minimum threshold is 80 cubic metres per hectare except for steep slopes where the threshold increases to 250 cubic metres per hectare. The VRI has been adjusted to reflect losses due to the MPB epidemic and recent catastrophic fires. It is now difficult to discern low productivity stands from recently disturbed stands based on the current adjusted attributes and yield projections created from these attributes are no longer reliable as they do not account for stand recovery and release of understory regeneration. Site index was not adjusted and remains a reliable identifier of low productivity stands and will be used in this analysis. In order to utilize site index, an exercise was conducted to find the correlation between site index and the minimum harvestable criteria. Representative yield tables for the major leading species within Williams Lake TSA were produced at increasing increments of site index until a yield table that achieved the minimum harvestable criteria was identified for each species and each BEC zone. Table 17. Site index threshold for sites with low timber growing potential Leading species BEC zone Total (ha) AFLB (ha) SI (m) at 80 m3/ha SI (m) at 250 m3/ha Bl BAFA 111 111 Bl CWH 897 897 4.73 7.01 Bl ESSF 124,601 124,299 5.82 9.96 Bl ICH 5,375 5,300 5.76 9.99 Bl IDF 321 321 5.56 9.40 Bl IMA 478 478 Bl MH 2,020 2,020 4.61 6.76 Bl MS 3,114 3,098 5.91 10.38 Bl SBPS 254 252 5.60 9.82 Bl SBS 3,283 3,217 5.73 9.82 Cw CWH 157 157 5.94 8.47 Cw ESSF 3,986 3,976 5.13 8.25 Cw ICH 43,254 42,937 5.49 8.09 Cw SBS 83 83 4.52 6.83 Deciduous BG 215 214 Deciduous CWH 471 471 7.75 16.36 Deciduous ESSF 486 486 8.62 16.85 Deciduous ICH 9,033 8,889 8.82 17.3 Deciduous IDF 20,712 20,471 9.28 20.11 Deciduous MS 1121 1,114 9.01 16.76 Deciduous SBPS 19,436 19,232 9.03 19.08 Deciduous SBS 21,515 21,151 8.88 17.46 Fd BG 26,405 26,351 Fd CWH 8,006 8,006 7.89 12.33 Fd ESSF 6,194 6,178 9.39 14.48 Fd ICH 56,684 55,967 8.98 13.9 Fd IDF 355,725 352,157 8.65 13.96 Fd MH 458 458 7.75 12.00 Fd MS 3,231 3,223.425 9.26 14.47 Fd SBPS 13,990 13,872 8.64 13.62 Fd SBS 63,975 62,771 9.06 14.08 Pl BAFA 14 14 Pl BG 272 272 (continued) Table 17. Site index threshold for sites with low timber growing potential (concluded) Leading species BEC zone Total (ha) AFLB (ha) SI (m) at 80 m3/ha SI (m) at 250 m3/ha Pl CWH 4,570 4,570 6.69 12.36 Pl ESSF 139,272 138,717 8.69 15.53 Pl ICH 44,850 44,279 7.79 14.96 Pl IDF 215,072 212,472 6.93 13.11 Pl IMA 1 1 Pl MH 1,212 1,212 6.76 11.98 Pl MS 476,984 473,526 8.64 16.49 Pl SBPS 937,325 926,646 6.66 12.54 Pl SBS 67,624 65,310 8.25 16.04 Sx BAFA 40 40 Sx BG 5 5 Sx CWH 996 996 4.86 7.99 Sx ESSF 131,173 130,175 9.19 16.47 Sx ICH 68,280 67,069 8.50 15.21 Sx IDF 52,276 51,494 7.42 13.18 Sx IMA 46 46 Sx MH 918 918 4.52 7.25 Sx MS 54,171 53,886 9.33 16.64 Sx SBPS 95,107 94,285 8.00 14.00 Sx SBS 44,895 44,075 9.01 15.92 All stands with a site index below the values listed above in FMLB without harvest history, matched by corresponding leading-species and BEC zone, were excluded from the THLB. Table 18. Sites with low timber growing potential Designations Total (ha) Forested (ha) Excluded (ha) Sites with low timber growing potential 601,655 542,518 321,044 Data source and comments: Yield tables were produced using VDYP 7 by FAIB growth and yield experts using default stocking criteria for Williams Lake TSA.`
-- FEMIC proposed logic: Steep-slope 250 m3/ha threshold apply the 250 m3/ha threshold only after a reviewed steep-slope mask is available; current notebook bridge does not auto-derive a defensible stand-level steep class from VRI alone
-- Linked source layers:
-  - `reg_land_and_natural_resource_terrain_stability` | query=`REG_LAND_AND_NATURAL_RESOURCE.TERRAIN_STABILITY` | status=`alias_hit` | strategy=`wfs_fetch`
-    - artifact: `data/downloads/bcdc/REG_LAND_AND_NATURAL_RESOURCE_TERRAIN_STABILITY/REG_LAND_AND_NATURAL_RESOURCE_TERRAIN_STABILITY.gpkg`
-    - matched by: `object_name:WHSE_TERRESTRIAL_ECOLOGY.STE_TER_STABILITY_POLYS_SVW`
-    - top match: `Terrain Stability Mapping (TSM) Detailed Polygons with Short Attribute Table Spatial View`
-  - `whse_imagery_and_base_maps_mot_highway_profiles_sp` | query=`WHSE_IMAGERY_AND_BASE_MAPS.MOT_HIGHWAY_PROFILES_SP` | status=`exact_hit` | strategy=`wfs_fetch`
-    - artifact: `data/downloads/bcdc/WHSE_IMAGERY_AND_BASE_MAPS_MOT_HIGHWAY_PROFILES_SP/WHSE_IMAGERY_AND_BASE_MAPS_MOT_HIGHWAY_PROFILES_SP.gpkg`
-    - matched by: `object_name:WHSE_IMAGERY_AND_BASE_MAPS.MOT_HIGHWAY_PROFILES_SP`
-    - top match: `Ministry of Transportation (MOT) Highway Profile`
+- FEMIC proposed logic: Exclude the linked polygons from THLB where they intersect the working land base; the exact execution mode depends on available data and current implementation support.
 - Logic mode: `femic_core`
 
 ### 15. Non-merchantable timber profiles
