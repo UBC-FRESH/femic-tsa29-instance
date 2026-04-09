@@ -15,7 +15,7 @@ instance_inputs:
 recipe_contract:
   status: run
   last_built_utc: '2026-04-05T04:42:51.881265+00:00'
-  last_run_utc: '2026-04-05T05:00:26.080358+00:00'
+  last_run_utc: '2026-04-09T06:54:19.454903+00:00'
   notes:
   - Review and refresh this file with `femic tsr source-layers-build`.
   - Use `source_layer_overrides.yaml` only for unresolved public-acquisition wall
@@ -91,6 +91,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 876
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 724267.616
+  - 371515.237
+  - 1522010.75
+  - 1131132.375
 - entry_id: clab_indian_reserves
   label: CLAB_INDIAN_RESERVES
   recommended_query: CLAB_INDIAN_RESERVES
@@ -129,6 +140,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 212
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1016918.9933
+  - 644545.0162
+  - 1369706.1781
+  - 900055.3309
 - entry_id: consolidated_cutblocks_2011
   label: CONSOLIDATED_CUTBLOCKS_2011
   recommended_query: CONSOLIDATED_CUTBLOCKS_2011
@@ -168,6 +190,17 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1271074.856
+  - 660150.0
+  - 1396555.4294
+  - 903398.956
 - entry_id: consolidated_cutblocks_2020
   label: CONSOLIDATED_CUTBLOCKS_2020
   recommended_query: CONSOLIDATED_CUTBLOCKS_2020
@@ -193,7 +226,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: true
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/CONSOLIDATED_CUTBLOCKS_2020/CONSOLIDATED_CUTBLOCKS_2020.gpkg
   override_kind: ''
   override_value: ''
@@ -207,6 +240,17 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1271074.856
+  - 660150.0
+  - 1396555.4294
+  - 903398.956
 - entry_id: fadm_bcts_area
   label: FADM_BCTS_AREA
   recommended_query: FADM_BCTS_AREA
@@ -232,7 +276,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/FADM_BCTS_AREA/FADM_BCTS_AREA.gpkg
   override_kind: ''
   override_value: ''
@@ -247,6 +291,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 8
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 527097.141
+  - 359809.68
+  - 1528216.872
+  - 1520724.211
 - entry_id: fadm_bcts_area_sp
   label: FADM_BCTS_AREA_SP
   recommended_query: FADM_BCTS_AREA_SP
@@ -285,6 +340,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 8
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 527097.141
+  - 359809.68
+  - 1528216.872
+  - 1520724.211
 - entry_id: ften_managed_lic
   label: FTEN_MANAGED_LIC
   recommended_query: FTEN_MANAGED_LIC
@@ -310,7 +376,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/FTEN_MANAGED_LIC/FTEN_MANAGED_LIC.gpkg
   override_kind: ''
   override_value: ''
@@ -325,6 +391,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 707
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1015173.809
+  - 652427.422
+  - 1405721.736
+  - 907597.1
 - entry_id: ften_managed_lic_poly_svw
   label: FTEN_MANAGED_LIC_POLY_SVW
   recommended_query: FTEN_MANAGED_LIC_POLY_SVW
@@ -364,7 +441,18 @@ entries:
     v1 automation.
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
-  feature_count: 707
+  feature_count: 709
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1015173.809
+  - 652427.422
+  - 1405721.736
+  - 907597.1
 - entry_id: ften_road_lines
   label: FTEN_ROAD_LINES
   recommended_query: FTEN_ROAD_LINES
@@ -398,6 +486,12 @@ entries:
   notes:
   - Top match includes BCGW indirect/custom-download resources; use the dataset page
     for manual access if a direct data URL is unavailable.
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
 - entry_id: ften_road_section_lines_svw
   label: FTEN_ROAD_SECTION_LINES_SVW
   recommended_query: FTEN_ROAD_SECTION_LINES_SVW
@@ -436,6 +530,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1263812.648
+  - 653111.973
+  - 1408875.195
+  - 806923.385
 - entry_id: reg_land_and_natural_resource_l_mule_deer
   label: REG_LAND_AND_NATURAL_RESOURCE.L_MULE_DEER
   recommended_query: REG_LAND_AND_NATURAL_RESOURCE.L_MULE_DEER
@@ -515,7 +620,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: true
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/REG_LAND_AND_NATURAL_RESOURCE_STE_TER/REG_LAND_AND_NATURAL_RESOURCE_STE_TER.gpkg
   override_kind: ''
   override_value: ''
@@ -530,6 +635,17 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1005898.0
+  - 651795.875
+  - 1395677.875
+  - 903885.5625
 - entry_id: reg_land_and_natural_resource_terrain_stability
   label: REG_LAND_AND_NATURAL_RESOURCE.TERRAIN_STABILITY
   recommended_query: REG_LAND_AND_NATURAL_RESOURCE.TERRAIN_STABILITY
@@ -556,7 +672,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: true
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/REG_LAND_AND_NATURAL_RESOURCE_TERRAIN_STABILITY/REG_LAND_AND_NATURAL_RESOURCE_TERRAIN_STABILITY.gpkg
   override_kind: ''
   override_value: ''
@@ -571,6 +687,17 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1005898.0
+  - 651795.875
+  - 1395677.875
+  - 903885.5625
 - entry_id: reg_land_and_natural_resource_wld
   label: REG_LAND_AND_NATURAL_RESOURCE.WLD
   recommended_query: REG_LAND_AND_NATURAL_RESOURCE.WLD
@@ -597,7 +724,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/REG_LAND_AND_NATURAL_RESOURCE_WLD/REG_LAND_AND_NATURAL_RESOURCE_WLD.gpkg
   override_kind: ''
   override_value: ''
@@ -610,6 +737,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1069449.0169
+  - 671224.6251
+  - 1373499.1688
+  - 927781.3125
 - entry_id: reg_land_and_natural_resource_wld_wha_proposed_sp
   label: REG_LAND_AND_NATURAL_RESOURCE.WLD_WHA_PROPOSED_SP
   recommended_query: REG_LAND_AND_NATURAL_RESOURCE.WLD_WHA_PROPOSED_SP
@@ -635,7 +773,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/REG_LAND_AND_NATURAL_RESOURCE_WLD_WHA_PROPOSED_SP/REG_LAND_AND_NATURAL_RESOURCE_WLD_WHA_PROPOSED_SP.gpkg
   override_kind: ''
   override_value: ''
@@ -650,6 +788,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1063249.1817
+  - 650244.934
+  - 1289389.75
+  - 750703.8125
 - entry_id: rmp_landscape_unit_svw
   label: RMP_LANDSCAPE_UNIT_SVW
   recommended_query: RMP_LANDSCAPE_UNIT_SVW
@@ -688,6 +837,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 196
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 976430.1641
+  - 610954.6875
+  - 1452052.1533
+  - 937613.688
 - entry_id: rmp_landscape_unit_svw_no_multiples
   label: RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES
   recommended_query: RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES
@@ -713,7 +873,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES/RMP_LANDSCAPE_UNIT_SVW_NO_MULTIPLES.gpkg
   override_kind: ''
   override_value: ''
@@ -728,6 +888,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 196
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 976430.1641
+  - 610954.6875
+  - 1452052.1533
+  - 937613.688
 - entry_id: rmp_ogma_legal
   label: RMP_OGMA_LEGAL
   recommended_query: RMP_OGMA_LEGAL
@@ -753,7 +924,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: true
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/RMP_OGMA_LEGAL/RMP_OGMA_LEGAL.gpkg
   override_kind: ''
   override_value: ''
@@ -770,6 +941,17 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 7825
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1019716.3125
+  - 652074.724
+  - 1400146.9027
+  - 903902.0625
 - entry_id: rmp_ogma_legal_current_svw
   label: RMP_OGMA_LEGAL_CURRENT_SVW
   recommended_query: RMP_OGMA_LEGAL_CURRENT_SVW
@@ -810,6 +992,17 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 7825
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1019716.3125
+  - 652074.724
+  - 1400146.9027
+  - 903902.0625
 - entry_id: rmp_plan_legal
   label: RMP_PLAN_LEGAL
   recommended_query: RMP_PLAN_LEGAL
@@ -835,7 +1028,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/RMP_PLAN_LEGAL/RMP_PLAN_LEGAL.gpkg
   override_kind: ''
   override_value: ''
@@ -850,6 +1043,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 667270.7157
+  - 493653.5134
+  - 1728992.3745
+  - 1220500.4988
 - entry_id: rmp_plan_legal_poly_svw
   label: RMP_PLAN_LEGAL_POLY_SVW
   recommended_query: RMP_PLAN_LEGAL_POLY_SVW
@@ -888,6 +1092,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 667270.7157
+  - 493653.5134
+  - 1728992.3745
+  - 1220500.4988
 - entry_id: rmp_plan_non_legal_poly_svw
   label: RMP_PLAN_NON_LEGAL_POLY_SVW
   recommended_query: RMP_PLAN_NON_LEGAL_POLY_SVW
@@ -914,7 +1129,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/RMP_PLAN_NON_LEGAL_POLY_SVW/RMP_PLAN_NON_LEGAL_POLY_SVW.gpkg
   override_kind: ''
   override_value: ''
@@ -927,6 +1142,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1015198.625
+  - 668503.625
+  - 1387797.5
+  - 910682.375
 - entry_id: site_prod_bc
   label: SITE_PROD_BC
   recommended_query: SITE_PROD_BC
@@ -953,7 +1179,7 @@ entries:
   has_indirect_custom_download: false
   has_supporting_document: false
   acquisition_strategy: direct_download
-  run_status: downloaded
+  run_status: reused
   artifact_path: data/downloads/bcdc/SITE_PROD_BC/Site_Prod_BC.zip
   override_kind: ''
   override_value: ''
@@ -986,7 +1212,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/TA_CROWN_TENURES_SVW/TA_CROWN_TENURES_SVW.gpkg
   override_kind: ''
   override_value: ''
@@ -999,6 +1225,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 3853
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 273315.6215
+  - 387292.0987
+  - 1870084.6275
+  - 1735725.9724
 - entry_id: ta_park_ecores_pa_svw
   label: TA_PARK_ECORES_PA_SVW
   recommended_query: TA_PARK_ECORES_PA_SVW
@@ -1024,7 +1261,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/TA_PARK_ECORES_PA_SVW/TA_PARK_ECORES_PA_SVW.gpkg
   override_kind: ''
   override_value: ''
@@ -1037,6 +1274,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 90
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 909199.8321
+  - 645795.2102
+  - 1444934.906
+  - 979219.5125
 - entry_id: ta_wildlife_mgmt_areas
   label: TA_WILDLIFE_MGMT_AREAS
   recommended_query: TA_WILDLIFE_MGMT_AREAS
@@ -1062,7 +1310,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/TA_WILDLIFE_MGMT_AREAS/TA_WILDLIFE_MGMT_AREAS.gpkg
   override_kind: ''
   override_value: ''
@@ -1077,6 +1325,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 3
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1121782.0557
+  - 650256.6447
+  - 1382155.5569
+  - 791737.7993
 - entry_id: ta_wildlife_mgmt_areas_svw
   label: TA_WILDLIFE_MGMT_AREAS_SVW
   recommended_query: TA_WILDLIFE_MGMT_AREAS_SVW
@@ -1115,6 +1374,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 3
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1121782.0557
+  - 650256.6447
+  - 1382155.5569
+  - 791737.7993
 - entry_id: trim_contour_points
   label: TRIM_CONTOUR_POINTS
   recommended_query: TRIM_CONTOUR_POINTS
@@ -1140,7 +1410,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/TRIM_CONTOUR_POINTS/TRIM_CONTOUR_POINTS.gpkg
   override_kind: ''
   override_value: ''
@@ -1153,6 +1423,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1015187.313
+  - 787941.375
+  - 1393083.5
+  - 901920.938
 - entry_id: veg_burn_severity
   label: VEG_BURN_SEVERITY
   recommended_query: VEG_BURN_SEVERITY
@@ -1200,6 +1481,12 @@ entries:
   notes:
   - Top match includes BCGW indirect/custom-download resources; use the dataset page
     for manual access if a direct data URL is unavailable.
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
 - entry_id: veg_burn_severity_sp
   label: VEG_BURN_SEVERITY_SP
   recommended_query: VEG_BURN_SEVERITY_SP
@@ -1225,7 +1512,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/VEG_BURN_SEVERITY_SP/VEG_BURN_SEVERITY_SP.gpkg
   override_kind: ''
   override_value: ''
@@ -1236,6 +1523,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1098233.8962
+  - 839599.5878
+  - 1387409.1681
+  - 914557.7263
 - entry_id: veg_comp_lyr_r1
   label: VEG_COMP_LYR_R1
   recommended_query: VEG_COMP_LYR_R1
@@ -1272,6 +1570,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1013353.9401
+  - 886560.0001
+  - 1137875.0631
+  - 904913.3651
 - entry_id: veg_comp_lyr_r1_poly
   label: VEG_COMP_LYR_R1_POLY
   recommended_query: VEG_COMP_LYR_R1_POLY
@@ -1298,7 +1607,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/VEG_COMP_LYR_R1_POLY/VEG_COMP_LYR_R1_POLY.gpkg
   override_kind: ''
   override_value: ''
@@ -1309,6 +1618,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1013353.9401
+  - 886560.0001
+  - 1137875.0631
+  - 904913.3651
 - entry_id: veg_consolidated_cut_blocks_sp
   label: VEG_CONSOLIDATED_CUT_BLOCKS_SP
   recommended_query: VEG_CONSOLIDATED_CUT_BLOCKS_SP
@@ -1334,7 +1654,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: true
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/VEG_CONSOLIDATED_CUT_BLOCKS_SP/VEG_CONSOLIDATED_CUT_BLOCKS_SP.gpkg
   override_kind: ''
   override_value: ''
@@ -1347,6 +1667,17 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1271074.856
+  - 660150.0
+  - 1396555.4294
+  - 903398.956
 - entry_id: wcp_ungulate_winter_range
   label: WCP_UNGULATE_WINTER_RANGE
   recommended_query: WCP_UNGULATE_WINTER_RANGE
@@ -1372,7 +1703,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WCP_UNGULATE_WINTER_RANGE/WCP_UNGULATE_WINTER_RANGE.gpkg
   override_kind: ''
   override_value: ''
@@ -1387,6 +1718,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 209
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1013777.375
+  - 651314.8125
+  - 1383309.125
+  - 912912.8125
 - entry_id: whse_admin_boundaries_clab_indian
   label: WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN
   recommended_query: WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN
@@ -1412,7 +1754,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN/WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN.gpkg
   override_kind: ''
   override_value: ''
@@ -1427,6 +1769,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 212
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1016918.9933
+  - 644545.0162
+  - 1369706.1781
+  - 900055.3309
 - entry_id: whse_admin_boundaries_clab_indian_reserves
   label: WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES
   recommended_query: WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES
@@ -1452,7 +1805,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN_RESERVES/WHSE_ADMIN_BOUNDARIES_CLAB_INDIAN_RESERVES.gpkg
   override_kind: ''
   override_value: ''
@@ -1465,6 +1818,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 212
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1016918.9933
+  - 644545.0162
+  - 1369706.1781
+  - 900055.3309
 - entry_id: whse_admin_boundaries_fadm_bcts_area
   label: WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA
   recommended_query: WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA
@@ -1490,7 +1854,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA/WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA.gpkg
   override_kind: ''
   override_value: ''
@@ -1505,6 +1869,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 8
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 527097.141
+  - 359809.68
+  - 1528216.872
+  - 1520724.211
 - entry_id: whse_admin_boundaries_fadm_bcts_area_sp
   label: WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP
   recommended_query: WHSE_ADMIN_BOUNDARIES.FADM_BCTS_AREA_SP
@@ -1530,7 +1905,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA_SP/WHSE_ADMIN_BOUNDARIES_FADM_BCTS_AREA_SP.gpkg
   override_kind: ''
   override_value: ''
@@ -1543,6 +1918,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 8
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 527097.141
+  - 359809.68
+  - 1528216.872
+  - 1520724.211
 - entry_id: whse_admin_boundaries_fadm_tfl
   label: WHSE_ADMIN_BOUNDARIES.FADM_TFL
   recommended_query: WHSE_ADMIN_BOUNDARIES.FADM_TFL
@@ -1568,7 +1954,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_ADMIN_BOUNDARIES_FADM_TFL/WHSE_ADMIN_BOUNDARIES_FADM_TFL.gpkg
   override_kind: ''
   override_value: ''
@@ -1581,6 +1967,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 12
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 990472.973
+  - 628418.402
+  - 1410571.0
+  - 936325.041
 - entry_id: whse_admin_boundaries_fadm_tsa
   label: WHSE_ADMIN_BOUNDARIES.FADM_TSA
   recommended_query: WHSE_ADMIN_BOUNDARIES.FADM_TSA
@@ -1606,7 +2003,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_ADMIN_BOUNDARIES_FADM_TSA/WHSE_ADMIN_BOUNDARIES_FADM_TSA.gpkg
   override_kind: ''
   override_value: ''
@@ -1619,6 +2016,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 66
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 634372.0262
+  - 470986.097
+  - 1528154.5015
+  - 1368533.9543
 - entry_id: whse_admin_boundaries_pip_consultation
   label: WHSE_ADMIN_BOUNDARIES.PIP_CONSULTATION
   recommended_query: WHSE_ADMIN_BOUNDARIES.PIP_CONSULTATION
@@ -1683,7 +2091,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: true
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR/WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR.gpkg
   override_kind: ''
   override_value: ''
@@ -1698,6 +2106,17 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1212023.187
+  - 719860.634
+  - 1397435.531
+  - 810481.858
 - entry_id: whse_basemapping_dra_dgtl_road_atlas_mpar_sp
   label: WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP
   recommended_query: WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP
@@ -1724,7 +2143,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: true
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR_SP/WHSE_BASEMAPPING_DRA_DGTL_ROAD_ATLAS_MPAR_SP.gpkg
   override_kind: ''
   override_value: ''
@@ -1739,6 +2158,17 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1212023.187
+  - 719860.634
+  - 1397435.531
+  - 810481.858
 - entry_id: whse_basemapping_dra_digital_road_atlas_line_sp
   label: WHSE_BASEMAPPING.DRA_DIGITAL_ROAD_ATLAS_LINE_SP
   recommended_query: WHSE_BASEMAPPING.DRA_DIGITAL_ROAD_ATLAS_LINE_SP
@@ -1764,7 +2194,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: true
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_BASEMAPPING_DRA_DIGITAL_ROAD_ATLAS_LINE_SP/WHSE_BASEMAPPING_DRA_DIGITAL_ROAD_ATLAS_LINE_SP.gpkg
   override_kind: ''
   override_value: ''
@@ -1781,6 +2211,17 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1212023.187
+  - 719860.634
+  - 1397435.531
+  - 810481.858
 - entry_id: whse_basemapping_fwa_lakes_poly
   label: WHSE_BASEMAPPING.FWA_LAKES_POLY
   recommended_query: WHSE_BASEMAPPING.FWA_LAKES_POLY
@@ -1806,7 +2247,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: true
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_BASEMAPPING_FWA_LAKES_POLY/WHSE_BASEMAPPING_FWA_LAKES_POLY.gpkg
   override_kind: ''
   override_value: ''
@@ -1821,6 +2262,17 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1012031.0
+  - 727816.225
+  - 1411225.434
+  - 908730.983
 - entry_id: whse_basemapping_fwa_rivers_poly
   label: WHSE_BASEMAPPING.FWA_RIVERS_POLY
   recommended_query: WHSE_BASEMAPPING.FWA_RIVERS_POLY
@@ -1846,7 +2298,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: true
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_BASEMAPPING_FWA_RIVERS_POLY/WHSE_BASEMAPPING_FWA_RIVERS_POLY.gpkg
   override_kind: ''
   override_value: ''
@@ -1861,6 +2313,17 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 2190
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 934726.85
+  - 640268.723
+  - 1396480.596
+  - 956425.229
 - entry_id: whse_basemapping_fwa_wetlands_poly
   label: WHSE_BASEMAPPING.FWA_WETLANDS_POLY
   recommended_query: WHSE_BASEMAPPING.FWA_WETLANDS_POLY
@@ -1886,7 +2349,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: true
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_BASEMAPPING_FWA_WETLANDS_POLY/WHSE_BASEMAPPING_FWA_WETLANDS_POLY.gpkg
   override_kind: ''
   override_value: ''
@@ -1901,6 +2364,17 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1038364.997
+  - 840925.688
+  - 1241247.582
+  - 903321.757
 - entry_id: reg_land_and_natural_resource_stream_classification_car_line
   label: REG_LAND_AND_NATURAL_RESOURCE.STREAM_CLASSIFICATION_CAR_LINE
   recommended_query: Stream Classification for the Cariboo Region
@@ -1926,15 +2400,28 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: dwds_order
-  run_status: downloaded
+  run_status: reused
   artifact_path: data/downloads/bcdc/REG_LAND_AND_NATURAL_RESOURCE_STREAM_CLASSIFICATION_CAR_LINE/STREAM_CLASSIFICATION_CAR_LINE.gpkg
   override_kind: ''
   override_value: ''
   replacement_family_candidates: []
   notes:
-  - Materialized from a DWDS custom-download order using the pickup-by-GUID follow-up flow.
-  - Step 18 uses STREAM_CLASS values 1-6 from this line layer to apply Table 15 effective riparian widths.
+  - Materialized from a DWDS custom-download order using the pickup-by-GUID follow-up
+    flow.
+  - Step 18 uses STREAM_CLASS values 1-6 from this line layer to apply Table 15 effective
+    riparian widths.
   feature_count: 0
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1015173.9379999995
+  - 658560.5000000019
+  - 1393139.0550000002
+  - 901924.5102000097
 - entry_id: reg_land_and_natural_resource_wetland_class_car_poly
   label: REG_LAND_AND_NATURAL_RESOURCE.WETLAND_CLASS_CAR_POLY
   recommended_query: Wetland Riparian Classes for the Cariboo Region
@@ -1960,15 +2447,28 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: dwds_order
-  run_status: downloaded
+  run_status: reused
   artifact_path: data/downloads/bcdc/REG_LAND_AND_NATURAL_RESOURCE_WETLAND_CLASS_CAR_POLY/WETLAND_CLASS_CAR_POLY.gpkg
   override_kind: ''
   override_value: ''
   replacement_family_candidates: []
   notes:
-  - Materialized from a DWDS custom-download order using the pickup-by-GUID follow-up flow.
-  - Step 18 uses SWAMP_CLASS values w1-w5 from this polygon layer to apply Table 15 effective riparian widths.
+  - Materialized from a DWDS custom-download order using the pickup-by-GUID follow-up
+    flow.
+  - Step 18 uses SWAMP_CLASS values w1-w5 from this polygon layer to apply Table 15
+    effective riparian widths.
   feature_count: 0
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1015173.8085999984
+  - 670664.6249999972
+  - 1390819.2499999993
+  - 901924.5102000087
 - entry_id: whse_basemapping_trim_contour_points
   label: WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS
   recommended_query: WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS
@@ -1994,7 +2494,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_BASEMAPPING_TRIM_CONTOUR_POINTS/WHSE_BASEMAPPING_TRIM_CONTOUR_POINTS.gpkg
   override_kind: ''
   override_value: ''
@@ -2007,6 +2507,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1015187.313
+  - 787941.375
+  - 1393083.5
+  - 901920.938
 - entry_id: whse_cadastre_cbm_cadastral_fabric
   label: WHSE_CADASTRE.CBM_CADASTRAL_FABRIC
   recommended_query: WHSE_CADASTRE.CBM_CADASTRAL_FABRIC
@@ -2032,7 +2543,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_CADASTRE_CBM_CADASTRAL_FABRIC/WHSE_CADASTRE_CBM_CADASTRAL_FABRIC.gpkg
   override_kind: ''
   override_value: ''
@@ -2045,6 +2556,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1204210.9495
+  - 841079.2327
+  - 1367681.3956
+  - 917152.8557
 - entry_id: whse_forest_tenure_ften_managed_lic
   label: WHSE_FOREST_TENURE.FTEN_MANAGED_LIC
   recommended_query: WHSE_FOREST_TENURE.FTEN_MANAGED_LIC
@@ -2070,7 +2592,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_FOREST_TENURE_FTEN_MANAGED_LIC/WHSE_FOREST_TENURE_FTEN_MANAGED_LIC.gpkg
   override_kind: ''
   override_value: ''
@@ -2085,6 +2607,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 707
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1015173.809
+  - 652427.422
+  - 1405721.736
+  - 907597.1
 - entry_id: whse_forest_tenure_ften_managed_lic_poly_svw
   label: WHSE_FOREST_TENURE.FTEN_MANAGED_LIC_POLY_SVW
   recommended_query: WHSE_FOREST_TENURE.FTEN_MANAGED_LIC_POLY_SVW
@@ -2110,7 +2643,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_FOREST_TENURE_FTEN_MANAGED_LIC_POLY_SVW/WHSE_FOREST_TENURE_FTEN_MANAGED_LIC_POLY_SVW.gpkg
   override_kind: ''
   override_value: ''
@@ -2125,6 +2658,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 707
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1015173.809
+  - 652427.422
+  - 1405721.736
+  - 907597.1
 - entry_id: whse_forest_tenure_ften_recreation
   label: WHSE_FOREST_TENURE.FTEN_RECREATION
   recommended_query: WHSE_FOREST_TENURE.FTEN_RECREATION
@@ -2150,7 +2694,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_FOREST_TENURE_FTEN_RECREATION/WHSE_FOREST_TENURE_FTEN_RECREATION.gpkg
   override_kind: ''
   override_value: ''
@@ -2163,6 +2707,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 788
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1015186.511
+  - 652367.868
+  - 1397666.088
+  - 901941.233
 - entry_id: whse_forest_tenure_ften_road_lines
   label: WHSE_FOREST_TENURE.FTEN_ROAD_LINES
   recommended_query: WHSE_FOREST_TENURE.FTEN_ROAD_LINES
@@ -2188,7 +2743,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: dwds_order
-  run_status: downloaded
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_GRY_PSP_STATUS_ACTIVE/GRY_PSP_STATUS_ACTIVE.gpkg
   override_kind: ''
   override_value: ''
@@ -2196,8 +2751,19 @@ entries:
   notes:
   - Top match includes BCGW indirect/custom-download resources; use the dataset page
     for manual access if a direct data URL is unavailable.
-  - DWDS follow-up materialized the emailed pickup-by-GUID package and extracted
-    the active-status GeoPackage into the instance-local BCDC download cache.
+  - DWDS follow-up materialized the emailed pickup-by-GUID package and extracted the
+    active-status GeoPackage into the instance-local BCDC download cache.
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1045444.2656
+  - 656924.843799998
+  - 1393139.0550000004
+  - 899602.3249999993
 - entry_id: whse_forest_tenure_ften_road_section_lines
   label: WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES
   recommended_query: WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES
@@ -2223,7 +2789,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES/WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES.gpkg
   override_kind: ''
   override_value: ''
@@ -2238,6 +2804,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1263812.648
+  - 653111.973
+  - 1408875.195
+  - 806923.385
 - entry_id: whse_forest_tenure_ften_road_section_lines_svw
   label: WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW
   recommended_query: WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW
@@ -2263,7 +2840,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES_SVW/WHSE_FOREST_TENURE_FTEN_ROAD_SECTION_LINES_SVW.gpkg
   override_kind: ''
   override_value: ''
@@ -2276,6 +2853,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1263812.648
+  - 653111.973
+  - 1408875.195
+  - 806923.385
 - entry_id: whse_forest_vegetation_bec
   label: WHSE_FOREST_VEGETATION.BEC
   recommended_query: WHSE_FOREST_VEGETATION.BEC
@@ -2301,7 +2889,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_BEC/WHSE_FOREST_VEGETATION_BEC.gpkg
   override_kind: ''
   override_value: ''
@@ -2316,6 +2904,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 876
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 724267.616
+  - 371515.237
+  - 1522010.75
+  - 1131132.375
 - entry_id: whse_forest_vegetation_bec_biogeoclimatic_poly
   label: WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
   recommended_query: WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY
@@ -2341,7 +2940,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_BEC_BIOGEOCLIMATIC_POLY/WHSE_FOREST_VEGETATION_BEC_BIOGEOCLIMATIC_POLY.gpkg
   override_kind: ''
   override_value: ''
@@ -2354,6 +2953,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 876
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 724267.616
+  - 371515.237
+  - 1522010.75
+  - 1131132.375
 - entry_id: whse_forest_vegetation_f_own
   label: WHSE_FOREST_VEGETATION.F_OWN
   recommended_query: WHSE_FOREST_VEGETATION.F_OWN
@@ -2380,7 +2990,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: true
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_F_OWN/WHSE_FOREST_VEGETATION_F_OWN.gpkg
   override_kind: ''
   override_value: ''
@@ -2395,6 +3005,17 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1105168.515
+  - 642226.488
+  - 1405350.228
+  - 907878.722
 - entry_id: whse_forest_vegetation_gry_psp_status
   label: WHSE_FOREST_VEGETATION.GRY_PSP_STATUS
   recommended_query: WHSE_FOREST_VEGETATION.GRY_PSP_STATUS
@@ -2420,7 +3041,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: dwds_order
-  run_status: downloaded
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_GRY_PSP_STATUS_ACTIVE/GRY_PSP_STATUS_ACTIVE.gpkg
   override_kind: ''
   override_value: ''
@@ -2428,8 +3049,19 @@ entries:
   notes:
   - Top match includes BCGW indirect/custom-download resources; use the dataset page
     for manual access if a direct data URL is unavailable.
-  - DWDS follow-up materialized the emailed pickup-by-GUID package and extracted
-    the active-status GeoPackage into the instance-local BCDC download cache.
+  - DWDS follow-up materialized the emailed pickup-by-GUID package and extracted the
+    active-status GeoPackage into the instance-local BCDC download cache.
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1045444.2656
+  - 656924.843799998
+  - 1393139.0550000004
+  - 899602.3249999993
 - entry_id: whse_forest_vegetation_rec_visual_landscape
   label: WHSE_FOREST_VEGETATION.REC_VISUAL_LANDSCAPE
   recommended_query: WHSE_FOREST_VEGETATION.REC_VISUAL_LANDSCAPE
@@ -2455,7 +3087,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_REC_VISUAL_LANDSCAPE/WHSE_FOREST_VEGETATION_REC_VISUAL_LANDSCAPE.gpkg
   override_kind: ''
   override_value: ''
@@ -2470,6 +3102,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 9416
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 859328.779
+  - 503258.041
+  - 1464855.5
+  - 1014516.938
 - entry_id: whse_forest_vegetation_rslt_forest
   label: WHSE_FOREST_VEGETATION.RSLT_FOREST
   recommended_query: WHSE_FOREST_VEGETATION.RSLT_FOREST
@@ -2503,6 +3146,12 @@ entries:
   notes:
   - Top match includes BCGW indirect/custom-download resources; use the dataset page
     for manual access if a direct data URL is unavailable.
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
 - entry_id: whse_forest_vegetation_veg_burn_severity
   label: WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY
   recommended_query: WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY
@@ -2550,6 +3199,12 @@ entries:
   notes:
   - Top match includes BCGW indirect/custom-download resources; use the dataset page
     for manual access if a direct data URL is unavailable.
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
 - entry_id: whse_forest_vegetation_veg_burn_severity_sp
   label: WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SP
   recommended_query: WHSE_FOREST_VEGETATION.VEG_BURN_SEVERITY_SP
@@ -2575,7 +3230,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_VEG_BURN_SEVERITY_SP/WHSE_FOREST_VEGETATION_VEG_BURN_SEVERITY_SP.gpkg
   override_kind: ''
   override_value: ''
@@ -2586,6 +3241,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1098233.8962
+  - 839599.5878
+  - 1387409.1681
+  - 914557.7263
 - entry_id: whse_forest_vegetation_veg_comp_lyr_r1_poly
   label: WHSE_FOREST_VEGETATION.VEG_COMP_LYR_R1_POLY
   recommended_query: WHSE_FOREST_VEGETATION.VEG_COMP_LYR_R1_POLY
@@ -2611,7 +3277,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_VEG_COMP_LYR_R1_POLY/WHSE_FOREST_VEGETATION_VEG_COMP_LYR_R1_POLY.gpkg
   override_kind: ''
   override_value: ''
@@ -2622,6 +3288,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1013353.9401
+  - 886560.0001
+  - 1137875.0631
+  - 904913.3651
 - entry_id: whse_forest_vegetation_veg_consolidated_cut_blocks_sp
   label: WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP
   recommended_query: WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP
@@ -2647,7 +3324,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: true
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_FOREST_VEGETATION_VEG_CONSOLIDATED_CUT_BLOCKS_SP/WHSE_FOREST_VEGETATION_VEG_CONSOLIDATED_CUT_BLOCKS_SP.gpkg
   override_kind: ''
   override_value: ''
@@ -2660,6 +3337,17 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1271074.856
+  - 660150.0
+  - 1396555.4294
+  - 903398.956
 - entry_id: whse_human_cultural_economic_fnirs
   label: WHSE_HUMAN_CULTURAL_ECONOMIC.FNIRS
   recommended_query: WHSE_HUMAN_CULTURAL_ECONOMIC.FNIRS
@@ -2749,7 +3437,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_IMAGERY_AND_BASE_MAPS_MOT_HIGHWAY_PROFILES_SP/WHSE_IMAGERY_AND_BASE_MAPS_MOT_HIGHWAY_PROFILES_SP.gpkg
   override_kind: ''
   override_value: ''
@@ -2762,6 +3450,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 4153
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 995595.6
+  - 645855.5
+  - 1399153.855
+  - 920932.1
 - entry_id: whse_imagery_and_base_maps_mot_road_features_invntry_sp
   label: WHSE_IMAGERY_AND_BASE_MAPS.MOT_ROAD_FEATURES_INVNTRY_SP
   recommended_query: WHSE_IMAGERY_AND_BASE_MAPS.MOT_ROAD_FEATURES_INVNTRY_SP
@@ -2787,7 +3486,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_IMAGERY_AND_BASE_MAPS_MOT_ROAD_FEATURES_INVNTRY_SP/WHSE_IMAGERY_AND_BASE_MAPS_MOT_ROAD_FEATURES_INVNTRY_SP.gpkg
   override_kind: ''
   override_value: ''
@@ -2800,6 +3499,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 2001
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 945977.495
+  - 610177.175
+  - 1402029.3
+  - 921868.8
 - entry_id: whse_land_and_natural_resource_prot_current_fire
   label: WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE
   recommended_query: WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE
@@ -2825,7 +3535,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_LAND_AND_NATURAL_RESOURCE_PROT_CURRENT_FIRE/WHSE_LAND_AND_NATURAL_RESOURCE_PROT_CURRENT_FIRE.gpkg
   override_kind: ''
   override_value: ''
@@ -2836,6 +3546,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 1
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1256189.0013
+  - 708512.7116
+  - 1256864.5425
+  - 709639.279
 - entry_id: whse_land_use_planning_fadm_designated
   label: WHSE_LAND_USE_PLANNING.FADM_DESIGNATED
   recommended_query: WHSE_LAND_USE_PLANNING.FADM_DESIGNATED
@@ -2861,7 +3582,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_LAND_USE_PLANNING_FADM_DESIGNATED/WHSE_LAND_USE_PLANNING_FADM_DESIGNATED.gpkg
   override_kind: ''
   override_value: ''
@@ -2876,6 +3597,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 26
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 986878.0008
+  - 639413.664
+  - 1372530.2918
+  - 765086.6032
 - entry_id: whse_land_use_planning_rmp_landscape_unit_svw
   label: WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW
   recommended_query: WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW
@@ -2901,7 +3633,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_LAND_USE_PLANNING_RMP_LANDSCAPE_UNIT_SVW/WHSE_LAND_USE_PLANNING_RMP_LANDSCAPE_UNIT_SVW.gpkg
   override_kind: ''
   override_value: ''
@@ -2914,6 +3646,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 196
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 976430.1641
+  - 610954.6875
+  - 1452052.1533
+  - 937613.688
 - entry_id: whse_land_use_planning_rmp_ogma_legal
   label: WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL
   recommended_query: WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL
@@ -2939,7 +3682,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: true
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL/WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL.gpkg
   override_kind: ''
   override_value: ''
@@ -2956,6 +3699,17 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 7825
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1019716.3125
+  - 652074.724
+  - 1400146.9027
+  - 903902.0625
 - entry_id: whse_land_use_planning_rmp_ogma_legal_current_svw
   label: WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW
   recommended_query: WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW
@@ -2981,7 +3735,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: true
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL_CURRENT_SVW/WHSE_LAND_USE_PLANNING_RMP_OGMA_LEGAL_CURRENT_SVW.gpkg
   override_kind: ''
   override_value: ''
@@ -2996,6 +3750,17 @@ entries:
   - Supporting documents are available for manual review but are not auto-downloaded
     in v1.
   feature_count: 7825
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1019716.3125
+  - 652074.724
+  - 1400146.9027
+  - 903902.0625
 - entry_id: whse_land_use_planning_rmp_plan_legal
   label: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL
   recommended_query: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL
@@ -3021,7 +3786,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL/WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL.gpkg
   override_kind: ''
   override_value: ''
@@ -3036,6 +3801,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 667270.7157
+  - 493653.5134
+  - 1728992.3745
+  - 1220500.4988
 - entry_id: whse_land_use_planning_rmp_plan_legal_poly
   label: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY
   recommended_query: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY
@@ -3069,6 +3845,12 @@ entries:
   notes:
   - Top match includes BCGW indirect/custom-download resources; use the dataset page
     for manual access if a direct data URL is unavailable.
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
 - entry_id: whse_land_use_planning_rmp_plan_legal_poly_svw
   label: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW
   recommended_query: WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW
@@ -3094,7 +3876,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL_POLY_SVW/WHSE_LAND_USE_PLANNING_RMP_PLAN_LEGAL_POLY_SVW.gpkg
   override_kind: ''
   override_value: ''
@@ -3107,6 +3889,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 667270.7157
+  - 493653.5134
+  - 1728992.3745
+  - 1220500.4988
 - entry_id: whse_land_use_planning_rmp_plan_non_legal_poly_svw
   label: WHSE_LAND_USE_PLANNING.RMP_PLAN_NON_LEGAL_POLY_SVW
   recommended_query: WHSE_LAND_USE_PLANNING.RMP_PLAN_NON_LEGAL_POLY_SVW
@@ -3133,7 +3926,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_LAND_USE_PLANNING_RMP_PLAN_NON_LEGAL_POLY_SVW/WHSE_LAND_USE_PLANNING_RMP_PLAN_NON_LEGAL_POLY_SVW.gpkg
   override_kind: ''
   override_value: ''
@@ -3146,6 +3939,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 10000
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1015198.625
+  - 668503.625
+  - 1387797.5
+  - 910682.375
 - entry_id: whse_land_use_planning_rmp_strgc_land
   label: WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND
   recommended_query: WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND
@@ -3183,6 +3987,12 @@ entries:
     for manual access if a direct data URL is unavailable.
   - Top match currently exposes service resources but no direct-access data file for
     v1 automation.
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
 - entry_id: whse_land_use_planning_rmp_strgc_land_rsrce_plan
   label: WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN
   recommended_query: WHSE_LAND_USE_PLANNING.RMP_STRGC_LAND_RSRCE_PLAN
@@ -3220,6 +4030,12 @@ entries:
     for manual access if a direct data URL is unavailable.
   - Top match currently exposes service resources but no direct-access data file for
     v1 automation.
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
 - entry_id: whse_tantalis_ta_crown_tenures_svw
   label: WHSE_TANTALIS.TA_CROWN_TENURES_SVW
   recommended_query: WHSE_TANTALIS.TA_CROWN_TENURES_SVW
@@ -3245,7 +4061,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_TANTALIS_TA_CROWN_TENURES_SVW/WHSE_TANTALIS_TA_CROWN_TENURES_SVW.gpkg
   override_kind: ''
   override_value: ''
@@ -3258,6 +4074,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 3853
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 273315.6215
+  - 387292.0987
+  - 1870084.6275
+  - 1735725.9724
 - entry_id: whse_tantalis_ta_park_ecores_pa_svw
   label: WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW
   recommended_query: WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW
@@ -3283,7 +4110,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_TANTALIS_TA_PARK_ECORES_PA_SVW/WHSE_TANTALIS_TA_PARK_ECORES_PA_SVW.gpkg
   override_kind: ''
   override_value: ''
@@ -3296,6 +4123,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 90
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 909199.8321
+  - 645795.2102
+  - 1444934.906
+  - 979219.5125
 - entry_id: whse_tantalis_ta_wildlife_mgmt_areas_svw
   label: WHSE_TANTALIS.TA_WILDLIFE_MGMT_AREAS_SVW
   recommended_query: WHSE_TANTALIS.TA_WILDLIFE_MGMT_AREAS_SVW
@@ -3321,7 +4159,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_TANTALIS_TA_WILDLIFE_MGMT_AREAS_SVW/WHSE_TANTALIS_TA_WILDLIFE_MGMT_AREAS_SVW.gpkg
   override_kind: ''
   override_value: ''
@@ -3334,6 +4172,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 3
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1121782.0557
+  - 650256.6447
+  - 1382155.5569
+  - 791737.7993
 - entry_id: whse_water_management_bc_community_watersheds
   label: WHSE_WATER_MANAGEMENT.BC_COMMUNITY_WATERSHEDS
   recommended_query: WHSE_WATER_MANAGEMENT.BC_COMMUNITY_WATERSHEDS
@@ -3360,7 +4209,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_WATER_MANAGEMENT_BC_COMMUNITY_WATERSHEDS/WHSE_WATER_MANAGEMENT_BC_COMMUNITY_WATERSHEDS.gpkg
   override_kind: ''
   override_value: ''
@@ -3375,6 +4224,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 9
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1131970.625
+  - 645063.188
+  - 1407331.0
+  - 795095.938
 - entry_id: whse_wildlife_management_wcp_ungulate
   label: WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE
   recommended_query: WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE
@@ -3400,7 +4260,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE/WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE.gpkg
   override_kind: ''
   override_value: ''
@@ -3415,6 +4275,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 209
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1013777.375
+  - 651314.8125
+  - 1383309.125
+  - 912912.8125
 - entry_id: whse_wildlife_management_wcp_ungulate_winter_range
   label: WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE
   recommended_query: WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE
@@ -3440,7 +4311,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE_WINTER_RANGE/WHSE_WILDLIFE_MANAGEMENT_WCP_UNGULATE_WINTER_RANGE.gpkg
   override_kind: ''
   override_value: ''
@@ -3455,6 +4326,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 209
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1013777.375
+  - 651314.8125
+  - 1383309.125
+  - 912912.8125
 - entry_id: whse_wildlife_management_wcp_wildlife
   label: WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE
   recommended_query: WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE
@@ -3480,7 +4362,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE/WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE.gpkg
   override_kind: ''
   override_value: ''
@@ -3493,6 +4375,17 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 169
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1021801.0
+  - 566263.965
+  - 1387372.375
+  - 910682.375
 - entry_id: whse_wildlife_management_wcp_wildlife_habitat_area
   label: WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA
   recommended_query: WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA
@@ -3518,7 +4411,7 @@ entries:
   has_indirect_custom_download: true
   has_supporting_document: false
   acquisition_strategy: wfs_fetch
-  run_status: fetched
+  run_status: reused
   artifact_path: data/downloads/bcdc/WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE_HABITAT_AREA/WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE_HABITAT_AREA.gpkg
   override_kind: ''
   override_value: ''
@@ -3533,3 +4426,14 @@ entries:
   - Top match includes WFS-queryable OpenMaps service resources; a later AOI-scoped
     fetch path can use these service hints directly.
   feature_count: 169
+  requested_bbox_epsg3005:
+  - 1015173.8085999992
+  - 653963.4944000002
+  - 1393139.0549999997
+  - 901924.5101999994
+  artifact_scope: production_full_tsa
+  artifact_extent_bbox_epsg3005:
+  - 1021801.0
+  - 566263.965
+  - 1387372.375
+  - 910682.375
