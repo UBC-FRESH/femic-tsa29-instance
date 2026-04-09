@@ -1,10 +1,10 @@
 # THLB Recipe Build Report: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-09T04:13:26.037453+00:00`
+- Generated UTC: `2026-04-09T05:48:03.605542+00:00`
 - Report mode: `recipe_build`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Source-layer recipe path: `config/tsr/source_layers.recipe.yaml`
-- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260409T032831Z.md`
+- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260409T053049Z.md`
 
 ## Scope
 
@@ -998,12 +998,12 @@
 - Table provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24`
 - Benchmark marginal deduction: `9598.000 ha`
 - Benchmark cumulative remaining area: `1871130.000 ha`
-- Approval: `soft-approved`
-- Approval scope: `single_lu_smoke_subset_williams_lake`
-- Approval note: Soft-approved on the Williams Lake landscape-unit smoke subset. The step now uses the active FTEN recreation polygons instead of the earlier road-features proxy and produces a real THLB signal; recreation trails and FSP consultation procedure details remain out of scope for this first runnable bridge pass.
+- Approval: `approved`
+- Approval scope: `full_tsa_user_directed_acceptance`
+- Approval note: User-directed full-TSA bridge acceptance. The active FTEN recreation polygon pass removed `7,562.895 ha` against the TSR benchmark `9,598 ha`, which is close enough to accept for cumulative reconciliation while keeping recreation trails and FSP consultation procedure details out of scope for this runnable bridge.
 - Approved UTC: `2026-04-06T08:30:00+00:00`
 - Approved by: `user`
-- Ratchet note: Soft-approved on the Williams Lake landscape-unit smoke subset using active FTEN recreation polygons. Keep recreation trails and FSP consultation/procedure language explicitly out of scope until a later refinement pass.
+- Ratchet note: User directed acceptance after full-TSA validation. Keep recreation trails and FSP consultation/procedure language explicitly out of scope until a later refinement pass.
 - Supporting prose section: `6.4.6 Recreation features`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=36`
@@ -1137,9 +1137,9 @@
       - Special-case LU/SRDZ overlays are not auto-executed in the first runnable bridge pass.
 - Current compiled status summary: `manual_review_required`=2, `ready`=11
 - Last notebook run status: `applied`
-- Last notebook removed area: `1787.772 ha`
-- Last notebook remaining area: `1768430.881 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_018_riparian_areas.20260409T035309Z.json`
+- Last notebook removed area: `2790.391 ha`
+- Last notebook remaining area: `1767428.262 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_018_riparian_areas.20260409T053407Z.json`
 - Compiled logic:
 
 #### 18.1. Stream class S1 effective riparian buffer
@@ -1393,9 +1393,9 @@
 - Table provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24`
 - Benchmark marginal deduction: `8039.000 ha`
 - Benchmark cumulative remaining area: `1804681.000 ha`
-- Approval: `soft-approved`
-- Approval scope: `single_lu_smoke_subset_williams_lake`
-- Approval note: Soft-approved after Williams Lake LU smoke validation. The notebook now models the TSA29 85%-of-corridor rule by shrinking the legal 100 m buffered-trail polygons inward by 7.5 m on each side to yield an 85 m effective exclusion width. Full-TSA validation still pending.
+- Approval: `approved`
+- Approval scope: `full_tsa_user_directed_acceptance`
+- Approval note: User-directed full-TSA bridge acceptance. The buffered-trail pass removed `10,244.748 ha` against the TSR benchmark `8,039 ha`, which is close enough to accept for cumulative reconciliation while keeping the current `85 m` equivalent-corridor simplification in place.
 - Supporting prose section: `6.3.6 Buffered trails`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=30`
@@ -1407,9 +1407,9 @@
     - candidate layers: `fadm_bcts_area`
 - Current compiled status summary: `ready`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `10256.537 ha`
-- Last notebook remaining area: `1758174.344 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_019_buffered_trails.20260409T035621Z.json`
+- Last notebook removed area: `10244.748 ha`
+- Last notebook remaining area: `1757183.514 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_019_buffered_trails.20260409T053801Z.json`
 - Compiled logic:
 
 #### 19.1. Buffered trail areas
@@ -1461,9 +1461,9 @@
     - candidate layers: `ta_wildlife_mgmt_areas`, `whse_wildlife_management_wcp_wildlife`, `whse_wildlife_management_wcp_wildlife_habitat_area`
 - Current compiled status summary: `ready`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `33646.905 ha`
-- Last notebook remaining area: `1724527.440 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_020_wildlife_tree_retention_areas.20260409T035939Z.json`
+- Last notebook removed area: `33627.943 ha`
+- Last notebook remaining area: `1723555.571 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_020_wildlife_tree_retention_areas.20260409T054754Z.json`
 - Compiled logic:
 
 #### 20.1. Future wildlife tree retention area reduction
@@ -1503,9 +1503,9 @@
       - Reference practice inputs: TNG, Tolko FSP #780, West Fraser FSP #755, BCTS FSP #828.
 - Current compiled status summary: `ready`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `11956.187 ha`
-- Last notebook remaining area: `1712571.253 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260409T040302Z.json`
+- Last notebook removed area: `11949.449 ha`
+- Last notebook remaining area: `1711606.123 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260409T054354Z.json`
 - Compiled logic:
 
 #### 21.1. Cultural heritage and archaeological resources reduction

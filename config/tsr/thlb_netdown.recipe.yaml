@@ -14,7 +14,7 @@ instance_inputs:
   source_layer_overrides_path: config/tsr/source_layer_overrides.yaml
 recipe_contract:
   status: built
-  last_built_utc: '2026-04-09T03:28:31.088163+00:00'
+  last_built_utc: '2026-04-09T05:30:48.341150+00:00'
   notes:
   - Review and refresh this file with `femic tsr thlb-netdown-build`.
   - Keep unsupported or low-confidence steps explicit instead of silently patching
@@ -32,9 +32,9 @@ recipe_contract:
   status_report_path: config/tsr/thlb_reconstructed.status.md
   runtime_status_report_path: runtime/logs/tsr/thlb_reconstructed_status_report-20260405T214635Z.md
   recipe_build_status_report_path: config/tsr/thlb_netdown.status.md
-  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260409T032831Z.md
+  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260409T053049Z.md
   workbench_notebook_path: workbench/tsr/thlb_netdown.workbench.ipynb
-  workbench_last_built_utc: '2026-04-09T00:59:11.629003+00:00'
+  workbench_last_built_utc: '2026-04-09T05:49:20.168788+00:00'
   lock_state:
     aflb:
       locked: false
@@ -52,7 +52,7 @@ recipe_contract:
       frozen_status_report_path: None
       frozen_audit_path: None
       note: None
-  last_parent_step_run_utc: '2026-04-09T04:13:24.185617+00:00'
+  last_parent_step_run_utc: '2026-04-09T05:48:01.714947+00:00'
 parent_steps:
 - parent_step_id: thlb_parent_001_total_tsa_area
   parent_label: Total TSA area
@@ -4747,17 +4747,17 @@ parent_steps:
       operator: eq
       value: ACTIVE
   approved: true
-  approval_scope: single_lu_smoke_subset_williams_lake
-  approval_note: Soft-approved on the Williams Lake landscape-unit smoke subset. The
-    step now uses the active FTEN recreation polygons instead of the earlier road-features
-    proxy and produces a real THLB signal; recreation trails and FSP consultation
-    procedure details remain out of scope for this first runnable bridge pass.
+  approval_scope: full_tsa_user_directed_acceptance
+  approval_note: User-directed full-TSA bridge acceptance. The active FTEN recreation
+    polygon pass removed 7,562.895 ha against the TSR benchmark of 9,598 ha, which
+    is close enough to accept for cumulative reconciliation while keeping recreation
+    trails and FSP consultation procedure details out of scope for this runnable bridge.
   approved_utc: '2026-04-06T08:30:00+00:00'
   approved_by: user
   ratchet_state: approved
-  ratchet_note: Soft-approved on the Williams Lake landscape-unit smoke subset using
-    active FTEN recreation polygons. Keep recreation trails and FSP consultation/procedure
-    language explicitly out of scope until a later refinement pass.
+  ratchet_note: User directed acceptance after full-TSA validation. Keep recreation
+    trails and FSP consultation/procedure language explicitly out of scope until a
+    later refinement pass.
   last_notebook_run_status: applied
   last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_016_recreation_features.20260409T034739Z.json
   last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_016_recreation_features.20260409T034739Z.feather
@@ -5329,7 +5329,7 @@ parent_steps:
     source_attribute_filters: &id074
     - field: STREAM_CLASS
       operator: eq
-      value: '1'
+      value: 1
     buffer_distance_m: 60.0
   - step_id: thlb_parent_018_riparian_areas_compiled_stream_s2
     parent_step_id: thlb_parent_018_riparian_areas
@@ -5404,7 +5404,7 @@ parent_steps:
     source_attribute_filters: &id077
     - field: STREAM_CLASS
       operator: eq
-      value: '2'
+      value: 2
     buffer_distance_m: 34.0
   - step_id: thlb_parent_018_riparian_areas_compiled_stream_s3
     parent_step_id: thlb_parent_018_riparian_areas
@@ -5479,7 +5479,7 @@ parent_steps:
     source_attribute_filters: &id080
     - field: STREAM_CLASS
       operator: eq
-      value: '3'
+      value: 3
     buffer_distance_m: 24.0
   - step_id: thlb_parent_018_riparian_areas_compiled_stream_s4
     parent_step_id: thlb_parent_018_riparian_areas
@@ -5554,7 +5554,7 @@ parent_steps:
     source_attribute_filters: &id083
     - field: STREAM_CLASS
       operator: eq
-      value: '4'
+      value: 4
     buffer_distance_m: 10.0
   - step_id: thlb_parent_018_riparian_areas_compiled_stream_s5
     parent_step_id: thlb_parent_018_riparian_areas
@@ -5629,7 +5629,7 @@ parent_steps:
     source_attribute_filters: &id086
     - field: STREAM_CLASS
       operator: eq
-      value: '5'
+      value: 5
     buffer_distance_m: 10.0
   - step_id: thlb_parent_018_riparian_areas_compiled_stream_s6
     parent_step_id: thlb_parent_018_riparian_areas
@@ -5704,7 +5704,7 @@ parent_steps:
     source_attribute_filters: &id089
     - field: STREAM_CLASS
       operator: eq
-      value: '6'
+      value: 6
     buffer_distance_m: 6.0
   - step_id: thlb_parent_018_riparian_areas_compiled_wetland_w1
     parent_step_id: thlb_parent_018_riparian_areas
@@ -6228,8 +6228,8 @@ parent_steps:
     Chilcotin remain deferred review refinements pending later/full-TSA validation.
   ratchet_state: approved
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_018_riparian_areas.20260409T035309Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_018_riparian_areas.20260409T035309Z.feather
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_018_riparian_areas.20260409T053407Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_018_riparian_areas.20260409T053407Z.feather
   last_selected_map_ids: []
   last_selected_landscape_units:
   - French Bar
@@ -6355,10 +6355,10 @@ parent_steps:
   - Atnarko
   - Wells Gray Park
   last_input_area_ha: 2977503.74004337
-  last_removed_area_ha: 1787.7722751001677
-  last_remaining_area_ha: 1768430.8809006219
-  last_benchmark_marginal_delta_ha: -53045.22772489983
-  last_benchmark_cumulative_delta_ha: -44289.11909937812
+  last_removed_area_ha: 2790.3911786865015
+  last_remaining_area_ha: 1767428.2619970357
+  last_benchmark_marginal_delta_ha: -52042.6088213135
+  last_benchmark_cumulative_delta_ha: -45291.738002964295
 - parent_step_id: thlb_parent_019_buffered_trails
   parent_label: Buffered trails
   parent_kind: transformation
@@ -6472,15 +6472,17 @@ parent_steps:
       value: Buffered Trail Areas
     buffer_distance_m: -7.5
   approved: true
-  approval_scope: single_lu_smoke_subset_williams_lake
-  approval_note: Soft-approved after Williams Lake LU smoke validation. The notebook
-    now models the TSA29 85%-of-corridor rule by shrinking the legal 100 m buffered-trail
-    polygons inward by 7.5 m on each side to yield an 85 m effective exclusion width.
-    Full-TSA validation still pending.
+  approval_scope: full_tsa_user_directed_acceptance
+  approval_note: User-directed full-TSA bridge acceptance. The buffered-trail pass
+    removed 10,244.748 ha against the TSR benchmark of 8,039 ha, which is close enough
+    to accept for cumulative reconciliation while keeping the current 85 m equivalent-corridor
+    simplification in place.
+  approved_by: user_directed_review
+  approved_utc: '2026-04-09T05:38:01+00:00'
   ratchet_state: approved
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_019_buffered_trails.20260409T035621Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_019_buffered_trails.20260409T035621Z.feather
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_019_buffered_trails.20260409T053801Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_019_buffered_trails.20260409T053801Z.feather
   last_selected_map_ids: []
   last_selected_landscape_units:
   - French Bar
@@ -6606,10 +6608,10 @@ parent_steps:
   - Atnarko
   - Wells Gray Park
   last_input_area_ha: 2977503.74004337
-  last_removed_area_ha: 10256.536541858222
-  last_remaining_area_ha: 1758174.3443587634
-  last_benchmark_marginal_delta_ha: 2217.5365418582223
-  last_benchmark_cumulative_delta_ha: -46506.655641236575
+  last_removed_area_ha: 10244.747858719427
+  last_remaining_area_ha: 1757183.5141383163
+  last_benchmark_marginal_delta_ha: 2205.7478587194273
+  last_benchmark_cumulative_delta_ha: -47497.48586168373
 - parent_step_id: thlb_parent_020_wildlife_tree_retention_areas
   parent_label: Wildlife tree retention areas
   parent_kind: transformation
@@ -6792,8 +6794,8 @@ parent_steps:
     the TSA29 aspatial future-WTRA reduction logic. Keep definitive validation for
     the later full-TSA run.
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_020_wildlife_tree_retention_areas.20260409T035939Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_020_wildlife_tree_retention_areas.20260409T035939Z.feather
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_020_wildlife_tree_retention_areas.20260409T054754Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_020_wildlife_tree_retention_areas.20260409T054754Z.feather
   last_selected_map_ids: []
   last_selected_landscape_units:
   - French Bar
@@ -6919,10 +6921,10 @@ parent_steps:
   - Atnarko
   - Wells Gray Park
   last_input_area_ha: 2977503.74004337
-  last_removed_area_ha: 33646.90478142817
-  last_remaining_area_ha: 1724527.4395773353
-  last_benchmark_marginal_delta_ha: -60770.09521857183
-  last_benchmark_cumulative_delta_ha: 14263.439577335259
+  last_removed_area_ha: 33627.94285641264
+  last_remaining_area_ha: 1723555.5712819034
+  last_benchmark_marginal_delta_ha: -60789.05714358736
+  last_benchmark_cumulative_delta_ha: 13291.571281903423
 - parent_step_id: thlb_parent_021_cultural_heritage_and_archaeological_resources
   parent_label: Cultural heritage and archaeological resources
   parent_kind: transformation
@@ -7043,8 +7045,8 @@ parent_steps:
     linked_source_entry_ids: &id115 []
   ratchet_state: compiled
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260409T040302Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260409T040302Z.feather
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260409T054354Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260409T054354Z.feather
   last_selected_map_ids: []
   last_selected_landscape_units:
   - French Bar
@@ -7170,10 +7172,10 @@ parent_steps:
   - Atnarko
   - Wells Gray Park
   last_input_area_ha: 2977503.74004337
-  last_removed_area_ha: 11956.186679951548
-  last_remaining_area_ha: 1712571.2528973839
-  last_benchmark_marginal_delta_ha: -22248.81332004845
-  last_benchmark_cumulative_delta_ha: 36512.25289738388
+  last_removed_area_ha: 11949.448695677225
+  last_remaining_area_ha: 1711606.1225862263
+  last_benchmark_marginal_delta_ha: -22255.551304322777
+  last_benchmark_cumulative_delta_ha: 35547.12258622632
 - parent_step_id: thlb_parent_022_timber_harvesting_land_base
   parent_label: Timber harvesting land base
   parent_kind: milestone
