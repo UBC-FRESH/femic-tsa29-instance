@@ -14,7 +14,7 @@ instance_inputs:
   source_layer_overrides_path: config/tsr/source_layer_overrides.yaml
 recipe_contract:
   status: built
-  last_built_utc: '2026-04-09T00:53:49.837775+00:00'
+  last_built_utc: '2026-04-09T03:28:31.088163+00:00'
   notes:
   - Review and refresh this file with `femic tsr thlb-netdown-build`.
   - Keep unsupported or low-confidence steps explicit instead of silently patching
@@ -32,7 +32,7 @@ recipe_contract:
   status_report_path: config/tsr/thlb_reconstructed.status.md
   runtime_status_report_path: runtime/logs/tsr/thlb_reconstructed_status_report-20260405T214635Z.md
   recipe_build_status_report_path: config/tsr/thlb_netdown.status.md
-  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260409T005350Z.md
+  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260409T032831Z.md
   workbench_notebook_path: workbench/tsr/thlb_netdown.workbench.ipynb
   workbench_last_built_utc: '2026-04-09T00:59:11.629003+00:00'
   lock_state:
@@ -52,7 +52,7 @@ recipe_contract:
       frozen_status_report_path: None
       frozen_audit_path: None
       note: None
-  last_parent_step_run_utc: '2026-04-09T01:04:24.450067+00:00'
+  last_parent_step_run_utc: '2026-04-09T03:31:18.312885+00:00'
 parent_steps:
 - parent_step_id: thlb_parent_001_total_tsa_area
   parent_label: Total TSA area
@@ -3943,8 +3943,8 @@ parent_steps:
     parent_label: Sites with low growing timber potential
     order_index: 14
     step_kind: netdown_rule
-    label: Non-steep 80 m3/ha threshold
-    raw_value: Non-steep 80 m3/ha threshold
+    label: Non-steep 67.1 m3/ha threshold
+    raw_value: Non-steep 67.1 m3/ha threshold
     raw_text: "Sites may have low productivity because of inherent site factors such\
       \ as nutrient availability, exposure or excessive moisture. Stands on these\
       \ sites may contribute to non-timber objectives even though they are unlikely\
@@ -4015,19 +4015,23 @@ parent_steps:
       on checkpoint1.
     - Notebook execution uses the current assigned bundle curves and evaluates volume
       at age 160, matching the TSR wording for low-productivity stands.
-    - This branch reuses the accepted step-13 steep-slope flag and applies the non-steep
-      80 m3/ha threshold only where `femic_step13_steep_slope_flag == False`.
+    - This branch reuses the accepted step-13 steep-slope flag and applies the calibrated
+      non-steep 67.1 m3/ha bridge threshold only where `femic_step13_steep_slope_flag
+      == False`.
+    - The threshold is calibrated to approximate the TSR step-14 benchmark with the
+      current public-input curve family rather than claiming exact parity with the
+      Chief Forester's yield tables.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 321044.0
     benchmark_cumulative_area_ha: 1929780.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
     normalized_action: exclude
-    normalized_subject: Non-steep 80 m3/ha threshold
+    normalized_subject: Non-steep 67.1 m3/ha threshold
     normalized_predicate: set THLB to 0 on non-steep stands where assigned curve volume
-      at age 160 falls below 80 m3/ha
+      at age 160 falls below the calibrated 67.1 m3/ha bridge threshold
     linked_source_entry_ids: &id059 []
     curve_id_column: curve1
-    minimum_volume_m3_per_ha: 80.0
+    minimum_volume_m3_per_ha: 67.1
     curve_volume_metric: volume_at_age
     curve_volume_age_years: 160.0
     checkpoint_attribute_mode: any
@@ -4113,8 +4117,9 @@ parent_steps:
       at age 160, matching the TSR wording for low-productivity stands.
     - This branch reuses the accepted step-13 steep-slope flag and applies the 250
       m3/ha threshold only where `femic_step13_steep_slope_flag == True`.
-    - Together with the non-steep 80 m3/ha branch, this keeps the step-14 partition
-      mutually exclusive and avoids applying the 80 m3/ha threshold to steep stands.
+    - Together with the calibrated non-steep 67.1 m3/ha branch, this keeps the step-14
+      partition mutually exclusive and avoids applying the lower threshold to steep
+      stands.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 321044.0
     benchmark_cumulative_area_ha: 1929780.0
@@ -4133,18 +4138,25 @@ parent_steps:
     - field: femic_step13_steep_slope_flag
       operator: eq
       value: true
-  ratchet_state: benchmarked
-  ratchet_note: Full-TSA cached 8-bundle validation rerun on the accepted step-13
-    enriched checkpoint now evaluates step 14 with the TSR's explicit age-160 curve
-    metric and removes 421,217.513 ha against the TSR benchmark of 321,044 ha. The
-    non-steep 80 m3/ha branch carries the entire executable signal at 421,217.513
-    ha, while the steep 250 m3/ha branch still has 11,672 scoped rows but 0 active
-    stands because the accepted step-13 pass already zeroed the steep-slope subset.
-    This fixes the earlier bogus near-zero result, but step 14 still overcuts the
-    benchmark materially and remains not approvable.
+  approved: true
+  approval_scope: full_tsa_user_directed_calibrated_acceptance
+  approval_note: User directed acceptance on the calibrated age-160 bridge run.
+    The accepted run uses a non-steep threshold of 67.1 m3/ha with the steep branch
+    held at 250 m3/ha, and removed 329,228.613 ha against the TSR benchmark of
+    321,044 ha. This is an explicitly calibrated bridge to the TSR benchmark with
+    the current public-input curve family, not a claim of exact parity with the
+    Chief Forester's yield tables.
+  approved_utc: '2026-04-09T03:31:11Z'
+  approved_by: user_directive
+  ratchet_state: approved
+  ratchet_note: Approved by user direction on the calibrated age-160 bridge run
+    so the TSA29 validation lane can move past step 14. The accepted run lands
+    within 8,184.613 ha of the TSR marginal benchmark, but still sits 48,121.891
+    ha below the TSR cumulative remaining-area benchmark because the current coarse
+    AU/curve structure produces a cliff-like response around the calibrated threshold.
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260409T010419Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260409T010419Z.feather
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260409T033111Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260409T033111Z.feather
   last_selected_map_ids: []
   last_selected_landscape_units:
   - French Bar
@@ -4270,10 +4282,10 @@ parent_steps:
   - Atnarko
   - Wells Gray Park
   last_input_area_ha: 2977503.74004337
-  last_removed_area_ha: 421217.5128942016
-  last_remaining_area_ha: 1789669.2091549786
-  last_benchmark_marginal_delta_ha: 100173.51289420162
-  last_benchmark_cumulative_delta_ha: -140110.79084502137
+  last_removed_area_ha: 329228.61294745223
+  last_remaining_area_ha: 1881658.1091017276
+  last_benchmark_marginal_delta_ha: 8184.612947452231
+  last_benchmark_cumulative_delta_ha: -48121.890898272395
 - parent_step_id: thlb_parent_015_non_merchantable_timber_profiles
   parent_label: Non-merchantable timber profiles
   parent_kind: transformation
@@ -7857,8 +7869,8 @@ steps:
   parent_label: Sites with low growing timber potential
   order_index: 14
   step_kind: netdown_rule
-  label: Non-steep 80 m3/ha threshold
-  raw_value: Non-steep 80 m3/ha threshold
+  label: Non-steep 67.1 m3/ha threshold
+  raw_value: Non-steep 67.1 m3/ha threshold
   raw_text: "Sites may have low productivity because of inherent site factors such\
     \ as nutrient availability, exposure or excessive moisture. Stands on these sites\
     \ may contribute to non-timber objectives even though they are unlikely to grow\
@@ -7929,12 +7941,12 @@ steps:
   benchmark_cumulative_area_ha: 1929780.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
   normalized_action: exclude
-  normalized_subject: Non-steep 80 m3/ha threshold
+  normalized_subject: Non-steep 67.1 m3/ha threshold
   normalized_predicate: set THLB to 0 on non-steep stands where assigned curve volume
-    at age 160 falls below 80 m3/ha
+    at age 160 falls below the calibrated 67.1 m3/ha bridge threshold
   linked_source_entry_ids: *id059
   curve_id_column: curve1
-  minimum_volume_m3_per_ha: 80.0
+  minimum_volume_m3_per_ha: 67.1
   curve_volume_metric: volume_at_age
   curve_volume_age_years: 160.0
   checkpoint_attribute_mode: any

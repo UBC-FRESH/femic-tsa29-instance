@@ -1,10 +1,10 @@
 # THLB Recipe Build Report: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-09T01:04:25.762298+00:00`
+- Generated UTC: `2026-04-09T03:31:20.073801+00:00`
 - Report mode: `recipe_build`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Source-layer recipe path: `config/tsr/source_layers.recipe.yaml`
-- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260409T005350Z.md`
+- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260409T032831Z.md`
 
 ## Scope
 
@@ -881,11 +881,16 @@
 - Parent step id: `thlb_parent_014_sites_with_low_growing_timber_potential`
 - Stage: `LHLB -> THLB`
 - Execution class: `projected_harvest_exclusion`
-- Ratchet state: `benchmarked`
+- Ratchet state: `approved`
 - Table provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24`
 - Benchmark marginal deduction: `321044.000 ha`
 - Benchmark cumulative remaining area: `1929780.000 ha`
-- Ratchet note: Full-TSA cached 8-bundle validation rerun on the accepted step-13 enriched checkpoint now evaluates step 14 with the TSR's explicit age-160 curve metric and removes 421,217.513 ha against the TSR benchmark of 321,044 ha. The non-steep 80 m3/ha branch carries the entire executable signal at 421,217.513 ha, while the steep 250 m3/ha branch still has 11,672 scoped rows but 0 active stands because the accepted step-13 pass already zeroed the steep-slope subset. This fixes the earlier bogus near-zero result, but step 14 still overcuts the benchmark materially and remains not approvable.
+- Approval: `soft-approved`
+- Approval scope: `full_tsa_user_directed_calibrated_acceptance`
+- Approval note: User directed acceptance on the calibrated age-160 bridge run. The accepted run uses a non-steep threshold of 67.1 m3/ha with the steep branch held at 250 m3/ha, and removed 329,228.613 ha against the TSR benchmark of 321,044 ha. This is an explicitly calibrated bridge to the TSR benchmark with the current public-input curve family, not a claim of exact parity with the Chief Forester's yield tables.
+- Approved UTC: `2026-04-09T03:31:11Z`
+- Approved by: `user_directive`
+- Ratchet note: Approved by user direction on the calibrated age-160 bridge run so the TSA29 validation lane can move past step 14. The accepted run lands within 8,184.613 ha of the TSR marginal benchmark, but still sits 48,121.891 ha below the TSR cumulative remaining-area benchmark because the current coarse AU/curve structure produces a cliff-like response around the calibrated threshold.
 - Supporting prose section: `6.4.4 Sites with low timber growing potential`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=33`
@@ -902,12 +907,12 @@
     - candidate layers: `vri`
 - Current compiled status summary: `ready`=2
 - Last notebook run status: `applied`
-- Last notebook removed area: `421217.513 ha`
-- Last notebook remaining area: `1789669.209 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260409T010419Z.json`
+- Last notebook removed area: `329228.613 ha`
+- Last notebook remaining area: `1881658.109 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260409T033111Z.json`
 - Compiled logic:
 
-#### 14.1. Non-steep 80 m3/ha threshold
+#### 14.1. Non-steep 67.1 m3/ha threshold
 
 - Step id: `thlb_parent_014_sites_with_low_growing_timber_potential_compiled_01`
 - Kind: `netdown_rule`
