@@ -52,7 +52,7 @@ recipe_contract:
       frozen_status_report_path: None
       frozen_audit_path: None
       note: None
-  last_parent_step_run_utc: '2026-04-09T03:31:18.312885+00:00'
+  last_parent_step_run_utc: '2026-04-09T04:13:24.185617+00:00'
 parent_steps:
 - parent_step_id: thlb_parent_001_total_tsa_area
   parent_label: Total TSA area
@@ -4140,20 +4140,20 @@ parent_steps:
       value: true
   approved: true
   approval_scope: full_tsa_user_directed_calibrated_acceptance
-  approval_note: User directed acceptance on the calibrated age-160 bridge run.
-    The accepted run uses a non-steep threshold of 67.1 m3/ha with the steep branch
-    held at 250 m3/ha, and removed 329,228.613 ha against the TSR benchmark of
-    321,044 ha. This is an explicitly calibrated bridge to the TSR benchmark with
-    the current public-input curve family, not a claim of exact parity with the
-    Chief Forester's yield tables.
+  approval_note: User directed acceptance on the calibrated age-160 bridge run. The
+    accepted run uses a non-steep threshold of 67.1 m3/ha with the steep branch held
+    at 250 m3/ha, and removed 329,228.613 ha against the TSR benchmark of 321,044
+    ha. This is an explicitly calibrated bridge to the TSR benchmark with the current
+    public-input curve family, not a claim of exact parity with the Chief Forester's
+    yield tables.
   approved_utc: '2026-04-09T03:31:11Z'
   approved_by: user_directive
   ratchet_state: approved
-  ratchet_note: Approved by user direction on the calibrated age-160 bridge run
-    so the TSA29 validation lane can move past step 14. The accepted run lands
-    within 8,184.613 ha of the TSR marginal benchmark, but still sits 48,121.891
-    ha below the TSR cumulative remaining-area benchmark because the current coarse
-    AU/curve structure produces a cliff-like response around the calibrated threshold.
+  ratchet_note: Approved by user direction on the calibrated age-160 bridge run so
+    the TSA29 validation lane can move past step 14. The accepted run lands within
+    8,184.613 ha of the TSR marginal benchmark, but still sits 48,121.891 ha below
+    the TSR cumulative remaining-area benchmark because the current coarse AU/curve
+    structure produces a cliff-like response around the calibrated threshold.
   last_notebook_run_status: applied
   last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260409T033111Z.json
   last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260409T033111Z.feather
@@ -4451,32 +4451,137 @@ parent_steps:
     the 6.4.5 broadleaf-leading-stand exclusion. Keep Section 7.1.5 broadleaf-volume
     exclusions for conifer-leading stands out of the THLB area-netdown lane.
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_015_non_merchantable_timber_profiles.20260406T072845Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_015_non_merchantable_timber_profiles.20260406T072845Z.feather
-  last_selected_map_ids:
-  - 092P081
-  - 092P091
-  - 092P092
-  - 092P093
-  - 093A001
-  - 093A002
-  - 093A003
-  - 093A011
-  - 093A012
-  - 093A021
-  - 093B009
-  - 093B010
-  - 093B019
-  - 093B020
-  - 093B029
-  - 093B030
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_015_non_merchantable_timber_profiles.20260409T034428Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_015_non_merchantable_timber_profiles.20260409T034428Z.feather
+  last_selected_map_ids: []
   last_selected_landscape_units:
+  - French Bar
+  - Yalakom
+  - Spruce Lake
+  - Entiako
+  - Murphy Lake
+  - McLinchy
+  - Chilanko
+  - Alplands
+  - Pyper
+  - Riske
+  - Chimney
+  - Siwash
+  - Clearwater
+  - Tatla/Little Eagle
+  - Helena Lake
+  - Haines
+  - Big Stick
+  - Bidwell/Lava
+  - Brittany
+  - Nuntzi Elkin
+  - Minton
+  - Alkali
+  - Klinaklini
+  - Farwell
+  - Westbranch
+  - Big Creek
+  - Upper Tatlayoko
+  - Colwell
+  - Tete Angela
+  - Dog Creek
+  - Middle Lake
+  - Bambrick
+  - Cunningham
+  - Swift
+  - Victoria
+  - Dragon
+  - Gerimi
+  - Pan
+  - Eliguk
+  - Little River
+  - Cariboo Lake
+  - Toil
+  - Westside
+  - Downton
+  - Wentworth
+  - Lower Cariboo
+  - Clisbako
+  - Christenson Creek
+  - Beaver Valley
+  - Polley
+  - Big Lake
+  - Punky Moore
+  - Clusko
+  - Gaspard
+  - Nemiah
+  - Cheshi Stikelan
+  - Crazy Creek
+  - Ottarasko
+  - Meadow Lake
+  - Churn
+  - Koster/Lone Cabin
+  - Nude Creek
+  - Hickson
+  - Nostetuko
+  - Tiedemann
+  - Beece Creek
+  - Doran Creek
+  - Dash
+  - Gunn Valley
+  - Upper Churn
+  - Taseko
+  - East Arm
+  - Eastside
+  - Wasko/Lynx
+  - McKay
+  - Black Creek
+  - McKusky
+  - Nimpo
+  - McKinley
+  - Moffat
+  - Anaham
+  - Meldrum
+  - Deception Mountain
+  - Puntzi
   - Williams Lake
-  last_input_area_ha: 71517.58780307679
-  last_removed_area_ha: 3618.4735326446175
-  last_remaining_area_ha: 58670.56578602341
-  last_benchmark_marginal_delta_ha: -45433.52646735538
-  last_benchmark_cumulative_delta_ha: -1822057.4342139766
+  - Hendrix Lake
+  - Upper Klinaklini
+  - Homathko
+  - Ramsey
+  - Likely
+  - Corkscrew
+  - Horsefly
+  - Nazko
+  - Twan
+  - Tautri
+  - Hawks Creek
+  - Holtry
+  - Mackin
+  - Palmer/Jorgenson
+  - Sisters
+  - Alexis
+  - Hotnarko
+  - Telegraph
+  - Atnarko
+  - Upper Dean
+  - Beeftrail
+  - Tusulko
+  - Penfold
+  - Matthew
+  - Mitchell Lake
+  - Niagara
+  - Chilko
+  - Rainbow
+  - Franklyn
+  - Tchaikazan
+  - Lord River
+  - Edmond
+  - Nadila
+  - Upper Big Creek
+  - Young
+  - Atnarko
+  - Wells Gray Park
+  last_input_area_ha: 2977503.74004337
+  last_removed_area_ha: 103629.46198717842
+  last_remaining_area_ha: 1778028.6471145493
+  last_benchmark_marginal_delta_ha: 54577.46198717842
+  last_benchmark_cumulative_delta_ha: -102699.3528854507
 - parent_step_id: thlb_parent_016_recreation_features
   parent_label: Recreation features
   parent_kind: transformation
@@ -4654,32 +4759,137 @@ parent_steps:
     active FTEN recreation polygons. Keep recreation trails and FSP consultation/procedure
     language explicitly out of scope until a later refinement pass.
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_016_recreation_features.20260406T074426Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_016_recreation_features.20260406T074426Z.feather
-  last_selected_map_ids:
-  - 092P081
-  - 092P091
-  - 092P092
-  - 092P093
-  - 093A001
-  - 093A002
-  - 093A003
-  - 093A011
-  - 093A012
-  - 093A021
-  - 093B009
-  - 093B010
-  - 093B019
-  - 093B020
-  - 093B029
-  - 093B030
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_016_recreation_features.20260409T034739Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_016_recreation_features.20260409T034739Z.feather
+  last_selected_map_ids: []
   last_selected_landscape_units:
+  - French Bar
+  - Yalakom
+  - Spruce Lake
+  - Entiako
+  - Murphy Lake
+  - McLinchy
+  - Chilanko
+  - Alplands
+  - Pyper
+  - Riske
+  - Chimney
+  - Siwash
+  - Clearwater
+  - Tatla/Little Eagle
+  - Helena Lake
+  - Haines
+  - Big Stick
+  - Bidwell/Lava
+  - Brittany
+  - Nuntzi Elkin
+  - Minton
+  - Alkali
+  - Klinaklini
+  - Farwell
+  - Westbranch
+  - Big Creek
+  - Upper Tatlayoko
+  - Colwell
+  - Tete Angela
+  - Dog Creek
+  - Middle Lake
+  - Bambrick
+  - Cunningham
+  - Swift
+  - Victoria
+  - Dragon
+  - Gerimi
+  - Pan
+  - Eliguk
+  - Little River
+  - Cariboo Lake
+  - Toil
+  - Westside
+  - Downton
+  - Wentworth
+  - Lower Cariboo
+  - Clisbako
+  - Christenson Creek
+  - Beaver Valley
+  - Polley
+  - Big Lake
+  - Punky Moore
+  - Clusko
+  - Gaspard
+  - Nemiah
+  - Cheshi Stikelan
+  - Crazy Creek
+  - Ottarasko
+  - Meadow Lake
+  - Churn
+  - Koster/Lone Cabin
+  - Nude Creek
+  - Hickson
+  - Nostetuko
+  - Tiedemann
+  - Beece Creek
+  - Doran Creek
+  - Dash
+  - Gunn Valley
+  - Upper Churn
+  - Taseko
+  - East Arm
+  - Eastside
+  - Wasko/Lynx
+  - McKay
+  - Black Creek
+  - McKusky
+  - Nimpo
+  - McKinley
+  - Moffat
+  - Anaham
+  - Meldrum
+  - Deception Mountain
+  - Puntzi
   - Williams Lake
-  last_input_area_ha: 71517.58780307679
-  last_removed_area_ha: 370.3809964332075
-  last_remaining_area_ha: 58300.1847895902
-  last_benchmark_marginal_delta_ha: -9227.619003566793
-  last_benchmark_cumulative_delta_ha: -1812829.8152104097
+  - Hendrix Lake
+  - Upper Klinaklini
+  - Homathko
+  - Ramsey
+  - Likely
+  - Corkscrew
+  - Horsefly
+  - Nazko
+  - Twan
+  - Tautri
+  - Hawks Creek
+  - Holtry
+  - Mackin
+  - Palmer/Jorgenson
+  - Sisters
+  - Alexis
+  - Hotnarko
+  - Telegraph
+  - Atnarko
+  - Upper Dean
+  - Beeftrail
+  - Tusulko
+  - Penfold
+  - Matthew
+  - Mitchell Lake
+  - Niagara
+  - Chilko
+  - Rainbow
+  - Franklyn
+  - Tchaikazan
+  - Lord River
+  - Edmond
+  - Nadila
+  - Upper Big Creek
+  - Young
+  - Atnarko
+  - Wells Gray Park
+  last_input_area_ha: 2977503.74004337
+  last_removed_area_ha: 7562.894999742464
+  last_remaining_area_ha: 1770465.752114807
+  last_benchmark_marginal_delta_ha: -2035.1050002575357
+  last_benchmark_cumulative_delta_ha: -100664.24788519298
 - parent_step_id: thlb_parent_017_growth_and_yield_permanent_sample_plots
   parent_label: Growth and yield permanent sample plots
   parent_kind: transformation
@@ -4807,32 +5017,137 @@ parent_steps:
     the materialized active PSP GeoPackage from the DWDS pickup-by-GUID flow. Keep
     definitive validation for the later full-TSA run.
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_017_growth_and_yield_permanent_sample_plots.20260406T083158Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_017_growth_and_yield_permanent_sample_plots.20260406T083158Z.feather
-  last_selected_map_ids:
-  - 092P081
-  - 092P091
-  - 092P092
-  - 092P093
-  - 093A001
-  - 093A002
-  - 093A003
-  - 093A011
-  - 093A012
-  - 093A021
-  - 093B009
-  - 093B010
-  - 093B019
-  - 093B020
-  - 093B029
-  - 093B030
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_017_growth_and_yield_permanent_sample_plots.20260409T035022Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_017_growth_and_yield_permanent_sample_plots.20260409T035022Z.feather
+  last_selected_map_ids: []
   last_selected_landscape_units:
+  - French Bar
+  - Yalakom
+  - Spruce Lake
+  - Entiako
+  - Murphy Lake
+  - McLinchy
+  - Chilanko
+  - Alplands
+  - Pyper
+  - Riske
+  - Chimney
+  - Siwash
+  - Clearwater
+  - Tatla/Little Eagle
+  - Helena Lake
+  - Haines
+  - Big Stick
+  - Bidwell/Lava
+  - Brittany
+  - Nuntzi Elkin
+  - Minton
+  - Alkali
+  - Klinaklini
+  - Farwell
+  - Westbranch
+  - Big Creek
+  - Upper Tatlayoko
+  - Colwell
+  - Tete Angela
+  - Dog Creek
+  - Middle Lake
+  - Bambrick
+  - Cunningham
+  - Swift
+  - Victoria
+  - Dragon
+  - Gerimi
+  - Pan
+  - Eliguk
+  - Little River
+  - Cariboo Lake
+  - Toil
+  - Westside
+  - Downton
+  - Wentworth
+  - Lower Cariboo
+  - Clisbako
+  - Christenson Creek
+  - Beaver Valley
+  - Polley
+  - Big Lake
+  - Punky Moore
+  - Clusko
+  - Gaspard
+  - Nemiah
+  - Cheshi Stikelan
+  - Crazy Creek
+  - Ottarasko
+  - Meadow Lake
+  - Churn
+  - Koster/Lone Cabin
+  - Nude Creek
+  - Hickson
+  - Nostetuko
+  - Tiedemann
+  - Beece Creek
+  - Doran Creek
+  - Dash
+  - Gunn Valley
+  - Upper Churn
+  - Taseko
+  - East Arm
+  - Eastside
+  - Wasko/Lynx
+  - McKay
+  - Black Creek
+  - McKusky
+  - Nimpo
+  - McKinley
+  - Moffat
+  - Anaham
+  - Meldrum
+  - Deception Mountain
+  - Puntzi
   - Williams Lake
-  last_input_area_ha: 71517.58780307679
-  last_removed_area_ha: 257.02399186980267
-  last_remaining_area_ha: 58043.1607977204
-  last_benchmark_marginal_delta_ha: -3319.9760081301974
-  last_benchmark_cumulative_delta_ha: -1809509.8392022797
+  - Hendrix Lake
+  - Upper Klinaklini
+  - Homathko
+  - Ramsey
+  - Likely
+  - Corkscrew
+  - Horsefly
+  - Nazko
+  - Twan
+  - Tautri
+  - Hawks Creek
+  - Holtry
+  - Mackin
+  - Palmer/Jorgenson
+  - Sisters
+  - Alexis
+  - Hotnarko
+  - Telegraph
+  - Atnarko
+  - Upper Dean
+  - Beeftrail
+  - Tusulko
+  - Penfold
+  - Matthew
+  - Mitchell Lake
+  - Niagara
+  - Chilko
+  - Rainbow
+  - Franklyn
+  - Tchaikazan
+  - Lord River
+  - Edmond
+  - Nadila
+  - Upper Big Creek
+  - Young
+  - Atnarko
+  - Wells Gray Park
+  last_input_area_ha: 2977503.74004337
+  last_removed_area_ha: 247.0989390848399
+  last_remaining_area_ha: 1770218.653175722
+  last_benchmark_marginal_delta_ha: -3329.90106091516
+  last_benchmark_cumulative_delta_ha: -97334.34682427789
 - parent_step_id: thlb_parent_018_riparian_areas
   parent_label: Riparian areas
   parent_kind: transformation
@@ -5913,32 +6228,137 @@ parent_steps:
     Chilcotin remain deferred review refinements pending later/full-TSA validation.
   ratchet_state: approved
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_018_riparian_areas.20260406T090706Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_018_riparian_areas.20260406T090706Z.feather
-  last_selected_map_ids:
-  - 092P081
-  - 092P091
-  - 092P092
-  - 092P093
-  - 093A001
-  - 093A002
-  - 093A003
-  - 093A011
-  - 093A012
-  - 093A021
-  - 093B009
-  - 093B010
-  - 093B019
-  - 093B020
-  - 093B029
-  - 093B030
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_018_riparian_areas.20260409T035309Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_018_riparian_areas.20260409T035309Z.feather
+  last_selected_map_ids: []
   last_selected_landscape_units:
+  - French Bar
+  - Yalakom
+  - Spruce Lake
+  - Entiako
+  - Murphy Lake
+  - McLinchy
+  - Chilanko
+  - Alplands
+  - Pyper
+  - Riske
+  - Chimney
+  - Siwash
+  - Clearwater
+  - Tatla/Little Eagle
+  - Helena Lake
+  - Haines
+  - Big Stick
+  - Bidwell/Lava
+  - Brittany
+  - Nuntzi Elkin
+  - Minton
+  - Alkali
+  - Klinaklini
+  - Farwell
+  - Westbranch
+  - Big Creek
+  - Upper Tatlayoko
+  - Colwell
+  - Tete Angela
+  - Dog Creek
+  - Middle Lake
+  - Bambrick
+  - Cunningham
+  - Swift
+  - Victoria
+  - Dragon
+  - Gerimi
+  - Pan
+  - Eliguk
+  - Little River
+  - Cariboo Lake
+  - Toil
+  - Westside
+  - Downton
+  - Wentworth
+  - Lower Cariboo
+  - Clisbako
+  - Christenson Creek
+  - Beaver Valley
+  - Polley
+  - Big Lake
+  - Punky Moore
+  - Clusko
+  - Gaspard
+  - Nemiah
+  - Cheshi Stikelan
+  - Crazy Creek
+  - Ottarasko
+  - Meadow Lake
+  - Churn
+  - Koster/Lone Cabin
+  - Nude Creek
+  - Hickson
+  - Nostetuko
+  - Tiedemann
+  - Beece Creek
+  - Doran Creek
+  - Dash
+  - Gunn Valley
+  - Upper Churn
+  - Taseko
+  - East Arm
+  - Eastside
+  - Wasko/Lynx
+  - McKay
+  - Black Creek
+  - McKusky
+  - Nimpo
+  - McKinley
+  - Moffat
+  - Anaham
+  - Meldrum
+  - Deception Mountain
+  - Puntzi
   - Williams Lake
-  last_input_area_ha: 71517.58780307679
-  last_removed_area_ha: 1185.3334332980291
-  last_remaining_area_ha: 56857.82736442237
-  last_benchmark_marginal_delta_ha: -53647.66656670197
-  last_benchmark_cumulative_delta_ha: -1755862.1726355776
+  - Hendrix Lake
+  - Upper Klinaklini
+  - Homathko
+  - Ramsey
+  - Likely
+  - Corkscrew
+  - Horsefly
+  - Nazko
+  - Twan
+  - Tautri
+  - Hawks Creek
+  - Holtry
+  - Mackin
+  - Palmer/Jorgenson
+  - Sisters
+  - Alexis
+  - Hotnarko
+  - Telegraph
+  - Atnarko
+  - Upper Dean
+  - Beeftrail
+  - Tusulko
+  - Penfold
+  - Matthew
+  - Mitchell Lake
+  - Niagara
+  - Chilko
+  - Rainbow
+  - Franklyn
+  - Tchaikazan
+  - Lord River
+  - Edmond
+  - Nadila
+  - Upper Big Creek
+  - Young
+  - Atnarko
+  - Wells Gray Park
+  last_input_area_ha: 2977503.74004337
+  last_removed_area_ha: 1787.7722751001677
+  last_remaining_area_ha: 1768430.8809006219
+  last_benchmark_marginal_delta_ha: -53045.22772489983
+  last_benchmark_cumulative_delta_ha: -44289.11909937812
 - parent_step_id: thlb_parent_019_buffered_trails
   parent_label: Buffered trails
   parent_kind: transformation
@@ -6059,32 +6479,137 @@ parent_steps:
     Full-TSA validation still pending.
   ratchet_state: approved
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_019_buffered_trails.20260406T091819Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_019_buffered_trails.20260406T091819Z.feather
-  last_selected_map_ids:
-  - 092P081
-  - 092P091
-  - 092P092
-  - 092P093
-  - 093A001
-  - 093A002
-  - 093A003
-  - 093A011
-  - 093A012
-  - 093A021
-  - 093B009
-  - 093B010
-  - 093B019
-  - 093B020
-  - 093B029
-  - 093B030
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_019_buffered_trails.20260409T035621Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_019_buffered_trails.20260409T035621Z.feather
+  last_selected_map_ids: []
   last_selected_landscape_units:
+  - French Bar
+  - Yalakom
+  - Spruce Lake
+  - Entiako
+  - Murphy Lake
+  - McLinchy
+  - Chilanko
+  - Alplands
+  - Pyper
+  - Riske
+  - Chimney
+  - Siwash
+  - Clearwater
+  - Tatla/Little Eagle
+  - Helena Lake
+  - Haines
+  - Big Stick
+  - Bidwell/Lava
+  - Brittany
+  - Nuntzi Elkin
+  - Minton
+  - Alkali
+  - Klinaklini
+  - Farwell
+  - Westbranch
+  - Big Creek
+  - Upper Tatlayoko
+  - Colwell
+  - Tete Angela
+  - Dog Creek
+  - Middle Lake
+  - Bambrick
+  - Cunningham
+  - Swift
+  - Victoria
+  - Dragon
+  - Gerimi
+  - Pan
+  - Eliguk
+  - Little River
+  - Cariboo Lake
+  - Toil
+  - Westside
+  - Downton
+  - Wentworth
+  - Lower Cariboo
+  - Clisbako
+  - Christenson Creek
+  - Beaver Valley
+  - Polley
+  - Big Lake
+  - Punky Moore
+  - Clusko
+  - Gaspard
+  - Nemiah
+  - Cheshi Stikelan
+  - Crazy Creek
+  - Ottarasko
+  - Meadow Lake
+  - Churn
+  - Koster/Lone Cabin
+  - Nude Creek
+  - Hickson
+  - Nostetuko
+  - Tiedemann
+  - Beece Creek
+  - Doran Creek
+  - Dash
+  - Gunn Valley
+  - Upper Churn
+  - Taseko
+  - East Arm
+  - Eastside
+  - Wasko/Lynx
+  - McKay
+  - Black Creek
+  - McKusky
+  - Nimpo
+  - McKinley
+  - Moffat
+  - Anaham
+  - Meldrum
+  - Deception Mountain
+  - Puntzi
   - Williams Lake
-  last_input_area_ha: 71517.58780307679
-  last_removed_area_ha: 523.96573923453
-  last_remaining_area_ha: 56333.86162518785
-  last_benchmark_marginal_delta_ha: -7515.03426076547
-  last_benchmark_cumulative_delta_ha: -1748347.1383748122
+  - Hendrix Lake
+  - Upper Klinaklini
+  - Homathko
+  - Ramsey
+  - Likely
+  - Corkscrew
+  - Horsefly
+  - Nazko
+  - Twan
+  - Tautri
+  - Hawks Creek
+  - Holtry
+  - Mackin
+  - Palmer/Jorgenson
+  - Sisters
+  - Alexis
+  - Hotnarko
+  - Telegraph
+  - Atnarko
+  - Upper Dean
+  - Beeftrail
+  - Tusulko
+  - Penfold
+  - Matthew
+  - Mitchell Lake
+  - Niagara
+  - Chilko
+  - Rainbow
+  - Franklyn
+  - Tchaikazan
+  - Lord River
+  - Edmond
+  - Nadila
+  - Upper Big Creek
+  - Young
+  - Atnarko
+  - Wells Gray Park
+  last_input_area_ha: 2977503.74004337
+  last_removed_area_ha: 10256.536541858222
+  last_remaining_area_ha: 1758174.3443587634
+  last_benchmark_marginal_delta_ha: 2217.5365418582223
+  last_benchmark_cumulative_delta_ha: -46506.655641236575
 - parent_step_id: thlb_parent_020_wildlife_tree_retention_areas
   parent_label: Wildlife tree retention areas
   parent_kind: transformation
@@ -6267,32 +6792,137 @@ parent_steps:
     the TSA29 aspatial future-WTRA reduction logic. Keep definitive validation for
     the later full-TSA run.
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_020_wildlife_tree_retention_areas.20260406T092827Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_020_wildlife_tree_retention_areas.20260406T092827Z.feather
-  last_selected_map_ids:
-  - 092P081
-  - 092P091
-  - 092P092
-  - 092P093
-  - 093A001
-  - 093A002
-  - 093A003
-  - 093A011
-  - 093A012
-  - 093A021
-  - 093B009
-  - 093B010
-  - 093B019
-  - 093B020
-  - 093B029
-  - 093B030
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_020_wildlife_tree_retention_areas.20260409T035939Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_020_wildlife_tree_retention_areas.20260409T035939Z.feather
+  last_selected_map_ids: []
   last_selected_landscape_units:
+  - French Bar
+  - Yalakom
+  - Spruce Lake
+  - Entiako
+  - Murphy Lake
+  - McLinchy
+  - Chilanko
+  - Alplands
+  - Pyper
+  - Riske
+  - Chimney
+  - Siwash
+  - Clearwater
+  - Tatla/Little Eagle
+  - Helena Lake
+  - Haines
+  - Big Stick
+  - Bidwell/Lava
+  - Brittany
+  - Nuntzi Elkin
+  - Minton
+  - Alkali
+  - Klinaklini
+  - Farwell
+  - Westbranch
+  - Big Creek
+  - Upper Tatlayoko
+  - Colwell
+  - Tete Angela
+  - Dog Creek
+  - Middle Lake
+  - Bambrick
+  - Cunningham
+  - Swift
+  - Victoria
+  - Dragon
+  - Gerimi
+  - Pan
+  - Eliguk
+  - Little River
+  - Cariboo Lake
+  - Toil
+  - Westside
+  - Downton
+  - Wentworth
+  - Lower Cariboo
+  - Clisbako
+  - Christenson Creek
+  - Beaver Valley
+  - Polley
+  - Big Lake
+  - Punky Moore
+  - Clusko
+  - Gaspard
+  - Nemiah
+  - Cheshi Stikelan
+  - Crazy Creek
+  - Ottarasko
+  - Meadow Lake
+  - Churn
+  - Koster/Lone Cabin
+  - Nude Creek
+  - Hickson
+  - Nostetuko
+  - Tiedemann
+  - Beece Creek
+  - Doran Creek
+  - Dash
+  - Gunn Valley
+  - Upper Churn
+  - Taseko
+  - East Arm
+  - Eastside
+  - Wasko/Lynx
+  - McKay
+  - Black Creek
+  - McKusky
+  - Nimpo
+  - McKinley
+  - Moffat
+  - Anaham
+  - Meldrum
+  - Deception Mountain
+  - Puntzi
   - Williams Lake
-  last_input_area_ha: 71517.58780307679
-  last_removed_area_ha: 1078.0842549287413
-  last_remaining_area_ha: 55255.77737025911
-  last_benchmark_marginal_delta_ha: -93338.91574507125
-  last_benchmark_cumulative_delta_ha: -1655008.2226297408
+  - Hendrix Lake
+  - Upper Klinaklini
+  - Homathko
+  - Ramsey
+  - Likely
+  - Corkscrew
+  - Horsefly
+  - Nazko
+  - Twan
+  - Tautri
+  - Hawks Creek
+  - Holtry
+  - Mackin
+  - Palmer/Jorgenson
+  - Sisters
+  - Alexis
+  - Hotnarko
+  - Telegraph
+  - Atnarko
+  - Upper Dean
+  - Beeftrail
+  - Tusulko
+  - Penfold
+  - Matthew
+  - Mitchell Lake
+  - Niagara
+  - Chilko
+  - Rainbow
+  - Franklyn
+  - Tchaikazan
+  - Lord River
+  - Edmond
+  - Nadila
+  - Upper Big Creek
+  - Young
+  - Atnarko
+  - Wells Gray Park
+  last_input_area_ha: 2977503.74004337
+  last_removed_area_ha: 33646.90478142817
+  last_remaining_area_ha: 1724527.4395773353
+  last_benchmark_marginal_delta_ha: -60770.09521857183
+  last_benchmark_cumulative_delta_ha: 14263.439577335259
 - parent_step_id: thlb_parent_021_cultural_heritage_and_archaeological_resources
   parent_label: Cultural heritage and archaeological resources
   parent_kind: transformation
@@ -6413,32 +7043,137 @@ parent_steps:
     linked_source_entry_ids: &id115 []
   ratchet_state: compiled
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260406T093017Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260406T093017Z.feather
-  last_selected_map_ids:
-  - 092P081
-  - 092P091
-  - 092P092
-  - 092P093
-  - 093A001
-  - 093A002
-  - 093A003
-  - 093A011
-  - 093A012
-  - 093A021
-  - 093B009
-  - 093B010
-  - 093B019
-  - 093B020
-  - 093B029
-  - 093B030
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260409T040302Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260409T040302Z.feather
+  last_selected_map_ids: []
   last_selected_landscape_units:
+  - French Bar
+  - Yalakom
+  - Spruce Lake
+  - Entiako
+  - Murphy Lake
+  - McLinchy
+  - Chilanko
+  - Alplands
+  - Pyper
+  - Riske
+  - Chimney
+  - Siwash
+  - Clearwater
+  - Tatla/Little Eagle
+  - Helena Lake
+  - Haines
+  - Big Stick
+  - Bidwell/Lava
+  - Brittany
+  - Nuntzi Elkin
+  - Minton
+  - Alkali
+  - Klinaklini
+  - Farwell
+  - Westbranch
+  - Big Creek
+  - Upper Tatlayoko
+  - Colwell
+  - Tete Angela
+  - Dog Creek
+  - Middle Lake
+  - Bambrick
+  - Cunningham
+  - Swift
+  - Victoria
+  - Dragon
+  - Gerimi
+  - Pan
+  - Eliguk
+  - Little River
+  - Cariboo Lake
+  - Toil
+  - Westside
+  - Downton
+  - Wentworth
+  - Lower Cariboo
+  - Clisbako
+  - Christenson Creek
+  - Beaver Valley
+  - Polley
+  - Big Lake
+  - Punky Moore
+  - Clusko
+  - Gaspard
+  - Nemiah
+  - Cheshi Stikelan
+  - Crazy Creek
+  - Ottarasko
+  - Meadow Lake
+  - Churn
+  - Koster/Lone Cabin
+  - Nude Creek
+  - Hickson
+  - Nostetuko
+  - Tiedemann
+  - Beece Creek
+  - Doran Creek
+  - Dash
+  - Gunn Valley
+  - Upper Churn
+  - Taseko
+  - East Arm
+  - Eastside
+  - Wasko/Lynx
+  - McKay
+  - Black Creek
+  - McKusky
+  - Nimpo
+  - McKinley
+  - Moffat
+  - Anaham
+  - Meldrum
+  - Deception Mountain
+  - Puntzi
   - Williams Lake
-  last_input_area_ha: 71517.58780307679
-  last_removed_area_ha: 383.08952019144357
-  last_remaining_area_ha: 54872.68785006766
-  last_benchmark_marginal_delta_ha: -33821.910479808554
-  last_benchmark_cumulative_delta_ha: -1621186.3121499324
+  - Hendrix Lake
+  - Upper Klinaklini
+  - Homathko
+  - Ramsey
+  - Likely
+  - Corkscrew
+  - Horsefly
+  - Nazko
+  - Twan
+  - Tautri
+  - Hawks Creek
+  - Holtry
+  - Mackin
+  - Palmer/Jorgenson
+  - Sisters
+  - Alexis
+  - Hotnarko
+  - Telegraph
+  - Atnarko
+  - Upper Dean
+  - Beeftrail
+  - Tusulko
+  - Penfold
+  - Matthew
+  - Mitchell Lake
+  - Niagara
+  - Chilko
+  - Rainbow
+  - Franklyn
+  - Tchaikazan
+  - Lord River
+  - Edmond
+  - Nadila
+  - Upper Big Creek
+  - Young
+  - Atnarko
+  - Wells Gray Park
+  last_input_area_ha: 2977503.74004337
+  last_removed_area_ha: 11956.186679951548
+  last_remaining_area_ha: 1712571.2528973839
+  last_benchmark_marginal_delta_ha: -22248.81332004845
+  last_benchmark_cumulative_delta_ha: 36512.25289738388
 - parent_step_id: thlb_parent_022_timber_harvesting_land_base
   parent_label: Timber harvesting land base
   parent_kind: milestone
@@ -6629,13 +7364,146 @@ parent_steps:
     linked_source_entry_ids: &id119 []
   ratchet_state: compiled
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260406T212227Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260406T212227Z.feather
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260409T041319Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260409T041319Z.feather
   last_selected_map_ids: []
-  last_selected_landscape_units: []
+  last_selected_landscape_units:
+  - French Bar
+  - Yalakom
+  - Spruce Lake
+  - Gun
+  - Bridge
+  - Entiako
+  - Cariboo
+  - Castle
+  - Raush
+  - Murphy Lake
+  - McLinchy
+  - Chilanko
+  - Alplands
+  - Pyper
+  - Riske
+  - Chimney
+  - Siwash
+  - Clearwater
+  - Tatla/Little Eagle
+  - Helena Lake
+  - Haines
+  - Big Stick
+  - Bidwell/Lava
+  - Brittany
+  - Nuntzi Elkin
+  - Minton
+  - Alkali
+  - Klinaklini
+  - Farwell
+  - Westbranch
+  - Big Creek
+  - Upper Tatlayoko
+  - Colwell
+  - Tete Angela
+  - Dog Creek
+  - Middle Lake
+  - Bambrick
+  - Cunningham
+  - Swift
+  - Victoria
+  - Dragon
+  - Gerimi
+  - Pan
+  - Eliguk
+  - Little River
+  - Cariboo Lake
+  - Toil
+  - Westside
+  - Downton
+  - Wentworth
+  - Lower Cariboo
+  - Clisbako
+  - Christenson Creek
+  - Beaver Valley
+  - Polley
+  - Big Lake
+  - Punky Moore
+  - Clusko
+  - Gaspard
+  - Nemiah
+  - Cheshi Stikelan
+  - Crazy Creek
+  - Ottarasko
+  - Meadow Lake
+  - Churn
+  - Koster/Lone Cabin
+  - Nude Creek
+  - Hickson
+  - Big Bar
+  - Nostetuko
+  - Tiedemann
+  - Beece Creek
+  - Doran Creek
+  - Dash
+  - Gunn Valley
+  - Upper Churn
+  - Taseko
+  - East Arm
+  - Eastside
+  - Wasko/Lynx
+  - McKay
+  - Black Creek
+  - McKusky
+  - Nimpo
+  - McKinley
+  - Moffat
+  - Anaham
+  - Meldrum
+  - Deception Mountain
+  - Puntzi
+  - Spanish
+  - Williams Lake
+  - Hendrix Lake
+  - Upper Klinaklini
+  - Middle Klinaklini
+  - Franklin
+  - Homathko
+  - Southgate
+  - Bishop
+  - Ramsey
+  - Likely
+  - Corkscrew
+  - Horsefly
+  - Nazko
+  - Twan
+  - Tautri
+  - Hawks Creek
+  - Holtry
+  - Mackin
+  - Palmer/Jorgenson
+  - Sisters
+  - Alexis
+  - Hotnarko
+  - Telegraph
+  - Atnarko
+  - Upper Dean
+  - Beeftrail
+  - Tusulko
+  - Penfold
+  - Matthew
+  - Mitchell Lake
+  - Niagara
+  - Chilko
+  - Rainbow
+  - Franklyn
+  - Tchaikazan
+  - Lord River
+  - Edmond
+  - Nadila
+  - Upper Big Creek
+  - Young
+  - Atnarko
+  - Wells Gray Park
   last_input_area_ha: 5158940.54411499
   last_removed_area_ha: 13461.641198635163
-  last_remaining_area_ha: 2905358.090498139
+  last_remaining_area_ha: 2905358.090498138
   last_benchmark_marginal_delta_ha: -9292.358801364837
   last_benchmark_cumulative_delta_ha: null
 - parent_step_id: thlb_parent_024_long_term_thlb

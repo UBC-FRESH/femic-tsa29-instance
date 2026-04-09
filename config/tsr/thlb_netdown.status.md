@@ -1,6 +1,6 @@
 # THLB Recipe Build Report: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-09T03:31:20.073801+00:00`
+- Generated UTC: `2026-04-09T04:13:26.037453+00:00`
 - Report mode: `recipe_build`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Source-layer recipe path: `config/tsr/source_layers.recipe.yaml`
@@ -342,7 +342,7 @@
 - Last notebook run status: `applied`
 - Last notebook removed area: `13461.641 ha`
 - Last notebook remaining area: `2905358.090 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260406T212227Z.json`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260409T041319Z.json`
 - Compiled logic:
 
 #### 23.1. Future roads, trails, and landings area reduction
@@ -971,9 +971,9 @@
     - candidate values: `BROADLEAF_SPECIES_CODES`
 - Current compiled status summary: `ready`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `3618.474 ha`
-- Last notebook remaining area: `58670.566 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_015_non_merchantable_timber_profiles.20260406T072845Z.json`
+- Last notebook removed area: `103629.462 ha`
+- Last notebook remaining area: `1778028.647 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_015_non_merchantable_timber_profiles.20260409T034428Z.json`
 - Compiled logic:
 
 #### 15.1. Broadleaf-leading stands
@@ -1022,9 +1022,9 @@
     - candidate layers: `whse_forest_tenure_ften_recreation`
 - Current compiled status summary: `ready`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `370.381 ha`
-- Last notebook remaining area: `58300.185 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_016_recreation_features.20260406T074426Z.json`
+- Last notebook removed area: `7562.895 ha`
+- Last notebook remaining area: `1770465.752 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_016_recreation_features.20260409T034739Z.json`
 - Compiled logic:
 
 #### 16.1. Active recreation polygons
@@ -1074,9 +1074,9 @@
     - candidate layers: `whse_forest_vegetation_gry_psp_status`
 - Current compiled status summary: `ready`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `257.024 ha`
-- Last notebook remaining area: `58043.161 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_017_growth_and_yield_permanent_sample_plots.20260406T083158Z.json`
+- Last notebook removed area: `247.099 ha`
+- Last notebook remaining area: `1770218.653 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_017_growth_and_yield_permanent_sample_plots.20260409T035022Z.json`
 - Compiled logic:
 
 #### 17.1. Growth and yield permanent sample plots
@@ -1137,9 +1137,9 @@
       - Special-case LU/SRDZ overlays are not auto-executed in the first runnable bridge pass.
 - Current compiled status summary: `manual_review_required`=2, `ready`=11
 - Last notebook run status: `applied`
-- Last notebook removed area: `1185.333 ha`
-- Last notebook remaining area: `56857.827 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_018_riparian_areas.20260406T090706Z.json`
+- Last notebook removed area: `1787.772 ha`
+- Last notebook remaining area: `1768430.881 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_018_riparian_areas.20260409T035309Z.json`
 - Compiled logic:
 
 #### 18.1. Stream class S1 effective riparian buffer
@@ -1407,9 +1407,9 @@
     - candidate layers: `fadm_bcts_area`
 - Current compiled status summary: `ready`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `523.966 ha`
-- Last notebook remaining area: `56333.862 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_019_buffered_trails.20260406T091819Z.json`
+- Last notebook removed area: `10256.537 ha`
+- Last notebook remaining area: `1758174.344 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_019_buffered_trails.20260409T035621Z.json`
 - Compiled logic:
 
 #### 19.1. Buffered trail areas
@@ -1461,9 +1461,9 @@
     - candidate layers: `ta_wildlife_mgmt_areas`, `whse_wildlife_management_wcp_wildlife`, `whse_wildlife_management_wcp_wildlife_habitat_area`
 - Current compiled status summary: `ready`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `1078.084 ha`
-- Last notebook remaining area: `55255.777 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_020_wildlife_tree_retention_areas.20260406T092827Z.json`
+- Last notebook removed area: `33646.905 ha`
+- Last notebook remaining area: `1724527.440 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_020_wildlife_tree_retention_areas.20260409T035939Z.json`
 - Compiled logic:
 
 #### 20.1. Future wildlife tree retention area reduction
@@ -1503,9 +1503,9 @@
       - Reference practice inputs: TNG, Tolko FSP #780, West Fraser FSP #755, BCTS FSP #828.
 - Current compiled status summary: `ready`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `383.090 ha`
-- Last notebook remaining area: `54872.688 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260406T093017Z.json`
+- Last notebook removed area: `11956.187 ha`
+- Last notebook remaining area: `1712571.253 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260409T040302Z.json`
 - Compiled logic:
 
 #### 21.1. Cultural heritage and archaeological resources reduction
