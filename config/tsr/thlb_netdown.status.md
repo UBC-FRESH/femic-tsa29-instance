@@ -1,10 +1,10 @@
 # THLB Recipe Build Report: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-08T20:20:46.500339+00:00`
+- Generated UTC: `2026-04-09T01:04:25.762298+00:00`
 - Report mode: `recipe_build`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Source-layer recipe path: `config/tsr/source_layers.recipe.yaml`
-- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260408T201350Z.md`
+- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260409T005350Z.md`
 
 ## Scope
 
@@ -885,7 +885,7 @@
 - Table provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24`
 - Benchmark marginal deduction: `321044.000 ha`
 - Benchmark cumulative remaining area: `1929780.000 ha`
-- Ratchet note: Full-TSA cached 8-bundle validation of the executable step-14 80/250 m3/ha split still removed only 4,527.316 ha against the TSR benchmark of 321,044 ha. The non-steep 80 m3/ha branch removed 4,527.316 ha, while the steep 250 m3/ha branch found 11,672 scoped rows but 0 active stands because the accepted step-13 pass had already zeroed the steep-slope subset. Step 14 therefore remains far from approvable; the next seam is no longer branch executability but whether TSR step ordering and/or broader low-productivity semantics differ from the current FEMIC late-stage partition.
+- Ratchet note: Full-TSA cached 8-bundle validation rerun on the accepted step-13 enriched checkpoint now evaluates step 14 with the TSR's explicit age-160 curve metric and removes 421,217.513 ha against the TSR benchmark of 321,044 ha. The non-steep 80 m3/ha branch carries the entire executable signal at 421,217.513 ha, while the steep 250 m3/ha branch still has 11,672 scoped rows but 0 active stands because the accepted step-13 pass already zeroed the steep-slope subset. This fixes the earlier bogus near-zero result, but step 14 still overcuts the benchmark materially and remains not approvable.
 - Supporting prose section: `6.4.4 Sites with low timber growing potential`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=33`
@@ -902,9 +902,9 @@
     - candidate layers: `vri`
 - Current compiled status summary: `ready`=2
 - Last notebook run status: `applied`
-- Last notebook removed area: `4527.316 ha`
-- Last notebook remaining area: `2206359.406 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260408T202038Z.json`
+- Last notebook removed area: `421217.513 ha`
+- Last notebook remaining area: `1789669.209 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260409T010419Z.json`
 - Compiled logic:
 
 #### 14.1. Non-steep 80 m3/ha threshold

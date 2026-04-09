@@ -14,7 +14,7 @@ instance_inputs:
   source_layer_overrides_path: config/tsr/source_layer_overrides.yaml
 recipe_contract:
   status: built
-  last_built_utc: '2026-04-08T20:13:49.606412+00:00'
+  last_built_utc: '2026-04-09T00:53:49.837775+00:00'
   notes:
   - Review and refresh this file with `femic tsr thlb-netdown-build`.
   - Keep unsupported or low-confidence steps explicit instead of silently patching
@@ -32,9 +32,9 @@ recipe_contract:
   status_report_path: config/tsr/thlb_reconstructed.status.md
   runtime_status_report_path: runtime/logs/tsr/thlb_reconstructed_status_report-20260405T214635Z.md
   recipe_build_status_report_path: config/tsr/thlb_netdown.status.md
-  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260408T201350Z.md
+  recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260409T005350Z.md
   workbench_notebook_path: workbench/tsr/thlb_netdown.workbench.ipynb
-  workbench_last_built_utc: '2026-04-08T20:22:02.657464+00:00'
+  workbench_last_built_utc: '2026-04-09T00:59:11.629003+00:00'
   lock_state:
     aflb:
       locked: false
@@ -52,7 +52,7 @@ recipe_contract:
       frozen_status_report_path: None
       frozen_audit_path: None
       note: None
-  last_parent_step_run_utc: '2026-04-08T20:20:44.844401+00:00'
+  last_parent_step_run_utc: '2026-04-09T01:04:24.450067+00:00'
 parent_steps:
 - parent_step_id: thlb_parent_001_total_tsa_area
   parent_label: Total TSA area
@@ -4013,8 +4013,8 @@ parent_steps:
     notes: &id058
     - Step 14 runs late in the pipeline on the curve-ready checkpoint rather than
       on checkpoint1.
-    - 'Notebook execution uses the current assigned bundle curves: treated curves
-      use volume at CMAI, untreated curves use culmination volume.'
+    - Notebook execution uses the current assigned bundle curves and evaluates volume
+      at age 160, matching the TSR wording for low-productivity stands.
     - This branch reuses the accepted step-13 steep-slope flag and applies the non-steep
       80 m3/ha threshold only where `femic_step13_steep_slope_flag == False`.
     row_source_kind: table_summary_row
@@ -4024,11 +4024,12 @@ parent_steps:
     normalized_action: exclude
     normalized_subject: Non-steep 80 m3/ha threshold
     normalized_predicate: set THLB to 0 on non-steep stands where assigned curve volume
-      falls below 80 m3/ha; treated curves use volume at CMAI and untreated curves
-      use culmination volume
+      at age 160 falls below 80 m3/ha
     linked_source_entry_ids: &id059 []
     curve_id_column: curve1
     minimum_volume_m3_per_ha: 80.0
+    curve_volume_metric: volume_at_age
+    curve_volume_age_years: 160.0
     checkpoint_attribute_mode: any
     checkpoint_attribute_filters: &id060
     - field: femic_step13_steep_slope_flag
@@ -4108,6 +4109,8 @@ parent_steps:
     source_url: ''
     notes: &id061
     - TSA29 section 6.4.4 raises the threshold to 250 m3/ha on steep slopes.
+    - Notebook execution uses the current assigned bundle curves and evaluates volume
+      at age 160, matching the TSR wording for low-productivity stands.
     - This branch reuses the accepted step-13 steep-slope flag and applies the 250
       m3/ha threshold only where `femic_step13_steep_slope_flag == True`.
     - Together with the non-steep 80 m3/ha branch, this keeps the step-14 partition
@@ -4119,28 +4122,29 @@ parent_steps:
     normalized_action: exclude
     normalized_subject: Steep-slope 250 m3/ha threshold
     normalized_predicate: set THLB to 0 on steep stands where assigned curve volume
-      falls below 250 m3/ha; treated curves use volume at CMAI and untreated curves
-      use culmination volume
+      at age 160 falls below 250 m3/ha
     linked_source_entry_ids: &id062 []
     curve_id_column: curve1
     minimum_volume_m3_per_ha: 250.0
+    curve_volume_metric: volume_at_age
+    curve_volume_age_years: 160.0
     checkpoint_attribute_mode: any
     checkpoint_attribute_filters: &id063
     - field: femic_step13_steep_slope_flag
       operator: eq
       value: true
   ratchet_state: benchmarked
-  ratchet_note: Full-TSA cached 8-bundle validation of the executable step-14 80/250
-    m3/ha split still removed only 4,527.316 ha against the TSR benchmark of 321,044
-    ha. The non-steep 80 m3/ha branch removed 4,527.316 ha, while the steep 250 m3/ha
-    branch found 11,672 scoped rows but 0 active stands because the accepted step-13
-    pass had already zeroed the steep-slope subset. Step 14 therefore remains far
-    from approvable; the next seam is no longer branch executability but whether TSR
-    step ordering and/or broader low-productivity semantics differ from the current
-    FEMIC late-stage partition.
+  ratchet_note: Full-TSA cached 8-bundle validation rerun on the accepted step-13
+    enriched checkpoint now evaluates step 14 with the TSR's explicit age-160 curve
+    metric and removes 421,217.513 ha against the TSR benchmark of 321,044 ha. The
+    non-steep 80 m3/ha branch carries the entire executable signal at 421,217.513
+    ha, while the steep 250 m3/ha branch still has 11,672 scoped rows but 0 active
+    stands because the accepted step-13 pass already zeroed the steep-slope subset.
+    This fixes the earlier bogus near-zero result, but step 14 still overcuts the
+    benchmark materially and remains not approvable.
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260408T202038Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260408T202038Z.feather
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260409T010419Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_014_sites_with_low_growing_timber_potential.20260409T010419Z.feather
   last_selected_map_ids: []
   last_selected_landscape_units:
   - French Bar
@@ -4266,10 +4270,10 @@ parent_steps:
   - Atnarko
   - Wells Gray Park
   last_input_area_ha: 2977503.74004337
-  last_removed_area_ha: 4527.315640814109
-  last_remaining_area_ha: 2206359.406408366
-  last_benchmark_marginal_delta_ha: -316516.68435918586
-  last_benchmark_cumulative_delta_ha: 276579.4064083658
+  last_removed_area_ha: 421217.5128942016
+  last_remaining_area_ha: 1789669.2091549786
+  last_benchmark_marginal_delta_ha: 100173.51289420162
+  last_benchmark_cumulative_delta_ha: -140110.79084502137
 - parent_step_id: thlb_parent_015_non_merchantable_timber_profiles
   parent_label: Non-merchantable timber profiles
   parent_kind: transformation
@@ -7927,11 +7931,12 @@ steps:
   normalized_action: exclude
   normalized_subject: Non-steep 80 m3/ha threshold
   normalized_predicate: set THLB to 0 on non-steep stands where assigned curve volume
-    falls below 80 m3/ha; treated curves use volume at CMAI and untreated curves use
-    culmination volume
+    at age 160 falls below 80 m3/ha
   linked_source_entry_ids: *id059
   curve_id_column: curve1
   minimum_volume_m3_per_ha: 80.0
+  curve_volume_metric: volume_at_age
+  curve_volume_age_years: 160.0
   checkpoint_attribute_mode: any
   checkpoint_attribute_filters: *id060
 - step_id: thlb_parent_014_sites_with_low_growing_timber_potential_compiled_02
@@ -8013,11 +8018,12 @@ steps:
   normalized_action: exclude
   normalized_subject: Steep-slope 250 m3/ha threshold
   normalized_predicate: set THLB to 0 on steep stands where assigned curve volume
-    falls below 250 m3/ha; treated curves use volume at CMAI and untreated curves
-    use culmination volume
+    at age 160 falls below 250 m3/ha
   linked_source_entry_ids: *id062
   curve_id_column: curve1
   minimum_volume_m3_per_ha: 250.0
+  curve_volume_metric: volume_at_age
+  curve_volume_age_years: 160.0
   checkpoint_attribute_mode: any
   checkpoint_attribute_filters: *id063
 - step_id: thlb_parent_015_non_merchantable_timber_profiles_compiled_01
