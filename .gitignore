@@ -33,11 +33,22 @@ runtime/logs/run_manifest-tsa29_*.json
 runtime/logs/vdyp_curve_events-tsa29-issue85_*.jsonl
 runtime/logs/tsr/*.md
 runtime/logs/tsr/notebook_runs/
+runtime/logs/tsr/notebook_progress/
+runtime/logs/tsr/lu_partitions/
+runtime/logs/tsr/parallel_benchmarks/
+runtime/logs/tsr/*.json
+runtime/logs/tsr/*.txt
 models/tsa29_patchworks_model/patchworksLog.csv
 models/tsa29_patchworks_model/blocks/patchworksLog.csv
 models/tsa29_patchworks_model/blocks/topology_blocks_*r.csv
 !models/tsa29_patchworks_model/blocks/topology_blocks_0r.csv
 data/ria_vri_vclr1p_checkpoint*.feather
+data/tsr/*.feather
+data/downloads/bcdc/*.zip
+data/downloads/bcdc/**/*.zip
+data/downloads/bcdc/**/*.dem
+data/downloads/bcdc/**/*.gpkg
+config/tsr/thlb_netdown.step*.recipe.yaml
 tmp/
 vdyp_io/logs/*.jsonl
 vdyp_io/VDYP_CFG/VDYP7_BACK.ctl
@@ -45,6 +56,11 @@ vdyp_io/VDYP_CFG/VDYP7_VDYP.ctl
 vdyp_io/VDYP_CFG/vdyp7.log
 workbench/tsr/arcgis/.backups/
 workbench/tsr/arcgis/layers/
+workbench/tsr/frozen/
+workbench/tsr/*.locked.py
+workbench/tsr/*.locked.recipe.yaml
+workbench/tsr/arcgis/*.aprx
+workbench/tsr/arcgis/*manifest.json
 
 # Editor/OS
 .DS_Store
