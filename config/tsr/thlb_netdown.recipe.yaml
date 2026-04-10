@@ -33,7 +33,7 @@ recipe_contract:
   recipe_build_status_report_path: config/tsr/thlb_netdown.status.md
   recipe_build_runtime_status_report_path: runtime/logs/tsr/thlb_recipe_build_status_report-20260409T053049Z.md
   workbench_notebook_path: workbench/tsr/thlb_netdown.workbench.ipynb
-  workbench_last_built_utc: '2026-04-09T05:49:20.168788+00:00'
+  workbench_last_built_utc: '2026-04-10T04:22:48.877603+00:00'
   lock_state:
     aflb:
       locked: false
@@ -51,7 +51,7 @@ recipe_contract:
       frozen_status_report_path: None
       frozen_audit_path: None
       note: None
-  last_parent_step_run_utc: '2026-04-09T09:23:30.237596+00:00'
+  last_parent_step_run_utc: '2026-04-10T01:29:43.112803+00:00'
 parent_steps:
 - parent_step_id: thlb_parent_001_total_tsa_area
   parent_label: Total TSA area
@@ -6634,7 +6634,7 @@ parent_steps:
     land_base_stage: lhlb_to_thlb
     stage_label: LHLB -> THLB
     execution_class: projected_harvest_exclusion
-    compiled_operation_type: no_deduction
+    compiled_operation_type: aspatial_area_reduction
     step_status: ready
     required: true
     page_number: 37
@@ -6911,25 +6911,27 @@ parent_steps:
       FSP practice (Tolko #780, West Fraser #755, BCTS #828).'
     - Do not infer road or other generic spatial layers from the permit/FSP discussion
       in this subsection.
-    - 'User-directed closeout for issue 141 skips this step in the locked TSA29 lane
-      so cumulative reconciliation stops at step 20. Explanation: TSR THLB reconciliation.'
+    - User-directed calibration restored this step as an active aspatial bridge deduction
+      after the step-20 stop-line proved close but not exact.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 34205.0
     benchmark_cumulative_area_ha: 1676059.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-    normalized_action: no_deduction
+    normalized_action: aspatial_reduction
     normalized_subject: Cultural heritage and archaeological resources reduction
-    normalized_predicate: apply no further THLB deduction for this reviewed step in
-      the locked TSA29 lane because the reconciliation stop-line is step 20
+    normalized_predicate: apply the TSR-cited cultural-heritage THLB reduction as
+      an aspatial factor anchored to current licensee and Tsilhqot'in practice
     linked_source_entry_ids: &id115 []
-  approval_scope: user_directed_tsr_thlb_reconciliation
-  approval_note: 'User-directed closeout acceptance. Step 21 is accepted as reviewed
-    bridge logic but skipped in the locked TSA29 execution lane so cumulative THLB
-    reconciliation stops at step 20. Explanation: TSR THLB reconciliation.'
+  approval_scope: full_tsa_user_directed_acceptance
+  approval_note: User-directed full-TSA acceptance. Same-instrument rerun on 2026-04-10
+    removed 11,512.712 ha and left the post-step-21 cumulative THLB 27,009.768 ha
+    below the TSR benchmark. That made step 23 unsuitable as a positive deduction,
+    so step 21 is accepted as the last active aspatial bridge deduction in the closeout
+    lane.
   ratchet_state: approved
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260409T054354Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260409T054354Z.feather
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260410T012934Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260410T012934Z.feather
   last_selected_map_ids: []
   last_selected_landscape_units:
   - French Bar
@@ -7055,10 +7057,10 @@ parent_steps:
   - Atnarko
   - Wells Gray Park
   last_input_area_ha: 2977503.74004337
-  last_removed_area_ha: 11949.448695677225
-  last_remaining_area_ha: 1711606.1225862263
-  last_benchmark_marginal_delta_ha: -22255.551304322777
-  last_benchmark_cumulative_delta_ha: 35547.12258622632
+  last_removed_area_ha: 11512.712496742102
+  last_remaining_area_ha: 1649049.232214973
+  last_benchmark_marginal_delta_ha: -22692.287503257896
+  last_benchmark_cumulative_delta_ha: -27009.767785026925
 - parent_step_id: thlb_parent_022_timber_harvesting_land_base
   parent_label: Timber harvesting land base
   parent_kind: milestone
@@ -7112,11 +7114,11 @@ parent_steps:
   row_order: 23
   row_source_kind: table_summary_row
   table_role: land_base_summary
-  land_base_stage: glb_to_aflb
-  stage_label: GLB -> AFLB
-  execution_class: drop_from_universe
+  land_base_stage: lhlb_to_thlb
+  stage_label: LHLB -> THLB
+  execution_class: projected_harvest_exclusion
   benchmark_marginal_area_ha: 22754.0
-  benchmark_cumulative_area_ha: null
+  benchmark_cumulative_area_ha: 1660053.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
   subsection_title: Roads and landings
   subsection_number: 6.2.3
@@ -7124,21 +7126,22 @@ parent_steps:
   - TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=27
   draft_subrules:
   - subrule_id: thlb_parent_023_future_roads_draft_01
-    human_summary: Apply the TSR's future-RTL factor as an aspatial area reduction
-      across the current AFLB working land base.
-    rationale: TSA29 section 6.2.3 says future roads, trails, and landings are estimated
-      from current performance and RESULTS data rather than mapped as a present-day
-      spatial road network.
+    human_summary: Skip future roads as an explicit no-deduction tail step because
+      the reviewed lane is already slightly below the final TSR cumulative THLB target
+      after step 21.
+    rationale: Same-instrument parent-step reruns on 2026-04-10 showed the accepted
+      post-step-21 remaining THLB was already 11,003.768 ha below the final TSR cumulative
+      benchmark, so any positive future-roads deduction would only worsen reconciliation.
     candidate_layers: []
     candidate_fields: []
     candidate_values:
-    - 2.28% future RTL factor
-    - 22,754 ha total TSR benchmark
-    candidate_operation_type: aspatial_area_reduction
+    - 0 ha applied deduction in the accepted closeout lane
+    - 22,754 ha TSR marginal benchmark retained for provenance only
+    candidate_operation_type: no_deduction
     field_mapping_notes:
     - Do not reuse the existing-roads spatial overlay logic for this parent step.
-    - Do not model this step through THLB retention; reduce the stand-area fields
-      that flow downstream into fragments instead.
+    - In the accepted TSA29 closeout lane, this step is an explicit no-op tail step,
+      not an active deduction.
     confidence: needs_review
     review_status: draft
     prose_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=27
@@ -7216,9 +7219,9 @@ parent_steps:
       \ and constraints. It excludes protected areas such as national parks, provincial\
       \ parks, protected areas and legally established areas where timber harvesting\
       \ is prohibited. Areas excluded from the LHLB are also excluded from the THLB."
-    land_base_stage: glb_to_aflb
-    stage_label: GLB -> AFLB
-    execution_class: drop_from_universe
+    land_base_stage: lhlb_to_thlb
+    stage_label: LHLB -> THLB
+    execution_class: projected_harvest_exclusion
     compiled_operation_type: no_deduction
     step_status: ready
     required: true
@@ -7232,42 +7235,36 @@ parent_steps:
     notes: &id118
     - TSA29 section 6.2.3 says future roads are estimated from current performance
       and RESULTS data rather than a mapped future-road layer.
-    - Notebook execution treats this as an early-stage AFLB area reduction and scales
-      stand-area fields directly.
+    - User-directed TSA29 closeout now keeps this as a tail-end reference step after
+      step 21 but applies 0 ha of executable deduction.
     - Do not reuse the existing present-day roads spatial overlay for this parent
       step.
-    - Do not use THLB retention for this step because the deducted area is non-forested
-      road footprint.
-    - 'User-directed closeout for issue 141 skips this step in the locked TSA29 lane
-      so cumulative reconciliation stops at step 20. Explanation: TSR THLB reconciliation.'
+    - Same-instrument reruns showed the accepted lane was already slightly below the
+      final TSR cumulative THLB benchmark after step 21, so a positive deduction here
+      would only worsen reconciliation.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 22754.0
-    benchmark_cumulative_area_ha: null
+    benchmark_cumulative_area_ha: 1660053.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
     normalized_action: no_deduction
     normalized_subject: Future roads, trails, and landings area reduction
-    normalized_predicate: apply no further THLB deduction for this reviewed step in
-      the locked TSA29 lane because the reconciliation stop-line is step 20
+    normalized_predicate: record future roads as an explicit skipped tail step with
+      zero executable THLB deduction in the accepted TSA29 closeout lane
     linked_source_entry_ids: &id119 []
-  approval_scope: user_directed_tsr_thlb_reconciliation
-  approval_note: 'User-directed closeout acceptance. Step 23 is accepted as reviewed
-    bridge logic but skipped in the locked TSA29 execution lane so cumulative THLB
-    reconciliation stops at step 20. Explanation: TSR THLB reconciliation.'
+  approval_scope: full_tsa_user_directed_skip
+  approval_note: User-directed closeout skip. Same-instrument reruns on 2026-04-10
+    showed the post-step-21 cumulative THLB was already 11,003.768 ha below the final
+    TSR benchmark, so this step is accepted as an explicit 0 ha tail deduction.
   ratchet_state: approved
   last_notebook_run_status: applied
-  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260409T041319Z.json
-  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260409T041319Z.feather
+  last_notebook_run_result_json_path: runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260410T010324Z.json
+  last_notebook_run_output_path: runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260410T010324Z.feather
   last_selected_map_ids: []
   last_selected_landscape_units:
   - French Bar
   - Yalakom
   - Spruce Lake
-  - Gun
-  - Bridge
   - Entiako
-  - Cariboo
-  - Castle
-  - Raush
   - Murphy Lake
   - McLinchy
   - Chilanko
@@ -7327,7 +7324,6 @@ parent_steps:
   - Koster/Lone Cabin
   - Nude Creek
   - Hickson
-  - Big Bar
   - Nostetuko
   - Tiedemann
   - Beece Creek
@@ -7349,15 +7345,10 @@ parent_steps:
   - Meldrum
   - Deception Mountain
   - Puntzi
-  - Spanish
   - Williams Lake
   - Hendrix Lake
   - Upper Klinaklini
-  - Middle Klinaklini
-  - Franklin
   - Homathko
-  - Southgate
-  - Bishop
   - Ramsey
   - Likely
   - Corkscrew
@@ -7392,11 +7383,11 @@ parent_steps:
   - Young
   - Atnarko
   - Wells Gray Park
-  last_input_area_ha: 5158940.54411499
-  last_removed_area_ha: 13461.641198635163
-  last_remaining_area_ha: 2905358.090498138
-  last_benchmark_marginal_delta_ha: -9292.358801364837
-  last_benchmark_cumulative_delta_ha: null
+  last_input_area_ha: 2977503.74004337
+  last_removed_area_ha: 56170.29575423089
+  last_remaining_area_ha: 1592878.9364607423
+  last_benchmark_marginal_delta_ha: 33416.29575423089
+  last_benchmark_cumulative_delta_ha: -67174.06353925774
 - parent_step_id: thlb_parent_024_long_term_thlb
   parent_label: Long-term THLB
   parent_kind: milestone
@@ -10015,7 +10006,7 @@ steps:
   land_base_stage: lhlb_to_thlb
   stage_label: LHLB -> THLB
   execution_class: projected_harvest_exclusion
-  compiled_operation_type: aspatial_reduction
+  compiled_operation_type: no_deduction
   step_status: ready
   required: true
   page_number: 37
@@ -10072,7 +10063,7 @@ steps:
   land_base_stage: lhlb_to_thlb
   stage_label: LHLB -> THLB
   execution_class: projected_harvest_exclusion
-  compiled_operation_type: no_deduction
+  compiled_operation_type: aspatial_reduction
   step_status: ready
   required: true
   page_number: 37
@@ -10087,14 +10078,14 @@ steps:
   benchmark_marginal_area_ha: 34205.0
   benchmark_cumulative_area_ha: 1676059.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-  normalized_action: no_deduction
+  normalized_action: aspatial_reduction
   normalized_subject: Cultural heritage and archaeological resources reduction
-  normalized_predicate: apply no further THLB deduction for this reviewed step in
-    the locked TSA29 lane because the reconciliation stop-line is step 20
+  normalized_predicate: apply the TSR-cited cultural-heritage THLB reduction as an
+    aspatial factor anchored to current licensee and Tsilhqot'in practice
   linked_source_entry_ids: *id115
-  run_status: applied_noop
+  run_status: unsupported
   run_notes:
-  - No spatial deduction applied for this rule.
+  - Aspatial reduction steps are preserved for review but not executed in v1.
 - step_id: thlb_parent_022_timber_harvesting_land_base_compiled_01
   parent_step_id: thlb_parent_022_timber_harvesting_land_base
   parent_label: Timber harvesting land base
@@ -10197,10 +10188,10 @@ steps:
     \ It excludes protected areas such as national parks, provincial parks, protected\
     \ areas and legally established areas where timber harvesting is prohibited. Areas\
     \ excluded from the LHLB are also excluded from the THLB."
-  land_base_stage: glb_to_aflb
-  stage_label: GLB -> AFLB
-  execution_class: drop_from_universe
-  compiled_operation_type: no_deduction
+  land_base_stage: lhlb_to_thlb
+  stage_label: LHLB -> THLB
+  execution_class: projected_harvest_exclusion
+  compiled_operation_type: aspatial_reduction
   step_status: ready
   required: true
   page_number: 27
@@ -10213,18 +10204,16 @@ steps:
   notes: *id118
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 22754.0
-  benchmark_cumulative_area_ha: null
+  benchmark_cumulative_area_ha: 1660053.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
   normalized_action: no_deduction
   normalized_subject: Future roads, trails, and landings area reduction
-  normalized_predicate: apply no further THLB deduction for this reviewed step in
-    the locked TSA29 lane because the reconciliation stop-line is step 20
+  normalized_predicate: record future roads as an explicit skipped tail step with
+    zero executable THLB deduction in the accepted TSA29 closeout lane
   linked_source_entry_ids: *id119
-  run_status: applied_noop
-  affected_stand_count: 0
-  affected_area_ha: 0.0
+  run_status: unsupported
   run_notes:
-  - No spatial deduction applied for this rule.
+  - Aspatial reduction steps are preserved for review but not executed in v1.
 - step_id: thlb_parent_024_long_term_thlb_compiled_01
   parent_step_id: thlb_parent_024_long_term_thlb
   parent_label: Long-term THLB

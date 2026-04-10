@@ -1,58 +1,25 @@
-# THLB Netdown Status Report: TSA 29 (Williams Lake)
+# THLB Recipe Build Report: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-09T17:43:31.614820+00:00`
-- Execution mode: `hybrid`
-- Baseline signal: `thlb_raw`
-- Recipe path: `config/tsr/thlb_netdown.recipe.yaml`
-- Checkpoint input: `data/ria_vri_vclr1p_checkpoint8.feather`
-- Output checkpoint: `data/tsr/thlb_netdown_checkpoint.feather`
-- Audit JSON: `config/tsr/thlb_netdown.audit.json`
-- Runtime history copy: `runtime/logs/tsr/thlb_netdown_status_report-20260409T174331Z.md`
+- Generated UTC: `2026-04-10T01:29:44.833790+00:00`
+- Report mode: `recipe_build`
+- THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
+- Source-layer recipe path: `config/tsr/source_layers.recipe.yaml`
+- Runtime history copy: `runtime/logs/tsr/thlb_recipe_build_status_report-20260409T053049Z.md`
 
 ## Scope
 
-- Selected MAP_ID subset: `full input`
-- Step count: `45`
+- Parent step count: `24`
+- Compiled step count: `45`
+- Selected TSR documents:
+  - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf`
 
-## Backbone Summary
+## Stage Counts
 
-- Input checkpoint area: `2977503.740 ha`
-- GLB / current input proxy: `2977503.740 ha`
-- AFLB / baseline managed area: `1513233.574 ha`
-- LHLB current: `not yet materialized separately in the current runner`
-- THLB / final managed area: `501474.440 ha`
-- TSR reported AFLB benchmark: `3098168.000 ha`
-- TSR reported THLB benchmark: `1660053.000 ha`
-
-## Ratios
-
-- GLB:AFLB current proxy = `0.5082 (50.82%)`
-- AFLB:LHLB current = `n/a yet`
-- AFLB:THLB current = `0.3314 (33.14%)`
-- GLB:THLB current proxy = `0.1684 (16.84%)`
-- TSR AFLB:THLB = `0.5358 (53.58%)`
-
-## Outcomes
-
-- `applied`: `19`
-- `applied_noop`: `10`
-- `blocked_missing_source`: `4`
-- `unsupported`: `12`
-
-## Locking / Convergence
-
-- AFLB lock state: `unlocked`
-- THLB lock state: `unlocked`
-- Lock dependency: cutting the AFLB lock automatically invalidates the THLB lock because THLB is downstream from the AFLB universe definition.
-- Current note: FEMIC now records benchmark ratios and runtime history for convergence review, but explicit user lock/cut-lock controls are not implemented yet.
-
-## Interpretation
-
-- Non-AFLB polygons are excluded from the reconstruction universe before THLB logic applies.
-- Non-THLB polygons or fragments remain inside that working universe and are assigned THLB state downstream from AFLB initialization.
-- GLB -> AFLB rows define the modeled universe, AFLB -> LHLB rows define legal harvestability, and LHLB -> THLB rows define projected operational harvestability.
-- AU/VDYP-oriented filters are not assumed to be valid THLB filters unless the TSR logic says so explicitly.
-- Legacy raster THLB values are reference-only in reconstructed mode.
+- `GLB -> AFLB`: `4`
+- `AFLB -> LHLB`: `7`
+- `LHLB -> THLB`: `11`
+- `Reference targets`: `2`
+- `Context`: `0`
 
 ## Backbone Milestones
 
@@ -369,45 +336,6 @@
 - Logic mode: `femic_core`
 - Run notes:
   - Normalized action `review` is not executable in v1.
-
-### 23. Future roads
-
-- Parent step id: `thlb_parent_023_future_roads`
-- Stage: `GLB -> AFLB`
-- Execution class: `drop_from_universe`
-- Ratchet state: `approved`
-- Table provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24`
-- Benchmark marginal deduction: `22754.000 ha`
-- Supporting prose section: `6.2.3 Roads and landings`
-- Supporting prose provenance:
-  - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=27`
-- Draft subrules:
-  - `thlb_parent_023_future_roads_draft_01` | summary=`Apply the TSR's future-RTL factor as an aspatial area reduction across the current AFLB working land base.` | operation=`aspatial_area_reduction` | review=`draft`
-    - candidate values: `2.28% future RTL factor`, `22,754 ha total TSR benchmark`
-    - field/value mapping notes:
-      - Do not reuse the existing-roads spatial overlay logic for this parent step.
-      - Do not model this step through THLB retention; reduce the stand-area fields that flow downstream into fragments instead.
-- Current compiled status summary: `applied_noop`=1
-- Last notebook run status: `applied`
-- Last notebook removed area: `13461.641 ha`
-- Last notebook remaining area: `2905358.090 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260409T041319Z.json`
-- Compiled logic:
-
-#### 23.1. Future roads, trails, and landings area reduction
-
-- Step id: `thlb_parent_023_future_roads_compiled_01`
-- Kind: `netdown_rule`
-- Stage: `GLB -> AFLB`
-- Execution class: `drop_from_universe`
-- Run status: `applied_noop`
-- TSR provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=27`
-- TSR page: `27`
-- TSR text: `The purpose of this section is to identify the portion of the land base that is occupied by roads, trails, and landings (RTL) that have been constructed to access and facilitate harvest operations. The existing permanent RTL area will be removed from the AFLB and will not contribute to timber supply or biodiversity objectives. Separate estimates are made to reflect the loss in productive forest land due to existing and future RTL. Existing roads, trails and landings The area within RTL is typically too small to delineate and track efficiently in a landscape-level model so they will be modelled non-spatially through partial reductions to the AFLB (i.e., the area considered to be AFLB within each hectare will be reduced by a percentage). To estimate the current contribution of roads, a geographic information system (GIS) was used to buffer all road lines to estimate the area of productive forest land lost to these access features. Forest service roads and public roads were buffered 25 metres (12.5 metres from center line) and active/retired road permit roads were buffered 15 metres (7.5 metres from center line). The mapped non-status roads are known to be inaccurate, and the information is incomplete. Since it is impossible to estimate the future state of these roads, only the mapped non-status roads will be assumed to impact future yield, which assumes that the unmapped non-status roads will not impact future yield. The estimated area within existing RTL maintained clearing widths is categorized below. On-block (temporary) roads are those roads that are only used to access cutblocks for harvesting or silviculture operations. They are assigned a width of zero metres, as these temporary roads are either reforested by planting or fill in over time as stands regenerate. Table 6. Width and area of existing road to calculate reductions Road class Width (m) Hectares Forest Service roads 25 8,343 Ministry of Transportation and Infrastructure 25 6,280 Road permit and landings 15 19,641 Mapped non-status roads 5 16,169 Most harvesting now uses a roadside processing system, and landings are less common in current harvest systems. There are indications that some productivity loss is associated with the use of roadside harvesting systems, but no definitive research to date has quantified a level of productivity loss. In-block roads that are temporary in nature will have no deduction from the THLB. In total, 32 526 hectares will be excluded for all roads. Future roads, trails and landings The AFLB area removed to account for future RTL was estimated based on current performance and RESULTS data. The future RTL reduction will be applied to future harvested areas in the timber supply model after stands are harvested for the first time. Reduction factors for future RTL were calculated based on the average amount of on-block road permit structures with an estimated 15 metres width that have been observed in the five-year period from January 2015 to April 2021. The average factor is 2.28% for all three Cariboo TSAs. The yields of all stands aged 70 years and above will be reduced by this factor after they are harvested. In total, 22 754 hectares will be excluded from the forested land base at the time of first harvest to represent the area lost due to future road development. Data source and comments: Roads will be identified from forest tenure road mapping as roads with a description of ‘Forest Service Road’ or ‘Road Permit’ and have a status of ‘active’, ‘retired’ or ‘pending’. Digital road atlas mapping will also be used but will exclude roads classed as ‘resource’. The last five years of road construction in recent cutblocks were examined using existing road permit data for all three TSAs in the CNRR. Road lengths were derived from the following data sets from the BCGW. FSR 25 m WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW (Active) Public 25 m WHSE_IMAGERY_AND_BASE_MAPS.MOT_HIGHWAY_PROFILES_SP Road permit 15 m WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW (Active) Non-status 5 m WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP (Outside of cutblocks) On-block roads (temporary) 0 m WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP (roads that are inside cutblocks harvested from 2015 to present using WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP) Note: Because there is overlap between the different types of roads, the following priority was used: public, FSR, permit, non-status. This means if a public road overlaps with any other type of road the area will be allocated to the public road. Removed all roads that fall over managed licences, tree farms, private, federal, and municipal lands. The LHLB is the portion of the AFLB where timber harvesting is legal, subject to forest management objectives and constraints. It excludes protected areas such as national parks, provincial parks, protected areas and legally established areas where timber harvesting is prohibited. Areas excluded from the LHLB are also excluded from the THLB.`
-- FEMIC proposed logic: Apply no THLB deduction for this rule.
-- Logic mode: `femic_core`
-- Run notes:
-  - No spatial deduction applied for this rule.
 
 ### AFLB -> LHLB
 
@@ -1635,11 +1563,12 @@
     - field/value mapping notes:
       - This is a benchmark-anchored aspatial reduction step, not a direct public-GIS query.
       - Reference practice inputs: TNG, Tolko FSP #780, West Fraser FSP #755, BCTS FSP #828.
-- Current compiled status summary: `applied_noop`=1
+- Current compiled status summary: `applied`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `11949.449 ha`
-- Last notebook remaining area: `1711606.123 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260409T054354Z.json`
+- Last notebook removed area: `11512.712 ha`
+- Last notebook remaining area: `1649049.232 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260410T012934Z.json`
+- Approval note: User-directed full-TSA acceptance. Same-instrument rerun on 2026-04-10 left the post-step-21 cumulative THLB `27,009.768 ha` below the TSR benchmark, which in turn made step 23 unsuitable as a positive deduction.
 - Compiled logic:
 
 #### 21.1. Cultural heritage and archaeological resources reduction
@@ -1648,12 +1577,55 @@
 - Kind: `netdown_rule`
 - Stage: `LHLB -> THLB`
 - Execution class: `projected_harvest_exclusion`
-- Run status: `applied_noop`
+- Run status: `applied`
 - TSR provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=37`
 - TSR page: `37`
 - TSR text: `The Heritage Conservation Act (HCA) recognizes the historical, cultural, scientific, spiritual, and educational value of archaeological sites to First Nations, local communities, and the public. Archaeological sites on both public and private land are protected under the HCA and must not be altered without a permit. A cultural heritage resource is an object, site or location of a traditional societal practice that is of historical, cultural, societal or archaeological significance to the province, community or an Aboriginal People. This can include archaeological sites, structural features, heritage landscape features and traditional use sites. Cultural heritage resources not applicable to the HCA are managed for by the licensees through the cultural heritage resource sections in the applicable FSPs as per FPPR Section 10. Cultural heritage resources are identified by the licensees through information sharing prior to the submission of cutting permit and road permit applications to the ministry. The most common practice by licensees is to manage for these sites by excluding them from the harvest area through boundary amendments and the placement of wildlife tree retention and/or cultural resource management zones. The incremental excluded area required to protect these sites in current practices was discussions with licensees and the Tsilhqot’in National Government. It was estimated that, on average, an additional two percent of the cutblock area was now included in these expanded exclusions and/or reserves. This will be modelled as an aspatial reduction to the THLB. In total, 34 205 hectares will be excluded to represent cultural heritage resources. Data source and comments: Tsilhqot’in National Government Tolko Industries Ltd. - FSP #780; West Fraser Mills Ltd. - FSP #755; and BCTS - FSP #828.`
-- FEMIC proposed logic: Apply no THLB deduction for this rule.
+- FEMIC proposed logic: Apply the TSR-cited cultural-heritage deduction as an aspatial THLB bridge reduction after the spatially executable steps have completed.
 - Logic mode: `femic_core`
 - Run notes:
-  - No spatial deduction applied for this rule.
+  - Same-instrument parent-step rerun on 2026-04-10 removed `11,512.712 ha`.
+  - Post-step-21 cumulative THLB was `1,649,049.232 ha`, which is `27,009.768 ha` below the TSR cumulative benchmark.
+
+### 23. Future roads
+
+- Parent step id: `thlb_parent_023_future_roads`
+- Stage: `LHLB -> THLB`
+- Execution class: `projected_harvest_exclusion`
+- Ratchet state: `approved`
+- Table provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24`
+- Benchmark marginal deduction: `22754.000 ha`
+- Benchmark cumulative remaining area: `1660053.000 ha`
+- Supporting prose section: `6.2.3 Roads and landings`
+- Supporting prose provenance:
+  - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=27`
+- Draft subrules:
+  - `thlb_parent_023_future_roads_draft_01` | summary=`Skip future roads as an explicit no-deduction tail step because the reviewed lane is already slightly below the final TSR cumulative THLB target after step 21.` | operation=`no_deduction` | review=`draft`
+    - candidate values: `0 ha applied deduction in the accepted closeout lane`, `22,754 ha TSR marginal benchmark retained for provenance only`
+    - field/value mapping notes:
+      - Do not reuse the existing-roads spatial overlay logic for this parent step.
+      - In the accepted TSA29 closeout lane, this step is an explicit no-op tail step, not an active deduction.
+- Current compiled status summary: `applied_noop`=1
+- Last notebook run status: `superseded_by_skip_acceptance`
+- Last notebook removed area: `0.000 ha`
+- Last notebook remaining area: `1649049.232 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260410T012934Z.json`
+- Approval note: User-directed closeout skip. Same-instrument reruns on 2026-04-10 showed the accepted lane was already `11,003.768 ha` below the final TSR cumulative benchmark after step 21, so any positive step-23 deduction would only worsen reconciliation.
+- Compiled logic:
+
+#### 23.1. Future roads, trails, and landings area reduction
+
+- Step id: `thlb_parent_023_future_roads_compiled_01`
+- Kind: `netdown_rule`
+- Stage: `LHLB -> THLB`
+- Execution class: `projected_harvest_exclusion`
+- Run status: `applied_noop`
+- TSR provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=27`
+- TSR page: `27`
+- TSR text: `The purpose of this section is to identify the portion of the land base that is occupied by roads, trails, and landings (RTL) that have been constructed to access and facilitate harvest operations. The existing permanent RTL area will be removed from the AFLB and will not contribute to timber supply or biodiversity objectives. Separate estimates are made to reflect the loss in productive forest land due to existing and future RTL. Existing roads, trails and landings The area within RTL is typically too small to delineate and track efficiently in a landscape-level model so they will be modelled non-spatially through partial reductions to the AFLB (i.e., the area considered to be AFLB within each hectare will be reduced by a percentage). To estimate the current contribution of roads, a geographic information system (GIS) was used to buffer all road lines to estimate the area of productive forest land lost to these access features. Forest service roads and public roads were buffered 25 metres (12.5 metres from center line) and active/retired road permit roads were buffered 15 metres (7.5 metres from center line). The mapped non-status roads are known to be inaccurate, and the information is incomplete. Since it is impossible to estimate the future state of these roads, only the mapped non-status roads will be assumed to impact future yield, which assumes that the unmapped non-status roads will not impact future yield. The estimated area within existing RTL maintained clearing widths is categorized below. On-block (temporary) roads are those roads that are only used to access cutblocks for harvesting or silviculture operations. They are assigned a width of zero metres, as these temporary roads are either reforested by planting or fill in over time as stands regenerate. Table 6. Width and area of existing road to calculate reductions Road class Width (m) Hectares Forest Service roads 25 8,343 Ministry of Transportation and Infrastructure 25 6,280 Road permit and landings 15 19,641 Mapped non-status roads 5 16,169 Most harvesting now uses a roadside processing system, and landings are less common in current harvest systems. There are indications that some productivity loss is associated with the use of roadside harvesting systems, but no definitive research to date has quantified a level of productivity loss. In-block roads that are temporary in nature will have no deduction from the THLB. In total, 32 526 hectares will be excluded for all roads. Future roads, trails and landings The AFLB area removed to account for future RTL was estimated based on current performance and RESULTS data. The future RTL reduction will be applied to future harvested areas in the timber supply model after stands are harvested for the first time. Reduction factors for future RTL were calculated based on the average amount of on-block road permit structures with an estimated 15 metres width that have been observed in the five-year period from January 2015 to April 2021. The average factor is 2.28% for all three Cariboo TSAs. The yields of all stands aged 70 years and above will be reduced by this factor after they are harvested. In total, 22 754 hectares will be excluded from the forested land base at the time of first harvest to represent the area lost due to future road development. Data source and comments: Roads will be identified from forest tenure road mapping as roads with a description of ‘Forest Service Road’ or ‘Road Permit’ and have a status of ‘active’, ‘retired’ or ‘pending’. Digital road atlas mapping will also be used but will exclude roads classed as ‘resource’. The last five years of road construction in recent cutblocks were examined using existing road permit data for all three TSAs in the CNRR. Road lengths were derived from the following data sets from the BCGW. FSR 25 m WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW (Active) Public 25 m WHSE_IMAGERY_AND_BASE_MAPS.MOT_HIGHWAY_PROFILES_SP Road permit 15 m WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW (Active) Non-status 5 m WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP (Outside of cutblocks) On-block roads (temporary) 0 m WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP (roads that are inside cutblocks harvested from 2015 to present using WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP) Note: Because there is overlap between the different types of roads, the following priority was used: public, FSR, permit, non-status. This means if a public road overlaps with any other type of road the area will be allocated to the public road. Removed all roads that fall over managed licences, tree farms, private, federal, and municipal lands. The LHLB is the portion of the AFLB where timber harvesting is legal, subject to forest management objectives and constraints. It excludes protected areas such as national parks, provincial parks, protected areas and legally established areas where timber harvesting is prohibited. Areas excluded from the LHLB are also excluded from the THLB.`
+- FEMIC proposed logic: Record future roads as an explicit skipped tail step with `0 ha` executable THLB deduction in the accepted TSA29 closeout lane.
+- Logic mode: `femic_core`
+- Run notes:
+  - Same-instrument reruns showed the accepted lane was already slightly below the final TSR cumulative THLB benchmark after step 21.
+  - Best executable closeout therefore keeps step 23 as an explicit `0 ha` tail deduction rather than forcing a negative or fictional reconciliation step.
 
