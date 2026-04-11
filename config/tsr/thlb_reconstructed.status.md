@@ -1,6 +1,6 @@
 # THLB Netdown Status Report: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-11T16:18:13.226888+00:00`
+- Generated UTC: `2026-04-11T22:09:43.669097+00:00`
 - Execution mode: `reconstructed`
 - Debug stand-binary fallback: `disabled`
 - Baseline signal: `checkpoint1_aflb_initialization`
@@ -8,40 +8,59 @@
 - Checkpoint input: `data/ria_vri_vclr1p_checkpoint1.feather`
 - Output checkpoint: `data/tsr/thlb_reconstructed_checkpoint.feather`
 - Audit JSON: `config/tsr/thlb_reconstructed.audit.json`
-- Runtime history copy: `runtime/logs/tsr/thlb_reconstructed_status_report-20260411T161813Z.md`
-- Warm-start checklist: `workbench/tsr/thlb_netdown.warmstart.md`
+- Runtime history copy: `runtime/logs/tsr/thlb_reconstructed_status_report-20260411T220943Z.md`
+- Warm-start checklist: `not generated yet`
 
 ## Review Dashboard
 
-- Selected MAP_ID subset: `092O071`
+- Selected MAP_ID subset: `full input`
 - Step count: `45`
-- Input checkpoint area: `27072.529 ha`
-- GLB / current input proxy: `27072.529 ha`
-- AFLB / baseline managed area: `26350.175 ha`
+- Input checkpoint area: `5158940.544 ha`
+- GLB / current input proxy: `5158940.544 ha`
+- AFLB / baseline managed area: `3291998.463 ha`
 - LHLB current: `not yet materialized separately in the current runner`
-- THLB / final managed area: `15234.756 ha`
-- Exact fragment-overlay steps: `12` / `10818.177 ha`
-- Explicit aspatial fallback steps: `1` / `297.242 ha`
+- THLB / final managed area: `903685.409 ha`
+- Exact fragment-overlay steps: `17` / `2364251.516 ha`
+- Explicit aspatial fallback steps: `2` / `24063.728 ha`
 - Blocked exact-overlay steps: `0` / `0 candidate rows`
 - Debug stand-binary fallback steps: `0` / `0.000 ha`
+- LU-wise exact-overlay chunks touched: `1025`
+- LU-wise intersecting exclusion features: `108212`
+- LU-wise reconstructed runtime: `96.09 min`
 - Legacy raster THLB reference: `1513233.574 ha`
 - TSR reported AFLB benchmark: `3098168.000 ha`
 - TSR reported THLB benchmark: `1660053.000 ha`
 
 ## Backbone Summary
 
-- GLB:AFLB current proxy = `0.9733 (97.33%)`
+- GLB:AFLB current proxy = `0.6381 (63.81%)`
 - AFLB:LHLB current = `n/a yet`
-- AFLB:THLB current = `0.5782 (57.82%)`
-- GLB:THLB current proxy = `0.5627 (56.27%)`
+- AFLB:THLB current = `0.2745 (27.45%)`
+- GLB:THLB current proxy = `0.1752 (17.52%)`
 - TSR AFLB:THLB = `0.5358 (53.58%)`
 
 ## Outcomes
 
-- `applied`: `13`
-- `applied_noop`: `17`
+- `applied`: `19`
+- `applied_noop`: `11`
 - `blocked_missing_source`: `4`
 - `unsupported`: `11`
+
+## Runtime Timing
+
+- Source-layer load time: `53.14 s`
+- Candidate-query time: `3448.28 s`
+- Exact-overlay / fallback time: `2019.29 s`
+- Chunk-write time: `161.16 s`
+- Final merge time: `10.68 s`
+
+### Slowest Steps
+
+- `thlb_parent_019_buffered_trails_compiled_01` | mode=`fragment_overlay` | status=`applied` | total=`1504.94 s` | overlay=`147.70 s` | LU chunks=`68` | source features=`7322`
+- `thlb_parent_009_critical_habitat_for_fish_compiled_01` | mode=`fragment_overlay` | status=`applied` | total=`1451.17 s` | overlay=`483.10 s` | LU chunks=`105` | source features=`7322`
+- `thlb_parent_011_community_areas_of_special_concern_compiled_01` | mode=`fragment_overlay` | status=`applied` | total=`1125.81 s` | overlay=`141.59 s` | LU chunks=`69` | source features=`7322`
+- `thlb_parent_002_land_not_administered_by_the_province_compiled_01` | mode=`fragment_overlay` | status=`applied` | total=`176.16 s` | overlay=`163.27 s` | LU chunks=`50` | source features=`2670`
+- `thlb_parent_007_old_growth_management_areas_compiled_01` | mode=`fragment_overlay` | status=`applied` | total=`166.63 s` | overlay=`143.81 s` | LU chunks=`101` | source features=`4053`
 
 ## Locking / Convergence
 
@@ -135,7 +154,7 @@
     - candidate layers: `whse_forest_vegetation_f_own`
     - candidate fields: `OWNERSHIP_CLASS`
     - candidate values: `lease`
-- Current compiled status summary: `applied_noop`=1, `unsupported`=1
+- Current compiled status summary: `applied`=1, `unsupported`=1
 - Last notebook run status: `applied`
 - Last notebook removed area: `221602.052 ha`
 - Last notebook remaining area: `4937338.492 ha`
@@ -148,20 +167,21 @@
 - Kind: `netdown_rule`
 - Stage: `GLB -> AFLB`
 - Execution class: `drop_from_universe`
-- Run status: `applied_noop`
+- Run status: `applied`
 - TSR provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=25`
 - Review logic mode: `femic_core`
 - Exact FEMIC logic: Intersect the working land base with the linked source geometry. Source rows are filtered by `OWNERSHIP_DESCRIPTION` in [`Private`, `Private - Parcel has a title registered to a First Nations group.`, `Federal - Dominion government Block/Federal Parcels`, `Federal - Indian Reserve`, `Federal - Military Reserve`, `Crown Tenure - Community Forest Agreement, Schedule A`, `Crown Tenure - Community Forest Agreement, Schedule B`, `Crown Tenure - First Nations Woodland Licence`, `Crown Tenure - Tree Farm Licence, Schedule A`, `Crown Tenure - Tree Farm Licence, Schedule B`, `Crown - Municipal Parcels`, `Crown Lease - Misc. lease`].
 - TSR page: `25`
 - TSR text: `Certain types of lands do not contribute to timber supply for the purpose of this timber supply analysis. This includes privately held lands, First Nations reserves, some lands under the jurisdiction of the federal government and area-based forest tenures. Parks and protected areas are included in the AFLB because they can be relied on to continually contribute to forest cover management objectives such as landscape-level biodiversity, visual quality, and wildlife habitat objectives. The CCLUP specifies that woodlots also contribute to landscape-level forest management objectives for biodiversity, although the AAC for these woodlots is determined under a separate process. Area-based licences such as community forest agreements and First Nations woodland licences (FNWL) are expected to manage for landscape-level biodiversity objectives within their tenured areas, therefore they are removed from the AFLB. Woodlots are not required to manage for landscape-level biodiversity objectives, so they are left in the AFLB and removed when defining the LHLB. The Northern Secwepemc te Qelmucw (NStQ) Treaty Negotiations Agreement in Principle was signed on July 22, 2018, and the Parties are in Stage 5 negotiations to conclude treaty. The NStQ Interim Treaty Agreement (ITA) Phase 1 land transfer parcels are no longer administered by the Province and will be excluded from the AFLB. Additional NStQ Agreement in Principle (AIP) lands which are detailed in the signed AIP may also be transferred soon. The implications of these additional transfers to timber supply implications will be explored through sensitivity analysis. On June 26, 2014, the Supreme Court of Canada (SCC) released its decision on Tsilhqot’in Nation v. British Columbia (Tsilhqot’in decision). In that decision the SCC outlined areas over which the Tsilhqot’in Nation has proven and declared Aboriginal title. Proven and declared Aboriginal title lands are not considered Crown land. As such, those lands do not contribute to timber supply in the Williams Lake TSA and are excluded from the AFLB. A spatial data set of land ownership was developed using information from the Crown Land Registry and the Integrated Cadastral Information Society. Areas classified in this data set with ownership codes 62 (Forest Management Unit) or 69 (Community Watershed) are generally administered by the Province for TSA timber supply. These areas were reviewed by district staff to ensure all categories they contain can appropriately be considered AFLB for purposes of this analysis. Minor areas, including those identified as development project, institutional and residential, were excluded from the AFLB. Otherwise, the remaining area with these ownership codes will be modelled as managed for TSA timber supply. Areas classified with ownership code 99 (crown leases) are not generally managed for TSA timber supply but were similarly reviewed prior to this analysis. Minor areas, including those categorized as grazing leases, will be considered as contributing to TSA timber supply because harvesting that occurs on these lease areas contributes to the TSA harvest level. Table 4. Land ownership types Land ownership type Total area Area excluded Private 186,582 186,582 Federal 71,825 71,825 CFA and FNWL 244,692 244,692 Municipal and Leases 2,688 2,688 NStQ Interim Treaty Agreement 2,796 2,702 Tsilhqot’in Nation Title 193,216 188,544 Data source and comments: WHSE_FOREST_VEGETATION.F_OWN`
-- FEMIC proposed logic: Exclude the linked polygons from THLB where they intersect the working land base; the exact execution mode depends on available data and current implementation support.
+- FEMIC proposed logic: Overlay the linked polygon layers onto the working land base, fragment intersected geometry, and assign binary THLB {0,1} so excluded fragments are 0 and retained fragments remain 1.
 - Linked source layers:
   - `whse_forest_vegetation_f_own` | query=`WHSE_FOREST_VEGETATION.F_OWN` | status=`exact_hit` | strategy=`wfs_fetch`
     - artifact: `data/downloads/bcdc/WHSE_FOREST_VEGETATION_F_OWN/WHSE_FOREST_VEGETATION_F_OWN.gpkg`
     - matched by: `object_name:WHSE_FOREST_VEGETATION.F_OWN`
     - top match: `Generalized Forest Cover Ownership`
 - Run notes:
-  - No active land-base geometries intersected the exclusion mask.
+  - Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload.
 
 #### 2.2. Treaty and title transfers requiring reviewed overlays
 
@@ -281,8 +301,8 @@
     - matched by: `object_name:WHSE_BASEMAPPING.FWA_WETLANDS_POLY`
     - top match: `Freshwater Atlas Wetlands`
 - Run notes:
-  - Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.
-  - Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation.
+  - Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload.
 
 ### 4. Roads and landings
 
@@ -349,7 +369,7 @@
     - matched by: `object_name:WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP`
     - top match: `Digital Road Atlas (DRA) - Master Partially-Attributed Roads`
 - Run notes:
-  - No active land-base geometries intersected the exclusion mask.
+  - No active LU-clipped fragment geometries intersected the exclusion mask.
 
 #### 4.2. Active or retired road permit roads
 
@@ -370,7 +390,7 @@
     - matched by: `object_name:WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW`
     - top match: `Forest Tenure Road Section Lines`
 - Run notes:
-  - No active land-base geometries intersected the exclusion mask.
+  - No active LU-clipped fragment geometries intersected the exclusion mask.
 
 #### 4.3. Landings and temporary roads
 
@@ -425,7 +445,7 @@
     - candidate layers: `whse_forest_vegetation_f_own`
     - candidate fields: `OWNERSHIP_CLASS`
     - candidate values: `woodlot`
-- Current compiled status summary: `applied`=1, `applied_noop`=1
+- Current compiled status summary: `applied`=2
 - Last notebook run status: `applied`
 - Last notebook removed area: `275618.199 ha`
 - Last notebook remaining area: `2701885.541 ha`
@@ -451,8 +471,8 @@
     - matched by: `object_name:WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW`
     - top match: `BC Parks, Ecological Reserves, and Protected Areas`
 - Run notes:
-  - Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.
-  - Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation.
+  - Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload.
 
 #### 6.2. Area-based tenures and woodlots
 
@@ -460,20 +480,21 @@
 - Kind: `netdown_rule`
 - Stage: `AFLB -> LHLB`
 - Execution class: `legal_harvest_exclusion`
-- Run status: `applied_noop`
+- Run status: `applied`
 - TSR provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=28`
 - Review logic mode: `femic_core`
 - Exact FEMIC logic: Intersect the working land base with the linked source geometry. Source rows are filtered by `OWNERSHIP_DESCRIPTION` in [`Crown Lease - Misc. lease`, `Crown Tenure - Woodlot Licence, Schedule A`, `Crown Tenure - Woodlot Licence, Schedule B`].
 - TSR page: `28`
 - TSR text: `The parks, protected areas, and woodlots that were included in the AFLB to contribute to forest management objectives in the context of TSA timber supply, will be removed at this stage. A further check will be performed using current boundary mapping for woodlots, parks, and protected areas to ensure all areas were appropriately excluded. Woodlots that are no longer active will be included in the LHLB. Table 7. Parks, protected areas, and small area-based tenures Designations Total (ha) Forested (ha) Excluded (ha) Conservancy areas 596,471 260,215 260,028 Wildlife management areas 521 221 221 Heritage sites 106 81 78 Miscellaneous reserves 271,808 184,769 11,586 Woodlots 35,789 34,133 33,217 Crown and miscellaneous leases 31,049 24,842 1,197`
-- FEMIC proposed logic: Exclude the linked polygons from THLB where they intersect the working land base; the exact execution mode depends on available data and current implementation support.
+- FEMIC proposed logic: Overlay the linked polygon layers onto the working land base, fragment intersected geometry, and assign binary THLB {0,1} so excluded fragments are 0 and retained fragments remain 1.
 - Linked source layers:
   - `whse_forest_vegetation_f_own` | query=`WHSE_FOREST_VEGETATION.F_OWN` | status=`exact_hit` | strategy=`wfs_fetch`
     - artifact: `data/downloads/bcdc/WHSE_FOREST_VEGETATION_F_OWN/WHSE_FOREST_VEGETATION_F_OWN.gpkg`
     - matched by: `object_name:WHSE_FOREST_VEGETATION.F_OWN`
     - top match: `Generalized Forest Cover Ownership`
 - Run notes:
-  - No active land-base geometries intersected the exclusion mask.
+  - Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload.
 
 ### 7. Old growth management areas
 
@@ -537,8 +558,8 @@
     - matched by: `object_name_suffix:WHSE_LAND_USE_PLANNING.RMP_OGMA_LEGAL_CURRENT_SVW`
     - top match: `Old Growth Management Areas - Legal - Current`
 - Run notes:
-  - Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.
-  - Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation.
+  - Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload.
 
 ### 8. Wildlife habitat areas
 
@@ -578,7 +599,7 @@
     - candidate layers: `wildlife_habitat`
     - candidate fields: `TIMBER_HARVEST_CODE`
     - candidate values: `CONDITIONAL HARVEST ZONE`
-- Current compiled status summary: `applied`=1, `applied_noop`=1, `unsupported`=1
+- Current compiled status summary: `applied`=2, `unsupported`=1
 - Last notebook run status: `applied`
 - Last notebook removed area: `133005.883 ha`
 - Last notebook remaining area: `2341543.322 ha`
@@ -608,8 +629,8 @@
     - matched by: `object_name_suffix:WHSE_WILDLIFE_MANAGEMENT.WCP_UNGULATE_WINTER_RANGE_SP`
     - top match: `Ungulate Winter Range - Approved`
 - Run notes:
-  - Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.
-  - Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation.
+  - Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload.
 
 #### 8.2. Wildlife habitat area no-harvest polygons
 
@@ -617,20 +638,21 @@
 - Kind: `netdown_rule`
 - Stage: `AFLB -> LHLB`
 - Execution class: `legal_harvest_exclusion`
-- Run status: `applied_noop`
+- Run status: `applied`
 - TSR provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=29`
 - Review logic mode: `femic_core`
 - Exact FEMIC logic: Intersect the working land base with the linked source geometry. Source rows are filtered by `TIMBER_HARVEST_CODE` = `NO HARVEST ZONE`.
 - TSR page: `29`
 - TSR text: `Wildlife habitat reductions may be identified and managed through several processes including the Identified Wildlife Management Strategy, identification, and approval of ungulate winter range (UWR), and management practices specified in plans such as the CCLUP that establish legal wildlife habitat objectives. Management practices may include no harvesting in core areas as well as modified harvesting in associated management zones. Several approved wildlife habitat areas (WHA) are designated within the CNRR. The associated General Wildlife Measures (GWM) established by ministerial order under the GARs guide harvest practices in WHAs. Areas designated through GWMs as “no harvest” will be excluded from the LHLB. Areas designated as “conditional harvest zone” will be addressed in Section 7 – ‘Current forest management assumptions’ and Section 7.1.8 – ‘Silviculture systems’. Table 9. Wildlife habitat areas Designations Total (ha) Forested (ha) Excluded (ha) UWR no-harvest area 25 23 23 Caribou no-harvest area 208,868 163,217 154,033 There is a Caribou Herd Planning process currently ongoing within the CNRR. The outcome of additional area protection through no harvest or modified harvest resulting from this process are currently unknown. There may potentially be additional protections put in place for caribou that will have a downward pressure on the timber supply. Ministry staff will stay informed on the progress of this working group and inform the TSR throughout the process.`
-- FEMIC proposed logic: Exclude the linked polygons from THLB where they intersect the working land base; the exact execution mode depends on available data and current implementation support.
+- FEMIC proposed logic: Overlay the linked polygon layers onto the working land base, fragment intersected geometry, and assign binary THLB {0,1} so excluded fragments are 0 and retained fragments remain 1.
 - Linked source layers:
   - `whse_wildlife_management_wcp_wildlife` | query=`WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE` | status=`exact_hit` | strategy=`wfs_fetch`
     - artifact: `data/downloads/bcdc/WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE/WHSE_WILDLIFE_MANAGEMENT_WCP_WILDLIFE.gpkg`
     - matched by: `object_name_stem:WHSE_WILDLIFE_MANAGEMENT.WCP_WILDLIFE_HABITAT_AREA_POLY`
     - top match: `Wildlife Habitat Areas - Approved`
 - Run notes:
-  - No active land-base geometries intersected the exclusion mask.
+  - Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload.
 
 #### 8.3. Conditional harvest wildlife zones
 
@@ -716,8 +738,8 @@
     - matched by: `object_name:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW`
     - top match: `Legal Planning Objectives - Current - Polygon`
 - Run notes:
-  - Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.
-  - Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation.
+  - Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload.
 
 ### 10. Lakeshore management
 
@@ -835,8 +857,8 @@
     - matched by: `object_name:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW`
     - top match: `Legal Planning Objectives - Current - Polygon`
 - Run notes:
-  - Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.
-  - Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation.
+  - Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload.
 
 ### 12. Proven Aboriginal Rights areas
 
@@ -953,7 +975,7 @@
     - matched by: `object_name:WHSE_TERRESTRIAL_ECOLOGY.STE_TER_STABILITY_POLYS_SVW`
     - top match: `Terrain Stability Mapping (TSM) Detailed Polygons with Short Attribute Table Spatial View`
 - Run notes:
-  - No active land-base geometries intersected the exclusion mask.
+  - No active LU-clipped fragment geometries intersected the exclusion mask.
 
 #### 13.2. Steep slope thresholds east and west of Highway 97
 
@@ -978,7 +1000,7 @@
     - matched by: `object_name:WHSE_IMAGERY_AND_BASE_MAPS.MOT_HIGHWAY_PROFILES_SP`
     - top match: `Ministry of Transportation (MOT) Highway Profile`
 - Run notes:
-  - No active land-base geometries intersected the exclusion mask.
+  - No active LU-clipped fragment geometries intersected the exclusion mask.
 
 ### 14. Sites with low growing timber potential
 
@@ -1143,7 +1165,7 @@
     - candidate layers: `road_network`
   - `thlb_parent_016_recreation_features_draft_06` | summary=`While logging is possible, it is likely that harvesting of recreation sites will be very limited so identified recreational areas and features will be excluded from the THLB.` | operation=`exclude` | review=`draft`
     - candidate layers: `whse_forest_tenure_ften_recreation`
-- Current compiled status summary: `applied_noop`=1
+- Current compiled status summary: `applied`=1
 - Last notebook run status: `applied`
 - Last notebook removed area: `7562.895 ha`
 - Last notebook remaining area: `1770465.752 ha`
@@ -1156,20 +1178,21 @@
 - Kind: `netdown_rule`
 - Stage: `LHLB -> THLB`
 - Execution class: `projected_harvest_exclusion`
-- Run status: `applied_noop`
+- Run status: `applied`
 - TSR provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=36`
 - Review logic mode: `femic_core`
 - Exact FEMIC logic: Intersect the working land base with the linked source geometry. Source rows are filtered by `LIFE_CYCLE_STATUS_CODE` = `ACTIVE`.
 - TSR page: `36`
 - TSR text: `Recreation sites and trails have been legally established within the Williams Lake TSA under the FRPA. These include campsites and trails as well as sites created for a variety of education and recreation activities. Approved FSPs include a strategy related to legally established recreations sites and trails. This strategy is to refer proposed harvesting and road construction to the ministry responsible for recreation requesting input on the proposal. Any input received will be incorporated into the harvesting and road construction management strategy. While logging is possible, it is likely that harvesting of recreation sites will be very limited so identified recreational areas and features will be excluded from the THLB. Table 20. Recreation features Land classification Total (ha) Forested (ha) Excluded (ha) Use, Recreation and Enjoyment of the Public (UREP) 3,551 2,356 1,320 Forest recreation 15,699 13,058 8,051 Recreation features 23,727 14,774 227 Data source and comments: Tolko Industries Ltd. - FSP #780; West Fraser Mills Ltd. - FSP #755; and BCTS - FSP #828.`
-- FEMIC proposed logic: Exclude the linked polygons from THLB where they intersect the working land base; the exact execution mode depends on available data and current implementation support.
+- FEMIC proposed logic: Overlay the linked polygon layers onto the working land base, fragment intersected geometry, and assign binary THLB {0,1} so excluded fragments are 0 and retained fragments remain 1.
 - Linked source layers:
   - `whse_forest_tenure_ften_recreation` | query=`WHSE_FOREST_TENURE.FTEN_RECREATION` | status=`exact_hit` | strategy=`wfs_fetch`
     - artifact: `data/downloads/bcdc/WHSE_FOREST_TENURE_FTEN_RECREATION/WHSE_FOREST_TENURE_FTEN_RECREATION.gpkg`
     - matched by: `object_name_stem:WHSE_FOREST_TENURE.FTEN_RECREATION_POLY_SVW`
     - top match: `Recreation Polygons`
 - Run notes:
-  - No active land-base geometries intersected the exclusion mask.
+  - Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload.
 
 ### 17. Growth and yield permanent sample plots
 
@@ -1187,7 +1210,7 @@
 - Approved by: `user_directed_review`
 - Review logic mode: `femic_core`
 - Exact FEMIC logic:
-  - `Growth and yield permanent sample plots`: Exclude the linked polygons from THLB where they intersect the working land base; the exact execution mode depends on available data and current implementation support.
+  - `Growth and yield permanent sample plots`: Overlay the linked polygon layers onto the working land base, fragment intersected geometry, and assign binary THLB {0,1} so excluded fragments are 0 and retained fragments remain 1.
 - Ratchet note: Soft-approved on the Williams Lake landscape-unit smoke subset using the materialized active PSP GeoPackage from the DWDS pickup-by-GUID flow. Keep definitive validation for the later full-TSA run.
 - Supporting prose section: `6.4.7 Growth and yield permanent sample plots and research installations`
 - Supporting prose provenance:
@@ -1201,7 +1224,7 @@
     - candidate layers: `whse_forest_vegetation_gry_psp_status`
   - `thlb_parent_017_growth_and_yield_permanent_sample_plots_draft_04` | summary=`Research scientists from within the ministry confirm that these areas should be excluded from the THLB.` | operation=`exclude` | review=`draft`
     - candidate layers: `whse_forest_vegetation_gry_psp_status`
-- Current compiled status summary: `applied_noop`=1
+- Current compiled status summary: `applied`=1
 - Last notebook run status: `applied`
 - Last notebook removed area: `1261.158 ha`
 - Last notebook remaining area: `1769204.594 ha`
@@ -1214,20 +1237,21 @@
 - Kind: `netdown_rule`
 - Stage: `LHLB -> THLB`
 - Execution class: `projected_harvest_exclusion`
-- Run status: `applied_noop`
+- Run status: `applied`
 - TSR provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=36`
 - Review logic mode: `femic_core`
-- Exact FEMIC logic: Exclude the linked polygons from THLB where they intersect the working land base; the exact execution mode depends on available data and current implementation support.
+- Exact FEMIC logic: Overlay the linked polygon layers onto the working land base, fragment intersected geometry, and assign binary THLB {0,1} so excluded fragments are 0 and retained fragments remain 1.
 - TSR page: `36`
 - TSR text: `The ministry maintains a network of growth and yield permanent sample plots (PSP) across the province for the purposes of understanding forest growth and calibrating growth and yield models. Objectives for these plots have not been established under FRPA. However, harvesting within these active research sites is currently avoided and only occurs after consultation with the research team. Research scientists from within the ministry confirm that these areas should be excluded from the THLB.`
-- FEMIC proposed logic: Exclude the linked polygons from THLB where they intersect the working land base; the exact execution mode depends on available data and current implementation support.
+- FEMIC proposed logic: Overlay the linked polygon layers onto the working land base, fragment intersected geometry, and assign binary THLB {0,1} so excluded fragments are 0 and retained fragments remain 1.
 - Linked source layers:
   - `whse_forest_vegetation_gry_psp_status` | query=`WHSE_FOREST_VEGETATION.GRY_PSP_STATUS` | status=`exact_hit` | strategy=`dwds_order`
     - artifact: `data/downloads/bcdc/WHSE_FOREST_VEGETATION_GRY_PSP_STATUS_ACTIVE/GRY_PSP_STATUS_ACTIVE.gpkg`
     - matched by: `object_name_stem:WHSE_FOREST_VEGETATION.GRY_PSP_STATUS_ACTIVE`
     - top match: `Growth and Yield  Samples - All Status`
 - Run notes:
-  - No active land-base geometries intersected the exclusion mask.
+  - Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload.
 
 ### 18. Riparian areas
 
@@ -1308,7 +1332,7 @@
     - matched by: `exact_text:Stream Classification for the Cariboo Region`
     - top match: `Stream Classification for the Cariboo Region`
 - Run notes:
-  - No active land-base geometries intersected the exclusion mask.
+  - No active LU-clipped fragment geometries intersected the exclusion mask.
 
 #### 18.2. Stream class S2 effective riparian buffer
 
@@ -1329,7 +1353,7 @@
     - matched by: `exact_text:Stream Classification for the Cariboo Region`
     - top match: `Stream Classification for the Cariboo Region`
 - Run notes:
-  - No active land-base geometries intersected the exclusion mask.
+  - No active LU-clipped fragment geometries intersected the exclusion mask.
 
 #### 18.3. Stream class S3 effective riparian buffer
 
@@ -1350,7 +1374,7 @@
     - matched by: `exact_text:Stream Classification for the Cariboo Region`
     - top match: `Stream Classification for the Cariboo Region`
 - Run notes:
-  - No active land-base geometries intersected the exclusion mask.
+  - No active LU-clipped fragment geometries intersected the exclusion mask.
 
 #### 18.4. Stream class S4 effective riparian buffer
 
@@ -1371,7 +1395,7 @@
     - matched by: `exact_text:Stream Classification for the Cariboo Region`
     - top match: `Stream Classification for the Cariboo Region`
 - Run notes:
-  - No active land-base geometries intersected the exclusion mask.
+  - No active LU-clipped fragment geometries intersected the exclusion mask.
 
 #### 18.5. Stream class S5 effective riparian buffer
 
@@ -1392,7 +1416,7 @@
     - matched by: `exact_text:Stream Classification for the Cariboo Region`
     - top match: `Stream Classification for the Cariboo Region`
 - Run notes:
-  - No active land-base geometries intersected the exclusion mask.
+  - No active LU-clipped fragment geometries intersected the exclusion mask.
 
 #### 18.6. Stream class S6 effective riparian buffer
 
@@ -1413,7 +1437,7 @@
     - matched by: `exact_text:Stream Classification for the Cariboo Region`
     - top match: `Stream Classification for the Cariboo Region`
 - Run notes:
-  - No active land-base geometries intersected the exclusion mask.
+  - No active LU-clipped fragment geometries intersected the exclusion mask.
 
 #### 18.7. Wetland class W1 effective riparian buffer
 
@@ -1434,8 +1458,8 @@
     - matched by: `exact_text:Wetland Riparian Classes for the Cariboo Region`
     - top match: `Wetland Riparian Classes for the Cariboo Region`
 - Run notes:
-  - Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.
-  - Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation.
+  - Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload.
 
 #### 18.8. Wetland class W2 effective riparian buffer
 
@@ -1456,8 +1480,8 @@
     - matched by: `exact_text:Wetland Riparian Classes for the Cariboo Region`
     - top match: `Wetland Riparian Classes for the Cariboo Region`
 - Run notes:
-  - Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.
-  - Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation.
+  - Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload.
 
 #### 18.9. Wetland class W3 effective riparian buffer
 
@@ -1478,8 +1502,8 @@
     - matched by: `exact_text:Wetland Riparian Classes for the Cariboo Region`
     - top match: `Wetland Riparian Classes for the Cariboo Region`
 - Run notes:
-  - Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.
-  - Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation.
+  - Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload.
 
 #### 18.10. Wetland class W4 effective riparian buffer
 
@@ -1500,8 +1524,8 @@
     - matched by: `exact_text:Wetland Riparian Classes for the Cariboo Region`
     - top match: `Wetland Riparian Classes for the Cariboo Region`
 - Run notes:
-  - Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.
-  - Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation.
+  - Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload.
 
 #### 18.11. Wetland class W5 effective riparian buffer
 
@@ -1522,8 +1546,8 @@
     - matched by: `exact_text:Wetland Riparian Classes for the Cariboo Region`
     - top match: `Wetland Riparian Classes for the Cariboo Region`
 - Run notes:
-  - Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.
-  - Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation.
+  - Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload.
 
 #### 18.12. Lake riparian classes
 
@@ -1627,8 +1651,8 @@
     - matched by: `object_name:WHSE_LAND_USE_PLANNING.RMP_PLAN_LEGAL_POLY_SVW`
     - top match: `Legal Planning Objectives - Current - Polygon`
 - Run notes:
-  - Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.
-  - Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation.
+  - Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.
+  - The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload.
 
 ### 20. Wildlife tree retention areas
 
@@ -1644,7 +1668,7 @@
 - Approval note: Soft-approved after Williams Lake LU smoke validation. Step 20 now follows TSA29 section 6.4.8 as an aspatial future-WTRA THLB reduction factor while keeping existing mapped WTRA in THLB and deferred from harvest. Full-TSA validation still pending.
 - Review logic mode: `femic_core`
 - Exact FEMIC logic:
-  - `Future wildlife tree retention area reduction`: Record this parent step as an explicit no-op: no executable land-base deduction is applied.
+  - `Future wildlife tree retention area reduction`: TSR area target applied as a documented aspatial deduction because no exact spatial implementation is available in this lane using the TSR benchmark target of 94417.000 ha.
 - Ratchet note: Soft-approved on the Williams Lake landscape-unit smoke subset using the TSA29 aspatial future-WTRA reduction logic. Keep definitive validation for the later full-TSA run.
 - Supporting prose section: `6.4.8 Wildlife tree retention areas`
 - Supporting prose provenance:
@@ -1664,9 +1688,9 @@
     - candidate layers: `ta_wildlife_mgmt_areas`, `whse_wildlife_management_wcp_wildlife`, `whse_wildlife_management_wcp_wildlife_habitat_area`
 - Current compiled status summary: `applied`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `0.000 ha`
-- Last notebook remaining area: `1687631.198 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_020_wildlife_tree_retention_areas.20260411T052425Z.json`
+- Last notebook removed area: `33627.943 ha`
+- Last notebook remaining area: `1723555.571 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_020_wildlife_tree_retention_areas.20260409T054754Z.json`
 - Compiled logic:
 
 #### 20.1. Future wildlife tree retention area reduction
@@ -1678,13 +1702,13 @@
 - Run status: `applied`
 - TSR provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=37`
 - Review logic mode: `femic_core`
-- Exact FEMIC logic: Record this parent step as an explicit no-op: no executable land-base deduction is applied.
+- Exact FEMIC logic: TSR area target applied as a documented aspatial deduction because no exact spatial implementation is available in this lane using the TSR benchmark target of 94417.000 ha.
 - TSR page: `37`
 - TSR text: `Wildlife tree retention areas (WTRA) are established within and adjacent to cutblocks to maintain stand-level biodiversity and are discussed in more detail in Section 7.2.4 – ‘Stand-level biodiversity’. Currently mapped WTRA are recorded in RESULTS (identified by Type = ‘Group’ and Objective = ‘WTR’). Harvesting of WTRA is only restricted until the regenerating cutblock has reached maturity so the existing mapped WTRA will be included in the THLB but will be deferred from harvest for 80 years. Although individual WTRA can eventually be harvested there will always be WTRA established in conjunction with every cutblock harvested. In the base case, the land base that will continually be required for WTRA will be modelled as an aspatial THLB reduction factor. In total, 94 417 hectares will be excluded to represent future WTRA.`
 - FEMIC proposed logic: TSR area target applied as a documented aspatial deduction because no exact spatial implementation is available in this lane.
 - Run notes:
   - Applied the TSR area target as a documented reconstructed-mode aspatial fallback because no exact spatial implementation is available for this recipe row.
-  - The deduction stayed recipe-driven; no blocked spatial row was auto-converted into fallback.
+  - The fallback was applied across the current LU-wise reconstructed state without changing the reviewed TSA29 parent-step lane.
 
 ### 21. Cultural heritage and archaeological resources
 
@@ -1697,7 +1721,7 @@
 - Benchmark cumulative remaining area: `1676059.000 ha`
 - Review logic mode: `femic_core`
 - Exact FEMIC logic:
-  - `Cultural heritage and archaeological resources reduction`: Apply an aspatial area reduction using the TSR benchmark target of 34205.000 ha.
+  - `Cultural heritage and archaeological resources reduction`: TSR area target applied as a documented aspatial deduction because no exact spatial implementation is available in this lane using the TSR benchmark target of 34205.000 ha.
 - Supporting prose section: `6.4.9 Cultural heritage and archaeological resources.`
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=37`
@@ -1711,11 +1735,11 @@
     - field/value mapping notes:
       - This is a benchmark-anchored aspatial reduction step, not a direct public-GIS query.
       - Reference practice inputs: TNG, Tolko FSP #780, West Fraser FSP #755, BCTS FSP #828.
-- Current compiled status summary: `applied_noop`=1
+- Current compiled status summary: `applied`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `11949.449 ha`
-- Last notebook remaining area: `1711606.123 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260409T054354Z.json`
+- Last notebook removed area: `11512.712 ha`
+- Last notebook remaining area: `1649049.232 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_021_cultural_heritage_and_archaeological_resources.20260410T012934Z.json`
 - Compiled logic:
 
 #### 21.1. Cultural heritage and archaeological resources reduction
@@ -1724,15 +1748,16 @@
 - Kind: `netdown_rule`
 - Stage: `LHLB -> THLB`
 - Execution class: `projected_harvest_exclusion`
-- Run status: `applied_noop`
+- Run status: `applied`
 - TSR provenance: `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=37`
 - Review logic mode: `femic_core`
-- Exact FEMIC logic: Apply an aspatial area reduction using the TSR benchmark target of 34205.000 ha.
+- Exact FEMIC logic: TSR area target applied as a documented aspatial deduction because no exact spatial implementation is available in this lane using the TSR benchmark target of 34205.000 ha.
 - TSR page: `37`
 - TSR text: `The Heritage Conservation Act (HCA) recognizes the historical, cultural, scientific, spiritual, and educational value of archaeological sites to First Nations, local communities, and the public. Archaeological sites on both public and private land are protected under the HCA and must not be altered without a permit. A cultural heritage resource is an object, site or location of a traditional societal practice that is of historical, cultural, societal or archaeological significance to the province, community or an Aboriginal People. This can include archaeological sites, structural features, heritage landscape features and traditional use sites. Cultural heritage resources not applicable to the HCA are managed for by the licensees through the cultural heritage resource sections in the applicable FSPs as per FPPR Section 10. Cultural heritage resources are identified by the licensees through information sharing prior to the submission of cutting permit and road permit applications to the ministry. The most common practice by licensees is to manage for these sites by excluding them from the harvest area through boundary amendments and the placement of wildlife tree retention and/or cultural resource management zones. The incremental excluded area required to protect these sites in current practices was discussions with licensees and the Tsilhqot’in National Government. It was estimated that, on average, an additional two percent of the cutblock area was now included in these expanded exclusions and/or reserves. This will be modelled as an aspatial reduction to the THLB. In total, 34 205 hectares will be excluded to represent cultural heritage resources. Data source and comments: Tsilhqot’in National Government Tolko Industries Ltd. - FSP #780; West Fraser Mills Ltd. - FSP #755; and BCTS - FSP #828.`
-- FEMIC proposed logic: Apply no THLB deduction for this rule.
+- FEMIC proposed logic: TSR area target applied as a documented aspatial deduction because no exact spatial implementation is available in this lane.
 - Run notes:
-  - No spatial deduction applied for this rule.
+  - Applied the TSR area target as a documented reconstructed-mode aspatial fallback because no exact spatial implementation is available for this recipe row.
+  - The fallback was applied across the current LU-wise reconstructed state without changing the reviewed TSA29 parent-step lane.
 
 ### 23. Future roads
 
@@ -1749,16 +1774,16 @@
 - Supporting prose provenance:
   - `TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=27`
 - Draft subrules:
-  - `thlb_parent_023_future_roads_draft_01` | summary=`Apply the TSR's future-RTL factor as an aspatial area reduction across the current AFLB working land base.` | operation=`aspatial_area_reduction` | review=`draft`
-    - candidate values: `2.28% future RTL factor`, `22,754 ha total TSR benchmark`
+  - `thlb_parent_023_future_roads_draft_01` | summary=`Skip future roads as an explicit no-deduction tail step because the reviewed lane is already slightly below the final TSR cumulative THLB target after step 21.` | operation=`no_deduction` | review=`draft`
+    - candidate values: `0 ha applied deduction in the accepted closeout lane`, `22,754 ha TSR marginal benchmark retained for provenance only`
     - field/value mapping notes:
       - Do not reuse the existing-roads spatial overlay logic for this parent step.
-      - Do not model this step through THLB retention; reduce the stand-area fields that flow downstream into fragments instead.
+      - In the accepted TSA29 closeout lane, this step is an explicit no-op tail step, not an active deduction.
 - Current compiled status summary: `applied_noop`=1
 - Last notebook run status: `applied`
-- Last notebook removed area: `13461.641 ha`
-- Last notebook remaining area: `2905358.090 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260409T041319Z.json`
+- Last notebook removed area: `56170.296 ha`
+- Last notebook remaining area: `1592878.936 ha`
+- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260410T010324Z.json`
 - Compiled logic:
 
 #### 23.1. Future roads, trails, and landings area reduction

@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-04-11T16:18:13.226888+00:00",
+  "generated_utc": "2026-04-11T22:09:43.653468+00:00",
   "tsa": {
     "tsa_id": "tsa_29",
     "tsa_code": "29",
@@ -7,31 +7,892 @@
   },
   "recipe_path": "config/tsr/thlb_netdown.recipe.yaml",
   "checkpoint_path": "data/ria_vri_vclr1p_checkpoint1.feather",
-  "selected_map_ids": [
-    "092O071"
-  ],
+  "selected_map_ids": [],
   "output_path": "data/tsr/thlb_reconstructed_checkpoint.feather",
   "execution_mode": "reconstructed",
   "allow_stand_binary_fallback": false,
   "baseline_signal": "checkpoint1_aflb_initialization",
-  "input_area_ha": 27072.528721595554,
-  "baseline_managed_area_ha": 26350.17468657845,
-  "final_managed_area_ha": 15234.755657959911,
+  "input_area_ha": 5158940.544114421,
+  "baseline_managed_area_ha": 3291998.463166299,
+  "final_managed_area_ha": 903685.4088140735,
   "legacy_reference_managed_area_ha": 1513233.574184634,
   "tsr_reported_aflb_area_ha": 3098168.0,
   "tsr_reported_thlb_area_ha": 1660053.0,
-  "fragment_overlay_step_count": 12,
-  "aspatial_fallback_step_count": 1,
-  "aspatial_fallback_area_ha": 297.24222487137394,
+  "fragment_overlay_step_count": 17,
+  "aspatial_fallback_step_count": 2,
+  "aspatial_fallback_area_ha": 24063.727731468494,
   "blocked_exact_overlay_step_count": 0,
   "stand_binary_fallback_step_count": 0,
+  "lu_fragment_overlay_chunk_count": 1025,
+  "lu_fragment_overlay_feature_count": 108212,
   "step_count": 45,
   "outcome_counts": {
-    "applied": 13,
-    "applied_noop": 17,
+    "applied": 19,
+    "applied_noop": 11,
     "blocked_missing_source": 4,
     "unsupported": 11
   },
+  "reconstructed_timing_summary": {
+    "total_runtime_seconds": 5765.258484399994,
+    "source_load_seconds": 53.14178610011004,
+    "candidate_query_seconds": 3448.2777935997583,
+    "overlay_seconds": 2019.2919589995872,
+    "write_seconds": 161.16266140085645,
+    "merge_seconds": 10.682813699939288,
+    "slowest_steps": [
+      {
+        "step_id": "thlb_parent_019_buffered_trails_compiled_01",
+        "label": "Buffered trail areas",
+        "normalized_action": "exclude",
+        "spatial_application_mode": "fragment_overlay",
+        "run_status": "applied",
+        "total_seconds": 1504.937348300009,
+        "overlay_seconds": 147.69961060129572,
+        "candidate_query_seconds": 1338.799757199362,
+        "write_seconds": 8.80719920026604,
+        "lu_chunk_count": 68,
+        "intersecting_exclusion_feature_count": 7322
+      },
+      {
+        "step_id": "thlb_parent_009_critical_habitat_for_fish_compiled_01",
+        "label": "Critical fish habitat",
+        "normalized_action": "exclude",
+        "spatial_application_mode": "fragment_overlay",
+        "run_status": "applied",
+        "total_seconds": 1451.172737399931,
+        "overlay_seconds": 483.10456440004054,
+        "candidate_query_seconds": 949.274049800355,
+        "write_seconds": 10.680313700227998,
+        "lu_chunk_count": 105,
+        "intersecting_exclusion_feature_count": 7322
+      },
+      {
+        "step_id": "thlb_parent_011_community_areas_of_special_concern_compiled_01",
+        "label": "Community areas of special concern",
+        "normalized_action": "exclude",
+        "spatial_application_mode": "fragment_overlay",
+        "run_status": "applied",
+        "total_seconds": 1125.808710000012,
+        "overlay_seconds": 141.58745640004054,
+        "candidate_query_seconds": 968.8416376000969,
+        "write_seconds": 7.469877599971369,
+        "lu_chunk_count": 69,
+        "intersecting_exclusion_feature_count": 7322
+      },
+      {
+        "step_id": "thlb_parent_002_land_not_administered_by_the_province_compiled_01",
+        "label": "Ownership classes not administered for TSA timber supply",
+        "normalized_action": "exclude",
+        "spatial_application_mode": "fragment_overlay",
+        "run_status": "applied",
+        "total_seconds": 176.16321709996555,
+        "overlay_seconds": 163.26987589953933,
+        "candidate_query_seconds": 4.869435699889436,
+        "write_seconds": 5.099792300374247,
+        "lu_chunk_count": 50,
+        "intersecting_exclusion_feature_count": 2670
+      },
+      {
+        "step_id": "thlb_parent_007_old_growth_management_areas_compiled_01",
+        "label": "Old growth management areas",
+        "normalized_action": "exclude",
+        "spatial_application_mode": "fragment_overlay",
+        "run_status": "applied",
+        "total_seconds": 166.62715139996726,
+        "overlay_seconds": 143.81045360013377,
+        "candidate_query_seconds": 6.002451199805364,
+        "write_seconds": 9.874513600138016,
+        "lu_chunk_count": 101,
+        "intersecting_exclusion_feature_count": 4053
+      }
+    ]
+  },
+  "diagnostic_steps": [
+    {
+      "step_id": "__lu_partition_init__",
+      "label": "Landscape Unit partition initialization",
+      "normalized_action": "lu_partition_init",
+      "lu_layer_load_seconds": 0.19771199999377131,
+      "lu_selection_cache_lookup_seconds": 0.08703169994987547,
+      "lu_selection_seconds": 0.010697499965317547,
+      "partition_materialize_seconds": 0.0,
+      "lu_chunk_count": 122,
+      "total_seconds": 0.29544119990896434
+    },
+    {
+      "step_id": "thlb_parent_001_total_tsa_area_compiled_01",
+      "label": "Total TSA area",
+      "normalized_action": "reference_target",
+      "source_load_seconds": 0.0,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "unsupported",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.0003195999888703227
+    },
+    {
+      "step_id": "thlb_parent_002_land_not_administered_by_the_province_compiled_01",
+      "label": "Ownership classes not administered for TSA timber supply",
+      "normalized_action": "exclude",
+      "source_load_seconds": 0.44620940007735044,
+      "candidate_query_seconds": 4.869435699889436,
+      "overlay_seconds": 163.26987589953933,
+      "write_seconds": 5.099792300374247,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 50,
+      "intersecting_exclusion_feature_count": 2670,
+      "run_status": "applied",
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 69969,
+      "fragment_batch_count": 54,
+      "total_seconds": 176.16321709996555
+    },
+    {
+      "step_id": "thlb_parent_002_land_not_administered_by_the_province_compiled_02",
+      "label": "Treaty and title transfers requiring reviewed overlays",
+      "normalized_action": "review",
+      "source_load_seconds": 0.0,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "unsupported",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.0003018999705091119
+    },
+    {
+      "step_id": "thlb_parent_003_non_forest_compiled_01",
+      "label": "Non-forest",
+      "normalized_action": "exclude",
+      "source_load_seconds": 0.15191060001961887,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "blocked_missing_source",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.15217620006296784
+    },
+    {
+      "step_id": "thlb_parent_003_non_forest_compiled_02",
+      "label": "Freshwater Atlas final water check",
+      "normalized_action": "exclude",
+      "source_load_seconds": 0.9481985000893474,
+      "candidate_query_seconds": 18.71634739986621,
+      "overlay_seconds": 43.33408419950865,
+      "write_seconds": 8.774474999518134,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 97,
+      "intersecting_exclusion_feature_count": 4354,
+      "run_status": "applied",
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 8129,
+      "fragment_batch_count": 97,
+      "total_seconds": 76.78890469996259
+    },
+    {
+      "step_id": "thlb_parent_004_roads_and_landings_compiled_01",
+      "label": "Existing public and resource roads",
+      "normalized_action": "exclude",
+      "source_load_seconds": 0.3800891999853775,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "applied_noop",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.38049709994811565
+    },
+    {
+      "step_id": "thlb_parent_004_roads_and_landings_compiled_02",
+      "label": "Active or retired road permit roads",
+      "normalized_action": "exclude",
+      "source_load_seconds": 0.5218447999795899,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "applied_noop",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.5222615000093356
+    },
+    {
+      "step_id": "thlb_parent_004_roads_and_landings_compiled_03",
+      "label": "Landings and temporary roads",
+      "normalized_action": "review",
+      "source_load_seconds": 0.0,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "unsupported",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.00040110002737492323
+    },
+    {
+      "step_id": "thlb_parent_005_analysis_forest_land_base_compiled_01",
+      "label": "Analysis forest land base",
+      "normalized_action": "reference_target",
+      "source_load_seconds": 0.0,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "unsupported",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.00030620000325143337
+    },
+    {
+      "step_id": "thlb_parent_006_parks_protected_areas_area_base_tenures_compiled_01",
+      "label": "Parks and protected areas",
+      "normalized_action": "exclude",
+      "source_load_seconds": 0.26353200001176447,
+      "candidate_query_seconds": 17.802748899674043,
+      "overlay_seconds": 58.91200759995263,
+      "write_seconds": 6.2992988005280495,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 70,
+      "intersecting_exclusion_feature_count": 33,
+      "run_status": "applied",
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 14086,
+      "fragment_batch_count": 70,
+      "total_seconds": 87.94509839999955
+    },
+    {
+      "step_id": "thlb_parent_006_parks_protected_areas_area_base_tenures_compiled_02",
+      "label": "Area-based tenures and woodlots",
+      "normalized_action": "exclude",
+      "source_load_seconds": 0.4618034000741318,
+      "candidate_query_seconds": 5.526273599709384,
+      "overlay_seconds": 28.688260200200602,
+      "write_seconds": 5.573093000333756,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 44,
+      "intersecting_exclusion_feature_count": 2670,
+      "run_status": "applied",
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 8882,
+      "fragment_batch_count": 44,
+      "total_seconds": 43.033087700023316
+    },
+    {
+      "step_id": "thlb_parent_007_old_growth_management_areas_compiled_01",
+      "label": "Old growth management areas",
+      "normalized_action": "exclude",
+      "source_load_seconds": 0.5393076000036672,
+      "candidate_query_seconds": 6.002451199805364,
+      "overlay_seconds": 143.81045360013377,
+      "write_seconds": 9.874513600138016,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 101,
+      "intersecting_exclusion_feature_count": 4053,
+      "run_status": "applied",
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 37207,
+      "fragment_batch_count": 101,
+      "total_seconds": 166.62715139996726
+    },
+    {
+      "step_id": "thlb_parent_008_wildlife_habitat_areas_compiled_01",
+      "label": "Ungulate winter range no-harvest polygons",
+      "normalized_action": "exclude",
+      "source_load_seconds": 0.23920499999076128,
+      "candidate_query_seconds": 15.085902500199154,
+      "overlay_seconds": 44.29253869969398,
+      "write_seconds": 5.548079200088978,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 46,
+      "intersecting_exclusion_feature_count": 112,
+      "run_status": "applied",
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 14891,
+      "fragment_batch_count": 46,
+      "total_seconds": 68.27202609996311
+    },
+    {
+      "step_id": "thlb_parent_008_wildlife_habitat_areas_compiled_02",
+      "label": "Wildlife habitat area no-harvest polygons",
+      "normalized_action": "exclude",
+      "source_load_seconds": 0.17132750002201647,
+      "candidate_query_seconds": 35.878543700207956,
+      "overlay_seconds": 119.71715450042393,
+      "write_seconds": 4.431029599625617,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 44,
+      "intersecting_exclusion_feature_count": 54,
+      "run_status": "applied",
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 21422,
+      "fragment_batch_count": 44,
+      "total_seconds": 163.2800656000618
+    },
+    {
+      "step_id": "thlb_parent_008_wildlife_habitat_areas_compiled_03",
+      "label": "Conditional harvest wildlife zones",
+      "normalized_action": "review",
+      "source_load_seconds": 0.0,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "unsupported",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.0002699000760912895
+    },
+    {
+      "step_id": "thlb_parent_009_critical_habitat_for_fish_compiled_01",
+      "label": "Critical fish habitat",
+      "normalized_action": "exclude",
+      "source_load_seconds": 1.1646409999812022,
+      "candidate_query_seconds": 949.274049800355,
+      "overlay_seconds": 483.10456440004054,
+      "write_seconds": 10.680313700227998,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 105,
+      "intersecting_exclusion_feature_count": 7322,
+      "run_status": "applied",
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 76497,
+      "fragment_batch_count": 105,
+      "total_seconds": 1451.172737399931
+    },
+    {
+      "step_id": "thlb_parent_010_lakeshore_management_compiled_01",
+      "label": "Class A lakes with preservation VQO overlap",
+      "normalized_action": "review",
+      "source_load_seconds": 0.0,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "unsupported",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.0004073000745847821
+    },
+    {
+      "step_id": "thlb_parent_011_community_areas_of_special_concern_compiled_01",
+      "label": "Community areas of special concern",
+      "normalized_action": "exclude",
+      "source_load_seconds": 1.1857477999292314,
+      "candidate_query_seconds": 968.8416376000969,
+      "overlay_seconds": 141.58745640004054,
+      "write_seconds": 7.469877599971369,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 69,
+      "intersecting_exclusion_feature_count": 7322,
+      "run_status": "applied",
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 14120,
+      "fragment_batch_count": 69,
+      "total_seconds": 1125.808710000012
+    },
+    {
+      "step_id": "thlb_parent_012_proven_aboriginal_rights_areas_compiled_01",
+      "label": "Proven Aboriginal Rights area boundary",
+      "normalized_action": "review",
+      "source_load_seconds": 0.0,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "unsupported",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.0004778000293299556
+    },
+    {
+      "step_id": "thlb_parent_013_areas_considered_inoperable_compiled_01",
+      "label": "Unstable terrain and terrain class 5",
+      "normalized_action": "exclude",
+      "source_load_seconds": 0.7122427999274805,
+      "candidate_query_seconds": 1.3925455001881346,
+      "overlay_seconds": 0.06124959990847856,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 359,
+      "run_status": "applied_noop",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 3.033816699986346
+    },
+    {
+      "step_id": "thlb_parent_013_areas_considered_inoperable_compiled_02",
+      "label": "Steep slope thresholds east and west of Highway 97",
+      "normalized_action": "exclude",
+      "source_load_seconds": 0.751496999990195,
+      "candidate_query_seconds": 1.2229844998801127,
+      "overlay_seconds": 0.0606199000030756,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 359,
+      "run_status": "applied_noop",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 2.9827524999855086
+    },
+    {
+      "step_id": "thlb_parent_014_sites_with_low_growing_timber_potential_compiled_01",
+      "label": "Non-steep 67.1 m3/ha threshold",
+      "normalized_action": "exclude",
+      "source_load_seconds": 0.14210599998477846,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "blocked_missing_source",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.14244199998211116
+    },
+    {
+      "step_id": "thlb_parent_014_sites_with_low_growing_timber_potential_compiled_02",
+      "label": "Steep-slope 250 m3/ha threshold",
+      "normalized_action": "exclude",
+      "source_load_seconds": 0.13114469998981804,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "blocked_missing_source",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.13153870007954538
+    },
+    {
+      "step_id": "thlb_parent_015_non_merchantable_timber_profiles_compiled_01",
+      "label": "Broadleaf-leading stands",
+      "normalized_action": "exclude",
+      "source_load_seconds": 0.19295089994557202,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "blocked_missing_source",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.19338049995712936
+    },
+    {
+      "step_id": "thlb_parent_016_recreation_features_compiled_01",
+      "label": "Active recreation polygons",
+      "normalized_action": "exclude",
+      "source_load_seconds": 0.2082339000189677,
+      "candidate_query_seconds": 4.144680700381286,
+      "overlay_seconds": 5.767961999983527,
+      "write_seconds": 3.7629515000153333,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 28,
+      "intersecting_exclusion_feature_count": 311,
+      "run_status": "applied",
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 604,
+      "fragment_batch_count": 28,
+      "total_seconds": 19.82031450001523
+    },
+    {
+      "step_id": "thlb_parent_017_growth_and_yield_permanent_sample_plots_compiled_01",
+      "label": "Growth and yield permanent sample plots",
+      "normalized_action": "exclude",
+      "source_load_seconds": 0.16270819993223995,
+      "candidate_query_seconds": 0.18572519987355918,
+      "overlay_seconds": 1.6238773001823574,
+      "write_seconds": 1.222643700079061,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 7,
+      "intersecting_exclusion_feature_count": 239,
+      "run_status": "applied",
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 56,
+      "fragment_batch_count": 7,
+      "total_seconds": 6.035628699930385
+    },
+    {
+      "step_id": "thlb_parent_018_riparian_areas_compiled_stream_s1",
+      "label": "Stream class S1 effective riparian buffer",
+      "normalized_action": "exclude",
+      "source_load_seconds": 6.220342600019649,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "applied_noop",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 6.221418000059202
+    },
+    {
+      "step_id": "thlb_parent_018_riparian_areas_compiled_stream_s2",
+      "label": "Stream class S2 effective riparian buffer",
+      "normalized_action": "exclude",
+      "source_load_seconds": 6.079291000030935,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "applied_noop",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 6.079800899955444
+    },
+    {
+      "step_id": "thlb_parent_018_riparian_areas_compiled_stream_s3",
+      "label": "Stream class S3 effective riparian buffer",
+      "normalized_action": "exclude",
+      "source_load_seconds": 6.282961899996735,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "applied_noop",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 6.283324399963021
+    },
+    {
+      "step_id": "thlb_parent_018_riparian_areas_compiled_stream_s4",
+      "label": "Stream class S4 effective riparian buffer",
+      "normalized_action": "exclude",
+      "source_load_seconds": 6.073023099917918,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "applied_noop",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 6.073425100068562
+    },
+    {
+      "step_id": "thlb_parent_018_riparian_areas_compiled_stream_s5",
+      "label": "Stream class S5 effective riparian buffer",
+      "normalized_action": "exclude",
+      "source_load_seconds": 6.158310399972834,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "applied_noop",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 6.158701700042002
+    },
+    {
+      "step_id": "thlb_parent_018_riparian_areas_compiled_stream_s6",
+      "label": "Stream class S6 effective riparian buffer",
+      "normalized_action": "exclude",
+      "source_load_seconds": 6.211673600017093,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "applied_noop",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 6.212192500010133
+    },
+    {
+      "step_id": "thlb_parent_018_riparian_areas_compiled_wetland_w1",
+      "label": "Wetland class W1 effective riparian buffer",
+      "normalized_action": "exclude",
+      "source_load_seconds": 1.2695753000443801,
+      "candidate_query_seconds": 12.614428200060502,
+      "overlay_seconds": 99.68400159908924,
+      "write_seconds": 7.145633600070141,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 60,
+      "intersecting_exclusion_feature_count": 14350,
+      "run_status": "applied",
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 17442,
+      "fragment_batch_count": 60,
+      "total_seconds": 127.86447799997404
+    },
+    {
+      "step_id": "thlb_parent_018_riparian_areas_compiled_wetland_w2",
+      "label": "Wetland class W2 effective riparian buffer",
+      "normalized_action": "exclude",
+      "source_load_seconds": 1.1795483001042157,
+      "candidate_query_seconds": 14.254976500407793,
+      "overlay_seconds": 118.40612249972764,
+      "write_seconds": 7.213085499941371,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 59,
+      "intersecting_exclusion_feature_count": 14350,
+      "run_status": "applied",
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 16782,
+      "fragment_batch_count": 59,
+      "total_seconds": 149.05167129996698
+    },
+    {
+      "step_id": "thlb_parent_018_riparian_areas_compiled_wetland_w3",
+      "label": "Wetland class W3 effective riparian buffer",
+      "normalized_action": "exclude",
+      "source_load_seconds": 1.1687914999201894,
+      "candidate_query_seconds": 15.948607600177638,
+      "overlay_seconds": 124.64115019957535,
+      "write_seconds": 7.950098599423654,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 59,
+      "intersecting_exclusion_feature_count": 14350,
+      "run_status": "applied",
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 16742,
+      "fragment_batch_count": 59,
+      "total_seconds": 157.3080820000032
+    },
+    {
+      "step_id": "thlb_parent_018_riparian_areas_compiled_wetland_w4",
+      "label": "Wetland class W4 effective riparian buffer",
+      "normalized_action": "exclude",
+      "source_load_seconds": 1.2110349000431597,
+      "candidate_query_seconds": 17.897157199447975,
+      "overlay_seconds": 123.15055880055297,
+      "write_seconds": 8.132729800301604,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 59,
+      "intersecting_exclusion_feature_count": 14350,
+      "run_status": "applied",
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 16737,
+      "fragment_batch_count": 59,
+      "total_seconds": 158.69201570004225
+    },
+    {
+      "step_id": "thlb_parent_018_riparian_areas_compiled_wetland_w5",
+      "label": "Wetland class W5 effective riparian buffer",
+      "normalized_action": "exclude",
+      "source_load_seconds": 1.3017349001020193,
+      "candidate_query_seconds": 19.81954060017597,
+      "overlay_seconds": 126.549247399671,
+      "write_seconds": 8.246683099889196,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 59,
+      "intersecting_exclusion_feature_count": 14350,
+      "run_status": "applied",
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 16729,
+      "fragment_batch_count": 59,
+      "total_seconds": 164.0569445999572
+    },
+    {
+      "step_id": "thlb_parent_018_riparian_areas_compiled_lakes_review",
+      "label": "Lake riparian classes",
+      "normalized_action": "review",
+      "source_load_seconds": 0.0,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "unsupported",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.0004195000510662794
+    },
+    {
+      "step_id": "thlb_parent_018_riparian_areas_compiled_s4_special_review",
+      "label": "Niut and South Chilcotin S4 special width",
+      "normalized_action": "review",
+      "source_load_seconds": 0.0,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "unsupported",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.0002506999298930168
+    },
+    {
+      "step_id": "thlb_parent_019_buffered_trails_compiled_01",
+      "label": "Buffered trail areas",
+      "normalized_action": "exclude",
+      "source_load_seconds": 1.2107982999878004,
+      "candidate_query_seconds": 1338.799757199362,
+      "overlay_seconds": 147.69961060129572,
+      "write_seconds": 8.80719920026604,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 68,
+      "intersecting_exclusion_feature_count": 7322,
+      "run_status": "applied",
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 13872,
+      "fragment_batch_count": 68,
+      "total_seconds": 1504.937348300009
+    },
+    {
+      "step_id": "thlb_parent_020_wildlife_tree_retention_areas_compiled_01",
+      "label": "Future wildlife tree retention area reduction",
+      "normalized_action": "aspatial_reduction",
+      "source_load_seconds": 0.0,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 21.623796900035813,
+      "write_seconds": 21.623796900035813,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 72,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "applied",
+      "spatial_application_mode": "aspatial_fallback",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 30.372805000049993
+    },
+    {
+      "step_id": "thlb_parent_021_cultural_heritage_and_archaeological_resources_compiled_01",
+      "label": "Cultural heritage and archaeological resources reduction",
+      "normalized_action": "aspatial_reduction",
+      "source_load_seconds": 0.0,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 23.30736670002807,
+      "write_seconds": 23.30736670002807,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 72,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "applied",
+      "spatial_application_mode": "aspatial_fallback",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 32.47755040007178
+    },
+    {
+      "step_id": "thlb_parent_022_timber_harvesting_land_base_compiled_01",
+      "label": "Timber harvesting land base",
+      "normalized_action": "reference_target",
+      "source_load_seconds": 0.0,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "unsupported",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.00038679991848766804
+    },
+    {
+      "step_id": "thlb_parent_023_future_roads_compiled_01",
+      "label": "Future roads, trails, and landings area reduction",
+      "normalized_action": "no_deduction",
+      "source_load_seconds": 0.0,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "applied_noop",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.0008164000464603305
+    },
+    {
+      "step_id": "thlb_parent_024_long_term_thlb_compiled_01",
+      "label": "Long-term THLB",
+      "normalized_action": "reference_target",
+      "source_load_seconds": 0.0,
+      "candidate_query_seconds": 0.0,
+      "overlay_seconds": 0.0,
+      "write_seconds": 0.0,
+      "merge_seconds": 0.0,
+      "lu_chunk_count": 0,
+      "intersecting_exclusion_feature_count": 0,
+      "run_status": "unsupported",
+      "spatial_application_mode": "",
+      "candidate_row_count": 0,
+      "fragment_batch_count": 0,
+      "total_seconds": 0.0003076000139117241
+    },
+    {
+      "step_id": "__lu_merge__",
+      "label": "Final reconstructed LU merge",
+      "normalized_action": "lu_merge",
+      "merge_seconds": 10.682813699939288,
+      "lu_chunk_count": 122,
+      "total_seconds": 10.682813699939288
+    }
+  ],
   "steps": [
     {
       "step_id": "thlb_parent_001_total_tsa_area_compiled_01",
@@ -127,10 +988,18 @@
         "Notebook execution now uses F_OWN ownership descriptions for the first-pass 6.2.1 exclusion buckets instead of the older OWN != {62,69} shortcut.",
         "Woodlots and parks/protected areas stay in AFLB here and are handled later or retained, consistent with the TSA29 prose."
       ],
-      "run_status": "applied_noop",
+      "run_status": "applied",
       "run_notes": [
-        "No active land-base geometries intersected the exclusion mask."
-      ]
+        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
+        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
+      ],
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 69969,
+      "affected_fragment_count": 69969,
+      "affected_area_ha": 713594.2084529565,
+      "fragment_batch_count": 54,
+      "lu_chunk_count": 50,
+      "intersecting_exclusion_feature_count": 2670
     },
     {
       "step_id": "thlb_parent_002_land_not_administered_by_the_province_compiled_02",
@@ -275,13 +1144,15 @@
       ],
       "run_status": "applied",
       "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 1,
-      "affected_fragment_count": 1,
-      "affected_area_ha": 0.9842726372822926,
-      "fragment_batch_count": 1,
+      "candidate_row_count": 8129,
+      "affected_fragment_count": 8129,
+      "affected_area_ha": 1690.701471624885,
+      "fragment_batch_count": 97,
+      "lu_chunk_count": 97,
+      "intersecting_exclusion_feature_count": 4354,
       "run_notes": [
-        "Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation."
+        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
+        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
       ]
     },
     {
@@ -323,7 +1194,7 @@
       ],
       "run_status": "applied_noop",
       "run_notes": [
-        "No active land-base geometries intersected the exclusion mask."
+        "No active LU-clipped fragment geometries intersected the exclusion mask."
       ]
     },
     {
@@ -365,7 +1236,7 @@
       ],
       "run_status": "applied_noop",
       "run_notes": [
-        "No active land-base geometries intersected the exclusion mask."
+        "No active LU-clipped fragment geometries intersected the exclusion mask."
       ]
     },
     {
@@ -480,13 +1351,15 @@
       ],
       "run_status": "applied",
       "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 109,
-      "affected_fragment_count": 109,
-      "affected_area_ha": 9522.168445666099,
-      "fragment_batch_count": 1,
+      "candidate_row_count": 14086,
+      "affected_fragment_count": 14086,
+      "affected_area_ha": 227167.7402999195,
+      "fragment_batch_count": 70,
+      "lu_chunk_count": 70,
+      "intersecting_exclusion_feature_count": 33,
       "run_notes": [
-        "Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation."
+        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
+        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
       ]
     },
     {
@@ -538,10 +1411,18 @@
           ]
         }
       ],
-      "run_status": "applied_noop",
+      "run_status": "applied",
       "run_notes": [
-        "No active land-base geometries intersected the exclusion mask."
-      ]
+        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
+        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
+      ],
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 8882,
+      "affected_fragment_count": 8882,
+      "affected_area_ha": 4.649811746608356e-10,
+      "fragment_batch_count": 44,
+      "lu_chunk_count": 44,
+      "intersecting_exclusion_feature_count": 2670
     },
     {
       "step_id": "thlb_parent_007_old_growth_management_areas_compiled_01",
@@ -592,13 +1473,15 @@
       ],
       "run_status": "applied",
       "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 1,
-      "affected_fragment_count": 1,
-      "affected_area_ha": 533.5837039724807,
-      "fragment_batch_count": 1,
+      "candidate_row_count": 37207,
+      "affected_fragment_count": 37207,
+      "affected_area_ha": 253734.79834153253,
+      "fragment_batch_count": 101,
+      "lu_chunk_count": 101,
+      "intersecting_exclusion_feature_count": 4053,
       "run_notes": [
-        "Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation."
+        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
+        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
       ]
     },
     {
@@ -647,13 +1530,15 @@
       ],
       "run_status": "applied",
       "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 1,
-      "affected_fragment_count": 1,
-      "affected_area_ha": 125.21937197578454,
-      "fragment_batch_count": 1,
+      "candidate_row_count": 14891,
+      "affected_fragment_count": 14891,
+      "affected_area_ha": 119219.66774119568,
+      "fragment_batch_count": 46,
+      "lu_chunk_count": 46,
+      "intersecting_exclusion_feature_count": 112,
       "run_notes": [
-        "Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation."
+        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
+        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
       ]
     },
     {
@@ -698,10 +1583,18 @@
           "value": "NO HARVEST ZONE"
         }
       ],
-      "run_status": "applied_noop",
+      "run_status": "applied",
       "run_notes": [
-        "No active land-base geometries intersected the exclusion mask."
-      ]
+        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
+        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
+      ],
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 21422,
+      "affected_fragment_count": 21422,
+      "affected_area_ha": 279061.69015732524,
+      "fragment_batch_count": 44,
+      "lu_chunk_count": 44,
+      "intersecting_exclusion_feature_count": 54
     },
     {
       "step_id": "thlb_parent_008_wildlife_habitat_areas_compiled_03",
@@ -808,13 +1701,15 @@
       ],
       "run_status": "applied",
       "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 20,
-      "affected_fragment_count": 20,
-      "affected_area_ha": 542.8655156771314,
-      "fragment_batch_count": 1,
+      "candidate_row_count": 76497,
+      "affected_fragment_count": 76497,
+      "affected_area_ha": 749548.0584517156,
+      "fragment_batch_count": 105,
+      "lu_chunk_count": 105,
+      "intersecting_exclusion_feature_count": 7322,
       "run_notes": [
-        "Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation."
+        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
+        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
       ]
     },
     {
@@ -910,13 +1805,15 @@
       ],
       "run_status": "applied",
       "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 20,
-      "affected_fragment_count": 20,
-      "affected_area_ha": 4.689078530789506e-13,
-      "fragment_batch_count": 1,
+      "candidate_row_count": 14120,
+      "affected_fragment_count": 14115,
+      "affected_area_ha": 6.448348604224611e-10,
+      "fragment_batch_count": 69,
+      "lu_chunk_count": 69,
+      "intersecting_exclusion_feature_count": 7322,
       "run_notes": [
-        "Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation."
+        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
+        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
       ]
     },
     {
@@ -1009,7 +1906,7 @@
       ],
       "run_status": "applied_noop",
       "run_notes": [
-        "No active land-base geometries intersected the exclusion mask."
+        "No active LU-clipped fragment geometries intersected the exclusion mask."
       ]
     },
     {
@@ -1059,7 +1956,7 @@
       ],
       "run_status": "applied_noop",
       "run_notes": [
-        "No active land-base geometries intersected the exclusion mask."
+        "No active LU-clipped fragment geometries intersected the exclusion mask."
       ]
     },
     {
@@ -1290,10 +2187,18 @@
           "value": "ACTIVE"
         }
       ],
-      "run_status": "applied_noop",
+      "run_status": "applied",
       "run_notes": [
-        "No active land-base geometries intersected the exclusion mask."
-      ]
+        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
+        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
+      ],
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 604,
+      "affected_fragment_count": 604,
+      "affected_area_ha": 4018.5950224872477,
+      "fragment_batch_count": 28,
+      "lu_chunk_count": 28,
+      "intersecting_exclusion_feature_count": 311
     },
     {
       "step_id": "thlb_parent_017_growth_and_yield_permanent_sample_plots_compiled_01",
@@ -1327,10 +2232,18 @@
       "benchmark_marginal_area_ha": 3577.0,
       "benchmark_cumulative_area_ha": 1867553.0,
       "table_provenance": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24",
-      "run_status": "applied_noop",
+      "run_status": "applied",
       "run_notes": [
-        "No active land-base geometries intersected the exclusion mask."
-      ]
+        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
+        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
+      ],
+      "spatial_application_mode": "fragment_overlay",
+      "candidate_row_count": 56,
+      "affected_fragment_count": 56,
+      "affected_area_ha": 240.68472283127295,
+      "fragment_batch_count": 7,
+      "lu_chunk_count": 7,
+      "intersecting_exclusion_feature_count": 239
     },
     {
       "step_id": "thlb_parent_018_riparian_areas_compiled_stream_s1",
@@ -1378,7 +2291,7 @@
       "buffer_distance_m": 60.0,
       "run_status": "applied_noop",
       "run_notes": [
-        "No active land-base geometries intersected the exclusion mask."
+        "No active LU-clipped fragment geometries intersected the exclusion mask."
       ]
     },
     {
@@ -1427,7 +2340,7 @@
       "buffer_distance_m": 34.0,
       "run_status": "applied_noop",
       "run_notes": [
-        "No active land-base geometries intersected the exclusion mask."
+        "No active LU-clipped fragment geometries intersected the exclusion mask."
       ]
     },
     {
@@ -1476,7 +2389,7 @@
       "buffer_distance_m": 24.0,
       "run_status": "applied_noop",
       "run_notes": [
-        "No active land-base geometries intersected the exclusion mask."
+        "No active LU-clipped fragment geometries intersected the exclusion mask."
       ]
     },
     {
@@ -1525,7 +2438,7 @@
       "buffer_distance_m": 10.0,
       "run_status": "applied_noop",
       "run_notes": [
-        "No active land-base geometries intersected the exclusion mask."
+        "No active LU-clipped fragment geometries intersected the exclusion mask."
       ]
     },
     {
@@ -1574,7 +2487,7 @@
       "buffer_distance_m": 10.0,
       "run_status": "applied_noop",
       "run_notes": [
-        "No active land-base geometries intersected the exclusion mask."
+        "No active LU-clipped fragment geometries intersected the exclusion mask."
       ]
     },
     {
@@ -1623,7 +2536,7 @@
       "buffer_distance_m": 6.0,
       "run_status": "applied_noop",
       "run_notes": [
-        "No active land-base geometries intersected the exclusion mask."
+        "No active LU-clipped fragment geometries intersected the exclusion mask."
       ]
     },
     {
@@ -1672,13 +2585,15 @@
       "buffer_distance_m": 18.0,
       "run_status": "applied",
       "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 89,
-      "affected_fragment_count": 89,
-      "affected_area_ha": 93.35549381837495,
-      "fragment_batch_count": 1,
+      "candidate_row_count": 17442,
+      "affected_fragment_count": 17442,
+      "affected_area_ha": 15973.181955406075,
+      "fragment_batch_count": 60,
+      "lu_chunk_count": 60,
+      "intersecting_exclusion_feature_count": 14350,
       "run_notes": [
-        "Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation."
+        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
+        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
       ]
     },
     {
@@ -1727,13 +2642,15 @@
       "buffer_distance_m": 14.0,
       "run_status": "applied",
       "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 89,
-      "affected_fragment_count": 89,
-      "affected_area_ha": 3.525945166006216e-12,
-      "fragment_batch_count": 1,
+      "candidate_row_count": 16782,
+      "affected_fragment_count": 16782,
+      "affected_area_ha": 8.000748566315497e-09,
+      "fragment_batch_count": 59,
+      "lu_chunk_count": 59,
+      "intersecting_exclusion_feature_count": 14350,
       "run_notes": [
-        "Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation."
+        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
+        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
       ]
     },
     {
@@ -1782,13 +2699,15 @@
       "buffer_distance_m": 6.0,
       "run_status": "applied",
       "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 89,
-      "affected_fragment_count": 89,
-      "affected_area_ha": 1.7664242561368912e-12,
-      "fragment_batch_count": 1,
+      "candidate_row_count": 16742,
+      "affected_fragment_count": 16742,
+      "affected_area_ha": 2.376405135455125e-10,
+      "fragment_batch_count": 59,
+      "lu_chunk_count": 59,
+      "intersecting_exclusion_feature_count": 14350,
       "run_notes": [
-        "Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation."
+        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
+        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
       ]
     },
     {
@@ -1837,13 +2756,15 @@
       "buffer_distance_m": 6.0,
       "run_status": "applied",
       "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 89,
-      "affected_fragment_count": 89,
-      "affected_area_ha": 5.803001686179054e-13,
-      "fragment_batch_count": 1,
+      "candidate_row_count": 16737,
+      "affected_fragment_count": 16737,
+      "affected_area_ha": 2.1895440036572373,
+      "fragment_batch_count": 59,
+      "lu_chunk_count": 59,
+      "intersecting_exclusion_feature_count": 14350,
       "run_notes": [
-        "Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation."
+        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
+        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
       ]
     },
     {
@@ -1892,13 +2813,15 @@
       "buffer_distance_m": 18.0,
       "run_status": "applied",
       "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 89,
-      "affected_fragment_count": 89,
-      "affected_area_ha": 1.7477212009841008e-13,
-      "fragment_batch_count": 1,
+      "candidate_row_count": 16729,
+      "affected_fragment_count": 16729,
+      "affected_area_ha": 1.3920036209268991e-10,
+      "fragment_batch_count": 59,
+      "lu_chunk_count": 59,
+      "intersecting_exclusion_feature_count": 14350,
       "run_notes": [
-        "Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation."
+        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
+        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
       ]
     },
     {
@@ -2029,13 +2952,15 @@
       "buffer_distance_m": -7.5,
       "run_status": "applied",
       "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 20,
-      "affected_fragment_count": 20,
-      "affected_area_ha": 2.1001366087803826e-13,
-      "fragment_batch_count": 1,
+      "candidate_row_count": 13872,
+      "affected_fragment_count": 13867,
+      "affected_area_ha": 3.1030352637256224e-10,
+      "fragment_batch_count": 68,
+      "lu_chunk_count": 68,
+      "intersecting_exclusion_feature_count": 7322,
       "run_notes": [
-        "Applied exact fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "Large candidate workloads are chunked deterministically instead of silently falling back to coarse stand-binary approximation."
+        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
+        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
       ]
     },
     {
@@ -2050,7 +2975,7 @@
       "land_base_stage": "lhlb_to_thlb",
       "stage_label": "LHLB -> THLB",
       "execution_class": "projected_harvest_exclusion",
-      "compiled_operation_type": "no_deduction",
+      "compiled_operation_type": "aspatial_area_reduction",
       "step_status": "ready",
       "required": true,
       "page_number": 37,
@@ -2075,11 +3000,12 @@
       "linked_source_entry_ids": [],
       "run_status": "applied",
       "spatial_application_mode": "aspatial_fallback",
-      "affected_stand_count": 256,
-      "affected_area_ha": 297.24222487137394,
+      "affected_stand_count": 80915,
+      "affected_area_ha": 17754.716395765077,
+      "lu_chunk_count": 72,
       "run_notes": [
         "Applied the TSR area target as a documented reconstructed-mode aspatial fallback because no exact spatial implementation is available for this recipe row.",
-        "The deduction stayed recipe-driven; no blocked spatial row was auto-converted into fallback."
+        "The fallback was applied across the current LU-wise reconstructed state without changing the reviewed TSA29 parent-step lane."
       ]
     },
     {
@@ -2107,20 +3033,24 @@
       "notes": [
         "TSA29 section 6.4.9 models this as an aspatial THLB reduction rather than a single public spatial layer.",
         "The deduction is anchored to the TSR benchmark area and informed by TNG plus FSP practice (Tolko #780, West Fraser #755, BCTS #828).",
-        "Do not infer road or other generic spatial layers from the permit/FSP discussion in this subsection.",
-        "User-directed closeout for issue 141 skips this step in the locked TSA29 lane so cumulative reconciliation stops at step 20. Explanation: TSR THLB reconciliation."
+        "Do not infer road or other generic spatial layers from the permit/FSP discussion in this subsection."
       ],
       "row_source_kind": "table_summary_row",
       "benchmark_marginal_area_ha": 34205.0,
       "benchmark_cumulative_area_ha": 1676059.0,
       "table_provenance": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24",
-      "normalized_action": "no_deduction",
+      "normalized_action": "aspatial_reduction",
       "normalized_subject": "Cultural heritage and archaeological resources reduction",
-      "normalized_predicate": "apply no further THLB deduction for this reviewed step in the locked TSA29 lane because the reconciliation stop-line is step 20",
+      "normalized_predicate": "apply the TSR-cited cultural-heritage THLB reduction as an aspatial factor anchored to current licensee and Tsilhqot'in practice",
       "linked_source_entry_ids": [],
-      "run_status": "applied_noop",
+      "run_status": "applied",
+      "spatial_application_mode": "aspatial_fallback",
+      "affected_stand_count": 80915,
+      "affected_area_ha": 6309.011335703417,
+      "lu_chunk_count": 72,
       "run_notes": [
-        "No spatial deduction applied for this rule."
+        "Applied the TSR area target as a documented reconstructed-mode aspatial fallback because no exact spatial implementation is available for this recipe row.",
+        "The fallback was applied across the current LU-wise reconstructed state without changing the reviewed TSA29 parent-step lane."
       ]
     },
     {
@@ -2182,10 +3112,9 @@
       "source_url": "",
       "notes": [
         "TSA29 section 6.2.3 says future roads are estimated from current performance and RESULTS data rather than a mapped future-road layer.",
-        "Notebook execution treats this as an early-stage AFLB area reduction and scales stand-area fields directly.",
+        "User-directed TSA29 closeout now keeps this as a tail-end reference step after step 21 but applies 0 ha of executable deduction.",
         "Do not reuse the existing present-day roads spatial overlay for this parent step.",
-        "Do not use THLB retention for this step because the deducted area is non-forested road footprint.",
-        "User-directed closeout for issue 141 skips this step in the locked TSA29 lane so cumulative reconciliation stops at step 20. Explanation: TSR THLB reconciliation."
+        "Same-instrument reruns showed the accepted lane was already slightly below the final TSR cumulative THLB benchmark after step 21, so a positive deduction here would only worsen reconciliation."
       ],
       "row_source_kind": "table_summary_row",
       "benchmark_marginal_area_ha": 22754.0,
@@ -2193,7 +3122,7 @@
       "table_provenance": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24",
       "normalized_action": "no_deduction",
       "normalized_subject": "Future roads, trails, and landings area reduction",
-      "normalized_predicate": "apply no further THLB deduction for this reviewed step in the locked TSA29 lane because the reconciliation stop-line is step 20",
+      "normalized_predicate": "record future roads as an explicit skipped tail step with zero executable THLB deduction in the accepted TSA29 closeout lane",
       "linked_source_entry_ids": [],
       "run_status": "applied_noop",
       "run_notes": [
