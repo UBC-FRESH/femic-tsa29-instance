@@ -25,8 +25,11 @@ runtime/logs/patchworks_headless_stderr-*.log
 runtime/logs/patchworks_headless_trace-*.log
 runtime/logs/patchworks_matrixbuilder_stdout-*.log
 runtime/logs/patchworks_matrixbuilder_stderr-*.log
+runtime/logs/arcgis_review_acceptance*/
 runtime/logs/btc_stdout-*.log
 runtime/logs/btc_stderr-*.log
+runtime/logs/btc_manifest-*.json
+runtime/logs/run_manifest-*.json
 runtime/logs/btc_manifest-issue85_*.json
 runtime/logs/run_manifest-issue85_*.json
 runtime/logs/run_manifest-tsa29_*.json
@@ -36,6 +39,8 @@ runtime/logs/tsr/notebook_runs/
 runtime/logs/tsr/notebook_progress/
 runtime/logs/tsr/lu_partitions/
 runtime/logs/tsr/parallel_benchmarks/
+runtime/logs/tsr/issue140_acceptance/
+runtime/logs/tsr/reconstructed_diagnostics/
 runtime/logs/tsr/*.json
 runtime/logs/tsr/*.txt
 models/tsa29_patchworks_model/patchworksLog.csv
@@ -49,6 +54,7 @@ data/downloads/bcdc/**/*.zip
 data/downloads/bcdc/**/*.dem
 data/downloads/bcdc/**/*.gpkg
 config/tsr/thlb_netdown.step*.recipe.yaml
+config/tsr/thlb_warmstart.yaml
 tmp/
 vdyp_io/logs/*.jsonl
 vdyp_io/VDYP_CFG/VDYP7_BACK.ctl
@@ -57,10 +63,12 @@ vdyp_io/VDYP_CFG/vdyp7.log
 workbench/tsr/arcgis/.backups/
 workbench/tsr/arcgis/layers/
 workbench/tsr/frozen/
+workbench/tsr/thlb_netdown.warmstart.md
 workbench/tsr/*.locked.py
 workbench/tsr/*.locked.recipe.yaml
 workbench/tsr/arcgis/*.aprx
 workbench/tsr/arcgis/*manifest.json
+external/
 
 # Editor/OS
 .DS_Store
