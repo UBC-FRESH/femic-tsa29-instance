@@ -1631,10 +1631,10 @@
       - Do not reuse the existing-roads spatial overlay logic for this parent step.
       - In the accepted TSA29 closeout lane, this step is an explicit no-op tail step, not an active deduction.
 - Current compiled status summary: `ready`=1
-- Last notebook run status: `applied`
-- Last notebook removed area: `56170.296 ha`
-- Last notebook remaining area: `1592878.936 ha`
-- Last notebook result JSON: `runtime/logs/tsr/notebook_runs/thlb_parent_023_future_roads.20260410T010324Z.json`
+- Last notebook run status: `applied_noop`
+- Last notebook removed area: `0.000 ha`
+- Last notebook remaining area: `1649049.232 ha`
+- Last notebook result JSON: `not recorded separately; accepted no-op tail state`
 - Compiled logic:
 
 #### 23.1. Future roads, trails, and landings area reduction
