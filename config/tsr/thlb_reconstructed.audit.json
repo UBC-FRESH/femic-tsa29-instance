@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-04-11T22:09:43.653468+00:00",
+  "generated_utc": "2026-04-12T06:44:59.533230+00:00",
   "tsa": {
     "tsa_id": "tsa_29",
     "tsa_code": "29",
@@ -14,71 +14,33 @@
   "baseline_signal": "checkpoint1_aflb_initialization",
   "input_area_ha": 5158940.544114421,
   "baseline_managed_area_ha": 3291998.463166299,
-  "final_managed_area_ha": 903685.4088140735,
+  "final_managed_area_ha": 2247992.122139061,
   "legacy_reference_managed_area_ha": 1513233.574184634,
   "tsr_reported_aflb_area_ha": 3098168.0,
   "tsr_reported_thlb_area_ha": 1660053.0,
-  "fragment_overlay_step_count": 17,
-  "aspatial_fallback_step_count": 2,
-  "aspatial_fallback_area_ha": 24063.727731468494,
-  "blocked_exact_overlay_step_count": 0,
+  "fragment_overlay_step_count": 1,
+  "aspatial_fallback_step_count": 3,
+  "aspatial_fallback_area_ha": 110294.51101636201,
+  "blocked_exact_overlay_step_count": 17,
   "stand_binary_fallback_step_count": 0,
-  "lu_fragment_overlay_chunk_count": 1025,
-  "lu_fragment_overlay_feature_count": 108212,
-  "step_count": 45,
+  "lu_fragment_overlay_chunk_count": 50,
+  "lu_fragment_overlay_feature_count": 2670,
+  "step_count": 35,
   "outcome_counts": {
-    "applied": 19,
-    "applied_noop": 11,
-    "blocked_missing_source": 4,
-    "unsupported": 11
+    "applied": 4,
+    "applied_noop": 9,
+    "blocked_exact_overlay": 17,
+    "blocked_missing_source": 3,
+    "unsupported": 2
   },
   "reconstructed_timing_summary": {
-    "total_runtime_seconds": 5765.258484399994,
-    "source_load_seconds": 53.14178610011004,
-    "candidate_query_seconds": 3448.2777935997583,
-    "overlay_seconds": 2019.2919589995872,
-    "write_seconds": 161.16266140085645,
-    "merge_seconds": 10.682813699939288,
+    "total_runtime_seconds": 176.45897789986338,
+    "source_load_seconds": 0.44620940007735044,
+    "candidate_query_seconds": 4.869435699889436,
+    "overlay_seconds": 163.26987589953933,
+    "write_seconds": 5.099792300374247,
+    "merge_seconds": 0.0,
     "slowest_steps": [
-      {
-        "step_id": "thlb_parent_019_buffered_trails_compiled_01",
-        "label": "Buffered trail areas",
-        "normalized_action": "exclude",
-        "spatial_application_mode": "fragment_overlay",
-        "run_status": "applied",
-        "total_seconds": 1504.937348300009,
-        "overlay_seconds": 147.69961060129572,
-        "candidate_query_seconds": 1338.799757199362,
-        "write_seconds": 8.80719920026604,
-        "lu_chunk_count": 68,
-        "intersecting_exclusion_feature_count": 7322
-      },
-      {
-        "step_id": "thlb_parent_009_critical_habitat_for_fish_compiled_01",
-        "label": "Critical fish habitat",
-        "normalized_action": "exclude",
-        "spatial_application_mode": "fragment_overlay",
-        "run_status": "applied",
-        "total_seconds": 1451.172737399931,
-        "overlay_seconds": 483.10456440004054,
-        "candidate_query_seconds": 949.274049800355,
-        "write_seconds": 10.680313700227998,
-        "lu_chunk_count": 105,
-        "intersecting_exclusion_feature_count": 7322
-      },
-      {
-        "step_id": "thlb_parent_011_community_areas_of_special_concern_compiled_01",
-        "label": "Community areas of special concern",
-        "normalized_action": "exclude",
-        "spatial_application_mode": "fragment_overlay",
-        "run_status": "applied",
-        "total_seconds": 1125.808710000012,
-        "overlay_seconds": 141.58745640004054,
-        "candidate_query_seconds": 968.8416376000969,
-        "write_seconds": 7.469877599971369,
-        "lu_chunk_count": 69,
-        "intersecting_exclusion_feature_count": 7322
-      },
       {
         "step_id": "thlb_parent_002_land_not_administered_by_the_province_compiled_01",
         "label": "Ownership classes not administered for TSA timber supply",
@@ -93,17 +55,17 @@
         "intersecting_exclusion_feature_count": 2670
       },
       {
-        "step_id": "thlb_parent_007_old_growth_management_areas_compiled_01",
-        "label": "Old growth management areas",
-        "normalized_action": "exclude",
-        "spatial_application_mode": "fragment_overlay",
-        "run_status": "applied",
-        "total_seconds": 166.62715139996726,
-        "overlay_seconds": 143.81045360013377,
-        "candidate_query_seconds": 6.002451199805364,
-        "write_seconds": 9.874513600138016,
-        "lu_chunk_count": 101,
-        "intersecting_exclusion_feature_count": 4053
+        "step_id": "thlb_parent_001_total_tsa_area_compiled_01",
+        "label": "Total TSA area",
+        "normalized_action": "reference_target",
+        "spatial_application_mode": "",
+        "run_status": "unsupported",
+        "total_seconds": 0.0003195999888703227,
+        "overlay_seconds": 0.0,
+        "candidate_query_seconds": 0.0,
+        "write_seconds": 0.0,
+        "lu_chunk_count": 0,
+        "intersecting_exclusion_feature_count": 0
       }
     ]
   },
@@ -152,745 +114,6 @@
       "candidate_row_count": 69969,
       "fragment_batch_count": 54,
       "total_seconds": 176.16321709996555
-    },
-    {
-      "step_id": "thlb_parent_002_land_not_administered_by_the_province_compiled_02",
-      "label": "Treaty and title transfers requiring reviewed overlays",
-      "normalized_action": "review",
-      "source_load_seconds": 0.0,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "unsupported",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 0.0003018999705091119
-    },
-    {
-      "step_id": "thlb_parent_003_non_forest_compiled_01",
-      "label": "Non-forest",
-      "normalized_action": "exclude",
-      "source_load_seconds": 0.15191060001961887,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "blocked_missing_source",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 0.15217620006296784
-    },
-    {
-      "step_id": "thlb_parent_003_non_forest_compiled_02",
-      "label": "Freshwater Atlas final water check",
-      "normalized_action": "exclude",
-      "source_load_seconds": 0.9481985000893474,
-      "candidate_query_seconds": 18.71634739986621,
-      "overlay_seconds": 43.33408419950865,
-      "write_seconds": 8.774474999518134,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 97,
-      "intersecting_exclusion_feature_count": 4354,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 8129,
-      "fragment_batch_count": 97,
-      "total_seconds": 76.78890469996259
-    },
-    {
-      "step_id": "thlb_parent_004_roads_and_landings_compiled_01",
-      "label": "Existing public and resource roads",
-      "normalized_action": "exclude",
-      "source_load_seconds": 0.3800891999853775,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "applied_noop",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 0.38049709994811565
-    },
-    {
-      "step_id": "thlb_parent_004_roads_and_landings_compiled_02",
-      "label": "Active or retired road permit roads",
-      "normalized_action": "exclude",
-      "source_load_seconds": 0.5218447999795899,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "applied_noop",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 0.5222615000093356
-    },
-    {
-      "step_id": "thlb_parent_004_roads_and_landings_compiled_03",
-      "label": "Landings and temporary roads",
-      "normalized_action": "review",
-      "source_load_seconds": 0.0,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "unsupported",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 0.00040110002737492323
-    },
-    {
-      "step_id": "thlb_parent_005_analysis_forest_land_base_compiled_01",
-      "label": "Analysis forest land base",
-      "normalized_action": "reference_target",
-      "source_load_seconds": 0.0,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "unsupported",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 0.00030620000325143337
-    },
-    {
-      "step_id": "thlb_parent_006_parks_protected_areas_area_base_tenures_compiled_01",
-      "label": "Parks and protected areas",
-      "normalized_action": "exclude",
-      "source_load_seconds": 0.26353200001176447,
-      "candidate_query_seconds": 17.802748899674043,
-      "overlay_seconds": 58.91200759995263,
-      "write_seconds": 6.2992988005280495,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 70,
-      "intersecting_exclusion_feature_count": 33,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 14086,
-      "fragment_batch_count": 70,
-      "total_seconds": 87.94509839999955
-    },
-    {
-      "step_id": "thlb_parent_006_parks_protected_areas_area_base_tenures_compiled_02",
-      "label": "Area-based tenures and woodlots",
-      "normalized_action": "exclude",
-      "source_load_seconds": 0.4618034000741318,
-      "candidate_query_seconds": 5.526273599709384,
-      "overlay_seconds": 28.688260200200602,
-      "write_seconds": 5.573093000333756,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 44,
-      "intersecting_exclusion_feature_count": 2670,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 8882,
-      "fragment_batch_count": 44,
-      "total_seconds": 43.033087700023316
-    },
-    {
-      "step_id": "thlb_parent_007_old_growth_management_areas_compiled_01",
-      "label": "Old growth management areas",
-      "normalized_action": "exclude",
-      "source_load_seconds": 0.5393076000036672,
-      "candidate_query_seconds": 6.002451199805364,
-      "overlay_seconds": 143.81045360013377,
-      "write_seconds": 9.874513600138016,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 101,
-      "intersecting_exclusion_feature_count": 4053,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 37207,
-      "fragment_batch_count": 101,
-      "total_seconds": 166.62715139996726
-    },
-    {
-      "step_id": "thlb_parent_008_wildlife_habitat_areas_compiled_01",
-      "label": "Ungulate winter range no-harvest polygons",
-      "normalized_action": "exclude",
-      "source_load_seconds": 0.23920499999076128,
-      "candidate_query_seconds": 15.085902500199154,
-      "overlay_seconds": 44.29253869969398,
-      "write_seconds": 5.548079200088978,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 46,
-      "intersecting_exclusion_feature_count": 112,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 14891,
-      "fragment_batch_count": 46,
-      "total_seconds": 68.27202609996311
-    },
-    {
-      "step_id": "thlb_parent_008_wildlife_habitat_areas_compiled_02",
-      "label": "Wildlife habitat area no-harvest polygons",
-      "normalized_action": "exclude",
-      "source_load_seconds": 0.17132750002201647,
-      "candidate_query_seconds": 35.878543700207956,
-      "overlay_seconds": 119.71715450042393,
-      "write_seconds": 4.431029599625617,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 44,
-      "intersecting_exclusion_feature_count": 54,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 21422,
-      "fragment_batch_count": 44,
-      "total_seconds": 163.2800656000618
-    },
-    {
-      "step_id": "thlb_parent_008_wildlife_habitat_areas_compiled_03",
-      "label": "Conditional harvest wildlife zones",
-      "normalized_action": "review",
-      "source_load_seconds": 0.0,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "unsupported",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 0.0002699000760912895
-    },
-    {
-      "step_id": "thlb_parent_009_critical_habitat_for_fish_compiled_01",
-      "label": "Critical fish habitat",
-      "normalized_action": "exclude",
-      "source_load_seconds": 1.1646409999812022,
-      "candidate_query_seconds": 949.274049800355,
-      "overlay_seconds": 483.10456440004054,
-      "write_seconds": 10.680313700227998,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 105,
-      "intersecting_exclusion_feature_count": 7322,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 76497,
-      "fragment_batch_count": 105,
-      "total_seconds": 1451.172737399931
-    },
-    {
-      "step_id": "thlb_parent_010_lakeshore_management_compiled_01",
-      "label": "Class A lakes with preservation VQO overlap",
-      "normalized_action": "review",
-      "source_load_seconds": 0.0,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "unsupported",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 0.0004073000745847821
-    },
-    {
-      "step_id": "thlb_parent_011_community_areas_of_special_concern_compiled_01",
-      "label": "Community areas of special concern",
-      "normalized_action": "exclude",
-      "source_load_seconds": 1.1857477999292314,
-      "candidate_query_seconds": 968.8416376000969,
-      "overlay_seconds": 141.58745640004054,
-      "write_seconds": 7.469877599971369,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 69,
-      "intersecting_exclusion_feature_count": 7322,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 14120,
-      "fragment_batch_count": 69,
-      "total_seconds": 1125.808710000012
-    },
-    {
-      "step_id": "thlb_parent_012_proven_aboriginal_rights_areas_compiled_01",
-      "label": "Proven Aboriginal Rights area boundary",
-      "normalized_action": "review",
-      "source_load_seconds": 0.0,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "unsupported",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 0.0004778000293299556
-    },
-    {
-      "step_id": "thlb_parent_013_areas_considered_inoperable_compiled_01",
-      "label": "Unstable terrain and terrain class 5",
-      "normalized_action": "exclude",
-      "source_load_seconds": 0.7122427999274805,
-      "candidate_query_seconds": 1.3925455001881346,
-      "overlay_seconds": 0.06124959990847856,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 359,
-      "run_status": "applied_noop",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 3.033816699986346
-    },
-    {
-      "step_id": "thlb_parent_013_areas_considered_inoperable_compiled_02",
-      "label": "Steep slope thresholds east and west of Highway 97",
-      "normalized_action": "exclude",
-      "source_load_seconds": 0.751496999990195,
-      "candidate_query_seconds": 1.2229844998801127,
-      "overlay_seconds": 0.0606199000030756,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 359,
-      "run_status": "applied_noop",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 2.9827524999855086
-    },
-    {
-      "step_id": "thlb_parent_014_sites_with_low_growing_timber_potential_compiled_01",
-      "label": "Non-steep 67.1 m3/ha threshold",
-      "normalized_action": "exclude",
-      "source_load_seconds": 0.14210599998477846,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "blocked_missing_source",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 0.14244199998211116
-    },
-    {
-      "step_id": "thlb_parent_014_sites_with_low_growing_timber_potential_compiled_02",
-      "label": "Steep-slope 250 m3/ha threshold",
-      "normalized_action": "exclude",
-      "source_load_seconds": 0.13114469998981804,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "blocked_missing_source",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 0.13153870007954538
-    },
-    {
-      "step_id": "thlb_parent_015_non_merchantable_timber_profiles_compiled_01",
-      "label": "Broadleaf-leading stands",
-      "normalized_action": "exclude",
-      "source_load_seconds": 0.19295089994557202,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "blocked_missing_source",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 0.19338049995712936
-    },
-    {
-      "step_id": "thlb_parent_016_recreation_features_compiled_01",
-      "label": "Active recreation polygons",
-      "normalized_action": "exclude",
-      "source_load_seconds": 0.2082339000189677,
-      "candidate_query_seconds": 4.144680700381286,
-      "overlay_seconds": 5.767961999983527,
-      "write_seconds": 3.7629515000153333,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 28,
-      "intersecting_exclusion_feature_count": 311,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 604,
-      "fragment_batch_count": 28,
-      "total_seconds": 19.82031450001523
-    },
-    {
-      "step_id": "thlb_parent_017_growth_and_yield_permanent_sample_plots_compiled_01",
-      "label": "Growth and yield permanent sample plots",
-      "normalized_action": "exclude",
-      "source_load_seconds": 0.16270819993223995,
-      "candidate_query_seconds": 0.18572519987355918,
-      "overlay_seconds": 1.6238773001823574,
-      "write_seconds": 1.222643700079061,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 7,
-      "intersecting_exclusion_feature_count": 239,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 56,
-      "fragment_batch_count": 7,
-      "total_seconds": 6.035628699930385
-    },
-    {
-      "step_id": "thlb_parent_018_riparian_areas_compiled_stream_s1",
-      "label": "Stream class S1 effective riparian buffer",
-      "normalized_action": "exclude",
-      "source_load_seconds": 6.220342600019649,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "applied_noop",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 6.221418000059202
-    },
-    {
-      "step_id": "thlb_parent_018_riparian_areas_compiled_stream_s2",
-      "label": "Stream class S2 effective riparian buffer",
-      "normalized_action": "exclude",
-      "source_load_seconds": 6.079291000030935,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "applied_noop",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 6.079800899955444
-    },
-    {
-      "step_id": "thlb_parent_018_riparian_areas_compiled_stream_s3",
-      "label": "Stream class S3 effective riparian buffer",
-      "normalized_action": "exclude",
-      "source_load_seconds": 6.282961899996735,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "applied_noop",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 6.283324399963021
-    },
-    {
-      "step_id": "thlb_parent_018_riparian_areas_compiled_stream_s4",
-      "label": "Stream class S4 effective riparian buffer",
-      "normalized_action": "exclude",
-      "source_load_seconds": 6.073023099917918,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "applied_noop",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 6.073425100068562
-    },
-    {
-      "step_id": "thlb_parent_018_riparian_areas_compiled_stream_s5",
-      "label": "Stream class S5 effective riparian buffer",
-      "normalized_action": "exclude",
-      "source_load_seconds": 6.158310399972834,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "applied_noop",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 6.158701700042002
-    },
-    {
-      "step_id": "thlb_parent_018_riparian_areas_compiled_stream_s6",
-      "label": "Stream class S6 effective riparian buffer",
-      "normalized_action": "exclude",
-      "source_load_seconds": 6.211673600017093,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "applied_noop",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 6.212192500010133
-    },
-    {
-      "step_id": "thlb_parent_018_riparian_areas_compiled_wetland_w1",
-      "label": "Wetland class W1 effective riparian buffer",
-      "normalized_action": "exclude",
-      "source_load_seconds": 1.2695753000443801,
-      "candidate_query_seconds": 12.614428200060502,
-      "overlay_seconds": 99.68400159908924,
-      "write_seconds": 7.145633600070141,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 60,
-      "intersecting_exclusion_feature_count": 14350,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 17442,
-      "fragment_batch_count": 60,
-      "total_seconds": 127.86447799997404
-    },
-    {
-      "step_id": "thlb_parent_018_riparian_areas_compiled_wetland_w2",
-      "label": "Wetland class W2 effective riparian buffer",
-      "normalized_action": "exclude",
-      "source_load_seconds": 1.1795483001042157,
-      "candidate_query_seconds": 14.254976500407793,
-      "overlay_seconds": 118.40612249972764,
-      "write_seconds": 7.213085499941371,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 59,
-      "intersecting_exclusion_feature_count": 14350,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 16782,
-      "fragment_batch_count": 59,
-      "total_seconds": 149.05167129996698
-    },
-    {
-      "step_id": "thlb_parent_018_riparian_areas_compiled_wetland_w3",
-      "label": "Wetland class W3 effective riparian buffer",
-      "normalized_action": "exclude",
-      "source_load_seconds": 1.1687914999201894,
-      "candidate_query_seconds": 15.948607600177638,
-      "overlay_seconds": 124.64115019957535,
-      "write_seconds": 7.950098599423654,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 59,
-      "intersecting_exclusion_feature_count": 14350,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 16742,
-      "fragment_batch_count": 59,
-      "total_seconds": 157.3080820000032
-    },
-    {
-      "step_id": "thlb_parent_018_riparian_areas_compiled_wetland_w4",
-      "label": "Wetland class W4 effective riparian buffer",
-      "normalized_action": "exclude",
-      "source_load_seconds": 1.2110349000431597,
-      "candidate_query_seconds": 17.897157199447975,
-      "overlay_seconds": 123.15055880055297,
-      "write_seconds": 8.132729800301604,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 59,
-      "intersecting_exclusion_feature_count": 14350,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 16737,
-      "fragment_batch_count": 59,
-      "total_seconds": 158.69201570004225
-    },
-    {
-      "step_id": "thlb_parent_018_riparian_areas_compiled_wetland_w5",
-      "label": "Wetland class W5 effective riparian buffer",
-      "normalized_action": "exclude",
-      "source_load_seconds": 1.3017349001020193,
-      "candidate_query_seconds": 19.81954060017597,
-      "overlay_seconds": 126.549247399671,
-      "write_seconds": 8.246683099889196,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 59,
-      "intersecting_exclusion_feature_count": 14350,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 16729,
-      "fragment_batch_count": 59,
-      "total_seconds": 164.0569445999572
-    },
-    {
-      "step_id": "thlb_parent_018_riparian_areas_compiled_lakes_review",
-      "label": "Lake riparian classes",
-      "normalized_action": "review",
-      "source_load_seconds": 0.0,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "unsupported",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 0.0004195000510662794
-    },
-    {
-      "step_id": "thlb_parent_018_riparian_areas_compiled_s4_special_review",
-      "label": "Niut and South Chilcotin S4 special width",
-      "normalized_action": "review",
-      "source_load_seconds": 0.0,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "unsupported",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 0.0002506999298930168
-    },
-    {
-      "step_id": "thlb_parent_019_buffered_trails_compiled_01",
-      "label": "Buffered trail areas",
-      "normalized_action": "exclude",
-      "source_load_seconds": 1.2107982999878004,
-      "candidate_query_seconds": 1338.799757199362,
-      "overlay_seconds": 147.69961060129572,
-      "write_seconds": 8.80719920026604,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 68,
-      "intersecting_exclusion_feature_count": 7322,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 13872,
-      "fragment_batch_count": 68,
-      "total_seconds": 1504.937348300009
-    },
-    {
-      "step_id": "thlb_parent_020_wildlife_tree_retention_areas_compiled_01",
-      "label": "Future wildlife tree retention area reduction",
-      "normalized_action": "aspatial_reduction",
-      "source_load_seconds": 0.0,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 21.623796900035813,
-      "write_seconds": 21.623796900035813,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 72,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "applied",
-      "spatial_application_mode": "aspatial_fallback",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 30.372805000049993
-    },
-    {
-      "step_id": "thlb_parent_021_cultural_heritage_and_archaeological_resources_compiled_01",
-      "label": "Cultural heritage and archaeological resources reduction",
-      "normalized_action": "aspatial_reduction",
-      "source_load_seconds": 0.0,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 23.30736670002807,
-      "write_seconds": 23.30736670002807,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 72,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "applied",
-      "spatial_application_mode": "aspatial_fallback",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 32.47755040007178
-    },
-    {
-      "step_id": "thlb_parent_022_timber_harvesting_land_base_compiled_01",
-      "label": "Timber harvesting land base",
-      "normalized_action": "reference_target",
-      "source_load_seconds": 0.0,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "unsupported",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 0.00038679991848766804
-    },
-    {
-      "step_id": "thlb_parent_023_future_roads_compiled_01",
-      "label": "Future roads, trails, and landings area reduction",
-      "normalized_action": "no_deduction",
-      "source_load_seconds": 0.0,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "applied_noop",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 0.0008164000464603305
-    },
-    {
-      "step_id": "thlb_parent_024_long_term_thlb_compiled_01",
-      "label": "Long-term THLB",
-      "normalized_action": "reference_target",
-      "source_load_seconds": 0.0,
-      "candidate_query_seconds": 0.0,
-      "overlay_seconds": 0.0,
-      "write_seconds": 0.0,
-      "merge_seconds": 0.0,
-      "lu_chunk_count": 0,
-      "intersecting_exclusion_feature_count": 0,
-      "run_status": "unsupported",
-      "spatial_application_mode": "",
-      "candidate_row_count": 0,
-      "fragment_batch_count": 0,
-      "total_seconds": 0.0003076000139117241
-    },
-    {
-      "step_id": "__lu_merge__",
-      "label": "Final reconstructed LU merge",
-      "normalized_action": "lu_merge",
-      "merge_seconds": 10.682813699939288,
-      "lu_chunk_count": 122,
-      "total_seconds": 10.682813699939288
     }
   ],
   "steps": [
@@ -1042,120 +265,6 @@
       ]
     },
     {
-      "step_id": "thlb_parent_003_non_forest_compiled_01",
-      "parent_step_id": "thlb_parent_003_non_forest",
-      "parent_label": "Non-forest",
-      "order_index": 3,
-      "step_kind": "netdown_rule",
-      "label": "Non-forest",
-      "raw_value": "Non-forest",
-      "raw_text": "All land classified as non-forest (alpine, lakes, swamp, brush, rock, etc.), non-productive forest (e.g., wetlands and avalanche tracks), or not typed (unreported) are excluded from the AFLB, unless they were harvested in the past. These areas do not contribute to forest management objectives such as seral objectives for landscape-level biodiversity. The VRI attribute \u2018Forest Management Land Base\u2019 (FMLB) will be used to identify areas of non-forest. The FMLB attribute categorizes land as forested if it is described as \u2018treed\u2019 under the British Columbia Land Cover Classification Scheme (BCLCS) and has a site index greater than or equal to five metres. Where the VRI has no data for site index or species composition, and no history of harvest, the area will be considered non-forest. In addition to the FMLB criteria, areas with a crown closure less than 10% also be considered non-forest and will be excluded. Areas with low crown closure resulting from past harvest, losses from MPB (since 2002) or recent fire (since 2017) are exceptions that will remain in the AFLB. A final check will use data from the Freshwater Atlas (FWA) data to ensure lakes, rivers and wetlands are appropriately excluded. Table 5. Land classified as non-forest Attributes Description Logging history Total area (hectares) Missing leading species and site index VRI leading species and site index are none, while FMLB = \u2018Y\u2019 No 9,374 Wetlands VRI FMLB defined as \u2018Y\u2019 No 50,191 Lakes VRI FMLB defined as \u2018Y\u2019 No 4,455 Rivers VRI FMLB defined as \u2018Y\u2019 No 741 Crown closure < 10% VRI FMLB defined as \u2018Y\u2019 No 4,413 Non-FMLB VRI FMLB defined as \u2018N\u2019 No 976,656 Data source and comments: Areas with a harvest history are identified using the consolidated harvest depletion layer produced by FAIB. There are no instances of treed alpine areas within the TSA. Treed wetlands are removed in the riparian reserve and riparian management zones netdown.",
-      "land_base_stage": "glb_to_aflb",
-      "stage_label": "GLB -> AFLB",
-      "execution_class": "drop_from_universe",
-      "compiled_operation_type": "select_attribute",
-      "step_status": "ready",
-      "required": true,
-      "page_number": 26,
-      "document_title": "",
-      "document_type": "data_package",
-      "cycle_label": "",
-      "cycle_year": 0,
-      "provenance_id": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=26",
-      "source_url": "",
-      "notes": [],
-      "row_source_kind": "table_summary_row",
-      "benchmark_marginal_area_ha": 1105908.0,
-      "benchmark_cumulative_area_ha": 3130694.0,
-      "table_provenance": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24",
-      "normalized_action": "exclude",
-      "normalized_subject": "Non-forest",
-      "normalized_predicate": "exclude non-forest and non-productive VRI polygons from the working land base",
-      "linked_source_entry_ids": [],
-      "checkpoint_attribute_mode": "any",
-      "checkpoint_attribute_filters": [
-        {
-          "field": "BCLCS_LEVEL_2",
-          "operator": "ne",
-          "value": "T"
-        },
-        {
-          "field": "FOR_MGMT_LAND_BASE_IND",
-          "operator": "ne",
-          "value": "Y"
-        },
-        {
-          "field": "NON_PRODUCTIVE_CD",
-          "operator": "not_blank",
-          "value": null
-        },
-        {
-          "field": "CROWN_CLOSURE",
-          "operator": "lt",
-          "value": 10
-        }
-      ],
-      "execution_notes": [
-        "Current notebook execution uses checkpoint attributes as the first-pass FMLB proxy.",
-        "Harvest-history, MPB, and fire exceptions remain review-sensitive and are not yet auto-restored here."
-      ],
-      "run_status": "blocked_missing_source",
-      "run_notes": [
-        "No fetched polygon artifact was available for the linked source entries."
-      ]
-    },
-    {
-      "step_id": "thlb_parent_003_non_forest_compiled_02",
-      "parent_step_id": "thlb_parent_003_non_forest",
-      "parent_label": "Non-forest",
-      "order_index": 3,
-      "step_kind": "netdown_rule",
-      "label": "Freshwater Atlas final water check",
-      "raw_value": "Freshwater Atlas final water check",
-      "raw_text": "All land classified as non-forest (alpine, lakes, swamp, brush, rock, etc.), non-productive forest (e.g., wetlands and avalanche tracks), or not typed (unreported) are excluded from the AFLB, unless they were harvested in the past. These areas do not contribute to forest management objectives such as seral objectives for landscape-level biodiversity. The VRI attribute \u2018Forest Management Land Base\u2019 (FMLB) will be used to identify areas of non-forest. The FMLB attribute categorizes land as forested if it is described as \u2018treed\u2019 under the British Columbia Land Cover Classification Scheme (BCLCS) and has a site index greater than or equal to five metres. Where the VRI has no data for site index or species composition, and no history of harvest, the area will be considered non-forest. In addition to the FMLB criteria, areas with a crown closure less than 10% also be considered non-forest and will be excluded. Areas with low crown closure resulting from past harvest, losses from MPB (since 2002) or recent fire (since 2017) are exceptions that will remain in the AFLB. A final check will use data from the Freshwater Atlas (FWA) data to ensure lakes, rivers and wetlands are appropriately excluded. Table 5. Land classified as non-forest Attributes Description Logging history Total area (hectares) Missing leading species and site index VRI leading species and site index are none, while FMLB = \u2018Y\u2019 No 9,374 Wetlands VRI FMLB defined as \u2018Y\u2019 No 50,191 Lakes VRI FMLB defined as \u2018Y\u2019 No 4,455 Rivers VRI FMLB defined as \u2018Y\u2019 No 741 Crown closure < 10% VRI FMLB defined as \u2018Y\u2019 No 4,413 Non-FMLB VRI FMLB defined as \u2018N\u2019 No 976,656 Data source and comments: Areas with a harvest history are identified using the consolidated harvest depletion layer produced by FAIB. There are no instances of treed alpine areas within the TSA. Treed wetlands are removed in the riparian reserve and riparian management zones netdown.",
-      "land_base_stage": "glb_to_aflb",
-      "stage_label": "GLB -> AFLB",
-      "execution_class": "drop_from_universe",
-      "compiled_operation_type": "select_spatial_intersect",
-      "step_status": "ready",
-      "required": true,
-      "page_number": 26,
-      "document_title": "",
-      "document_type": "data_package",
-      "cycle_label": "",
-      "cycle_year": 0,
-      "provenance_id": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=26",
-      "source_url": "",
-      "notes": [
-        "Riparian reserve and riparian management zone buffers are handled in the later riparian parent step, not here.",
-        "This subrule only performs the direct Freshwater Atlas lakes/rivers/wetlands exclusion described in the non-forest step."
-      ],
-      "row_source_kind": "table_summary_row",
-      "benchmark_marginal_area_ha": 1105908.0,
-      "benchmark_cumulative_area_ha": 3130694.0,
-      "table_provenance": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24",
-      "normalized_action": "exclude",
-      "normalized_subject": "Freshwater Atlas final water check",
-      "normalized_predicate": "exclude mapped lakes, rivers, and wetlands from the working land base",
-      "linked_source_entry_ids": [
-        "whse_basemapping_fwa_lakes_poly",
-        "whse_basemapping_fwa_rivers_poly",
-        "whse_basemapping_fwa_wetlands_poly"
-      ],
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 8129,
-      "affected_fragment_count": 8129,
-      "affected_area_ha": 1690.701471624885,
-      "fragment_batch_count": 97,
-      "lu_chunk_count": 97,
-      "intersecting_exclusion_feature_count": 4354,
-      "run_notes": [
-        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
-      ]
-    },
-    {
       "step_id": "thlb_parent_004_roads_and_landings_compiled_01",
       "parent_step_id": "thlb_parent_004_roads_and_landings",
       "parent_label": "Roads and landings",
@@ -1245,15 +354,15 @@
       "parent_label": "Roads and landings",
       "order_index": 4,
       "step_kind": "netdown_rule",
-      "label": "Landings and temporary roads",
-      "raw_value": "Landings and temporary roads",
+      "label": "Existing roads, trails, and landings area reduction",
+      "raw_value": "Existing roads, trails, and landings area reduction",
       "raw_text": "The purpose of this section is to identify the portion of the land base that is occupied by roads, trails, and landings (RTL) that have been constructed to access and facilitate harvest operations. The existing permanent RTL area will be removed from the AFLB and will not contribute to timber supply or biodiversity objectives. Separate estimates are made to reflect the loss in productive forest land due to existing and future RTL. Existing roads, trails and landings The area within RTL is typically too small to delineate and track efficiently in a landscape-level model so they will be modelled non-spatially through partial reductions to the AFLB (i.e., the area considered to be AFLB within each hectare will be reduced by a percentage). To estimate the current contribution of roads, a geographic information system (GIS) was used to buffer all road lines to estimate the area of productive forest land lost to these access features. Forest service roads and public roads were buffered 25 metres (12.5 metres from center line) and active/retired road permit roads were buffered 15 metres (7.5 metres from center line). The mapped non-status roads are known to be inaccurate, and the information is incomplete. Since it is impossible to estimate the future state of these roads, only the mapped non-status roads will be assumed to impact future yield, which assumes that the unmapped non-status roads will not impact future yield. The estimated area within existing RTL maintained clearing widths is categorized below. On-block (temporary) roads are those roads that are only used to access cutblocks for harvesting or silviculture operations. They are assigned a width of zero metres, as these temporary roads are either reforested by planting or fill in over time as stands regenerate. Table 6. Width and area of existing road to calculate reductions Road class Width (m) Hectares Forest Service roads 25 8,343 Ministry of Transportation and Infrastructure 25 6,280 Road permit and landings 15 19,641 Mapped non-status roads 5 16,169 Most harvesting now uses a roadside processing system, and landings are less common in current harvest systems. There are indications that some productivity loss is associated with the use of roadside harvesting systems, but no definitive research to date has quantified a level of productivity loss. In-block roads that are temporary in nature will have no deduction from the THLB. In total, 32 526 hectares will be excluded for all roads. Future roads, trails and landings The AFLB area removed to account for future RTL was estimated based on current performance and RESULTS data. The future RTL reduction will be applied to future harvested areas in the timber supply model after stands are harvested for the first time. Reduction factors for future RTL were calculated based on the average amount of on-block road permit structures with an estimated 15 metres width that have been observed in the five-year period from January 2015 to April 2021. The average factor is 2.28% for all three Cariboo TSAs. The yields of all stands aged 70 years and above will be reduced by this factor after they are harvested. In total, 22 754 hectares will be excluded from the forested land base at the time of first harvest to represent the area lost due to future road development. Data source and comments: Roads will be identified from forest tenure road mapping as roads with a description of \u2018Forest Service Road\u2019 or \u2018Road Permit\u2019 and have a status of \u2018active\u2019, \u2018retired\u2019 or \u2018pending\u2019. Digital road atlas mapping will also be used but will exclude roads classed as \u2018resource\u2019. The last five years of road construction in recent cutblocks were examined using existing road permit data for all three TSAs in the CNRR. Road lengths were derived from the following data sets from the BCGW. FSR 25 m WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW (Active) Public 25 m WHSE_IMAGERY_AND_BASE_MAPS.MOT_HIGHWAY_PROFILES_SP Road permit 15 m WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW (Active) Non-status 5 m WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP (Outside of cutblocks) On-block roads (temporary) 0 m WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP (roads that are inside cutblocks harvested from 2015 to present using WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP) Note: Because there is overlap between the different types of roads, the following priority was used: public, FSR, permit, non-status. This means if a public road overlaps with any other type of road the area will be allocated to the public road. Removed all roads that fall over managed licences, tree farms, private, federal, and municipal lands. The LHLB is the portion of the AFLB where timber harvesting is legal, subject to forest management objectives and constraints. It excludes protected areas such as national parks, provincial parks, protected areas and legally established areas where timber harvesting is prohibited. Areas excluded from the LHLB are also excluded from the THLB.",
       "land_base_stage": "glb_to_aflb",
       "stage_label": "GLB -> AFLB",
       "execution_class": "drop_from_universe",
-      "compiled_operation_type": "manual_review_required",
-      "step_status": "manual_review_required",
-      "required": false,
+      "compiled_operation_type": "aspatial_area_reduction",
+      "step_status": "ready",
+      "required": true,
       "page_number": 27,
       "document_title": "",
       "document_type": "data_package",
@@ -1262,58 +371,28 @@
       "provenance_id": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=27",
       "source_url": "",
       "notes": [
-        "Temporary roads and landings remain a review item in the notebook bridge until the non-spatial deduction path is formalized."
+        "TSA29 section 6.2.3 says existing roads, trails, and landings are modeled non-spatially through partial AFLB reductions because the mapped features are too small and incomplete to track reliably at landscape scale.",
+        "Use the TSR benchmark marginal deduction of 50,434 ha for this step; do not use the conflicting 32,526 ha prose sentence as the governing fallback target.",
+        "Subtract any exact same-parent permanent-road overlap already removed so the fallback only fills the remaining benchmark gap."
       ],
       "row_source_kind": "table_summary_row",
       "benchmark_marginal_area_ha": 50434.0,
       "benchmark_cumulative_area_ha": 3080260.0,
       "table_provenance": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24",
-      "normalized_action": "review",
-      "normalized_subject": "Landings and temporary roads",
-      "normalized_predicate": "requires non-spatial or additional harvested-area treatment logic",
-      "linked_source_entry_ids": [
-        "whse_forest_vegetation_veg_consolidated_cut_blocks_sp"
-      ],
-      "run_status": "unsupported",
+      "normalized_action": "aspatial_area_reduction",
+      "normalized_subject": "Existing roads, trails, and landings area reduction",
+      "normalized_predicate": "apply the TSR-cited existing RTL deduction as a residual AFLB stand-area reduction after any exact permanent-road overlap already removed by the same parent step",
+      "linked_source_entry_ids": [],
+      "subtract_parent_exact_removed_area": true,
+      "run_status": "applied",
+      "spatial_application_mode": "aspatial_fallback",
+      "affected_stand_count": 242250,
+      "affected_area_ha": 50434.0,
+      "lu_chunk_count": 113,
       "run_notes": [
-        "Normalized action `review` is not executable in v1."
-      ]
-    },
-    {
-      "step_id": "thlb_parent_005_analysis_forest_land_base_compiled_01",
-      "parent_step_id": "thlb_parent_005_analysis_forest_land_base",
-      "parent_label": "Analysis forest land base",
-      "order_index": 5,
-      "step_kind": "reference_target",
-      "label": "Analysis forest land base",
-      "raw_value": "Land not administered by the Province for TSA timber supply",
-      "raw_text": "Certain types of lands do not contribute to timber supply for the purpose of this timber supply analysis. This includes privately held lands, First Nations reserves, some lands under the jurisdiction of the federal government and area-based forest tenures. Parks and protected areas are included in the AFLB because they can be relied on to continually contribute to forest cover management objectives such as landscape-level biodiversity, visual quality, and wildlife habitat objectives. The CCLUP specifies that woodlots also contribute to landscape-level forest management objectives for biodiversity, although the AAC for these woodlots is determined under a separate process. Area-based licences such as community forest agreements and First Nations woodland licences (FNWL) are expected to manage for landscape-level biodiversity objectives within their tenured areas, therefore they are removed from the AFLB. Woodlots are not required to manage for landscape-level biodiversity objectives, so they are left in the AFLB and removed when defining the LHLB. The Northern Secwepemc te Qelmucw (NStQ) Treaty Negotiations Agreement in Principle was signed on July 22, 2018, and the Parties are in Stage 5 negotiations to conclude treaty. The NStQ Interim Treaty Agreement (ITA) Phase 1 land transfer parcels are no longer administered by the Province and will be excluded from the AFLB. Additional NStQ Agreement in Principle (AIP) lands which are detailed in the signed AIP may also be transferred soon. The implications of these additional transfers to timber supply implications will be explored through sensitivity analysis. On June 26, 2014, the Supreme Court of Canada (SCC) released its decision on Tsilhqot\u2019in Nation v. British Columbia (Tsilhqot\u2019in decision). In that decision the SCC outlined areas over which the Tsilhqot\u2019in Nation has proven and declared Aboriginal title. Proven and declared Aboriginal title lands are not considered Crown land. As such, those lands do not contribute to timber supply in the Williams Lake TSA and are excluded from the AFLB. A spatial data set of land ownership was developed using information from the Crown Land Registry and the Integrated Cadastral Information Society. Areas classified in this data set with ownership codes 62 (Forest Management Unit) or 69 (Community Watershed) are generally administered by the Province for TSA timber supply. These areas were reviewed by district staff to ensure all categories they contain can appropriately be considered AFLB for purposes of this analysis. Minor areas, including those identified as development project, institutional and residential, were excluded from the AFLB. Otherwise, the remaining area with these ownership codes will be modelled as managed for TSA timber supply. Areas classified with ownership code 99 (crown leases) are not generally managed for TSA timber supply but were similarly reviewed prior to this analysis. Minor areas, including those categorized as grazing leases, will be considered as contributing to TSA timber supply because harvesting that occurs on these lease areas contributes to the TSA harvest level.",
-      "land_base_stage": "glb_to_aflb",
-      "stage_label": "GLB -> AFLB",
-      "execution_class": "reference_only",
-      "normalized_action": "reference_target",
-      "normalized_subject": "",
-      "normalized_predicate": "",
-      "linked_source_entry_ids": [
-        "whse_forest_vegetation_f_own"
-      ],
-      "step_status": "ready",
-      "required": true,
-      "page_number": 25,
-      "document_title": "",
-      "document_type": "data_package",
-      "cycle_label": "",
-      "cycle_year": 0,
-      "provenance_id": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=25",
-      "source_url": "",
-      "notes": [],
-      "row_source_kind": "table_summary_row",
-      "benchmark_marginal_area_ha": null,
-      "benchmark_cumulative_area_ha": 3098168.0,
-      "table_provenance": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24",
-      "run_status": "unsupported",
-      "run_notes": [
-        "Normalized action `reference_target` is not executable in v1."
+        "Applied the TSR area target as a documented reconstructed-mode aspatial fallback because no exact spatial implementation is available for this recipe row.",
+        "This early-area deduction scales active LU-wise reconstructed stand-area fields instead of claiming exact spatial reproduction.",
+        "Residual fallback target after same-parent exact removal: 50434.000 ha."
       ]
     },
     {
@@ -1349,17 +428,11 @@
       "linked_source_entry_ids": [
         "whse_tantalis_ta_park_ecores_pa_svw"
       ],
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 14086,
-      "affected_fragment_count": 14086,
-      "affected_area_ha": 227167.7402999195,
-      "fragment_batch_count": 70,
-      "lu_chunk_count": 70,
-      "intersecting_exclusion_feature_count": 33,
+      "run_status": "blocked_exact_overlay",
+      "spatial_application_mode": "blocked_exact_overlay",
       "run_notes": [
-        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
+        "Exact fragment-overlay execution was required for reconstructed mode, so this step was blocked instead of silently approximating it.",
+        "Blocking reason: df1 contains mixed geometry types."
       ]
     },
     {
@@ -1411,18 +484,12 @@
           ]
         }
       ],
-      "run_status": "applied",
+      "run_status": "blocked_exact_overlay",
+      "spatial_application_mode": "blocked_exact_overlay",
       "run_notes": [
-        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
-      ],
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 8882,
-      "affected_fragment_count": 8882,
-      "affected_area_ha": 4.649811746608356e-10,
-      "fragment_batch_count": 44,
-      "lu_chunk_count": 44,
-      "intersecting_exclusion_feature_count": 2670
+        "Exact fragment-overlay execution was required for reconstructed mode, so this step was blocked instead of silently approximating it.",
+        "Blocking reason: df1 contains mixed geometry types."
+      ]
     },
     {
       "step_id": "thlb_parent_007_old_growth_management_areas_compiled_01",
@@ -1471,17 +538,11 @@
           ]
         }
       ],
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 37207,
-      "affected_fragment_count": 37207,
-      "affected_area_ha": 253734.79834153253,
-      "fragment_batch_count": 101,
-      "lu_chunk_count": 101,
-      "intersecting_exclusion_feature_count": 4053,
+      "run_status": "blocked_exact_overlay",
+      "spatial_application_mode": "blocked_exact_overlay",
       "run_notes": [
-        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
+        "Exact fragment-overlay execution was required for reconstructed mode, so this step was blocked instead of silently approximating it.",
+        "Blocking reason: df1 contains mixed geometry types."
       ]
     },
     {
@@ -1528,17 +589,11 @@
           "value": "NO HARVEST ZONE"
         }
       ],
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 14891,
-      "affected_fragment_count": 14891,
-      "affected_area_ha": 119219.66774119568,
-      "fragment_batch_count": 46,
-      "lu_chunk_count": 46,
-      "intersecting_exclusion_feature_count": 112,
+      "run_status": "blocked_exact_overlay",
+      "spatial_application_mode": "blocked_exact_overlay",
       "run_notes": [
-        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
+        "Exact fragment-overlay execution was required for reconstructed mode, so this step was blocked instead of silently approximating it.",
+        "Blocking reason: df1 contains mixed geometry types."
       ]
     },
     {
@@ -1583,66 +638,11 @@
           "value": "NO HARVEST ZONE"
         }
       ],
-      "run_status": "applied",
+      "run_status": "blocked_exact_overlay",
+      "spatial_application_mode": "blocked_exact_overlay",
       "run_notes": [
-        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
-      ],
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 21422,
-      "affected_fragment_count": 21422,
-      "affected_area_ha": 279061.69015732524,
-      "fragment_batch_count": 44,
-      "lu_chunk_count": 44,
-      "intersecting_exclusion_feature_count": 54
-    },
-    {
-      "step_id": "thlb_parent_008_wildlife_habitat_areas_compiled_03",
-      "parent_step_id": "thlb_parent_008_wildlife_habitat_areas",
-      "parent_label": "Wildlife habitat areas",
-      "order_index": 8,
-      "step_kind": "netdown_rule",
-      "label": "Conditional harvest wildlife zones",
-      "raw_value": "Conditional harvest wildlife zones",
-      "raw_text": "Wildlife habitat reductions may be identified and managed through several processes including the Identified Wildlife Management Strategy, identification, and approval of ungulate winter range (UWR), and management practices specified in plans such as the CCLUP that establish legal wildlife habitat objectives. Management practices may include no harvesting in core areas as well as modified harvesting in associated management zones. Several approved wildlife habitat areas (WHA) are designated within the CNRR. The associated General Wildlife Measures (GWM) established by ministerial order under the GARs guide harvest practices in WHAs. Areas designated through GWMs as \u201cno harvest\u201d will be excluded from the LHLB. Areas designated as \u201cconditional harvest zone\u201d will be addressed in Section 7 \u2013 \u2018Current forest management assumptions\u2019 and Section 7.1.8 \u2013 \u2018Silviculture systems\u2019. Table 9. Wildlife habitat areas Designations Total (ha) Forested (ha) Excluded (ha) UWR no-harvest area 25 23 23 Caribou no-harvest area 208,868 163,217 154,033 There is a Caribou Herd Planning process currently ongoing within the CNRR. The outcome of additional area protection through no harvest or modified harvest resulting from this process are currently unknown. There may potentially be additional protections put in place for caribou that will have a downward pressure on the timber supply. Ministry staff will stay informed on the progress of this working group and inform the TSR throughout the process.",
-      "land_base_stage": "aflb_to_lhlb",
-      "stage_label": "AFLB -> LHLB",
-      "execution_class": "legal_harvest_exclusion",
-      "compiled_operation_type": "manual_review_required",
-      "step_status": "manual_review_required",
-      "required": false,
-      "page_number": 29,
-      "document_title": "",
-      "document_type": "data_package",
-      "cycle_label": "",
-      "cycle_year": 0,
-      "provenance_id": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=29",
-      "source_url": "",
-      "notes": [
-        "Section 6.3.3 / later Section 7 wording defers conditional harvest zones instead of excluding them at this stage."
-      ],
-      "row_source_kind": "table_summary_row",
-      "benchmark_marginal_area_ha": 154056.0,
-      "benchmark_cumulative_area_ha": 2427066.0,
-      "table_provenance": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24",
-      "normalized_action": "review",
-      "normalized_subject": "Conditional harvest wildlife zones",
-      "normalized_predicate": "defer conditional harvest zone treatment to later silviculture and assumptions logic",
-      "linked_source_entry_ids": [
-        "whse_wildlife_management_wcp_ungulate",
-        "whse_wildlife_management_wcp_wildlife",
-        "wcp_ungulate_winter_range"
-      ],
-      "source_attribute_filters": [
-        {
-          "field": "TIMBER_HARVEST_CODE",
-          "operator": "eq",
-          "value": "CONDITIONAL HARVEST ZONE"
-        }
-      ],
-      "run_status": "unsupported",
-      "run_notes": [
-        "Normalized action `review` is not executable in v1."
+        "Exact fragment-overlay execution was required for reconstructed mode, so this step was blocked instead of silently approximating it.",
+        "Blocking reason: df1 contains mixed geometry types."
       ]
     },
     {
@@ -1699,61 +699,11 @@
           "value": "CRITFISH"
         }
       ],
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 76497,
-      "affected_fragment_count": 76497,
-      "affected_area_ha": 749548.0584517156,
-      "fragment_batch_count": 105,
-      "lu_chunk_count": 105,
-      "intersecting_exclusion_feature_count": 7322,
+      "run_status": "blocked_exact_overlay",
+      "spatial_application_mode": "blocked_exact_overlay",
       "run_notes": [
-        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
-      ]
-    },
-    {
-      "step_id": "thlb_parent_010_lakeshore_management_compiled_01",
-      "parent_step_id": "thlb_parent_010_lakeshore_management",
-      "parent_label": "Lakeshore management",
-      "order_index": 10,
-      "step_kind": "netdown_rule",
-      "label": "Class A lakes with preservation VQO overlap",
-      "raw_value": "Class A lakes with preservation VQO overlap",
-      "raw_text": "The LAO designates a selection of lakes as Class A lakes which includes a legal spatial data set that defines buffers around these lakes and are classified are considered to be no harvest areas when they overlap with visual quality objective class \u2018preservation\u2019. These areas of overlap will be excluded from the LHLB. The management of Class B to E lakes through limits on allowed disturbance area will be discussed in Section 7.2.6 \u2013 \u2018Lakeshore management\u2019. Table 11. Class A lakes Designations Total (ha) Forested (ha) Excluded (ha) Class A Lakes 18,988 13,060 327 Data source and comments: The Class A lakes are identified in the Section 93.4 LAO establishing objectives for the CCLUP, May 19, 2010, amended April 18, 2011, and consolidated to September 6, 2018. Map 6. Lake management zone boundaries are provided by the lake buffer mapping that also provides riparian management and reserve zones for lakes used in Section 5.4.1.",
-      "land_base_stage": "aflb_to_lhlb",
-      "stage_label": "AFLB -> LHLB",
-      "execution_class": "legal_harvest_exclusion",
-      "compiled_operation_type": "manual_review_required",
-      "step_status": "manual_review_required",
-      "required": false,
-      "page_number": 30,
-      "document_title": "",
-      "document_type": "data_package",
-      "cycle_label": "",
-      "cycle_year": 0,
-      "provenance_id": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=30",
-      "source_url": "",
-      "notes": [
-        "TSA29 section 6.3.5 is a very small benchmark step and only applies to Class A lakes overlapping preservation VQO.",
-        "The currently adopted public layers do not yet expose a trusted Class A lake discriminator for TSA29.",
-        "Do not substitute the whole scenic-PR legal surface; it materially overcuts.",
-        "Class B-E lakes are deferred to Section 7.2.6 assumptions logic, not excluded here."
-      ],
-      "row_source_kind": "table_summary_row",
-      "benchmark_marginal_area_ha": 327.0,
-      "benchmark_cumulative_area_ha": 2415218.0,
-      "table_provenance": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24",
-      "normalized_action": "review",
-      "normalized_subject": "Class A lakes with preservation VQO overlap",
-      "normalized_predicate": "exclude only the Class A lake legal buffer areas that overlap VQO preservation once a trusted Class A lake source is adopted",
-      "linked_source_entry_ids": [
-        "whse_land_use_planning_rmp_plan_legal_poly_svw",
-        "whse_forest_vegetation_rec_visual_landscape"
-      ],
-      "run_status": "unsupported",
-      "run_notes": [
-        "Normalized action `review` is not executable in v1."
+        "Exact fragment-overlay execution was required for reconstructed mode, so this step was blocked instead of silently approximating it.",
+        "Blocking reason: df1 contains mixed geometry types."
       ]
     },
     {
@@ -1803,59 +753,11 @@
           "value": "Community Areas of Special Concern"
         }
       ],
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 14120,
-      "affected_fragment_count": 14115,
-      "affected_area_ha": 6.448348604224611e-10,
-      "fragment_batch_count": 69,
-      "lu_chunk_count": 69,
-      "intersecting_exclusion_feature_count": 7322,
+      "run_status": "blocked_exact_overlay",
+      "spatial_application_mode": "blocked_exact_overlay",
       "run_notes": [
-        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
-      ]
-    },
-    {
-      "step_id": "thlb_parent_012_proven_aboriginal_rights_areas_compiled_01",
-      "parent_step_id": "thlb_parent_012_proven_aboriginal_rights_areas",
-      "parent_label": "Proven Aboriginal Rights areas",
-      "order_index": 12,
-      "step_kind": "netdown_rule",
-      "label": "Proven Aboriginal Rights area boundary",
-      "raw_value": "Proven Aboriginal Rights area boundary",
-      "raw_text": "The Tsilhqot\u2019in 2012 BC Supreme Court decision confirmed a proven Aboriginal rights area (PRA) where Tsilhqot\u2019in people hold rights to hunt and trap birds and animals. This area overlaps the Tsilhqot\u2019in proven and declared Aboriginal title area and extends beyond encompassing the entire court case area. This area, outside the title area, is still administered by the Province and contributes to timber supply within the Williams Lake TSA. Deep consultation is required when considering proposed authorizations in this area and since 2014, very few provincial authorizations have been made in this area because management expectations are unique. The PRA will be excluded from the THLB to reflect the lack of commercial forestry activity in the last nine years. Table 14. Proven Aboriginal Rights areas Designations Total (ha) Forested (ha) Excluded (ha) Proven Aboriginal Rights areas 432,155 123,369 68,401",
-      "land_base_stage": "aflb_to_lhlb",
-      "stage_label": "AFLB -> LHLB",
-      "execution_class": "legal_harvest_exclusion",
-      "compiled_operation_type": "manual_review_required",
-      "step_status": "manual_review_required",
-      "required": false,
-      "page_number": 31,
-      "document_title": "",
-      "document_type": "data_package",
-      "cycle_label": "",
-      "cycle_year": 0,
-      "provenance_id": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31",
-      "source_url": "",
-      "notes": [
-        "TSA29 section 6.4.1 defines the Proven Aboriginal Rights area conceptually but does not cite a clean public vector source in the data-package text.",
-        "Current public lead is the PIP Consultation Areas public map service; treat this step as review/manual until a trustworthy boundary source or override is adopted."
-      ],
-      "row_source_kind": "table_summary_row",
-      "benchmark_marginal_area_ha": 68401.0,
-      "benchmark_cumulative_area_ha": 2284357.0,
-      "table_provenance": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24",
-      "normalized_action": "review",
-      "normalized_subject": "Proven Aboriginal Rights area boundary",
-      "normalized_predicate": "requires a reviewed PRA boundary overlay before automation; do not auto-exclude with broad TSA or designated-area polygons",
-      "linked_source_entry_ids": [
-        "whse_admin_boundaries_pip_consultation",
-        "whse_land_use_planning_fadm_designated"
-      ],
-      "run_status": "unsupported",
-      "run_notes": [
-        "Normalized action `review` is not executable in v1."
+        "Exact fragment-overlay execution was required for reconstructed mode, so this step was blocked instead of silently approximating it.",
+        "Blocking reason: df1 contains mixed geometry types."
       ]
     },
     {
@@ -1904,9 +806,11 @@
           ]
         }
       ],
-      "run_status": "applied_noop",
+      "run_status": "blocked_exact_overlay",
+      "spatial_application_mode": "blocked_exact_overlay",
       "run_notes": [
-        "No active LU-clipped fragment geometries intersected the exclusion mask."
+        "Exact fragment-overlay execution was required for reconstructed mode, so this step was blocked instead of silently approximating it.",
+        "Blocking reason: df1 contains mixed geometry types."
       ]
     },
     {
@@ -1954,9 +858,11 @@
         "reg_land_and_natural_resource_terrain_stability",
         "whse_imagery_and_base_maps_mot_highway_profiles_sp"
       ],
-      "run_status": "applied_noop",
+      "run_status": "blocked_exact_overlay",
+      "spatial_application_mode": "blocked_exact_overlay",
       "run_notes": [
-        "No active LU-clipped fragment geometries intersected the exclusion mask."
+        "Exact fragment-overlay execution was required for reconstructed mode, so this step was blocked instead of silently approximating it.",
+        "Blocking reason: df1 contains mixed geometry types."
       ]
     },
     {
@@ -2187,18 +1093,12 @@
           "value": "ACTIVE"
         }
       ],
-      "run_status": "applied",
+      "run_status": "blocked_exact_overlay",
+      "spatial_application_mode": "blocked_exact_overlay",
       "run_notes": [
-        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
-      ],
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 604,
-      "affected_fragment_count": 604,
-      "affected_area_ha": 4018.5950224872477,
-      "fragment_batch_count": 28,
-      "lu_chunk_count": 28,
-      "intersecting_exclusion_feature_count": 311
+        "Exact fragment-overlay execution was required for reconstructed mode, so this step was blocked instead of silently approximating it.",
+        "Blocking reason: df1 contains mixed geometry types."
+      ]
     },
     {
       "step_id": "thlb_parent_017_growth_and_yield_permanent_sample_plots_compiled_01",
@@ -2232,18 +1132,12 @@
       "benchmark_marginal_area_ha": 3577.0,
       "benchmark_cumulative_area_ha": 1867553.0,
       "table_provenance": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24",
-      "run_status": "applied",
+      "run_status": "blocked_exact_overlay",
+      "spatial_application_mode": "blocked_exact_overlay",
       "run_notes": [
-        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
-      ],
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 56,
-      "affected_fragment_count": 56,
-      "affected_area_ha": 240.68472283127295,
-      "fragment_batch_count": 7,
-      "lu_chunk_count": 7,
-      "intersecting_exclusion_feature_count": 239
+        "Exact fragment-overlay execution was required for reconstructed mode, so this step was blocked instead of silently approximating it.",
+        "Blocking reason: df1 contains mixed geometry types."
+      ]
     },
     {
       "step_id": "thlb_parent_018_riparian_areas_compiled_stream_s1",
@@ -2583,17 +1477,11 @@
         }
       ],
       "buffer_distance_m": 18.0,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 17442,
-      "affected_fragment_count": 17442,
-      "affected_area_ha": 15973.181955406075,
-      "fragment_batch_count": 60,
-      "lu_chunk_count": 60,
-      "intersecting_exclusion_feature_count": 14350,
+      "run_status": "blocked_exact_overlay",
+      "spatial_application_mode": "blocked_exact_overlay",
       "run_notes": [
-        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
+        "Exact fragment-overlay execution was required for reconstructed mode, so this step was blocked instead of silently approximating it.",
+        "Blocking reason: df1 contains mixed geometry types."
       ]
     },
     {
@@ -2640,17 +1528,11 @@
         }
       ],
       "buffer_distance_m": 14.0,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 16782,
-      "affected_fragment_count": 16782,
-      "affected_area_ha": 8.000748566315497e-09,
-      "fragment_batch_count": 59,
-      "lu_chunk_count": 59,
-      "intersecting_exclusion_feature_count": 14350,
+      "run_status": "blocked_exact_overlay",
+      "spatial_application_mode": "blocked_exact_overlay",
       "run_notes": [
-        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
+        "Exact fragment-overlay execution was required for reconstructed mode, so this step was blocked instead of silently approximating it.",
+        "Blocking reason: df1 contains mixed geometry types."
       ]
     },
     {
@@ -2697,17 +1579,11 @@
         }
       ],
       "buffer_distance_m": 6.0,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 16742,
-      "affected_fragment_count": 16742,
-      "affected_area_ha": 2.376405135455125e-10,
-      "fragment_batch_count": 59,
-      "lu_chunk_count": 59,
-      "intersecting_exclusion_feature_count": 14350,
+      "run_status": "blocked_exact_overlay",
+      "spatial_application_mode": "blocked_exact_overlay",
       "run_notes": [
-        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
+        "Exact fragment-overlay execution was required for reconstructed mode, so this step was blocked instead of silently approximating it.",
+        "Blocking reason: df1 contains mixed geometry types."
       ]
     },
     {
@@ -2754,17 +1630,11 @@
         }
       ],
       "buffer_distance_m": 6.0,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 16737,
-      "affected_fragment_count": 16737,
-      "affected_area_ha": 2.1895440036572373,
-      "fragment_batch_count": 59,
-      "lu_chunk_count": 59,
-      "intersecting_exclusion_feature_count": 14350,
+      "run_status": "blocked_exact_overlay",
+      "spatial_application_mode": "blocked_exact_overlay",
       "run_notes": [
-        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
+        "Exact fragment-overlay execution was required for reconstructed mode, so this step was blocked instead of silently approximating it.",
+        "Blocking reason: df1 contains mixed geometry types."
       ]
     },
     {
@@ -2811,99 +1681,11 @@
         }
       ],
       "buffer_distance_m": 18.0,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 16729,
-      "affected_fragment_count": 16729,
-      "affected_area_ha": 1.3920036209268991e-10,
-      "fragment_batch_count": 59,
-      "lu_chunk_count": 59,
-      "intersecting_exclusion_feature_count": 14350,
+      "run_status": "blocked_exact_overlay",
+      "spatial_application_mode": "blocked_exact_overlay",
       "run_notes": [
-        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
-      ]
-    },
-    {
-      "step_id": "thlb_parent_018_riparian_areas_compiled_lakes_review",
-      "parent_step_id": "thlb_parent_018_riparian_areas",
-      "parent_label": "Riparian areas",
-      "order_index": 18,
-      "step_kind": "netdown_rule",
-      "label": "Lake riparian classes",
-      "raw_value": "Lake riparian classes",
-      "raw_text": "Riparian areas along streams and around wetlands will be modelled as managed according to the Forest Practices Code Riparian Management Area Guidebook (1995). Table 15 lists the area reductions to be applied to account for Riparian Reserve Zones (RRZ) and Riparian Management Zones (RMZ). The zone widths are consistent with those specified under FPPR and current FSPs. Each stream, lake, and wetland class were spatially identified, classified, and then buffered using GIS in accordance with Table 15 criteria to create a riparian area to be modelled in the analysis. Limited harvesting is permitted in riparian management zones so the zone width was adjusted by the percentage of required retention to derive a modelled equivalent area where harvesting is fully excluded. The reserve widths and percent retention amounts are listed in Table 15 along with the calculated area excluded from the THLB to represent riparian areas. Table 15. Riparian areas Description Class Reserve zone width (metres) Reduction (%) Management zone width (metres) RMZ retention (%) Riparian area width (metres) Streams S1 50 100 20 50 60 S2 30 100 20 20 34 S3 20 100 20 20 24 S4/S5 0 - 30 30 10 S6 0 - 20 30 6 Wetlands W1/W5 10 100 40 20 18 W2 10 100 20 20 14 W3/W4 0 - 30 20 6 Lakes L1-B 10 100 0 - 10 L2 10 100 20 25 15 L3/L4 0 - 30 25 7.5 The management of fisheries sensitive watersheds will be discussed later under Section 7.2.10 \u2013 \u2018Fisheries sensitive watersheds\u2019. However, the management requirements for the protection of dolly varden trout habitat are accounted for in this netdown through increased riparian reserve zone widths. Licensee FSPs specify that within the Niut SRDZ and the South Chilcotin SRDZ, a 20-metre riparian reserve zone will be maintained on streams classified as S4 to protect dolly varden trout populations. For the analysis, the riparian area width applied to S4 streams in these landscape units was increased to 30 metres. In total, 54 833 hectares will be excluded to account for the total riparian areas of 199 820 hectares. Data source and comments: A previously conducted GIS project mapped RRZs and RMZs for streams, lakes, and wetlands in the CNRR. Riparian Classification, RMZs and Riparian Management Areas are derived from the LAO Objectives 20 and 23; CCLUP Objectives for Riparian Management; and the FPPR Sections 47, 48, 49, 50, 52(2) and 53. RMZ reductions are derived from: LAO objectives 21 and 22 - Retention of Trees in a RMZ as well as FSP commitments from the three major licensees (Tolko Industries Ltd., FSP #780; West Fraser Mills Ltd., FSP #755 and BCTS, FSP #828) within the CNRR.",
-      "land_base_stage": "lhlb_to_thlb",
-      "stage_label": "LHLB -> THLB",
-      "execution_class": "projected_harvest_exclusion",
-      "compiled_operation_type": "manual_review_required",
-      "step_status": "manual_review_required",
-      "required": false,
-      "page_number": 31,
-      "document_title": "",
-      "document_type": "data_package",
-      "cycle_label": "",
-      "cycle_year": 0,
-      "provenance_id": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31",
-      "source_url": "",
-      "notes": [
-        "Table 15 includes lake classes L1-B, L2, and L3/L4, but the current TSA29 instance does not yet have a trustworthy lake-class artifact wired into the notebook bridge."
-      ],
-      "row_source_kind": "table_summary_row",
-      "benchmark_marginal_area_ha": 54833.0,
-      "benchmark_cumulative_area_ha": 1812720.0,
-      "table_provenance": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24",
-      "normalized_action": "review",
-      "normalized_subject": "Lake riparian classes",
-      "normalized_predicate": "requires a reviewed Cariboo lake-class surface before automated L1/L2/L3/L4 riparian buffering can run",
-      "linked_source_entry_ids": [
-        "whse_basemapping_fwa_lakes_poly"
-      ],
-      "run_status": "unsupported",
-      "run_notes": [
-        "Normalized action `review` is not executable in v1."
-      ]
-    },
-    {
-      "step_id": "thlb_parent_018_riparian_areas_compiled_s4_special_review",
-      "parent_step_id": "thlb_parent_018_riparian_areas",
-      "parent_label": "Riparian areas",
-      "order_index": 18,
-      "step_kind": "netdown_rule",
-      "label": "Niut and South Chilcotin S4 special width",
-      "raw_value": "Niut and South Chilcotin S4 special width",
-      "raw_text": "Riparian areas along streams and around wetlands will be modelled as managed according to the Forest Practices Code Riparian Management Area Guidebook (1995). Table 15 lists the area reductions to be applied to account for Riparian Reserve Zones (RRZ) and Riparian Management Zones (RMZ). The zone widths are consistent with those specified under FPPR and current FSPs. Each stream, lake, and wetland class were spatially identified, classified, and then buffered using GIS in accordance with Table 15 criteria to create a riparian area to be modelled in the analysis. Limited harvesting is permitted in riparian management zones so the zone width was adjusted by the percentage of required retention to derive a modelled equivalent area where harvesting is fully excluded. The reserve widths and percent retention amounts are listed in Table 15 along with the calculated area excluded from the THLB to represent riparian areas. Table 15. Riparian areas Description Class Reserve zone width (metres) Reduction (%) Management zone width (metres) RMZ retention (%) Riparian area width (metres) Streams S1 50 100 20 50 60 S2 30 100 20 20 34 S3 20 100 20 20 24 S4/S5 0 - 30 30 10 S6 0 - 20 30 6 Wetlands W1/W5 10 100 40 20 18 W2 10 100 20 20 14 W3/W4 0 - 30 20 6 Lakes L1-B 10 100 0 - 10 L2 10 100 20 25 15 L3/L4 0 - 30 25 7.5 The management of fisheries sensitive watersheds will be discussed later under Section 7.2.10 \u2013 \u2018Fisheries sensitive watersheds\u2019. However, the management requirements for the protection of dolly varden trout habitat are accounted for in this netdown through increased riparian reserve zone widths. Licensee FSPs specify that within the Niut SRDZ and the South Chilcotin SRDZ, a 20-metre riparian reserve zone will be maintained on streams classified as S4 to protect dolly varden trout populations. For the analysis, the riparian area width applied to S4 streams in these landscape units was increased to 30 metres. In total, 54 833 hectares will be excluded to account for the total riparian areas of 199 820 hectares. Data source and comments: A previously conducted GIS project mapped RRZs and RMZs for streams, lakes, and wetlands in the CNRR. Riparian Classification, RMZs and Riparian Management Areas are derived from the LAO Objectives 20 and 23; CCLUP Objectives for Riparian Management; and the FPPR Sections 47, 48, 49, 50, 52(2) and 53. RMZ reductions are derived from: LAO objectives 21 and 22 - Retention of Trees in a RMZ as well as FSP commitments from the three major licensees (Tolko Industries Ltd., FSP #780; West Fraser Mills Ltd., FSP #755 and BCTS, FSP #828) within the CNRR.",
-      "land_base_stage": "lhlb_to_thlb",
-      "stage_label": "LHLB -> THLB",
-      "execution_class": "projected_harvest_exclusion",
-      "compiled_operation_type": "manual_review_required",
-      "step_status": "manual_review_required",
-      "required": false,
-      "page_number": 31,
-      "document_title": "",
-      "document_type": "data_package",
-      "cycle_label": "",
-      "cycle_year": 0,
-      "provenance_id": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=31",
-      "source_url": "",
-      "notes": [
-        "TSA29 section 6.4.2 increases the S4 riparian area width in the Niut SRDZ and South Chilcotin SRDZ to protect dolly varden trout habitat. This first runnable pass leaves that special-case refinement as reviewed/manual logic."
-      ],
-      "row_source_kind": "table_summary_row",
-      "benchmark_marginal_area_ha": 54833.0,
-      "benchmark_cumulative_area_ha": 1812720.0,
-      "table_provenance": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24",
-      "normalized_action": "review",
-      "normalized_subject": "Niut and South Chilcotin S4 special width",
-      "normalized_predicate": "requires a reviewed LU/SRDZ overlay to increase S4 riparian width to 30 metres in the Niut and South Chilcotin areas",
-      "linked_source_entry_ids": [
-        "reg_land_and_natural_resource_stream_classification_car_line",
-        "rmp_landscape_unit_svw",
-        "whse_land_use_planning_rmp_plan_legal_poly_svw"
-      ],
-      "run_status": "unsupported",
-      "run_notes": [
-        "Normalized action `review` is not executable in v1."
+        "Exact fragment-overlay execution was required for reconstructed mode, so this step was blocked instead of silently approximating it.",
+        "Blocking reason: df1 contains mixed geometry types."
       ]
     },
     {
@@ -2950,17 +1732,11 @@
         }
       ],
       "buffer_distance_m": -7.5,
-      "run_status": "applied",
-      "spatial_application_mode": "fragment_overlay",
-      "candidate_row_count": 13872,
-      "affected_fragment_count": 13867,
-      "affected_area_ha": 3.1030352637256224e-10,
-      "fragment_batch_count": 68,
-      "lu_chunk_count": 68,
-      "intersecting_exclusion_feature_count": 7322,
+      "run_status": "blocked_exact_overlay",
+      "spatial_application_mode": "blocked_exact_overlay",
       "run_notes": [
-        "Applied exact LU-wise fragment/resultant exclusion with binary THLB output in EPSG:3005.",
-        "The reconstructed lane now cuts one Landscape Unit chunk at a time instead of building one full-TSA exact-overlay workload."
+        "Exact fragment-overlay execution was required for reconstructed mode, so this step was blocked instead of silently approximating it.",
+        "Blocking reason: df1 contains mixed geometry types."
       ]
     },
     {
@@ -2975,7 +1751,7 @@
       "land_base_stage": "lhlb_to_thlb",
       "stage_label": "LHLB -> THLB",
       "execution_class": "projected_harvest_exclusion",
-      "compiled_operation_type": "aspatial_area_reduction",
+      "compiled_operation_type": "aspatial_reduction",
       "step_status": "ready",
       "required": true,
       "page_number": 37,
@@ -3000,9 +1776,9 @@
       "linked_source_entry_ids": [],
       "run_status": "applied",
       "spatial_application_mode": "aspatial_fallback",
-      "affected_stand_count": 80915,
-      "affected_area_ha": 17754.716395765077,
-      "lu_chunk_count": 72,
+      "affected_stand_count": 193075,
+      "affected_area_ha": 44166.32403180124,
+      "lu_chunk_count": 113,
       "run_notes": [
         "Applied the TSR area target as a documented reconstructed-mode aspatial fallback because no exact spatial implementation is available for this recipe row.",
         "The fallback was applied across the current LU-wise reconstructed state without changing the reviewed TSA29 parent-step lane."
@@ -3045,47 +1821,12 @@
       "linked_source_entry_ids": [],
       "run_status": "applied",
       "spatial_application_mode": "aspatial_fallback",
-      "affected_stand_count": 80915,
-      "affected_area_ha": 6309.011335703417,
-      "lu_chunk_count": 72,
+      "affected_stand_count": 193075,
+      "affected_area_ha": 15694.186984560778,
+      "lu_chunk_count": 113,
       "run_notes": [
         "Applied the TSR area target as a documented reconstructed-mode aspatial fallback because no exact spatial implementation is available for this recipe row.",
         "The fallback was applied across the current LU-wise reconstructed state without changing the reviewed TSA29 parent-step lane."
-      ]
-    },
-    {
-      "step_id": "thlb_parent_022_timber_harvesting_land_base_compiled_01",
-      "parent_step_id": "thlb_parent_022_timber_harvesting_land_base",
-      "parent_label": "Timber harvesting land base",
-      "order_index": 22,
-      "step_kind": "reference_target",
-      "label": "Timber harvesting land base",
-      "raw_value": "Timber harvesting land base",
-      "raw_text": "Timber harvesting land base",
-      "land_base_stage": "lhlb_to_thlb",
-      "stage_label": "LHLB -> THLB",
-      "execution_class": "reference_only",
-      "normalized_action": "reference_target",
-      "normalized_subject": "",
-      "normalized_predicate": "",
-      "linked_source_entry_ids": [],
-      "step_status": "ready",
-      "required": true,
-      "page_number": 0,
-      "document_title": "",
-      "document_type": "data_package",
-      "cycle_label": "",
-      "cycle_year": 0,
-      "provenance_id": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24",
-      "source_url": "",
-      "notes": [],
-      "row_source_kind": "table_summary_row",
-      "benchmark_marginal_area_ha": null,
-      "benchmark_cumulative_area_ha": 1682843.0,
-      "table_provenance": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24",
-      "run_status": "unsupported",
-      "run_notes": [
-        "Normalized action `reference_target` is not executable in v1."
       ]
     },
     {
@@ -3128,41 +1869,7 @@
       "run_notes": [
         "No spatial deduction applied for this rule."
       ]
-    },
-    {
-      "step_id": "thlb_parent_024_long_term_thlb_compiled_01",
-      "parent_step_id": "thlb_parent_024_long_term_thlb",
-      "parent_label": "Long-term THLB",
-      "order_index": 24,
-      "step_kind": "reference_target",
-      "label": "Long-term THLB",
-      "raw_value": "Long-term THLB",
-      "raw_text": "Long-term THLB",
-      "land_base_stage": "reference_target",
-      "stage_label": "Reference targets",
-      "execution_class": "reference_only",
-      "normalized_action": "reference_target",
-      "normalized_subject": "long-term thlb",
-      "normalized_predicate": "Long-term THLB",
-      "linked_source_entry_ids": [],
-      "step_status": "ready",
-      "required": true,
-      "page_number": 0,
-      "document_title": "",
-      "document_type": "data_package",
-      "cycle_label": "",
-      "cycle_year": 0,
-      "provenance_id": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24",
-      "source_url": "",
-      "notes": [],
-      "row_source_kind": "table_summary_row",
-      "benchmark_marginal_area_ha": null,
-      "benchmark_cumulative_area_ha": 1660053.0,
-      "table_provenance": "TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24",
-      "run_status": "unsupported",
-      "run_notes": [
-        "Normalized action `reference_target` is not executable in v1."
-      ]
     }
-  ]
+  ],
+  "resume_checkpoint_path": "runtime/logs/tsr/reconstructed_diagnostics/step4_resume_from_step3.feather"
 }

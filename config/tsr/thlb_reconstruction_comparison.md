@@ -1,6 +1,6 @@
 # THLB Reconstruction Comparison: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-12T06:15:19.958892+00:00`
+- Generated UTC: `2026-04-12T06:54:19.868389+00:00`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Reviewed bridge status report: `config/tsr/thlb_netdown.status.md`
 - Reconstructed audit JSON: `config/tsr/thlb_reconstructed.audit.json`
@@ -8,15 +8,15 @@
 
 ## Summary
 
-- Strict reconstructed THLB: `903685.409 ha`
+- Strict reconstructed THLB: `2247992.122 ha`
 - TSR reported THLB: `1660053.000 ha`
-- Strict vs TSR delta: `-756367.591 ha`
+- Strict vs TSR delta: `587939.122 ha`
 
 ## Reviewed Bridge Context
 
 - Reviewed bridge THLB: `1649049.232 ha`
 - Reviewed vs TSR delta: `-11003.768 ha`
-- Strict vs reviewed delta: `-745363.823 ha`
+- Strict vs reviewed delta: `598942.890 ha`
 
 ## Why Reviewed Was Accepted Anyway
 
@@ -27,23 +27,18 @@
 
 ## Strict-vs-TSR Fit Counts
 
-- `not_comparable_to_tsr`: `6`
-- `strict_over_tsr_major`: `2`
-- `strict_over_tsr_minor`: `1`
-- `strict_under_tsr_major`: `6`
-- `strict_under_tsr_minor`: `3`
-- `tsr_close_enough`: `6`
+- `not_comparable_to_tsr`: `16`
+- `strict_under_tsr_major`: `3`
+- `tsr_close_enough`: `5`
 
 ## Reviewed-Difference Context Counts
 
-- `aspatial_bridge_difference`: `2`
-- `blocked_or_missing_source`: `2`
-- `close_match`: `1`
-- `manual_or_reviewed_override`: `6`
+- `aspatial_bridge_difference`: `3`
+- `blocked_or_missing_source`: `12`
+- `manual_or_reviewed_override`: `3`
 - `not_comparable`: `4`
-- `reviewed_bridge_only`: `2`
-- `strict_overcut_candidate`: `4`
-- `strict_undercut_candidate`: `3`
+- `reviewed_bridge_only`: `1`
+- `strict_overcut_candidate`: `1`
 
 ## Problem Ownership Counts
 
@@ -57,40 +52,40 @@
 
 - 2. `thlb_parent_002_land_not_administered_by_the_province` | Land not administered by the Province | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
 - 3. `thlb_parent_003_non_forest` | Non-forest | action=`keep_reviewed_bridge` | tsr-fit=`strict_under_tsr_major` | ownership=`model_endogenous`
-- 4. `thlb_parent_004_roads_and_landings` | Roads and landings | action=`use_documented_aspatial_fallback` | tsr-fit=`strict_under_tsr_major` | ownership=`mixed`
-- 6. `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | action=`fix_strict_logic` | tsr-fit=`strict_under_tsr_major` | ownership=`mixed`
-- 7. `thlb_parent_007_old_growth_management_areas` | Old growth management areas | action=`fix_strict_logic` | tsr-fit=`strict_over_tsr_minor` | ownership=`model_endogenous`
-- 8. `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | action=`fix_strict_logic` | tsr-fit=`strict_over_tsr_major` | ownership=`model_endogenous`
-- 9. `thlb_parent_009_critical_habitat_for_fish` | Critical habitat for fish | action=`fix_strict_logic` | tsr-fit=`strict_over_tsr_major` | ownership=`model_endogenous`
+- 4. `thlb_parent_004_roads_and_landings` | Roads and landings | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`mixed`
+- 6. `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | action=`fix_strict_logic` | tsr-fit=`not_comparable_to_tsr` | ownership=`mixed`
+- 7. `thlb_parent_007_old_growth_management_areas` | Old growth management areas | action=`fix_strict_logic` | tsr-fit=`not_comparable_to_tsr` | ownership=`model_endogenous`
+- 8. `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | action=`fix_strict_logic` | tsr-fit=`not_comparable_to_tsr` | ownership=`model_endogenous`
+- 9. `thlb_parent_009_critical_habitat_for_fish` | Critical habitat for fish | action=`fix_strict_logic` | tsr-fit=`not_comparable_to_tsr` | ownership=`model_endogenous`
 - 10. `thlb_parent_010_lakeshore_management` | Lakeshore management | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`data_exogenous`
-- 11. `thlb_parent_011_community_areas_of_special_concern` | Community areas of special concern | action=`keep_reviewed_bridge` | tsr-fit=`strict_under_tsr_major` | ownership=`model_endogenous`
+- 11. `thlb_parent_011_community_areas_of_special_concern` | Community areas of special concern | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`model_endogenous`
 - 12. `thlb_parent_012_proven_aboriginal_rights_areas` | Proven Aboriginal Rights areas | action=`improve_data_or_source` | tsr-fit=`strict_under_tsr_major` | ownership=`data_exogenous`
-- 13. `thlb_parent_013_areas_considered_inoperable` | Areas considered inoperable | action=`keep_reviewed_bridge` | tsr-fit=`strict_under_tsr_minor` | ownership=`reviewed_bridge_choice`
+- 13. `thlb_parent_013_areas_considered_inoperable` | Areas considered inoperable | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`reviewed_bridge_choice`
 - 14. `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`mixed`
 - 15. `thlb_parent_015_non_merchantable_timber_profiles` | Non-merchantable timber profiles | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`model_endogenous`
-- 16. `thlb_parent_016_recreation_features` | Recreation features | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`mixed`
-- 17. `thlb_parent_017_growth_and_yield_permanent_sample_plots` | Growth and yield permanent sample plots | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`data_exogenous`
-- 18. `thlb_parent_018_riparian_areas` | Riparian areas | action=`improve_data_or_source` | tsr-fit=`strict_under_tsr_minor` | ownership=`mixed`
-- 19. `thlb_parent_019_buffered_trails` | Buffered trails | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
+- 16. `thlb_parent_016_recreation_features` | Recreation features | action=`fix_strict_logic` | tsr-fit=`not_comparable_to_tsr` | ownership=`mixed`
+- 17. `thlb_parent_017_growth_and_yield_permanent_sample_plots` | Growth and yield permanent sample plots | action=`improve_data_or_source` | tsr-fit=`not_comparable_to_tsr` | ownership=`data_exogenous`
+- 18. `thlb_parent_018_riparian_areas` | Riparian areas | action=`improve_data_or_source` | tsr-fit=`not_comparable_to_tsr` | ownership=`mixed`
+- 19. `thlb_parent_019_buffered_trails` | Buffered trails | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`reviewed_bridge_choice`
 - 20. `thlb_parent_020_wildlife_tree_retention_areas` | Wildlife tree retention areas | action=`use_documented_aspatial_fallback` | tsr-fit=`strict_under_tsr_major` | ownership=`reviewed_bridge_choice`
-- 21. `thlb_parent_021_cultural_heritage_and_archaeological_resources` | Cultural heritage and archaeological resources | action=`use_documented_aspatial_fallback` | tsr-fit=`strict_under_tsr_minor` | ownership=`reviewed_bridge_choice`
+- 21. `thlb_parent_021_cultural_heritage_and_archaeological_resources` | Cultural heritage and archaeological resources | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
 - 23. `thlb_parent_023_future_roads` | Future roads | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
 
 ## Top 5 Strict-vs-TSR Contributors
 
-- `thlb_parent_003_non_forest` | Non-forest | tsr-fit=`strict_under_tsr_major` | strict-TSR marginal delta=`-1104217.299 ha`
-- `thlb_parent_009_critical_habitat_for_fish` | Critical habitat for fish | tsr-fit=`strict_over_tsr_major` | strict-TSR marginal delta=`738027.058 ha`
+- `thlb_parent_003_non_forest` | Non-forest | tsr-fit=`strict_under_tsr_major` | strict-TSR marginal delta=`-1105908.000 ha`
 - `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | tsr-fit=`not_comparable_to_tsr` | strict-TSR marginal delta=`-321044.000 ha`
-- `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | tsr-fit=`strict_over_tsr_major` | strict-TSR marginal delta=`244225.358 ha`
-- `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | tsr-fit=`strict_under_tsr_major` | strict-TSR marginal delta=`-79159.260 ha`
+- `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | tsr-fit=`not_comparable_to_tsr` | strict-TSR marginal delta=`-306327.000 ha`
+- `thlb_parent_007_old_growth_management_areas` | Old growth management areas | tsr-fit=`not_comparable_to_tsr` | strict-TSR marginal delta=`-210719.000 ha`
+- `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | tsr-fit=`not_comparable_to_tsr` | strict-TSR marginal delta=`-154056.000 ha`
 
 ## Top 5 Strict-vs-Reviewed Context Differences
 
-- `thlb_parent_003_non_forest` | Non-forest | reviewed-role=`reviewed_bridge_only` | strict-reviewed removed-area delta=`-2013430.245 ha`
-- `thlb_parent_009_critical_habitat_for_fish` | Critical habitat for fish | reviewed-role=`strict_overcut_candidate` | strict-reviewed removed-area delta=`732065.235 ha`
+- `thlb_parent_003_non_forest` | Non-forest | reviewed-role=`reviewed_bridge_only` | strict-reviewed removed-area delta=`-2015120.946 ha`
 - `thlb_parent_002_land_not_administered_by_the_province` | Land not administered by the Province | reviewed-role=`strict_overcut_candidate` | strict-reviewed removed-area delta=`491992.156 ha`
 - `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | reviewed-role=`blocked_or_missing_source` | strict-reviewed removed-area delta=`-329228.613 ha`
-- `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | reviewed-role=`strict_overcut_candidate` | strict-reviewed removed-area delta=`265275.475 ha`
+- `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | reviewed-role=`blocked_or_missing_source` | strict-reviewed removed-area delta=`-275618.199 ha`
+- `thlb_parent_007_old_growth_management_areas` | Old growth management areas | reviewed-role=`blocked_or_missing_source` | strict-reviewed removed-area delta=`-227336.336 ha`
 
 ## Plain-Language Read
 
@@ -149,15 +144,14 @@
 - Reviewed difference role: `reviewed_bridge_only`
 - Problem ownership: `model_endogenous`
 - Difference nature: `reviewed_bridge_semantics`
-- Reconstructed status: `fragment_overlay`
+- Reconstructed status: `not_executed`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `1105908.000 ha`
 - TSR benchmark cumulative area: `3130694.000 ha`
-- Strict reconstructed removed area: `1690.701 ha`
+- Strict reconstructed removed area: `not recorded`
 - Reviewed bridge removed area: `2015120.946 ha`
-- Strict vs TSR delta: `-1104217.299 ha`
+- Strict vs TSR delta: `-1105908.000 ha`
 - Reviewed vs TSR delta: `909212.946 ha`
-- Strict vs reviewed delta: `-2013430.245 ha`
 - Strict vs TSR: The strict lane is materially below the TSR benchmark here, so this looks like a real strict-lane undercut seam.
 - Reviewed difference: The reviewed lane removed material area here, but the strict lane did not produce a comparable removal.
 - Practical meaning: Strict is badly low against TSR here, so this is a real seam to fix or bridge explicitly.
@@ -166,42 +160,41 @@
 - Adjudication queue action: `keep_reviewed_bridge` (Keep the reviewed bridge for now and do not force strict parity yet.)
 - Actionability: Decide whether the reviewed bridge should stay an accepted difference or be translated into strict semantics.
 - Supporting notes:
-  - strict spatial modes: `fragment_overlay`
-  - strict compiled steps: `thlb_parent_003_non_forest_compiled_01`, `thlb_parent_003_non_forest_compiled_02`
   - reviewed approval scope: `single_lu_smoke_subset_williams_lake`
   - reviewed ratchet state: `approved`
-  - strict note: Riparian reserve and riparian management zone buffers are handled in the later riparian parent step, not here.
-  - strict note: This subrule only performs the direct Freshwater Atlas lakes/rivers/wetlands exclusion described in the non-forest step.
   - strict note: Early GLB -> AFLB stepwise deltas in reconstructed mode are conditioned by checkpoint1/AFLB initialization rather than a literal raw-GLB replay.
 
 #### 4. Roads and landings
 
 - Parent step id: `thlb_parent_004_roads_and_landings`
-- Strict TSR fit: `strict_under_tsr_major`
-- Reviewed difference role: `close_match`
+- Strict TSR fit: `tsr_close_enough`
+- Reviewed difference role: `aspatial_bridge_difference`
 - Problem ownership: `mixed`
 - Difference nature: `accepted_aspatial_bridge`
-- Reconstructed status: `applied_noop+unsupported`
+- Reconstructed status: `aspatial_fallback`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `50434.000 ha`
 - TSR benchmark cumulative area: `3080260.000 ha`
-- Strict reconstructed removed area: `0.000 ha`
+- Strict reconstructed removed area: `50434.000 ha`
 - Reviewed bridge removed area: `1557.111 ha`
-- Strict vs TSR delta: `-50434.000 ha`
+- Strict vs TSR delta: `0.000 ha`
 - Reviewed vs TSR delta: `-48876.889 ha`
-- Strict vs reviewed delta: `-1557.111 ha`
-- Strict vs TSR: The strict lane is materially below the TSR benchmark here, so this looks like a real strict-lane undercut seam.
-- Reviewed difference: The strict and reviewed lanes are close enough here that this parent step does not look like a major driver of the remaining gap.
-- Practical meaning: Strict is badly low against TSR here, so this is a real seam to fix or bridge explicitly.
-- Engineering interpretation: The TSR itself says existing roads, trails, and landings are modeled non-spatially through partial AFLB reductions because the features are too small and incomplete to track cleanly at landscape scale. The current strict lane only runs two narrow permanent-road buffer overlays and finds no active fragments, while the reviewed lane only has a Williams Lake smoke proof rather than a full-TSA bridge.
-- Recommended next move: Formalize this step as a documented aspatial AFLB reduction in the strict lane instead of trying to force the current tiny spatial-only result to stand in for the full TSR deduction.
-- Adjudication queue action: `use_documented_aspatial_fallback` (Keep or formalize a documented aspatial fallback.)
-- Actionability: Decide whether this documented aspatial fallback should remain the working contract or be replaced by a better exact implementation later.
+- Strict vs reviewed delta: `48876.889 ha`
+- Strict vs TSR: The strict lane is close enough to the TSR benchmark here for practical exploratory use.
+- Reviewed difference: The strict lane used a documented aspatial fallback here instead of exact spatial reproduction.
+- Practical meaning: Strict is close enough to TSR here, so this is not a top-priority repair. The reviewed difference here is mostly about an explicit aspatial bridge choice rather than exact spatial truth.
+- Engineering interpretation: The TSR itself says existing roads, trails, and landings are modeled non-spatially through partial AFLB reductions because the features are too small and incomplete to track cleanly at landscape scale. The strict lane should therefore be judged against the documented aspatial benchmark first, with the narrow permanent-road overlays treated as supporting evidence only.
+- Recommended next move: Keep the documented step-4 aspatial AFLB fallback in place unless you later adopt a better exact road-footprint contract.
+- Adjudication queue action: `defer_low_priority` (Defer; this is not a top-priority repair right now.)
+- Actionability: Decide whether this documented aspatial fallback should remain a bridge or be replaced by exact spatial logic later.
 - Supporting notes:
+  - strict spatial modes: `aspatial_fallback`
   - strict compiled steps: `thlb_parent_004_roads_and_landings_compiled_01`, `thlb_parent_004_roads_and_landings_compiled_02`, `thlb_parent_004_roads_and_landings_compiled_03`
   - reviewed approval scope: `single_lu_smoke_subset_williams_lake`
   - reviewed ratchet state: `approved`
-  - strict note: Temporary roads and landings remain a review item in the notebook bridge until the non-spatial deduction path is formalized.
+  - strict note: TSA29 section 6.2.3 says existing roads, trails, and landings are modeled non-spatially through partial AFLB reductions because the mapped features are too small and incomplete to track reliably at landscape scale.
+  - strict note: Use the TSR benchmark marginal deduction of 50,434 ha for this step; do not use the conflicting 32,526 ha prose sentence as the governing fallback target.
+  - strict note: Subtract any exact same-parent permanent-road overlap already removed so the fallback only fills the remaining benchmark gap.
   - strict note: Early GLB -> AFLB stepwise deltas in reconstructed mode are conditioned by checkpoint1/AFLB initialization rather than a literal raw-GLB replay.
 
 ### AFLB -> LHLB
@@ -209,28 +202,28 @@
 #### 6. Parks, protected areas, area-base tenures
 
 - Parent step id: `thlb_parent_006_parks_protected_areas_area_base_tenures`
-- Strict TSR fit: `strict_under_tsr_major`
-- Reviewed difference role: `strict_undercut_candidate`
+- Strict TSR fit: `not_comparable_to_tsr`
+- Reviewed difference role: `blocked_or_missing_source`
 - Problem ownership: `mixed`
 - Difference nature: `strict_logic_undercut`
-- Reconstructed status: `fragment_overlay`
+- Reconstructed status: `blocked_exact_overlay`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `306327.000 ha`
 - TSR benchmark cumulative area: `2791841.000 ha`
-- Strict reconstructed removed area: `227167.740 ha`
+- Strict reconstructed removed area: `0.000 ha`
 - Reviewed bridge removed area: `275618.199 ha`
-- Strict vs TSR delta: `-79159.260 ha`
+- Strict vs TSR delta: `-306327.000 ha`
 - Reviewed vs TSR delta: `-30708.801 ha`
-- Strict vs reviewed delta: `-48450.459 ha`
-- Strict vs TSR: The strict lane is materially below the TSR benchmark here, so this looks like a real strict-lane undercut seam.
-- Reviewed difference: The strict lane is removing materially less area than the reviewed lane here.
-- Practical meaning: Strict is badly low against TSR here, so this is a real seam to fix or bridge explicitly.
+- Strict vs reviewed delta: `-275618.199 ha`
+- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
+- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
+- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
 - Engineering interpretation: The strict lane is lighter than the reviewed lane here, likely because tenure and ownership semantics are still not fully aligned.
 - Recommended next move: Refine the strict tenure/ownership logic first, then reassess whether any supporting data gaps remain material.
 - Adjudication queue action: `fix_strict_logic` (Fix strict logic or semantics in FEMIC.)
-- Actionability: Inspect missing strict semantics, missing source layers, or reviewed bridge logic the strict lane does not yet share.
+- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
 - Supporting notes:
-  - strict spatial modes: `fragment_overlay`
+  - strict spatial modes: `blocked_exact_overlay`
   - strict compiled steps: `thlb_parent_006_parks_protected_areas_area_base_tenures_compiled_01`, `thlb_parent_006_parks_protected_areas_area_base_tenures_compiled_02`
   - reviewed ratchet state: `benchmarked`
   - strict note: TSA29 section 6.2.1 keeps woodlots in AFLB but removes them when defining the LHLB, so woodlot schedules A/B are included here.
@@ -241,28 +234,28 @@
 #### 7. Old growth management areas
 
 - Parent step id: `thlb_parent_007_old_growth_management_areas`
-- Strict TSR fit: `strict_over_tsr_minor`
-- Reviewed difference role: `strict_overcut_candidate`
+- Strict TSR fit: `not_comparable_to_tsr`
+- Reviewed difference role: `blocked_or_missing_source`
 - Problem ownership: `model_endogenous`
 - Difference nature: `strict_logic_overcut`
-- Reconstructed status: `fragment_overlay`
+- Reconstructed status: `blocked_exact_overlay`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `210719.000 ha`
 - TSR benchmark cumulative area: `2581122.000 ha`
-- Strict reconstructed removed area: `253734.798 ha`
+- Strict reconstructed removed area: `0.000 ha`
 - Reviewed bridge removed area: `227336.336 ha`
-- Strict vs TSR delta: `43015.798 ha`
+- Strict vs TSR delta: `-210719.000 ha`
 - Reviewed vs TSR delta: `16617.336 ha`
-- Strict vs reviewed delta: `26398.462 ha`
-- Strict vs TSR: The strict lane is somewhat above the TSR benchmark here, but not yet in the worst problem tier.
-- Reviewed difference: The strict lane is removing materially more area than the reviewed lane here.
-- Practical meaning: Strict is off TSR here, but not in the very worst tier. The reviewed lane is lighter here than the strict lane.
+- Strict vs reviewed delta: `-227336.336 ha`
+- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
+- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
+- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
 - Engineering interpretation: The strict lane is likely treating OGMA area too broadly relative to the reviewed TSA29 interpretation.
 - Recommended next move: Tighten the OGMA logic before looking for new data; this looks like an over-selection problem.
 - Adjudication queue action: `fix_strict_logic` (Fix strict logic or semantics in FEMIC.)
-- Actionability: Inspect strict source inputs and exact logic first; this step may be cutting more area than the reviewed lane intended.
+- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
 - Supporting notes:
-  - strict spatial modes: `fragment_overlay`
+  - strict spatial modes: `blocked_exact_overlay`
   - strict compiled steps: `thlb_parent_007_old_growth_management_areas_compiled_01`
   - reviewed approval scope: `full_tsa_validation`
   - reviewed ratchet state: `approved`
@@ -273,61 +266,60 @@
 #### 8. Wildlife habitat areas
 
 - Parent step id: `thlb_parent_008_wildlife_habitat_areas`
-- Strict TSR fit: `strict_over_tsr_major`
-- Reviewed difference role: `strict_overcut_candidate`
+- Strict TSR fit: `not_comparable_to_tsr`
+- Reviewed difference role: `blocked_or_missing_source`
 - Problem ownership: `model_endogenous`
 - Difference nature: `strict_logic_overcut`
-- Reconstructed status: `fragment_overlay`
+- Reconstructed status: `blocked_exact_overlay`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `154056.000 ha`
 - TSR benchmark cumulative area: `2427066.000 ha`
-- Strict reconstructed removed area: `398281.358 ha`
+- Strict reconstructed removed area: `0.000 ha`
 - Reviewed bridge removed area: `133005.883 ha`
-- Strict vs TSR delta: `244225.358 ha`
+- Strict vs TSR delta: `-154056.000 ha`
 - Reviewed vs TSR delta: `-21050.117 ha`
-- Strict vs reviewed delta: `265275.475 ha`
-- Strict vs TSR: The strict lane is materially above the TSR benchmark here, so this looks like a real strict-lane overcut seam.
-- Reviewed difference: The strict lane is removing materially more area than the reviewed lane here.
-- Practical meaning: Strict is badly high against TSR here, so this is a real problem to fix even before looking at the reviewed lane.
+- Strict vs reviewed delta: `-133005.883 ha`
+- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
+- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
+- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
 - Engineering interpretation: The strict lane is selecting far more wildlife-area land than either the reviewed lane or the TSR benchmark supports.
 - Recommended next move: Audit the strict no-harvest selection logic and keep conditional/modified zones out unless the TSR clearly says otherwise.
 - Adjudication queue action: `fix_strict_logic` (Fix strict logic or semantics in FEMIC.)
-- Actionability: Inspect strict source inputs and exact logic first; this step may be cutting more area than the reviewed lane intended.
+- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
 - Supporting notes:
-  - strict spatial modes: `fragment_overlay`
-  - strict compiled steps: `thlb_parent_008_wildlife_habitat_areas_compiled_01`, `thlb_parent_008_wildlife_habitat_areas_compiled_02`, `thlb_parent_008_wildlife_habitat_areas_compiled_03`
+  - strict spatial modes: `blocked_exact_overlay`
+  - strict compiled steps: `thlb_parent_008_wildlife_habitat_areas_compiled_01`, `thlb_parent_008_wildlife_habitat_areas_compiled_02`
   - reviewed approval scope: `full_tsa_validation`
   - reviewed ratchet state: `approved`
   - strict note: TSA29 section 6.3.3 states that only no-harvest wildlife areas are excluded at this stage.
   - strict note: Conditional harvest zones are deferred to later forest-management assumptions and silviculture logic.
   - strict note: General Wildlife Measures with no-harvest direction are excluded here; modified/conditional zones are not.
-  - strict note: Section 6.3.3 / later Section 7 wording defers conditional harvest zones instead of excluding them at this stage.
 
 #### 9. Critical habitat for fish
 
 - Parent step id: `thlb_parent_009_critical_habitat_for_fish`
-- Strict TSR fit: `strict_over_tsr_major`
-- Reviewed difference role: `strict_overcut_candidate`
+- Strict TSR fit: `not_comparable_to_tsr`
+- Reviewed difference role: `blocked_or_missing_source`
 - Problem ownership: `model_endogenous`
 - Difference nature: `strict_logic_overcut`
-- Reconstructed status: `fragment_overlay`
+- Reconstructed status: `blocked_exact_overlay`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `11521.000 ha`
 - TSR benchmark cumulative area: `2415545.000 ha`
-- Strict reconstructed removed area: `749548.058 ha`
+- Strict reconstructed removed area: `0.000 ha`
 - Reviewed bridge removed area: `17482.824 ha`
-- Strict vs TSR delta: `738027.058 ha`
+- Strict vs TSR delta: `-11521.000 ha`
 - Reviewed vs TSR delta: `5961.824 ha`
-- Strict vs reviewed delta: `732065.235 ha`
-- Strict vs TSR: The strict lane is materially above the TSR benchmark here, so this looks like a real strict-lane overcut seam.
-- Reviewed difference: The strict lane is removing materially more area than the reviewed lane here.
-- Practical meaning: Strict is badly high against TSR here, so this is a real problem to fix even before looking at the reviewed lane.
+- Strict vs reviewed delta: `-17482.824 ha`
+- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
+- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
+- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
 - Engineering interpretation: The strict lane is applying a much broader legal fish-objective surface than the reviewed lane or TSR benchmark supports.
 - Recommended next move: Narrow the strict fish-habitat interpretation; this is one of the clearest strict overcut seams in the whole ladder.
 - Adjudication queue action: `fix_strict_logic` (Fix strict logic or semantics in FEMIC.)
-- Actionability: Inspect strict source inputs and exact logic first; this step may be cutting more area than the reviewed lane intended.
+- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
 - Supporting notes:
-  - strict spatial modes: `fragment_overlay`
+  - strict spatial modes: `blocked_exact_overlay`
   - strict compiled steps: `thlb_parent_009_critical_habitat_for_fish_compiled_01`
   - reviewed approval scope: `full_tsa_validation`
   - reviewed ratchet state: `approved`
@@ -342,11 +334,11 @@
 - Reviewed difference role: `manual_or_reviewed_override`
 - Problem ownership: `data_exogenous`
 - Difference nature: `missing_or_blocked_data`
-- Reconstructed status: `unsupported`
+- Reconstructed status: `not_executed`
 - Reviewed status: `approved`
 - TSR benchmark marginal deduction: `327.000 ha`
 - TSR benchmark cumulative area: `2415218.000 ha`
-- Strict reconstructed removed area: `0.000 ha`
+- Strict reconstructed removed area: `not recorded`
 - Reviewed bridge removed area: `not recorded`
 - Strict vs TSR delta: `-327.000 ha`
 - Strict vs TSR: The strict lane is close enough to the TSR benchmark here for practical exploratory use.
@@ -357,22 +349,17 @@
 - Adjudication queue action: `defer_low_priority` (Defer; this is not a top-priority repair right now.)
 - Actionability: Review the accepted reviewed override before changing the strict lane.
 - Supporting notes:
-  - strict compiled steps: `thlb_parent_010_lakeshore_management_compiled_01`
   - reviewed approval scope: `full_tsa_trivial_benchmark_skip`
   - reviewed ratchet state: `approved`
-  - strict note: TSA29 section 6.3.5 is a very small benchmark step and only applies to Class A lakes overlapping preservation VQO.
-  - strict note: The currently adopted public layers do not yet expose a trusted Class A lake discriminator for TSA29.
-  - strict note: Do not substitute the whole scenic-PR legal surface; it materially overcuts.
-  - strict note: Class B-E lakes are deferred to Section 7.2.6 assumptions logic, not excluded here.
 
 #### 11. Community areas of special concern
 
 - Parent step id: `thlb_parent_011_community_areas_of_special_concern`
-- Strict TSR fit: `strict_under_tsr_major`
-- Reviewed difference role: `reviewed_bridge_only`
+- Strict TSR fit: `not_comparable_to_tsr`
+- Reviewed difference role: `blocked_or_missing_source`
 - Problem ownership: `model_endogenous`
 - Difference nature: `reviewed_bridge_semantics`
-- Reconstructed status: `fragment_overlay`
+- Reconstructed status: `blocked_exact_overlay`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `62460.000 ha`
 - TSR benchmark cumulative area: `2352758.000 ha`
@@ -381,15 +368,15 @@
 - Strict vs TSR delta: `-62460.000 ha`
 - Reviewed vs TSR delta: `7085.637 ha`
 - Strict vs reviewed delta: `-69545.637 ha`
-- Strict vs TSR: The strict lane is materially below the TSR benchmark here, so this looks like a real strict-lane undercut seam.
-- Reviewed difference: The reviewed lane removed material area here, but the strict lane did not produce a comparable removal.
-- Practical meaning: Strict is badly low against TSR here, so this is a real seam to fix or bridge explicitly.
+- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
+- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
+- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
 - Engineering interpretation: The strict literal source choice is not reproducing the reviewed meaning of this step at all.
 - Recommended next move: Fix the strict semantics/source interpretation instead of treating this as a pure missing-data problem.
 - Adjudication queue action: `keep_reviewed_bridge` (Keep the reviewed bridge for now and do not force strict parity yet.)
-- Actionability: Decide whether the reviewed bridge should stay an accepted difference or be translated into strict semantics.
+- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
 - Supporting notes:
-  - strict spatial modes: `fragment_overlay`
+  - strict spatial modes: `blocked_exact_overlay`
   - strict compiled steps: `thlb_parent_011_community_areas_of_special_concern_compiled_01`
   - reviewed approval scope: `full_tsa_validation`
   - reviewed ratchet state: `approved`
@@ -402,11 +389,11 @@
 - Reviewed difference role: `manual_or_reviewed_override`
 - Problem ownership: `data_exogenous`
 - Difference nature: `missing_or_blocked_data`
-- Reconstructed status: `unsupported`
+- Reconstructed status: `not_executed`
 - Reviewed status: `approved`
 - TSR benchmark marginal deduction: `68401.000 ha`
 - TSR benchmark cumulative area: `2284357.000 ha`
-- Strict reconstructed removed area: `0.000 ha`
+- Strict reconstructed removed area: `not recorded`
 - Reviewed bridge removed area: `not recorded`
 - Strict vs TSR delta: `-68401.000 ha`
 - Strict vs TSR: The strict lane is materially below the TSR benchmark here, so this looks like a real strict-lane undercut seam.
@@ -417,22 +404,19 @@
 - Adjudication queue action: `improve_data_or_source` (Improve or replace the missing/weak source data.)
 - Actionability: Review the accepted reviewed override before changing the strict lane.
 - Supporting notes:
-  - strict compiled steps: `thlb_parent_012_proven_aboriginal_rights_areas_compiled_01`
   - reviewed approval scope: `full_tsa_public_data_unavailable_skip`
   - reviewed ratchet state: `approved`
-  - strict note: TSA29 section 6.4.1 defines the Proven Aboriginal Rights area conceptually but does not cite a clean public vector source in the data-package text.
-  - strict note: Current public lead is the PIP Consultation Areas public map service; treat this step as review/manual until a trustworthy boundary source or override is adopted.
 
 ### LHLB -> THLB
 
 #### 13. Areas considered inoperable
 
 - Parent step id: `thlb_parent_013_areas_considered_inoperable`
-- Strict TSR fit: `strict_under_tsr_minor`
-- Reviewed difference role: `manual_or_reviewed_override`
+- Strict TSR fit: `not_comparable_to_tsr`
+- Reviewed difference role: `blocked_or_missing_source`
 - Problem ownership: `reviewed_bridge_choice`
 - Difference nature: `accepted_reviewed_override`
-- Reconstructed status: `applied_noop`
+- Reconstructed status: `blocked_exact_overlay`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `33533.000 ha`
 - TSR benchmark cumulative area: `2250824.000 ha`
@@ -441,14 +425,15 @@
 - Strict vs TSR delta: `-33533.000 ha`
 - Reviewed vs TSR delta: `10095.139 ha`
 - Strict vs reviewed delta: `-43628.139 ha`
-- Strict vs TSR: The strict lane is somewhat below the TSR benchmark here, but not yet in the worst problem tier.
-- Reviewed difference: The reviewed lane is carrying an accepted override, skip, calibration, or no-op choice that the strict lane does not automatically share.
-- Practical meaning: Strict is off TSR here, but not in the very worst tier. The reviewed lane is using an accepted override, calibration, skip, or no-op that the strict lane does not automatically share.
+- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
+- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
+- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
 - Engineering interpretation: The reviewed lane uses accepted derived-attribute and calibrated bridge logic here that the strict checkpoint1 lane does not share.
 - Recommended next move: Keep the accepted reviewed bridge unless you explicitly decide to port its late-stage derived attributes into strict semantics.
 - Adjudication queue action: `keep_reviewed_bridge` (Keep the reviewed bridge for now and do not force strict parity yet.)
-- Actionability: Review the accepted reviewed override before changing the strict lane.
+- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
 - Supporting notes:
+  - strict spatial modes: `blocked_exact_overlay`
   - strict compiled steps: `thlb_parent_013_areas_considered_inoperable_compiled_01`, `thlb_parent_013_areas_considered_inoperable_compiled_02`
   - reviewed approval scope: `full_tsa_user_directed_acceptance`
   - reviewed ratchet state: `approved`
@@ -526,28 +511,28 @@
 #### 16. Recreation features
 
 - Parent step id: `thlb_parent_016_recreation_features`
-- Strict TSR fit: `tsr_close_enough`
-- Reviewed difference role: `manual_or_reviewed_override`
+- Strict TSR fit: `not_comparable_to_tsr`
+- Reviewed difference role: `blocked_or_missing_source`
 - Problem ownership: `mixed`
 - Difference nature: `partial_strict_logic`
-- Reconstructed status: `fragment_overlay`
+- Reconstructed status: `blocked_exact_overlay`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `9598.000 ha`
 - TSR benchmark cumulative area: `1871130.000 ha`
-- Strict reconstructed removed area: `4018.595 ha`
+- Strict reconstructed removed area: `0.000 ha`
 - Reviewed bridge removed area: `7562.895 ha`
-- Strict vs TSR delta: `-5579.405 ha`
+- Strict vs TSR delta: `-9598.000 ha`
 - Reviewed vs TSR delta: `-2035.105 ha`
-- Strict vs reviewed delta: `-3544.300 ha`
-- Strict vs TSR: The strict lane is close enough to the TSR benchmark here for practical exploratory use.
-- Reviewed difference: The reviewed lane is carrying an accepted override, skip, calibration, or no-op choice that the strict lane does not automatically share.
-- Practical meaning: Strict is close enough to TSR here, so this is not a top-priority repair. The reviewed lane is using an accepted override, calibration, skip, or no-op that the strict lane does not automatically share.
+- Strict vs reviewed delta: `-7562.895 ha`
+- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
+- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
+- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
 - Engineering interpretation: The strict lane only captures part of the reviewed recreation exclusion logic.
 - Recommended next move: Low-priority cleanup: improve strict logic if this step later matters to the remaining gap.
-- Adjudication queue action: `defer_low_priority` (Defer; this is not a top-priority repair right now.)
-- Actionability: Review the accepted reviewed override before changing the strict lane.
+- Adjudication queue action: `fix_strict_logic` (Fix strict logic or semantics in FEMIC.)
+- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
 - Supporting notes:
-  - strict spatial modes: `fragment_overlay`
+  - strict spatial modes: `blocked_exact_overlay`
   - strict compiled steps: `thlb_parent_016_recreation_features_compiled_01`
   - reviewed approval scope: `full_tsa_user_directed_acceptance`
   - reviewed ratchet state: `approved`
@@ -558,28 +543,28 @@
 #### 17. Growth and yield permanent sample plots
 
 - Parent step id: `thlb_parent_017_growth_and_yield_permanent_sample_plots`
-- Strict TSR fit: `tsr_close_enough`
-- Reviewed difference role: `strict_undercut_candidate`
+- Strict TSR fit: `not_comparable_to_tsr`
+- Reviewed difference role: `blocked_or_missing_source`
 - Problem ownership: `data_exogenous`
 - Difference nature: `weak_public_coverage`
-- Reconstructed status: `fragment_overlay`
+- Reconstructed status: `blocked_exact_overlay`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `3577.000 ha`
 - TSR benchmark cumulative area: `1867553.000 ha`
-- Strict reconstructed removed area: `240.685 ha`
+- Strict reconstructed removed area: `0.000 ha`
 - Reviewed bridge removed area: `1261.158 ha`
-- Strict vs TSR delta: `-3336.315 ha`
+- Strict vs TSR delta: `-3577.000 ha`
 - Reviewed vs TSR delta: `-2315.842 ha`
-- Strict vs reviewed delta: `-1020.473 ha`
-- Strict vs TSR: The strict lane is close enough to the TSR benchmark here for practical exploratory use.
-- Reviewed difference: The strict lane is removing materially less area than the reviewed lane here.
-- Practical meaning: Strict is close enough to TSR here, so this is not a top-priority repair. The reviewed lane is heavier here than the strict lane.
+- Strict vs reviewed delta: `-1261.158 ha`
+- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
+- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
+- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
 - Engineering interpretation: The strict lane undercuts here, but the public PSP geometry signal is weak and the absolute area is small.
 - Recommended next move: Treat this as a lower-priority data-coverage seam unless a better PSP source becomes available.
-- Adjudication queue action: `defer_low_priority` (Defer; this is not a top-priority repair right now.)
-- Actionability: Inspect missing strict semantics, missing source layers, or reviewed bridge logic the strict lane does not yet share.
+- Adjudication queue action: `improve_data_or_source` (Improve or replace the missing/weak source data.)
+- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
 - Supporting notes:
-  - strict spatial modes: `fragment_overlay`
+  - strict spatial modes: `blocked_exact_overlay`
   - strict compiled steps: `thlb_parent_017_growth_and_yield_permanent_sample_plots_compiled_01`
   - reviewed approval scope: `single_lu_smoke_subset_williams_lake`
   - reviewed ratchet state: `approved`
@@ -587,45 +572,43 @@
 #### 18. Riparian areas
 
 - Parent step id: `thlb_parent_018_riparian_areas`
-- Strict TSR fit: `strict_under_tsr_minor`
-- Reviewed difference role: `strict_undercut_candidate`
+- Strict TSR fit: `not_comparable_to_tsr`
+- Reviewed difference role: `blocked_or_missing_source`
 - Problem ownership: `mixed`
 - Difference nature: `missing_or_blocked_data`
-- Reconstructed status: `fragment_overlay`
+- Reconstructed status: `blocked_exact_overlay`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `54833.000 ha`
 - TSR benchmark cumulative area: `1812720.000 ha`
-- Strict reconstructed removed area: `15975.371 ha`
+- Strict reconstructed removed area: `0.000 ha`
 - Reviewed bridge removed area: `72204.542 ha`
-- Strict vs TSR delta: `-38857.629 ha`
+- Strict vs TSR delta: `-54833.000 ha`
 - Reviewed vs TSR delta: `17371.542 ha`
-- Strict vs reviewed delta: `-56229.170 ha`
-- Strict vs TSR: The strict lane is somewhat below the TSR benchmark here, but not yet in the worst problem tier.
-- Reviewed difference: The strict lane is removing materially less area than the reviewed lane here.
-- Practical meaning: Strict is off TSR here, but not in the very worst tier. The reviewed lane is heavier here than the strict lane.
+- Strict vs reviewed delta: `-72204.542 ha`
+- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
+- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
+- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
 - Engineering interpretation: The strict lane is still missing some of the lake-class and special-case riparian inputs that the reviewed bridge used.
 - Recommended next move: Improve source coverage first, then revisit the strict riparian logic if the gap remains large.
 - Adjudication queue action: `improve_data_or_source` (Improve or replace the missing/weak source data.)
-- Actionability: Inspect missing strict semantics, missing source layers, or reviewed bridge logic the strict lane does not yet share.
+- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
 - Supporting notes:
-  - strict spatial modes: `fragment_overlay`
-  - strict compiled steps: `thlb_parent_018_riparian_areas_compiled_stream_s1`, `thlb_parent_018_riparian_areas_compiled_stream_s2`, `thlb_parent_018_riparian_areas_compiled_stream_s3`, `thlb_parent_018_riparian_areas_compiled_stream_s4`, `thlb_parent_018_riparian_areas_compiled_stream_s5`, `thlb_parent_018_riparian_areas_compiled_stream_s6`, `thlb_parent_018_riparian_areas_compiled_wetland_w1`, `thlb_parent_018_riparian_areas_compiled_wetland_w2`, `thlb_parent_018_riparian_areas_compiled_wetland_w3`, `thlb_parent_018_riparian_areas_compiled_wetland_w4`, `thlb_parent_018_riparian_areas_compiled_wetland_w5`, `thlb_parent_018_riparian_areas_compiled_lakes_review`, `thlb_parent_018_riparian_areas_compiled_s4_special_review`
+  - strict spatial modes: `blocked_exact_overlay`
+  - strict compiled steps: `thlb_parent_018_riparian_areas_compiled_stream_s1`, `thlb_parent_018_riparian_areas_compiled_stream_s2`, `thlb_parent_018_riparian_areas_compiled_stream_s3`, `thlb_parent_018_riparian_areas_compiled_stream_s4`, `thlb_parent_018_riparian_areas_compiled_stream_s5`, `thlb_parent_018_riparian_areas_compiled_stream_s6`, `thlb_parent_018_riparian_areas_compiled_wetland_w1`, `thlb_parent_018_riparian_areas_compiled_wetland_w2`, `thlb_parent_018_riparian_areas_compiled_wetland_w3`, `thlb_parent_018_riparian_areas_compiled_wetland_w4`, `thlb_parent_018_riparian_areas_compiled_wetland_w5`
   - reviewed approval scope: `single_lu_smoke_subset_williams_lake`
   - reviewed ratchet state: `approved`
   - strict note: Step 3 already removed the direct non-forest waterbody area; this later THLB step models the additional riparian buffer.
   - strict note: The Table 15 riparian width already folds RRZ plus retained RMZ share into an equivalent full-exclusion width.
   - strict note: Step 3 already removed the direct wetland polygon area; this later THLB step models the additional riparian buffer.
-  - strict note: Table 15 includes lake classes L1-B, L2, and L3/L4, but the current TSA29 instance does not yet have a trustworthy lake-class artifact wired into the notebook bridge.
-  - strict note: TSA29 section 6.4.2 increases the S4 riparian area width in the Niut SRDZ and South Chilcotin SRDZ to protect dolly varden trout habitat. This first runnable pass leaves that special-case refinement as reviewed/manual logic.
 
 #### 19. Buffered trails
 
 - Parent step id: `thlb_parent_019_buffered_trails`
-- Strict TSR fit: `tsr_close_enough`
-- Reviewed difference role: `manual_or_reviewed_override`
+- Strict TSR fit: `not_comparable_to_tsr`
+- Reviewed difference role: `blocked_or_missing_source`
 - Problem ownership: `reviewed_bridge_choice`
 - Difference nature: `accepted_reviewed_override`
-- Reconstructed status: `fragment_overlay`
+- Reconstructed status: `blocked_exact_overlay`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `8039.000 ha`
 - TSR benchmark cumulative area: `1804681.000 ha`
@@ -634,15 +617,15 @@
 - Strict vs TSR delta: `-8039.000 ha`
 - Reviewed vs TSR delta: `2205.748 ha`
 - Strict vs reviewed delta: `-10244.748 ha`
-- Strict vs TSR: The strict lane is close enough to the TSR benchmark here for practical exploratory use.
-- Reviewed difference: The reviewed lane is carrying an accepted override, skip, calibration, or no-op choice that the strict lane does not automatically share.
-- Practical meaning: Strict is close enough to TSR here, so this is not a top-priority repair. The reviewed lane is using an accepted override, calibration, skip, or no-op that the strict lane does not automatically share.
+- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
+- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
+- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
 - Engineering interpretation: The reviewed lane uses an accepted equivalent-corridor bridge here, while the strict lane currently does not reproduce that bridge.
 - Recommended next move: Keep the accepted bridge unless you explicitly decide to formalize the same equivalent-corridor logic in strict mode.
-- Adjudication queue action: `defer_low_priority` (Defer; this is not a top-priority repair right now.)
-- Actionability: Review the accepted reviewed override before changing the strict lane.
+- Adjudication queue action: `keep_reviewed_bridge` (Keep the reviewed bridge for now and do not force strict parity yet.)
+- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
 - Supporting notes:
-  - strict spatial modes: `fragment_overlay`
+  - strict spatial modes: `blocked_exact_overlay`
   - strict compiled steps: `thlb_parent_019_buffered_trails_compiled_01`
   - reviewed approval scope: `full_tsa_user_directed_acceptance`
   - reviewed ratchet state: `approved`
@@ -660,11 +643,11 @@
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `94417.000 ha`
 - TSR benchmark cumulative area: `1710264.000 ha`
-- Strict reconstructed removed area: `17754.716 ha`
+- Strict reconstructed removed area: `44166.324 ha`
 - Reviewed bridge removed area: `33627.943 ha`
-- Strict vs TSR delta: `-76662.284 ha`
+- Strict vs TSR delta: `-50250.676 ha`
 - Reviewed vs TSR delta: `-60789.057 ha`
-- Strict vs reviewed delta: `-15873.226 ha`
+- Strict vs reviewed delta: `10538.381 ha`
 - Strict vs TSR: The strict lane is materially below the TSR benchmark here, so this looks like a real strict-lane undercut seam.
 - Reviewed difference: The strict lane used a documented aspatial fallback here instead of exact spatial reproduction.
 - Practical meaning: Strict is badly low against TSR here, so this is a real seam to fix or bridge explicitly.
@@ -684,7 +667,7 @@
 #### 21. Cultural heritage and archaeological resources
 
 - Parent step id: `thlb_parent_021_cultural_heritage_and_archaeological_resources`
-- Strict TSR fit: `strict_under_tsr_minor`
+- Strict TSR fit: `tsr_close_enough`
 - Reviewed difference role: `aspatial_bridge_difference`
 - Problem ownership: `reviewed_bridge_choice`
 - Difference nature: `accepted_aspatial_bridge`
@@ -692,18 +675,18 @@
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `34205.000 ha`
 - TSR benchmark cumulative area: `1676059.000 ha`
-- Strict reconstructed removed area: `6309.011 ha`
+- Strict reconstructed removed area: `15694.187 ha`
 - Reviewed bridge removed area: `11512.712 ha`
-- Strict vs TSR delta: `-27895.989 ha`
+- Strict vs TSR delta: `-18510.813 ha`
 - Reviewed vs TSR delta: `-22692.288 ha`
-- Strict vs reviewed delta: `-5203.701 ha`
-- Strict vs TSR: The strict lane is somewhat below the TSR benchmark here, but not yet in the worst problem tier.
+- Strict vs reviewed delta: `4181.474 ha`
+- Strict vs TSR: The strict lane is close enough to the TSR benchmark here for practical exploratory use.
 - Reviewed difference: The strict lane used a documented aspatial fallback here instead of exact spatial reproduction.
-- Practical meaning: Strict is off TSR here, but not in the very worst tier. The reviewed difference here is mostly about an explicit aspatial bridge choice rather than exact spatial truth.
+- Practical meaning: Strict is close enough to TSR here, so this is not a top-priority repair. The reviewed difference here is mostly about an explicit aspatial bridge choice rather than exact spatial truth.
 - Engineering interpretation: This step is intentionally being modeled as an aspatial THLB bridge rather than a single exact spatial layer.
 - Recommended next move: Keep the documented aspatial fallback unless a defensible exact spatial contract is introduced later.
-- Adjudication queue action: `use_documented_aspatial_fallback` (Keep or formalize a documented aspatial fallback.)
-- Actionability: Decide whether this documented aspatial fallback should remain the working contract or be replaced by a better exact implementation later.
+- Adjudication queue action: `defer_low_priority` (Defer; this is not a top-priority repair right now.)
+- Actionability: Decide whether this documented aspatial fallback should remain a bridge or be replaced by exact spatial logic later.
 - Supporting notes:
   - strict spatial modes: `aspatial_fallback`
   - strict compiled steps: `thlb_parent_021_cultural_heritage_and_archaeological_resources_compiled_01`
