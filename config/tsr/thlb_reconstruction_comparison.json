@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-04-12T01:46:00.381590+00:00",
+  "generated_utc": "2026-04-12T05:46:01.820457+00:00",
   "artifact_kind": "thlb_reconstruction_comparison",
   "tsa": {
     "tsa_id": "tsa_29",
@@ -9,6 +9,7 @@
   "recipe_path": "config/tsr/thlb_netdown.recipe.yaml",
   "reviewed_status_path": "config/tsr/thlb_netdown.status.md",
   "reconstructed_audit_path": "config/tsr/thlb_reconstructed.audit.json",
+  "reconstructed_baseline_signal": "checkpoint1_aflb_initialization",
   "comparison_markdown_path": "config/tsr/thlb_reconstruction_comparison.md",
   "comparison_json_path": "config/tsr/thlb_reconstruction_comparison.json",
   "reconstructed_final_managed_area_ha": 903685.4088140735,
@@ -143,7 +144,7 @@
       "difference_nature": "reviewed_bridge_semantics",
       "adjudication_action": "keep_reviewed_bridge",
       "adjudication_action_summary": "Keep the reviewed bridge for now and do not force strict parity yet.",
-      "recommended_next_move": "Decide and document the intended strict non-forest semantics before changing code again; this is not just a missing-data problem."
+      "recommended_next_move": "Decide and document the intended strict non-forest semantics before changing code again; this is not just a missing-data problem, and the current stepwise delta should be read as a baseline-conditioned diagnostic rather than a literal raw-GLB replay."
     },
     {
       "row_order": 4,
@@ -413,7 +414,8 @@
         "strict compiled steps: `thlb_parent_002_land_not_administered_by_the_province_compiled_01`, `thlb_parent_002_land_not_administered_by_the_province_compiled_02`",
         "reviewed approval scope: `single_lu_smoke_subset_williams_lake`",
         "reviewed ratchet state: `approved`",
-        "strict note: The TSA29 prose cites dedicated NStQ and Tsilhqot'in title exclusions that are not yet separated cleanly from the generic F_OWN ownership classes in the notebook bridge."
+        "strict note: The TSA29 prose cites dedicated NStQ and Tsilhqot'in title exclusions that are not yet separated cleanly from the generic F_OWN ownership classes in the notebook bridge.",
+        "strict note: Early GLB -> AFLB stepwise deltas in reconstructed mode are conditioned by checkpoint1/AFLB initialization rather than a literal raw-GLB replay."
       ]
     },
     {
@@ -440,8 +442,8 @@
       "difference_nature": "reviewed_bridge_semantics",
       "plain_language_reason": "The reviewed lane removed material area here, but the strict lane did not produce a comparable removal.",
       "practical_meaning": "Strict is badly low against TSR here, so this is a real seam to fix or bridge explicitly.",
-      "engineering_interpretation": "The strict lane is only doing a narrow direct waterbody removal here, while the reviewed lane is carrying a much broader non-forest interpretation.",
-      "recommended_next_move": "Decide and document the intended strict non-forest semantics before changing code again; this is not just a missing-data problem.",
+      "engineering_interpretation": "The strict lane is only doing a narrow direct waterbody removal here, while the reviewed lane is carrying a much broader non-forest interpretation; in addition, this early GLB-to-AFLB comparison is conditioned by checkpoint1/AFLB initialization rather than a literal raw-GLB replay.",
+      "recommended_next_move": "Decide and document the intended strict non-forest semantics before changing code again; this is not just a missing-data problem, and the current stepwise delta should be read as a baseline-conditioned diagnostic rather than a literal raw-GLB replay.",
       "adjudication_action": "keep_reviewed_bridge",
       "adjudication_action_summary": "Keep the reviewed bridge for now and do not force strict parity yet.",
       "actionability": "Decide whether the reviewed bridge should stay an accepted difference or be translated into strict semantics.",
@@ -451,7 +453,8 @@
         "reviewed approval scope: `single_lu_smoke_subset_williams_lake`",
         "reviewed ratchet state: `approved`",
         "strict note: Riparian reserve and riparian management zone buffers are handled in the later riparian parent step, not here.",
-        "strict note: This subrule only performs the direct Freshwater Atlas lakes/rivers/wetlands exclusion described in the non-forest step."
+        "strict note: This subrule only performs the direct Freshwater Atlas lakes/rivers/wetlands exclusion described in the non-forest step.",
+        "strict note: Early GLB -> AFLB stepwise deltas in reconstructed mode are conditioned by checkpoint1/AFLB initialization rather than a literal raw-GLB replay."
       ]
     },
     {
@@ -487,7 +490,8 @@
         "strict compiled steps: `thlb_parent_004_roads_and_landings_compiled_01`, `thlb_parent_004_roads_and_landings_compiled_02`, `thlb_parent_004_roads_and_landings_compiled_03`",
         "reviewed approval scope: `single_lu_smoke_subset_williams_lake`",
         "reviewed ratchet state: `approved`",
-        "strict note: Temporary roads and landings remain a review item in the notebook bridge until the non-spatial deduction path is formalized."
+        "strict note: Temporary roads and landings remain a review item in the notebook bridge until the non-spatial deduction path is formalized.",
+        "strict note: Early GLB -> AFLB stepwise deltas in reconstructed mode are conditioned by checkpoint1/AFLB initialization rather than a literal raw-GLB replay."
       ]
     },
     {
@@ -521,7 +525,8 @@
       "actionability": "Reference/context row only; no direct corrective action.",
       "supporting_notes": [
         "strict compiled steps: `thlb_parent_005_analysis_forest_land_base_compiled_01`",
-        "reviewed ratchet state: `milestone_node`"
+        "reviewed ratchet state: `milestone_node`",
+        "strict note: Early GLB -> AFLB stepwise deltas in reconstructed mode are conditioned by checkpoint1/AFLB initialization rather than a literal raw-GLB replay."
       ]
     },
     {

@@ -1,9 +1,10 @@
 # THLB Reconstruction Comparison: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-12T01:46:00.381590+00:00`
+- Generated UTC: `2026-04-12T05:46:01.820457+00:00`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Reviewed bridge status report: `config/tsr/thlb_netdown.status.md`
 - Reconstructed audit JSON: `config/tsr/thlb_reconstructed.audit.json`
+- Reconstructed baseline signal: `checkpoint1_aflb_initialization`
 
 ## Summary
 
@@ -22,6 +23,7 @@
 - The reviewed lane was accepted because its cumulative THLB was close enough to the TSR benchmark for practical exploratory modeling use.
 - Reviewed per-step behavior is therefore useful context, not automatic gold-standard truth for strict reconstruction.
 - A parent step is a top-priority strict-lane repair when strict is materially bad against TSR, not merely because strict differs from reviewed.
+- For early `GLB -> AFLB` rows, strict stepwise marginal deductions are conditioned by `checkpoint1_aflb_initialization` in the current reconstructed lane, so treat those deltas as diagnostic rather than as a literal raw-GLB replay.
 
 ## Strict-vs-TSR Fit Counts
 
@@ -136,6 +138,7 @@
   - reviewed approval scope: `single_lu_smoke_subset_williams_lake`
   - reviewed ratchet state: `approved`
   - strict note: The TSA29 prose cites dedicated NStQ and Tsilhqot'in title exclusions that are not yet separated cleanly from the generic F_OWN ownership classes in the notebook bridge.
+  - strict note: Early GLB -> AFLB stepwise deltas in reconstructed mode are conditioned by checkpoint1/AFLB initialization rather than a literal raw-GLB replay.
 
 #### 3. Non-forest
 
@@ -156,8 +159,8 @@
 - Strict vs TSR: The strict lane is materially below the TSR benchmark here, so this looks like a real strict-lane undercut seam.
 - Reviewed difference: The reviewed lane removed material area here, but the strict lane did not produce a comparable removal.
 - Practical meaning: Strict is badly low against TSR here, so this is a real seam to fix or bridge explicitly.
-- Engineering interpretation: The strict lane is only doing a narrow direct waterbody removal here, while the reviewed lane is carrying a much broader non-forest interpretation.
-- Recommended next move: Decide and document the intended strict non-forest semantics before changing code again; this is not just a missing-data problem.
+- Engineering interpretation: The strict lane is only doing a narrow direct waterbody removal here, while the reviewed lane is carrying a much broader non-forest interpretation; in addition, this early GLB-to-AFLB comparison is conditioned by checkpoint1/AFLB initialization rather than a literal raw-GLB replay.
+- Recommended next move: Decide and document the intended strict non-forest semantics before changing code again; this is not just a missing-data problem, and the current stepwise delta should be read as a baseline-conditioned diagnostic rather than a literal raw-GLB replay.
 - Adjudication queue action: `keep_reviewed_bridge` (Keep the reviewed bridge for now and do not force strict parity yet.)
 - Actionability: Decide whether the reviewed bridge should stay an accepted difference or be translated into strict semantics.
 - Supporting notes:
@@ -167,6 +170,7 @@
   - reviewed ratchet state: `approved`
   - strict note: Riparian reserve and riparian management zone buffers are handled in the later riparian parent step, not here.
   - strict note: This subrule only performs the direct Freshwater Atlas lakes/rivers/wetlands exclusion described in the non-forest step.
+  - strict note: Early GLB -> AFLB stepwise deltas in reconstructed mode are conditioned by checkpoint1/AFLB initialization rather than a literal raw-GLB replay.
 
 #### 4. Roads and landings
 
@@ -196,6 +200,7 @@
   - reviewed approval scope: `single_lu_smoke_subset_williams_lake`
   - reviewed ratchet state: `approved`
   - strict note: Temporary roads and landings remain a review item in the notebook bridge until the non-spatial deduction path is formalized.
+  - strict note: Early GLB -> AFLB stepwise deltas in reconstructed mode are conditioned by checkpoint1/AFLB initialization rather than a literal raw-GLB replay.
 
 ### AFLB -> LHLB
 
