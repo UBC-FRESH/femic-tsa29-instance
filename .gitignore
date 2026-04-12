@@ -41,6 +41,7 @@ runtime/logs/tsr/lu_partitions/
 runtime/logs/tsr/parallel_benchmarks/
 runtime/logs/tsr/issue140_acceptance/
 runtime/logs/tsr/reconstructed_diagnostics/
+runtime/logs/tsr/reconstructed_lu/
 runtime/logs/tsr/*.json
 runtime/logs/tsr/*.txt
 models/tsa29_patchworks_model/patchworksLog.csv
