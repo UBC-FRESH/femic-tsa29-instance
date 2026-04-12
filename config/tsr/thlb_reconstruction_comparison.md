@@ -1,6 +1,6 @@
 # THLB Reconstruction Comparison: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-12T06:07:23.501480+00:00`
+- Generated UTC: `2026-04-12T06:15:19.958892+00:00`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Reviewed bridge status report: `config/tsr/thlb_netdown.status.md`
 - Reconstructed audit JSON: `config/tsr/thlb_reconstructed.audit.json`
@@ -97,6 +97,8 @@
 - This report does not change THLB logic. It explains how the strict reconstructed lane fits against the TSR benchmark and uses the reviewed lane as supporting context.
 - The governing question is whether strict is close enough to TSR, not whether strict matches reviewed step-for-step.
 - Reviewed differences still matter, but mainly because they explain accepted bridges, skips, calibrations, or semantic differences that the strict lane does not automatically share.
+- For the current TSA29 adjudication pass, this report is an active repair ledger: once a parent step is understood well enough to choose an actionable next move, land that change before moving to the next step.
+- Only leave a step as analysis-only when the chosen action is explicitly to defer, keep a reviewed bridge for now, or wait on missing data/source improvements.
 
 ## Backbone Milestones
 
