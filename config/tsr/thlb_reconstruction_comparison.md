@@ -1,6 +1,6 @@
 # THLB Reconstruction Comparison: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-12T05:46:01.820457+00:00`
+- Generated UTC: `2026-04-12T06:07:23.501480+00:00`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Reviewed bridge status report: `config/tsr/thlb_netdown.status.md`
 - Reconstructed audit JSON: `config/tsr/thlb_reconstructed.audit.json`
@@ -57,7 +57,7 @@
 
 - 2. `thlb_parent_002_land_not_administered_by_the_province` | Land not administered by the Province | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
 - 3. `thlb_parent_003_non_forest` | Non-forest | action=`keep_reviewed_bridge` | tsr-fit=`strict_under_tsr_major` | ownership=`model_endogenous`
-- 4. `thlb_parent_004_roads_and_landings` | Roads and landings | action=`defer_low_priority` | tsr-fit=`strict_under_tsr_major` | ownership=`mixed`
+- 4. `thlb_parent_004_roads_and_landings` | Roads and landings | action=`use_documented_aspatial_fallback` | tsr-fit=`strict_under_tsr_major` | ownership=`mixed`
 - 6. `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | action=`fix_strict_logic` | tsr-fit=`strict_under_tsr_major` | ownership=`mixed`
 - 7. `thlb_parent_007_old_growth_management_areas` | Old growth management areas | action=`fix_strict_logic` | tsr-fit=`strict_over_tsr_minor` | ownership=`model_endogenous`
 - 8. `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | action=`fix_strict_logic` | tsr-fit=`strict_over_tsr_major` | ownership=`model_endogenous`
@@ -178,7 +178,7 @@
 - Strict TSR fit: `strict_under_tsr_major`
 - Reviewed difference role: `close_match`
 - Problem ownership: `mixed`
-- Difference nature: `close_match`
+- Difference nature: `accepted_aspatial_bridge`
 - Reconstructed status: `applied_noop+unsupported`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `50434.000 ha`
@@ -191,10 +191,10 @@
 - Strict vs TSR: The strict lane is materially below the TSR benchmark here, so this looks like a real strict-lane undercut seam.
 - Reviewed difference: The strict and reviewed lanes are close enough here that this parent step does not look like a major driver of the remaining gap.
 - Practical meaning: Strict is badly low against TSR here, so this is a real seam to fix or bridge explicitly.
-- Engineering interpretation: The strict and reviewed lanes are close enough here that this step does not look like a major source of the overall THLB gap.
-- Recommended next move: No immediate action; treat this as a lower-priority reference step.
-- Adjudication queue action: `defer_low_priority` (Defer; this is not a top-priority repair right now.)
-- Actionability: No immediate action; keep this as a reference step.
+- Engineering interpretation: The TSR itself says existing roads, trails, and landings are modeled non-spatially through partial AFLB reductions because the features are too small and incomplete to track cleanly at landscape scale. The current strict lane only runs two narrow permanent-road buffer overlays and finds no active fragments, while the reviewed lane only has a Williams Lake smoke proof rather than a full-TSA bridge.
+- Recommended next move: Formalize this step as a documented aspatial AFLB reduction in the strict lane instead of trying to force the current tiny spatial-only result to stand in for the full TSR deduction.
+- Adjudication queue action: `use_documented_aspatial_fallback` (Keep or formalize a documented aspatial fallback.)
+- Actionability: Decide whether this documented aspatial fallback should remain the working contract or be replaced by a better exact implementation later.
 - Supporting notes:
   - strict compiled steps: `thlb_parent_004_roads_and_landings_compiled_01`, `thlb_parent_004_roads_and_landings_compiled_02`, `thlb_parent_004_roads_and_landings_compiled_03`
   - reviewed approval scope: `single_lu_smoke_subset_williams_lake`
@@ -669,7 +669,7 @@
 - Engineering interpretation: This step is intentionally being modeled as an aspatial future-WTRA bridge rather than an exact mapped exclusion.
 - Recommended next move: Keep the documented aspatial fallback unless a better exact contract is deliberately adopted later.
 - Adjudication queue action: `use_documented_aspatial_fallback` (Keep or formalize a documented aspatial fallback.)
-- Actionability: Decide whether this documented aspatial fallback should remain a bridge or be replaced by exact spatial logic later.
+- Actionability: Decide whether this documented aspatial fallback should remain the working contract or be replaced by a better exact implementation later.
 - Supporting notes:
   - strict spatial modes: `aspatial_fallback`
   - strict compiled steps: `thlb_parent_020_wildlife_tree_retention_areas_compiled_01`
@@ -701,7 +701,7 @@
 - Engineering interpretation: This step is intentionally being modeled as an aspatial THLB bridge rather than a single exact spatial layer.
 - Recommended next move: Keep the documented aspatial fallback unless a defensible exact spatial contract is introduced later.
 - Adjudication queue action: `use_documented_aspatial_fallback` (Keep or formalize a documented aspatial fallback.)
-- Actionability: Decide whether this documented aspatial fallback should remain a bridge or be replaced by exact spatial logic later.
+- Actionability: Decide whether this documented aspatial fallback should remain the working contract or be replaced by a better exact implementation later.
 - Supporting notes:
   - strict spatial modes: `aspatial_fallback`
   - strict compiled steps: `thlb_parent_021_cultural_heritage_and_archaeological_resources_compiled_01`

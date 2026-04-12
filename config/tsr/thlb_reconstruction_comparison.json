@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-04-12T05:46:01.820457+00:00",
+  "generated_utc": "2026-04-12T06:07:23.501480+00:00",
   "artifact_kind": "thlb_reconstruction_comparison",
   "tsa": {
     "tsa_id": "tsa_29",
@@ -44,11 +44,11 @@
     "tsr_close_enough": 6
   },
   "adjudication_action_counts": {
-    "defer_low_priority": 7,
+    "defer_low_priority": 6,
     "fix_strict_logic": 8,
     "improve_data_or_source": 2,
     "keep_reviewed_bridge": 5,
-    "use_documented_aspatial_fallback": 2
+    "use_documented_aspatial_fallback": 3
   },
   "top_strict_vs_tsr_parent_steps": [
     {
@@ -152,10 +152,10 @@
       "parent_label": "Roads and landings",
       "tsr_fit_class": "strict_under_tsr_major",
       "problem_ownership": "mixed",
-      "difference_nature": "close_match",
-      "adjudication_action": "defer_low_priority",
-      "adjudication_action_summary": "Defer; this is not a top-priority repair right now.",
-      "recommended_next_move": "No immediate action; treat this as a lower-priority reference step."
+      "difference_nature": "accepted_aspatial_bridge",
+      "adjudication_action": "use_documented_aspatial_fallback",
+      "adjudication_action_summary": "Keep or formalize a documented aspatial fallback.",
+      "recommended_next_move": "Formalize this step as a documented aspatial AFLB reduction in the strict lane instead of trying to force the current tiny spatial-only result to stand in for the full TSR deduction."
     },
     {
       "row_order": 6,
@@ -478,14 +478,14 @@
       "reviewed_difference_role": "close_match",
       "comparison_bucket": "close_match",
       "problem_ownership": "mixed",
-      "difference_nature": "close_match",
+      "difference_nature": "accepted_aspatial_bridge",
       "plain_language_reason": "The strict and reviewed lanes are close enough here that this parent step does not look like a major driver of the remaining gap.",
       "practical_meaning": "Strict is badly low against TSR here, so this is a real seam to fix or bridge explicitly.",
-      "engineering_interpretation": "The strict and reviewed lanes are close enough here that this step does not look like a major source of the overall THLB gap.",
-      "recommended_next_move": "No immediate action; treat this as a lower-priority reference step.",
-      "adjudication_action": "defer_low_priority",
-      "adjudication_action_summary": "Defer; this is not a top-priority repair right now.",
-      "actionability": "No immediate action; keep this as a reference step.",
+      "engineering_interpretation": "The TSR itself says existing roads, trails, and landings are modeled non-spatially through partial AFLB reductions because the features are too small and incomplete to track cleanly at landscape scale. The current strict lane only runs two narrow permanent-road buffer overlays and finds no active fragments, while the reviewed lane only has a Williams Lake smoke proof rather than a full-TSA bridge.",
+      "recommended_next_move": "Formalize this step as a documented aspatial AFLB reduction in the strict lane instead of trying to force the current tiny spatial-only result to stand in for the full TSR deduction.",
+      "adjudication_action": "use_documented_aspatial_fallback",
+      "adjudication_action_summary": "Keep or formalize a documented aspatial fallback.",
+      "actionability": "Decide whether this documented aspatial fallback should remain the working contract or be replaced by a better exact implementation later.",
       "supporting_notes": [
         "strict compiled steps: `thlb_parent_004_roads_and_landings_compiled_01`, `thlb_parent_004_roads_and_landings_compiled_02`, `thlb_parent_004_roads_and_landings_compiled_03`",
         "reviewed approval scope: `single_lu_smoke_subset_williams_lake`",
@@ -1100,7 +1100,7 @@
       "recommended_next_move": "Keep the documented aspatial fallback unless a better exact contract is deliberately adopted later.",
       "adjudication_action": "use_documented_aspatial_fallback",
       "adjudication_action_summary": "Keep or formalize a documented aspatial fallback.",
-      "actionability": "Decide whether this documented aspatial fallback should remain a bridge or be replaced by exact spatial logic later.",
+      "actionability": "Decide whether this documented aspatial fallback should remain the working contract or be replaced by a better exact implementation later.",
       "supporting_notes": [
         "strict spatial modes: `aspatial_fallback`",
         "strict compiled steps: `thlb_parent_020_wildlife_tree_retention_areas_compiled_01`",
@@ -1139,7 +1139,7 @@
       "recommended_next_move": "Keep the documented aspatial fallback unless a defensible exact spatial contract is introduced later.",
       "adjudication_action": "use_documented_aspatial_fallback",
       "adjudication_action_summary": "Keep or formalize a documented aspatial fallback.",
-      "actionability": "Decide whether this documented aspatial fallback should remain a bridge or be replaced by exact spatial logic later.",
+      "actionability": "Decide whether this documented aspatial fallback should remain the working contract or be replaced by a better exact implementation later.",
       "supporting_notes": [
         "strict spatial modes: `aspatial_fallback`",
         "strict compiled steps: `thlb_parent_021_cultural_heritage_and_archaeological_resources_compiled_01`",
