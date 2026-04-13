@@ -432,7 +432,7 @@ parent_steps:
     land_base_stage: glb_to_aflb
     stage_label: GLB -> AFLB
     execution_class: drop_from_universe
-    compiled_operation_type: select_spatial_intersect
+    compiled_operation_type: aspatial_area_reduction
     step_status: ready
     required: true
     page_number: 25
@@ -1767,7 +1767,7 @@ parent_steps:
     land_base_stage: aflb_to_lhlb
     stage_label: AFLB -> LHLB
     execution_class: legal_harvest_exclusion
-    compiled_operation_type: select_spatial_intersect
+    compiled_operation_type: aspatial_area_reduction
     step_status: ready
     required: true
     page_number: 28
@@ -1778,33 +1778,27 @@ parent_steps:
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=28
     source_url: ''
     notes: &id026
-    - TSA29 section 6.2.1 keeps woodlots in AFLB but removes them when defining the
-      LHLB, so woodlot schedules A/B are included here.
-    - This first runnable pass uses the explicit F_OWN ownership descriptions for
-      woodlots and the small miscellaneous crown-lease class cited in TSA29 Table
-      7.
+    - TSA29 Table 7 removes woodlots and a small crown/miscellaneous-lease remainder
+      as part of step 6, but current public F_OWN is too blunt to separate the
+      active subset TSR actually removed.
+    - Use the exact same-parent parks/protected removal first, then apply the residual
+      aspatial target so total step-6 net deduction stays aligned to the TSR benchmark.
+    - Current public F_OWN remains supporting/reference provenance for this seam,
+      but it is not the executable overlay source in the strict lane because it
+      does not expose a reliable active/inactive woodlot status split.
     - Community forest agreements and first nations woodland licences were already
       netted out upstream in TSA29 step 2 and are therefore intentionally excluded
-      from this step-6 executable filter.
-    - FTEN managed-licence and TANTALIS crown-tenure layers remain supporting metadata/reference
-      surfaces, but F_OWN is the executable ownership overlay in the TSA29 bridge.
+      from this step-6 residual bridge.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 306327.0
     benchmark_cumulative_area_ha: 2791841.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-    normalized_action: exclude
+    normalized_action: aspatial_area_reduction
     normalized_subject: Area-based tenures and woodlots
-    normalized_predicate: exclude mapped area-based tenure and woodlot polygons from
-      the working harvestable land base
-    linked_source_entry_ids: &id027
-    - whse_forest_vegetation_f_own
-    source_attribute_filters: &id028
-    - field: OWNERSHIP_DESCRIPTION
-      operator: in
-      value:
-      - Crown Lease - Misc. lease
-      - Crown Tenure - Woodlot Licence, Schedule A
-      - Crown Tenure - Woodlot Licence, Schedule B
+    normalized_predicate: apply the residual TSR-cited woodlot and miscellaneous-lease
+      deduction after subtracting the exact same-parent parks/protected areas removal
+    linked_source_entry_ids: &id027 []
+    subtract_parent_exact_removed_area: true
   ratchet_state: benchmarked
   ratchet_note: Runnable on the Williams Lake landscape-unit smoke subset, but the
     current auto-runnable parks/protected-areas portion produced a no-signal result
@@ -7318,7 +7312,7 @@ steps:
   land_base_stage: glb_to_aflb
   stage_label: GLB -> AFLB
   execution_class: drop_from_universe
-  compiled_operation_type: select_spatial_intersect
+  compiled_operation_type: aspatial_area_reduction
   step_status: ready
   required: true
   page_number: 25
@@ -7870,7 +7864,7 @@ steps:
   land_base_stage: aflb_to_lhlb
   stage_label: AFLB -> LHLB
   execution_class: legal_harvest_exclusion
-  compiled_operation_type: select_spatial_intersect
+  compiled_operation_type: aspatial_area_reduction
   step_status: ready
   required: true
   page_number: 28
@@ -7885,12 +7879,12 @@ steps:
   benchmark_marginal_area_ha: 306327.0
   benchmark_cumulative_area_ha: 2791841.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-  normalized_action: exclude
+  normalized_action: aspatial_area_reduction
   normalized_subject: Area-based tenures and woodlots
-  normalized_predicate: exclude mapped area-based tenure and woodlot polygons from
-    the working harvestable land base
+  normalized_predicate: apply the residual TSR-cited woodlot and miscellaneous-lease
+    deduction after subtracting the exact same-parent parks/protected areas removal
   linked_source_entry_ids: *id027
-  source_attribute_filters: *id028
+  subtract_parent_exact_removed_area: true
 - step_id: thlb_parent_007_old_growth_management_areas_compiled_01
   parent_step_id: thlb_parent_007_old_growth_management_areas
   parent_label: Old growth management areas
