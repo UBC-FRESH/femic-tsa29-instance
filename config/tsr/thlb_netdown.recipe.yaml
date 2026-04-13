@@ -773,6 +773,8 @@ parent_steps:
     normalized_predicate: exclude non-forest and non-productive VRI polygons from
       the working land base
     linked_source_entry_ids: &id009 []
+    restoration_source_entry_ids: &id009a
+    - whse_forest_vegetation_veg_consolidated_cut_blocks_sp
     checkpoint_attribute_mode: any
     checkpoint_attribute_filters: &id010
     - field: BCLCS_LEVEL_2
@@ -790,8 +792,11 @@ parent_steps:
     execution_notes: &id011
     - Current notebook execution uses checkpoint attributes as the first-pass FMLB
       proxy.
-    - Harvest-history, MPB, and fire exceptions remain review-sensitive and are not
-      yet auto-restored here.
+    - Harvest-history restoration is applied from
+      WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP before finalizing the
+      exclusion.
+    - MPB and recent-fire restoration remain review-sensitive and are intentionally
+      deferred until the right public layers are validated.
   - step_id: thlb_parent_003_non_forest_compiled_02
     parent_step_id: thlb_parent_003_non_forest
     parent_label: Non-forest
@@ -7392,6 +7397,7 @@ steps:
   normalized_predicate: exclude non-forest and non-productive VRI polygons from the
     working land base
   linked_source_entry_ids: *id009
+  restoration_source_entry_ids: *id009a
   checkpoint_attribute_mode: any
   checkpoint_attribute_filters: *id010
   execution_notes: *id011
