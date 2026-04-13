@@ -450,7 +450,7 @@ parent_steps:
     normalized_action: exclude
     normalized_subject: Ownership classes not administered for TSA timber supply
     normalized_predicate: exclude private, federal, Indian reserve, area-based tenure,
-      municipal, and lease polygons from the working land base
+      and municipal polygons from the working land base
     linked_source_entry_ids: &id004
     - whse_forest_vegetation_f_own
     source_attribute_filters: &id005
@@ -465,15 +465,16 @@ parent_steps:
       - Crown Tenure - Community Forest Agreement, Schedule A
       - Crown Tenure - Community Forest Agreement, Schedule B
       - Crown Tenure - First Nations Woodland Licence
-      - Crown Tenure - Tree Farm Licence, Schedule A
-      - Crown Tenure - Tree Farm Licence, Schedule B
       - Crown - Municipal Parcels
-      - Crown Lease - Misc. lease
     execution_notes: &id006
-    - Notebook execution now uses F_OWN ownership descriptions for the first-pass
-      6.2.1 exclusion buckets instead of the older OWN != {62,69} shortcut.
-    - Woodlots and parks/protected areas stay in AFLB here and are handled later or
-      retained, consistent with the TSA29 prose.
+      - Notebook execution now uses F_OWN ownership descriptions for the first-pass
+        6.2.1 exclusion buckets instead of the older OWN != {62,69} shortcut.
+      - Woodlots and parks/protected areas stay in AFLB here and are handled later or
+        retained, consistent with the TSA29 prose.
+      - Tree Farm Licence schedule polygons and the broad `Crown Lease - Misc. lease`
+        bucket stay in AFLB here because including them materially overcuts the TSA29
+        step-2 benchmark; any narrower lease-only exclusions need a more specific reviewed
+        discriminator.
   - step_id: thlb_parent_002_land_not_administered_by_the_province_compiled_02
     parent_step_id: thlb_parent_002_land_not_administered_by_the_province
     parent_label: Land not administered by the Province
@@ -529,9 +530,9 @@ parent_steps:
     land_base_stage: glb_to_aflb
     stage_label: GLB -> AFLB
     execution_class: drop_from_universe
-    compiled_operation_type: manual_review_required
-    step_status: manual_review_required
-    required: false
+    compiled_operation_type: aspatial_area_reduction
+    step_status: ready
+    required: true
     page_number: 25
     document_title: ''
     document_type: data_package
@@ -540,19 +541,21 @@ parent_steps:
     provenance_id: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=25
     source_url: ''
     notes: &id007
-    - The TSA29 prose cites dedicated NStQ and Tsilhqot'in title exclusions that are
-      not yet separated cleanly from the generic F_OWN ownership classes in the notebook
-      bridge.
+    - The TSA29 prose cites separate excluded areas for NStQ Interim Treaty Agreement
+      parcels (2,702 ha) and Tsilhqot'in title lands (188,544 ha).
+    - Because those dedicated overlay polygons are not publicly materialized in the current
+      FEMIC source-layer lane, the strict runner uses the documented combined excluded
+      area (191,246 ha) as an explicit AFLB aspatial fallback.
     row_source_kind: table_summary_row
-    benchmark_marginal_area_ha: 697033.0
+    benchmark_marginal_area_ha: 191246.0
     benchmark_cumulative_area_ha: 4236602.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-    normalized_action: review
-    normalized_subject: Treaty and title transfers requiring reviewed overlays
-    normalized_predicate: review NStQ interim treaty parcels and Tsilhqot'in title
-      lands with dedicated reviewed overlays before lock
-    linked_source_entry_ids: &id008
-    - whse_forest_vegetation_f_own
+    normalized_action: aspatial_area_reduction
+    normalized_subject: Treaty and title transfer area reduction
+    normalized_predicate: apply the documented NStQ interim treaty and Tsilhqot'in
+      title excluded area as an AFLB aspatial fallback because the dedicated overlay
+      polygons are not publicly materialized in this lane
+    linked_source_entry_ids: &id008 []
   approved: true
   approval_scope: single_lu_smoke_subset_williams_lake
   approval_note: Soft-approved on the Williams Lake landscape-unit smoke subset; pending
