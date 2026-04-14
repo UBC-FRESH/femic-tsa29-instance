@@ -29,6 +29,7 @@
 
 - Parent-step sections for steps `2` through `8` have been manually refreshed from the locked bounded strict-lane checkpoints and are the current source of truth for this adjudication pass.
 - The broader comparison rollups and stale later-step rows are still being tracked separately under the dashboard rebuild follow-on, so use the refreshed parent-step sections below as the governing ledger while we work through the ladder.
+- Locked cumulative answers are now governed separately by `config/tsr/thlb_locked_chain_ledger.json` through step `9`; do not treat branch-local bounded run remaining areas as cumulative unless they have been promoted into that locked chain ledger.
 
 ## Strict-vs-TSR Fit Counts
 
