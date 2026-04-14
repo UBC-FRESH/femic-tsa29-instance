@@ -27,9 +27,9 @@
 
 ## Dashboard Refresh Note
 
-- Parent-step sections for steps `2` through `8` have been manually refreshed from the locked bounded strict-lane checkpoints and are the current source of truth for this adjudication pass.
+- Parent-step sections for steps `2` through `11` have been manually refreshed from the locked bounded strict-lane checkpoints and are the current source of truth for this adjudication pass.
 - The broader comparison rollups and stale later-step rows are still being tracked separately under the dashboard rebuild follow-on, so use the refreshed parent-step sections below as the governing ledger while we work through the ladder.
-- Locked cumulative answers are now governed separately by `config/tsr/thlb_locked_chain_ledger.json` through step `9`; do not treat branch-local bounded run remaining areas as cumulative unless they have been promoted into that locked chain ledger.
+- Locked cumulative answers are now governed separately by `config/tsr/thlb_locked_chain_ledger.json` through step `11`; do not treat branch-local bounded run remaining areas as cumulative unless they have been promoted into that locked chain ledger.
 
 ## Strict-vs-TSR Fit Counts
 
@@ -62,9 +62,9 @@
 - 6. `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
 - 7. `thlb_parent_007_old_growth_management_areas` | Old growth management areas | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
 - 8. `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
-- 9. `thlb_parent_009_critical_habitat_for_fish` | Critical habitat for fish | action=`fix_strict_logic` | tsr-fit=`not_comparable_to_tsr` | ownership=`model_endogenous`
+- 9. `thlb_parent_009_critical_habitat_for_fish` | Critical habitat for fish | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
 - 10. `thlb_parent_010_lakeshore_management` | Lakeshore management | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`data_exogenous`
-- 11. `thlb_parent_011_community_areas_of_special_concern` | Community areas of special concern | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`model_endogenous`
+- 11. `thlb_parent_011_community_areas_of_special_concern` | Community areas of special concern | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
 - 12. `thlb_parent_012_proven_aboriginal_rights_areas` | Proven Aboriginal Rights areas | action=`improve_data_or_source` | tsr-fit=`strict_under_tsr_major` | ownership=`data_exogenous`
 - 13. `thlb_parent_013_areas_considered_inoperable` | Areas considered inoperable | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`reviewed_bridge_choice`
 - 14. `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`mixed`
@@ -302,36 +302,37 @@
 #### 9. Critical habitat for fish
 
 - Parent step id: `thlb_parent_009_critical_habitat_for_fish`
-- Strict TSR fit: `not_comparable_to_tsr`
-- Reviewed difference role: `blocked_or_missing_source`
+- Strict TSR fit: `tsr_close_enough`
+- Reviewed difference role: `strict_overcut_candidate`
 - Problem ownership: `model_endogenous`
 - Difference nature: `strict_logic_overcut`
-- Reconstructed status: `blocked_exact_overlay`
+- Reconstructed status: `fragment_overlay`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `11521.000 ha`
 - TSR benchmark cumulative area: `2415545.000 ha`
-- Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
-- Strict cumulative vs TSR cumulative delta: `112425.255 ha`
-- Strict reconstructed removed area: `0.000 ha`
+- Strict reconstructed cumulative area at this checkpoint: `2423068.823 ha`
+- Strict cumulative vs TSR cumulative delta: `7523.823 ha`
+- Strict reconstructed removed area: `25974.994 ha`
 - Reviewed bridge removed area: `17482.824 ha`
-- Strict vs TSR delta: `-11521.000 ha`
+- Strict vs TSR delta: `14453.994 ha`
 - Reviewed vs TSR delta: `5961.824 ha`
-- Strict vs reviewed delta: `-17482.824 ha`
-- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
-- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
-- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
-- Engineering interpretation: The strict lane is applying a much broader legal fish-objective surface than the reviewed lane or TSR benchmark supports.
-- Recommended next move: Narrow the strict fish-habitat interpretation; this is one of the clearest strict overcut seams in the whole ladder.
-- Adjudication queue action: `fix_strict_logic` (Fix strict logic or semantics in FEMIC.)
-- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
+- Strict vs reviewed delta: `8492.170 ha`
+- Strict vs TSR: The strict lane modestly overcuts the TSR benchmark here, but the chained cumulative fit through step 9 remains very close.
+- Reviewed difference: The strict lane removes somewhat more area than the reviewed bridge here.
+- Practical meaning: This step is accepted as good enough because the locked chained cumulative result after step 9 is only `+7,523.823 ha` high versus TSR.
+- Engineering interpretation: The legal-planning fish subset now runs correctly; the remaining gap is a modest over-selection seam inside the filtered fish-objective attributes, not a garbage-input or extent-blocking problem.
+- Recommended next move: Lock step 9 as good enough for the current ladder and move on unless later cumulative drift makes this seam worth reopening.
+- Adjudication queue action: `defer_low_priority` (Locked close enough; move on.)
+- Actionability: No immediate repair is needed here.
 - Supporting notes:
-  - strict spatial modes: `blocked_exact_overlay`
+  - strict spatial modes: `fragment_overlay`
   - strict compiled steps: `thlb_parent_009_critical_habitat_for_fish_compiled_01`
   - reviewed approval scope: `full_tsa_validation`
   - reviewed ratchet state: `approved`
   - strict note: TSA29 section 6.3.4 cites the Section 93.4 LAO establishing objectives for the CCLUP, Map 4, as the critical-fish-habitat source.
   - strict note: Notebook execution therefore uses the legal-planning fish objective polygons instead of wildlife-habitat proxy layers.
-  - strict note: If the full-TSA result still runs materially high, the next refinement seam is inside the legal fish objective attributes themselves, not a return to wildlife proxy sources.
+  - strict note: The post-filter subset extent guard fix was required before this step could run; the earlier `blocked_extent_mismatch` state is superseded.
+  - strict note: The dominant remaining over-selection bucket is concentrated in the `Brian Chapman - SRM / unknown / 0` legal-planning fish attributes, but the user accepted the current cumulative fit as good enough.
 
 #### 10. Lakeshore management
 
@@ -344,9 +345,9 @@
 - Reviewed status: `approved`
 - TSR benchmark marginal deduction: `327.000 ha`
 - TSR benchmark cumulative area: `2415218.000 ha`
-- Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
-- Strict cumulative vs TSR cumulative delta: `112752.255 ha`
-- Strict reconstructed removed area: `not recorded`
+- Strict reconstructed cumulative area at this checkpoint: `2423068.823 ha`
+- Strict cumulative vs TSR cumulative delta: `7850.823 ha`
+- Strict reconstructed removed area: `0.000 ha`
 - Reviewed bridge removed area: `not recorded`
 - Strict vs TSR delta: `-327.000 ha`
 - Strict vs TSR: The strict lane is close enough to the TSR benchmark here for practical exploratory use.
@@ -363,34 +364,35 @@
 #### 11. Community areas of special concern
 
 - Parent step id: `thlb_parent_011_community_areas_of_special_concern`
-- Strict TSR fit: `not_comparable_to_tsr`
-- Reviewed difference role: `blocked_or_missing_source`
+- Strict TSR fit: `tsr_close_enough`
+- Reviewed difference role: `strict_overcut_candidate`
 - Problem ownership: `model_endogenous`
 - Difference nature: `reviewed_bridge_semantics`
-- Reconstructed status: `blocked_exact_overlay`
+- Reconstructed status: `fragment_overlay`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `62460.000 ha`
 - TSR benchmark cumulative area: `2352758.000 ha`
-- Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
-- Strict cumulative vs TSR cumulative delta: `175212.255 ha`
-- Strict reconstructed removed area: `0.000 ha`
+- Strict reconstructed cumulative area at this checkpoint: `2344474.867 ha`
+- Strict cumulative vs TSR cumulative delta: `-8283.133 ha`
+- Strict reconstructed removed area: `78593.956 ha`
 - Reviewed bridge removed area: `69545.637 ha`
-- Strict vs TSR delta: `-62460.000 ha`
+- Strict vs TSR delta: `16133.956 ha`
 - Reviewed vs TSR delta: `7085.637 ha`
-- Strict vs reviewed delta: `-69545.637 ha`
-- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
-- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
-- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
-- Engineering interpretation: The strict literal source choice is not reproducing the reviewed meaning of this step at all.
-- Recommended next move: Fix the strict semantics/source interpretation instead of treating this as a pure missing-data problem.
-- Adjudication queue action: `keep_reviewed_bridge` (Keep the reviewed bridge for now and do not force strict parity yet.)
-- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
+- Strict vs reviewed delta: `9048.319 ha`
+- Strict vs TSR: The strict lane modestly overcuts the TSR benchmark here, but the chained cumulative fit through step 11 remains very close.
+- Reviewed difference: The strict lane removes somewhat more area than the reviewed bridge here.
+- Practical meaning: This step is accepted as good enough because the locked chained cumulative result after step 11 is only `-8,283.133 ha` below TSR.
+- Engineering interpretation: The legal CCLUP/CASC planning polygons now run as an exact spatial step and land in the right order of magnitude. The remaining gap is a modest semantics difference rather than a blocked-input problem.
+- Recommended next move: Lock step 11 as good enough for the current ladder and move on unless a later cumulative drift reopens this seam.
+- Adjudication queue action: `defer_low_priority` (Locked close enough; move on.)
+- Actionability: No immediate repair is needed here.
 - Supporting notes:
-  - strict spatial modes: `blocked_exact_overlay`
+  - strict spatial modes: `fragment_overlay`
   - strict compiled steps: `thlb_parent_011_community_areas_of_special_concern_compiled_01`
   - reviewed approval scope: `full_tsa_validation`
   - reviewed ratchet state: `approved`
   - strict note: TSA29 section 6.3.7 points to LUO / CCLUP Map 5 boundaries, so notebook execution uses the legal CCLUP planning polygons instead of broad designated-area overlays.
+  - strict note: This locked result comes from the bounded chained replay starting at the official AFLB checkpoint and replaying locked steps 6 through 9 before running step 11.
 
 #### 12. Proven Aboriginal Rights areas
 

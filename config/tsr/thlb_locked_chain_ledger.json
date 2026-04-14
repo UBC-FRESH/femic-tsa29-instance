@@ -9,8 +9,8 @@
   "recipe_path": "config/tsr/thlb_netdown.recipe.yaml",
   "ledger_path": "config/tsr/thlb_locked_chain_ledger.json",
   "baseline_managed_area_ha": 4933664.212,
-  "latest_locked_parent_step_id": "thlb_parent_009_critical_habitat_for_fish",
-  "latest_locked_row_order": 9,
+  "latest_locked_parent_step_id": "thlb_parent_011_community_areas_of_special_concern",
+  "latest_locked_row_order": 11,
   "entries": [
     {
       "row_order": 1,
@@ -154,6 +154,38 @@
       "locked_cumulative_delta_ha": 7523.822999999858,
       "locked_source_kind": "bounded_step_run",
       "locked_source_note": "legal-planning fish subset extent fix; cumulative fit accepted as good enough",
+      "marginal_not_applicable": false
+    },
+    {
+      "row_order": 10,
+      "parent_step_id": "thlb_parent_010_lakeshore_management",
+      "parent_label": "Lakeshore management",
+      "parent_kind": "transformation",
+      "land_base_stage": "aflb_to_lhlb",
+      "benchmark_marginal_area_ha": 327.0,
+      "benchmark_cumulative_area_ha": 2415218.0,
+      "locked_net_removed_area_ha": 0.0,
+      "locked_cumulative_remaining_area_ha": 2423068.823,
+      "tsr_cumulative_area_ha": 2415218.0,
+      "locked_cumulative_delta_ha": 7850.822999999858,
+      "locked_source_kind": "reviewed_skip",
+      "locked_source_note": "Accepted trivial full-TSA skip; current public layers do not expose a trusted Class A lake discriminator.",
+      "marginal_not_applicable": false
+    },
+    {
+      "row_order": 11,
+      "parent_step_id": "thlb_parent_011_community_areas_of_special_concern",
+      "parent_label": "Community areas of special concern",
+      "parent_kind": "transformation",
+      "land_base_stage": "aflb_to_lhlb",
+      "benchmark_marginal_area_ha": 62460.0,
+      "benchmark_cumulative_area_ha": 2352758.0,
+      "locked_net_removed_area_ha": 78593.956,
+      "locked_cumulative_remaining_area_ha": 2344474.867,
+      "tsr_cumulative_area_ha": 2352758.0,
+      "locked_cumulative_delta_ha": -8283.133000000147,
+      "locked_source_kind": "bounded_step_run",
+      "locked_source_note": "bounded chained replay from official AFLB checkpoint through locked steps 6-9, then exact step-11 legal-planning CASC overlay",
       "marginal_not_applicable": false
     }
   ]
