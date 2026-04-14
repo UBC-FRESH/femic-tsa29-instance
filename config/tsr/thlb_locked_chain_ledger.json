@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-04-14T05:43:36.144600+00:00",
+  "generated_utc": "2026-04-14T06:28:05.819468+00:00",
   "artifact_kind": "thlb_locked_chain_ledger",
   "tsa": {
     "tsa_id": "tsa_29",
@@ -9,8 +9,8 @@
   "recipe_path": "config/tsr/thlb_netdown.recipe.yaml",
   "ledger_path": "config/tsr/thlb_locked_chain_ledger.json",
   "baseline_managed_area_ha": 4933664.212,
-  "latest_locked_parent_step_id": "thlb_parent_011_community_areas_of_special_concern",
-  "latest_locked_row_order": 11,
+  "latest_locked_parent_step_id": "thlb_parent_012_proven_aboriginal_rights_areas",
+  "latest_locked_row_order": 12,
   "entries": [
     {
       "row_order": 1,
@@ -186,6 +186,22 @@
       "locked_cumulative_delta_ha": -8283.133000000147,
       "locked_source_kind": "bounded_step_run",
       "locked_source_note": "bounded chained replay from official AFLB checkpoint through locked steps 6-9, then exact step-11 legal-planning CASC overlay",
+      "marginal_not_applicable": false
+    },
+    {
+      "row_order": 12,
+      "parent_step_id": "thlb_parent_012_proven_aboriginal_rights_areas",
+      "parent_label": "Proven Aboriginal Rights areas",
+      "parent_kind": "transformation",
+      "land_base_stage": "aflb_to_lhlb",
+      "benchmark_marginal_area_ha": 68401.0,
+      "benchmark_cumulative_area_ha": 2284357.0,
+      "locked_net_removed_area_ha": 68401.0,
+      "locked_cumulative_remaining_area_ha": 2276073.867,
+      "tsr_cumulative_area_ha": 2284357.0,
+      "locked_cumulative_delta_ha": -8283.133,
+      "locked_source_kind": "documented_aspatial_bridge",
+      "locked_source_note": "benchmark-anchored public-data aspatial bridge for Proven Aboriginal Rights areas; exact PRA boundary not publicly trustworthy",
       "marginal_not_applicable": false
     }
   ]

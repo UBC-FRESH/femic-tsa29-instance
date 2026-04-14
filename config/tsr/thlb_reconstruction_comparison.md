@@ -1,6 +1,6 @@
 # THLB Reconstruction Comparison: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-12T07:18:58.450794+00:00`
+- Generated UTC: `2026-04-14T06:28:05.802107+00:00`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Reviewed bridge status report: `config/tsr/thlb_netdown.status.md`
 - Reconstructed audit JSON: `config/tsr/thlb_reconstructed.audit.json`
@@ -27,9 +27,9 @@
 
 ## Dashboard Refresh Note
 
-- Parent-step sections for steps `2` through `11` have been manually refreshed from the locked bounded strict-lane checkpoints and are the current source of truth for this adjudication pass.
+- Parent-step sections for steps `2` through `12` have been manually refreshed from the locked bounded strict-lane checkpoints and are the current source of truth for this adjudication pass.
 - The broader comparison rollups and stale later-step rows are still being tracked separately under the dashboard rebuild follow-on, so use the refreshed parent-step sections below as the governing ledger while we work through the ladder.
-- Locked cumulative answers are now governed separately by `config/tsr/thlb_locked_chain_ledger.json` through step `11`; do not treat branch-local bounded run remaining areas as cumulative unless they have been promoted into that locked chain ledger.
+- Locked cumulative answers are now governed separately by `config/tsr/thlb_locked_chain_ledger.json` through step `12`; do not treat branch-local bounded run remaining areas as cumulative unless they have been promoted into that locked chain ledger.
 
 ## Strict-vs-TSR Fit Counts
 
@@ -65,7 +65,7 @@
 - 9. `thlb_parent_009_critical_habitat_for_fish` | Critical habitat for fish | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
 - 10. `thlb_parent_010_lakeshore_management` | Lakeshore management | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`data_exogenous`
 - 11. `thlb_parent_011_community_areas_of_special_concern` | Community areas of special concern | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
-- 12. `thlb_parent_012_proven_aboriginal_rights_areas` | Proven Aboriginal Rights areas | action=`improve_data_or_source` | tsr-fit=`strict_under_tsr_major` | ownership=`data_exogenous`
+- 12. `thlb_parent_012_proven_aboriginal_rights_areas` | Proven Aboriginal Rights areas | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`data_exogenous`
 - 13. `thlb_parent_013_areas_considered_inoperable` | Areas considered inoperable | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`reviewed_bridge_choice`
 - 14. `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`mixed`
 - 15. `thlb_parent_015_non_merchantable_timber_profiles` | Non-merchantable timber profiles | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`model_endogenous`
@@ -397,29 +397,30 @@
 #### 12. Proven Aboriginal Rights areas
 
 - Parent step id: `thlb_parent_012_proven_aboriginal_rights_areas`
-- Strict TSR fit: `strict_under_tsr_major`
-- Reviewed difference role: `manual_or_reviewed_override`
+- Strict TSR fit: `tsr_close_enough`
+- Reviewed difference role: `aspatial_bridge_difference`
 - Problem ownership: `data_exogenous`
-- Difference nature: `missing_or_blocked_data`
-- Reconstructed status: `not_executed`
+- Difference nature: `accepted_aspatial_bridge`
+- Reconstructed status: `aspatial_fallback`
 - Reviewed status: `approved`
 - TSR benchmark marginal deduction: `68401.000 ha`
 - TSR benchmark cumulative area: `2284357.000 ha`
-- Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
-- Strict cumulative vs TSR cumulative delta: `243613.255 ha`
-- Strict reconstructed removed area: `not recorded`
+- Strict reconstructed cumulative area at this checkpoint: `2276073.867 ha`
+- Strict cumulative vs TSR cumulative delta: `-8283.133 ha`
+- Strict reconstructed removed area: `68401.000 ha`
 - Reviewed bridge removed area: `not recorded`
-- Strict vs TSR delta: `-68401.000 ha`
-- Strict vs TSR: The strict lane is materially below the TSR benchmark here, so this looks like a real strict-lane undercut seam.
-- Reviewed difference: The reviewed lane is carrying an accepted override, skip, calibration, or no-op choice that the strict lane does not automatically share.
-- Practical meaning: Strict is badly low against TSR here, but the main reason looks exogenous: the needed data or source contract is missing.
-- Engineering interpretation: The strict lane still lacks a trustworthy public boundary source for this step.
-- Recommended next move: Keep this as a reviewed skip or documented fallback until a real source is available.
-- Adjudication queue action: `improve_data_or_source` (Improve or replace the missing/weak source data.)
-- Actionability: Review the accepted reviewed override before changing the strict lane.
+- Strict vs TSR delta: `0.000 ha`
+- Strict vs TSR: The strict lane is close enough to the TSR benchmark here for practical exploratory use.
+- Reviewed difference: The strict lane now uses a documented benchmark-anchored aspatial bridge because no trustworthy public PRA boundary is available.
+- Practical meaning: Step 12 is locked as a public-data bridge. The exact PRA boundary remains unavailable, but the net deduction now matches the TSR benchmark.
+- Engineering interpretation: A trustworthy public exact PRA boundary is still unavailable, so the strict lane now uses the TSR benchmark area as an explicit aspatial fallback rather than a skip.
+- Recommended next move: Keep the benchmark-anchored PRA aspatial bridge unless a vetted exact PRA boundary is later adopted.
+- Adjudication queue action: `defer_low_priority` (Keep the documented aspatial fallback in place and move on.)
+- Actionability: No immediate repair is needed unless a vetted public PRA boundary becomes available.
 - Supporting notes:
-  - reviewed approval scope: `full_tsa_public_data_unavailable_skip`
+  - reviewed approval scope: `full_tsa_public_data_unavailable_aspatial_bridge`
   - reviewed ratchet state: `approved`
+  - strict note: Step 12 now uses the TSR benchmark area as an explicit public-data aspatial bridge because no trustworthy public exact PRA boundary is available.
 
 ### LHLB -> THLB
 

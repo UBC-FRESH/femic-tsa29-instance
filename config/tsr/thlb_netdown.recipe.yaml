@@ -3433,14 +3433,15 @@ parent_steps:
     - whse_admin_boundaries_pip_consultation
     - whse_land_use_planning_fadm_designated
   approved: true
-  approval_scope: full_tsa_public_data_unavailable_skip
-  approval_note: User-directed skip for public-data-only research/teaching use. The
-    TSR logic is documented, but the cited/public PRA boundary path is not publicly
-    downloadable/queryable enough to support a trustworthy automated exclusion surface.
+  approval_scope: full_tsa_public_data_unavailable_aspatial_bridge
+  approval_note: User-directed public-data bridge for the Proven Aboriginal Rights
+    step. The TSR benchmark area is used as an explicit aspatial fallback because
+    no trustworthy public PRA boundary source is available for defensible automated
+    exclusion.
   ratchet_state: approved
-  ratchet_note: Backing PRA boundary data is not publicly available enough for defensible
-    automation. Skip detailed validation for the public-data-only FEMIC lane and revisit
-    only if a vetted public/reviewed PRA boundary source is later adopted.
+  ratchet_note: Keep the benchmark-anchored PRA aspatial bridge in place for the
+    public-data FEMIC lane until a vetted public or reviewed exact PRA boundary is
+    adopted.
 - parent_step_id: thlb_parent_013_areas_considered_inoperable
   parent_label: Areas considered inoperable
   parent_kind: transformation
@@ -8088,9 +8089,9 @@ steps:
   land_base_stage: aflb_to_lhlb
   stage_label: AFLB -> LHLB
   execution_class: legal_harvest_exclusion
-  compiled_operation_type: manual_review_required
-  step_status: manual_review_required
-  required: false
+  compiled_operation_type: aspatial_area_reduction
+  step_status: ready
+  required: true
   page_number: 29
   document_title: ''
   document_type: data_package
@@ -8311,19 +8312,20 @@ steps:
   notes:
   - TSA29 section 6.4.1 defines the Proven Aboriginal Rights area conceptually but
     does not cite a clean public vector source in the data-package text.
-  - Current public lead is the PIP Consultation Areas public map service; treat this
-    step as review/manual until a trustworthy boundary source or override is adopted.
+  - Current public leads such as PIP Consultation Areas and broad designated-area
+    layers are not trustworthy enough for defensible exact automation in the public-data
+    lane.
+  - Use the TSR benchmark area as an explicit aspatial fallback until a vetted PRA
+    boundary source or reviewed override is adopted.
   row_source_kind: table_summary_row
   benchmark_marginal_area_ha: 68401.0
   benchmark_cumulative_area_ha: 2284357.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-  normalized_action: review
+  normalized_action: aspatial_area_reduction
   normalized_subject: Proven Aboriginal Rights area boundary
-  normalized_predicate: requires a reviewed PRA boundary overlay before automation;
-    do not auto-exclude with broad TSA or designated-area polygons
-  linked_source_entry_ids:
-  - whse_admin_boundaries_pip_consultation
-  - whse_land_use_planning_fadm_designated
+  normalized_predicate: apply the documented TSR benchmark area as an explicit aspatial
+    fallback because no trustworthy public PRA boundary overlay is available
+  linked_source_entry_ids: []
 - step_id: thlb_parent_013_areas_considered_inoperable_compiled_01
   parent_step_id: thlb_parent_013_areas_considered_inoperable
   parent_label: Areas considered inoperable
