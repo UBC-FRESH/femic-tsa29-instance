@@ -27,7 +27,7 @@
 
 ## Dashboard Refresh Note
 
-- Parent-step sections for steps `2` through `7` have been manually refreshed from the locked bounded strict-lane checkpoints and are the current source of truth for this adjudication pass.
+- Parent-step sections for steps `2` through `8` have been manually refreshed from the locked bounded strict-lane checkpoints and are the current source of truth for this adjudication pass.
 - The broader comparison rollups and stale later-step rows are still being tracked separately under the dashboard rebuild follow-on, so use the refreshed parent-step sections below as the governing ledger while we work through the ladder.
 
 ## Strict-vs-TSR Fit Counts
@@ -60,7 +60,7 @@
 - 4. `thlb_parent_004_roads_and_landings` | Roads and landings | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`mixed`
 - 6. `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
 - 7. `thlb_parent_007_old_growth_management_areas` | Old growth management areas | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
-- 8. `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | action=`fix_strict_logic` | tsr-fit=`not_comparable_to_tsr` | ownership=`model_endogenous`
+- 8. `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
 - 9. `thlb_parent_009_critical_habitat_for_fish` | Critical habitat for fish | action=`fix_strict_logic` | tsr-fit=`not_comparable_to_tsr` | ownership=`model_endogenous`
 - 10. `thlb_parent_010_lakeshore_management` | Lakeshore management | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`data_exogenous`
 - 11. `thlb_parent_011_community_areas_of_special_concern` | Community areas of special concern | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`model_endogenous`
@@ -281,36 +281,22 @@
 #### 8. Wildlife habitat areas
 
 - Parent step id: `thlb_parent_008_wildlife_habitat_areas`
-- Strict TSR fit: `not_comparable_to_tsr`
-- Reviewed difference role: `blocked_or_missing_source`
+- Strict TSR fit: `tsr_close_enough`
+- Reviewed difference role: `strict_undercut_candidate`
 - Problem ownership: `model_endogenous`
-- Difference nature: `strict_logic_overcut`
-- Reconstructed status: `blocked_exact_overlay`
-- Reviewed status: `applied`
+- Difference nature: `minor_strict_undercut`
+- Strict net deduction vs TSR: `-22488.408 ha`
+- Strict net deduction: `131567.592 ha`
 - TSR benchmark marginal deduction: `154056.000 ha`
-- TSR benchmark cumulative area: `2427066.000 ha`
-- Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
-- Strict cumulative vs TSR cumulative delta: `100904.255 ha`
-- Strict reconstructed removed area: `0.000 ha`
-- Reviewed bridge removed area: `133005.883 ha`
-- Strict vs TSR delta: `-154056.000 ha`
-- Reviewed vs TSR delta: `-21050.117 ha`
-- Strict vs reviewed delta: `-133005.883 ha`
-- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
-- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
-- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
-- Engineering interpretation: The strict lane is selecting far more wildlife-area land than either the reviewed lane or the TSR benchmark supports.
-- Recommended next move: Audit the strict no-harvest selection logic and keep conditional/modified zones out unless the TSR clearly says otherwise.
-- Adjudication queue action: `fix_strict_logic` (Fix strict logic or semantics in FEMIC.)
-- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
+- Strict cumulative area after step: `2755370.817 ha`
+- Practical meaning: the current no-harvest wildlife overlay logic is already in the right neighborhood and does not look like another wild semantics failure.
+- Engineering interpretation: exact no-harvest WHA/UWR overlays are producing a modest undercut relative to TSR, but the source filters and legal interpretation appear directionally correct.
+- Recommended next move: lock this step as good enough for now and revisit only if later cumulative deltas force a tighter wildlife calibration pass.
 - Supporting notes:
-  - strict spatial modes: `blocked_exact_overlay`
   - strict compiled steps: `thlb_parent_008_wildlife_habitat_areas_compiled_01`, `thlb_parent_008_wildlife_habitat_areas_compiled_02`
-  - reviewed approval scope: `full_tsa_validation`
-  - reviewed ratchet state: `approved`
-  - strict note: TSA29 section 6.3.3 states that only no-harvest wildlife areas are excluded at this stage.
-  - strict note: Conditional harvest zones are deferred to later forest-management assumptions and silviculture logic.
-  - strict note: General Wildlife Measures with no-harvest direction are excluded here; modified/conditional zones are not.
+  - strict net UWR no-harvest deduction: `23.175 ha`
+  - strict net WHA no-harvest deduction: `131544.417 ha`
+  - conditional-harvest wildlife zones remain deferred and are not excluded at this stage.
 
 #### 9. Critical habitat for fish
 
