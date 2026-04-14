@@ -1,6 +1,6 @@
 # THLB Reconstruction Comparison: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-14T06:28:05.802107+00:00`
+- Generated UTC: `2026-04-14T23:48:52.209360+00:00`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Reviewed bridge status report: `config/tsr/thlb_netdown.status.md`
 - Reconstructed audit JSON: `config/tsr/thlb_reconstructed.audit.json`
@@ -23,50 +23,45 @@
 - The reviewed lane was accepted because its cumulative THLB was close enough to the TSR benchmark for practical exploratory modeling use.
 - Reviewed per-step behavior is therefore useful context, not automatic gold-standard truth for strict reconstruction.
 - A parent step is a top-priority strict-lane repair when strict is materially bad against TSR, not merely because strict differs from reviewed.
-- For early `GLB -> AFLB` rows, strict stepwise marginal deductions are conditioned by `checkpoint1_aflb_initialization` in the current reconstructed lane, so treat those deltas as diagnostic rather than as a literal raw-GLB replay.
-
-## Dashboard Refresh Note
-
-- Parent-step sections for steps `2` through `12` have been manually refreshed from the locked bounded strict-lane checkpoints and are the current source of truth for this adjudication pass.
-- The broader comparison rollups and stale later-step rows are still being tracked separately under the dashboard rebuild follow-on, so use the refreshed parent-step sections below as the governing ledger while we work through the ladder.
-- Locked cumulative answers are now governed separately by `config/tsr/thlb_locked_chain_ledger.json` through step `12`; do not treat branch-local bounded run remaining areas as cumulative unless they have been promoted into that locked chain ledger.
+- The current strict lane now starts from raw checkpoint1 geometry rather than an AFLB-style prefiltered subset, so early `GLB -> AFLB` rows are intended to be read as real stepwise deductions.
 
 ## Strict-vs-TSR Fit Counts
 
-- `not_comparable_to_tsr`: `16`
-- `strict_under_tsr_major`: `3`
-- `tsr_close_enough`: `5`
+- `not_comparable_to_tsr`: `10`
+- `strict_under_tsr_major`: `2`
+- `tsr_close_enough`: `12`
 
 ## Reviewed-Difference Context Counts
 
-- `aspatial_bridge_difference`: `3`
-- `blocked_or_missing_source`: `12`
-- `manual_or_reviewed_override`: `3`
+- `aspatial_bridge_difference`: `5`
+- `blocked_or_missing_source`: `6`
+- `close_match`: `3`
+- `manual_or_reviewed_override`: `2`
 - `not_comparable`: `4`
 - `reviewed_bridge_only`: `1`
-- `strict_overcut_candidate`: `1`
+- `strict_overcut_candidate`: `3`
 
 ## Problem Ownership Counts
 
 - `data_exogenous`: `3`
-- `mixed`: `5`
+- `mixed`: `4`
 - `model_endogenous`: `7`
 - `not_applicable`: `4`
-- `reviewed_bridge_choice`: `5`
+- `reviewed_bridge_choice`: `6`
 
 ## Stepwise Adjudication Queue
 
 - 2. `thlb_parent_002_land_not_administered_by_the_province` | Land not administered by the Province | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
 - 3. `thlb_parent_003_non_forest` | Non-forest | action=`keep_reviewed_bridge` | tsr-fit=`strict_under_tsr_major` | ownership=`model_endogenous`
 - 4. `thlb_parent_004_roads_and_landings` | Roads and landings | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`mixed`
-- 6. `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
-- 7. `thlb_parent_007_old_growth_management_areas` | Old growth management areas | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
+- 6. `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | action=`fix_strict_logic` | tsr-fit=`not_comparable_to_tsr` | ownership=`mixed`
+- 7. `thlb_parent_007_old_growth_management_areas` | Old growth management areas | action=`fix_strict_logic` | tsr-fit=`not_comparable_to_tsr` | ownership=`model_endogenous`
 - 8. `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
 - 9. `thlb_parent_009_critical_habitat_for_fish` | Critical habitat for fish | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
 - 10. `thlb_parent_010_lakeshore_management` | Lakeshore management | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`data_exogenous`
 - 11. `thlb_parent_011_community_areas_of_special_concern` | Community areas of special concern | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
 - 12. `thlb_parent_012_proven_aboriginal_rights_areas` | Proven Aboriginal Rights areas | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`data_exogenous`
-- 13. `thlb_parent_013_areas_considered_inoperable` | Areas considered inoperable | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`reviewed_bridge_choice`
+- 13. `thlb_parent_013_areas_considered_inoperable` | Areas considered inoperable | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
 - 14. `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`mixed`
 - 15. `thlb_parent_015_non_merchantable_timber_profiles` | Non-merchantable timber profiles | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`model_endogenous`
 - 16. `thlb_parent_016_recreation_features` | Recreation features | action=`fix_strict_logic` | tsr-fit=`not_comparable_to_tsr` | ownership=`mixed`
@@ -79,19 +74,19 @@
 
 ## Top 5 Strict-vs-TSR Contributors
 
-- `thlb_parent_003_non_forest` | Non-forest | tsr-fit=`strict_under_tsr_major` | strict-TSR marginal delta=`-1105908.000 ha`
-- `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | tsr-fit=`not_comparable_to_tsr` | strict-TSR marginal delta=`-321044.000 ha`
-- `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | tsr-fit=`not_comparable_to_tsr` | strict-TSR marginal delta=`-306327.000 ha`
-- `thlb_parent_007_old_growth_management_areas` | Old growth management areas | tsr-fit=`not_comparable_to_tsr` | strict-TSR marginal delta=`-210719.000 ha`
-- `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | tsr-fit=`not_comparable_to_tsr` | strict-TSR marginal delta=`-154056.000 ha`
+- `thlb_parent_003_non_forest` | Non-forest | tsr-fit=`strict_under_tsr_major` | strict-TSR net deduction delta=`-1105908.000 ha`
+- `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | tsr-fit=`not_comparable_to_tsr` | strict-TSR net deduction delta=`-321044.000 ha`
+- `thlb_parent_018_riparian_areas` | Riparian areas | tsr-fit=`not_comparable_to_tsr` | strict-TSR net deduction delta=`-54833.000 ha`
+- `thlb_parent_020_wildlife_tree_retention_areas` | Wildlife tree retention areas | tsr-fit=`strict_under_tsr_major` | strict-TSR net deduction delta=`-50250.676 ha`
+- `thlb_parent_015_non_merchantable_timber_profiles` | Non-merchantable timber profiles | tsr-fit=`not_comparable_to_tsr` | strict-TSR net deduction delta=`-49052.000 ha`
 
 ## Top 5 Strict-vs-Reviewed Context Differences
 
-- `thlb_parent_003_non_forest` | Non-forest | reviewed-role=`reviewed_bridge_only` | strict-reviewed removed-area delta=`-2015120.946 ha`
-- `thlb_parent_002_land_not_administered_by_the_province` | Land not administered by the Province | reviewed-role=`strict_overcut_candidate` | strict-reviewed removed-area delta=`491992.156 ha`
-- `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | reviewed-role=`blocked_or_missing_source` | strict-reviewed removed-area delta=`-329228.613 ha`
-- `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | reviewed-role=`blocked_or_missing_source` | strict-reviewed removed-area delta=`-275618.199 ha`
-- `thlb_parent_007_old_growth_management_areas` | Old growth management areas | reviewed-role=`blocked_or_missing_source` | strict-reviewed removed-area delta=`-227336.336 ha`
+- `thlb_parent_003_non_forest` | Non-forest | reviewed-role=`reviewed_bridge_only` | strict-reviewed net deduction delta=`-2015120.946 ha`
+- `thlb_parent_002_land_not_administered_by_the_province` | Land not administered by the Province | reviewed-role=`strict_overcut_candidate` | strict-reviewed net deduction delta=`491992.156 ha`
+- `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | reviewed-role=`blocked_or_missing_source` | strict-reviewed net deduction delta=`-329228.613 ha`
+- `thlb_parent_015_non_merchantable_timber_profiles` | Non-merchantable timber profiles | reviewed-role=`blocked_or_missing_source` | strict-reviewed net deduction delta=`-103629.462 ha`
+- `thlb_parent_018_riparian_areas` | Riparian areas | reviewed-role=`blocked_or_missing_source` | strict-reviewed net deduction delta=`-72204.542 ha`
 
 ## Plain-Language Read
 
@@ -125,8 +120,8 @@
 - TSR benchmark cumulative area: `4236602.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2578404.255 ha`
 - Strict cumulative vs TSR cumulative delta: `-1658197.745 ha`
-- Strict reconstructed removed area: `713594.208 ha`
-- Reviewed bridge removed area: `221602.052 ha`
+- Strict reconstructed net deduction: `713594.208 ha`
+- Reviewed bridge net deduction: `221602.052 ha`
 - Strict vs TSR delta: `16561.208 ha`
 - Reviewed vs TSR delta: `-475430.948 ha`
 - Strict vs reviewed delta: `491992.156 ha`
@@ -158,8 +153,8 @@
 - TSR benchmark cumulative area: `3130694.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2578404.255 ha`
 - Strict cumulative vs TSR cumulative delta: `-552289.745 ha`
-- Strict reconstructed removed area: `not recorded`
-- Reviewed bridge removed area: `2015120.946 ha`
+- Strict reconstructed net deduction: `not recorded`
+- Reviewed bridge net deduction: `2015120.946 ha`
 - Strict vs TSR delta: `-1105908.000 ha`
 - Reviewed vs TSR delta: `909212.946 ha`
 - Strict vs TSR: The strict lane is materially below the TSR benchmark here, so this looks like a real strict-lane undercut seam.
@@ -187,8 +182,8 @@
 - TSR benchmark cumulative area: `3080260.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
 - Strict cumulative vs TSR cumulative delta: `-552289.745 ha`
-- Strict reconstructed removed area: `50434.000 ha`
-- Reviewed bridge removed area: `1557.111 ha`
+- Strict reconstructed net deduction: `50434.000 ha`
+- Reviewed bridge net deduction: `1557.111 ha`
 - Strict vs TSR delta: `0.000 ha`
 - Reviewed vs TSR delta: `-48876.889 ha`
 - Strict vs reviewed delta: `48876.889 ha`
@@ -224,15 +219,15 @@
 - TSR benchmark cumulative area: `2791841.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2804249.672 ha`
 - Strict cumulative vs TSR cumulative delta: `12408.672 ha`
-- Strict reconstructed removed area: `306327.000 ha`
-- Reviewed bridge removed area: `275618.199 ha`
+- Strict reconstructed net deduction: `306327.000 ha`
+- Reviewed bridge net deduction: `275618.199 ha`
 - Strict vs TSR delta: `0.000 ha`
 - Reviewed vs TSR delta: `-30708.801 ha`
 - Strict vs reviewed delta: `30708.801 ha`
 - Strict vs TSR: The strict lane is close enough to the TSR benchmark here for practical use.
 - Reviewed difference: The strict lane now uses a trusted exact parks/protected overlay plus a documented residual aspatial bridge for woodlots and leases.
 - Practical meaning: Step 6 is locked. The exact spatial parks/protected component remains in place, and the woodlot/lease residual is now a documented bridge rather than an over-broad exact overlay.
-- Engineering interpretation: Current public `F_OWN` is too blunt to separate the active woodlot/lease subset TSR actually removed, so the strict lane now keeps parks/protected exact and fills the residual with a calibrated aspatial bridge.
+- Engineering interpretation: Current public F_OWN is too blunt to separate the active woodlot/lease subset TSR actually removed, so the strict lane now keeps parks/protected exact and fills the residual with a calibrated aspatial bridge.
 - Recommended next move: Keep step 6 fixed as-is and move on.
 - Adjudication queue action: `defer_low_priority` (Locked close enough; move on.)
 - Actionability: No immediate repair is needed here.
@@ -257,13 +252,13 @@
 - TSR benchmark cumulative area: `2581122.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2886938.410 ha`
 - Strict cumulative vs TSR cumulative delta: `305816.410 ha`
-- Strict reconstructed removed area: `223638.262 ha`
-- Reviewed bridge removed area: `227336.336 ha`
+- Strict reconstructed net deduction: `223638.262 ha`
+- Reviewed bridge net deduction: `227336.336 ha`
 - Strict vs TSR delta: `12919.262 ha`
 - Reviewed vs TSR delta: `16617.336 ha`
 - Strict vs reviewed delta: `-3698.074 ha`
 - Strict vs TSR: The strict lane is now close enough to the TSR benchmark here for practical use.
-- Reviewed difference: The strict lane is now very close to the reviewed bridge as well.
+- Reviewed difference: The strict lane is now very close to both the TSR benchmark and the reviewed bridge here.
 - Practical meaning: Step 7 is good enough and locked for the current pass.
 - Engineering interpretation: The earlier huge miss on step 7 came from exact fragment-overlay state loss after prior aspatial area reductions, not from obviously bad OGMA source geometry. Once clipped fragments preserved prior partial state and scaled effective area correctly, the step landed near both TSR and reviewed results.
 - Recommended next move: Keep step 7 fixed as-is and move on.
@@ -286,14 +281,29 @@
 - Reviewed difference role: `strict_undercut_candidate`
 - Problem ownership: `model_endogenous`
 - Difference nature: `minor_strict_undercut`
-- Strict net deduction vs TSR: `-22488.408 ha`
-- Strict net deduction: `131567.592 ha`
+- Reconstructed status: `applied`
+- Reviewed status: `applied`
 - TSR benchmark marginal deduction: `154056.000 ha`
-- Strict cumulative area after step: `2755370.817 ha`
-- Practical meaning: the current no-harvest wildlife overlay logic is already in the right neighborhood and does not look like another wild semantics failure.
-- Engineering interpretation: exact no-harvest WHA/UWR overlays are producing a modest undercut relative to TSR, but the source filters and legal interpretation appear directionally correct.
-- Recommended next move: lock this step as good enough for now and revisit only if later cumulative deltas force a tighter wildlife calibration pass.
+- TSR benchmark cumulative area: `2427066.000 ha`
+- Strict reconstructed cumulative area at this checkpoint: `2755370.817 ha`
+- Strict cumulative vs TSR cumulative delta: `328304.817 ha`
+- Strict reconstructed net deduction: `131567.592 ha`
+- Reviewed bridge net deduction: `133005.883 ha`
+- Strict vs TSR delta: `-22488.408 ha`
+- Reviewed vs TSR delta: `-21050.117 ha`
+- Strict vs reviewed delta: `-133005.883 ha`
+- Strict vs TSR: The strict no-harvest wildlife overlays are now in the right neighborhood of the TSR benchmark and are close enough to lock for now.
+- Reviewed difference: The strict lane now executes the intended no-harvest wildlife overlays and lands moderately below the TSR benchmark rather than failing or wildly overcutting.
+- Practical meaning: This is good enough to lock for now and move on unless later cumulative deltas demand a tighter wildlife calibration pass.
+- Engineering interpretation: The remaining gap is a modest undercut from otherwise directionally correct exact wildlife no-harvest overlays.
+- Recommended next move: Lock this step as good enough and move on to the next parent step.
+- Adjudication queue action: `defer_low_priority` (Close enough to defer for now.)
+- Actionability: No immediate repair is required before moving to the next step.
 - Supporting notes:
+  - strict spatial modes: `blocked_exact_overlay`
+  - strict compiled steps: `thlb_parent_008_wildlife_habitat_areas_compiled_01`, `thlb_parent_008_wildlife_habitat_areas_compiled_02`
+  - reviewed approval scope: `full_tsa_validation`
+  - reviewed ratchet state: `approved`
   - strict compiled steps: `thlb_parent_008_wildlife_habitat_areas_compiled_01`, `thlb_parent_008_wildlife_habitat_areas_compiled_02`
   - strict net UWR no-harvest deduction: `23.175 ha`
   - strict net WHA no-harvest deduction: `131544.417 ha`
@@ -312,14 +322,14 @@
 - TSR benchmark cumulative area: `2415545.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2423068.823 ha`
 - Strict cumulative vs TSR cumulative delta: `7523.823 ha`
-- Strict reconstructed removed area: `25974.994 ha`
-- Reviewed bridge removed area: `17482.824 ha`
+- Strict reconstructed net deduction: `25974.994 ha`
+- Reviewed bridge net deduction: `17482.824 ha`
 - Strict vs TSR delta: `14453.994 ha`
 - Reviewed vs TSR delta: `5961.824 ha`
 - Strict vs reviewed delta: `8492.170 ha`
 - Strict vs TSR: The strict lane modestly overcuts the TSR benchmark here, but the chained cumulative fit through step 9 remains very close.
-- Reviewed difference: The strict lane removes somewhat more area than the reviewed bridge here.
-- Practical meaning: This step is accepted as good enough because the locked chained cumulative result after step 9 is only `+7,523.823 ha` high versus TSR.
+- Reviewed difference: The legal-planning fish subset now runs correctly, and the remaining mismatch is a modest over-selection rather than a blocked-input seam.
+- Practical meaning: This step is accepted as good enough because the locked chained cumulative result after step 9 is only +7,523.823 ha high versus TSR.
 - Engineering interpretation: The legal-planning fish subset now runs correctly; the remaining gap is a modest over-selection seam inside the filtered fish-objective attributes, not a garbage-input or extent-blocking problem.
 - Recommended next move: Lock step 9 as good enough for the current ladder and move on unless later cumulative drift makes this seam worth reopening.
 - Adjudication queue action: `defer_low_priority` (Locked close enough; move on.)
@@ -347,8 +357,8 @@
 - TSR benchmark cumulative area: `2415218.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2423068.823 ha`
 - Strict cumulative vs TSR cumulative delta: `7850.823 ha`
-- Strict reconstructed removed area: `0.000 ha`
-- Reviewed bridge removed area: `not recorded`
+- Strict reconstructed net deduction: `0.000 ha`
+- Reviewed bridge net deduction: `not recorded`
 - Strict vs TSR delta: `-327.000 ha`
 - Strict vs TSR: The strict lane is close enough to the TSR benchmark here for practical exploratory use.
 - Reviewed difference: The reviewed lane is carrying an accepted override, skip, calibration, or no-op choice that the strict lane does not automatically share.
@@ -374,15 +384,15 @@
 - TSR benchmark cumulative area: `2352758.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2344474.867 ha`
 - Strict cumulative vs TSR cumulative delta: `-8283.133 ha`
-- Strict reconstructed removed area: `78593.956 ha`
-- Reviewed bridge removed area: `69545.637 ha`
+- Strict reconstructed net deduction: `78593.956 ha`
+- Reviewed bridge net deduction: `69545.637 ha`
 - Strict vs TSR delta: `16133.956 ha`
 - Reviewed vs TSR delta: `7085.637 ha`
 - Strict vs reviewed delta: `9048.319 ha`
 - Strict vs TSR: The strict lane modestly overcuts the TSR benchmark here, but the chained cumulative fit through step 11 remains very close.
-- Reviewed difference: The strict lane removes somewhat more area than the reviewed bridge here.
-- Practical meaning: This step is accepted as good enough because the locked chained cumulative result after step 11 is only `-8,283.133 ha` below TSR.
-- Engineering interpretation: The legal CCLUP/CASC planning polygons now run as an exact spatial step and land in the right order of magnitude. The remaining gap is a modest semantics difference rather than a blocked-input problem.
+- Reviewed difference: The legal CCLUP/CASC planning polygons now run as an exact spatial step and land in the right order of magnitude.
+- Practical meaning: This step is accepted as good enough because the locked chained cumulative result after step 11 is only -8,283.133 ha below TSR.
+- Engineering interpretation: The remaining gap is a modest semantics difference rather than a blocked-input problem.
 - Recommended next move: Lock step 11 as good enough for the current ladder and move on unless a later cumulative drift reopens this seam.
 - Adjudication queue action: `defer_low_priority` (Locked close enough; move on.)
 - Actionability: No immediate repair is needed here.
@@ -407,8 +417,8 @@
 - TSR benchmark cumulative area: `2284357.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2276073.867 ha`
 - Strict cumulative vs TSR cumulative delta: `-8283.133 ha`
-- Strict reconstructed removed area: `68401.000 ha`
-- Reviewed bridge removed area: `not recorded`
+- Strict reconstructed net deduction: `68401.000 ha`
+- Reviewed bridge net deduction: `not recorded`
 - Strict vs TSR delta: `0.000 ha`
 - Strict vs TSR: The strict lane is close enough to the TSR benchmark here for practical exploratory use.
 - Reviewed difference: The strict lane now uses a documented benchmark-anchored aspatial bridge because no trustworthy public PRA boundary is available.
@@ -427,28 +437,28 @@
 #### 13. Areas considered inoperable
 
 - Parent step id: `thlb_parent_013_areas_considered_inoperable`
-- Strict TSR fit: `not_comparable_to_tsr`
-- Reviewed difference role: `blocked_or_missing_source`
+- Strict TSR fit: `tsr_close_enough`
+- Reviewed difference role: `aspatial_bridge_difference`
 - Problem ownership: `reviewed_bridge_choice`
-- Difference nature: `accepted_reviewed_override`
-- Reconstructed status: `blocked_exact_overlay`
+- Difference nature: `accepted_aspatial_bridge`
+- Reconstructed status: `exact_plus_calibrated_bridge`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `33533.000 ha`
 - TSR benchmark cumulative area: `2250824.000 ha`
-- Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
-- Strict cumulative vs TSR cumulative delta: `277146.255 ha`
-- Strict reconstructed removed area: `0.000 ha`
-- Reviewed bridge removed area: `43628.139 ha`
-- Strict vs TSR delta: `-33533.000 ha`
+- Strict reconstructed cumulative area at this checkpoint: `2240985.033 ha`
+- Strict cumulative vs TSR cumulative delta: `-9838.967 ha`
+- Strict reconstructed net deduction: `35088.834 ha`
+- Reviewed bridge net deduction: `43628.139 ha`
+- Strict vs TSR delta: `1555.834 ha`
 - Reviewed vs TSR delta: `10095.139 ha`
 - Strict vs reviewed delta: `-43628.139 ha`
-- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
-- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
-- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
-- Engineering interpretation: The reviewed lane uses accepted derived-attribute and calibrated bridge logic here that the strict checkpoint1 lane does not share.
-- Recommended next move: Keep the accepted reviewed bridge unless you explicitly decide to port its late-stage derived attributes into strict semantics.
-- Adjudication queue action: `keep_reviewed_bridge` (Keep the reviewed bridge for now and do not force strict parity yet.)
-- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
+- Strict vs TSR: The strict lane is close enough to the TSR benchmark here for practical exploratory use.
+- Reviewed difference: The strict lane now combines exact unstable-terrain overlay with a calibrated steep-slope rollback on the selected steep subset.
+- Practical meaning: Strict is close enough to TSR here, so this is not a top-priority repair. The remaining miss is only the small unstable-terrain exact overcut.
+- Engineering interpretation: This step now uses exact terrain-stability overlay plus a benchmark-anchored steep-slope THLB rollback because public threshold GIS over-selects TSR Table 16 steep-slope exclusions.
+- Recommended next move: Lock step 13 and move on unless later cumulative drift forces a reopen.
+- Adjudication queue action: `defer_low_priority` (Locked close enough; move on.)
+- Actionability: Keep the calibrated steep-slope bridge and exact terrain branch unless later cumulative drift forces a reopen.
 - Supporting notes:
   - strict spatial modes: `blocked_exact_overlay`
   - strict compiled steps: `thlb_parent_013_areas_considered_inoperable_compiled_01`, `thlb_parent_013_areas_considered_inoperable_compiled_02`
@@ -458,6 +468,7 @@
   - strict note: The v1 terrain filter uses terrain-stability classes U (Unstable) and V (Terrain Class 5 proxy) as the current executable subset.
   - strict note: TSA29 section 6.4.3 splits steep-slope exclusions east and west of Highway 97.
   - strict note: Checkpoint execution expects `femic_slope_pct_median`, `femic_hwy97_side`, and `femic_step13_steep_slope_flag` to be precompiled onto the curve-ready checkpoint.
+  - strict note: locked exact terrain + calibrated steep-slope rollback bridge from lhlb_curve_ready checkpoint
 
 #### 14. Sites with low growing timber potential
 
@@ -472,8 +483,8 @@
 - TSR benchmark cumulative area: `1929780.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
 - Strict cumulative vs TSR cumulative delta: `598190.255 ha`
-- Strict reconstructed removed area: `0.000 ha`
-- Reviewed bridge removed area: `329228.613 ha`
+- Strict reconstructed net deduction: `0.000 ha`
+- Reviewed bridge net deduction: `329228.613 ha`
 - Strict vs TSR delta: `-321044.000 ha`
 - Reviewed vs TSR delta: `8184.613 ha`
 - Strict vs reviewed delta: `-329228.613 ha`
@@ -509,8 +520,8 @@
 - TSR benchmark cumulative area: `1880728.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
 - Strict cumulative vs TSR cumulative delta: `647242.255 ha`
-- Strict reconstructed removed area: `0.000 ha`
-- Reviewed bridge removed area: `103629.462 ha`
+- Strict reconstructed net deduction: `0.000 ha`
+- Reviewed bridge net deduction: `103629.462 ha`
 - Strict vs TSR delta: `-49052.000 ha`
 - Reviewed vs TSR delta: `54577.462 ha`
 - Strict vs reviewed delta: `-103629.462 ha`
@@ -542,8 +553,8 @@
 - TSR benchmark cumulative area: `1871130.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
 - Strict cumulative vs TSR cumulative delta: `656840.255 ha`
-- Strict reconstructed removed area: `0.000 ha`
-- Reviewed bridge removed area: `7562.895 ha`
+- Strict reconstructed net deduction: `0.000 ha`
+- Reviewed bridge net deduction: `7562.895 ha`
 - Strict vs TSR delta: `-9598.000 ha`
 - Reviewed vs TSR delta: `-2035.105 ha`
 - Strict vs reviewed delta: `-7562.895 ha`
@@ -576,8 +587,8 @@
 - TSR benchmark cumulative area: `1867553.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
 - Strict cumulative vs TSR cumulative delta: `660417.255 ha`
-- Strict reconstructed removed area: `0.000 ha`
-- Reviewed bridge removed area: `1261.158 ha`
+- Strict reconstructed net deduction: `0.000 ha`
+- Reviewed bridge net deduction: `1261.158 ha`
 - Strict vs TSR delta: `-3577.000 ha`
 - Reviewed vs TSR delta: `-2315.842 ha`
 - Strict vs reviewed delta: `-1261.158 ha`
@@ -607,8 +618,8 @@
 - TSR benchmark cumulative area: `1812720.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
 - Strict cumulative vs TSR cumulative delta: `715250.255 ha`
-- Strict reconstructed removed area: `0.000 ha`
-- Reviewed bridge removed area: `72204.542 ha`
+- Strict reconstructed net deduction: `0.000 ha`
+- Reviewed bridge net deduction: `72204.542 ha`
 - Strict vs TSR delta: `-54833.000 ha`
 - Reviewed vs TSR delta: `17371.542 ha`
 - Strict vs reviewed delta: `-72204.542 ha`
@@ -641,8 +652,8 @@
 - TSR benchmark cumulative area: `1804681.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
 - Strict cumulative vs TSR cumulative delta: `723289.255 ha`
-- Strict reconstructed removed area: `0.000 ha`
-- Reviewed bridge removed area: `10244.748 ha`
+- Strict reconstructed net deduction: `0.000 ha`
+- Reviewed bridge net deduction: `10244.748 ha`
 - Strict vs TSR delta: `-8039.000 ha`
 - Reviewed vs TSR delta: `2205.748 ha`
 - Strict vs reviewed delta: `-10244.748 ha`
@@ -674,8 +685,8 @@
 - TSR benchmark cumulative area: `1710264.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2483803.931 ha`
 - Strict cumulative vs TSR cumulative delta: `773539.931 ha`
-- Strict reconstructed removed area: `44166.324 ha`
-- Reviewed bridge removed area: `33627.943 ha`
+- Strict reconstructed net deduction: `44166.324 ha`
+- Reviewed bridge net deduction: `33627.943 ha`
 - Strict vs TSR delta: `-50250.676 ha`
 - Reviewed vs TSR delta: `-60789.057 ha`
 - Strict vs reviewed delta: `10538.381 ha`
@@ -708,8 +719,8 @@
 - TSR benchmark cumulative area: `1676059.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2468109.744 ha`
 - Strict cumulative vs TSR cumulative delta: `792050.744 ha`
-- Strict reconstructed removed area: `15694.187 ha`
-- Reviewed bridge removed area: `11512.712 ha`
+- Strict reconstructed net deduction: `15694.187 ha`
+- Reviewed bridge net deduction: `11512.712 ha`
 - Strict vs TSR delta: `-18510.813 ha`
 - Reviewed vs TSR delta: `-22692.288 ha`
 - Strict vs reviewed delta: `4181.474 ha`
@@ -740,8 +751,8 @@
 - Reviewed status: `applied_noop`
 - TSR benchmark marginal deduction: `22754.000 ha`
 - Strict reconstructed cumulative area at this checkpoint: `2468109.744 ha`
-- Strict reconstructed removed area: `0.000 ha`
-- Reviewed bridge removed area: `0.000 ha`
+- Strict reconstructed net deduction: `0.000 ha`
+- Reviewed bridge net deduction: `0.000 ha`
 - Strict vs TSR delta: `-22754.000 ha`
 - Reviewed vs TSR delta: `-22754.000 ha`
 - Strict vs reviewed delta: `0.000 ha`

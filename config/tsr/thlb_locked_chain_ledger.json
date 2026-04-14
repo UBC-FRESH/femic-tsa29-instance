@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-04-14T06:28:05.819468+00:00",
+  "generated_utc": "2026-04-14T23:48:52.193852+00:00",
   "artifact_kind": "thlb_locked_chain_ledger",
   "tsa": {
     "tsa_id": "tsa_29",
@@ -9,8 +9,8 @@
   "recipe_path": "config/tsr/thlb_netdown.recipe.yaml",
   "ledger_path": "config/tsr/thlb_locked_chain_ledger.json",
   "baseline_managed_area_ha": 4933664.212,
-  "latest_locked_parent_step_id": "thlb_parent_012_proven_aboriginal_rights_areas",
-  "latest_locked_row_order": 12,
+  "latest_locked_parent_step_id": "thlb_parent_013_areas_considered_inoperable",
+  "latest_locked_row_order": 13,
   "entries": [
     {
       "row_order": 1,
@@ -181,9 +181,9 @@
       "benchmark_marginal_area_ha": 62460.0,
       "benchmark_cumulative_area_ha": 2352758.0,
       "locked_net_removed_area_ha": 78593.956,
-      "locked_cumulative_remaining_area_ha": 2344474.867,
+      "locked_cumulative_remaining_area_ha": 2344474.8669999996,
       "tsr_cumulative_area_ha": 2352758.0,
-      "locked_cumulative_delta_ha": -8283.133000000147,
+      "locked_cumulative_delta_ha": -8283.13300000038,
       "locked_source_kind": "bounded_step_run",
       "locked_source_note": "bounded chained replay from official AFLB checkpoint through locked steps 6-9, then exact step-11 legal-planning CASC overlay",
       "marginal_not_applicable": false
@@ -197,11 +197,27 @@
       "benchmark_marginal_area_ha": 68401.0,
       "benchmark_cumulative_area_ha": 2284357.0,
       "locked_net_removed_area_ha": 68401.0,
-      "locked_cumulative_remaining_area_ha": 2276073.867,
+      "locked_cumulative_remaining_area_ha": 2276073.8669999996,
       "tsr_cumulative_area_ha": 2284357.0,
-      "locked_cumulative_delta_ha": -8283.133,
+      "locked_cumulative_delta_ha": -8283.13300000038,
       "locked_source_kind": "documented_aspatial_bridge",
       "locked_source_note": "benchmark-anchored public-data aspatial bridge for Proven Aboriginal Rights areas; exact PRA boundary not publicly trustworthy",
+      "marginal_not_applicable": false
+    },
+    {
+      "row_order": 13,
+      "parent_step_id": "thlb_parent_013_areas_considered_inoperable",
+      "parent_label": "Areas considered inoperable",
+      "parent_kind": "transformation",
+      "land_base_stage": "lhlb_to_thlb",
+      "benchmark_marginal_area_ha": 33533.0,
+      "benchmark_cumulative_area_ha": 2250824.0,
+      "locked_net_removed_area_ha": 35088.83424583776,
+      "locked_cumulative_remaining_area_ha": 2240985.032754162,
+      "tsr_cumulative_area_ha": 2250824.0,
+      "locked_cumulative_delta_ha": -9838.96724583814,
+      "locked_source_kind": "exact_plus_calibrated_bridge",
+      "locked_source_note": "exact unstable-terrain overlay + direct-target steep-slope THLB rollback on selected steep subset",
       "marginal_not_applicable": false
     }
   ]
