@@ -51,26 +51,26 @@
 
 ## Stepwise Adjudication Queue
 
-- 2. `thlb_parent_002_land_not_administered_by_the_province` | Land not administered by the Province | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
-- 3. `thlb_parent_003_non_forest` | Non-forest | action=`keep_reviewed_bridge` | tsr-fit=`strict_under_tsr_major` | ownership=`model_endogenous`
-- 4. `thlb_parent_004_roads_and_landings` | Roads and landings | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`mixed`
-- 6. `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
-- 7. `thlb_parent_007_old_growth_management_areas` | Old growth management areas | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
-- 8. `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
-- 9. `thlb_parent_009_critical_habitat_for_fish` | Critical habitat for fish | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
-- 10. `thlb_parent_010_lakeshore_management` | Lakeshore management | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`data_exogenous`
-- 11. `thlb_parent_011_community_areas_of_special_concern` | Community areas of special concern | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
-- 12. `thlb_parent_012_proven_aboriginal_rights_areas` | Proven Aboriginal Rights areas | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`data_exogenous`
-- 13. `thlb_parent_013_areas_considered_inoperable` | Areas considered inoperable | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
-- 14. `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
-- 15. `thlb_parent_015_non_merchantable_timber_profiles` | Non-merchantable timber profiles | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`model_endogenous`
-- 16. `thlb_parent_016_recreation_features` | Recreation features | action=`fix_strict_logic` | tsr-fit=`not_comparable_to_tsr` | ownership=`mixed`
-- 17. `thlb_parent_017_growth_and_yield_permanent_sample_plots` | Growth and yield permanent sample plots | action=`improve_data_or_source` | tsr-fit=`not_comparable_to_tsr` | ownership=`data_exogenous`
-- 18. `thlb_parent_018_riparian_areas` | Riparian areas | action=`improve_data_or_source` | tsr-fit=`not_comparable_to_tsr` | ownership=`mixed`
-- 19. `thlb_parent_019_buffered_trails` | Buffered trails | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`reviewed_bridge_choice`
-- 20. `thlb_parent_020_wildlife_tree_retention_areas` | Wildlife tree retention areas | action=`use_documented_aspatial_fallback` | tsr-fit=`strict_under_tsr_major` | ownership=`reviewed_bridge_choice`
-- 21. `thlb_parent_021_cultural_heritage_and_archaeological_resources` | Cultural heritage and archaeological resources | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
-- 23. `thlb_parent_023_future_roads` | Future roads | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
+- 2. `thlb_parent_002_land_not_administered_by_the_province` | Land not administered by the Province | action=`` | tsr-fit=`` | ownership=``
+- 3. `thlb_parent_003_non_forest` | Non-forest | action=`` | tsr-fit=`` | ownership=``
+- 4. `thlb_parent_004_roads_and_landings` | Roads and landings | action=`` | tsr-fit=`` | ownership=``
+- 6. `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | action=`` | tsr-fit=`` | ownership=``
+- 7. `thlb_parent_007_old_growth_management_areas` | Old growth management areas | action=`` | tsr-fit=`` | ownership=``
+- 8. `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | action=`` | tsr-fit=`` | ownership=``
+- 9. `thlb_parent_009_critical_habitat_for_fish` | Critical habitat for fish | action=`` | tsr-fit=`` | ownership=``
+- 10. `thlb_parent_010_lakeshore_management` | Lakeshore management | action=`` | tsr-fit=`` | ownership=``
+- 11. `thlb_parent_011_community_areas_of_special_concern` | Community areas of special concern | action=`` | tsr-fit=`` | ownership=``
+- 12. `thlb_parent_012_proven_aboriginal_rights_areas` | Proven Aboriginal Rights areas | action=`` | tsr-fit=`` | ownership=``
+- 13. `thlb_parent_013_areas_considered_inoperable` | Areas considered inoperable | action=`` | tsr-fit=`` | ownership=``
+- 14. `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | action=`` | tsr-fit=`` | ownership=``
+- 15. `thlb_parent_015_non_merchantable_timber_profiles` | Non-merchantable timber profiles | action=`` | tsr-fit=`` | ownership=``
+- 16. `thlb_parent_016_recreation_features` | Recreation features | action=`` | tsr-fit=`` | ownership=``
+- 17. `thlb_parent_017_growth_and_yield_permanent_sample_plots` | Growth and yield permanent sample plots | action=`` | tsr-fit=`` | ownership=``
+- 18. `thlb_parent_018_riparian_areas` | Riparian areas | action=`` | tsr-fit=`` | ownership=``
+- 19. `thlb_parent_019_buffered_trails` | Buffered trails | action=`` | tsr-fit=`` | ownership=``
+- 20. `thlb_parent_020_wildlife_tree_retention_areas` | Wildlife tree retention areas | action=`` | tsr-fit=`` | ownership=``
+- 21. `thlb_parent_021_cultural_heritage_and_archaeological_resources` | Cultural heritage and archaeological resources | action=`` | tsr-fit=`` | ownership=``
+- 23. `thlb_parent_023_future_roads` | Future roads | action=`` | tsr-fit=`` | ownership=``
 
 ## Top 5 Strict-vs-TSR Contributors
 
@@ -512,60 +512,60 @@
 #### 15. Non-merchantable timber profiles
 
 - Parent step id: `thlb_parent_015_non_merchantable_timber_profiles`
-- Strict TSR fit: `not_comparable_to_tsr`
-- Reviewed difference role: `blocked_or_missing_source`
-- Problem ownership: `model_endogenous`
-- Difference nature: `missing_late_stage_semantics`
-- Reconstructed status: `blocked_missing_source`
+- Strict TSR fit: `tsr_close_enough`
+- Reviewed difference role: `manual_or_reviewed_override`
+- Problem ownership: `reviewed_bridge_choice`
+- Difference nature: `accepted_operability_proxy`
+- Reconstructed status: `applied`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `49052.000 ha`
 - TSR benchmark cumulative area: `1880728.000 ha`
-- Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
-- Strict cumulative vs TSR cumulative delta: `647242.255 ha`
-- Strict reconstructed net deduction: `0.000 ha`
+- Strict reconstructed cumulative area at this checkpoint: `1878085.142 ha`
+- Strict cumulative vs TSR cumulative delta: `-2642.858 ha`
+- Strict reconstructed net deduction: `48308.452 ha`
 - Reviewed bridge net deduction: `103629.462 ha`
-- Strict vs TSR delta: `-49052.000 ha`
+- Strict vs TSR delta: `-743.548 ha`
 - Reviewed vs TSR delta: `54577.462 ha`
-- Strict vs reviewed delta: `-103629.462 ha`
-- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
-- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
-- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
-- Engineering interpretation: The strict lane is missing the later broadleaf-leading yield logic that the reviewed lane applies here.
-- Recommended next move: Port the reviewed late-stage logic or keep this as an explicit bridge/fallback step.
-- Adjudication queue action: `keep_reviewed_bridge` (Keep the reviewed bridge for now and do not force strict parity yet.)
+- Strict vs reviewed delta: `-55321.010 ha`
+- Strict vs TSR: The strict lane is close enough to the TSR benchmark here for practical exploratory use.
+- Reviewed difference: The reviewed lane is carrying an accepted override, skip, calibration, or operability judgment that the strict lane now approximates closely but not identically.
+- Practical meaning: Strict is close enough to TSR here, so this is not a top-priority repair. The reviewed lane still reflects an accepted operability judgment the strict lane only approximates.
+- Engineering interpretation: The strict lane now uses broadleaf-leading plus a minimum-age proxy (PROJ_AGE_1 >= 95) to approximate the TSR's physically operable / minimum-harvestable-age screen.
+- Recommended next move: Lock as good enough unless later cumulative drift forces a reopen.
+- Adjudication queue action: `defer_low_priority` (Locked close enough; move on.)
 - Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
 - Supporting notes:
   - strict compiled steps: `thlb_parent_015_non_merchantable_timber_profiles_compiled_01`
   - reviewed approval scope: `single_lu_smoke_subset_williams_lake`
   - reviewed ratchet state: `approved`
   - strict note: TSA29 section 6.4.5 excludes broadleaf-leading stands from THLB.
-  - strict note: Notebook execution uses the leading VRI species code on the late-stage curve-ready checkpoint surface.
+  - strict note: The strict lane now uses PROJ_AGE_1 >= 95 as the minimum-age proxy for the TSR's physically operable / minimum-harvestable-age screen.
   - strict note: The deciduous component of conifer-leading stands is explicitly deferred to the later broadleaf volume-exclusion assumption.
 
 #### 16. Recreation features
 
 - Parent step id: `thlb_parent_016_recreation_features`
-- Strict TSR fit: `not_comparable_to_tsr`
-- Reviewed difference role: `blocked_or_missing_source`
-- Problem ownership: `mixed`
-- Difference nature: `partial_strict_logic`
-- Reconstructed status: `blocked_exact_overlay`
+- Strict TSR fit: `tsr_close_enough`
+- Reviewed difference role: `manual_or_reviewed_override`
+- Problem ownership: `reviewed_bridge_choice`
+- Difference nature: `accepted_feature_subset_bridge`
+- Reconstructed status: `applied`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `9598.000 ha`
 - TSR benchmark cumulative area: `1871130.000 ha`
-- Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
-- Strict cumulative vs TSR cumulative delta: `656840.255 ha`
-- Strict reconstructed net deduction: `0.000 ha`
+- Strict reconstructed cumulative area at this checkpoint: `1869193.903 ha`
+- Strict cumulative vs TSR cumulative delta: `-1936.097 ha`
+- Strict reconstructed net deduction: `8891.240 ha`
 - Reviewed bridge net deduction: `7562.895 ha`
-- Strict vs TSR delta: `-9598.000 ha`
+- Strict vs TSR delta: `-706.760 ha`
 - Reviewed vs TSR delta: `-2035.105 ha`
-- Strict vs reviewed delta: `-7562.895 ha`
-- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
-- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
-- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
-- Engineering interpretation: The strict lane only captures part of the reviewed recreation exclusion logic.
-- Recommended next move: Low-priority cleanup: improve strict logic if this step later matters to the remaining gap.
-- Adjudication queue action: `fix_strict_logic` (Fix strict logic or semantics in FEMIC.)
+- Strict vs reviewed delta: `1328.345 ha`
+- Strict vs TSR: The strict lane is close enough to the TSR benchmark here for practical exploratory use.
+- Reviewed difference: The reviewed lane is carrying an accepted override, calibration, or feature-subset judgment that the strict lane now approximates closely but not identically.
+- Practical meaning: Strict is close enough to TSR here, so this is not a top-priority repair. The reviewed lane still reflects an accepted recreation-feature judgment the strict lane only approximates.
+- Engineering interpretation: The strict lane now uses the active FTEN recreation polygon subset as a close-enough exact bridge for the TSR recreation-features step.
+- Recommended next move: Lock as good enough unless later cumulative drift forces a reopen.
+- Adjudication queue action: `defer_low_priority` (Locked close enough; move on.)
 - Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
 - Supporting notes:
   - strict spatial modes: `blocked_exact_overlay`
@@ -573,7 +573,7 @@
   - reviewed approval scope: `full_tsa_user_directed_acceptance`
   - reviewed ratchet state: `approved`
   - strict note: TSA29 section 6.4.6 excludes identified recreation areas and features from THLB.
-  - strict note: Notebook execution currently auto-runs the active FTEN recreation polygon subset only.
+  - strict note: The strict lane uses the active FTEN recreation polygon subset as the current public-data executable bridge.
   - strict note: Recreation trails and FSP consultation/procedure language remain out of scope for this first runnable bridge pass.
 
 #### 17. Growth and yield permanent sample plots

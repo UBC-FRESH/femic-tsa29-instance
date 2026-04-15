@@ -4316,6 +4316,8 @@ parent_steps:
     - TSA29 section 6.4.5 excludes broadleaf-leading stands from THLB.
     - Notebook execution uses the leading VRI species code on the late-stage curve-ready
       checkpoint surface.
+    - The strict lane currently uses `PROJ_AGE_1 >= 95` as the minimum-age proxy
+      for the TSR's physically operable / minimum-harvestable-age screen.
     - The deciduous component of conifer-leading stands is explicitly deferred to
       the later broadleaf volume-exclusion assumption.
     row_source_kind: table_summary_row
@@ -4328,7 +4330,7 @@ parent_steps:
       defer broadleaf components in conifer-leading stands to the later broadleaf
       volume-exclusion assumption
     linked_source_entry_ids: &id030 []
-    checkpoint_attribute_mode: any
+    checkpoint_attribute_mode: all
     checkpoint_attribute_filters: &id031
     - field: SPECIES_CD_1
       operator: in
@@ -4362,6 +4364,9 @@ parent_steps:
       - WD
       - WP
       - WS
+    - field: PROJ_AGE_1
+      operator: ge
+      value: 95.0
   approved: true
   approval_scope: single_lu_smoke_subset_williams_lake
   approval_note: 'Soft-approved on the Williams Lake landscape-unit smoke subset.
@@ -8688,7 +8693,7 @@ steps:
     defer broadleaf components in conifer-leading stands to the later broadleaf volume-exclusion
     assumption
   linked_source_entry_ids: *id030
-  checkpoint_attribute_mode: any
+  checkpoint_attribute_mode: all
   checkpoint_attribute_filters: *id031
 - step_id: thlb_parent_016_recreation_features_compiled_01
   parent_step_id: thlb_parent_016_recreation_features
