@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-04-14T23:48:52.209360+00:00",
+  "generated_utc": "2026-04-15T15:23:12.100162+00:00",
   "artifact_kind": "thlb_reconstruction_comparison",
   "tsa": {
     "tsa_id": "tsa_29",
@@ -20,30 +20,30 @@
   "strict_vs_reviewed_delta_ha": 598942.8899240878,
   "comparison_bucket_counts": {
     "aspatial_bridge_difference": 5,
-    "blocked_or_missing_source": 6,
+    "blocked_or_missing_source": 5,
     "close_match": 3,
-    "manual_or_reviewed_override": 2,
+    "manual_or_reviewed_override": 3,
     "not_comparable": 4,
     "reviewed_bridge_only": 1,
     "strict_overcut_candidate": 3
   },
   "problem_ownership_counts": {
     "data_exogenous": 3,
-    "mixed": 4,
+    "mixed": 3,
     "model_endogenous": 7,
     "not_applicable": 4,
-    "reviewed_bridge_choice": 6
+    "reviewed_bridge_choice": 7
   },
   "tsr_fit_counts": {
-    "not_comparable_to_tsr": 10,
+    "not_comparable_to_tsr": 9,
     "strict_under_tsr_major": 2,
-    "tsr_close_enough": 12
+    "tsr_close_enough": 13
   },
   "adjudication_action_counts": {
-    "defer_low_priority": 12,
+    "defer_low_priority": 13,
     "fix_strict_logic": 1,
     "improve_data_or_source": 2,
-    "keep_reviewed_bridge": 4,
+    "keep_reviewed_bridge": 3,
     "not_applicable": 4,
     "use_documented_aspatial_fallback": 1
   },
@@ -54,13 +54,6 @@
       "tsr_fit_class": "strict_under_tsr_major",
       "strict_minus_tsr_net_removed_area_ha": -1105908.0,
       "strict_minus_tsr_removed_area_ha": -1105908.0
-    },
-    {
-      "parent_step_id": "thlb_parent_014_sites_with_low_growing_timber_potential",
-      "parent_label": "Sites with low growing timber potential",
-      "tsr_fit_class": "not_comparable_to_tsr",
-      "strict_minus_tsr_net_removed_area_ha": -321044.0,
-      "strict_minus_tsr_removed_area_ha": -321044.0
     },
     {
       "parent_step_id": "thlb_parent_018_riparian_areas",
@@ -82,16 +75,16 @@
       "tsr_fit_class": "not_comparable_to_tsr",
       "strict_minus_tsr_net_removed_area_ha": -49052.0,
       "strict_minus_tsr_removed_area_ha": -49052.0
+    },
+    {
+      "parent_step_id": "thlb_parent_023_future_roads",
+      "parent_label": "Future roads",
+      "tsr_fit_class": "tsr_close_enough",
+      "strict_minus_tsr_net_removed_area_ha": -22754.0,
+      "strict_minus_tsr_removed_area_ha": -22754.0
     }
   ],
   "top_strict_vs_reviewed_context_steps": [
-    {
-      "parent_step_id": "thlb_parent_003_non_forest",
-      "parent_label": "Non-forest",
-      "reviewed_difference_role": "reviewed_bridge_only",
-      "strict_minus_reviewed_net_removed_area_ha": -2015120.946476626,
-      "strict_minus_reviewed_removed_area_ha": -2015120.946476626
-    },
     {
       "parent_step_id": "thlb_parent_002_land_not_administered_by_the_province",
       "parent_label": "Land not administered by the Province",
@@ -100,11 +93,11 @@
       "strict_minus_reviewed_removed_area_ha": 491992.1560893912
     },
     {
-      "parent_step_id": "thlb_parent_014_sites_with_low_growing_timber_potential",
-      "parent_label": "Sites with low growing timber potential",
-      "reviewed_difference_role": "blocked_or_missing_source",
-      "strict_minus_reviewed_net_removed_area_ha": -329228.61294745223,
-      "strict_minus_reviewed_removed_area_ha": -329228.61294745223
+      "parent_step_id": "thlb_parent_008_wildlife_habitat_areas",
+      "parent_label": "Wildlife habitat areas",
+      "reviewed_difference_role": "strict_undercut_candidate",
+      "strict_minus_reviewed_net_removed_area_ha": -133005.88310422,
+      "strict_minus_reviewed_removed_area_ha": -133005.88310422
     },
     {
       "parent_step_id": "thlb_parent_015_non_merchantable_timber_profiles",
@@ -119,6 +112,13 @@
       "reviewed_difference_role": "blocked_or_missing_source",
       "strict_minus_reviewed_net_removed_area_ha": -72204.54153855772,
       "strict_minus_reviewed_removed_area_ha": -72204.54153855772
+    },
+    {
+      "parent_step_id": "thlb_parent_004_roads_and_landings",
+      "parent_label": "Roads and landings",
+      "reviewed_difference_role": "aspatial_bridge_difference",
+      "strict_minus_reviewed_net_removed_area_ha": 48876.88922698942,
+      "strict_minus_reviewed_removed_area_ha": 48876.88922698942
     }
   ],
   "milestone_count": 4,
@@ -168,23 +168,23 @@
       "row_order": 6,
       "parent_step_id": "thlb_parent_006_parks_protected_areas_area_base_tenures",
       "parent_label": "Parks, protected areas, area-base tenures",
-      "tsr_fit_class": "not_comparable_to_tsr",
-      "problem_ownership": "mixed",
-      "difference_nature": "strict_logic_undercut",
-      "adjudication_action": "fix_strict_logic",
-      "adjudication_action_summary": "Fix strict logic or semantics in FEMIC.",
-      "recommended_next_move": "Refine the strict tenure/ownership logic first, then reassess whether any supporting data gaps remain material."
+      "tsr_fit_class": "tsr_close_enough",
+      "problem_ownership": "reviewed_bridge_choice",
+      "difference_nature": "exact_plus_residual_bridge",
+      "adjudication_action": "defer_low_priority",
+      "adjudication_action_summary": "Locked close enough; move on.",
+      "recommended_next_move": "Keep step 6 fixed as-is and move on."
     },
     {
       "row_order": 7,
       "parent_step_id": "thlb_parent_007_old_growth_management_areas",
       "parent_label": "Old growth management areas",
-      "tsr_fit_class": "not_comparable_to_tsr",
+      "tsr_fit_class": "tsr_close_enough",
       "problem_ownership": "model_endogenous",
-      "difference_nature": "strict_logic_overcut",
-      "adjudication_action": "fix_strict_logic",
-      "adjudication_action_summary": "Fix strict logic or semantics in FEMIC.",
-      "recommended_next_move": "Tighten the OGMA logic before looking for new data; this looks like an over-selection problem."
+      "difference_nature": "exact_overlay_state_fixed",
+      "adjudication_action": "defer_low_priority",
+      "adjudication_action_summary": "Locked close enough; move on.",
+      "recommended_next_move": "Keep step 7 fixed as-is and move on."
     },
     {
       "row_order": 8,
@@ -192,10 +192,10 @@
       "parent_label": "Wildlife habitat areas",
       "tsr_fit_class": "tsr_close_enough",
       "problem_ownership": "model_endogenous",
-      "difference_nature": "strict_logic_overcut",
+      "difference_nature": "minor_strict_undercut",
       "adjudication_action": "defer_low_priority",
-      "adjudication_action_summary": "Fix strict logic or semantics in FEMIC.",
-      "recommended_next_move": "Audit the strict no-harvest selection logic and keep conditional/modified zones out unless the TSR clearly says otherwise."
+      "adjudication_action_summary": "Close enough to defer for now.",
+      "recommended_next_move": "Lock this step as good enough and move on to the next parent step."
     },
     {
       "row_order": 9,
@@ -256,12 +256,12 @@
       "row_order": 14,
       "parent_step_id": "thlb_parent_014_sites_with_low_growing_timber_potential",
       "parent_label": "Sites with low growing timber potential",
-      "tsr_fit_class": "not_comparable_to_tsr",
-      "problem_ownership": "mixed",
-      "difference_nature": "missing_late_stage_semantics",
-      "adjudication_action": "keep_reviewed_bridge",
-      "adjudication_action_summary": "Keep the reviewed bridge for now and do not force strict parity yet.",
-      "recommended_next_move": "Bridge or port the late-stage curve logic explicitly; do not mislabel this as a simple raw-data problem."
+      "tsr_fit_class": "tsr_close_enough",
+      "problem_ownership": "reviewed_bridge_choice",
+      "difference_nature": "accepted_curve_ready_bridge",
+      "adjudication_action": "defer_low_priority",
+      "adjudication_action_summary": "Locked close enough; move on.",
+      "recommended_next_move": "Lock step 14 and move on to step 15 unless later cumulative drift forces a reopen."
     },
     {
       "row_order": 15,
@@ -876,28 +876,28 @@
       "stage_label": "LHLB -> THLB",
       "benchmark_marginal_area_ha": 321044.0,
       "benchmark_cumulative_area_ha": 1929780.0,
-      "reconstructed_removed_area_ha": 0.0,
+      "reconstructed_removed_area_ha": 314591.4384803456,
       "reviewed_removed_area_ha": 329228.61294745223,
-      "strict_vs_tsr_delta_ha": -321044.0,
-      "reconstructed_cumulative_area_ha": 2527970.2547133425,
-      "strict_vs_tsr_cumulative_delta_ha": 598190.2547133425,
+      "strict_vs_tsr_delta_ha": -6452.561519654468,
+      "reconstructed_cumulative_area_ha": 1926393.5942738163,
+      "strict_vs_tsr_cumulative_delta_ha": -3386.4057261836715,
       "reviewed_vs_tsr_delta_ha": 8184.612947452231,
-      "strict_vs_reviewed_delta_ha": -329228.61294745223,
-      "reconstructed_status": "blocked_missing_source",
+      "strict_vs_reviewed_delta_ha": -14637.17446710664,
+      "reconstructed_status": "applied",
       "reviewed_status": "applied",
-      "tsr_fit_class": "not_comparable_to_tsr",
-      "tsr_fit_interpretation": "The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.",
-      "reviewed_difference_role": "blocked_or_missing_source",
-      "comparison_bucket": "blocked_or_missing_source",
-      "problem_ownership": "mixed",
-      "difference_nature": "missing_late_stage_semantics",
-      "plain_language_reason": "The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.",
-      "practical_meaning": "The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.",
-      "engineering_interpretation": "The strict lane is blocked because this is late-stage curve-ready logic, not because the universe of land is inherently unknowable.",
-      "recommended_next_move": "Bridge or port the late-stage curve logic explicitly; do not mislabel this as a simple raw-data problem.",
-      "adjudication_action": "keep_reviewed_bridge",
-      "adjudication_action_summary": "Keep the reviewed bridge for now and do not force strict parity yet.",
-      "actionability": "Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.",
+      "tsr_fit_class": "tsr_close_enough",
+      "tsr_fit_interpretation": "The official curve-ready strict restart now undercuts the TSR step-14 benchmark only modestly and is close enough for the current reconciliation pass.",
+      "reviewed_difference_role": "manual_or_reviewed_override",
+      "comparison_bucket": "manual_or_reviewed_override",
+      "problem_ownership": "reviewed_bridge_choice",
+      "difference_nature": "accepted_curve_ready_bridge",
+      "plain_language_reason": "The strict late-stage curve-ready lane now runs cleanly from the official restart artifact and lands close to the TSR benchmark, with the remaining miss small enough to carry forward.",
+      "practical_meaning": "Step 14 is close enough to lock for now; the remaining undercut is small and no longer blocks downstream THLB reconciliation.",
+      "engineering_interpretation": "The dominant seam was restart-artifact integrity plus SI-level tail assignment; both are now repaired and the remaining gap is a small late-stage calibration miss, not a blocked strict lane.",
+      "recommended_next_move": "Lock step 14 and move on to step 15 unless later cumulative drift forces a reopen.",
+      "adjudication_action": "defer_low_priority",
+      "adjudication_action_summary": "Locked close enough; move on.",
+      "actionability": "No immediate further repair required before step 15.",
       "supporting_notes": [
         "strict compiled steps: `thlb_parent_014_sites_with_low_growing_timber_potential_compiled_01`, `thlb_parent_014_sites_with_low_growing_timber_potential_compiled_02`",
         "reviewed approval scope: `full_tsa_user_directed_calibrated_acceptance`",
@@ -908,8 +908,11 @@
         "strict note: The threshold is calibrated to approximate the TSR step-14 benchmark with the current public-input curve family rather than claiming exact parity with the Chief Forester's yield tables.",
         "strict note: TSA29 section 6.4.4 raises the threshold to 250 m3/ha on steep slopes.",
         "strict note: This branch reuses the accepted step-13 steep-slope flag and applies the 250 m3/ha threshold only where `femic_step13_steep_slope_flag == True`.",
-        "strict note: Together with the calibrated non-steep 67.1 m3/ha branch, this keeps the step-14 partition mutually exclusive and avoids applying the lower threshold to steep stands."
-      ]
+        "strict note: Together with the calibrated non-steep 67.1 m3/ha branch, this keeps the step-14 partition mutually exclusive and avoids applying the lower threshold to steep stands.",
+        "strict note: Official `lhlb_curve_ready_checkpoint.feather` restart publishing now validates row count, `_row_id` coverage, managed area, and polygonality before atomic replace.",
+        "strict note: LU cache metadata is now versioned so stale in-place curve-ready partitions are invalidated and rebuilt against the current official restart artifact."
+      ],
+      "reconstructed_net_removed_area_ha": 314591.4384803456
     },
     {
       "parent_step_id": "thlb_parent_015_non_merchantable_timber_profiles",

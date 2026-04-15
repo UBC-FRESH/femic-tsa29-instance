@@ -1,6 +1,6 @@
 # THLB Reconstruction Comparison: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-14T23:48:52.209360+00:00`
+- Generated UTC: `2026-04-15T15:23:12.100162+00:00`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Reviewed bridge status report: `config/tsr/thlb_netdown.status.md`
 - Reconstructed audit JSON: `config/tsr/thlb_reconstructed.audit.json`
@@ -27,16 +27,16 @@
 
 ## Strict-vs-TSR Fit Counts
 
-- `not_comparable_to_tsr`: `10`
+- `not_comparable_to_tsr`: `9`
 - `strict_under_tsr_major`: `2`
-- `tsr_close_enough`: `12`
+- `tsr_close_enough`: `13`
 
 ## Reviewed-Difference Context Counts
 
 - `aspatial_bridge_difference`: `5`
-- `blocked_or_missing_source`: `6`
+- `blocked_or_missing_source`: `5`
 - `close_match`: `3`
-- `manual_or_reviewed_override`: `2`
+- `manual_or_reviewed_override`: `3`
 - `not_comparable`: `4`
 - `reviewed_bridge_only`: `1`
 - `strict_overcut_candidate`: `3`
@@ -44,25 +44,25 @@
 ## Problem Ownership Counts
 
 - `data_exogenous`: `3`
-- `mixed`: `4`
+- `mixed`: `3`
 - `model_endogenous`: `7`
 - `not_applicable`: `4`
-- `reviewed_bridge_choice`: `6`
+- `reviewed_bridge_choice`: `7`
 
 ## Stepwise Adjudication Queue
 
 - 2. `thlb_parent_002_land_not_administered_by_the_province` | Land not administered by the Province | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
 - 3. `thlb_parent_003_non_forest` | Non-forest | action=`keep_reviewed_bridge` | tsr-fit=`strict_under_tsr_major` | ownership=`model_endogenous`
 - 4. `thlb_parent_004_roads_and_landings` | Roads and landings | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`mixed`
-- 6. `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | action=`fix_strict_logic` | tsr-fit=`not_comparable_to_tsr` | ownership=`mixed`
-- 7. `thlb_parent_007_old_growth_management_areas` | Old growth management areas | action=`fix_strict_logic` | tsr-fit=`not_comparable_to_tsr` | ownership=`model_endogenous`
+- 6. `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
+- 7. `thlb_parent_007_old_growth_management_areas` | Old growth management areas | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
 - 8. `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
 - 9. `thlb_parent_009_critical_habitat_for_fish` | Critical habitat for fish | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
 - 10. `thlb_parent_010_lakeshore_management` | Lakeshore management | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`data_exogenous`
 - 11. `thlb_parent_011_community_areas_of_special_concern` | Community areas of special concern | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
 - 12. `thlb_parent_012_proven_aboriginal_rights_areas` | Proven Aboriginal Rights areas | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`data_exogenous`
 - 13. `thlb_parent_013_areas_considered_inoperable` | Areas considered inoperable | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
-- 14. `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`mixed`
+- 14. `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
 - 15. `thlb_parent_015_non_merchantable_timber_profiles` | Non-merchantable timber profiles | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`model_endogenous`
 - 16. `thlb_parent_016_recreation_features` | Recreation features | action=`fix_strict_logic` | tsr-fit=`not_comparable_to_tsr` | ownership=`mixed`
 - 17. `thlb_parent_017_growth_and_yield_permanent_sample_plots` | Growth and yield permanent sample plots | action=`improve_data_or_source` | tsr-fit=`not_comparable_to_tsr` | ownership=`data_exogenous`
@@ -75,18 +75,18 @@
 ## Top 5 Strict-vs-TSR Contributors
 
 - `thlb_parent_003_non_forest` | Non-forest | tsr-fit=`strict_under_tsr_major` | strict-TSR net deduction delta=`-1105908.000 ha`
-- `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | tsr-fit=`not_comparable_to_tsr` | strict-TSR net deduction delta=`-321044.000 ha`
 - `thlb_parent_018_riparian_areas` | Riparian areas | tsr-fit=`not_comparable_to_tsr` | strict-TSR net deduction delta=`-54833.000 ha`
 - `thlb_parent_020_wildlife_tree_retention_areas` | Wildlife tree retention areas | tsr-fit=`strict_under_tsr_major` | strict-TSR net deduction delta=`-50250.676 ha`
 - `thlb_parent_015_non_merchantable_timber_profiles` | Non-merchantable timber profiles | tsr-fit=`not_comparable_to_tsr` | strict-TSR net deduction delta=`-49052.000 ha`
+- `thlb_parent_023_future_roads` | Future roads | tsr-fit=`tsr_close_enough` | strict-TSR net deduction delta=`-22754.000 ha`
 
 ## Top 5 Strict-vs-Reviewed Context Differences
 
-- `thlb_parent_003_non_forest` | Non-forest | reviewed-role=`reviewed_bridge_only` | strict-reviewed net deduction delta=`-2015120.946 ha`
 - `thlb_parent_002_land_not_administered_by_the_province` | Land not administered by the Province | reviewed-role=`strict_overcut_candidate` | strict-reviewed net deduction delta=`491992.156 ha`
-- `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | reviewed-role=`blocked_or_missing_source` | strict-reviewed net deduction delta=`-329228.613 ha`
+- `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | reviewed-role=`strict_undercut_candidate` | strict-reviewed net deduction delta=`-133005.883 ha`
 - `thlb_parent_015_non_merchantable_timber_profiles` | Non-merchantable timber profiles | reviewed-role=`blocked_or_missing_source` | strict-reviewed net deduction delta=`-103629.462 ha`
 - `thlb_parent_018_riparian_areas` | Riparian areas | reviewed-role=`blocked_or_missing_source` | strict-reviewed net deduction delta=`-72204.542 ha`
+- `thlb_parent_004_roads_and_landings` | Roads and landings | reviewed-role=`aspatial_bridge_difference` | strict-reviewed net deduction delta=`48876.889 ha`
 
 ## Plain-Language Read
 
@@ -473,28 +473,28 @@
 #### 14. Sites with low growing timber potential
 
 - Parent step id: `thlb_parent_014_sites_with_low_growing_timber_potential`
-- Strict TSR fit: `not_comparable_to_tsr`
-- Reviewed difference role: `blocked_or_missing_source`
-- Problem ownership: `mixed`
-- Difference nature: `missing_late_stage_semantics`
-- Reconstructed status: `blocked_missing_source`
+- Strict TSR fit: `tsr_close_enough`
+- Reviewed difference role: `manual_or_reviewed_override`
+- Problem ownership: `reviewed_bridge_choice`
+- Difference nature: `accepted_curve_ready_bridge`
+- Reconstructed status: `applied`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `321044.000 ha`
 - TSR benchmark cumulative area: `1929780.000 ha`
-- Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
-- Strict cumulative vs TSR cumulative delta: `598190.255 ha`
-- Strict reconstructed net deduction: `0.000 ha`
+- Strict reconstructed cumulative area at this checkpoint: `1926393.594 ha`
+- Strict cumulative vs TSR cumulative delta: `-3386.406 ha`
+- Strict reconstructed net deduction: `314591.438 ha`
 - Reviewed bridge net deduction: `329228.613 ha`
-- Strict vs TSR delta: `-321044.000 ha`
+- Strict vs TSR delta: `-6452.562 ha`
 - Reviewed vs TSR delta: `8184.613 ha`
-- Strict vs reviewed delta: `-329228.613 ha`
-- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
-- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
-- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
-- Engineering interpretation: The strict lane is blocked because this is late-stage curve-ready logic, not because the universe of land is inherently unknowable.
-- Recommended next move: Bridge or port the late-stage curve logic explicitly; do not mislabel this as a simple raw-data problem.
-- Adjudication queue action: `keep_reviewed_bridge` (Keep the reviewed bridge for now and do not force strict parity yet.)
-- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
+- Strict vs reviewed delta: `-14637.174 ha`
+- Strict vs TSR: The official curve-ready strict restart now undercuts the TSR step-14 benchmark only modestly and is close enough for the current reconciliation pass.
+- Reviewed difference: The strict late-stage curve-ready lane now runs cleanly from the official restart artifact and lands close to the TSR benchmark, with the remaining miss small enough to carry forward.
+- Practical meaning: Step 14 is close enough to lock for now; the remaining undercut is small and no longer blocks downstream THLB reconciliation.
+- Engineering interpretation: The dominant seam was restart-artifact integrity plus SI-level tail assignment; both are now repaired and the remaining gap is a small late-stage calibration miss, not a blocked strict lane.
+- Recommended next move: Lock step 14 and move on to step 15 unless later cumulative drift forces a reopen.
+- Adjudication queue action: `defer_low_priority` (Locked close enough; move on.)
+- Actionability: No immediate further repair required before step 15.
 - Supporting notes:
   - strict compiled steps: `thlb_parent_014_sites_with_low_growing_timber_potential_compiled_01`, `thlb_parent_014_sites_with_low_growing_timber_potential_compiled_02`
   - reviewed approval scope: `full_tsa_user_directed_calibrated_acceptance`
@@ -506,6 +506,8 @@
   - strict note: TSA29 section 6.4.4 raises the threshold to 250 m3/ha on steep slopes.
   - strict note: This branch reuses the accepted step-13 steep-slope flag and applies the 250 m3/ha threshold only where `femic_step13_steep_slope_flag == True`.
   - strict note: Together with the calibrated non-steep 67.1 m3/ha branch, this keeps the step-14 partition mutually exclusive and avoids applying the lower threshold to steep stands.
+  - strict note: Official `lhlb_curve_ready_checkpoint.feather` restart publishing now validates row count, `_row_id` coverage, managed area, and polygonality before atomic replace.
+  - strict note: LU cache metadata is now versioned so stale in-place curve-ready partitions are invalidated and rebuilt against the current official restart artifact.
 
 #### 15. Non-merchantable timber profiles
 
