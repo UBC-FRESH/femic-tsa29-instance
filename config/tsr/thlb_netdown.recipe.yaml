@@ -5107,8 +5107,8 @@ parent_steps:
       \ #828) within the CNRR."
     land_base_stage: lhlb_to_thlb
     stage_label: LHLB -> THLB
-    execution_class: projected_harvest_exclusion
-    compiled_operation_type: buffer_then_intersect
+    execution_class: no_deduction
+    compiled_operation_type: no_deduction
     step_status: ready
     required: true
     page_number: 31
@@ -5123,13 +5123,14 @@ parent_steps:
       step models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
       equivalent full-exclusion width.
+    - TSA29-only hack: skip this riparian class in the instance lane and keep only S4 streams plus W5 wetlands active while step 18 is reconciled against TSR.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 54833.0
     benchmark_cumulative_area_ha: 1812720.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-    normalized_action: exclude
+    normalized_action: no_deduction
     normalized_subject: Stream class S1 riparian area
-    normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table
+    normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
       15 effective riparian width for S1 streams
     linked_source_entry_ids: &id035
     - reg_land_and_natural_resource_stream_classification_car_line
@@ -5182,8 +5183,8 @@ parent_steps:
       \ #828) within the CNRR."
     land_base_stage: lhlb_to_thlb
     stage_label: LHLB -> THLB
-    execution_class: projected_harvest_exclusion
-    compiled_operation_type: buffer_then_intersect
+    execution_class: no_deduction
+    compiled_operation_type: no_deduction
     step_status: ready
     required: true
     page_number: 31
@@ -5198,13 +5199,14 @@ parent_steps:
       step models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
       equivalent full-exclusion width.
+    - TSA29-only hack: skip this riparian class in the instance lane and keep only S4 streams plus W5 wetlands active while step 18 is reconciled against TSR.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 54833.0
     benchmark_cumulative_area_ha: 1812720.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-    normalized_action: exclude
+    normalized_action: no_deduction
     normalized_subject: Stream class S2 riparian area
-    normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table
+    normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
       15 effective riparian width for S2 streams
     linked_source_entry_ids: &id038
     - reg_land_and_natural_resource_stream_classification_car_line
@@ -5257,8 +5259,8 @@ parent_steps:
       \ #828) within the CNRR."
     land_base_stage: lhlb_to_thlb
     stage_label: LHLB -> THLB
-    execution_class: projected_harvest_exclusion
-    compiled_operation_type: buffer_then_intersect
+    execution_class: no_deduction
+    compiled_operation_type: no_deduction
     step_status: ready
     required: true
     page_number: 31
@@ -5273,13 +5275,14 @@ parent_steps:
       step models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
       equivalent full-exclusion width.
+    - TSA29-only hack: skip this riparian class in the instance lane and keep only S4 streams plus W5 wetlands active while step 18 is reconciled against TSR.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 54833.0
     benchmark_cumulative_area_ha: 1812720.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-    normalized_action: exclude
+    normalized_action: no_deduction
     normalized_subject: Stream class S3 riparian area
-    normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table
+    normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
       15 effective riparian width for S3 streams
     linked_source_entry_ids: &id041
     - reg_land_and_natural_resource_stream_classification_car_line
@@ -5407,8 +5410,8 @@ parent_steps:
       \ #828) within the CNRR."
     land_base_stage: lhlb_to_thlb
     stage_label: LHLB -> THLB
-    execution_class: projected_harvest_exclusion
-    compiled_operation_type: buffer_then_intersect
+    execution_class: no_deduction
+    compiled_operation_type: no_deduction
     step_status: ready
     required: true
     page_number: 31
@@ -5423,13 +5426,14 @@ parent_steps:
       step models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
       equivalent full-exclusion width.
+    - TSA29-only hack: skip this riparian class in the instance lane and keep only S4 streams plus W5 wetlands active while step 18 is reconciled against TSR.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 54833.0
     benchmark_cumulative_area_ha: 1812720.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-    normalized_action: exclude
+    normalized_action: no_deduction
     normalized_subject: Stream class S5 riparian area
-    normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table
+    normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
       15 effective riparian width for S5 streams
     linked_source_entry_ids: &id047
     - reg_land_and_natural_resource_stream_classification_car_line
@@ -5482,8 +5486,8 @@ parent_steps:
       \ #828) within the CNRR."
     land_base_stage: lhlb_to_thlb
     stage_label: LHLB -> THLB
-    execution_class: projected_harvest_exclusion
-    compiled_operation_type: buffer_then_intersect
+    execution_class: no_deduction
+    compiled_operation_type: no_deduction
     step_status: ready
     required: true
     page_number: 31
@@ -5498,13 +5502,14 @@ parent_steps:
       step models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
       equivalent full-exclusion width.
+    - TSA29-only hack: skip this riparian class in the instance lane and keep only S4 streams plus W5 wetlands active while step 18 is reconciled against TSR.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 54833.0
     benchmark_cumulative_area_ha: 1812720.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-    normalized_action: exclude
+    normalized_action: no_deduction
     normalized_subject: Stream class S6 riparian area
-    normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table
+    normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
       15 effective riparian width for S6 streams
     linked_source_entry_ids: &id050
     - reg_land_and_natural_resource_stream_classification_car_line
@@ -5557,8 +5562,8 @@ parent_steps:
       \ #828) within the CNRR."
     land_base_stage: lhlb_to_thlb
     stage_label: LHLB -> THLB
-    execution_class: projected_harvest_exclusion
-    compiled_operation_type: buffer_then_intersect
+    execution_class: no_deduction
+    compiled_operation_type: no_deduction
     step_status: ready
     required: true
     page_number: 31
@@ -5573,13 +5578,14 @@ parent_steps:
       models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
       equivalent full-exclusion width.
+    - TSA29-only hack: skip this riparian class in the instance lane and keep only S4 streams plus W5 wetlands active while step 18 is reconciled against TSR.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 54833.0
     benchmark_cumulative_area_ha: 1812720.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-    normalized_action: exclude
+    normalized_action: no_deduction
     normalized_subject: Wetland class W1 riparian area
-    normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
+    normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
       15 effective riparian width for W1 wetlands
     linked_source_entry_ids: &id053
     - reg_land_and_natural_resource_wetland_class_car_poly
@@ -5632,8 +5638,8 @@ parent_steps:
       \ #828) within the CNRR."
     land_base_stage: lhlb_to_thlb
     stage_label: LHLB -> THLB
-    execution_class: projected_harvest_exclusion
-    compiled_operation_type: buffer_then_intersect
+    execution_class: no_deduction
+    compiled_operation_type: no_deduction
     step_status: ready
     required: true
     page_number: 31
@@ -5648,13 +5654,14 @@ parent_steps:
       models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
       equivalent full-exclusion width.
+    - TSA29-only hack: skip this riparian class in the instance lane and keep only S4 streams plus W5 wetlands active while step 18 is reconciled against TSR.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 54833.0
     benchmark_cumulative_area_ha: 1812720.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-    normalized_action: exclude
+    normalized_action: no_deduction
     normalized_subject: Wetland class W2 riparian area
-    normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
+    normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
       15 effective riparian width for W2 wetlands
     linked_source_entry_ids: &id056
     - reg_land_and_natural_resource_wetland_class_car_poly
@@ -5707,8 +5714,8 @@ parent_steps:
       \ #828) within the CNRR."
     land_base_stage: lhlb_to_thlb
     stage_label: LHLB -> THLB
-    execution_class: projected_harvest_exclusion
-    compiled_operation_type: buffer_then_intersect
+    execution_class: no_deduction
+    compiled_operation_type: no_deduction
     step_status: ready
     required: true
     page_number: 31
@@ -5723,13 +5730,14 @@ parent_steps:
       models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
       equivalent full-exclusion width.
+    - TSA29-only hack: skip this riparian class in the instance lane and keep only S4 streams plus W5 wetlands active while step 18 is reconciled against TSR.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 54833.0
     benchmark_cumulative_area_ha: 1812720.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-    normalized_action: exclude
+    normalized_action: no_deduction
     normalized_subject: Wetland class W3 riparian area
-    normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
+    normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
       15 effective riparian width for W3 wetlands
     linked_source_entry_ids: &id059
     - reg_land_and_natural_resource_wetland_class_car_poly
@@ -5782,8 +5790,8 @@ parent_steps:
       \ #828) within the CNRR."
     land_base_stage: lhlb_to_thlb
     stage_label: LHLB -> THLB
-    execution_class: projected_harvest_exclusion
-    compiled_operation_type: buffer_then_intersect
+    execution_class: no_deduction
+    compiled_operation_type: no_deduction
     step_status: ready
     required: true
     page_number: 31
@@ -5798,13 +5806,14 @@ parent_steps:
       models the additional riparian buffer.
     - The Table 15 riparian width already folds RRZ plus retained RMZ share into an
       equivalent full-exclusion width.
+    - TSA29-only hack: skip this riparian class in the instance lane and keep only S4 streams plus W5 wetlands active while step 18 is reconciled against TSR.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 54833.0
     benchmark_cumulative_area_ha: 1812720.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-    normalized_action: exclude
+    normalized_action: no_deduction
     normalized_subject: Wetland class W4 riparian area
-    normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
+    normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
       15 effective riparian width for W4 wetlands
     linked_source_entry_ids: &id062
     - reg_land_and_natural_resource_wetland_class_car_poly
@@ -8827,8 +8836,8 @@ steps:
     \ and BCTS, FSP #828) within the CNRR."
   land_base_stage: lhlb_to_thlb
   stage_label: LHLB -> THLB
-  execution_class: projected_harvest_exclusion
-  compiled_operation_type: buffer_then_intersect
+  execution_class: no_deduction
+  compiled_operation_type: no_deduction
   step_status: ready
   required: true
   page_number: 31
@@ -8843,9 +8852,9 @@ steps:
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-  normalized_action: exclude
+  normalized_action: no_deduction
   normalized_subject: Stream class S1 riparian area
-  normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table 15
+  normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
     effective riparian width for S1 streams
   linked_source_entry_ids: *id035
   source_attribute_filters: *id036
@@ -8893,8 +8902,8 @@ steps:
     \ and BCTS, FSP #828) within the CNRR."
   land_base_stage: lhlb_to_thlb
   stage_label: LHLB -> THLB
-  execution_class: projected_harvest_exclusion
-  compiled_operation_type: buffer_then_intersect
+  execution_class: no_deduction
+  compiled_operation_type: no_deduction
   step_status: ready
   required: true
   page_number: 31
@@ -8909,9 +8918,9 @@ steps:
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-  normalized_action: exclude
+  normalized_action: no_deduction
   normalized_subject: Stream class S2 riparian area
-  normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table 15
+  normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
     effective riparian width for S2 streams
   linked_source_entry_ids: *id038
   source_attribute_filters: *id039
@@ -8959,8 +8968,8 @@ steps:
     \ and BCTS, FSP #828) within the CNRR."
   land_base_stage: lhlb_to_thlb
   stage_label: LHLB -> THLB
-  execution_class: projected_harvest_exclusion
-  compiled_operation_type: buffer_then_intersect
+  execution_class: no_deduction
+  compiled_operation_type: no_deduction
   step_status: ready
   required: true
   page_number: 31
@@ -8975,9 +8984,9 @@ steps:
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-  normalized_action: exclude
+  normalized_action: no_deduction
   normalized_subject: Stream class S3 riparian area
-  normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table 15
+  normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
     effective riparian width for S3 streams
   linked_source_entry_ids: *id041
   source_attribute_filters: *id042
@@ -9091,8 +9100,8 @@ steps:
     \ and BCTS, FSP #828) within the CNRR."
   land_base_stage: lhlb_to_thlb
   stage_label: LHLB -> THLB
-  execution_class: projected_harvest_exclusion
-  compiled_operation_type: buffer_then_intersect
+  execution_class: no_deduction
+  compiled_operation_type: no_deduction
   step_status: ready
   required: true
   page_number: 31
@@ -9107,9 +9116,9 @@ steps:
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-  normalized_action: exclude
+  normalized_action: no_deduction
   normalized_subject: Stream class S5 riparian area
-  normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table 15
+  normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
     effective riparian width for S5 streams
   linked_source_entry_ids: *id047
   source_attribute_filters: *id048
@@ -9157,8 +9166,8 @@ steps:
     \ and BCTS, FSP #828) within the CNRR."
   land_base_stage: lhlb_to_thlb
   stage_label: LHLB -> THLB
-  execution_class: projected_harvest_exclusion
-  compiled_operation_type: buffer_then_intersect
+  execution_class: no_deduction
+  compiled_operation_type: no_deduction
   step_status: ready
   required: true
   page_number: 31
@@ -9173,9 +9182,9 @@ steps:
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-  normalized_action: exclude
+  normalized_action: no_deduction
   normalized_subject: Stream class S6 riparian area
-  normalized_predicate: set THLB to 0 on stream-buffer fragments using the Table 15
+  normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
     effective riparian width for S6 streams
   linked_source_entry_ids: *id050
   source_attribute_filters: *id051
@@ -9223,8 +9232,8 @@ steps:
     \ and BCTS, FSP #828) within the CNRR."
   land_base_stage: lhlb_to_thlb
   stage_label: LHLB -> THLB
-  execution_class: projected_harvest_exclusion
-  compiled_operation_type: buffer_then_intersect
+  execution_class: no_deduction
+  compiled_operation_type: no_deduction
   step_status: ready
   required: true
   page_number: 31
@@ -9239,9 +9248,9 @@ steps:
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-  normalized_action: exclude
+  normalized_action: no_deduction
   normalized_subject: Wetland class W1 riparian area
-  normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
+  normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
     15 effective riparian width for W1 wetlands
   linked_source_entry_ids: *id053
   source_attribute_filters: *id054
@@ -9289,8 +9298,8 @@ steps:
     \ and BCTS, FSP #828) within the CNRR."
   land_base_stage: lhlb_to_thlb
   stage_label: LHLB -> THLB
-  execution_class: projected_harvest_exclusion
-  compiled_operation_type: buffer_then_intersect
+  execution_class: no_deduction
+  compiled_operation_type: no_deduction
   step_status: ready
   required: true
   page_number: 31
@@ -9305,9 +9314,9 @@ steps:
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-  normalized_action: exclude
+  normalized_action: no_deduction
   normalized_subject: Wetland class W2 riparian area
-  normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
+  normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
     15 effective riparian width for W2 wetlands
   linked_source_entry_ids: *id056
   source_attribute_filters: *id057
@@ -9355,8 +9364,8 @@ steps:
     \ and BCTS, FSP #828) within the CNRR."
   land_base_stage: lhlb_to_thlb
   stage_label: LHLB -> THLB
-  execution_class: projected_harvest_exclusion
-  compiled_operation_type: buffer_then_intersect
+  execution_class: no_deduction
+  compiled_operation_type: no_deduction
   step_status: ready
   required: true
   page_number: 31
@@ -9371,9 +9380,9 @@ steps:
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-  normalized_action: exclude
+  normalized_action: no_deduction
   normalized_subject: Wetland class W3 riparian area
-  normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
+  normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
     15 effective riparian width for W3 wetlands
   linked_source_entry_ids: *id059
   source_attribute_filters: *id060
@@ -9421,8 +9430,8 @@ steps:
     \ and BCTS, FSP #828) within the CNRR."
   land_base_stage: lhlb_to_thlb
   stage_label: LHLB -> THLB
-  execution_class: projected_harvest_exclusion
-  compiled_operation_type: buffer_then_intersect
+  execution_class: no_deduction
+  compiled_operation_type: no_deduction
   step_status: ready
   required: true
   page_number: 31
@@ -9437,9 +9446,9 @@ steps:
   benchmark_marginal_area_ha: 54833.0
   benchmark_cumulative_area_ha: 1812720.0
   table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-  normalized_action: exclude
+  normalized_action: no_deduction
   normalized_subject: Wetland class W4 riparian area
-  normalized_predicate: set THLB to 0 on wetland-buffer fragments using the Table
+  normalized_predicate: record a TSA29-only skipped riparian class so the general recipe can stay intact while the instance lane stays close to TSR
     15 effective riparian width for W4 wetlands
   linked_source_entry_ids: *id062
   source_attribute_filters: *id063

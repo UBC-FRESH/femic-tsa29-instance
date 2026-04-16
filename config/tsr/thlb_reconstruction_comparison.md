@@ -1,6 +1,6 @@
 # THLB Reconstruction Comparison: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-15T15:23:12.100162+00:00`
+- Generated UTC: `2026-04-16T05:04:03.050026+00:00`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Reviewed bridge status report: `config/tsr/thlb_netdown.status.md`
 - Reconstructed audit JSON: `config/tsr/thlb_reconstructed.audit.json`
@@ -27,66 +27,68 @@
 
 ## Strict-vs-TSR Fit Counts
 
-- `not_comparable_to_tsr`: `9`
+- `not_comparable_to_tsr`: `5`
 - `strict_under_tsr_major`: `2`
-- `tsr_close_enough`: `13`
+- `tsr_close_enough`: `17`
 
 ## Reviewed-Difference Context Counts
 
 - `aspatial_bridge_difference`: `5`
-- `blocked_or_missing_source`: `5`
+- `blocked_or_missing_source`: `1`
 - `close_match`: `3`
-- `manual_or_reviewed_override`: `3`
+- `manual_or_reviewed_override`: `6`
 - `not_comparable`: `4`
+- `reviewed_bridge_choice`: `1`
 - `reviewed_bridge_only`: `1`
 - `strict_overcut_candidate`: `3`
 
 ## Problem Ownership Counts
 
 - `data_exogenous`: `3`
-- `mixed`: `3`
-- `model_endogenous`: `7`
+- `mixed`: `1`
+- `model_endogenous`: `6`
 - `not_applicable`: `4`
-- `reviewed_bridge_choice`: `7`
+- `reviewed_bridge`: `1`
+- `reviewed_bridge_choice`: `9`
 
 ## Stepwise Adjudication Queue
 
-- 2. `thlb_parent_002_land_not_administered_by_the_province` | Land not administered by the Province | action=`` | tsr-fit=`` | ownership=``
-- 3. `thlb_parent_003_non_forest` | Non-forest | action=`` | tsr-fit=`` | ownership=``
-- 4. `thlb_parent_004_roads_and_landings` | Roads and landings | action=`` | tsr-fit=`` | ownership=``
-- 6. `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | action=`` | tsr-fit=`` | ownership=``
-- 7. `thlb_parent_007_old_growth_management_areas` | Old growth management areas | action=`` | tsr-fit=`` | ownership=``
-- 8. `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | action=`` | tsr-fit=`` | ownership=``
-- 9. `thlb_parent_009_critical_habitat_for_fish` | Critical habitat for fish | action=`` | tsr-fit=`` | ownership=``
-- 10. `thlb_parent_010_lakeshore_management` | Lakeshore management | action=`` | tsr-fit=`` | ownership=``
-- 11. `thlb_parent_011_community_areas_of_special_concern` | Community areas of special concern | action=`` | tsr-fit=`` | ownership=``
-- 12. `thlb_parent_012_proven_aboriginal_rights_areas` | Proven Aboriginal Rights areas | action=`` | tsr-fit=`` | ownership=``
-- 13. `thlb_parent_013_areas_considered_inoperable` | Areas considered inoperable | action=`` | tsr-fit=`` | ownership=``
-- 14. `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | action=`` | tsr-fit=`` | ownership=``
-- 15. `thlb_parent_015_non_merchantable_timber_profiles` | Non-merchantable timber profiles | action=`` | tsr-fit=`` | ownership=``
-- 16. `thlb_parent_016_recreation_features` | Recreation features | action=`` | tsr-fit=`` | ownership=``
-- 17. `thlb_parent_017_growth_and_yield_permanent_sample_plots` | Growth and yield permanent sample plots | action=`` | tsr-fit=`` | ownership=``
-- 18. `thlb_parent_018_riparian_areas` | Riparian areas | action=`` | tsr-fit=`` | ownership=``
-- 19. `thlb_parent_019_buffered_trails` | Buffered trails | action=`` | tsr-fit=`` | ownership=``
-- 20. `thlb_parent_020_wildlife_tree_retention_areas` | Wildlife tree retention areas | action=`` | tsr-fit=`` | ownership=``
-- 21. `thlb_parent_021_cultural_heritage_and_archaeological_resources` | Cultural heritage and archaeological resources | action=`` | tsr-fit=`` | ownership=``
-- 23. `thlb_parent_023_future_roads` | Future roads | action=`` | tsr-fit=`` | ownership=``
+- 2. `thlb_parent_002_land_not_administered_by_the_province` | Land not administered by the Province | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
+- 3. `thlb_parent_003_non_forest` | Non-forest | action=`keep_reviewed_bridge` | tsr-fit=`strict_under_tsr_major` | ownership=`model_endogenous`
+- 4. `thlb_parent_004_roads_and_landings` | Roads and landings | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`mixed`
+- 6. `thlb_parent_006_parks_protected_areas_area_base_tenures` | Parks, protected areas, area-base tenures | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
+- 7. `thlb_parent_007_old_growth_management_areas` | Old growth management areas | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
+- 8. `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
+- 9. `thlb_parent_009_critical_habitat_for_fish` | Critical habitat for fish | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
+- 10. `thlb_parent_010_lakeshore_management` | Lakeshore management | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`data_exogenous`
+- 11. `thlb_parent_011_community_areas_of_special_concern` | Community areas of special concern | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`model_endogenous`
+- 12. `thlb_parent_012_proven_aboriginal_rights_areas` | Proven Aboriginal Rights areas | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`data_exogenous`
+- 13. `thlb_parent_013_areas_considered_inoperable` | Areas considered inoperable | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
+- 14. `thlb_parent_014_sites_with_low_growing_timber_potential` | Sites with low growing timber potential | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
+- 15. `thlb_parent_015_non_merchantable_timber_profiles` | Non-merchantable timber profiles | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
+- 16. `thlb_parent_016_recreation_features` | Recreation features | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
+- 17. `thlb_parent_017_growth_and_yield_permanent_sample_plots` | Growth and yield permanent sample plots | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`data_exogenous`
+- 18. `thlb_parent_018_riparian_areas` | Riparian areas | action=`improve_data_or_source` | tsr-fit=`not_comparable_to_tsr` | ownership=`mixed`
+- 19. `thlb_parent_019_buffered_trails` | Buffered trails | action=`keep_reviewed_bridge` | tsr-fit=`not_comparable_to_tsr` | ownership=`reviewed_bridge_choice`
+- 20. `thlb_parent_020_wildlife_tree_retention_areas` | Wildlife tree retention areas | action=`use_documented_aspatial_fallback` | tsr-fit=`strict_under_tsr_major` | ownership=`reviewed_bridge_choice`
+- 21. `thlb_parent_021_cultural_heritage_and_archaeological_resources` | Cultural heritage and archaeological resources | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
+- 23. `thlb_parent_023_future_roads` | Future roads | action=`defer_low_priority` | tsr-fit=`tsr_close_enough` | ownership=`reviewed_bridge_choice`
 
 ## Top 5 Strict-vs-TSR Contributors
 
 - `thlb_parent_003_non_forest` | Non-forest | tsr-fit=`strict_under_tsr_major` | strict-TSR net deduction delta=`-1105908.000 ha`
-- `thlb_parent_018_riparian_areas` | Riparian areas | tsr-fit=`not_comparable_to_tsr` | strict-TSR net deduction delta=`-54833.000 ha`
 - `thlb_parent_020_wildlife_tree_retention_areas` | Wildlife tree retention areas | tsr-fit=`strict_under_tsr_major` | strict-TSR net deduction delta=`-50250.676 ha`
-- `thlb_parent_015_non_merchantable_timber_profiles` | Non-merchantable timber profiles | tsr-fit=`not_comparable_to_tsr` | strict-TSR net deduction delta=`-49052.000 ha`
 - `thlb_parent_023_future_roads` | Future roads | tsr-fit=`tsr_close_enough` | strict-TSR net deduction delta=`-22754.000 ha`
+- `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | tsr-fit=`tsr_close_enough` | strict-TSR net deduction delta=`-22488.408 ha`
+- `thlb_parent_021_cultural_heritage_and_archaeological_resources` | Cultural heritage and archaeological resources | tsr-fit=`tsr_close_enough` | strict-TSR net deduction delta=`-18510.813 ha`
 
 ## Top 5 Strict-vs-Reviewed Context Differences
 
 - `thlb_parent_002_land_not_administered_by_the_province` | Land not administered by the Province | reviewed-role=`strict_overcut_candidate` | strict-reviewed net deduction delta=`491992.156 ha`
 - `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | reviewed-role=`strict_undercut_candidate` | strict-reviewed net deduction delta=`-133005.883 ha`
-- `thlb_parent_015_non_merchantable_timber_profiles` | Non-merchantable timber profiles | reviewed-role=`blocked_or_missing_source` | strict-reviewed net deduction delta=`-103629.462 ha`
-- `thlb_parent_018_riparian_areas` | Riparian areas | reviewed-role=`blocked_or_missing_source` | strict-reviewed net deduction delta=`-72204.542 ha`
+- `thlb_parent_015_non_merchantable_timber_profiles` | Non-merchantable timber profiles | reviewed-role=`manual_or_reviewed_override` | strict-reviewed net deduction delta=`-55321.010 ha`
 - `thlb_parent_004_roads_and_landings` | Roads and landings | reviewed-role=`aspatial_bridge_difference` | strict-reviewed net deduction delta=`48876.889 ha`
+- `thlb_parent_013_areas_considered_inoperable` | Areas considered inoperable | reviewed-role=`aspatial_bridge_difference` | strict-reviewed net deduction delta=`-43628.139 ha`
 
 ## Plain-Language Read
 
@@ -579,67 +581,66 @@
 #### 17. Growth and yield permanent sample plots
 
 - Parent step id: `thlb_parent_017_growth_and_yield_permanent_sample_plots`
-- Strict TSR fit: `not_comparable_to_tsr`
-- Reviewed difference role: `blocked_or_missing_source`
+- Strict TSR fit: `tsr_close_enough`
+- Reviewed difference role: `manual_or_reviewed_override`
 - Problem ownership: `data_exogenous`
 - Difference nature: `weak_public_coverage`
-- Reconstructed status: `blocked_exact_overlay`
+- Reconstructed status: `applied`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `3577.000 ha`
 - TSR benchmark cumulative area: `1867553.000 ha`
-- Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
-- Strict cumulative vs TSR cumulative delta: `660417.255 ha`
-- Strict reconstructed net deduction: `0.000 ha`
+- Strict reconstructed cumulative area at this checkpoint: `1868027.243 ha`
+- Strict cumulative vs TSR cumulative delta: `474.243 ha`
+- Strict reconstructed net deduction: `1166.660 ha`
 - Reviewed bridge net deduction: `1261.158 ha`
-- Strict vs TSR delta: `-3577.000 ha`
+- Strict vs TSR delta: `-2410.340 ha`
 - Reviewed vs TSR delta: `-2315.842 ha`
 - Strict vs reviewed delta: `-1261.158 ha`
-- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
-- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
-- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
-- Engineering interpretation: The strict lane undercuts here, but the public PSP geometry signal is weak and the absolute area is small.
-- Recommended next move: Treat this as a lower-priority data-coverage seam unless a better PSP source becomes available.
-- Adjudication queue action: `improve_data_or_source` (Improve or replace the missing/weak source data.)
-- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
+- Strict vs TSR: The strict lane is close enough to the TSR benchmark here for practical exploratory use.
+- Reviewed difference: The strict lane now runs cleanly here, but public PSP coverage is still weaker than the reviewed bridge context.
+- Practical meaning: Strict undercuts TSR here, but the absolute area is small and the chained cumulative fit remains close enough.
+- Engineering interpretation: The strict lane now applies the exact PSP overlay, but the public PSP source still covers less area than the TSR benchmark and reviewed bridge context.
+- Recommended next move: Lock as good enough unless later cumulative drift forces a reopen.
+- Adjudication queue action: `defer_low_priority` (Locked close enough; move on.)
+- Actionability: The strict lane now runs cleanly here; treat any remaining PSP gap as a low-priority source-coverage seam unless cumulative drift forces a reopen.
 - Supporting notes:
-  - strict spatial modes: `blocked_exact_overlay`
+  - strict spatial modes: `fragment_overlay`
   - strict compiled steps: `thlb_parent_017_growth_and_yield_permanent_sample_plots_compiled_01`
   - reviewed approval scope: `single_lu_smoke_subset_williams_lake`
   - reviewed ratchet state: `approved`
+  - strict note: The strict lane now applies the exact PSP overlay from the official lhlb_curve_ready restart seam.
+  - strict note: Public PSP geometry coverage remains smaller than the TSR benchmark, but the absolute area is small and cumulative fit remains close.
 
 #### 18. Riparian areas
 
 - Parent step id: `thlb_parent_018_riparian_areas`
-- Strict TSR fit: `not_comparable_to_tsr`
-- Reviewed difference role: `blocked_or_missing_source`
-- Problem ownership: `mixed`
-- Difference nature: `missing_or_blocked_data`
-- Reconstructed status: `blocked_exact_overlay`
+- Strict TSR fit: `tsr_close_enough`
+- Reviewed difference role: `reviewed_bridge_choice`
+- Problem ownership: `reviewed_bridge`
+- Difference nature: `tsa29_instance_specific_subset_bridge`
+- Reconstructed status: `applied`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `54833.000 ha`
 - TSR benchmark cumulative area: `1812720.000 ha`
-- Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
-- Strict cumulative vs TSR cumulative delta: `715250.255 ha`
-- Strict reconstructed net deduction: `0.000 ha`
+- Strict reconstructed cumulative area at this checkpoint: `1810375.644 ha`
+- Strict cumulative vs TSR cumulative delta: `-2344.356 ha`
+- Strict reconstructed net deduction: `57651.598 ha`
 - Reviewed bridge net deduction: `72204.542 ha`
-- Strict vs TSR delta: `-54833.000 ha`
+- Strict vs TSR delta: `2818.598 ha`
 - Reviewed vs TSR delta: `17371.542 ha`
-- Strict vs reviewed delta: `-72204.542 ha`
-- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
-- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
-- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
-- Engineering interpretation: The strict lane is still missing some of the lake-class and special-case riparian inputs that the reviewed bridge used.
-- Recommended next move: Improve source coverage first, then revisit the strict riparian logic if the gap remains large.
-- Adjudication queue action: `improve_data_or_source` (Improve or replace the missing/weak source data.)
-- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
+- Strict vs reviewed delta: `-14552.943 ha`
+- Strict vs TSR: The TSA29 strict lane now uses a user-directed instance-only S4+W5 riparian subset hack and lands close to the TSR benchmark.
+- Reviewed difference: The broad public stream and wetland classes overcut badly in TSA29, so the instance lane now keeps only S4 streams and W5 wetlands active as a user-directed calibration seam.
+- Practical meaning: This is close enough to move forward in TSA29, but it should be treated as an instance-only riparian bridge rather than a portable public-data exact recipe.
+- Engineering interpretation: Exact public riparian classes are too broad for TSA29; the accepted strict lane now keeps only S4 and W5 as the active exact riparian subset.
+- Recommended next move: Lock the TSA29-only S4+W5 bridge and move on unless a later cumulative contradiction forces a reopen.
+- Adjudication queue action: `keep_reviewed_bridge` (Keep the accepted TSA29-specific bridge/hack and continue.)
+- Actionability: No further step-18 repair is needed for TSA29 right now.
 - Supporting notes:
-  - strict spatial modes: `blocked_exact_overlay`
-  - strict compiled steps: `thlb_parent_018_riparian_areas_compiled_stream_s1`, `thlb_parent_018_riparian_areas_compiled_stream_s2`, `thlb_parent_018_riparian_areas_compiled_stream_s3`, `thlb_parent_018_riparian_areas_compiled_stream_s4`, `thlb_parent_018_riparian_areas_compiled_stream_s5`, `thlb_parent_018_riparian_areas_compiled_stream_s6`, `thlb_parent_018_riparian_areas_compiled_wetland_w1`, `thlb_parent_018_riparian_areas_compiled_wetland_w2`, `thlb_parent_018_riparian_areas_compiled_wetland_w3`, `thlb_parent_018_riparian_areas_compiled_wetland_w4`, `thlb_parent_018_riparian_areas_compiled_wetland_w5`
+  - strict compiled steps kept active: `thlb_parent_018_riparian_areas_compiled_stream_s4`, `thlb_parent_018_riparian_areas_compiled_wetland_w5`
+  - strict compiled steps skipped as TSA29-only no-deduction hack: `thlb_parent_018_riparian_areas_compiled_stream_s1`, `thlb_parent_018_riparian_areas_compiled_stream_s2`, `thlb_parent_018_riparian_areas_compiled_stream_s3`, `thlb_parent_018_riparian_areas_compiled_stream_s5`, `thlb_parent_018_riparian_areas_compiled_stream_s6`, `thlb_parent_018_riparian_areas_compiled_wetland_w1`, `thlb_parent_018_riparian_areas_compiled_wetland_w2`, `thlb_parent_018_riparian_areas_compiled_wetland_w3`, `thlb_parent_018_riparian_areas_compiled_wetland_w4`
+  - strict note: TSA29-only hack: skip this riparian class in the instance lane and keep only S4 streams plus W5 wetlands active while step 18 is reconciled against TSR.
   - reviewed approval scope: `single_lu_smoke_subset_williams_lake`
-  - reviewed ratchet state: `approved`
-  - strict note: Step 3 already removed the direct non-forest waterbody area; this later THLB step models the additional riparian buffer.
-  - strict note: The Table 15 riparian width already folds RRZ plus retained RMZ share into an equivalent full-exclusion width.
-  - strict note: Step 3 already removed the direct wetland polygon area; this later THLB step models the additional riparian buffer.
 
 #### 19. Buffered trails
 

@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-04-15T21:02:59.961534+00:00",
+  "generated_utc": "2026-04-16T05:04:03.050026+00:00",
   "artifact_kind": "thlb_locked_chain_ledger",
   "tsa": {
     "tsa_id": "tsa_29",
@@ -9,8 +9,8 @@
   "recipe_path": "config/tsr/thlb_netdown.recipe.yaml",
   "ledger_path": "config/tsr/thlb_locked_chain_ledger.json",
   "baseline_managed_area_ha": 4933664.212,
-  "latest_locked_parent_step_id": "thlb_parent_016_recreation_features",
-  "latest_locked_row_order": 16,
+  "latest_locked_parent_step_id": "thlb_parent_018_riparian_areas",
+  "latest_locked_row_order": 18,
   "entries": [
     {
       "row_order": 1,
@@ -266,6 +266,38 @@
       "locked_cumulative_delta_ha": -1936.0973980939016,
       "locked_source_kind": "official_curve_ready_restart_bounded_slice",
       "locked_source_note": "official lhlb_curve_ready restart bounded slice through locked steps 13-15, then exact active recreation overlay; step-16 total 8,891.240 ha",
+      "marginal_not_applicable": false
+    },
+    {
+      "row_order": 17,
+      "parent_step_id": "thlb_parent_017_growth_and_yield_permanent_sample_plots",
+      "parent_label": "Growth and yield permanent sample plots",
+      "parent_kind": "transformation",
+      "land_base_stage": "lhlb_to_thlb",
+      "benchmark_marginal_area_ha": 3577.0,
+      "benchmark_cumulative_area_ha": 1867553.0,
+      "locked_net_removed_area_ha": 1166.6600339717697,
+      "locked_cumulative_remaining_area_ha": 1868027.2425679343,
+      "tsr_cumulative_area_ha": 1867553.0,
+      "locked_cumulative_delta_ha": 474.2425679343287,
+      "locked_source_kind": "official_curve_ready_restart_bounded_slice",
+      "locked_source_note": "official lhlb_curve_ready restart bounded slice through locked steps 13-16, then exact PSP overlay; step-17 total 1,166.660 ha",
+      "marginal_not_applicable": false
+    },
+    {
+      "row_order": 18,
+      "parent_step_id": "thlb_parent_018_riparian_areas",
+      "parent_label": "Riparian areas",
+      "parent_kind": "transformation",
+      "land_base_stage": "lhlb_to_thlb",
+      "benchmark_marginal_area_ha": 54833.0,
+      "benchmark_cumulative_area_ha": 1812720.0,
+      "locked_net_removed_area_ha": 57651.598073951434,
+      "locked_cumulative_remaining_area_ha": 1810375.644493983,
+      "tsr_cumulative_area_ha": 1812720.0,
+      "locked_cumulative_delta_ha": -2344.3555060171057,
+      "locked_source_kind": "official_curve_ready_restart_bounded_slice_tsa29_instance_hack",
+      "locked_source_note": "official lhlb_curve_ready restart bounded slice through locked steps 13-17, then TSA29-only riparian hack keeping only S4 streams and W5 wetlands active; step-18 total 57,651.598 ha",
       "marginal_not_applicable": false
     }
   ]
