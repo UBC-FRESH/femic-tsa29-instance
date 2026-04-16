@@ -1,6 +1,6 @@
 # THLB Reconstruction Comparison: TSA 29 (Williams Lake)
 
-- Generated UTC: `2026-04-16T05:04:03.050026+00:00`
+- Generated UTC: `2026-04-16T07:40:40.620530+00:00`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Reviewed bridge status report: `config/tsr/thlb_netdown.status.md`
 - Reconstructed audit JSON: `config/tsr/thlb_reconstructed.audit.json`
@@ -27,29 +27,28 @@
 
 ## Strict-vs-TSR Fit Counts
 
-- `not_comparable_to_tsr`: `5`
-- `strict_under_tsr_major`: `2`
-- `tsr_close_enough`: `17`
+- `not_comparable_to_tsr`: `4`
+- `strict_under_tsr_major`: `1`
+- `tsr_close_enough`: `19`
 
 ## Reviewed-Difference Context Counts
 
-- `aspatial_bridge_difference`: `5`
-- `blocked_or_missing_source`: `1`
-- `close_match`: `3`
-- `manual_or_reviewed_override`: `6`
+- `aspatial_bridge_difference`: `3`
+- `close_match`: `6`
+- `manual_or_reviewed_override`: `5`
 - `not_comparable`: `4`
 - `reviewed_bridge_choice`: `1`
 - `reviewed_bridge_only`: `1`
-- `strict_overcut_candidate`: `3`
+- `strict_overcut_candidate`: `4`
 
 ## Problem Ownership Counts
 
 - `data_exogenous`: `3`
 - `mixed`: `1`
-- `model_endogenous`: `6`
+- `model_endogenous`: `7`
 - `not_applicable`: `4`
 - `reviewed_bridge`: `1`
-- `reviewed_bridge_choice`: `9`
+- `reviewed_bridge_choice`: `8`
 
 ## Stepwise Adjudication Queue
 
@@ -77,10 +76,10 @@
 ## Top 5 Strict-vs-TSR Contributors
 
 - `thlb_parent_003_non_forest` | Non-forest | tsr-fit=`strict_under_tsr_major` | strict-TSR net deduction delta=`-1105908.000 ha`
-- `thlb_parent_020_wildlife_tree_retention_areas` | Wildlife tree retention areas | tsr-fit=`strict_under_tsr_major` | strict-TSR net deduction delta=`-50250.676 ha`
-- `thlb_parent_023_future_roads` | Future roads | tsr-fit=`tsr_close_enough` | strict-TSR net deduction delta=`-22754.000 ha`
 - `thlb_parent_008_wildlife_habitat_areas` | Wildlife habitat areas | tsr-fit=`tsr_close_enough` | strict-TSR net deduction delta=`-22488.408 ha`
-- `thlb_parent_021_cultural_heritage_and_archaeological_resources` | Cultural heritage and archaeological resources | tsr-fit=`tsr_close_enough` | strict-TSR net deduction delta=`-18510.813 ha`
+- `thlb_parent_002_land_not_administered_by_the_province` | Land not administered by the Province | tsr-fit=`tsr_close_enough` | strict-TSR net deduction delta=`16561.208 ha`
+- `thlb_parent_011_community_areas_of_special_concern` | Community areas of special concern | tsr-fit=`tsr_close_enough` | strict-TSR net deduction delta=`16133.956 ha`
+- `thlb_parent_009_critical_habitat_for_fish` | Critical habitat for fish | tsr-fit=`tsr_close_enough` | strict-TSR net deduction delta=`14453.994 ha`
 
 ## Top 5 Strict-vs-Reviewed Context Differences
 
@@ -102,8 +101,8 @@
 
 - `thlb_parent_001_total_tsa_area` | Total TSA area | benchmark cumulative area=`4933635.000 ha` | strict cumulative area=`3291998.463 ha` | strict cumulative delta=`-1641636.537 ha`
 - `thlb_parent_005_analysis_forest_land_base` | Analysis forest land base | benchmark cumulative area=`3098168.000 ha` | strict cumulative area=`2527970.255 ha` | strict cumulative delta=`-570197.745 ha`
-- `thlb_parent_022_timber_harvesting_land_base` | Timber harvesting land base | benchmark cumulative area=`1682843.000 ha` | strict cumulative area=`2468109.744 ha` | strict cumulative delta=`785266.744 ha`
-- `thlb_parent_024_long_term_thlb` | Long-term THLB | benchmark cumulative area=`1660053.000 ha` | strict cumulative area=`2468109.744 ha` | strict cumulative delta=`808056.744 ha`
+- `thlb_parent_022_timber_harvesting_land_base` | Timber harvesting land base | benchmark cumulative area=`1682843.000 ha` | strict cumulative area=`1671251.622 ha` | strict cumulative delta=`-11591.378 ha`
+- `thlb_parent_024_long_term_thlb` | Long-term THLB | benchmark cumulative area=`1660053.000 ha` | strict cumulative area=`1648497.622 ha` | strict cumulative delta=`-1555.378 ha`
 
 ## Parent-Step Comparison
 
@@ -645,100 +644,94 @@
 #### 19. Buffered trails
 
 - Parent step id: `thlb_parent_019_buffered_trails`
-- Strict TSR fit: `not_comparable_to_tsr`
-- Reviewed difference role: `blocked_or_missing_source`
-- Problem ownership: `reviewed_bridge_choice`
-- Difference nature: `accepted_reviewed_override`
-- Reconstructed status: `blocked_exact_overlay`
+- Strict TSR fit: `tsr_close_enough`
+- Reviewed difference role: `tsr_close_match`
+- Problem ownership: `model_endogenous`
+- Difference nature: `small_semantics_gap`
+- Reconstructed status: `applied`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `8039.000 ha`
 - TSR benchmark cumulative area: `1804681.000 ha`
-- Strict reconstructed cumulative area at this checkpoint: `2527970.255 ha`
-- Strict cumulative vs TSR cumulative delta: `723289.255 ha`
-- Strict reconstructed net deduction: `0.000 ha`
+- Strict reconstructed cumulative area at this checkpoint: `1799873.622 ha`
+- Strict cumulative vs TSR cumulative delta: `-4807.378 ha`
+- Strict reconstructed net deduction: `10502.023 ha`
 - Reviewed bridge net deduction: `10244.748 ha`
-- Strict vs TSR delta: `-8039.000 ha`
+- Strict vs TSR delta: `2463.023 ha`
 - Reviewed vs TSR delta: `2205.748 ha`
-- Strict vs reviewed delta: `-10244.748 ha`
-- Strict vs TSR: The strict lane is still blocked here, so strict-vs-TSR fit is not yet a clean execution comparison.
-- Reviewed difference: The strict lane is still blocked here, so the area gap is not yet a clean modeling comparison.
-- Practical meaning: The reviewed difference here is not very informative yet because the strict lane is still blocked or missing a needed source.
-- Engineering interpretation: The reviewed lane uses an accepted equivalent-corridor bridge here, while the strict lane currently does not reproduce that bridge.
-- Recommended next move: Keep the accepted bridge unless you explicitly decide to formalize the same equivalent-corridor logic in strict mode.
-- Adjudication queue action: `keep_reviewed_bridge` (Keep the reviewed bridge for now and do not force strict parity yet.)
-- Actionability: Acquire or repair the missing source/blocked seam before treating this as a real strict comparison.
+- Strict vs reviewed delta: `257.275 ha`
+- Strict vs TSR: The strict buffered-trails lane lands close enough to the TSR benchmark for TSA29.
+- Reviewed difference: The strict buffered-trails lane is slightly high versus TSR but remains in close-enough territory.
+- Practical meaning: This is close enough to keep moving forward without reopening step 19.
+- Engineering interpretation: The equivalent-corridor bridge for buffered trails is slightly broad but not enough to block late-stage reconciliation.
+- Recommended next move: Lock the current step-19 result and move on unless a later cumulative contradiction forces a reopen.
+- Adjudication queue action: `defer_low_priority` (Accept the small gap and continue.)
+- Actionability: No immediate step-19 repair is needed.
 - Supporting notes:
-  - strict spatial modes: `blocked_exact_overlay`
   - strict compiled steps: `thlb_parent_019_buffered_trails_compiled_01`
-  - reviewed approval scope: `full_tsa_user_directed_acceptance`
-  - reviewed ratchet state: `approved`
   - strict note: TSA29 section 6.3.6 says at least 85% of the area within the 100-metre trail corridor will not be available for harvest.
   - strict note: Notebook execution models that rule by shrinking the legal 100-metre buffered-trail polygons inward by 7.5 metres on each side, yielding an 85-metre equivalent full-exclusion corridor.
+  - reviewed approval scope: `full_tsa_user_directed_acceptance`
 
 #### 20. Wildlife tree retention areas
 
 - Parent step id: `thlb_parent_020_wildlife_tree_retention_areas`
-- Strict TSR fit: `strict_under_tsr_major`
-- Reviewed difference role: `aspatial_bridge_difference`
+- Strict TSR fit: `tsr_close_enough`
+- Reviewed difference role: `close_match`
 - Problem ownership: `reviewed_bridge_choice`
 - Difference nature: `accepted_aspatial_bridge`
 - Reconstructed status: `aspatial_fallback`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `94417.000 ha`
 - TSR benchmark cumulative area: `1710264.000 ha`
-- Strict reconstructed cumulative area at this checkpoint: `2483803.931 ha`
-- Strict cumulative vs TSR cumulative delta: `773539.931 ha`
-- Strict reconstructed net deduction: `44166.324 ha`
-- Reviewed bridge net deduction: `33627.943 ha`
-- Strict vs TSR delta: `-50250.676 ha`
-- Reviewed vs TSR delta: `-60789.057 ha`
-- Strict vs reviewed delta: `10538.381 ha`
-- Strict vs TSR: The strict lane is materially below the TSR benchmark here, so this looks like a real strict-lane undercut seam.
-- Reviewed difference: The strict lane used a documented aspatial fallback here instead of exact spatial reproduction.
-- Practical meaning: Strict is badly low against TSR here, so this is a real seam to fix or bridge explicitly.
-- Engineering interpretation: This step is intentionally being modeled as an aspatial future-WTRA bridge rather than an exact mapped exclusion.
-- Recommended next move: Keep the documented aspatial fallback unless a better exact contract is deliberately adopted later.
-- Adjudication queue action: `use_documented_aspatial_fallback` (Keep or formalize a documented aspatial fallback.)
-- Actionability: Decide whether this documented aspatial fallback should remain the working contract or be replaced by a better exact implementation later.
+- Strict reconstructed cumulative area at this checkpoint: `1705456.622 ha`
+- Strict cumulative vs TSR cumulative delta: `-4807.378 ha`
+- Strict reconstructed net deduction: `94417.000 ha`
+- Reviewed bridge net deduction: `94417.000 ha`
+- Strict vs TSR delta: `0.000 ha`
+- Reviewed vs TSR delta: `0.000 ha`
+- Strict vs reviewed delta: `0.000 ha`
+- Strict vs TSR: The strict lane now matches the TSR benchmark exactly for this full-TSA direct-target aspatial rollback step.
+- Reviewed difference: The strict lane now uses the same full-TSA direct-target aspatial WTRA deduction described by TSR section 6.4.8.
+- Practical meaning: Step 20 is locked in as a full-TSA direct-target aspatial bridge that matches TSR exactly.
+- Engineering interpretation: This step is intentionally modeled as a full-TSA benchmark-anchored aspatial reduction, not a subset-scaled fallback.
+- Recommended next move: Lock the direct-target aspatial bridge and move on to the next late-stage step.
+- Adjudication queue action: `use_documented_aspatial_fallback` (Keep the documented full-TSA direct-target aspatial fallback.)
+- Actionability: No further work needed unless a future exact full-TSA WTRA contract is deliberately adopted.
 - Supporting notes:
   - strict spatial modes: `aspatial_fallback`
   - strict compiled steps: `thlb_parent_020_wildlife_tree_retention_areas_compiled_01`
-  - reviewed approval scope: `single_lu_smoke_subset_williams_lake`
-  - reviewed ratchet state: `approved`
   - strict note: TSA29 section 6.4.8 says existing mapped WTRA remain in THLB and are deferred from harvest for 80 years.
   - strict note: Notebook execution models only the future WTRA requirement here as an aspatial THLB reduction factor.
-  - strict note: The deduction magnitude is anchored to the TSR benchmark area and scaled to the current smoke subset.
+  - strict note: The deduction magnitude is anchored directly to the TSR benchmark area for the full-TSA strict lane.
 
 #### 21. Cultural heritage and archaeological resources
 
 - Parent step id: `thlb_parent_021_cultural_heritage_and_archaeological_resources`
 - Strict TSR fit: `tsr_close_enough`
-- Reviewed difference role: `aspatial_bridge_difference`
+- Reviewed difference role: `close_match`
 - Problem ownership: `reviewed_bridge_choice`
 - Difference nature: `accepted_aspatial_bridge`
 - Reconstructed status: `aspatial_fallback`
 - Reviewed status: `applied`
 - TSR benchmark marginal deduction: `34205.000 ha`
 - TSR benchmark cumulative area: `1676059.000 ha`
-- Strict reconstructed cumulative area at this checkpoint: `2468109.744 ha`
-- Strict cumulative vs TSR cumulative delta: `792050.744 ha`
-- Strict reconstructed net deduction: `15694.187 ha`
-- Reviewed bridge net deduction: `11512.712 ha`
-- Strict vs TSR delta: `-18510.813 ha`
-- Reviewed vs TSR delta: `-22692.288 ha`
-- Strict vs reviewed delta: `4181.474 ha`
-- Strict vs TSR: The strict lane is close enough to the TSR benchmark here for practical exploratory use.
-- Reviewed difference: The strict lane used a documented aspatial fallback here instead of exact spatial reproduction.
-- Practical meaning: Strict is close enough to TSR here, so this is not a top-priority repair. The reviewed difference here is mostly about an explicit aspatial bridge choice rather than exact spatial truth.
-- Engineering interpretation: This step is intentionally being modeled as an aspatial THLB bridge rather than a single exact spatial layer.
-- Recommended next move: Keep the documented aspatial fallback unless a defensible exact spatial contract is introduced later.
-- Adjudication queue action: `defer_low_priority` (Defer; this is not a top-priority repair right now.)
-- Actionability: Decide whether this documented aspatial fallback should remain a bridge or be replaced by exact spatial logic later.
+- Strict reconstructed cumulative area at this checkpoint: `1671251.622 ha`
+- Strict cumulative vs TSR cumulative delta: `-11591.378 ha`
+- Strict reconstructed net deduction: `34205.000 ha`
+- Reviewed bridge net deduction: `34205.000 ha`
+- Strict vs TSR delta: `0.000 ha`
+- Reviewed vs TSR delta: `0.000 ha`
+- Strict vs reviewed delta: `0.000 ha`
+- Strict vs TSR: The strict lane now matches the TSR benchmark exactly for this full-TSA direct-target aspatial rollback step.
+- Reviewed difference: The strict lane now uses the same full-TSA direct-target aspatial cultural-heritage deduction described by TSR section 6.4.9.
+- Practical meaning: Step 21 is locked in as a full-TSA direct-target aspatial bridge that matches TSR exactly.
+- Engineering interpretation: This step is intentionally modeled as a full-TSA benchmark-anchored aspatial reduction, not a subset-scaled fallback.
+- Recommended next move: Treat step 22 as the THLB milestone row and proceed to the final future-roads closeout step.
+- Adjudication queue action: `use_documented_aspatial_fallback` (Keep the documented full-TSA direct-target aspatial fallback.)
+- Actionability: No further work needed unless a future exact full-TSA cultural-heritage contract is deliberately adopted.
 - Supporting notes:
   - strict spatial modes: `aspatial_fallback`
   - strict compiled steps: `thlb_parent_021_cultural_heritage_and_archaeological_resources_compiled_01`
-  - reviewed approval scope: `full_tsa_user_directed_acceptance`
-  - reviewed ratchet state: `approved`
   - strict note: TSA29 section 6.4.9 models this as an aspatial THLB reduction rather than a single public spatial layer.
   - strict note: The deduction is anchored to the TSR benchmark area and informed by TNG plus FSP practice (Tolko #780, West Fraser #755, BCTS #828).
   - strict note: Do not infer road or other generic spatial layers from the permit/FSP discussion in this subsection.
@@ -747,30 +740,29 @@
 
 - Parent step id: `thlb_parent_023_future_roads`
 - Strict TSR fit: `tsr_close_enough`
-- Reviewed difference role: `manual_or_reviewed_override`
+- Reviewed difference role: `close_match`
 - Problem ownership: `reviewed_bridge_choice`
-- Difference nature: `accepted_skip_or_noop`
-- Reconstructed status: `applied_noop`
-- Reviewed status: `applied_noop`
+- Difference nature: `accepted_aspatial_bridge`
+- Reconstructed status: `aspatial_fallback`
+- Reviewed status: `applied`
 - TSR benchmark marginal deduction: `22754.000 ha`
-- Strict reconstructed cumulative area at this checkpoint: `2468109.744 ha`
-- Strict reconstructed net deduction: `0.000 ha`
-- Reviewed bridge net deduction: `0.000 ha`
-- Strict vs TSR delta: `-22754.000 ha`
-- Reviewed vs TSR delta: `-22754.000 ha`
+- Strict reconstructed cumulative area at this checkpoint: `1648497.622 ha`
+- Strict cumulative vs TSR cumulative delta: `-1555.378 ha`
+- Strict reconstructed net deduction: `22754.000 ha`
+- Reviewed bridge net deduction: `22754.000 ha`
+- Strict vs TSR delta: `0.000 ha`
+- Reviewed vs TSR delta: `0.000 ha`
 - Strict vs reviewed delta: `0.000 ha`
-- Strict vs TSR: The strict lane is close enough to the TSR benchmark here for practical exploratory use.
-- Reviewed difference: The reviewed lane is carrying an accepted override, skip, calibration, or no-op choice that the strict lane does not automatically share.
-- Practical meaning: Strict is close enough to TSR here, so this is not a top-priority repair. The reviewed lane is using an accepted override, calibration, skip, or no-op that the strict lane does not automatically share.
-- Engineering interpretation: The accepted TSA29 closeout keeps this as an explicit 0 ha no-op tail step after step 21.
-- Recommended next move: Leave it alone unless you intentionally reopen the reviewed closeout decision.
-- Adjudication queue action: `defer_low_priority` (Defer; this is not a top-priority repair right now.)
-- Actionability: Review the accepted reviewed override before changing the strict lane.
+- Strict vs TSR: The strict lane now matches the TSR benchmark exactly for this full-TSA direct-target aspatial rollback step.
+- Reviewed difference: The strict lane now uses the TSR-cited future-roads deduction as a full-TSA direct-target aspatial THLB rollback.
+- Practical meaning: Step 23 is locked in as a full-TSA direct-target aspatial bridge that matches TSR exactly.
+- Engineering interpretation: This step is intentionally modeled as a full-TSA benchmark-anchored aspatial reduction for TSA29 closeout.
+- Recommended next move: Reference the final long-term THLB milestone and close the late-stage semantics pass.
+- Adjudication queue action: `use_documented_aspatial_fallback` (Keep the documented full-TSA direct-target aspatial fallback.)
+- Actionability: No further work needed unless a future exact future-roads contract is deliberately adopted.
 - Supporting notes:
+  - strict spatial modes: `aspatial_fallback`
   - strict compiled steps: `thlb_parent_023_future_roads_compiled_01`
-  - reviewed approval scope: `full_tsa_user_directed_skip`
-  - reviewed ratchet state: `approved`
   - strict note: TSA29 section 6.2.3 says future roads are estimated from current performance and RESULTS data rather than a mapped future-road layer.
-  - strict note: User-directed TSA29 closeout now keeps this as a tail-end reference step after step 21 but applies 0 ha of executable deduction.
+  - strict note: For the accepted TSA29 closeout, this is modeled as a full-TSA direct-target aspatial THLB reduction of 22,754 ha rather than a no-op tail step.
   - strict note: Do not reuse the existing present-day roads spatial overlay for this parent step.
-  - strict note: Same-instrument reruns showed the accepted lane was already slightly below the final TSR cumulative THLB benchmark after step 21, so a positive deduction here would only worsen reconciliation.
