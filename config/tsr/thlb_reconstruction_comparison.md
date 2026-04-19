@@ -1,10 +1,16 @@
 # THLB Reconstruction Comparison: TSA 29 (Williams Lake)
 
+> Deprecated validation-context note: this comparison artifact preserves an
+> older checkpoint1-initialized strict-reconstruction story for audit history.
+> It must not be used as the governing contract for current TSA29 strict
+> validation, which is anchored on the validated strict recipe plus explicit
+> `data/tsr/*` seam checkpoints.
+
 - Generated UTC: `2026-04-16T16:59:49.050540+00:00`
 - THLB recipe path: `config/tsr/thlb_netdown.recipe.yaml`
 - Reviewed bridge status report: `config/tsr/thlb_netdown.status.md`
 - Reconstructed audit JSON: `config/tsr/thlb_reconstructed.audit.json`
-- Reconstructed baseline signal (context only): `checkpoint1_aflb_initialization`
+- Historical reconstructed baseline signal (context only): `checkpoint1_aflb_initialization`
 
 ## Summary
 
@@ -33,7 +39,7 @@
 - The reviewed lane was accepted because its cumulative THLB was close enough to the TSR benchmark for practical exploratory modeling use.
 - Reviewed per-step behavior is therefore useful context, not automatic gold-standard truth for strict reconstruction.
 - A parent step is a top-priority strict-lane repair when strict is materially bad against TSR, not merely because strict differs from reviewed.
-- The current strict lane now starts from raw checkpoint1 geometry rather than an AFLB-style prefiltered subset, so early `GLB -> AFLB` rows are intended to be read as real stepwise deductions.
+- Historical note only: this older comparison artifact described a checkpoint1-initialized strict lane. Current TSA29 strict validation must not infer its execution basis from that older checkpoint1-era story.
 
 ## Strict-vs-TSR Fit Counts
 
