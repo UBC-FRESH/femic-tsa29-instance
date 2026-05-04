@@ -148,12 +148,12 @@
       "land_base_stage": "aflb_to_lhlb",
       "benchmark_marginal_area_ha": 11521.0,
       "benchmark_cumulative_area_ha": 2415545.0,
-      "locked_net_removed_area_ha": 25974.994,
-      "locked_cumulative_remaining_area_ha": 2423068.823,
+      "locked_net_removed_area_ha": 20965.006,
+      "locked_cumulative_remaining_area_ha": 2503323.083,
       "tsr_cumulative_area_ha": 2415545.0,
-      "locked_cumulative_delta_ha": 7523.822999999858,
+      "locked_cumulative_delta_ha": 87778.083,
       "locked_source_kind": "bounded_step_run",
-      "locked_source_note": "legal-planning fish subset extent fix; cumulative fit accepted as good enough",
+      "locked_source_note": "relocked reproducible chained CCLUP CRITFISH result from post-row-8 checkpoint; supersedes older row-9 lock after row-8 relock changed the chain state",
       "marginal_not_applicable": false
     },
     {
