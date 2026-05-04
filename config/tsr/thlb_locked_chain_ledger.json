@@ -132,12 +132,12 @@
       "land_base_stage": "aflb_to_lhlb",
       "benchmark_marginal_area_ha": 154056.0,
       "benchmark_cumulative_area_ha": 2427066.0,
-      "locked_net_removed_area_ha": 131567.592,
-      "locked_cumulative_remaining_area_ha": 2449043.817,
+      "locked_net_removed_area_ha": 113733.548,
+      "locked_cumulative_remaining_area_ha": 2524288.089,
       "tsr_cumulative_area_ha": 2427066.0,
-      "locked_cumulative_delta_ha": 21977.816999999806,
+      "locked_cumulative_delta_ha": 97222.089,
       "locked_source_kind": "bounded_step_run",
-      "locked_source_note": "locked post-step-7 wildlife habitat no-harvest slice",
+      "locked_source_note": "relocked reproducible chained no-harvest UWR/WHA wildlife-habitat result from post-row-7 checkpoint; supersedes older row-8 lock after row-7 relock changed the chain state",
       "marginal_not_applicable": false
     },
     {
