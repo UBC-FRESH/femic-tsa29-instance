@@ -165,11 +165,11 @@
       "benchmark_marginal_area_ha": 327.0,
       "benchmark_cumulative_area_ha": 2415218.0,
       "locked_net_removed_area_ha": 0.0,
-      "locked_cumulative_remaining_area_ha": 2423068.823,
+      "locked_cumulative_remaining_area_ha": 2503323.083,
       "tsr_cumulative_area_ha": 2415218.0,
-      "locked_cumulative_delta_ha": 7850.822999999858,
+      "locked_cumulative_delta_ha": 88105.083,
       "locked_source_kind": "reviewed_skip",
-      "locked_source_note": "Accepted trivial full-TSA skip; current public layers do not expose a trusted Class A lake discriminator.",
+      "locked_source_note": "relocked reviewed zero-removal carry-forward from post-row-9 checkpoint; executor now short-circuits without LU partitioning because no trusted Class A lake discriminator is available",
       "marginal_not_applicable": false
     },
     {
