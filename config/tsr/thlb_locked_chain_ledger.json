@@ -116,12 +116,12 @@
       "land_base_stage": "aflb_to_lhlb",
       "benchmark_marginal_area_ha": 210719.0,
       "benchmark_cumulative_area_ha": 2581122.0,
-      "locked_net_removed_area_ha": 223638.262,
-      "locked_cumulative_remaining_area_ha": 2580611.409,
+      "locked_net_removed_area_ha": 166228.034,
+      "locked_cumulative_remaining_area_ha": 2638021.638,
       "tsr_cumulative_area_ha": 2581122.0,
-      "locked_cumulative_delta_ha": -510.5910000000149,
+      "locked_cumulative_delta_ha": 56899.6379999998,
       "locked_source_kind": "bounded_step_run",
-      "locked_source_note": "exact OGMA overlay after fractional-state fix",
+      "locked_source_note": "relocked reproducible chained PERM/ROT legal OGMA overlay from post-step-6 checkpoint; supersedes older non-chain-comparable AFLB-start row-7 result",
       "marginal_not_applicable": false
     },
     {
