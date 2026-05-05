@@ -180,12 +180,12 @@
       "land_base_stage": "aflb_to_lhlb",
       "benchmark_marginal_area_ha": 62460.0,
       "benchmark_cumulative_area_ha": 2352758.0,
-      "locked_net_removed_area_ha": 78593.956,
-      "locked_cumulative_remaining_area_ha": 2344474.8669999996,
+      "locked_net_removed_area_ha": 69716.086454,
+      "locked_cumulative_remaining_area_ha": 2433606.996672,
       "tsr_cumulative_area_ha": 2352758.0,
-      "locked_cumulative_delta_ha": -8283.13300000038,
+      "locked_cumulative_delta_ha": 80848.99667200004,
       "locked_source_kind": "bounded_step_run",
-      "locked_source_note": "bounded chained replay from official AFLB checkpoint through locked steps 6-9, then exact step-11 legal-planning CASC overlay",
+      "locked_source_note": "relocked chained row-11 CASC run after narrowing legal-planning semantics to SOURCE_HARV_CAT in {ART, IR, STR}",
       "marginal_not_applicable": false
     },
     {
