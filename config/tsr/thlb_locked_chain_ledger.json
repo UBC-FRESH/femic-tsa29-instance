@@ -196,12 +196,12 @@
       "land_base_stage": "aflb_to_lhlb",
       "benchmark_marginal_area_ha": 68401.0,
       "benchmark_cumulative_area_ha": 2284357.0,
-      "locked_net_removed_area_ha": 68401.0,
-      "locked_cumulative_remaining_area_ha": 2276073.8669999996,
+      "locked_net_removed_area_ha": 149249.996672,
+      "locked_cumulative_remaining_area_ha": 2284357.0,
       "tsr_cumulative_area_ha": 2284357.0,
-      "locked_cumulative_delta_ha": -8283.13300000038,
+      "locked_cumulative_delta_ha": 0.0,
       "locked_source_kind": "documented_aspatial_bridge",
-      "locked_source_note": "benchmark-anchored public-data aspatial bridge for Proven Aboriginal Rights areas; exact PRA boundary not publicly trustworthy",
+      "locked_source_note": "stage-closing aspatial PRA bridge sized from the relocked row-11 cumulative area to land AFLB-to-LHLB at the TSR cumulative target",
       "marginal_not_applicable": false
     },
     {
