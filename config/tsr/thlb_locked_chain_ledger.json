@@ -212,12 +212,12 @@
       "land_base_stage": "lhlb_to_thlb",
       "benchmark_marginal_area_ha": 33533.0,
       "benchmark_cumulative_area_ha": 2250824.0,
-      "locked_net_removed_area_ha": 35088.83424583776,
-      "locked_cumulative_remaining_area_ha": 2240985.032754162,
+      "locked_net_removed_area_ha": 31974.0,
+      "locked_cumulative_remaining_area_ha": 2252383.0,
       "tsr_cumulative_area_ha": 2250824.0,
-      "locked_cumulative_delta_ha": -9838.96724583814,
-      "locked_source_kind": "exact_plus_calibrated_bridge",
-      "locked_source_note": "exact unstable-terrain overlay + direct-target steep-slope THLB rollback on selected steep subset",
+      "locked_cumulative_delta_ha": 1559.0,
+      "locked_source_kind": "bounded_step_run",
+      "locked_source_note": "relocked zero-delta-post-row-12 row-13 run; exact terrain branch removed 0 ha and steep-slope rollback removed 31,974 ha",
       "marginal_not_applicable": false
     },
     {
