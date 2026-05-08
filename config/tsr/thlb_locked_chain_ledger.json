@@ -228,12 +228,12 @@
       "land_base_stage": "lhlb_to_thlb",
       "benchmark_marginal_area_ha": 321044.0,
       "benchmark_cumulative_area_ha": 1929780.0,
-      "locked_net_removed_area_ha": 293847.2031916324,
-      "locked_cumulative_remaining_area_ha": 1990509.796808361,
+      "locked_net_removed_area_ha": 289734.24253143393,
+      "locked_cumulative_remaining_area_ha": 1962648.7574685595,
       "tsr_cumulative_area_ha": 1929780.0,
-      "locked_cumulative_delta_ha": 60729.796808361076,
+      "locked_cumulative_delta_ha": 32868.75746855955,
       "locked_source_kind": "official_curve_ready_restart_bounded_slice",
-      "locked_source_note": "relocked reproducible official lhlb_curve_ready restart result from the repaired live curve-ready seam; step-14 total 293,847.203 ha",
+      "locked_source_note": "relocked true chained step-13-to-step-14 result using step-13 output with fresh curve-ready attribute compilation; step-14 total 289,734.243 ha",
       "marginal_not_applicable": false
     },
     {
