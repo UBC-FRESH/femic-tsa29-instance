@@ -260,12 +260,12 @@
       "land_base_stage": "lhlb_to_thlb",
       "benchmark_marginal_area_ha": 9598.0,
       "benchmark_cumulative_area_ha": 1871130.0,
-      "locked_net_removed_area_ha": 8891.239796305308,
-      "locked_cumulative_remaining_area_ha": 1869193.902601906,
+      "locked_net_removed_area_ha": 6427.220702543389,
+      "locked_cumulative_remaining_area_ha": 1924153.5719434924,
       "tsr_cumulative_area_ha": 1871130.0,
-      "locked_cumulative_delta_ha": -1936.0973980939016,
+      "locked_cumulative_delta_ha": 53023.571943492396,
       "locked_source_kind": "official_curve_ready_restart_bounded_slice",
-      "locked_source_note": "official lhlb_curve_ready restart bounded slice through locked steps 13-15, then exact active recreation overlay; step-16 total 8,891.240 ha",
+      "locked_source_note": "relocked true chained step-15-to-step-16 result from rebuilt step-15 output after materializing the FTEN recreation GeoPackage; step-16 total 6,427.221 ha",
       "marginal_not_applicable": false
     },
     {
