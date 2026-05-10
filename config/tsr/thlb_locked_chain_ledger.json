@@ -341,11 +341,11 @@
       "benchmark_marginal_area_ha": 34205.0,
       "benchmark_cumulative_area_ha": 1676059.0,
       "locked_net_removed_area_ha": 34205.0,
-      "locked_cumulative_remaining_area_ha": 1671251.6217168132,
+      "locked_cumulative_remaining_area_ha": 1709877.0443856667,
       "tsr_cumulative_area_ha": 1676059.0,
-      "locked_cumulative_delta_ha": -11591.378283186816,
-      "locked_source_kind": "post_step20_restart_direct_target_aspatial",
-      "locked_source_note": "bounded step-21-only replay from the locked post-step-20 restart surface; cultural heritage modeled as a direct-target aspatial THLB rollback of 34,205 ha for the full TSA strict lane",
+      "locked_cumulative_delta_ha": 33818.044385666726,
+      "locked_source_kind": "bounded_step_run",
+      "locked_source_note": "relocked true chained step-20-to-step-21 result from the rebuilt row-20 output; row-21 total 34,205.000 ha",
       "marginal_not_applicable": false
     },
     {
@@ -357,11 +357,11 @@
       "benchmark_marginal_area_ha": 34205.0,
       "benchmark_cumulative_area_ha": 1676059.0,
       "locked_net_removed_area_ha": 34205.0,
-      "locked_cumulative_remaining_area_ha": 1671251.6217168132,
+      "locked_cumulative_remaining_area_ha": 1709877.0443856667,
       "tsr_cumulative_area_ha": 1676059.0,
-      "locked_cumulative_delta_ha": -11591.378283186816,
-      "locked_source_kind": "post_step20_restart_direct_target_aspatial",
-      "locked_source_note": "bounded step-21-only replay from the locked post-step-20 restart surface; cultural heritage modeled as a direct-target aspatial THLB rollback of 34,205 ha for the full TSA strict lane",
+      "locked_cumulative_delta_ha": 33818.044385666726,
+      "locked_source_kind": "bounded_step_run",
+      "locked_source_note": "relocked true chained step-20-to-step-21 result from the rebuilt row-20 output; row-21 total 34,205.000 ha",
       "marginal_not_applicable": false
     },
     {
