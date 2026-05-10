@@ -292,12 +292,12 @@
       "land_base_stage": "lhlb_to_thlb",
       "benchmark_marginal_area_ha": 54833.0,
       "benchmark_cumulative_area_ha": 1812720.0,
-      "locked_net_removed_area_ha": 57651.598073951434,
-      "locked_cumulative_remaining_area_ha": 1810375.644493983,
+      "locked_net_removed_area_ha": 73011.24114260147,
+      "locked_cumulative_remaining_area_ha": 1850305.1572232174,
       "tsr_cumulative_area_ha": 1812720.0,
-      "locked_cumulative_delta_ha": -2344.3555060171057,
-      "locked_source_kind": "official_curve_ready_restart_bounded_slice_tsa29_instance_hack",
-      "locked_source_note": "official lhlb_curve_ready restart bounded slice through locked steps 13-17, then TSA29-only riparian hack keeping only S4 streams and W5 wetlands active; step-18 total 57,651.598 ha",
+      "locked_cumulative_delta_ha": 37585.15722321742,
+      "locked_source_kind": "bounded_step_run",
+      "locked_source_note": "relocked true chained step-17-to-step-18 result from the rebuilt row-17 output after rebuilding the row-17 LU cache to true LU-granular chunks; row-18 total 73,011.241 ha",
       "marginal_not_applicable": false
     },
     {
