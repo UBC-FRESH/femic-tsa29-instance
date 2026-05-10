@@ -325,11 +325,11 @@
       "benchmark_marginal_area_ha": 94417.0,
       "benchmark_cumulative_area_ha": 1710264.0,
       "locked_net_removed_area_ha": 94417.0,
-      "locked_cumulative_remaining_area_ha": 1705456.6217168132,
+      "locked_cumulative_remaining_area_ha": 1744082.0443856667,
       "tsr_cumulative_area_ha": 1710264.0,
-      "locked_cumulative_delta_ha": -4807.378283186816,
-      "locked_source_kind": "post_step19_restart_direct_target_aspatial",
-      "locked_source_note": "bounded step-20-only replay from the locked post-step-19 restart surface; WTRA modeled as a direct-target aspatial THLB rollback of 94,417 ha for the full TSA strict lane",
+      "locked_cumulative_delta_ha": 33818.044385666726,
+      "locked_source_kind": "bounded_step_run",
+      "locked_source_note": "relocked true chained step-19-to-step-20 result from the rebuilt row-19 output; row-20 total 94,417.000 ha",
       "marginal_not_applicable": false
     },
     {
