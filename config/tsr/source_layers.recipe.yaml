@@ -3017,12 +3017,12 @@ entries:
   - 1405350.228
   - 907878.722
 - entry_id: whse_forest_vegetation_gry_psp_status
-  label: WHSE_FOREST_VEGETATION.GRY_PSP_STATUS
-  recommended_query: WHSE_FOREST_VEGETATION.GRY_PSP_STATUS
-  extracted_value: WHSE_FOREST_VEGETATION.GRY_PSP_STATUS_
+  label: WHSE_FOREST_VEGETATION.GRY_PSP_STATUS_ACTIVE
+  recommended_query: WHSE_FOREST_VEGETATION.GRY_PSP_STATUS_ACTIVE
+  extracted_value: WHSE_FOREST_VEGETATION.GRY_PSP_STATUS_ACTIVE
   quality: likely_useful
   quality_reason: BCGW object-name style token
-  snippet: Research plots BCGW WHSE_FOREST_VEGETATION.GRY_PSP_STATUS_
+  snippet: Research plots BCGW WHSE_FOREST_VEGETATION.GRY_PSP_STATUS_ACTIVE
   page_number: 17
   document_title: 29ts dpkg 2024
   cycle_label: TSR_2024
@@ -3032,8 +3032,8 @@ entries:
   current_public_status: exact_hit
   matched_by: object_name_stem:WHSE_FOREST_VEGETATION.GRY_PSP_STATUS_ACTIVE
   used_alias: ''
-  top_match_title: Growth and Yield  Samples - All Status
-  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/growth-and-yield-samples-all-status
+  top_match_title: Growth and Yield Samples - Active Status
+  dataset_page_url: https://catalogue.data.gov.bc.ca/dataset/growth-and-yield-samples-active-status
   suggested_fetch_strategy: ''
   direct_download_candidates: 0
   has_service: false
@@ -3051,6 +3051,8 @@ entries:
     for manual access if a direct data URL is unavailable.
   - DWDS follow-up materialized the emailed pickup-by-GUID package and extracted the
     active-status GeoPackage into the instance-local BCDC download cache.
+  - This source contract is active-status only. Do not interpret it as the broader
+    all-status PSP surface when comparing against older benchmark notes.
   requested_bbox_epsg3005:
   - 1015173.8085999992
   - 653963.4944000002

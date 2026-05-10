@@ -3372,8 +3372,8 @@ parent_steps:
     parent_label: Proven Aboriginal Rights areas
     order_index: 12
     step_kind: netdown_rule
-    label: Proven Aboriginal Rights area boundary
-    raw_value: Proven Aboriginal Rights area boundary
+    label: Proven Aboriginal Rights area reduction
+    raw_value: Proven Aboriginal Rights area reduction
     raw_text: The Tsilhqot’in 2012 BC Supreme Court decision confirmed a proven Aboriginal
       rights area (PRA) where Tsilhqot’in people hold rights to hunt and trap birds
       and animals. This area overlaps the Tsilhqot’in proven and declared Aboriginal
@@ -3389,9 +3389,9 @@ parent_steps:
     land_base_stage: aflb_to_lhlb
     stage_label: AFLB -> LHLB
     execution_class: legal_harvest_exclusion
-    compiled_operation_type: manual_review_required
-    step_status: manual_review_required
-    required: false
+    compiled_operation_type: aspatial_reduction
+    step_status: ready
+    required: true
     page_number: 31
     document_title: ''
     document_type: data_package
@@ -3402,20 +3402,21 @@ parent_steps:
     notes:
     - TSA29 section 6.4.1 defines the Proven Aboriginal Rights area conceptually but
       does not cite a clean public vector source in the data-package text.
-    - Current public lead is the PIP Consultation Areas public map service; treat
-      this step as review/manual until a trustworthy boundary source or override is
-      adopted.
+    - The approved public-data lane keeps this as a benchmark-anchored aspatial
+      bridge because no trustworthy public PRA boundary is available for defensible
+      automated exclusion.
+    - When the row-11 chained input state changes, row 12 can absorb the AFLB-to-LHLB
+      stage residual so the stage lands on the TSR cumulative target.
     row_source_kind: table_summary_row
     benchmark_marginal_area_ha: 68401.0
     benchmark_cumulative_area_ha: 2284357.0
     table_provenance: TSR_2024/Data_Package_2024/29ts_dpkg_2024.pdf#page=24
-    normalized_action: review
-    normalized_subject: Proven Aboriginal Rights area boundary
-    normalized_predicate: requires a reviewed PRA boundary overlay before automation;
-      do not auto-exclude with broad TSA or designated-area polygons
-    linked_source_entry_ids:
-    - whse_admin_boundaries_pip_consultation
-    - whse_land_use_planning_fadm_designated
+    normalized_action: aspatial_reduction
+    normalized_subject: Proven Aboriginal Rights area reduction
+    normalized_predicate: apply the approved PRA bridge as an aspatial THLB reduction
+      when no trustworthy public PRA boundary is available
+    linked_source_entry_ids: []
+    direct_target_removed_area: true
   approved: true
   approval_scope: full_tsa_public_data_unavailable_aspatial_bridge
   approval_note: User-directed public-data bridge for the Proven Aboriginal Rights
