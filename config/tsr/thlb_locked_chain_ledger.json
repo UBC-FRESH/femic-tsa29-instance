@@ -276,12 +276,12 @@
       "land_base_stage": "lhlb_to_thlb",
       "benchmark_marginal_area_ha": 3577.0,
       "benchmark_cumulative_area_ha": 1867553.0,
-      "locked_net_removed_area_ha": 1166.6600339717697,
-      "locked_cumulative_remaining_area_ha": 1868027.2425679343,
+      "locked_net_removed_area_ha": 837.1735776735004,
+      "locked_cumulative_remaining_area_ha": 1923316.398365819,
       "tsr_cumulative_area_ha": 1867553.0,
-      "locked_cumulative_delta_ha": 474.2425679343287,
-      "locked_source_kind": "official_curve_ready_restart_bounded_slice",
-      "locked_source_note": "official lhlb_curve_ready restart bounded slice through locked steps 13-16, then exact PSP overlay; step-17 total 1,166.660 ha",
+      "locked_cumulative_delta_ha": 55763.398365818895,
+      "locked_source_kind": "bounded_step_run",
+      "locked_source_note": "relocked true chained step-16-to-step-17 result from the rebuilt row-16 output using the public/materialized GRY_PSP_STATUS_ACTIVE layer; no broader admissible public research-installation boundary geometry was found in repo evidence or automated BCGW acquisition, so the public pipeline row-17 total remains 837.174 ha",
       "marginal_not_applicable": false
     },
     {
