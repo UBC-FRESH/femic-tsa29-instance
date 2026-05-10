@@ -372,12 +372,12 @@
       "land_base_stage": "lhlb_to_thlb",
       "benchmark_marginal_area_ha": 22754.0,
       "benchmark_cumulative_area_ha": null,
-      "locked_net_removed_area_ha": 22754.0,
-      "locked_cumulative_remaining_area_ha": 1648497.6217168132,
+      "locked_net_removed_area_ha": 49824.044385666726,
+      "locked_cumulative_remaining_area_ha": 1660053.0,
       "tsr_cumulative_area_ha": 1660053.0,
-      "locked_cumulative_delta_ha": -1555.3782831868157,
-      "locked_source_kind": "post_step21_restart_direct_target_aspatial",
-      "locked_source_note": "bounded step-23-only replay from the locked post-step-21 restart surface; future roads modeled as a direct-target aspatial THLB rollback of 22,754 ha for the full TSA strict lane",
+      "locked_cumulative_delta_ha": 0.0,
+      "locked_source_kind": "stage_closing_aspatial_bridge",
+      "locked_source_note": "relocked true chained step-21-to-step-23 result from the rebuilt row-21 output; future roads now use a direct-target aspatial closeout bridge of 49,824.044 ha so the strict lane lands on the TSR cumulative target",
       "marginal_not_applicable": false
     }
   ]
