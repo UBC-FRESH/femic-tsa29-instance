@@ -308,12 +308,12 @@
       "land_base_stage": "lhlb_to_thlb",
       "benchmark_marginal_area_ha": 8039.0,
       "benchmark_cumulative_area_ha": 1804681.0,
-      "locked_net_removed_area_ha": 10502.022777169943,
-      "locked_cumulative_remaining_area_ha": 1799873.621716813,
+      "locked_net_removed_area_ha": 11806.112837550696,
+      "locked_cumulative_remaining_area_ha": 1838499.0443856667,
       "tsr_cumulative_area_ha": 1804681.0,
-      "locked_cumulative_delta_ha": -4807.3782831870485,
-      "locked_source_kind": "post_step18_restart_bounded_slice",
-      "locked_source_note": "bounded step-19-only replay from the locked post-step-18 late-stage restart surface; strict total 10,502.023 ha",
+      "locked_cumulative_delta_ha": 33818.044385666726,
+      "locked_source_kind": "bounded_step_run",
+      "locked_source_note": "relocked true chained step-18-to-step-19 result from the rebuilt row-18 output; row-19 total 11,806.113 ha",
       "marginal_not_applicable": false
     },
     {
