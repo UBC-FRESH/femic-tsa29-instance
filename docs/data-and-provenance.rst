@@ -14,9 +14,10 @@ Published Snapshot Inventory
 The checked-in snapshot currently includes:
 
 - ``data/model_input_bundle/*.csv``
-- historical TIPSY seam artifacts:
-  - ``data/02_input-tsa29_si_plus2.dat``
-  - ``data/04_output-tsa29.out``
+- canonical BTC seam artifacts:
+  - ``data/03_input-tsa29.csv``
+  - ``data/04_output-tsa29.csv``
+  - ``data/04_error-tsa29.csv``
 - ``data/tipsy_curves_tsa29.csv``
 - ``data/tipsy_sppcomp_tsa29.csv``
 - ``data/vdyp_curves_smooth-tsa29.feather``
@@ -54,14 +55,11 @@ The active rebuild contract now targets these artifacts on a fresh run:
 
 - Stage 01a boundary:
   - ``data/03_input-tsa29.csv``
-  - ``data/tipsy_params_tsa29.xlsx``
-  - optional legacy mirror: ``data/02_input-tsa29_si_plus2.dat``
 - Returned BTC seam:
   - ``data/04_output-tsa29.csv``
   - ``data/04_error-tsa29.csv``
 
-Those CSV files are the current operator-facing seam even if the historical
-DAT/out artifacts remain present in the snapshot.
+Those CSV files are the current operator-facing seam.
 
 Authoritative Provenance Files
 ------------------------------
@@ -85,8 +83,7 @@ At the time of the current published snapshot:
 
 Current maintainer interpretation should add two more distinctions:
 
-- the snapshot preserves the older DAT/out seam as historical evidence,
-- the active rebuild contract is now BTC-first and should be evaluated through
+- the active rebuild contract is BTC-first and should be evaluated through
   ``03_input-tsa29.csv`` plus ``femic tsa btc-post-tipsy``; and
 - launch-critical runtime payloads such as ``blocks/`` and ``tracks/`` plus the
   editable ``forestmodel.xml``/``fragments/`` pair may be annex-backed in thin
@@ -99,7 +96,9 @@ Evidence Files Worth Reading First
   Current rebuild/evidence summary.
 - ``evidence/ws3_smoke_report.latest.json``
   Woodstock/ws3 smoke evidence for the published output package.
-- ``evidence/curve_stability_report.20260315.md``
-  Reviewer-facing narrative summary of the TSA29 curve-stability rerun.
-- ``evidence/curve_selection_summary-tsa29-20260315T184955Z.csv``
-  Row-level selected-path evidence for the TSA29 curve pass.
+- ``evidence/curve_selection_summary-tsa29-p67_3b_tsa29_smoothed_default_20260510g.csv``
+  Row-level selected-path evidence for the accepted smoothed VDYP curve pass.
+- ``evidence/managed_au_rule_audit-tsa29-p68_1f_20260510a.csv``
+  Managed-AU/TIPSY-rule audit used for the current comparison-lane review.
+- ``plots/tipsy_vdyp_tsa29-*.png``
+  Accepted refreshed ``54``-plot TIPSY-vs-VDYP comparison family.

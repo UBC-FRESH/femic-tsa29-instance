@@ -53,6 +53,7 @@ files that currently own those assumptions:
 - ``config/run_profile.tsa29.yaml``
 - ``data/model_input_bundle/*.csv``
 - ``output/patchworks_tsa29_validated/fragments/``
-- ``evidence/curve_stability_report.20260315.md``
+- ``evidence/curve_selection_summary-tsa29-p67_3b_tsa29_smoothed_default_20260510g.csv``
+- ``plots/tipsy_vdyp_tsa29-*.png``
 
 If those files change materially, this page should be updated alongside them.

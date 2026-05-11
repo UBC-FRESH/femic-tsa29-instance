@@ -27,8 +27,6 @@
    `femic run --run-config config/run_profile.tsa29.yaml --run-id tsa29_full`
 5. Confirm FEMIC stopped at the intended handoff seam:
    - `data/03_input-tsa29.csv`
-   - `data/tipsy_params_tsa29.xlsx`
-   - optional legacy mirror: `data/02_input-tsa29_si_plus2.dat`
 6. Resume with unattended BTC and downstream bundle assembly:
    `femic tsa btc-post-tipsy --run-config config/run_profile.tsa29.yaml --tsa 29 --run-id tsa29_full`
 7. Confirm returned BTC artifacts:
@@ -44,8 +42,8 @@
 9. Promote latest report if needed:
    `femic instance promote-evidence --output evidence/reference_rebuild_report.latest.json`
 
-## Legacy note
+## Comparison note
 
-The older `data/02_input-tsa29*.dat` and `data/04_output-tsa29.out` artifacts
-remain useful as historical snapshot evidence, but they are no longer the
-primary operator contract for issue `#10`.
+Treat `plots/tipsy_vdyp_tsa29-*.png` as the current accepted comparison
+surface. The active TSA29 library is the refreshed `54`-plot family aligned to
+the current managed-AU lane.

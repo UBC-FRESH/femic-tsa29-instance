@@ -128,8 +128,9 @@ Read these files first after a rebuild or validation pass:
 
 - ``evidence/reference_rebuild_report.latest.json``
 - ``evidence/ws3_smoke_report.latest.json``
-- ``evidence/curve_stability_report.20260315.md``
-- ``evidence/curve_selection_summary-tsa29-20260315T184955Z.csv``
+- ``evidence/curve_selection_summary-tsa29-p67_3b_tsa29_smoothed_default_20260510g.csv``
+- ``evidence/managed_au_rule_audit-tsa29-p68_1f_20260510a.csv``
+- ``plots/tipsy_vdyp_tsa29-*.png`` (accepted refreshed ``54``-plot comparison family)
 - ``runtime/logs/`` manifests/logs referenced by the rebuild report
 
 Acceptance Checklist
@@ -148,9 +149,11 @@ Treat the QA pass as acceptable when:
 - the rebuild/evidence report is interpretable and any warning state is
   explicitly understood.
 
-Legacy Note
------------ 
+Comparison Note
+---------------
 
-The older ``02_input-tsa29*.dat`` / ``04_output-tsa29.out`` seam remains
-historical snapshot evidence only. Do not treat it as the current default
-operator workflow.
+Treat ``plots/tipsy_vdyp_tsa29-*.png`` as the current accepted TIPSY-vs-VDYP
+comparison surface for TSA29. The accepted family is the refreshed ``54``-plot
+set covering the current managed-AU library. Use
+:doc:`yield-curve-comparisons` for the published gallery view and
+:doc:`figure-appendix` for the broader figure catalog.
