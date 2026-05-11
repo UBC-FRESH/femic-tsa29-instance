@@ -154,4 +154,6 @@ Comparison Note
 
 Treat ``plots/tipsy_vdyp_tsa29-*.png`` as the current accepted TIPSY-vs-VDYP
 comparison surface for TSA29. The accepted family is the refreshed ``54``-plot
-set covering the current managed-AU library.
+set covering the current managed-AU library. Use
+:doc:`yield-curve-comparisons` for the published gallery view and
+:doc:`figure-appendix` for the broader figure catalog.

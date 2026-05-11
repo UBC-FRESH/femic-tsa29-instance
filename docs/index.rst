@@ -12,5 +12,6 @@ Canonical docs for the standalone TSA29 FEMIC instance.
    land-base-and-assumptions
    rebuild-and-qa
    troubleshooting
+   yield-curve-comparisons
    figure-appendix
    docs-ownership-and-release

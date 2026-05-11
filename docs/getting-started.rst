@@ -143,3 +143,4 @@ Next Pages
 - :doc:`data-and-provenance`
 - :doc:`rebuild-and-qa`
 - :doc:`troubleshooting`
+- :doc:`yield-curve-comparisons`

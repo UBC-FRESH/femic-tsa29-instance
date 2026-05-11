@@ -33,3 +33,5 @@ family under ``plots/tipsy_vdyp_tsa29-*.png``, covering:
 
 These figures are the current Phase 68 comparison library for the TSA29
 managed-AU surface. The older `.out`-derived `30`-plot subset is retired.
+
+Use :doc:`yield-curve-comparisons` for the full rendered gallery.
