@@ -41,7 +41,6 @@ steps:
     expected_outputs:
       - "run_manifest-<run_id>.json"
       - "data/03_input-tsa29.csv (canonical BTC boundary handoff; femic run is expected to stop here)"
-      - "data/tipsy_params_tsa29.xlsx"
 
   - step_id: "btc_post_tipsy_bundle"
     kind: "femic_command"

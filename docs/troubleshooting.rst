@@ -31,7 +31,6 @@ BTC boundary.
 Confirm the boundary artifacts:
 
 - ``data/03_input-tsa29.csv``
-- ``data/tipsy_params_tsa29.xlsx``
 - optional legacy mirror: ``data/02_input-tsa29_si_plus2.dat``
 
 Then resume with:

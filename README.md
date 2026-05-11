@@ -148,7 +148,6 @@ The approved current contract for issue `#10` is:
 3. `femic run --run-config config/run_profile.tsa29.yaml --run-id <id>`
 4. confirm FEMIC stops at the BTC boundary with:
    - `data/03_input-tsa29.csv`
-   - `data/tipsy_params_tsa29.xlsx`
    - optional legacy mirror: `data/02_input-tsa29_si_plus2.dat`
 5. run unattended BTC and resume:
 

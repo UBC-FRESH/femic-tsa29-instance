@@ -27,7 +27,6 @@
    `femic run --run-config config/run_profile.tsa29.yaml --run-id tsa29_full`
 5. Confirm FEMIC stopped at the intended handoff seam:
    - `data/03_input-tsa29.csv`
-   - `data/tipsy_params_tsa29.xlsx`
    - optional legacy mirror: `data/02_input-tsa29_si_plus2.dat`
 6. Resume with unattended BTC and downstream bundle assembly:
    `femic tsa btc-post-tipsy --run-config config/run_profile.tsa29.yaml --tsa 29 --run-id tsa29_full`

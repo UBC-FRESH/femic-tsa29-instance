@@ -54,7 +54,6 @@ The active rebuild contract now targets these artifacts on a fresh run:
 
 - Stage 01a boundary:
   - ``data/03_input-tsa29.csv``
-  - ``data/tipsy_params_tsa29.xlsx``
   - optional legacy mirror: ``data/02_input-tsa29_si_plus2.dat``
 - Returned BTC seam:
   - ``data/04_output-tsa29.csv``
