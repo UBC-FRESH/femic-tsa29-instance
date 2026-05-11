@@ -107,13 +107,17 @@ Expected boundary files:
 
 - after ``femic run``:
   - ``data/03_input-tsa29.csv``
-  - optional legacy mirror: ``data/02_input-tsa29_si_plus2.dat``
 - after ``femic tsa btc-post-tipsy``:
   - ``data/04_output-tsa29.csv``
   - ``data/04_error-tsa29.csv``
 
 ``femic run`` is expected to stop at the BTC boundary. The supported
 continuation seam is ``femic tsa btc-post-tipsy ...``.
+
+Accepted comparison surface:
+
+- ``plots/tipsy_vdyp_tsa29-*.png`` now contains the accepted refreshed
+  ``54``-plot TIPSY-vs-VDYP family for the current TSA29 managed-AU surface.
 
 Authoritative Paths
 -------------------

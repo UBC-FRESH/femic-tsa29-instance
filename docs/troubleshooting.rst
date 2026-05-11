@@ -31,7 +31,6 @@ BTC boundary.
 Confirm the boundary artifacts:
 
 - ``data/03_input-tsa29.csv``
-- optional legacy mirror: ``data/02_input-tsa29_si_plus2.dat``
 
 Then resume with:
 
@@ -50,9 +49,8 @@ BTC Output Looks Missing or Stale
 - Confirm unattended BTC refreshed:
   - ``data/04_output-tsa29.csv``
   - ``data/04_error-tsa29.csv``
-- If you are inspecting the older ``data/04_output-tsa29.out`` only, remember
-  that it is now historical snapshot evidence, not the current default rebuild
-  target.
+- Do not diagnose the current rebuild lane from removed DAT/``.out`` seam
+  artifacts; the active handoff is CSV-only.
 
 Patchworks Preflight Fails
 --------------------------
@@ -74,8 +72,9 @@ Evidence Looks Worse Than Expected
   - a warning state already documented in the repo, and
   - a new regression that changes the expected baseline/evidence story.
 - If curve behavior is the concern, inspect:
-  - ``evidence/curve_stability_report.20260315.md``
-  - ``evidence/curve_selection_summary-tsa29-20260315T184955Z.csv``
+  - ``plots/tipsy_vdyp_tsa29-*.png`` (accepted ``54``-plot comparison family)
+  - ``evidence/curve_selection_summary-tsa29-p67_3b_tsa29_smoothed_default_20260510g.csv``
+  - ``evidence/managed_au_rule_audit-tsa29-p68_1f_20260510a.csv``
 
 Rebuild Diffs Unexpectedly
 --------------------------

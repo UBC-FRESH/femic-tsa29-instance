@@ -20,10 +20,6 @@ The active supported rebuild path is now:
 - `data/04_error-tsa29.csv`
 - `femic tsa btc-post-tipsy --run-config config/run_profile.tsa29.yaml --tsa 29 --run-id <id>`
 
-Legacy `02_input-tsa29*.dat` and `04_output-tsa29.out` artifacts remain in the
-repo as historical snapshot evidence and compatibility context only. They are
-no longer the primary operator contract.
-
 ## Source Provenance
 
 - FEMIC source repo: `https://github.com/UBC-FRESH/femic`
@@ -64,9 +60,6 @@ variants if they choose.
 - Runtime configs: `config/run_profile.tsa29.yaml`, `config/tipsy/tsa29.yaml`
 - Rebuild contract: `config/rebuild.spec.yaml`, `config/rebuild.allowlist.yaml`
 - TSA29 model-input bundle: `data/model_input_bundle/*.csv`
-- Historical TIPSY seam artifacts:
-  - `data/02_input-tsa29_si_plus2.dat`
-  - `data/04_output-tsa29.out`
 - Curve/intermediate artifacts: `data/tipsy_*tsa29*`, `data/vdyp_*tsa29*`
 - Validated Patchworks outputs: `output/patchworks_tsa29_validated/`
 - Validation bundle/checkpoint: `output/patchworks_tsa29_validation/`
@@ -148,7 +141,6 @@ The approved current contract for issue `#10` is:
 3. `femic run --run-config config/run_profile.tsa29.yaml --run-id <id>`
 4. confirm FEMIC stops at the BTC boundary with:
    - `data/03_input-tsa29.csv`
-   - optional legacy mirror: `data/02_input-tsa29_si_plus2.dat`
 5. run unattended BTC and resume:
 
    ```bash
@@ -167,5 +159,17 @@ The approved current contract for issue `#10` is:
      `femic patchworks build-blocks` on the full TSA29 validated surface
    - expect `femic patchworks matrix-build` to require an available Patchworks
      license seat on the current host
+
+## Yield-Curve Comparison Surface
+
+The accepted TIPSY-vs-VDYP comparison library is the refreshed `54`-plot set
+under `plots/tipsy_vdyp_tsa29-*.png`, covering:
+
+- `21000..21017`
+- `22000..22017`
+- `23000..23017`
+
+Treat that `54`-plot family as the current comparison surface for Phase 68
+review. The older `.out`-derived `30`-plot subset is retired.
 
 See full docs in `docs/`.

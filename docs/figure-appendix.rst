@@ -20,3 +20,16 @@ Area by AU
    :width: 95%
 
    Fragment area totals by AU from validated TSA29 outputs.
+
+Yield-Curve Comparisons
+-----------------------
+
+The accepted TIPSY-vs-VDYP comparison surface is the refreshed ``54``-plot
+family under ``plots/tipsy_vdyp_tsa29-*.png``, covering:
+
+- ``21000..21017``
+- ``22000..22017``
+- ``23000..23017``
+
+These figures are the current Phase 68 comparison library for the TSA29
+managed-AU surface. The older `.out`-derived `30`-plot subset is retired.
