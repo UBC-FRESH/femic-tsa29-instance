@@ -55,18 +55,29 @@ steps:
       - "data/04_error-tsa29.csv"
       - "post-tipsy manifest and bundle tables (supported continuation seam after the BTC boundary)"
 
+  - step_id: "export_patchworks"
+    kind: "femic_command"
+    command: "femic export patchworks --tsa 29 --bundle-dir data/model_input_bundle --checkpoint data/tsr/strict_chain/23_thlb_parent_023_future_roads.feather --output-dir output/patchworks_tsa29_validated"
+    required: true
+    depends_on: ["btc_post_tipsy_bundle"]
+    mutable_artifacts:
+      - "output/patchworks_tsa29_validated/*"
+    expected_outputs:
+      - "output/patchworks_tsa29_validated/forestmodel.xml"
+      - "output/patchworks_tsa29_validated/fragments/*"
+
   - step_id: "patchworks_preflight"
     kind: "femic_command"
     command: "femic patchworks preflight --config config/patchworks.runtime.windows.yaml"
     required: true
-    depends_on: ["btc_post_tipsy_bundle"]
+    depends_on: ["export_patchworks"]
     mutable_artifacts: []
     expected_outputs:
       - "patchworks preflight success"
 
   - step_id: "patchworks_build_blocks"
     kind: "femic_command"
-    command: "femic patchworks build-blocks --config config/patchworks.runtime.windows.yaml --with-topology --topology-backend patchworks-raster"
+    command: "femic patchworks build-blocks --config config/patchworks.runtime.windows.yaml --no-topology"
     required: true
     depends_on: ["patchworks_preflight"]
     mutable_artifacts:

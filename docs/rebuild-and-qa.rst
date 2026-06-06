@@ -53,7 +53,7 @@ Manual equivalent command sequence (mirrors the active contract):
    femic run --run-config config/run_profile.tsa29.yaml --run-id tsa29_rebuild_check
    femic tsa btc-post-tipsy --run-config config/run_profile.tsa29.yaml --tsa 29 --run-id tsa29_rebuild_check
    femic patchworks preflight --config config/patchworks.runtime.windows.yaml
-   femic patchworks build-blocks --config config/patchworks.runtime.windows.yaml --with-topology
+   femic patchworks build-blocks --config config/patchworks.runtime.windows.yaml --no-topology
    femic patchworks matrix-build --config config/patchworks.runtime.windows.yaml --run-id tsa29_rebuild_check
 
 Patchworks runtime assumptions for the supported Windows path:
@@ -84,7 +84,8 @@ Standalone launch-ready published minimum:
   ``curves.csv``, ``features.csv``, ``products.csv``, ``treatments.csv``,
   ``protoaccounts.csv``, and ``accounts.csv``
 - ``models/tsa29_patchworks_model/blocks/blocks.shp`` plus sidecars
-- the topology CSV used by the shipped analysis surface
+- the shipped topology CSV already tracked under
+  ``models/tsa29_patchworks_model/blocks/topology_blocks_0r.csv``
 - the shipped analysis/PIN launch surfaces under
   ``models/tsa29_patchworks_model/analysis/``
 
@@ -100,10 +101,10 @@ Current development-mode runtime note:
 - for interactive prototype work, use
   ``models/tsa29_patchworks_model/analysis/base_gui.pin`` as the explicit
   GUI-facing launch wrapper;
-- the shared TSA29 baseline analysis wiring currently loads
-  ``../blocks/topology_blocks_0r.csv`` with topology distance ``0 m`` so the
-  runtime adjacency graph stays smaller while the model is still under active
-  development.
+- the shared TSA29 baseline analysis wiring currently loads the tracked
+  header-only ``../blocks/topology_blocks_0r.csv`` surface with topology
+  distance ``0 m``; rebuilds should preserve that shipped dev-mode topology
+  file instead of trying to regenerate a heavier adjacency graph.
 
 Interpret the seam this way:
 
@@ -128,6 +129,7 @@ Read these files first after a rebuild or validation pass:
 
 - ``evidence/reference_rebuild_report.latest.json``
 - ``evidence/ws3_smoke_report.latest.json``
+- ``evidence/patchworks_test01_scenario_20260606.md``
 - ``evidence/curve_selection_summary-tsa29-p67_3b_tsa29_smoothed_default_20260510g.csv``
 - ``evidence/managed_au_rule_audit-tsa29-p68_1f_20260510a.csv``
 - ``plots/tipsy_vdyp_tsa29-*.png`` (accepted refreshed ``54``-plot comparison family)
@@ -146,8 +148,18 @@ Treat the QA pass as acceptable when:
 - ``femic tsa btc-post-tipsy`` consumes the matching run and emits
   ``data/04_output-tsa29.csv`` plus ``data/04_error-tsa29.csv``,
 - downstream Patchworks steps complete on the same run/evidence chain,
+- a representative interactive or headless Patchworks launch produces a saved
+  scenario/report surface that is numerically plausible against known TSA29
+  public-discussion benchmarks, and
 - the rebuild/evidence report is interpretable and any warning state is
   explicitly understood.
+
+Representative accepted launch evidence:
+
+- ``evidence/patchworks_test01_scenario_20260606.md`` summarizes the accepted
+  `test01` interactive smoke scenario and compares it to the published
+  mid-term harvest levels in the 2014 Williams Lake TSA public discussion
+  paper.
 
 Comparison Note
 ---------------
