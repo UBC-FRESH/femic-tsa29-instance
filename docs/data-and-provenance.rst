@@ -96,6 +96,10 @@ Evidence Files Worth Reading First
   Current rebuild/evidence summary.
 - ``evidence/ws3_smoke_report.latest.json``
   Woodstock/ws3 smoke evidence for the published output package.
+- ``evidence/patchworks_test01_scenario_20260606.md``
+  Accepted interactive Patchworks smoke evidence for the rebuilt TSA29 package,
+  including the saved `test01` scenario summary and the comparison against the
+  2014 Williams Lake TSA public discussion paper mid-term harvest band.
 - ``evidence/curve_selection_summary-tsa29-p67_3b_tsa29_smoothed_default_20260510g.csv``
   Row-level selected-path evidence for the accepted smoothed VDYP curve pass.
 - ``evidence/managed_au_rule_audit-tsa29-p68_1f_20260510a.csv``

@@ -174,4 +174,16 @@ under `plots/tipsy_vdyp_tsa29-*.png`, covering:
 Treat that `54`-plot family as the current comparison surface for Phase 68
 review. The older `.out`-derived `30`-plot subset is retired.
 
+## Representative Patchworks Evidence
+
+The refreshed TSA29 Patchworks package now has accepted representative launch
+evidence in:
+
+- `evidence/patchworks_test01_scenario_20260606.md`
+
+That note summarizes the saved local `analysis/scenarios/test01` interactive
+smoke run and records that the rebuilt even-flow managed harvest level lands in
+roughly the same `1.4` to `1.6 million m3/year` band discussed in the 2014
+Williams Lake TSA public discussion paper.
+
 See full docs in `docs/`.

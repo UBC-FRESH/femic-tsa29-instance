@@ -129,6 +129,7 @@ Read these files first after a rebuild or validation pass:
 
 - ``evidence/reference_rebuild_report.latest.json``
 - ``evidence/ws3_smoke_report.latest.json``
+- ``evidence/patchworks_test01_scenario_20260606.md``
 - ``evidence/curve_selection_summary-tsa29-p67_3b_tsa29_smoothed_default_20260510g.csv``
 - ``evidence/managed_au_rule_audit-tsa29-p68_1f_20260510a.csv``
 - ``plots/tipsy_vdyp_tsa29-*.png`` (accepted refreshed ``54``-plot comparison family)
@@ -147,8 +148,18 @@ Treat the QA pass as acceptable when:
 - ``femic tsa btc-post-tipsy`` consumes the matching run and emits
   ``data/04_output-tsa29.csv`` plus ``data/04_error-tsa29.csv``,
 - downstream Patchworks steps complete on the same run/evidence chain,
+- a representative interactive or headless Patchworks launch produces a saved
+  scenario/report surface that is numerically plausible against known TSA29
+  public-discussion benchmarks, and
 - the rebuild/evidence report is interpretable and any warning state is
   explicitly understood.
+
+Representative accepted launch evidence:
+
+- ``evidence/patchworks_test01_scenario_20260606.md`` summarizes the accepted
+  `test01` interactive smoke scenario and compares it to the published
+  mid-term harvest levels in the 2014 Williams Lake TSA public discussion
+  paper.
 
 Comparison Note
 ---------------
