@@ -30,6 +30,17 @@ Those provenance fields describe the current published TSA29 PoC package in
 this repo. Use the docs, runbook, and rebuild spec here as the source of truth
 for what this published snapshot includes and how it should be materialized.
 
+## Current Release Milestone
+
+The active intended standalone TSA29 release milestone is:
+
+- `v1.0.0-alpha1`
+
+That milestone is meant to mark the first standalone TSA29 package where the
+Patchworks model rebuilds, launches, and produces sane output on the accepted
+THLB and yield surfaces. It should be treated as an alpha-quality
+research/prototype release rather than a final production contract.
+
 ## DataLad Dataset Policy
 
 This repository is now a **DataLad/git-annex-managed standalone instance**.

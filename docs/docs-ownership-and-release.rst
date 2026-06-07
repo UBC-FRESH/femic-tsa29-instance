@@ -13,7 +13,13 @@ Ownership
 Release Policy
 --------------
 
-- Publish snapshot-style tags (starting at ``v0.1.0``).
+- Publish explicit standalone TSA29 milestone tags.
+- The active intended milestone is ``v1.0.0-alpha1``.
+- Treat ``v1.0.0-alpha1`` as the first standalone TSA29 release where the
+  Patchworks model rebuilds, launches, and produces sane output on the
+  accepted THLB/yield lane.
+- Treat that milestone as an alpha-quality research/prototype release, not a
+  final production guarantee.
 - Each release should include updated lineage metadata and evidence summary.
 - Publish bulky standalone-instance payloads through the repo's DataLad /
   git-annex workflow rather than forcing them through plain Git history.
@@ -64,3 +70,8 @@ Before tagging a new TSA29 snapshot release:
    artifacts
 5. verify the DataLad materialization instructions still match the published
    remote/bootstrap workflow
+6. verify the accepted release evidence still points at
+   ``evidence/patchworks_test01_scenario_20260606.md`` and the merged
+   launch-critical Patchworks package under
+   ``models/tsa29_patchworks_model/`` plus
+   ``output/patchworks_tsa29_validated/``
