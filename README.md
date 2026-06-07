@@ -155,8 +155,10 @@ The approved current contract for issue `#10` is:
      checkout does not already carry the shapefile set
    - use `output/patchworks_tsa29_validated/forestmodel.xml` together with the
      matching validated fragments set as the canonical Matrix Builder input pair
-   - use `--topology-backend patchworks-raster` for
-     `femic patchworks build-blocks` on the full TSA29 validated surface
+   - use `femic patchworks build-blocks --config config/patchworks.runtime.windows.yaml --no-topology`
+     for the full TSA29 validated surface; the shipped dev-mode topology file
+     `models/tsa29_patchworks_model/blocks/topology_blocks_0r.csv` is already
+     tracked and should be preserved rather than regenerated here
    - expect `femic patchworks matrix-build` to require an available Patchworks
      license seat on the current host
 

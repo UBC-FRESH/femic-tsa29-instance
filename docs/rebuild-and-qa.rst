@@ -53,7 +53,7 @@ Manual equivalent command sequence (mirrors the active contract):
    femic run --run-config config/run_profile.tsa29.yaml --run-id tsa29_rebuild_check
    femic tsa btc-post-tipsy --run-config config/run_profile.tsa29.yaml --tsa 29 --run-id tsa29_rebuild_check
    femic patchworks preflight --config config/patchworks.runtime.windows.yaml
-   femic patchworks build-blocks --config config/patchworks.runtime.windows.yaml --with-topology
+   femic patchworks build-blocks --config config/patchworks.runtime.windows.yaml --no-topology
    femic patchworks matrix-build --config config/patchworks.runtime.windows.yaml --run-id tsa29_rebuild_check
 
 Patchworks runtime assumptions for the supported Windows path:
@@ -84,7 +84,8 @@ Standalone launch-ready published minimum:
   ``curves.csv``, ``features.csv``, ``products.csv``, ``treatments.csv``,
   ``protoaccounts.csv``, and ``accounts.csv``
 - ``models/tsa29_patchworks_model/blocks/blocks.shp`` plus sidecars
-- the topology CSV used by the shipped analysis surface
+- the shipped topology CSV already tracked under
+  ``models/tsa29_patchworks_model/blocks/topology_blocks_0r.csv``
 - the shipped analysis/PIN launch surfaces under
   ``models/tsa29_patchworks_model/analysis/``
 
@@ -100,10 +101,10 @@ Current development-mode runtime note:
 - for interactive prototype work, use
   ``models/tsa29_patchworks_model/analysis/base_gui.pin`` as the explicit
   GUI-facing launch wrapper;
-- the shared TSA29 baseline analysis wiring currently loads
-  ``../blocks/topology_blocks_0r.csv`` with topology distance ``0 m`` so the
-  runtime adjacency graph stays smaller while the model is still under active
-  development.
+- the shared TSA29 baseline analysis wiring currently loads the tracked
+  header-only ``../blocks/topology_blocks_0r.csv`` surface with topology
+  distance ``0 m``; rebuilds should preserve that shipped dev-mode topology
+  file instead of trying to regenerate a heavier adjacency graph.
 
 Interpret the seam this way:
 

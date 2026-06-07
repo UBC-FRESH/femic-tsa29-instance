@@ -34,7 +34,7 @@
    - `data/04_error-tsa29.csv`
 8. Continue Patchworks validation:
    - `femic patchworks preflight --config config/patchworks.runtime.windows.yaml`
-   - `femic patchworks build-blocks --config config/patchworks.runtime.windows.yaml --with-topology --topology-backend patchworks-raster`
+   - `femic patchworks build-blocks --config config/patchworks.runtime.windows.yaml --no-topology`
    - `femic patchworks matrix-build --config config/patchworks.runtime.windows.yaml --run-id tsa29_full`
    - Matrix Builder also requires a currently available Patchworks license seat;
      if stderr reports `No license available`, stop there and rerun once the
