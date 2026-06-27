@@ -9,7 +9,7 @@ and package-readiness tasks.
 
 Governing issue: `UBC-FRESH/femic-tsa29-instance#9`
 
-Status: in progress.
+Status: complete.
 
 Goal: expand the existing TSA29 Sphinx documentation into a public,
 teaching-facing and maintainer-facing guide comparable in depth and tone to
@@ -47,10 +47,30 @@ current TSA29 repository artifacts.
 - [x] Record the completed docs update in `CHANGE_LOG.md`, post a matching
   GitHub issue comment, commit, and push.
 
+## Phase D1.1: Published Plot Asset Repair
+
+Governing issue: `UBC-FRESH/femic-tsa29-instance#11`
+
+Status: in progress.
+
+Goal: repair the published Sphinx yield-curve gallery so GitHub Pages serves
+real PNG plot bytes rather than git-annex pointer payloads copied from
+`plots/`.
+
+### Tasks
+
+- [x] Diagnose the published Pages failure and confirm representative public
+  image URLs return short annex-pointer payloads.
+- [x] Add plain-Git docs-static copies of the accepted 54 TIPSY-vs-VDYP plot
+  PNGs.
+- [x] Repoint `docs/yield-curve-comparisons.rst` to the docs-static plot
+  assets.
+- [x] Build docs warning-clean.
+- [ ] Deploy and verify representative public plot URLs return real PNG bytes.
+
 ## Detailed Next Steps Notes
 
-Current edge: Phase D1 docs content and workflow edits are ready for review on
-the feature branch. The docs build passed warning-clean with
-`sphinx-build -b html docs docs/_build/html -W`. No TSA29 model rebuilds were
-run in this docs lane. Next step after merge is to verify the GitHub Pages
-deployment from `main`.
+Current edge: merge the D1.1 docs asset repair, then verify the GitHub Pages
+deployment from `main` and confirm representative public plot URLs return real
+PNG bytes. Do not regenerate yield curves or change TSA29 model/THLB/Patchworks
+artifacts.

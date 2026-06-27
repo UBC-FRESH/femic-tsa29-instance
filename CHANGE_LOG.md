@@ -21,3 +21,15 @@ Newest entries are appended last.
 - GitHub Pages was enabled for the repository with workflow deployment after
   the first PR run showed the Pages site had not been created yet.
 - Validation: `sphinx-build -b html docs docs/_build/html -W` passed.
+
+## 2026-06-27
+
+- Started issue `#11` after finding the published yield-curve gallery served
+  git-annex pointer payloads instead of real PNG images. The local maintainer
+  checkout had materialized plot files, but GitHub Pages built from a plain Git
+  checkout where `plots/tipsy_vdyp_tsa29-*.png` resolved to annex pointers.
+- Added plain-Git copies of the accepted 54 TIPSY-vs-VDYP plot PNGs under
+  `docs/_static/yield-curves/`, repointed `docs/yield-curve-comparisons.rst`
+  to those docs-static assets, and kept the original annex-backed `plots/`
+  evidence surface unchanged.
+- Validation: `sphinx-build -b html docs docs/_build/html -W` passed.
