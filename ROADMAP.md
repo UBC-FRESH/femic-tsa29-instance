@@ -51,7 +51,7 @@ current TSA29 repository artifacts.
 
 Governing issue: `UBC-FRESH/femic-tsa29-instance#11`
 
-Status: in progress.
+Status: complete.
 
 Goal: repair the published Sphinx yield-curve gallery so GitHub Pages serves
 real PNG plot bytes rather than git-annex pointer payloads copied from
@@ -66,11 +66,8 @@ real PNG plot bytes rather than git-annex pointer payloads copied from
 - [x] Repoint `docs/yield-curve-comparisons.rst` to the docs-static plot
   assets.
 - [x] Build docs warning-clean.
-- [ ] Deploy and verify representative public plot URLs return real PNG bytes.
+- [x] Deploy and verify representative public plot URLs return real PNG bytes.
 
 ## Detailed Next Steps Notes
 
-Current edge: merge the D1.1 docs asset repair, then verify the GitHub Pages
-deployment from `main` and confirm representative public plot URLs return real
-PNG bytes. Do not regenerate yield curves or change TSA29 model/THLB/Patchworks
-artifacts.
+Current edge: D1.1 is complete. The published yield-curve gallery now serves real PNG plot assets from GitHub Pages. No TSA29 model/THLB/Patchworks artifacts were changed.

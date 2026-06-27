@@ -33,3 +33,4 @@ Newest entries are appended last.
   to those docs-static assets, and kept the original annex-backed `plots/`
   evidence surface unchanged.
 - Validation: `sphinx-build -b html docs docs/_build/html -W` passed.
+- Deployed the D1.1 repair to GitHub Pages from `main` and verified the public yield-curve page plus representative image URL. `https://ubc-fresh.github.io/femic-tsa29-instance/_images/tipsy_vdyp_tsa29-21000.png` returned HTTP 200, `24485` bytes, and the PNG signature `89 50 4E 47`.
