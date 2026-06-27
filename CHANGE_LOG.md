@@ -18,6 +18,6 @@ Newest entries are appended last.
 - Aligned the GitHub Pages workflow with the current TFL 6 pattern, including
   pull-request builds, Pages configuration, Node 24 compatibility env, and
   deploy-only-on-main/workflow-dispatch behavior.
-- Follow-up workflow fix: enabled `actions/configure-pages` bootstrap for the
-  TSA29 repo because the first PR run showed Pages had not been enabled yet.
+- GitHub Pages was enabled for the repository with workflow deployment after
+  the first PR run showed the Pages site had not been created yet.
 - Validation: `sphinx-build -b html docs docs/_build/html -W` passed.
