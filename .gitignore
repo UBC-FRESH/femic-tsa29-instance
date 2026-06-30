@@ -13,6 +13,7 @@ dist/
 *.egg-info/
 
 # Runtime logs and temp (keep curated evidence manifests tracked)
+runtime/
 vdyp_io/logs/*.log
 vdyp_io/logs/*stdout*.log
 vdyp_io/logs/*stderr*.log
