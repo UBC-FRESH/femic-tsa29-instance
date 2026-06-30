@@ -71,3 +71,25 @@ real PNG plot bytes rather than git-annex pointer payloads copied from
 ## Detailed Next Steps Notes
 
 Current edge: D1.1 is complete. The published yield-curve gallery now serves real PNG plot assets from GitHub Pages. No TSA29 model/THLB/Patchworks artifacts were changed.
+
+## Phase H1: Runtime Tracking Hygiene (`#13`)
+
+Status: active.
+
+Goal: remove tracked `runtime/**` artifacts from the TSA29 instance so Windows
+fresh clones are not blocked by deep runtime log paths. The `runtime/` tree is
+local/generated only; durable evidence must live in explicit docs, config,
+planning, evidence, or release surfaces instead.
+
+### Tasks
+
+- [x] Add a broad `runtime/` ignore rule.
+- [x] Remove all tracked `runtime/**` files from the Git index without
+  deleting local working-tree copies.
+- [x] Verify `git ls-files runtime` returns no tracked files.
+- [x] Verify the launch-critical Patchworks block payload remains
+  materializable from `arbutus-s3`.
+- [x] Prove a fresh short-path Windows clone can check out TSA29 and
+  materialize `models/tsa29_patchworks_model/blocks`.
+- [ ] Record the cleanup in `CHANGE_LOG.md`, push the branch, and update the
+  parent FEMIC submodule pointer.

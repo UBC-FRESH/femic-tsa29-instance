@@ -34,3 +34,20 @@ Newest entries are appended last.
   evidence surface unchanged.
 - Validation: `sphinx-build -b html docs docs/_build/html -W` passed.
 - Deployed the D1.1 repair to GitHub Pages from `main` and verified the public yield-curve page plus representative image URL. `https://ubc-fresh.github.io/femic-tsa29-instance/_images/tipsy_vdyp_tsa29-21000.png` returned HTTP 200, `24485` bytes, and the PNG signature `89 50 4E 47`.
+
+## 2026-06-30
+
+- Started runtime tracking hygiene under issue `#13` after fresh Windows
+  materialization exposed checkout fragility from deep tracked
+  `runtime/logs/**` paths.
+- Added a broad `runtime/` ignore rule and removed 1,276 tracked
+  `runtime/**` artifacts from the Git index while leaving local working-tree
+  runtime files generated and ignored.
+- Verification before commit: `git ls-files runtime` returned no tracked
+  paths, and the `arbutus-s3` block-payload annex audit returned no missing
+  keys for `models/tsa29_patchworks_model/blocks`.
+- Fresh short-path Windows clone verification passed: the branch checked out
+  without tracked `runtime/**` long-path failures, DataLad fetched
+  `blocks.dbf`, `blocks.shp`, and `blocks.shx` from `arbutus-s3`, no block
+  keys remained missing locally, and `blocks.shp` read as ESRI shapefile file
+  code `9994` with polygon shape type `5`.
