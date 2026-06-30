@@ -46,3 +46,8 @@ Newest entries are appended last.
 - Verification before commit: `git ls-files runtime` returned no tracked
   paths, and the `arbutus-s3` block-payload annex audit returned no missing
   keys for `models/tsa29_patchworks_model/blocks`.
+- Fresh short-path Windows clone verification passed: the branch checked out
+  without tracked `runtime/**` long-path failures, DataLad fetched
+  `blocks.dbf`, `blocks.shp`, and `blocks.shx` from `arbutus-s3`, no block
+  keys remained missing locally, and `blocks.shp` read as ESRI shapefile file
+  code `9994` with polygon shape type `5`.

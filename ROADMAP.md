@@ -89,7 +89,7 @@ planning, evidence, or release surfaces instead.
 - [x] Verify `git ls-files runtime` returns no tracked files.
 - [x] Verify the launch-critical Patchworks block payload remains
   materializable from `arbutus-s3`.
-- [ ] Prove a fresh short-path Windows clone can check out TSA29 and
+- [x] Prove a fresh short-path Windows clone can check out TSA29 and
   materialize `models/tsa29_patchworks_model/blocks`.
 - [ ] Record the cleanup in `CHANGE_LOG.md`, push the branch, and update the
   parent FEMIC submodule pointer.
