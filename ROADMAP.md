@@ -117,5 +117,5 @@ plumbing and reusable TSR/THLB execution primitives.
   checkpoint materialization, strict sequence, and locked-ledger validation
   logic into `tsa29_femic`.
 - [x] Migrate TSA29-specific strict-chain tests into this repository.
-- [ ] Verify the package with lint, tests, docs build, and editable
+- [x] Verify the package with lint, tests, docs build, and editable
   integration against parent FEMIC.

@@ -73,3 +73,14 @@ Newest entries are appended last.
 - Added TSA29-local tests for provider metadata, handler factory behavior,
   row-order policy, ledger validation, preflight, and strict-sequence routing.
 - Verified focused TSA29 checks with editable install, ruff, and pytest.
+
+## 2026-07-01
+
+- Completed local P90T verification before PR:
+  - `python -m pip install -e .[dev]`;
+  - `ruff check src tests`;
+  - `pytest`;
+  - `sphinx-build -b html docs docs/_build/html -W`; and
+  - `python -m build` plus `twine check dist/*`.
+- Confirmed the installed entry point exposes
+  `tsa29_locked_chain_strict = tsa29_femic.locked_chain:provider_factory`.
