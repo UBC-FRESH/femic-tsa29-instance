@@ -62,3 +62,14 @@ Newest entries are appended last.
   `tsa29_femic` package and a `femic.named_pipeline_contracts` entry point.
 - Scope is intentionally narrow: TSR adjudication overlays, Patchworks variant
   registries, and instance catalogs remain later parent roadmap phases.
+
+## 2026-07-01
+
+- Added installable package `tsa29_femic` with entry point
+  `femic.named_pipeline_contracts = tsa29_locked_chain_strict`.
+- Moved TSA29 strict locked-chain row-order policy, ledger interpretation,
+  restart-seam preflight, GLB checkpoint materialization, strict parent-step
+  sequencing, and locked-ledger validation into `tsa29_femic.locked_chain`.
+- Added TSA29-local tests for provider metadata, handler factory behavior,
+  row-order policy, ledger validation, preflight, and strict-sequence routing.
+- Verified focused TSA29 checks with editable install, ruff, and pytest.

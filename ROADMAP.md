@@ -110,12 +110,12 @@ plumbing and reusable TSR/THLB execution primitives.
 
 - [x] Create branch `feature/tsa29-femic-strict-chain`.
 - [x] Open governing issue `UBC-FRESH/femic-tsa29-instance#15`.
-- [ ] Add installable package `tsa29_femic`.
-- [ ] Register `tsa29_locked_chain_strict` through the
+- [x] Add installable package `tsa29_femic`.
+- [x] Register `tsa29_locked_chain_strict` through the
   `femic.named_pipeline_contracts` entry point.
-- [ ] Move TSA29 row-order, ledger interpretation, seam preflight, GLB
+- [x] Move TSA29 row-order, ledger interpretation, seam preflight, GLB
   checkpoint materialization, strict sequence, and locked-ledger validation
   logic into `tsa29_femic`.
-- [ ] Migrate TSA29-specific strict-chain tests into this repository.
+- [x] Migrate TSA29-specific strict-chain tests into this repository.
 - [ ] Verify the package with lint, tests, docs build, and editable
   integration against parent FEMIC.
