@@ -51,3 +51,14 @@ Newest entries are appended last.
   `blocks.dbf`, `blocks.shp`, and `blocks.shx` from `arbutus-s3`, no block
   keys remained missing locally, and `blocks.shp` read as ESRI shapefile file
   code `9994` with polygon shape type `5`.
+
+## 2026-07-01
+
+- Started the TSA29 strict locked-chain package extraction under issue `#15`.
+- Created branch `feature/tsa29-femic-strict-chain` as the instance side of
+  parent FEMIC P90.
+- Recorded the active plan in `ROADMAP.md`: this repository will own the
+  `tsa29_locked_chain_strict` named-pipeline contract through an installable
+  `tsa29_femic` package and a `femic.named_pipeline_contracts` entry point.
+- Scope is intentionally narrow: TSR adjudication overlays, Patchworks variant
+  registries, and instance catalogs remain later parent roadmap phases.

@@ -70,7 +70,11 @@ real PNG plot bytes rather than git-annex pointer payloads copied from
 
 ## Detailed Next Steps Notes
 
-Current edge: D1.1 is complete. The published yield-curve gallery now serves real PNG plot assets from GitHub Pages. No TSA29 model/THLB/Patchworks artifacts were changed.
+Current edge: P90T is active under `UBC-FRESH/femic-tsa29-instance#15`.
+The TSA29 strict locked-chain workflow contract is moving from FEMIC core into
+an installable `tsa29_femic` package while preserving the existing
+`tsa29_locked_chain_strict` contract kind through FEMIC named-pipeline
+contract discovery.
 
 ## Phase H1: Runtime Tracking Hygiene (`#13`)
 
@@ -93,3 +97,25 @@ planning, evidence, or release surfaces instead.
   materialize `models/tsa29_patchworks_model/blocks`.
 - [ ] Record the cleanup in `CHANGE_LOG.md`, push the branch, and update the
   parent FEMIC submodule pointer.
+
+## Phase P90T: TSA29 Strict Locked-Chain Package (`#15`)
+
+Status: active.
+
+Goal: own the TSA29 strict locked-chain named-pipeline contract from this
+instance repository while FEMIC core keeps only generic named-pipeline
+plumbing and reusable TSR/THLB execution primitives.
+
+### Tasks
+
+- [x] Create branch `feature/tsa29-femic-strict-chain`.
+- [x] Open governing issue `UBC-FRESH/femic-tsa29-instance#15`.
+- [ ] Add installable package `tsa29_femic`.
+- [ ] Register `tsa29_locked_chain_strict` through the
+  `femic.named_pipeline_contracts` entry point.
+- [ ] Move TSA29 row-order, ledger interpretation, seam preflight, GLB
+  checkpoint materialization, strict sequence, and locked-ledger validation
+  logic into `tsa29_femic`.
+- [ ] Migrate TSA29-specific strict-chain tests into this repository.
+- [ ] Verify the package with lint, tests, docs build, and editable
+  integration against parent FEMIC.
