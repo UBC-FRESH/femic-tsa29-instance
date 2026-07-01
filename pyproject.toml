@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "femic-tsa29-workflows"
+version = "0.1.0a1"
+description = "TSA29-owned FEMIC workflow contracts"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+    {name = "UBC FRESH Lab"},
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[project.entry-points."femic.named_pipeline_contracts"]
+tsa29_locked_chain_strict = "tsa29_femic.locked_chain:provider_factory"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

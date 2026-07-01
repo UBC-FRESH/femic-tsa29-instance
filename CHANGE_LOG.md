@@ -51,3 +51,36 @@ Newest entries are appended last.
   `blocks.dbf`, `blocks.shp`, and `blocks.shx` from `arbutus-s3`, no block
   keys remained missing locally, and `blocks.shp` read as ESRI shapefile file
   code `9994` with polygon shape type `5`.
+
+## 2026-07-01
+
+- Started the TSA29 strict locked-chain package extraction under issue `#15`.
+- Created branch `feature/tsa29-femic-strict-chain` as the instance side of
+  parent FEMIC P90.
+- Recorded the active plan in `ROADMAP.md`: this repository will own the
+  `tsa29_locked_chain_strict` named-pipeline contract through an installable
+  `tsa29_femic` package and a `femic.named_pipeline_contracts` entry point.
+- Scope is intentionally narrow: TSR adjudication overlays, Patchworks variant
+  registries, and instance catalogs remain later parent roadmap phases.
+
+## 2026-07-01
+
+- Added installable package `tsa29_femic` with entry point
+  `femic.named_pipeline_contracts = tsa29_locked_chain_strict`.
+- Moved TSA29 strict locked-chain row-order policy, ledger interpretation,
+  restart-seam preflight, GLB checkpoint materialization, strict parent-step
+  sequencing, and locked-ledger validation into `tsa29_femic.locked_chain`.
+- Added TSA29-local tests for provider metadata, handler factory behavior,
+  row-order policy, ledger validation, preflight, and strict-sequence routing.
+- Verified focused TSA29 checks with editable install, ruff, and pytest.
+
+## 2026-07-01
+
+- Completed local P90T verification before PR:
+  - `python -m pip install -e .[dev]`;
+  - `ruff check src tests`;
+  - `pytest`;
+  - `sphinx-build -b html docs docs/_build/html -W`; and
+  - `python -m build` plus `twine check dist/*`.
+- Confirmed the installed entry point exposes
+  `tsa29_locked_chain_strict = tsa29_femic.locked_chain:provider_factory`.

@@ -131,3 +131,20 @@ If the question is cumulative area, answer from the locked ledger. If the
 question is why a rule exists, read the recipe/status report. If the question
 is whether a past repair queue is still current, verify against the ledger
 before acting.
+
+Strict-Chain Package Hook
+-------------------------
+
+This repository owns the ``tsa29_locked_chain_strict`` FEMIC named-pipeline
+contract through the installable ``tsa29_femic`` package. Install this
+repository in editable mode alongside FEMIC before running strict-chain
+runbooks:
+
+.. code-block:: text
+
+   python -m pip install -e .[dev]
+
+The package registers a ``femic.named_pipeline_contracts`` entry point so
+``femic pipelines run`` can resolve TSA29 row ordering, ledger interpretation,
+restart-seam preflight, and strict parent-step sequencing without FEMIC core
+hardcoding TSA29 behavior.
