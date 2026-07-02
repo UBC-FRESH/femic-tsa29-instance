@@ -70,11 +70,10 @@ real PNG plot bytes rather than git-annex pointer payloads copied from
 
 ## Detailed Next Steps Notes
 
-Current edge: P90T is active under `UBC-FRESH/femic-tsa29-instance#15`.
-The TSA29 strict locked-chain workflow contract is moving from FEMIC core into
-an installable `tsa29_femic` package while preserving the existing
-`tsa29_locked_chain_strict` contract kind through FEMIC named-pipeline
-contract discovery.
+Current edge: P91T is active under `UBC-FRESH/femic-tsa29-instance#17`.
+The TSA29 TSR adjudication overlay is moving from FEMIC core into this
+instance-owned `tsa29_femic` package while FEMIC keeps generic TSR recipe,
+comparison, and report machinery.
 
 ## Phase H1: Runtime Tracking Hygiene (`#13`)
 
@@ -100,7 +99,7 @@ planning, evidence, or release surfaces instead.
 
 ## Phase P90T: TSA29 Strict Locked-Chain Package (`#15`)
 
-Status: active.
+Status: complete.
 
 Goal: own the TSA29 strict locked-chain named-pipeline contract from this
 instance repository while FEMIC core keeps only generic named-pipeline
@@ -119,3 +118,27 @@ plumbing and reusable TSR/THLB execution primitives.
 - [x] Migrate TSA29-specific strict-chain tests into this repository.
 - [x] Verify the package with lint, tests, docs build, and editable
   integration against parent FEMIC.
+
+## Phase P91T: TSA29 TSR Adjudication Overlay (`#17`)
+
+Status: active.
+
+Goal: own TSA29-specific TSR adjudication policy from this instance repository
+while FEMIC core keeps generic TSR recipe parsing, execution primitives,
+comparison payload construction, and report rendering.
+
+### Tasks
+
+- [x] Create branch `feature/tsa29-tsr-adjudication-overlays`.
+- [x] Open governing issue `UBC-FRESH/femic-tsa29-instance#17`.
+- [x] Add `tsa29_femic.tsr_adjudication`.
+- [x] Register provider id `tsa29` through the
+  `femic.tsr_adjudication_overlays` entry point.
+- [x] Move TSA29 Table 3 row classifications into the instance package or
+  instance config.
+- [x] Move TSA29 checkpoint policy, reconstruction-gap interpretation
+  overrides, and active adjudication report notes into the instance package.
+- [x] Add `config/tsr/adjudication_overlay.yaml` selecting provider id
+  `tsa29`.
+- [ ] Verify row classification, checkpoint policy, interpretation overrides,
+  and integration against editable parent FEMIC.

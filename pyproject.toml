@@ -23,6 +23,9 @@ dev = [
 [project.entry-points."femic.named_pipeline_contracts"]
 tsa29_locked_chain_strict = "tsa29_femic.locked_chain:provider_factory"
 
+[project.entry-points."femic.tsr_adjudication_overlays"]
+tsa29 = "tsa29_femic.tsr_adjudication:provider_factory"
+
 [tool.setuptools]
 package-dir = {"" = "src"}
 
