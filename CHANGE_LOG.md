@@ -84,3 +84,16 @@ Newest entries are appended last.
   - `python -m build` plus `twine check dist/*`.
 - Confirmed the installed entry point exposes
   `tsa29_locked_chain_strict = tsa29_femic.locked_chain:provider_factory`.
+
+## 2026-07-01
+
+- Started the TSA29 TSR adjudication overlay extraction under issue `#17`.
+- Created branch `feature/tsa29-tsr-adjudication-overlays` as the instance
+  side of parent FEMIC P91.
+- Recorded the active plan in `ROADMAP.md`: this repository will own TSA29
+  Table 3 row classifications, checkpoint policy, reconstruction-gap
+  interpretation overrides, and active adjudication report notes through
+  `tsa29_femic`.
+- Scope is intentionally narrow: generic TSR recipe execution stays in FEMIC
+  core, and Patchworks variant registries plus built-in instance catalogs
+  remain later parent roadmap phases.
