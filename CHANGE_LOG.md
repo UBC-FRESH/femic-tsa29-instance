@@ -97,3 +97,16 @@ Newest entries are appended last.
 - Scope is intentionally narrow: generic TSR recipe execution stays in FEMIC
   core, and Patchworks variant registries plus built-in instance catalogs
   remain later parent roadmap phases.
+
+## 2026-07-01
+
+- Added `tsa29_femic.tsr_adjudication` with provider id `tsa29`.
+- Registered the provider through the `femic.tsr_adjudication_overlays` entry
+  point and added `config/tsr/adjudication_overlay.yaml` to select it from this
+  instance.
+- Moved TSA29 Table 3 row classifications, legacy checkpoint rejection, strict
+  seam checkpoint recognition, reconstruction-gap interpretation overrides, and
+  active adjudication report notes into the instance package.
+- Added TSA29-local provider tests for metadata, row classification, checkpoint
+  policy, interpretation overrides, report notes, and entry-point metadata.
+- Verified focused TSA29 checks with ruff and pytest.

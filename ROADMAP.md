@@ -131,14 +131,14 @@ comparison payload construction, and report rendering.
 
 - [x] Create branch `feature/tsa29-tsr-adjudication-overlays`.
 - [x] Open governing issue `UBC-FRESH/femic-tsa29-instance#17`.
-- [ ] Add `tsa29_femic.tsr_adjudication`.
-- [ ] Register provider id `tsa29` through the
+- [x] Add `tsa29_femic.tsr_adjudication`.
+- [x] Register provider id `tsa29` through the
   `femic.tsr_adjudication_overlays` entry point.
-- [ ] Move TSA29 Table 3 row classifications into the instance package or
+- [x] Move TSA29 Table 3 row classifications into the instance package or
   instance config.
-- [ ] Move TSA29 checkpoint policy, reconstruction-gap interpretation
+- [x] Move TSA29 checkpoint policy, reconstruction-gap interpretation
   overrides, and active adjudication report notes into the instance package.
-- [ ] Add `config/tsr/adjudication_overlay.yaml` selecting provider id
+- [x] Add `config/tsr/adjudication_overlay.yaml` selecting provider id
   `tsa29`.
 - [ ] Verify row classification, checkpoint policy, interpretation overrides,
   and integration against editable parent FEMIC.
