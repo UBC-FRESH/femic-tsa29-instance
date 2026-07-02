@@ -1,5 +1,23 @@
 # TSA29 Rebuild Runbook
 
+## Parent-checkout FreshForge materialization
+
+From the parent FEMIC checkout, use FreshForge to make the TSA29 model payloads
+and TSA29-owned extension package available before rebuild or launch work:
+
+```bash
+freshforge providers
+freshforge validate external/femic-tsa29-instance/workflows/freshforge/tsa29_materialization_workflow.yaml
+freshforge inspect external/femic-tsa29-instance/workflows/freshforge/tsa29_materialization_workflow.yaml
+freshforge plan external/femic-tsa29-instance/workflows/freshforge/tsa29_materialization_workflow.yaml
+freshforge run external/femic-tsa29-instance/workflows/freshforge/tsa29_materialization_workflow.yaml --workdir runtime/freshforge --namespace tsa29/materialization --json
+```
+
+`freshforge plan` is the non-mutating preview. `freshforge run` performs real
+submodule, package-install, DataLad/git-annex, and materialization work. This
+workflow does not run the strict THLB chain, regenerate model inputs, or launch
+Patchworks.
+
 ## Portable checks
 
 1. `femic prep validate-case --run-config config/run_profile.tsa29.yaml --tipsy-config-dir config/tipsy`
