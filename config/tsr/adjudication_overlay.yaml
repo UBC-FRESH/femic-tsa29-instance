@@ -1,0 +1,6 @@
+schema_version: 1
+overlay_kind: tsr_adjudication
+provider_id: tsa29
+notes:
+  - TSA29 owns row classification, checkpoint policy, and adjudication report
+    interpretation through the `tsa29_femic` package.
