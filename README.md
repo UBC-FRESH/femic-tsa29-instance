@@ -86,8 +86,27 @@ variants if they choose.
 
 ## Quickstart
 
-0. Materialize required payloads if this checkout was cloned as a DataLad
-   dataset with annexed content unavailable locally:
+0. From the parent FEMIC checkout, use FreshForge to materialize required
+   TSA29 payloads and install the TSA29-owned FEMIC extension package:
+
+   ```bash
+   freshforge providers
+   freshforge validate external/femic-tsa29-instance/workflows/freshforge/tsa29_materialization_workflow.yaml
+   freshforge inspect external/femic-tsa29-instance/workflows/freshforge/tsa29_materialization_workflow.yaml
+   freshforge plan external/femic-tsa29-instance/workflows/freshforge/tsa29_materialization_workflow.yaml
+   freshforge run external/femic-tsa29-instance/workflows/freshforge/tsa29_materialization_workflow.yaml --workdir runtime/freshforge --namespace tsa29/materialization --json
+   ```
+
+   This workflow enables `arbutus-s3`, materializes launch-critical model
+   payloads plus `output/patchworks_tsa29_validated`, audits required payload
+   availability, and writes an ignored materialization report under the parent
+   `runtime/freshforge/` tree.
+
+   The workflow is a bootstrap/materialization surface only. It does not run
+   the TSA29 strict THLB chain, regenerate model inputs, or launch Patchworks.
+
+1. If this checkout was cloned as a standalone DataLad dataset with annexed
+   content unavailable locally, the manual equivalent is:
 
    ```bash
    git annex version
@@ -110,13 +129,13 @@ variants if they choose.
    .\.venv\Scripts\python.exe -m datalad get output/patchworks_tsa29_validated
    ```
 
-1. Validate the case wiring:
+2. Validate the case wiring:
 
    ```bash
    femic prep validate-case --run-config config/run_profile.tsa29.yaml --tipsy-config-dir config/tipsy
    ```
 
-2. Inspect the current published baseline:
+3. Inspect the current published baseline:
 
    - `output/patchworks_tsa29_validated/forestmodel.xml`
    - `output/patchworks_tsa29_validated/fragments/`
@@ -133,14 +152,14 @@ variants if they choose.
    Patchworks preflight rather than treating the published instance as
    incomplete.
 
-3. Validate the rebuild contract without mutating the instance:
+4. Validate the rebuild contract without mutating the instance:
 
    ```bash
    femic instance validate-spec --spec config/rebuild.spec.yaml
    femic instance rebuild --spec config/rebuild.spec.yaml --dry-run --run-id tsa29_dryrun
    ```
 
-4. For the active BTC-first rebuild path, use the sequence documented in
+5. For the active BTC-first rebuild path, use the sequence documented in
    `docs/rebuild-and-qa.rst` and `runbooks/REBUILD_RUNBOOK.md`.
 
 ## Current Rebuild Contract

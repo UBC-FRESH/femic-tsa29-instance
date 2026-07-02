@@ -31,8 +31,27 @@ Prerequisites
 Quickstart
 ----------
 
-If this checkout was cloned as a DataLad dataset and large payloads are not yet
-materialized locally, start here:
+If you are working from the parent FEMIC checkout, use the FreshForge
+materialization workflow first:
+
+.. code-block:: bash
+
+   freshforge providers
+   freshforge validate external/femic-tsa29-instance/workflows/freshforge/tsa29_materialization_workflow.yaml
+   freshforge inspect external/femic-tsa29-instance/workflows/freshforge/tsa29_materialization_workflow.yaml
+   freshforge plan external/femic-tsa29-instance/workflows/freshforge/tsa29_materialization_workflow.yaml
+   freshforge run external/femic-tsa29-instance/workflows/freshforge/tsa29_materialization_workflow.yaml --workdir runtime/freshforge --namespace tsa29/materialization --json
+
+``freshforge plan`` is the non-mutating preview. ``freshforge run`` performs
+real submodule, package-install, DataLad/git-annex, and materialization work.
+For TSA29, the workflow enables ``arbutus-s3``, materializes launch-critical
+model payloads plus ``output/patchworks_tsa29_validated``, audits the required
+payloads, and writes an ignored report under parent ``runtime/freshforge/``.
+It does not run the strict THLB chain, regenerate model inputs, or launch
+Patchworks.
+
+If this checkout was cloned as a standalone DataLad dataset and large payloads
+are not yet materialized locally, the manual equivalent is:
 
 .. code-block:: bash
 

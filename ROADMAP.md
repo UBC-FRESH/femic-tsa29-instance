@@ -70,10 +70,12 @@ real PNG plot bytes rather than git-annex pointer payloads copied from
 
 ## Detailed Next Steps Notes
 
-Current edge: P91T is active under `UBC-FRESH/femic-tsa29-instance#17`.
-The TSA29 TSR adjudication overlay is moving from FEMIC core into this
-instance-owned `tsa29_femic` package while FEMIC keeps generic TSR recipe,
-comparison, and report machinery.
+Current edge: P103T is active under
+`UBC-FRESH/femic-tsa29-instance#21`. This phase adds a TSA29-owned
+FreshForge materialization overlay for the parent FEMIC checkout. It uses the
+generic `femic.materialization` provider and TSA29's `arbutus-s3` special
+remote to materialize launch-critical model payloads and the editable
+validated export surface.
 
 ## Phase H1: Runtime Tracking Hygiene (`#13`)
 
@@ -142,3 +144,25 @@ comparison payload construction, and report rendering.
   `tsa29`.
 - [ ] Verify row classification, checkpoint policy, interpretation overrides,
   and integration against editable parent FEMIC.
+
+## Phase P103T: TSA29 FreshForge Materialization Overlay (`#21`)
+
+Status: in progress.
+
+Goal: add a TSA29-owned FreshForge materialization overlay that works from the
+parent FEMIC checkout and proves the generic `femic.materialization` provider
+against TSA29's DataLad/git-annex storage mode.
+
+### Tasks
+
+- [x] Create branch `feature/freshforge-materialization-overlay`.
+- [x] Open governing issue `UBC-FRESH/femic-tsa29-instance#21`.
+- [x] Add `workflows/freshforge/tsa29_materialization_overlay.yaml`.
+- [x] Add `workflows/freshforge/tsa29_materialization_workflow.yaml`.
+- [x] Use only `femic.materialization.*` provider references.
+- [x] Update README, getting-started docs, and rebuild runbook with
+      parent-checkout FreshForge materialization commands.
+- [x] Validate provider discovery, workflow validation, inspection, planning,
+      bounded run, and `arbutus-s3` audit from the parent checkout.
+- [x] Build TSA29 docs warning-clean.
+- [ ] Merge the TSA29 PR before the parent FEMIC submodule pointer update.

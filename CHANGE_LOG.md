@@ -110,3 +110,27 @@ Newest entries are appended last.
 - Added TSA29-local provider tests for metadata, row classification, checkpoint
   policy, interpretation overrides, report notes, and entry-point metadata.
 - Verified focused TSA29 checks with ruff and pytest.
+
+## 2026-07-02
+
+- Started the TSA29 FreshForge materialization overlay under issue `#21`.
+- Created branch `feature/freshforge-materialization-overlay` as the instance
+  side of parent FEMIC P103.
+- Recorded the active plan in `ROADMAP.md`: this repository will own the
+  TSA29 overlay and workflow while FEMIC core continues to provide the generic
+  `femic.materialization` provider.
+- Scope is intentionally narrow: launch-critical model payloads and the
+  editable validated export surface are in scope; TSR/THLB strict-chain
+  reconstruction materialization is deferred to a separate analytical workflow
+  phase.
+
+## 2026-07-02
+
+- Added `workflows/freshforge/tsa29_materialization_overlay.yaml` and
+  `workflows/freshforge/tsa29_materialization_workflow.yaml`.
+- Updated README, getting-started docs, and the rebuild runbook with
+  parent-checkout FreshForge materialization commands.
+- Validated the workflow from the parent FEMIC checkout with FreshForge
+  `0.1.0a5`: provider discovery, validate, inspect, plan, bounded run, and
+  `arbutus-s3` audit all passed.
+- Confirmed the run wrote only ignored `runtime/freshforge/` output.
