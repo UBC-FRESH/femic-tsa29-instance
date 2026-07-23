@@ -37,6 +37,13 @@ Newest entries are appended last.
 
 ## 2026-06-30
 
+## 2026-07-22
+
+- Recovered the 2024 VRI `FEATURE_ID` lineage for every validated TSA29
+  Patchworks fragment and added it as `VRI_FID`.
+- Resolved non-unique `MAP_ID` + `POLYGON_ID` candidates against source
+  geometry; all 421,945 fragments now have a non-null source key.
+
 - Started runtime tracking hygiene under issue `#13` after fresh Windows
   materialization exposed checkout fragility from deep tracked
   `runtime/logs/**` paths.
