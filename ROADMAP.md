@@ -78,7 +78,7 @@ in the fragment export with focused regression coverage and documentation.
 
 ## Phase P109T: TSA29 VRI Fragment Lineage Key (`#23`)
 
-Status: active.
+Status: complete.
 
 Goal: preserve a durable, province-wide VRI polygon lineage key in the TSA29
 Patchworks fragments so selected fragments can be left-joined to the original
@@ -93,7 +93,7 @@ VRI polygon records.
   changing Patchworks age, curve, THLB, or treatment semantics.
 - [x] Regenerate the validated fragments and ForestModel XML if required;
   inspect their joinability and run focused export validation.
-- [ ] Document the lineage contract, update the changelog, post the GitHub
+- [x] Document the lineage contract, update the changelog, post the GitHub
   progress comment, commit, and push.
 
 ## Phase H1: Runtime Tracking Hygiene (`#13`)
