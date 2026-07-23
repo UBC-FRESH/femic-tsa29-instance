@@ -70,12 +70,31 @@ real PNG plot bytes rather than git-annex pointer payloads copied from
 
 ## Detailed Next Steps Notes
 
-Current edge: P103T is active under
-`UBC-FRESH/femic-tsa29-instance#21`. This phase adds a TSA29-owned
-FreshForge materialization overlay for the parent FEMIC checkout. It uses the
-generic `femic.materialization` provider and TSA29's `arbutus-s3` special
-remote to materialize launch-critical model payloads and the editable
-validated export surface.
+Current edge: P109T is active under
+`UBC-FRESH/femic-tsa29-instance#23`. Recover a durable VRI polygon-lineage
+key for the validated Patchworks fragments: audit the existing fragment and
+checkpoint fields, verify BC VRI polygon-key semantics, then preserve the key
+in the fragment export with focused regression coverage and documentation.
+
+## Phase P109T: TSA29 VRI Fragment Lineage Key (`#23`)
+
+Status: active.
+
+Goal: preserve a durable, province-wide VRI polygon lineage key in the TSA29
+Patchworks fragments so selected fragments can be left-joined to the original
+VRI polygon records.
+
+### Tasks
+
+- [x] Open and audit the governing issue before substantive implementation.
+- [x] Determine whether the current validated fragments retain a recoverable
+  source key, and verify the authoritative BC VRI key semantics.
+- [x] Add the required lineage field(s) to the fragments export without
+  changing Patchworks age, curve, THLB, or treatment semantics.
+- [x] Regenerate the validated fragments and ForestModel XML if required;
+  inspect their joinability and run focused export validation.
+- [ ] Document the lineage contract, update the changelog, post the GitHub
+  progress comment, commit, and push.
 
 ## Phase H1: Runtime Tracking Hygiene (`#13`)
 
