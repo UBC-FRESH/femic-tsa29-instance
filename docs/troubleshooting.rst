@@ -86,6 +86,63 @@ Rebuild Diffs Unexpectedly
   ``FEMIC_SAMPLING_SEED=29`` in the shell rather than assuming the run-profile
   YAML carries that value.
 
+Annexed Payload Reports "content is not available"
+---------------------------------------------------
+
+Symptoms in a fresh clone:
+
+.. code-block:: text
+
+   output/patchworks_tsa29_validated/fragments/fragments.dbf is a git-annex
+   pointer file. Its content is not available in this repository.
+
+   get(error): ... [not available;
+     (Note that these git remotes have annex-ignore set: origin)]
+
+First refresh the annex location metadata, then retry:
+
+.. code-block:: bash
+
+   git fetch origin git-annex
+   git annex merge
+   datalad get output/patchworks_tsa29_validated/fragments
+
+Diagnostics:
+
+- ``git annex whereis <path>`` should list ``[arbutus-s3]`` as a copy. If the
+  only copy listed is a maintainer workstation, the published location log is
+  stale and the maintainer must run ``git push origin git-annex``.
+- ``[arbutus-s3]`` shown in brackets means the special remote is known but not
+  locally enabled. That is expected and fine: the remote is published with
+  ``public=yes`` and a ``publicurl``, so reads work over plain HTTPS with no
+  S3 credentials.
+- ``annex-ignore set: origin`` on the GitHub remote is also normal. GitHub
+  stores git metadata only; payload content lives on ``arbutus-s3``.
+
+Maintainer note: publishing an instance requires **two** pushes. ``git push
+origin main`` does not publish the ``git-annex`` branch that carries per-key
+location records. Verify with:
+
+.. code-block:: bash
+
+   git rev-list --count origin/git-annex..git-annex   # must be 0
+
+Files Look Modified Immediately After ``git switch main``
+----------------------------------------------------------
+
+On Windows, git-annex detects a "crippled filesystem" and checks out an
+``adjusted/main(unlocked)`` branch. Switching to plain ``main`` makes unlocked
+annex pointer files appear modified even though you changed nothing.
+
+Do not commit or discard those apparent edits. Return to the adjusted branch:
+
+.. code-block:: bash
+
+   git annex adjust --unlock
+
+Work from ``adjusted/main(unlocked)`` on Windows; DataLad handles the mapping
+back to ``main`` when you save.
+
 Where To Escalate
 -----------------
 
